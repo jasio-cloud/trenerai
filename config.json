@@ -1,0 +1,21 @@
+{
+  "_info": "Sekrety (token, webhook) są w pliku .env – NIE tutaj. Ten plik trafia na GitHub.",
+  "webhook_url": "",
+  "bot_token": "",
+  "command_prefix": "!",
+  "mention": "@everyone",
+  "python_exe": "C:\\Users\\kryst\\AppData\\Local\\Python\\pythoncore-3.14-64\\pythonw.exe",
+  "user": {
+    "name": "Krystian",
+    "weight_kg": 82,
+    "height_cm": 182,
+    "age": 20,
+    "goal": "rekompozycja (skinny-fat -> mięśnie + płaski brzuch)"
+  },
+  "targets": {"kcal": 2300, "protein": 185, "fat": 70, "carbs": 230},
+  "wake_normal": "11:00",
+  "sleep_normal": "01:00",
+  "shift_start_dates": ["2026-06-21", "2026-06-24", "2026-06-27", "2026-06-30"],
+  "plan_days": 4,
+  "late_window_min": 120
+}

@@ -1,0 +1,96 @@
+{
+  "_info": "Stały plan 4x/tydzień pod Marbo Kelton (sztanga, EZ, hantle, ławka regulowana, rack). Ćwiczenia są niezmienne, żeby robić progresję: gdy zrobisz górny zakres powtórzeń we WSZYSTKICH seriach -> +2,5 kg następnym razem. Przerwy: 2-3 min serie główne, 60-90 s izolacje.",
+  "weekday_plan": {
+    "0": "lift_A",
+    "1": "cardio",
+    "2": "lift_B",
+    "3": "lift_C",
+    "4": "cardio",
+    "5": "lift_D",
+    "6": "rest"
+  },
+  "workouts": {
+    "lift_A": {
+      "title": "DZIEŃ A – NOGI (akcent przysiad)",
+      "cwiczenia": [
+        "Przysiad ze sztangą — 4 serie × 6-8",
+        "Rumuński martwy ciąg (RDL) ze sztangą — 3 × 8-10",
+        "Przysiad bułgarski z hantlami (noga na ławce) — 3 × 10 / nogę",
+        "Wspięcia na palce ze sztangą na barkach — 4 × 15",
+        "Unoszenie nóg w leżeniu (brzuch) — 3 × 12-15",
+        "FINISZER: plank 3 × 45 s"
+      ]
+    },
+    "lift_B": {
+      "title": "DZIEŃ B – GÓRA (push: klatka, barki, triceps)",
+      "cwiczenia": [
+        "Wyciskanie sztangi na ławce płaskiej — 4 × 6-8",
+        "Wyciskanie żołnierskie (OHP) sztangą stojąc — 3 × 8-10",
+        "Wyciskanie hantli na ławce skośnej — 3 × 10-12",
+        "Wznosy hantli bokiem (barki) — 3 × 12-15",
+        "Wyciskanie francuskie EZ leżąc / skullcrusher (triceps) — 3 × 10-12",
+        "FINISZER: pompki do upadku — 2 serie"
+      ]
+    },
+    "lift_C": {
+      "title": "DZIEŃ C – NOGI (akcent martwy ciąg)",
+      "cwiczenia": [
+        "Martwy ciąg klasyczny — 4 × 5-6",
+        "Hip thrust ze sztangą (pośladki) — 3 × 10-12",
+        "Wykroki chodzone z hantlami — 3 × 10 / nogę",
+        "Wspięcia na palce z hantlami (łydki) — 4 × 15-20",
+        "Scyzoryk / unoszenie nóg (brzuch) — 3 × 15",
+        "FINISZER: spacer farmera z hantlami — 3 × 30 m"
+      ]
+    },
+    "lift_D": {
+      "title": "DZIEŃ D – GÓRA (pull: plecy, biceps)",
+      "cwiczenia": [
+        "Wiosłowanie sztangą w opadzie — 4 × 8-10",
+        "Podciąganie na drążku LUB wiosłowanie hantlą jednorącz — 3 × 10",
+        "Szrugsy (wznosy barków) ze sztangą lub hantlami — 3 × 12",
+        "Uginanie ramion ze sztangą EZ (biceps) — 3 × 10-12",
+        "Uginanie hantli młotkowe — 3 × 12",
+        "FINISZER: rozpiętki w opadzie z hantlami (tył barku) — 3 × 15"
+      ]
+    },
+    "cardio": {
+      "title": "CARDIO – spalanie tłuszczu z brzucha",
+      "cwiczenia": [
+        "Szybki marsz / marsz pod górkę — 35-40 min (tętno 120-140, masz móc rozmawiać)",
+        "LUB rower/orbitrek — 30 min spokojnie",
+        "Obwód na brzuch (3 rundy): plank 45 s + unoszenie nóg 15 + russian twist 20",
+        "Cel dnia: 10 000 kroków – rozłóż na cały dzień"
+      ]
+    },
+    "recovery": {
+      "title": "REGENERACJA AKTYWNA (bez ciężarów)",
+      "cwiczenia": [
+        "Spacer 30-45 min (8 000+ kroków)",
+        "Rozciąganie / mobilność 10-15 min (biodra, klatka, plecy)",
+        "Rolowanie obolałych partii 10 min",
+        "ZERO ciężarów – dziś ciało się odbudowuje"
+      ]
+    },
+    "rest": {
+      "title": "DZIEŃ WOLNY",
+      "cwiczenia": [
+        "Odpoczynek. Możesz wyjść na luźny spacer.",
+        "Zadbaj o sen 7-8 h i nawodnienie.",
+        "Przygotuj zakupy / posiłki na kolejne dni."
+      ]
+    },
+    "bodyweight_shift": {
+      "title": "OBWÓD NA ZMIANIE 24H (bez sprzętu, między obchodami)",
+      "cwiczenia": [
+        "4 rundy obwodu:",
+        "20 pompek",
+        "30 przysiadów",
+        "15 wykroków na nogę",
+        "40 s plank",
+        "20 wspięć na palce",
+        "+ jak najwięcej chodzenia podczas zmiany (kroki = spalanie)"
+      ]
+    }
+  }
+}
