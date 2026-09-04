@@ -133,6 +133,10 @@
 <script>
 const $ = (s,r=document)=>r.querySelector(s);
 const esc = s => String(s??"").replace(/[&<>"]/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
+/* Wersja panelu. iPhone dodany do ekranu głównego potrafi trzymać stary HTML
+   w nieskończoność. dane.json leci zawsze świeży, więc porównujemy numery
+   i przy różnicy przeładowujemy stronę z ?v=, co omija cache przeglądarki. */
+const WERSJA = 2;
 let D = null, widok = "dzis";
 
 /* Odhaczenia trzymamy lokalnie na telefonie i kasujemy przy nowym cyklu,
@@ -418,6 +422,14 @@ function rysuj(){
 }
 
 function start(dane){
+  if(dane.panel_wersja && dane.panel_wersja !== WERSJA){
+    const u = new URL(location.href);
+    if(u.searchParams.get("v") !== String(dane.panel_wersja)){
+      u.searchParams.set("v", dane.panel_wersja);
+      location.replace(u.toString());   // bez pętli: po przeładowaniu ?v już się zgadza
+      return;
+    }
+  }
   D = dane;
   sprzatajStare();
   const t = D.typy[String(D.typ_dzis)];

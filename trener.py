@@ -792,6 +792,7 @@ def eksport():
         "nawyki": DNI["nawyki"],
         "posilki": {p["id"]: p for p in QUICK},
         "produkty": {k: v for k, v in PROD.items() if not k.startswith("_")},
+        "panel_wersja": CFG.get("panel_wersja", 1),
         "sen": CFG["sen"],
         # skrot potrzebny kalkulatorowi snu w panelu: pobudka i godzina treningu per typ dnia
         "pobudki": {t: {"nazwa": DNI["typy"][t]["nazwa"], "pobudka": DNI["typy"][t]["pobudka"],
