@@ -499,6 +499,33 @@ def trening_dnia(d=None):
     return {"rodzaj": "glowny", "trening": TRENINGI["glowne"][c % len(TRENINGI["glowne"])]}
 
 
+# ------------------------------------------------------------------ budzik
+
+def _na_minuty(hhmm):
+    h, m = hhmm.split(":")
+    return int(h) * 60 + int(m)
+
+
+def budzik_dla(czas_zdarzenia, d=None):
+    """Na którą godzinę ma być budzik i ile to snu, licząc od chwili położenia się.
+
+    Reguła: jeśli kładziesz się PRZED dzisiejszą pobudką (czyli po nocnej zmianie,
+    rano), budzik jest jeszcze na dziś. Jeśli kładziesz się wieczorem — budzik
+    jest na pobudkę dnia następnego, która w cyklu 24/48 za każdym razem jest inna.
+    """
+    d = d or dzis()
+    dzis_pobudka = DNI["typy"][str(typ_dnia(d))]["pobudka"]
+    if _na_minuty(czas_zdarzenia) < _na_minuty(dzis_pobudka):
+        godzina, dzien_docelowy, jutro_li = dzis_pobudka, d, False
+    else:
+        jutro = d + datetime.timedelta(days=1)
+        godzina, dzien_docelowy, jutro_li = DNI["typy"][str(typ_dnia(jutro))]["pobudka"], jutro, True
+    minut = (_na_minuty(godzina) - _na_minuty(czas_zdarzenia)) % (24 * 60)
+    return {"godzina": godzina, "minut": minut, "jutro": jutro_li,
+            "ile": "%d h %02d min" % (minut // 60, minut % 60),
+            "typ_docelowy": DNI["typy"][str(typ_dnia(dzien_docelowy))]["nazwa"]}
+
+
 # ------------------------------------------------------------------ agenda
 
 def agenda(d=None):
@@ -510,6 +537,8 @@ def agenda(d=None):
         zdarzenia += [dict(e) for e in DNI["plan"]["0"] if e.get("nastepny_dzien")]
     _, dzien = plan_dnia(d)
     for e in zdarzenia:
+        if e.get("akcja") == "budzik":
+            e["budzik"] = budzik_dla(e["czas"], d)
         if e.get("slot"):
             pid = dzien[e["slot"]]
             m = makra_posilku(pid)
@@ -563,6 +592,12 @@ def tresc_pinga(e, d):
         z = lista_zakupow()
         czesci.insert(0, "%d pozycji, ok. %.2f zł. %d rzeczy już masz w lodówce."
                       % (len(z["kup"]), z["koszt"], len(z["mam"])))
+    if e.get("akcja") == "budzik":
+        b = budzik_dla(e["czas"], d)
+        tekst = "Ustaw budzik na %s — to %s snu." % (b["godzina"], b["ile"])
+        if b["jutro"]:
+            tekst += " Jutro: %s." % b["typ_docelowy"]
+        czesci.insert(0, tekst)
     if e.get("akcja") in ("trening_krotki", "trening_glowny"):
         t = trening_dnia(d)["trening"]
         czesci.insert(0, "%s — %d min." % (t["nazwa"], t["czas_min"]))

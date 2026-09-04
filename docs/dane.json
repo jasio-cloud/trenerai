@@ -1,22 +1,25 @@
 {
-  "wygenerowano": "2026-09-04T11:34:06",
+  "wygenerowano": "2026-09-04T14:27:09",
   "dzis": "2026-09-04",
   "typ_dzis": 0,
   "typy": {
     "0": {
       "nazwa": "ZMIANA 24h",
       "emoji": "🛡️",
-      "opis": "Służba 07:00–07:00. Jesz wyłącznie z boxów spakowanych wczoraj. Zero gotowania, zero treningu."
+      "opis": "Służba 07:00–07:00. Jesz wyłącznie z boxów spakowanych wczoraj. W nocy 4 drzemki po 1 h 20.",
+      "pobudka": "05:30"
     },
     "1": {
       "nazwa": "PO ZMIANIE",
       "emoji": "😴",
-      "opis": "Wracasz 7:30, odsypiasz do 14:15. Po południu: zakupy + gotowanie na 3 dni + krótki trening."
+      "opis": "Wracasz 7:30, śpisz do 13:00. Po wstaniu od razu trening, potem zakupy i gotowanie na 3 dni.",
+      "pobudka": "13:00"
     },
     "2": {
       "nazwa": "WOLNE",
       "emoji": "💪",
-      "opis": "Pełny dzień w domu. Główny trening, jedzenie z lodówki, wieczorem pakujesz boxy na jutrzejszą zmianę."
+      "opis": "Pełny dzień w domu. Trening na starcie dnia, wieczorem pakujesz boxy na jutrzejszą zmianę.",
+      "pobudka": "08:00"
     }
   },
   "cel": {
@@ -36,25 +39,25 @@
     "cykl": 24,
     "od": "2026-09-02",
     "do": "2026-09-04",
-    "baza": "b_gulasz",
+    "baza": "b_leczo",
     "dni": [
       {
         "sniadanie": "q_twarog",
         "drugi": "q_skyr",
         "kolacja": "q_omlet",
-        "obiad": "b_gulasz",
+        "obiad": "b_leczo",
         "data": "2026-09-02",
         "typ": 1,
         "makra": {
-          "kcal": 2179,
+          "kcal": 2181,
           "bialko": 167,
-          "tluszcz": 83,
-          "wegle": 185
+          "tluszcz": 86,
+          "wegle": 179
         },
         "nazwy": {
           "sniadanie": "Twarożek ze szczypiorkiem + 2 kromki",
           "drugi": "Skyr z bananem i masłem orzechowym",
-          "obiad": "Gulasz wołowy z papryką + ziemniaki",
+          "obiad": "Leczo z mieloną wołowiną + ziemniaki",
           "kolacja": "Omlet z serem i pomidorem"
         }
       },
@@ -62,19 +65,19 @@
         "sniadanie": "q_kanapki_jajko",
         "drugi": "q_twarog_banan",
         "kolacja": "q_jajka_kukurydza",
-        "obiad": "b_gulasz",
+        "obiad": "b_leczo",
         "data": "2026-09-03",
         "typ": 2,
         "makra": {
-          "kcal": 2225,
+          "kcal": 2227,
           "bialko": 153,
-          "tluszcz": 87,
-          "wegle": 210
+          "tluszcz": 90,
+          "wegle": 204
         },
         "nazwy": {
           "sniadanie": "Kanapki z jajkiem na twardo i serem (2 kromki)",
           "drugi": "Twaróg z bananem i miodem",
-          "obiad": "Gulasz wołowy z papryką + ziemniaki",
+          "obiad": "Leczo z mieloną wołowiną + ziemniaki",
           "kolacja": "Box: sałatka jajeczna z kukurydzą"
         }
       },
@@ -82,47 +85,47 @@
         "sniadanie": "q_kanapki_ser",
         "drugi": "q_jogurt_orzechy",
         "kolacja": "q_serek_box",
-        "obiad": "b_gulasz",
+        "obiad": "b_leczo",
         "data": "2026-09-04",
         "typ": 0,
         "makra": {
-          "kcal": 2192,
+          "kcal": 2194,
           "bialko": 152,
-          "tluszcz": 95,
-          "wegle": 199
+          "tluszcz": 98,
+          "wegle": 193
         },
         "nazwy": {
           "sniadanie": "Kanapki z serem, musztardą i kiszonym ogórkiem",
           "drugi": "Jogurt grecki z orzechami i miodem",
-          "obiad": "Gulasz wołowy z papryką + ziemniaki",
+          "obiad": "Leczo z mieloną wołowiną + ziemniaki",
           "kolacja": "Box: serek wiejski + jajka na twardo + ogórki"
         }
       }
     ],
-    "wygenerowano": "2026-09-04T11:34:05"
+    "wygenerowano": "2026-09-04T14:27:09"
   },
   "baza": {
-    "id": "b_gulasz",
-    "nazwa": "Gulasz wołowy z papryką + ziemniaki",
+    "id": "b_leczo",
+    "nazwa": "Leczo z mieloną wołowiną + ziemniaki",
     "porcje": 3,
-    "czas_min": 95,
-    "czas_pracy": 20,
+    "czas_min": 40,
+    "czas_pracy": 15,
     "naczynia": "1 garnek + 1 garnek na ziemniaki",
-    "przechowywanie": "lodówka, 3 dni (drugiego dnia jest lepszy)",
+    "przechowywanie": "lodówka, 3 dni",
     "odgrzewanie": "mikrofala 3 min",
     "box": true,
     "produkty": [
       [
-        "wolowina_gulasz",
+        "mielone_wolowe",
         600
-      ],
-      [
-        "ziemniaki",
-        900
       ],
       [
         "papryka",
         3
+      ],
+      [
+        "cukinia",
+        1
       ],
       [
         "cebula",
@@ -130,15 +133,15 @@
       ],
       [
         "passata",
-        300
+        400
       ],
       [
-        "bulion",
-        2
+        "koncentrat",
+        40
       ],
       [
-        "maka",
-        20
+        "ziemniaki",
+        750
       ],
       [
         "olej",
@@ -150,30 +153,29 @@
       ]
     ],
     "kroki": [
-      "Wołowinę pokrój w kostkę ok. 2 cm, cebulę w piórka, paprykę w paski.",
-      "Rozgrzej garnek mocno, wlej olej i wrzuć mięso jednym rzutem. Smaż 6 min, przez pierwsze 3 min nie mieszaj — ma się przyrumienić, nie zagotować.",
-      "Dodaj cebulę, smaż 4 min. Wsyp łyżkę słodkiej papryki, sól i pieprz, wymieszaj.",
-      "Wlej passatę, 400 ml wody i 2 kostki bulionowe. Zagotuj, przykryj i duś na małym ogniu 60 min. To czas dla Ciebie — zrób w tym czasie coś innego.",
-      "Po 60 min dorzuć paprykę i duś jeszcze 15 min.",
-      "Mąkę rozmieszaj w pół szklanki ZIMNEJ wody, wlej do gulaszu, gotuj 3 min aż zgęstnieje.",
-      "Ziemniaki obierz i ugotuj w osolonej wodzie 20 min. Rozłóż gulasz i ziemniaki do 3 pojemników, ostudź, do lodówki."
+      "Cebulę w piórka, paprykę w paski, cukinię w półplasterki. Nie musi być równo.",
+      "W garnku na oleju smaż cebulę 4 min, dodaj mielone i smaż 8 min rozbijając łopatką.",
+      "Dodaj koncentrat, łyżkę słodkiej papryki, sól i pieprz — smaż 1 min.",
+      "Wrzuć paprykę i cukinię, wlej passatę. Duś 20 min pod przykryciem, zamieszaj raz w połowie.",
+      "W tym czasie ugotuj ziemniaki — 20 min w osolonej wodzie.",
+      "Rozłóż leczo i ziemniaki do 3 pojemników, ostudź, do lodówki."
     ]
   },
   "agenda": [
     {
       "czas": "05:30",
       "tytul": "Pobudka",
-      "opis": "Szklanka wody od razu po wstaniu. Boxy masz spakowane w lodówce od wczoraj — wyjmij je teraz, żeby nie zapomnieć.",
+      "ikona": "⏰",
       "ping": true,
-      "ikona": "⏰"
+      "opis": "Szklanka wody od razu po wstaniu. Boxy masz spakowane w lodówce od wczoraj — wyjmij je teraz, żeby nie zapomnieć."
     },
     {
       "czas": "05:45",
       "tytul": "Śniadanie w domu",
-      "opis": "Zjedz na spokojnie w domu, nie w biegu.",
-      "slot": "sniadanie",
-      "ping": false,
       "ikona": "🍳",
+      "ping": false,
+      "slot": "sniadanie",
+      "opis": "Zjedz na spokojnie w domu, nie w biegu.",
       "posilek": "Kanapki z serem, musztardą i kiszonym ogórkiem",
       "posilek_id": "q_kanapki_ser",
       "makra": {
@@ -186,24 +188,24 @@
     {
       "czas": "06:20",
       "tytul": "Wyjście z domu",
-      "opis": "Sprawdź: boxy, butelka wody 1,5 l, ładowarka.",
+      "ikona": "🚪",
       "ping": true,
-      "ikona": "🚪"
+      "opis": "Sprawdź: boxy, butelka wody 1,5 l, ładowarka."
     },
     {
       "czas": "07:00",
       "tytul": "Początek służby",
-      "opis": "Zmiana 24h. Plan na dziś: jeść regularnie, wypić 3 l wody, co 2-3 h wstać i się rozruszać.",
+      "ikona": "🛡️",
       "ping": false,
-      "ikona": "🛡️"
+      "opis": "Dziś bez treningu — jedyny dzień w cyklu, kiedy nie dźwigasz. Zadanie na dobę: jeść regularnie, wypić 3 l wody i przespać swoje drzemki."
     },
     {
       "czas": "09:30",
       "tytul": "Drugi posiłek",
-      "opis": "Z boxa. Nie odkładaj — po 4 godzinach głodu zawsze dojadasz byle czym z automatu.",
-      "slot": "drugi",
-      "ping": true,
       "ikona": "🥪",
+      "ping": true,
+      "slot": "drugi",
+      "opis": "Z boxa. Nie odkładaj — po czterech godzinach głodu zawsze dojadasz byle czym z automatu.",
       "posilek": "Jogurt grecki z orzechami i miodem",
       "posilek_id": "q_jogurt_orzechy",
       "makra": {
@@ -216,40 +218,40 @@
     {
       "czas": "12:00",
       "tytul": "Rozruszaj się",
-      "opis": "5 minut: 10 przysiadów, krążenia ramion, rozciągnięcie karku. Plecy po staniu Ci podziękują.",
+      "ikona": "🤸",
       "ping": true,
-      "ikona": "🤸"
+      "opis": "5 minut: 10 przysiadów, krążenia ramion, rozciągnięcie karku. Plecy po staniu Ci podziękują."
     },
     {
       "czas": "13:30",
       "tytul": "Obiad",
-      "opis": "Główny box z lodówki — odgrzej w mikrofali.",
-      "slot": "obiad",
-      "ping": true,
       "ikona": "🍽️",
-      "posilek": "Gulasz wołowy z papryką + ziemniaki",
-      "posilek_id": "b_gulasz",
+      "ping": true,
+      "slot": "obiad",
+      "opis": "Główny box z lodówki — odgrzej w mikrofali.",
+      "posilek": "Leczo z mieloną wołowiną + ziemniaki",
+      "posilek_id": "b_leczo",
       "makra": {
-        "kcal": 786,
+        "kcal": 788,
         "bialko": 51,
-        "tluszcz": 31,
-        "wegle": 78
+        "tluszcz": 34,
+        "wegle": 72
       }
     },
     {
       "czas": "17:00",
       "tytul": "Woda — kontrola",
-      "opis": "Powinieneś mieć wypite ok. 2 l. Jak nie masz, nadrabiaj teraz, nie w nocy.",
+      "ikona": "💧",
       "ping": true,
-      "ikona": "💧"
+      "opis": "Powinieneś mieć wypite ok. 2 l. Nadrabiaj teraz, nie w nocy — inaczej przedrzemiesz noc na chodzeniu do toalety."
     },
     {
       "czas": "20:30",
       "tytul": "Kolacja",
-      "opis": "Ostatni posiłek na zmianie. Lekki, żeby nie leżeć z pełnym brzuchem.",
-      "slot": "kolacja",
-      "ping": true,
       "ikona": "🌙",
+      "ping": true,
+      "slot": "kolacja",
+      "opis": "Ostatni posiłek na zmianie. Lekki, żeby nie leżeć z pełnym brzuchem przed pierwszą drzemką.",
       "posilek": "Box: serek wiejski + jajka na twardo + ogórki",
       "posilek_id": "q_serek_box",
       "makra": {
@@ -260,26 +262,33 @@
       }
     },
     {
-      "czas": "23:00",
-      "tytul": "Noc — rozciąganie",
-      "opis": "5 minut rozciągania zginaczy bioder i karku. Bez tego wracasz do domu ze sztywnymi plecami.",
+      "czas": "22:40",
+      "tytul": "Przygotuj się do nocy",
+      "ikona": "🤸",
       "ping": true,
-      "ikona": "🤸"
+      "opis": "5 minut rozciągania bioder i karku. Ustaw cztery budziki na końce drzemek: 00:20, 02:00, 03:40, 05:20."
+    },
+    {
+      "czas": "23:00",
+      "tytul": "Drzemka 1 z 4 — do 00:20",
+      "ikona": "😴",
+      "ping": true,
+      "opis": "1 h 20 to prawie pełny cykl snu i dlatego wstajesz po niej mniej rozbity niż po czterdziestu minutach. Telefon ekranem w dół."
     }
   ],
   "zakupy": {
     "kup": [
       {
-        "klucz": "wolowina_gulasz",
-        "nazwa": "Wołowina na gulasz (łopatka)",
+        "klucz": "mielone_wolowe",
+        "nazwa": "Mielona wołowina",
         "kat": "mieso",
         "trw": "swieze",
         "opakowan": 2,
-        "opak": 500,
+        "opak": 400,
         "jedn": "g",
         "brakuje": 600.0,
-        "dokupisz": 1000,
-        "cena": 50.0
+        "dokupisz": 800,
+        "cena": 36.0
       },
       {
         "klucz": "jaja",
@@ -414,6 +423,18 @@
         "cena": 1.2
       },
       {
+        "klucz": "cukinia",
+        "nazwa": "Cukinia",
+        "kat": "warzywa",
+        "trw": "chlodnia",
+        "opakowan": 1,
+        "opak": 1,
+        "jedn": "szt",
+        "brakuje": 1.0,
+        "dokupisz": 1,
+        "cena": 4.0
+      },
+      {
         "klucz": "jablko",
         "nazwa": "Jabłko",
         "kat": "warzywa",
@@ -493,7 +514,7 @@
         "opakowan": 1,
         "opak": 2000,
         "jedn": "g",
-        "brakuje": 900.0,
+        "brakuje": 750.0,
         "dokupisz": 2000,
         "cena": 7.0
       },
@@ -510,15 +531,15 @@
         "cena": 6.0
       },
       {
-        "klucz": "bulion",
-        "nazwa": "Kostka bulionowa",
+        "klucz": "koncentrat",
+        "nazwa": "Koncentrat pomidorowy",
         "kat": "spizarnia",
         "trw": "trwale",
         "opakowan": 1,
-        "opak": 6,
-        "jedn": "kostka",
-        "brakuje": 2.0,
-        "dokupisz": 6,
+        "opak": 200,
+        "jedn": "g",
+        "brakuje": 40.0,
+        "dokupisz": 200,
         "cena": 4.0
       },
       {
@@ -570,18 +591,6 @@
         "cena": 4.0
       },
       {
-        "klucz": "maka",
-        "nazwa": "Mąka pszenna",
-        "kat": "spizarnia",
-        "trw": "trwale",
-        "opakowan": 1,
-        "opak": 1000,
-        "jedn": "g",
-        "brakuje": 20.0,
-        "dokupisz": 1000,
-        "cena": 3.5
-      },
-      {
         "klucz": "olej",
         "nazwa": "Olej rzepakowy",
         "kat": "spizarnia",
@@ -613,7 +622,7 @@
         "opakowan": 1,
         "opak": 500,
         "jedn": "g",
-        "brakuje": 300.0,
+        "brakuje": 400.0,
         "dokupisz": 500,
         "cena": 5.0
       },
@@ -631,7 +640,7 @@
       }
     ],
     "mam": [],
-    "koszt": 264.3,
+    "koszt": 250.8,
     "zrobione": false
   },
   "lodowka": {},
@@ -1638,6 +1647,8 @@
   },
   "historia": {
     "bazy": [
+      "b_leczo",
+      "b_zapiekanka",
       "b_gulasz"
     ],
     "waga": [],
