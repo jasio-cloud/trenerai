@@ -1,5 +1,5 @@
 {
-  "wygenerowano": "2026-09-04T15:40:36",
+  "wygenerowano": "2026-09-04T15:42:57",
   "dzis": "2026-09-04",
   "typ_dzis": 0,
   "typy": {
@@ -2350,9 +2350,25 @@
       "b_gulasz"
     ],
     "waga": [],
-    "treningi": []
+    "treningi": [],
+    "kroki": [
+      {
+        "data": "2026-09-04",
+        "kroki": 1692,
+        "cel": 7000,
+        "status": "malo"
+      }
+    ]
   },
-  "kroki": null,
+  "kroki": {
+    "kroki": 1692,
+    "cel": 7000,
+    "brakuje": 5308,
+    "status": "malo",
+    "sugestia": "Dziś siedziałeś prawie całą dobę. Nie nadrobisz tego w nocy i nie ma sensu próbować — zrób 10 minut chodzenia teraz i rozciągnij plecy, żeby jutro nie bolały.",
+    "komentarz": "Na służbie kroki robią się same z obchodów — ten cel to sygnał, żebyś nie przesiedział całej doby na krześle.",
+    "procent": 24
+  },
   "kroki_cel": {
     "cel": 7000,
     "komentarz": "Na służbie kroki robią się same z obchodów — ten cel to sygnał, żebyś nie przesiedział całej doby na krześle."
