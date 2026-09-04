@@ -318,7 +318,7 @@ def plan_dnia(d=None):
     return plan, plan["dni"][0]
 
 
-def _zapisz_podmiane(slot, pid, d=None):
+def _zapisz_podmiane(slot, pid, d=None, loguj=True):
     d = d or dzis()
     w = load(PODMIANY_PATH, {})
     w.setdefault(d.isoformat(), {})[slot] = pid
@@ -326,7 +326,76 @@ def _zapisz_podmiane(slot, pid, d=None):
     granica = (d - datetime.timedelta(days=7)).isoformat()
     w = {k: v for k, v in w.items() if k >= granica}
     save(PODMIANY_PATH, w)
-    dziennik.dodaj_zdarzenie("podmiana", d, slot=slot, na=pid)
+    if loguj:
+        dziennik.dodaj_zdarzenie("podmiana", d, slot=slot, na=pid)
+
+
+def zakres_powt(cwiczenie):
+    """Zakres powtorzen dla cwiczenia, brany z sesji GLOWNEJ - to ona wyznacza postep."""
+    for grupa in ("glowne", "krotkie"):
+        for t in TRENINGI[grupa]:
+            for c in t["cwiczenia"]:
+                if c["nazwa"].lower() == cwiczenie.lower():
+                    return c["powt"]
+    return None
+
+
+def alternatywy_slotu(slot, d=None, ile=4):
+    """Czym mozna podmienic dany posilek - posortowane po podobienstwie makr.
+
+    Panel dostaje gotowa liste, zeby podmiana byla natychmiastowa, a nie dopiero
+    po przetworzeniu zdarzenia przez crona.
+    """
+    d = d or dzis()
+    _, dzien = plan_dnia(d)
+    obecny = dzien[slot]
+    cel = makra_posilku(obecny)
+    box_only = typ_dnia(d) == 0
+    if slot == "obiad":
+        kand = [q["id"] for q in QUICK if q.get("bez_gotowania") and (q["box"] if box_only else True)]
+        kand += [b["id"] for b in BAZY]
+    else:
+        kand = [q["id"] for q in QUICK
+                if slot in q.get("sloty", []) and (q["box"] if box_only else True)]
+    uzyte = {dzien[x] for x in SLOTY}
+    kand = [k for k in kand if k != obecny and k not in uzyte]
+    kand.sort(key=lambda pid: (abs(makra_posilku(pid)["kcal"] - cel["kcal"])
+                               + 8 * abs(makra_posilku(pid)["bialko"] - cel["bialko"])))
+    out = []
+    for pid in kand[:ile]:
+        m = makra_posilku(pid)
+        q = QUICK_BY_ID.get(pid)
+        out.append({"id": pid, "nazwa": nazwa_posilku(pid), "kcal": m["kcal"],
+                    "bialko": m["bialko"],
+                    "czas": q["czas_min"] if q else BAZA_BY_ID[pid]["czas_min"],
+                    "bez_gotowania": bool(q and q.get("bez_gotowania"))})
+    return out
+
+
+def przetworz_zdarzenia():
+    """Stosuje to, co przyszlo z telefonu. Panel tylko DOPISUJE zdarzenia -
+    nie zna regul progresji ani makr, wiec cala logika zostaje po tej stronie."""
+    i, nowe = dziennik.nieprzetworzone()
+    zrobione = []
+    for z in nowe:
+        t = z.get("typ")
+        try:
+            data = parse_date(z["data"])
+        except Exception:
+            data = dzis()
+        if t == "seria":
+            w = dziennik.zapisz_serie(z["cwiczenie"], z["ciezar"], z["powt"],
+                                      zakres_powt(z["cwiczenie"]), data, loguj=False)
+            zrobione.append("seria %s %.1f kg -> %.1f kg" % (z["cwiczenie"], float(z["ciezar"]), w["nastepny"]))
+        elif t == "waga":
+            dziennik.zapisz_wage(z["kg"], data)
+            zrobione.append("waga %.1f kg" % float(z["kg"]))
+        elif t == "podmiana" and z.get("na"):
+            _zapisz_podmiane(z["slot"], z["na"], data, loguj=False)
+            zrobione.append("podmiana %s -> %s" % (z["slot"], nazwa_posilku(z["na"])))
+    if nowe:
+        dziennik.oznacz_przetworzone(len(nowe))
+    return zrobione
 
 
 def zamien_posilek(slot, d=None):
@@ -940,7 +1009,14 @@ def eksport():
         "posilki": {p["id"]: p for p in QUICK},
         "produkty": {k: v for k, v in PROD.items() if not k.startswith("_")},
         "panel_wersja": CFG.get("panel_wersja", 1),
+        "repo": CFG.get("repo", ""),
+        "galaz": CFG.get("galaz", "main"),
         "suple": SUPLE,
+        "alternatywy": {s: alternatywy_slotu(s, d) for s in SLOTY},
+        # osobno, bo w trybie "dzis nie gotuje" liczy sie brak garnka, a nie
+        # najblizsze makro - inaczej lista podpowiadalaby dania na 95 minut
+        "gotowce": [a for a in alternatywy_slotu("obiad", d, ile=99) if a["bez_gotowania"]],
+        "treningi_baza": TRENINGI,
         "odhaczone": dziennik.odhaczenia(d),
         "podmiany": podmiany(d),
         "ciezary": dziennik.ciezary(),
@@ -1157,21 +1233,7 @@ def main():
             print('Użycie: py trener.py serie "Wyciskanie sztangi leżąc" 60 8 8 7')
         else:
             cw, ciezar, powt = sys.argv[2], sys.argv[3], sys.argv[4:]
-            # To samo cwiczenie wystepuje i w sesji glownej, i w krotkiej, ale zakres
-            # powtorzen do progresji bierzemy z GLOWNEJ - to ona wyznacza postep,
-            # krotka jest podtrzymujaca. Stad przerwanie na pierwszym trafieniu.
-            zakres = None
-            for grupa in ("glowne", "krotkie"):
-                for t_ in TRENINGI[grupa]:
-                    for c in t_["cwiczenia"]:
-                        if c["nazwa"].lower() == cw.lower():
-                            zakres = c["powt"]
-                            break
-                    if zakres:
-                        break
-                if zakres:
-                    break
-            w = dziennik.zapisz_serie(cw, ciezar, powt, zakres)
+            w = dziennik.zapisz_serie(cw, ciezar, powt, zakres_powt(cw))
             print("%s: %s kg × %s" % (cw, ciezar, ", ".join(powt)))
             print(w["komentarz"])
     elif cmd == "zrobione":
@@ -1180,6 +1242,11 @@ def main():
         else:
             dziennik.odhacz(arg)
             print("Odhaczone: %s" % arg)
+    elif cmd == "przetworz":
+        z = przetworz_zdarzenia()
+        print("Zastosowano %d zdarzeń z telefonu." % len(z) if z else "Nic nowego z telefonu.")
+        for x in z:
+            print("   • " + x)
     elif cmd == "podsumowanie":
         p = podsumowanie_cyklu()
         _kreska("PODSUMOWANIE CYKLU")

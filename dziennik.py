@@ -95,7 +95,7 @@ def propozycja(cwiczenie):
             "podwyzka": c.get("nastepny", c["ciezar"]) - c["ciezar"]}
 
 
-def zapisz_serie(cwiczenie, ciezar, powtorzenia, powt_cel=None, data=None):
+def zapisz_serie(cwiczenie, ciezar, powtorzenia, powt_cel=None, data=None, loguj=True):
     """Zapisuje przerobioną serię i od razu decyduje, co robić następnym razem.
 
     Progresja liniowa: jeśli KAŻDA seria trafiła w górny koniec zakresu, ciężar rośnie
@@ -136,7 +136,10 @@ def zapisz_serie(cwiczenie, ciezar, powtorzenia, powt_cel=None, data=None):
                             "nieudane": nieudane,
                             "data": (data or datetime.date.today()).isoformat()}
     _save(CIEZARY_PATH, wszystkie)
-    dodaj_zdarzenie("seria", data, cwiczenie=cwiczenie, ciezar=ciezar, powt=powtorzenia)
+    # loguj=False gdy zdarzenie juz jest w logu (przyszlo z panelu) - inaczej
+    # kazda seria zapisana z telefonu dublowalaby sie w historii
+    if loguj:
+        dodaj_zdarzenie("seria", data, cwiczenie=cwiczenie, ciezar=ciezar, powt=powtorzenia)
     return {"nastepny": nastepny, "komentarz": komentarz, "krok": krok}
 
 
@@ -226,3 +229,30 @@ def przelicz_kalorie(cel_bazowy, zastosuj=False):
                "powod": ocena})
         dodaj_zdarzenie("kalorie", kcal=nowe, zmiana=zmiana, tempo=tempo)
     return wynik
+
+
+# --------------------------------------------- przetwarzanie zdarzen z panelu
+
+WSKAZNIK_PATH = os.path.join(STATE, "przetworzone.json")
+
+
+def nieprzetworzone():
+    """Zdarzenia, ktore doszly z telefonu i czekaja na zastosowanie."""
+    i = _load(WSKAZNIK_PATH, {"do": 0})["do"]
+    return i, zdarzenia()[i:]
+
+
+def oznacz_przetworzone(ile):
+    i = _load(WSKAZNIK_PATH, {"do": 0})["do"]
+    _save(WSKAZNIK_PATH, {"do": i + ile,
+                          "kiedy": datetime.datetime.now().isoformat(timespec="seconds")})
+
+
+def zapisz_wage(kg, data=None):
+    h = _load(HIST_PATH, {})
+    ds = (data or datetime.date.today()).isoformat()
+    h.setdefault("waga", [])
+    h["waga"] = [w for w in h["waga"] if w["data"] != ds]
+    h["waga"].append({"data": ds, "kg": float(kg)})
+    h["waga"].sort(key=lambda w: w["data"])
+    _save(HIST_PATH, h)

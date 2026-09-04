@@ -101,6 +101,14 @@
   .stopka{color:var(--slaby);font-size:11.5px;text-align:center;padding:6px 0 18px}
   .suma{display:flex;justify-content:space-between;font-weight:650;padding-top:12px;
     margin-top:6px;border-top:2px solid var(--linia)}
+  .mini{background:var(--tlo);border:1px solid var(--linia);color:var(--akcent);
+    font:600 12px/1 inherit;padding:8px 11px;border-radius:8px;cursor:pointer;white-space:nowrap}
+  .mini:disabled{opacity:.5}
+  .mini.duzy{padding:11px 16px;font-size:13px}
+  .pole{flex:1;min-width:0;background:var(--tlo);color:var(--tekst);border:1px solid var(--linia);
+    border-radius:8px;padding:8px;font:inherit;font-size:13px}
+  input.ptk{width:17px;height:17px;accent-color:var(--ok);margin:0 6px 0 0;vertical-align:-2px}
+  ol.os li.odhaczone .tyt{text-decoration:line-through;opacity:.55}
   [hidden]{display:none !important}
 </style>
 </head>
@@ -136,8 +144,88 @@ const esc = s => String(s??"").replace(/[&<>"]/g, c => ({"&":"&amp;","<":"&lt;",
 /* Wersja panelu. iPhone dodany do ekranu głównego potrafi trzymać stary HTML
    w nieskończoność. dane.json leci zawsze świeży, więc porównujemy numery
    i przy różnicy przeładowujemy stronę z ?v=, co omija cache przeglądarki. */
-const WERSJA = 2;
+const WERSJA = 3;
 let D = null, widok = "dzis";
+
+/* ---- zapis z telefonu ------------------------------------------------------
+   Panel tylko DOPISUJE zdarzenia do state/zdarzenia.json przez API GitHuba.
+   Nie zna reguł progresji ani makr — całą logikę stosuje trener.py przy
+   najbliższym przebiegu crona. Dzięki temu telefon nie może niczego policzyć
+   inaczej niż serwer, a zapis jest odporny na to, że dwa źródła piszą naraz.
+
+   Token siedzi w pamięci tej przeglądarki i nigdzie stąd nie wychodzi poza
+   samym GitHubem. Ma uprawnienie wyłącznie do zawartości jednego repo. */
+const TOKEN_KLUCZ = "trener:token";
+const token = () => { try { return localStorage.getItem(TOKEN_KLUCZ) || ""; } catch { return ""; } };
+const ustawToken = t => { try { t ? localStorage.setItem(TOKEN_KLUCZ, t.trim())
+                                  : localStorage.removeItem(TOKEN_KLUCZ); } catch {} };
+
+const b64 = tekst => {
+  const bajty = new TextEncoder().encode(tekst);
+  let s = ""; bajty.forEach(b => s += String.fromCharCode(b));
+  return btoa(s);
+};
+const zB64 = t => new TextDecoder().decode(Uint8Array.from(atob(t), c => c.charCodeAt(0)));
+
+const API = sciezka => `https://api.github.com/repos/${D.repo}/contents/${sciezka}`;
+
+async function gh(url, opcje = {}){
+  const r = await fetch(url, {...opcje, headers: {
+    "Authorization": "Bearer " + token(),
+    "Accept": "application/vnd.github+json",
+    ...(opcje.headers || {})}});
+  if(!r.ok) throw new Error(`${r.status} ${(await r.text()).slice(0,120)}`);
+  return r.status === 204 ? null : r.json();
+}
+
+/* Dopisanie zdarzenia: czytamy aktualny plik razem z jego sha, doklejamy wpis
+   i zapisujemy. Gdy w międzyczasie zapisał cron, GitHub odrzuca zapis (409) —
+   wtedy czytamy najnowszą wersję i próbujemy raz jeszcze, zamiast nadpisywać. */
+async function wyslijZdarzenie(zdarzenie, proba = 0){
+  if(!token()) throw new Error("Brak tokenu — ustaw go na dole zakładki Dziś.");
+  const url = API("state/zdarzenia.json") + "?ref=" + (D.galaz || "main");
+  let lista = [], sha = null;
+  try {
+    const plik = await gh(url);
+    sha = plik.sha;
+    lista = JSON.parse(zB64(plik.content));
+    if(!Array.isArray(lista)) lista = [];
+  } catch(e){ if(!String(e.message).startsWith("404")) throw e; }
+
+  lista.push({data: D.dzis, ...zdarzenie});
+  try {
+    await gh(API("state/zdarzenia.json"), {method:"PUT",
+      body: JSON.stringify({message: "panel: " + zdarzenie.typ,
+        content: b64(JSON.stringify(lista.slice(-500), null, 2)),
+        branch: D.galaz || "main", ...(sha ? {sha} : {})})});
+  } catch(e){
+    if(proba === 0 && /^(409|422)/.test(e.message)) return wyslijZdarzenie(zdarzenie, 1);
+    throw e;
+  }
+  return true;
+}
+
+/* Do czasu, aż cron przetworzy zdarzenie i odświeży dane.json, pokazujemy
+   zmianę lokalnie — inaczej wyglądałoby to, jakby tapnięcie nic nie zrobiło. */
+function lokalnie(id, wartosc){
+  try { const s = zapamietane(); s[id] = wartosc;
+        localStorage.setItem(kluczCyklu(), JSON.stringify(s)); } catch {}
+}
+
+async function zapisz(zdarzenie, element){
+  const stary = element ? element.textContent : null;
+  if(element){ element.disabled = true; element.textContent = "zapisuję…"; }
+  try {
+    await wyslijZdarzenie(zdarzenie);
+    if(element){ element.textContent = "zapisane ✓"; }
+    return true;
+  } catch(e){
+    alert("Nie zapisano: " + e.message +
+      "\n\nNajczęstsza przyczyna to token bez uprawnienia Contents: Read and write.");
+    if(element){ element.disabled = false; element.textContent = stary; }
+    return false;
+  }
+}
 
 /* Odhaczenia trzymamy lokalnie na telefonie i kasujemy przy nowym cyklu,
    żeby lista zakupów nie wstawała odhaczona po następnych zakupach. */
@@ -177,14 +265,23 @@ function widokDzis(){
   const dzis = D.plan.dni.find(d => d.data === D.dzis) || D.plan.dni[0];
   const nastepny = D.agenda.filter(e => minuty(e.czas) > tm)[0];
 
+  const zapisane = zapamietane();
+  const czyZrobione = klucz =>
+    (klucz in zapisane) ? !!zapisane[klucz] : !!(D.odhaczone || {})[klucz];
+
   const lista = D.agenda.map(e => {
     const minelo = minuty(e.czas) <= tm;
     const teraz_ = nastepny && e.czas === nastepny.czas;
-    return `<li class="${minelo?"minelo":""} ${teraz_?"teraz":""}">
+    const klucz = e.czas + "|" + e.tytul;
+    const on = czyZrobione(klucz);
+    return `<li class="${minelo?"minelo":""} ${teraz_?"teraz":""} ${on?"odhaczone":""}">
       <span class="godz">${e.czas}</span>
-      <div><div class="tyt">${e.ikona||""} ${esc(e.tytul)}</div>
+      <div><div class="tyt">
+          <input type="checkbox" class="ptk" data-punkt="${esc(klucz)}" ${on?"checked":""}>
+          ${e.ikona||""} ${esc(e.tytul)}</div>
         ${e.posilek ? `<div class="posilek">${esc(e.posilek)}
-           <span class="kcal">· ${e.makra.kcal} kcal, ${e.makra.bialko} g B</span></div>` : ""}
+           <span class="kcal">· ${e.makra.kcal} kcal, ${e.makra.bialko} g B</span>
+           ${e.slot ? `<button class="mini" data-zamien="${e.slot}">zamień</button>` : ""}</div>` : ""}
         ${e.opis ? `<div class="op">${esc(e.opis)}</div>` : ""}
       </div></li>`;
   }).join("");
@@ -206,12 +303,54 @@ function widokDzis(){
         <div class="op" style="margin-top:6px">${esc(D.kroki_cel.komentarz)}</div>
       </div>`;
 
-  return `<div class="karta"><h2>Makra na dziś</h2>${makra(dzis.makra, D.cel)}</div>
+  const kartaZamiany = zamieniamSlot ? `<div class="karta" style="border-color:var(--akcent)">
+      <h2 style="color:var(--akcent)">Zamiana: ${zamieniamSlot}</h2>
+      <div class="op">Posortowane od najbliższego makrami — pierwsze z listy najmniej zmienia dzień.</div>
+      ${(D.alternatywy[zamieniamSlot]||[]).map(a=>`<div class="poz">
+        <span class="nazwa">${esc(a.nazwa)}<span class="kcal"> · ${a.kcal} kcal, B ${a.bialko}, ${a.czas} min</span></span>
+        <button class="mini" data-podmien="${a.id}" data-slot="${zamieniamSlot}">wybierz</button></div>`).join("")}
+      <button class="mini" id="anuluj-zamiane" style="margin-top:10px">anuluj</button>
+    </div>` : "";
+
+  return kartaZamiany + `<div class="karta"><h2>Makra na dziś</h2>${makra(dzis.makra, D.cel)}</div>
     ${kartaKrokow}
     <div class="karta"><h2>Plan dnia</h2><ol class="os">${lista}</ol></div>
+
+    <div class="karta"><h2>Dziś nie gotuję</h2>
+      <div class="op">Podmienia obiad na coś bez garnka o tych samych makrach. Do wyboru:</div>
+      ${(D.gotowce||[]).map(g=>`<div class="poz">
+        <span class="nazwa">${esc(g.nazwa)}<span class="kcal"> · ${g.kcal} kcal, B ${g.bialko}, ${g.czas} min</span></span>
+        <button class="mini" data-podmien="${g.id}" data-slot="obiad">wybierz</button></div>`).join("")}
+    </div>
+
+    <div class="karta"><h2>Waga</h2>
+      <div style="display:flex;gap:8px;align-items:center">
+        <input type="number" step="0.1" inputmode="decimal" id="waga" placeholder="${D.user.waga_kg}"
+          style="flex:1;font:600 22px/1.2 inherit;font-variant-numeric:tabular-nums;
+                 background:var(--tlo);color:var(--tekst);border:1px solid var(--linia);
+                 border-radius:10px;padding:10px;text-align:center">
+        <button class="mini duzy" id="zapisz-wage">zapisz</button>
+      </div>
+      <div class="op" style="margin-top:8px">${D.kalorie && D.kalorie.ocena ? esc(D.kalorie.ocena) : ""}</div>
+      <div class="op">Cel: ${D.cel.kcal} kcal${D.kalorie && D.kalorie.korekta_teraz ? ` (baza ${D.cel_bazowy} ${D.kalorie.korekta_teraz > 0 ? "+" : ""}${D.kalorie.korekta_teraz})` : ""}. Ważenie rano, na czczo, raz na cykl.</div>
+    </div>
+
     <div class="karta"><h2>Nawyki</h2>
       ${D.nawyki.map(n=>`<div class="cw"><div class="g"><b>${esc(n.nazwa)}</b></div>
-        <div class="w">${esc(n.opis)}</div></div>`).join("")}</div>`;
+        <div class="w">${esc(n.opis)}</div></div>`).join("")}</div>
+
+    <div class="karta"><h2>Zapis z telefonu</h2>
+      ${token()
+        ? `<div class="op">Token zapisany — odhaczanie, waga i ciężary lecą do systemu.
+             Zmiany widać w planie po najbliższym przebiegu, do 10 minut.</div>
+           <button class="mini" id="usun-token" style="margin-top:8px">usuń token</button>`
+        : `<div class="op">Bez tokenu panel tylko pokazuje. Wklej token z GitHuba (ten sam,
+             którego użyłeś w Skrócie od kroków), żeby móc zapisywać z telefonu.</div>
+           <input type="password" id="token" placeholder="github_pat_…"
+             style="width:100%;margin-top:8px;background:var(--tlo);color:var(--tekst);
+                    border:1px solid var(--linia);border-radius:10px;padding:10px;font:inherit">
+           <button class="mini duzy" id="zapisz-token" style="margin-top:8px">zapisz token</button>`}
+    </div>`;
 }
 
 function widokPlan(){
@@ -292,10 +431,26 @@ function widokTrening(){
   return `<div class="karta"><h2>${esc(t.nazwa)} · ${t.czas_min} min</h2>
       ${t.rozgrzewka.map(r=>`<div class="op">▸ ${esc(r)}</div>`).join("")}</div>
     <div class="karta"><h2>Ćwiczenia</h2>
-      ${t.cwiczenia.map(c=>`<div class="cw">
+      ${t.cwiczenia.map(c=>{
+        const h = (D.ciezary||{})[c.nazwa];
+        const sugestia = h ? (h.nastepny ?? h.ciezar) : null;
+        const historia = h
+          ? `ostatnio ${h.ciezar} kg × ${(h.powt||[]).join(", ")}` +
+            (sugestia > h.ciezar ? ` → dziś <b>${sugestia} kg</b>`
+             : sugestia < h.ciezar ? ` → zejdź do <b>${sugestia} kg</b>` : ` → zostań przy <b>${sugestia} kg</b>`)
+          : "pierwszy raz — zapisz, ile dałeś, a od następnego razu podpowiem ciężar";
+        return `<div class="cw">
         <div class="g"><b>${esc(c.nazwa)}</b><span class="serie">${c.serie} × ${esc(c.powt)}</span></div>
         <div class="w">${esc(c.wskazowka)}</div>
-        <div class="w">przerwa ${esc(c.przerwa)}</div></div>`).join("")}</div>
+        <div class="w">przerwa ${esc(c.przerwa)}</div>
+        <div class="w" style="color:var(--akcent)">${historia}</div>
+        <div style="display:flex;gap:6px;margin-top:7px">
+          <input class="pole cw-kg"   type="number" step="2.5" inputmode="decimal"
+                 placeholder="kg" value="${sugestia ?? ""}" data-cw="${esc(c.nazwa)}">
+          <input class="pole cw-powt" type="text" inputmode="numeric"
+                 placeholder="powt. np. 8 8 7" data-cw="${esc(c.nazwa)}">
+          <button class="mini" data-serie="${esc(c.nazwa)}">zapisz</button>
+        </div></div>`;}).join("")}</div>
     <div class="karta"><h2>Na koniec</h2><div class="op">${esc(t.finisz)}</div></div>`;
 }
 
@@ -370,6 +525,7 @@ function liczSen(polozenie){
 }
 
 let senOKtorej = null;   // null = bierz aktualną godzinę
+let zamieniamSlot = null;
 
 function widokSen(){
   const teraz = new Date();
@@ -457,13 +613,51 @@ $("#widok").addEventListener("input", e => {
   if(pole){ pole.focus(); try{ pole.setSelectionRange(pos, pos); }catch{} }
 });
 
-$("#widok").addEventListener("change", e => {
+$("#widok").addEventListener("change", async e => {
+  const ptk = e.target.closest("input.ptk");
+  if(ptk){
+    const on = ptk.checked;
+    lokalnie(ptk.dataset.punkt, on);
+    ptk.closest("li").classList.toggle("odhaczone", on);
+    if(token()) { try { await wyslijZdarzenie({typ:"punkt", punkt:ptk.dataset.punkt, zrobione:on}); }
+                  catch(err){ console.warn("odhaczenie nie poszlo:", err.message); } }
+    return;
+  }
   const cb = e.target.closest('input[type="checkbox"]'); if(!cb) return;
   przelacz(cb.dataset.id, cb.checked);
   cb.closest("label").classList.toggle("zrobione", cb.checked);
 });
 
-$("#widok").addEventListener("click", e => {
+$("#widok").addEventListener("click", async e => {
+  const b = e.target.closest("button");
+  if(b){
+    if(b.dataset.zamien){ zamieniamSlot = b.dataset.zamien; rysuj(); scrollTo({top:0}); return; }
+    if(b.id === "anuluj-zamiane"){ zamieniamSlot = null; rysuj(); return; }
+    if(b.dataset.podmien){
+      if(await zapisz({typ:"podmiana", slot:b.dataset.slot, na:b.dataset.podmien}, b)){
+        zamieniamSlot = null;
+        alert("Zapisane. Plan zaktualizuje się przy najbliższym przebiegu, do 10 minut.");
+      }
+      return;
+    }
+    if(b.dataset.serie){
+      const cw = b.dataset.serie;
+      const kg = document.querySelector(`.cw-kg[data-cw="${CSS.escape(cw)}"]`)?.value;
+      const powt = (document.querySelector(`.cw-powt[data-cw="${CSS.escape(cw)}"]`)?.value || "")
+        .split(/[^0-9]+/).filter(Boolean).map(Number);
+      if(!kg || !powt.length){ alert("Wpisz ciężar i powtórzenia, np. 8 8 7."); return; }
+      await zapisz({typ:"seria", cwiczenie:cw, ciezar:Number(kg), powt}, b);
+      return;
+    }
+    if(b.id === "zapisz-wage"){
+      const kg = $("#waga")?.value;
+      if(!kg){ alert("Wpisz wagę."); return; }
+      await zapisz({typ:"waga", kg:Number(kg)}, b);
+      return;
+    }
+    if(b.id === "zapisz-token"){ ustawToken($("#token")?.value); rysuj(); return; }
+    if(b.id === "usun-token"){ ustawToken(""); rysuj(); return; }
+  }
   const li = e.target.closest("li[data-krok]"); if(!li) return;
   const on = !li.classList.contains("zrobione");
   li.classList.toggle("zrobione", on);

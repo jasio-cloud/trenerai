@@ -1,5 +1,5 @@
 {
-  "wygenerowano": "2026-09-04T15:33:45+02:00",
+  "wygenerowano": "2026-09-04T15:40:36",
   "dzis": "2026-09-04",
   "typ_dzis": 0,
   "typy": {
@@ -1842,7 +1842,9 @@
       "trw": "chlodnia"
     }
   },
-  "panel_wersja": 2,
+  "panel_wersja": 3,
+  "repo": "jasio-cloud/trenerai",
+  "galaz": "main",
   "suple": {
     "_info": "Jeden ping dziennie, przy pobudce — zgodnie z tym, co ustaliliśmy: wszystko naraz po wstaniu, przed treningiem, zero rozbijania na godziny. To jest PROPOZYCJA dobrana pod Twoją sytuację (praca zmianowa, redukcja, brak ryb w diecie, trening w domu). Wyrzuć z listy to, czego nie bierzesz, i dopisz to, co masz w szafce — ping czyta ten plik.",
     "pora": "przy pobudce",
@@ -1873,6 +1875,434 @@
       }
     ],
     "przypis": "Suplementy są dodatkiem do diety, a nie jej zamiennikiem — przy Twoich 2200 kcal z prawdziwego jedzenia robią różnicę na marginesie, nie w środku. Jeśli bierzesz coś jeszcze (odżywka białkowa, witamina C, cynk), dopisz do listy."
+  },
+  "alternatywy": {
+    "sniadanie": [
+      {
+        "id": "q_kanapki_jajko",
+        "nazwa": "Kanapki z jajkiem na twardo i serem (2 kromki)",
+        "kcal": 490,
+        "bialko": 30,
+        "czas": 12,
+        "bez_gotowania": false
+      },
+      {
+        "id": "q_twarog_banan",
+        "nazwa": "Twaróg z bananem i miodem",
+        "kcal": 490,
+        "bialko": 38,
+        "czas": 4,
+        "bez_gotowania": false
+      },
+      {
+        "id": "q_twarog",
+        "nazwa": "Twarożek ze szczypiorkiem + 2 kromki",
+        "kcal": 488,
+        "bialko": 45,
+        "czas": 5,
+        "bez_gotowania": false
+      },
+      {
+        "id": "q_skyr",
+        "nazwa": "Skyr z bananem i masłem orzechowym",
+        "kcal": 389,
+        "bialko": 38,
+        "czas": 3,
+        "bez_gotowania": false
+      }
+    ],
+    "drugi": [
+      {
+        "id": "q_kanapki_jajko",
+        "nazwa": "Kanapki z jajkiem na twardo i serem (2 kromki)",
+        "kcal": 490,
+        "bialko": 30,
+        "czas": 12,
+        "bez_gotowania": false
+      },
+      {
+        "id": "q_jajka_kukurydza",
+        "nazwa": "Box: sałatka jajeczna z kukurydzą",
+        "kcal": 459,
+        "bialko": 34,
+        "czas": 12,
+        "bez_gotowania": false
+      },
+      {
+        "id": "q_skyr",
+        "nazwa": "Skyr z bananem i masłem orzechowym",
+        "kcal": 389,
+        "bialko": 38,
+        "czas": 3,
+        "bez_gotowania": false
+      },
+      {
+        "id": "q_twarog_banan",
+        "nazwa": "Twaróg z bananem i miodem",
+        "kcal": 490,
+        "bialko": 38,
+        "czas": 4,
+        "bez_gotowania": false
+      }
+    ],
+    "obiad": [
+      {
+        "id": "b_gulasz",
+        "nazwa": "Gulasz wołowy z papryką + ziemniaki",
+        "kcal": 786,
+        "bialko": 51,
+        "czas": 95,
+        "bez_gotowania": false
+      },
+      {
+        "id": "b_bolo",
+        "nazwa": "Makaron bolognese na wołowinie",
+        "kcal": 788,
+        "bialko": 48,
+        "czas": 40,
+        "bez_gotowania": false
+      },
+      {
+        "id": "b_shepherd",
+        "nazwa": "Zapiekanka pasterska (mielone pod puree)",
+        "kcal": 824,
+        "bialko": 49,
+        "czas": 65,
+        "bez_gotowania": false
+      },
+      {
+        "id": "b_wolowina_cebula",
+        "nazwa": "Wołowina duszona w cebuli + ziemniaki",
+        "kcal": 751,
+        "bialko": 49,
+        "czas": 100,
+        "bez_gotowania": false
+      }
+    ],
+    "kolacja": [
+      {
+        "id": "q_twarog",
+        "nazwa": "Twarożek ze szczypiorkiem + 2 kromki",
+        "kcal": 488,
+        "bialko": 45,
+        "czas": 5,
+        "bez_gotowania": false
+      },
+      {
+        "id": "q_jajka_kukurydza",
+        "nazwa": "Box: sałatka jajeczna z kukurydzą",
+        "kcal": 459,
+        "bialko": 34,
+        "czas": 12,
+        "bez_gotowania": false
+      },
+      {
+        "id": "q_kanapki_jajko",
+        "nazwa": "Kanapki z jajkiem na twardo i serem (2 kromki)",
+        "kcal": 490,
+        "bialko": 30,
+        "czas": 12,
+        "bez_gotowania": false
+      },
+      {
+        "id": "q_salatka_feta",
+        "nazwa": "Sałatka z fetą, jajkiem i pomidorem + kromka",
+        "kcal": 551,
+        "bialko": 29,
+        "czas": 7,
+        "bez_gotowania": false
+      }
+    ]
+  },
+  "gotowce": [
+    {
+      "id": "o_slojek",
+      "nazwa": "Gotowe danie ze słoika + pieczywo",
+      "kcal": 863,
+      "bialko": 52,
+      "czas": 4,
+      "bez_gotowania": true
+    },
+    {
+      "id": "o_kanapki_xl",
+      "nazwa": "Duże kanapki z wędliną wołową i serem",
+      "kcal": 855,
+      "bialko": 57,
+      "czas": 6,
+      "bez_gotowania": true
+    },
+    {
+      "id": "o_twarog_xl",
+      "nazwa": "Miska twarogu z jajkami i pieczywem",
+      "kcal": 906,
+      "bialko": 78,
+      "czas": 10,
+      "bez_gotowania": true
+    }
+  ],
+  "treningi_baza": {
+    "_info": "Trening w domu na Marbo Kelton (ławka, rack, sztanga, EZ, hantle ~130 kg). Cykl 24/48 daje 2 sesje na 3 dni i OBIE są pierwszą aktywnością dnia, zaraz po wstaniu, na czczo — tak chce użytkownik. Stąd dłuższa rozgrzewka: zimne stawy po nocy potrzebują więcej niż po dniu chodzenia. KRÓTKA sesja wypada w dniu po zmianie (po 24 h służby i ok. 4,5 h snu — objętość zbita, ciężary 80%), GŁÓWNA w dniu wolnym po pełnej nocy. Cel: redukcja — ciężary trzymamy wysoko, żeby nie stracić mięśni; deficyt robi dieta, nie kardio.",
+    "glowne": [
+      {
+        "id": "w_push",
+        "nazwa": "GŁÓWNY A — Klatka, barki, triceps",
+        "czas_min": 60,
+        "rozgrzewka": [
+          "Trenujesz zaraz po wstaniu, na czczo — rozgrzewki NIE skracaj, to nie jest miejsce na oszczędzanie czasu.",
+          "8 min: 30 przysiadów bez ciężaru, krążenia ramion i bioder, 20 pompek.",
+          "Sztanga sama (20 kg) x15 na ławce, potem 50% ciężaru roboczego x8"
+        ],
+        "cwiczenia": [
+          {
+            "nazwa": "Wyciskanie sztangi leżąc",
+            "serie": 4,
+            "powt": "6-8",
+            "przerwa": "2-3 min",
+            "wskazowka": "Łopatki ściągnięte i wbite w ławkę przez cały ruch. Sztanga schodzi do dolnej części klatki, nie do szyi."
+          },
+          {
+            "nazwa": "Wyciskanie hantli nad głowę (siedząc)",
+            "serie": 3,
+            "powt": "8-10",
+            "przerwa": "2 min",
+            "wskazowka": "Nie odchylaj się do tyłu. Żebra ściągnięte w dół, pośladki napięte."
+          },
+          {
+            "nazwa": "Wyciskanie hantli na skos (ławka pod kątem)",
+            "serie": 3,
+            "powt": "10-12",
+            "przerwa": "90 s",
+            "wskazowka": "Kąt ok. 30 stopni. Wyżej i robi się z tego ćwiczenie na barki."
+          },
+          {
+            "nazwa": "Rozpiętki z hantlami",
+            "serie": 3,
+            "powt": "12-15",
+            "przerwa": "75 s",
+            "wskazowka": "Lekko ugięte łokcie, ruch szeroki. Ciężar mały — to ma rozciągać, nie dźwigać."
+          },
+          {
+            "nazwa": "Wyciskanie francuskie EZ",
+            "serie": 3,
+            "powt": "10-12",
+            "przerwa": "75 s",
+            "wskazowka": "Łokcie stoją w miejscu, rusza się tylko przedramię."
+          },
+          {
+            "nazwa": "Pompki do odmowy",
+            "serie": 2,
+            "powt": "max",
+            "przerwa": "60 s",
+            "wskazowka": "Na koniec, żeby dobić klatkę. Licz i zapisuj — to Twój wskaźnik postępu."
+          }
+        ],
+        "finisz": "3 min rozciągania klatki i barków. Zapisz ciężary w panelu."
+      },
+      {
+        "id": "w_pull",
+        "nazwa": "GŁÓWNY B — Plecy i biceps",
+        "czas_min": 60,
+        "rozgrzewka": [
+          "Trenujesz zaraz po wstaniu, na czczo — rozgrzewki NIE skracaj, to nie jest miejsce na oszczędzanie czasu.",
+          "8 min: 30 przysiadów bez ciężaru, krążenia ramion i bioder, 20 pompek.",
+          "Wiosłowanie samą sztangą x15"
+        ],
+        "cwiczenia": [
+          {
+            "nazwa": "Martwy ciąg",
+            "serie": 4,
+            "powt": "5-6",
+            "przerwa": "3 min",
+            "wskazowka": "Plecy proste jak deska. Jak zaczynają się garbić — koniec serii, nawet jeśli miałeś zrobić więcej."
+          },
+          {
+            "nazwa": "Wiosłowanie sztangą w opadzie",
+            "serie": 4,
+            "powt": "8-10",
+            "przerwa": "2 min",
+            "wskazowka": "Tułów prawie równolegle do podłogi. Ciągniesz do brzucha, nie do klatki."
+          },
+          {
+            "nazwa": "Podciąganie na drążku racka",
+            "serie": 3,
+            "powt": "max (cel 8)",
+            "przerwa": "2 min",
+            "wskazowka": "Jak nie wyrabiasz — negatywy: wskakujesz na górę i schodzisz 4 sekundy."
+          },
+          {
+            "nazwa": "Wiosłowanie jednorącz hantlą",
+            "serie": 3,
+            "powt": "10-12",
+            "przerwa": "90 s",
+            "wskazowka": "Kolano i ręka na ławce. Nie skręcaj tułowia, żeby dociągnąć — to oszukiwanie."
+          },
+          {
+            "nazwa": "Uginanie ramion EZ",
+            "serie": 3,
+            "powt": "10-12",
+            "przerwa": "75 s",
+            "wskazowka": "Łokcie przy tułowiu. Bez bujania biodrami."
+          },
+          {
+            "nazwa": "Uginanie młotkowe hantlami",
+            "serie": 2,
+            "powt": "12-15",
+            "przerwa": "60 s",
+            "wskazowka": "Chwyt neutralny, buduje grubość ramienia."
+          }
+        ],
+        "finisz": "3 min rozciągania pleców i bicepsów. Zapisz ciężary."
+      },
+      {
+        "id": "w_nogi",
+        "nazwa": "GŁÓWNY C — Nogi i brzuch",
+        "czas_min": 55,
+        "rozgrzewka": [
+          "Trenujesz zaraz po wstaniu, na czczo — rozgrzewki NIE skracaj, to nie jest miejsce na oszczędzanie czasu.",
+          "8 min: 30 przysiadów bez ciężaru, krążenia ramion i bioder, 20 pompek.",
+          "Przysiad sama sztanga x15, potem 50% x8"
+        ],
+        "cwiczenia": [
+          {
+            "nazwa": "Przysiad ze sztangą (w racku, z bolcami)",
+            "serie": 4,
+            "powt": "6-8",
+            "przerwa": "3 min",
+            "wskazowka": "Bolce ustawione na wysokości dołu ruchu — trenujesz sam, to jest obowiązkowe."
+          },
+          {
+            "nazwa": "Rumuński martwy ciąg",
+            "serie": 3,
+            "powt": "8-10",
+            "przerwa": "2 min",
+            "wskazowka": "Kolana prawie proste, biodra jadą do tyłu. Poczujesz ciągnięcie z tyłu uda — o to chodzi."
+          },
+          {
+            "nazwa": "Wykroki chodzone z hantlami",
+            "serie": 3,
+            "powt": "10 na nogę",
+            "przerwa": "90 s",
+            "wskazowka": "Długi krok. Krótki krok robi z tego ćwiczenie na kolana."
+          },
+          {
+            "nazwa": "Wspięcia na palce z hantlami",
+            "serie": 3,
+            "powt": "15-20",
+            "przerwa": "60 s",
+            "wskazowka": "Pełny zakres, sekunda przytrzymania na górze."
+          },
+          {
+            "nazwa": "Plank",
+            "serie": 3,
+            "powt": "45-60 s",
+            "przerwa": "45 s",
+            "wskazowka": "Pośladki napięte, biodra nie lecą w dół ani w górę."
+          },
+          {
+            "nazwa": "Unoszenie nóg w zwisie albo leżąc",
+            "serie": 3,
+            "powt": "12-15",
+            "przerwa": "60 s",
+            "wskazowka": "Ruch z dołu brzucha, nie z bioder. Wolno w dół."
+          }
+        ],
+        "finisz": "5 min rozciągania nóg. Nogi po 24h stania na zmianie lubią to szczególnie."
+      }
+    ],
+    "krotkie": [
+      {
+        "id": "w_fbw_a",
+        "nazwa": "KRÓTKI A — Full body (dzień po zmianie)",
+        "czas_min": 35,
+        "rozgrzewka": [
+          "Po 24 h służby, ok. 4,5 h snu i na czczo. Rozgrzewka 8 min, bez pośpiechu.",
+          "30 przysiadów bez ciężaru, krążenia ramion i bioder, 15 pompek, martwy zwis 2×20 s.",
+          "Pierwszą serię roboczą poprzedź serią na 50% ciężaru."
+        ],
+        "cwiczenia": [
+          {
+            "nazwa": "Przysiad ze sztangą",
+            "serie": 3,
+            "powt": "8",
+            "przerwa": "2 min",
+            "wskazowka": "Ciężar 80% tego, co dajesz w dniu wolnym. Dziś chodzi o utrzymanie, nie o rekord."
+          },
+          {
+            "nazwa": "Wyciskanie sztangi leżąc",
+            "serie": 3,
+            "powt": "8",
+            "przerwa": "2 min",
+            "wskazowka": "To samo — 80% i zostaw 2 powtórzenia w zapasie."
+          },
+          {
+            "nazwa": "Wiosłowanie sztangą",
+            "serie": 3,
+            "powt": "10",
+            "przerwa": "90 s",
+            "wskazowka": "Kontrolowany opust, bez szarpania."
+          },
+          {
+            "nazwa": "Plank",
+            "serie": 2,
+            "powt": "45 s",
+            "przerwa": "45 s",
+            "wskazowka": "Domykasz i idziesz jeść."
+          }
+        ],
+        "finisz": "Kręci Ci się w głowie albo ciężar leci — kończysz. Po nieprzespanej dobie to normalne i nie jest to porażka. Zaraz po treningu jesz pierwszy porządny posiłek dnia."
+      },
+      {
+        "id": "w_fbw_b",
+        "nazwa": "KRÓTKI B — Full body (dzień po zmianie)",
+        "czas_min": 35,
+        "rozgrzewka": [
+          "Po 24 h służby, ok. 4,5 h snu i na czczo. Rozgrzewka 8 min, bez pośpiechu.",
+          "30 przysiadów bez ciężaru, krążenia ramion i bioder, 15 pompek, martwy zwis 2×20 s.",
+          "Pierwszą serię roboczą poprzedź serią na 50% ciężaru."
+        ],
+        "cwiczenia": [
+          {
+            "nazwa": "Rumuński martwy ciąg",
+            "serie": 3,
+            "powt": "10",
+            "przerwa": "2 min",
+            "wskazowka": "Umiarkowany ciężar. Po dobie stania plecy są zmęczone — technika ważniejsza niż kilogramy."
+          },
+          {
+            "nazwa": "Wyciskanie hantli nad głowę",
+            "serie": 3,
+            "powt": "10",
+            "przerwa": "90 s",
+            "wskazowka": "Siedząc, z oparciem — stabilniej gdy jesteś zmęczony."
+          },
+          {
+            "nazwa": "Podciąganie albo wiosłowanie hantlą",
+            "serie": 3,
+            "powt": "8-12",
+            "przerwa": "90 s",
+            "wskazowka": "Wybierz to, na co masz dziś siłę."
+          },
+          {
+            "nazwa": "Uginanie EZ + pompki (superseria)",
+            "serie": 2,
+            "powt": "12 + max",
+            "przerwa": "75 s",
+            "wskazowka": "Jedno po drugim bez przerwy, potem odpoczynek."
+          }
+        ],
+        "finisz": "Kręci Ci się w głowie albo ciężar leci — kończysz. Po nieprzespanej dobie to normalne i nie jest to porażka. Zaraz po treningu jesz pierwszy porządny posiłek dnia."
+      }
+    ],
+    "zmiana": {
+      "nazwa": "Dzień zmiany — bez treningu",
+      "zasada": "Na 24h służbie nie trenujesz. Zamiast tego: co 2-3 godziny wstań i przejdź się 5 minut, zrób 10 przysiadów i rozciągnij kark. To nie jest trening, to profilaktyka pleców przy staniu i siedzeniu.",
+      "mikro": [
+        "10 przysiadów bez ciężaru",
+        "10 krążeń ramion w tył",
+        "30 s rozciągania zginaczy bioder na każdą nogę",
+        "Odchylenie głowy w tył i na boki po 15 s"
+      ]
+    }
   },
   "odhaczone": {},
   "podmiany": {},
@@ -1920,25 +2350,9 @@
       "b_gulasz"
     ],
     "waga": [],
-    "treningi": [],
-    "kroki": [
-      {
-        "data": "2026-09-04",
-        "kroki": 1692,
-        "cel": 7000,
-        "status": "malo"
-      }
-    ]
+    "treningi": []
   },
-  "kroki": {
-    "kroki": 1692,
-    "cel": 7000,
-    "brakuje": 5308,
-    "status": "malo",
-    "sugestia": "Dziś siedziałeś prawie całą dobę. Nie nadrobisz tego w nocy i nie ma sensu próbować — zrób 10 minut chodzenia teraz i rozciągnij plecy, żeby jutro nie bolały.",
-    "komentarz": "Na służbie kroki robią się same z obchodów — ten cel to sygnał, żebyś nie przesiedział całej doby na krześle.",
-    "procent": 24
-  },
+  "kroki": null,
   "kroki_cel": {
     "cel": 7000,
     "komentarz": "Na służbie kroki robią się same z obchodów — ten cel to sygnał, żebyś nie przesiedział całej doby na krześle."

@@ -133,6 +133,12 @@ py trener.py waga 81.4   # zapis wagi + tempo redukcji
 py trener.py kroki 6420  # ręczny zapis kroków (normalnie robi to Skrót z iPhone'a)
 py trener.py nowyplan    # przelosuj posiłki, jeśli plan Ci nie pasuje
 py trener.py kupione     # ręczne zaksięgowanie zakupów (cron robi to sam o 15:30)
+py trener.py zamien kolacja        # podmiana posiłku na inny o zbliżonych makrach
+py trener.py niegotuje             # dziś bez garnka — gotowiec o tych samych makrach
+py trener.py serie "Przysiad ze sztangą (w racku, z bolcami)" 80 8 8 8
+py trener.py podsumowanie          # co wyszło z ostatnich 3 dni
+py trener.py kalorie [--zastosuj]  # trend wagi i korekta celu
+py trener.py przetworz             # zastosuj zdarzenia wysłane z panelu
 ```
 
 Po zmianie czegokolwiek lokalnie zrób `git push` — inaczej chmura o tym nie wie.
@@ -152,6 +158,8 @@ Po zmianie czegokolwiek lokalnie zrób `git push` — inaczej chmura o tym nie w
 | `data/workouts.json` | Treningi domowe: główne i krótkie po zmianie |
 | `data/dni.json` | Szablony dnia A–Z dla trzech typów dnia + nawyki |
 | `data/kroki.json` | Cele kroków na każdy typ dnia i podpowiedzi, gdy brakuje |
+| `data/suple.json` | Suplementy — jeden ping przy pobudce |
+| `dziennik.py` | Progresja ciężarów, trend wagi i korekta kalorii, log zdarzeń |
 | `docs/` | Panel WWW (GitHub Pages) — to jest ta „apka" na telefonie |
 | `state/` | Lodówka, aktualny plan, historia wagi, wysłane pingi |
 | `legacy/` | Poprzednia wersja na Discorda, zostawiona na wszelki wypadek |
@@ -170,6 +178,21 @@ Cała reszta liczy się z niej: `(dzisiaj − kotwica) mod 3` daje typ dnia.
 Jeśli kiedyś zmienisz się z kimś służbą i grafik się przesunie, poprawiasz tę jedną datę.
 
 ---
+
+## Zapis z telefonu
+
+Panel domyślnie tylko pokazuje. Żeby odhaczać punkty, wpisywać ciężary i wagę oraz
+podmieniać posiłki z telefonu, wklej w zakładce **Dziś → Zapis z telefonu** ten sam
+token fine-grained, którego użyłeś w Skrócie od kroków.
+
+Jak to działa: panel **tylko dopisuje zdarzenia** do `state/zdarzenia.json` przez API
+GitHuba. Nie zna reguł progresji ani makr — całą logikę stosuje `trener.py przetworz`
+przy najbliższym przebiegu crona, do 10 minut. Dzięki temu telefon nie może policzyć
+niczego inaczej niż serwer, a dwa źródła mogą pisać niezależnie: przy konflikcie panel
+czyta najnowszą wersję pliku i próbuje raz jeszcze, zamiast nadpisywać cudzy zapis.
+
+Token siedzi w pamięci przeglądarki na telefonie i ma dostęp wyłącznie do zawartości
+tego jednego repozytorium.
 
 ## Gdy coś nie działa
 
