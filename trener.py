@@ -629,7 +629,18 @@ def eksport():
     }
     for dzien in dane["plan"]["dni"]:
         dzien["nazwy"] = {s: nazwa_posilku(dzien[s]) for s in SLOTY}
-    save(os.path.join(DOCS, "dane.json"), dane)
+
+    # Cron leci co 10 minut. Gdyby zapisywał plik zawsze, sam znacznik czasu
+    # generowałby commit przy każdym uruchomieniu — 144 dziennie i repo nie do
+    # czytania. Zapisujemy tylko, gdy zmieniła się TREŚĆ.
+    sciezka = os.path.join(DOCS, "dane.json")
+    stare = load(sciezka, None) if os.path.exists(sciezka) else None
+    if stare is not None:
+        a = dict(stare); b = dict(dane)
+        a.pop("wygenerowano", None); b.pop("wygenerowano", None)
+        if json.dumps(a, sort_keys=True, ensure_ascii=False) == json.dumps(b, sort_keys=True, ensure_ascii=False):
+            return stare
+    save(sciezka, dane)
     return dane
 
 
