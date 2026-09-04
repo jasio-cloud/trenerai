@@ -1,5 +1,5 @@
 {
-  "wygenerowano": "2026-09-04T17:22:47",
+  "wygenerowano": "2026-09-04T17:23:56+02:00",
   "dzis": "2026-09-04",
   "typ_dzis": 0,
   "typy": {
@@ -253,13 +253,13 @@
       "ping": true,
       "slot": "kolacja",
       "opis": "Ostatni posiłek na zmianie. Lekki, żeby nie leżeć z pełnym brzuchem przed pierwszą drzemką.",
-      "posilek": "Box: serek wiejski + jajka na twardo + ogórki",
-      "posilek_id": "q_serek_box",
+      "posilek": "Kanapki z jajkiem na twardo i serem (2 kromki)",
+      "posilek_id": "q_kanapki_jajko",
       "makra": {
-        "kcal": 500,
-        "bialko": 47,
+        "kcal": 490,
+        "bialko": 30,
         "tluszcz": 24,
-        "wegle": 27
+        "wegle": 37
       }
     },
     {
@@ -1879,14 +1879,6 @@
   "alternatywy": {
     "sniadanie": [
       {
-        "id": "q_kanapki_jajko",
-        "nazwa": "Kanapki z jajkiem na twardo i serem (2 kromki)",
-        "kcal": 490,
-        "bialko": 30,
-        "czas": 12,
-        "bez_gotowania": false
-      },
-      {
         "id": "q_twarog_banan",
         "nazwa": "Twaróg z bananem i miodem",
         "kcal": 490,
@@ -1913,14 +1905,6 @@
     ],
     "drugi": [
       {
-        "id": "q_kanapki_jajko",
-        "nazwa": "Kanapki z jajkiem na twardo i serem (2 kromki)",
-        "kcal": 490,
-        "bialko": 30,
-        "czas": 12,
-        "bez_gotowania": false
-      },
-      {
         "id": "q_jajka_kukurydza",
         "nazwa": "Box: sałatka jajeczna z kukurydzą",
         "kcal": 459,
@@ -1942,6 +1926,14 @@
         "kcal": 490,
         "bialko": 38,
         "czas": 4,
+        "bez_gotowania": false
+      },
+      {
+        "id": "q_salatka_feta",
+        "nazwa": "Sałatka z fetą, jajkiem i pomidorem + kromka",
+        "kcal": 551,
+        "bialko": 29,
+        "czas": 7,
         "bez_gotowania": false
       }
     ],
@@ -1981,26 +1973,10 @@
     ],
     "kolacja": [
       {
-        "id": "q_twarog",
-        "nazwa": "Twarożek ze szczypiorkiem + 2 kromki",
-        "kcal": 488,
-        "bialko": 45,
-        "czas": 5,
-        "bez_gotowania": false
-      },
-      {
         "id": "q_jajka_kukurydza",
         "nazwa": "Box: sałatka jajeczna z kukurydzą",
         "kcal": 459,
         "bialko": 34,
-        "czas": 12,
-        "bez_gotowania": false
-      },
-      {
-        "id": "q_kanapki_jajko",
-        "nazwa": "Kanapki z jajkiem na twardo i serem (2 kromki)",
-        "kcal": 490,
-        "bialko": 30,
         "czas": 12,
         "bez_gotowania": false
       },
@@ -2010,6 +1986,22 @@
         "kcal": 551,
         "bialko": 29,
         "czas": 7,
+        "bez_gotowania": false
+      },
+      {
+        "id": "q_twarog",
+        "nazwa": "Twarożek ze szczypiorkiem + 2 kromki",
+        "kcal": 488,
+        "bialko": 45,
+        "czas": 5,
+        "bez_gotowania": false
+      },
+      {
+        "id": "q_serek_box",
+        "nazwa": "Box: serek wiejski + jajka na twardo + ogórki",
+        "kcal": 500,
+        "bialko": 47,
+        "czas": 12,
         "bez_gotowania": false
       }
     ]
@@ -2305,7 +2297,9 @@
     }
   },
   "odhaczone": {},
-  "podmiany": {},
+  "podmiany": {
+    "kolacja": "q_kanapki_jajko"
+  },
   "ciezary": {},
   "kalorie": {
     "trend": null,
