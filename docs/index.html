@@ -53,7 +53,10 @@
   ol.os li{display:grid;grid-template-columns:52px 1fr;gap:10px;padding:11px 0;
     border-top:1px solid var(--linia)}
   ol.os li:first-child{border-top:0}
-  ol.os li.minelo{opacity:.42}
+  ol.os li.minelo .godz,
+  ol.os li.minelo .tyt,
+  ol.os li.minelo .posilek,
+  ol.os li.minelo .op{opacity:.45}
   ol.os li.teraz{background:linear-gradient(90deg,rgba(200,68,43,.09),transparent);
     margin:0 -8px;padding-left:8px;padding-right:8px;border-radius:9px}
   .godz{font-variant-numeric:tabular-nums;font-weight:650;color:var(--slaby);font-size:14px;padding-top:1px}
@@ -107,8 +110,17 @@
   .mini.duzy{padding:11px 16px;font-size:13px}
   .pole{flex:1;min-width:0;background:var(--tlo);color:var(--tekst);border:1px solid var(--linia);
     border-radius:8px;padding:8px;font:inherit;font-size:13px}
-  input.ptk{width:17px;height:17px;accent-color:var(--ok);margin:0 6px 0 0;vertical-align:-2px}
-  ol.os li.odhaczone .tyt{text-decoration:line-through;opacity:.55}
+  .ptk-etykieta{display:flex;align-items:flex-start;gap:10px;cursor:pointer;
+    user-select:none;-webkit-tap-highlight-color:transparent}
+  input.ptk{appearance:none;-webkit-appearance:none;flex:none;
+    width:23px;height:23px;margin:0;border:2px solid var(--slaby);border-radius:7px;
+    background:transparent;display:grid;place-content:center;cursor:pointer}
+  input.ptk::before{content:"";width:13px;height:13px;transform:scale(0);
+    transition:transform .12s ease-out;background:var(--ok);
+    clip-path:polygon(14% 44%,0 65%,50% 100%,100% 16%,80% 0,43% 62%)}
+  input.ptk:checked{border-color:var(--ok)}
+  input.ptk:checked::before{transform:scale(1)}
+  ol.os li.odhaczone .tyt{text-decoration:line-through;opacity:.5}
   [hidden]{display:none !important}
 </style>
 </head>
@@ -144,7 +156,7 @@ const esc = s => String(s??"").replace(/[&<>"]/g, c => ({"&":"&amp;","<":"&lt;",
 /* Wersja panelu. iPhone dodany do ekranu głównego potrafi trzymać stary HTML
    w nieskończoność. dane.json leci zawsze świeży, więc porównujemy numery
    i przy różnicy przeładowujemy stronę z ?v=, co omija cache przeglądarki. */
-const WERSJA = 3;
+const WERSJA = 4;
 let D = null, widok = "dzis";
 
 /* ---- zapis z telefonu ------------------------------------------------------
@@ -276,9 +288,9 @@ function widokDzis(){
     const on = czyZrobione(klucz);
     return `<li class="${minelo?"minelo":""} ${teraz_?"teraz":""} ${on?"odhaczone":""}">
       <span class="godz">${e.czas}</span>
-      <div><div class="tyt">
+      <div><label class="ptk-etykieta">
           <input type="checkbox" class="ptk" data-punkt="${esc(klucz)}" ${on?"checked":""}>
-          ${e.ikona||""} ${esc(e.tytul)}</div>
+          <span class="tyt">${e.ikona||""} ${esc(e.tytul)}</span></label>
         ${e.posilek ? `<div class="posilek">${esc(e.posilek)}
            <span class="kcal">· ${e.makra.kcal} kcal, ${e.makra.bialko} g B</span>
            ${e.slot ? `<button class="mini" data-zamien="${e.slot}">zamień</button>` : ""}</div>` : ""}
