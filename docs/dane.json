@@ -1,5 +1,5 @@
 {
-  "wygenerowano": "2026-09-04T14:41:21",
+  "wygenerowano": "2026-09-04T14:58:13",
   "dzis": "2026-09-04",
   "typ_dzis": 0,
   "typy": {
@@ -167,7 +167,8 @@
       "tytul": "Pobudka",
       "ikona": "⏰",
       "ping": true,
-      "opis": "Szklanka wody od razu po wstaniu. Boxy masz spakowane w lodówce od wczoraj — wyjmij je teraz, żeby nie zapomnieć."
+      "opis": "Szklanka wody od razu po wstaniu. Boxy masz spakowane w lodówce od wczoraj — wyjmij je teraz, żeby nie zapomnieć.",
+      "akcja": "suple"
     },
     {
       "czas": "05:45",
@@ -1265,6 +1266,170 @@
         "Szczypiorek, sól, pieprz. Do pojemnika, chleb osobno.",
         "Trzyma się w lodówce 2 dni — możesz zrobić podwójną porcję w dniu gotowania."
       ]
+    },
+    "o_slojek": {
+      "id": "o_slojek",
+      "nazwa": "Gotowe danie ze słoika + pieczywo",
+      "sloty": [
+        "obiad"
+      ],
+      "box": true,
+      "czas_min": 4,
+      "bez_gotowania": true,
+      "produkty": [
+        [
+          "danie_gotowe",
+          500
+        ],
+        [
+          "chleb",
+          2
+        ],
+        [
+          "ser_zolty",
+          2
+        ],
+        [
+          "ogorek_kiszony",
+          2
+        ]
+      ],
+      "kroki": [
+        "Podgrzej słoik w mikrofali 3 min albo zjedz na zimno — obie wersje działają.",
+        "Chleb i ser obok, ogórek kiszony żeby to nie było mdłe.",
+        "To nie jest gorsze jedzenie, tylko szybsze. Makra się zgadzają i o to chodzi."
+      ]
+    },
+    "o_parowki": {
+      "id": "o_parowki",
+      "nazwa": "Parówki wołowe z jajkami i pieczywem",
+      "sloty": [
+        "obiad"
+      ],
+      "box": false,
+      "czas_min": 8,
+      "bez_gotowania": true,
+      "produkty": [
+        [
+          "parowki_wolowe",
+          3
+        ],
+        [
+          "jaja",
+          3
+        ],
+        [
+          "chleb",
+          2
+        ],
+        [
+          "ketchup",
+          2
+        ],
+        [
+          "pomidor",
+          1
+        ],
+        [
+          "maslo",
+          6
+        ]
+      ],
+      "kroki": [
+        "Parówki wrzuć do wrzątku na 3 min albo podsmaż na patelni razem z jajkami.",
+        "Jajka sadzone na maśle obok.",
+        "Chleb, pomidor, kropka ketchupu. Osiem minut i masz obiad."
+      ]
+    },
+    "o_kanapki_xl": {
+      "id": "o_kanapki_xl",
+      "nazwa": "Duże kanapki z wędliną wołową i serem",
+      "sloty": [
+        "obiad"
+      ],
+      "box": true,
+      "czas_min": 6,
+      "bez_gotowania": true,
+      "produkty": [
+        [
+          "chleb",
+          4
+        ],
+        [
+          "wedlina_wolowa",
+          120
+        ],
+        [
+          "ser_zolty",
+          3
+        ],
+        [
+          "maslo",
+          10
+        ],
+        [
+          "musztarda",
+          1
+        ],
+        [
+          "ogorek",
+          0.5
+        ],
+        [
+          "pomidor",
+          1
+        ]
+      ],
+      "kroki": [
+        "Cztery kromki, cienko masłem, potem musztardą.",
+        "Wędlina, ser, plastry ogórka i pomidora.",
+        "Zero garnków. Do boxa zawijasz w folię i jedziesz."
+      ]
+    },
+    "o_twarog_xl": {
+      "id": "o_twarog_xl",
+      "nazwa": "Miska twarogu z jajkami i pieczywem",
+      "sloty": [
+        "obiad"
+      ],
+      "box": true,
+      "czas_min": 10,
+      "bez_gotowania": true,
+      "produkty": [
+        [
+          "twarog",
+          250
+        ],
+        [
+          "jaja",
+          3
+        ],
+        [
+          "smietana",
+          30
+        ],
+        [
+          "szczypiorek",
+          2
+        ],
+        [
+          "chleb",
+          3
+        ],
+        [
+          "ogorek_kiszony",
+          2
+        ],
+        [
+          "pomidor",
+          1
+        ]
+      ],
+      "kroki": [
+        "Jajka na twardo, 9 min od wrzenia, potem zimna woda.",
+        "Twaróg rozgnieć ze śmietaną, wsyp szczypiorek, sól, pieprz.",
+        "Jajka pokrój i wmieszaj. Chleb, ogórek, pomidor obok."
+      ]
     }
   },
   "produkty": {
@@ -1643,9 +1808,83 @@
       "cena": 15.0,
       "kat": "spizarnia",
       "trw": "trwale"
+    },
+    "danie_gotowe": {
+      "nazwa": "Gotowe danie mięsne (słoik/tacka)",
+      "jedn": "g",
+      "opak": 500,
+      "cena": 16.0,
+      "kat": "spizarnia",
+      "trw": "trwale"
+    },
+    "parowki_wolowe": {
+      "nazwa": "Parówki wołowe",
+      "jedn": "szt",
+      "opak": 8,
+      "cena": 14.0,
+      "kat": "mieso",
+      "trw": "chlodnia"
+    },
+    "kabanosy": {
+      "nazwa": "Kabanosy wołowe",
+      "jedn": "g",
+      "opak": 100,
+      "cena": 9.0,
+      "kat": "mieso",
+      "trw": "trwale"
+    },
+    "wedlina_wolowa": {
+      "nazwa": "Wędlina wołowa w plastrach",
+      "jedn": "g",
+      "opak": 100,
+      "cena": 9.0,
+      "kat": "mieso",
+      "trw": "chlodnia"
     }
   },
   "panel_wersja": 2,
+  "suple": {
+    "_info": "Jeden ping dziennie, przy pobudce — zgodnie z tym, co ustaliliśmy: wszystko naraz po wstaniu, przed treningiem, zero rozbijania na godziny. To jest PROPOZYCJA dobrana pod Twoją sytuację (praca zmianowa, redukcja, brak ryb w diecie, trening w domu). Wyrzuć z listy to, czego nie bierzesz, i dopisz to, co masz w szafce — ping czyta ten plik.",
+    "pora": "przy pobudce",
+    "lista": [
+      {
+        "nazwa": "Kreatyna monohydrat",
+        "ile": "5 g",
+        "po_co": "Najlepiej przebadany suplement na siłę i masę. Na redukcji pomaga utrzymać ciężary mimo deficytu.",
+        "uwaga": "Pora dnia nie ma znaczenia — liczy się codzienność, także w dni bez treningu."
+      },
+      {
+        "nazwa": "Witamina D3",
+        "ile": "2000 IU",
+        "po_co": "Pracujesz na zmiany i sporo doby spędzasz w budynku, a w Polsce od października do marca słońce i tak nie wystarcza.",
+        "uwaga": "Bierz z posiłkiem zawierającym tłuszcz — inaczej wchłonie się gorzej. U Ciebie to śniadanie po treningu."
+      },
+      {
+        "nazwa": "Omega-3 (EPA/DHA)",
+        "ile": "1000-2000 mg",
+        "po_co": "Nie jesz ryb, więc to jedyne realne źródło. Wpływa na regenerację i stany zapalne.",
+        "uwaga": "To akurat wynika wprost z Twoich wykluczeń, a nie z mody na suple."
+      },
+      {
+        "nazwa": "Magnez",
+        "ile": "300-400 mg",
+        "po_co": "Praca zmianowa i rozjechany sen. Pomaga też na skurcze przy większej objętości treningowej.",
+        "uwaga": "Cytrynian albo mleczan. Tlenek magnezu wchłania się słabo — nie kupuj najtańszego."
+      }
+    ],
+    "przypis": "Suplementy są dodatkiem do diety, a nie jej zamiennikiem — przy Twoich 2200 kcal z prawdziwego jedzenia robią różnicę na marginesie, nie w środku. Jeśli bierzesz coś jeszcze (odżywka białkowa, witamina C, cynk), dopisz do listy."
+  },
+  "odhaczone": {},
+  "podmiany": {},
+  "ciezary": {},
+  "kalorie": {
+    "trend": null,
+    "korekta_teraz": 0,
+    "kcal_teraz": 2200,
+    "zmiana": 0,
+    "ocena": "Za mało pomiarów, żeby cokolwiek liczyć. Potrzebuję trzech ważeń w ciągu trzech tygodni — ważysz się raz na cykl, więc to około tygodnia."
+  },
+  "cel_bazowy": 2200,
   "sen": {
     "cykl_min": 90,
     "zasypianie_min": 15,

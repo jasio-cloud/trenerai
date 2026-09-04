@@ -27,7 +27,8 @@
         "tytul": "Pobudka",
         "ikona": "⏰",
         "ping": true,
-        "opis": "Szklanka wody od razu po wstaniu. Boxy masz spakowane w lodówce od wczoraj — wyjmij je teraz, żeby nie zapomnieć."
+        "opis": "Szklanka wody od razu po wstaniu. Boxy masz spakowane w lodówce od wczoraj — wyjmij je teraz, żeby nie zapomnieć.",
+        "akcja": "suple"
       },
       {
         "czas": "05:45",
@@ -165,7 +166,8 @@
         "tytul": "Pobudka",
         "ikona": "⏰",
         "ping": true,
-        "opis": "Woda, suple, toaleta. Bez telefonu — dziś zaczynasz od sztangi, nie od ekranu."
+        "opis": "Woda, suple, toaleta. Bez telefonu — dziś zaczynasz od sztangi, nie od ekranu.",
+        "akcja": "suple"
       },
       {
         "czas": "13:30",
@@ -182,6 +184,14 @@
         "ping": true,
         "slot": "drugi",
         "opis": "Pierwszy porządny posiłek dnia. Trenowałeś na czczo, więc nie odkładaj go na później."
+      },
+      {
+        "czas": "15:15",
+        "tytul": "Podsumowanie cyklu",
+        "ikona": "📊",
+        "ping": true,
+        "akcja": "podsumowanie",
+        "opis": "Trzy dni za Tobą. Zanim pójdziesz po zakupy, zobacz, co z nich wyszło."
       },
       {
         "czas": "15:30",
@@ -237,7 +247,7 @@
         "tytul": "Pobudka + waga",
         "ikona": "⚖️",
         "ping": true,
-        "akcja": "waga",
+        "akcja": "suple",
         "opis": "Zważ się od razu po wstaniu, przed jedzeniem i piciem. Potem woda, suple, toaleta — i bez telefonu."
       },
       {

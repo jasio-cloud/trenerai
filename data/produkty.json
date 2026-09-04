@@ -1,55 +1,411 @@
 {
   "_info": "Cennik PLN (orientacyjnie, dyskont 2026). jedn=jednostka używana w przepisach. opak=ile jednostek ma 1 opakowanie w sklepie. cena=za CAŁE opakowanie. trw: swieze (psuje się <5 dni) / chlodnia (7-14 dni) / trwale (spiżarnia). kat=dział sklepu.",
-
-  "jaja":            {"nazwa": "Jaja",                    "jedn": "szt",     "opak": 10,   "cena": 12.0, "kat": "nabial",   "trw": "chlodnia"},
-  "twarog":          {"nazwa": "Twaróg półtłusty",        "jedn": "g",       "opak": 250,  "cena": 5.5,  "kat": "nabial",   "trw": "chlodnia"},
-  "skyr":            {"nazwa": "Skyr naturalny",          "jedn": "g",       "opak": 400,  "cena": 8.0,  "kat": "nabial",   "trw": "chlodnia"},
-  "jogurt_grecki":   {"nazwa": "Jogurt grecki 2%",        "jedn": "g",       "opak": 400,  "cena": 6.0,  "kat": "nabial",   "trw": "chlodnia"},
-  "serek_wiejski":   {"nazwa": "Serek wiejski",           "jedn": "opak",    "opak": 1,    "cena": 3.5,  "kat": "nabial",   "trw": "chlodnia"},
-  "ser_zolty":       {"nazwa": "Ser żółty w plastrach",   "jedn": "plaster", "opak": 12,   "cena": 10.0, "kat": "nabial",   "trw": "chlodnia"},
-  "ser":             {"nazwa": "Ser żółty starty",        "jedn": "g",       "opak": 200,  "cena": 9.0,  "kat": "nabial",   "trw": "chlodnia"},
-  "mozzarella":      {"nazwa": "Mozzarella",              "jedn": "g",       "opak": 125,  "cena": 5.0,  "kat": "nabial",   "trw": "chlodnia"},
-  "feta":            {"nazwa": "Ser feta",                "jedn": "g",       "opak": 200,  "cena": 8.0,  "kat": "nabial",   "trw": "chlodnia"},
-  "mleko":           {"nazwa": "Mleko 2%",                "jedn": "ml",      "opak": 1000, "cena": 4.0,  "kat": "nabial",   "trw": "chlodnia"},
-  "maslo":           {"nazwa": "Masło",                   "jedn": "g",       "opak": 200,  "cena": 8.5,  "kat": "nabial",   "trw": "chlodnia"},
-  "smietana":        {"nazwa": "Śmietana 18%",            "jedn": "ml",      "opak": 200,  "cena": 3.5,  "kat": "nabial",   "trw": "chlodnia"},
-
-  "mielone_wolowe":  {"nazwa": "Mielona wołowina",        "jedn": "g",       "opak": 400,  "cena": 18.0, "kat": "mieso",    "trw": "swieze"},
-  "wolowina_gulasz": {"nazwa": "Wołowina na gulasz (łopatka)", "jedn": "g",  "opak": 500,  "cena": 25.0, "kat": "mieso",    "trw": "swieze"},
-
-  "chleb":           {"nazwa": "Chleb żytni / pełnoziarnisty", "jedn": "kromka", "opak": 16, "cena": 6.0, "kat": "pieczywo", "trw": "chlodnia"},
-  "tortilla":        {"nazwa": "Tortilla pszenna",        "jedn": "szt",     "opak": 8,    "cena": 8.0,  "kat": "pieczywo", "trw": "trwale"},
-  "makaron":         {"nazwa": "Makaron (świderki/penne)", "jedn": "g",      "opak": 500,  "cena": 4.5,  "kat": "pieczywo", "trw": "trwale"},
-  "ziemniaki":       {"nazwa": "Ziemniaki",               "jedn": "g",       "opak": 2000, "cena": 7.0,  "kat": "warzywa",  "trw": "trwale"},
-
-  "pomidor":         {"nazwa": "Pomidor",                 "jedn": "szt",     "opak": 1,    "cena": 1.5,  "kat": "warzywa",  "trw": "swieze"},
-  "ogorek":          {"nazwa": "Ogórek długi",            "jedn": "szt",     "opak": 1,    "cena": 2.5,  "kat": "warzywa",  "trw": "swieze"},
-  "cebula":          {"nazwa": "Cebula",                  "jedn": "szt",     "opak": 1,    "cena": 0.6,  "kat": "warzywa",  "trw": "trwale"},
-  "czosnek":         {"nazwa": "Czosnek",                 "jedn": "zabek",   "opak": 10,   "cena": 3.0,  "kat": "warzywa",  "trw": "trwale"},
-  "papryka":         {"nazwa": "Papryka",                 "jedn": "szt",     "opak": 1,    "cena": 4.0,  "kat": "warzywa",  "trw": "chlodnia"},
-  "marchew":         {"nazwa": "Marchew",                 "jedn": "szt",     "opak": 1,    "cena": 0.5,  "kat": "warzywa",  "trw": "trwale"},
-  "pieczarki":       {"nazwa": "Pieczarki",               "jedn": "g",       "opak": 400,  "cena": 6.0,  "kat": "warzywa",  "trw": "swieze"},
-  "cukinia":         {"nazwa": "Cukinia",                 "jedn": "szt",     "opak": 1,    "cena": 4.0,  "kat": "warzywa",  "trw": "chlodnia"},
-  "kapusta_kiszona": {"nazwa": "Kapusta kiszona",         "jedn": "g",       "opak": 500,  "cena": 5.0,  "kat": "warzywa",  "trw": "chlodnia"},
-  "ogorek_kiszony":  {"nazwa": "Ogórek kiszony",          "jedn": "szt",     "opak": 8,    "cena": 8.0,  "kat": "warzywa",  "trw": "trwale"},
-  "szczypiorek":     {"nazwa": "Szczypiorek",             "jedn": "lyzka",   "opak": 12,   "cena": 3.0,  "kat": "warzywa",  "trw": "swieze"},
-  "salata":          {"nazwa": "Sałata / mix sałat",      "jedn": "g",       "opak": 150,  "cena": 5.0,  "kat": "warzywa",  "trw": "swieze"},
-  "kukurydza":       {"nazwa": "Kukurydza konserwowa",    "jedn": "g",       "opak": 200,  "cena": 4.0,  "kat": "spizarnia","trw": "trwale"},
-  "fasolka":         {"nazwa": "Fasolka szparagowa mrożona", "jedn": "g",    "opak": 450,  "cena": 6.0,  "kat": "warzywa",  "trw": "trwale"},
-  "brokul":          {"nazwa": "Brokuł mrożony",          "jedn": "g",       "opak": 450,  "cena": 7.0,  "kat": "warzywa",  "trw": "trwale"},
-  "banan":           {"nazwa": "Banan",                   "jedn": "szt",     "opak": 1,    "cena": 1.2,  "kat": "warzywa",  "trw": "chlodnia"},
-  "jablko":          {"nazwa": "Jabłko",                  "jedn": "szt",     "opak": 1,    "cena": 1.2,  "kat": "warzywa",  "trw": "trwale"},
-
-  "passata":         {"nazwa": "Passata pomidorowa",      "jedn": "g",       "opak": 500,  "cena": 5.0,  "kat": "spizarnia","trw": "trwale"},
-  "koncentrat":      {"nazwa": "Koncentrat pomidorowy",   "jedn": "g",       "opak": 200,  "cena": 4.0,  "kat": "spizarnia","trw": "trwale"},
-  "olej":            {"nazwa": "Olej rzepakowy",          "jedn": "ml",      "opak": 1000, "cena": 9.0,  "kat": "spizarnia","trw": "trwale"},
-  "oliwa":           {"nazwa": "Oliwa z oliwek",          "jedn": "ml",      "opak": 500,  "cena": 20.0, "kat": "spizarnia","trw": "trwale"},
-  "bulion":          {"nazwa": "Kostka bulionowa",        "jedn": "kostka",  "opak": 6,    "cena": 4.0,  "kat": "spizarnia","trw": "trwale"},
-  "musztarda":       {"nazwa": "Musztarda",               "jedn": "lyzka",   "opak": 12,   "cena": 4.0,  "kat": "spizarnia","trw": "trwale"},
-  "ketchup":         {"nazwa": "Ketchup",                 "jedn": "lyzka",   "opak": 30,   "cena": 6.0,  "kat": "spizarnia","trw": "trwale"},
-  "miod":            {"nazwa": "Miód",                    "jedn": "lyzka",   "opak": 20,   "cena": 18.0, "kat": "spizarnia","trw": "trwale"},
-  "orzechy":         {"nazwa": "Orzechy / migdały",       "jedn": "g",       "opak": 200,  "cena": 12.0, "kat": "spizarnia","trw": "trwale"},
-  "maslo_orzechowe": {"nazwa": "Masło orzechowe 100%",    "jedn": "lyzka",   "opak": 22,   "cena": 15.0, "kat": "spizarnia","trw": "trwale"},
-  "maka":            {"nazwa": "Mąka pszenna",            "jedn": "g",       "opak": 1000, "cena": 3.5,  "kat": "spizarnia","trw": "trwale"},
-  "przyprawy":       {"nazwa": "Przyprawy (sól, pieprz, papryka, oregano, majeranek)", "jedn": "porcja", "opak": 100, "cena": 15.0, "kat": "spizarnia", "trw": "trwale"}
+  "jaja": {
+    "nazwa": "Jaja",
+    "jedn": "szt",
+    "opak": 10,
+    "cena": 12.0,
+    "kat": "nabial",
+    "trw": "chlodnia"
+  },
+  "twarog": {
+    "nazwa": "Twaróg półtłusty",
+    "jedn": "g",
+    "opak": 250,
+    "cena": 5.5,
+    "kat": "nabial",
+    "trw": "chlodnia"
+  },
+  "skyr": {
+    "nazwa": "Skyr naturalny",
+    "jedn": "g",
+    "opak": 400,
+    "cena": 8.0,
+    "kat": "nabial",
+    "trw": "chlodnia"
+  },
+  "jogurt_grecki": {
+    "nazwa": "Jogurt grecki 2%",
+    "jedn": "g",
+    "opak": 400,
+    "cena": 6.0,
+    "kat": "nabial",
+    "trw": "chlodnia"
+  },
+  "serek_wiejski": {
+    "nazwa": "Serek wiejski",
+    "jedn": "opak",
+    "opak": 1,
+    "cena": 3.5,
+    "kat": "nabial",
+    "trw": "chlodnia"
+  },
+  "ser_zolty": {
+    "nazwa": "Ser żółty w plastrach",
+    "jedn": "plaster",
+    "opak": 12,
+    "cena": 10.0,
+    "kat": "nabial",
+    "trw": "chlodnia"
+  },
+  "ser": {
+    "nazwa": "Ser żółty starty",
+    "jedn": "g",
+    "opak": 200,
+    "cena": 9.0,
+    "kat": "nabial",
+    "trw": "chlodnia"
+  },
+  "mozzarella": {
+    "nazwa": "Mozzarella",
+    "jedn": "g",
+    "opak": 125,
+    "cena": 5.0,
+    "kat": "nabial",
+    "trw": "chlodnia"
+  },
+  "feta": {
+    "nazwa": "Ser feta",
+    "jedn": "g",
+    "opak": 200,
+    "cena": 8.0,
+    "kat": "nabial",
+    "trw": "chlodnia"
+  },
+  "mleko": {
+    "nazwa": "Mleko 2%",
+    "jedn": "ml",
+    "opak": 1000,
+    "cena": 4.0,
+    "kat": "nabial",
+    "trw": "chlodnia"
+  },
+  "maslo": {
+    "nazwa": "Masło",
+    "jedn": "g",
+    "opak": 200,
+    "cena": 8.5,
+    "kat": "nabial",
+    "trw": "chlodnia"
+  },
+  "smietana": {
+    "nazwa": "Śmietana 18%",
+    "jedn": "ml",
+    "opak": 200,
+    "cena": 3.5,
+    "kat": "nabial",
+    "trw": "chlodnia"
+  },
+  "mielone_wolowe": {
+    "nazwa": "Mielona wołowina",
+    "jedn": "g",
+    "opak": 400,
+    "cena": 18.0,
+    "kat": "mieso",
+    "trw": "swieze"
+  },
+  "wolowina_gulasz": {
+    "nazwa": "Wołowina na gulasz (łopatka)",
+    "jedn": "g",
+    "opak": 500,
+    "cena": 25.0,
+    "kat": "mieso",
+    "trw": "swieze"
+  },
+  "chleb": {
+    "nazwa": "Chleb żytni / pełnoziarnisty",
+    "jedn": "kromka",
+    "opak": 16,
+    "cena": 6.0,
+    "kat": "pieczywo",
+    "trw": "chlodnia"
+  },
+  "tortilla": {
+    "nazwa": "Tortilla pszenna",
+    "jedn": "szt",
+    "opak": 8,
+    "cena": 8.0,
+    "kat": "pieczywo",
+    "trw": "trwale"
+  },
+  "makaron": {
+    "nazwa": "Makaron (świderki/penne)",
+    "jedn": "g",
+    "opak": 500,
+    "cena": 4.5,
+    "kat": "pieczywo",
+    "trw": "trwale"
+  },
+  "ziemniaki": {
+    "nazwa": "Ziemniaki",
+    "jedn": "g",
+    "opak": 2000,
+    "cena": 7.0,
+    "kat": "warzywa",
+    "trw": "trwale"
+  },
+  "pomidor": {
+    "nazwa": "Pomidor",
+    "jedn": "szt",
+    "opak": 1,
+    "cena": 1.5,
+    "kat": "warzywa",
+    "trw": "swieze"
+  },
+  "ogorek": {
+    "nazwa": "Ogórek długi",
+    "jedn": "szt",
+    "opak": 1,
+    "cena": 2.5,
+    "kat": "warzywa",
+    "trw": "swieze"
+  },
+  "cebula": {
+    "nazwa": "Cebula",
+    "jedn": "szt",
+    "opak": 1,
+    "cena": 0.6,
+    "kat": "warzywa",
+    "trw": "trwale"
+  },
+  "czosnek": {
+    "nazwa": "Czosnek",
+    "jedn": "zabek",
+    "opak": 10,
+    "cena": 3.0,
+    "kat": "warzywa",
+    "trw": "trwale"
+  },
+  "papryka": {
+    "nazwa": "Papryka",
+    "jedn": "szt",
+    "opak": 1,
+    "cena": 4.0,
+    "kat": "warzywa",
+    "trw": "chlodnia"
+  },
+  "marchew": {
+    "nazwa": "Marchew",
+    "jedn": "szt",
+    "opak": 1,
+    "cena": 0.5,
+    "kat": "warzywa",
+    "trw": "trwale"
+  },
+  "pieczarki": {
+    "nazwa": "Pieczarki",
+    "jedn": "g",
+    "opak": 400,
+    "cena": 6.0,
+    "kat": "warzywa",
+    "trw": "swieze"
+  },
+  "cukinia": {
+    "nazwa": "Cukinia",
+    "jedn": "szt",
+    "opak": 1,
+    "cena": 4.0,
+    "kat": "warzywa",
+    "trw": "chlodnia"
+  },
+  "kapusta_kiszona": {
+    "nazwa": "Kapusta kiszona",
+    "jedn": "g",
+    "opak": 500,
+    "cena": 5.0,
+    "kat": "warzywa",
+    "trw": "chlodnia"
+  },
+  "ogorek_kiszony": {
+    "nazwa": "Ogórek kiszony",
+    "jedn": "szt",
+    "opak": 8,
+    "cena": 8.0,
+    "kat": "warzywa",
+    "trw": "trwale"
+  },
+  "szczypiorek": {
+    "nazwa": "Szczypiorek",
+    "jedn": "lyzka",
+    "opak": 12,
+    "cena": 3.0,
+    "kat": "warzywa",
+    "trw": "swieze"
+  },
+  "salata": {
+    "nazwa": "Sałata / mix sałat",
+    "jedn": "g",
+    "opak": 150,
+    "cena": 5.0,
+    "kat": "warzywa",
+    "trw": "swieze"
+  },
+  "kukurydza": {
+    "nazwa": "Kukurydza konserwowa",
+    "jedn": "g",
+    "opak": 200,
+    "cena": 4.0,
+    "kat": "spizarnia",
+    "trw": "trwale"
+  },
+  "fasolka": {
+    "nazwa": "Fasolka szparagowa mrożona",
+    "jedn": "g",
+    "opak": 450,
+    "cena": 6.0,
+    "kat": "warzywa",
+    "trw": "trwale"
+  },
+  "brokul": {
+    "nazwa": "Brokuł mrożony",
+    "jedn": "g",
+    "opak": 450,
+    "cena": 7.0,
+    "kat": "warzywa",
+    "trw": "trwale"
+  },
+  "banan": {
+    "nazwa": "Banan",
+    "jedn": "szt",
+    "opak": 1,
+    "cena": 1.2,
+    "kat": "warzywa",
+    "trw": "chlodnia"
+  },
+  "jablko": {
+    "nazwa": "Jabłko",
+    "jedn": "szt",
+    "opak": 1,
+    "cena": 1.2,
+    "kat": "warzywa",
+    "trw": "trwale"
+  },
+  "passata": {
+    "nazwa": "Passata pomidorowa",
+    "jedn": "g",
+    "opak": 500,
+    "cena": 5.0,
+    "kat": "spizarnia",
+    "trw": "trwale"
+  },
+  "koncentrat": {
+    "nazwa": "Koncentrat pomidorowy",
+    "jedn": "g",
+    "opak": 200,
+    "cena": 4.0,
+    "kat": "spizarnia",
+    "trw": "trwale"
+  },
+  "olej": {
+    "nazwa": "Olej rzepakowy",
+    "jedn": "ml",
+    "opak": 1000,
+    "cena": 9.0,
+    "kat": "spizarnia",
+    "trw": "trwale"
+  },
+  "oliwa": {
+    "nazwa": "Oliwa z oliwek",
+    "jedn": "ml",
+    "opak": 500,
+    "cena": 20.0,
+    "kat": "spizarnia",
+    "trw": "trwale"
+  },
+  "bulion": {
+    "nazwa": "Kostka bulionowa",
+    "jedn": "kostka",
+    "opak": 6,
+    "cena": 4.0,
+    "kat": "spizarnia",
+    "trw": "trwale"
+  },
+  "musztarda": {
+    "nazwa": "Musztarda",
+    "jedn": "lyzka",
+    "opak": 12,
+    "cena": 4.0,
+    "kat": "spizarnia",
+    "trw": "trwale"
+  },
+  "ketchup": {
+    "nazwa": "Ketchup",
+    "jedn": "lyzka",
+    "opak": 30,
+    "cena": 6.0,
+    "kat": "spizarnia",
+    "trw": "trwale"
+  },
+  "miod": {
+    "nazwa": "Miód",
+    "jedn": "lyzka",
+    "opak": 20,
+    "cena": 18.0,
+    "kat": "spizarnia",
+    "trw": "trwale"
+  },
+  "orzechy": {
+    "nazwa": "Orzechy / migdały",
+    "jedn": "g",
+    "opak": 200,
+    "cena": 12.0,
+    "kat": "spizarnia",
+    "trw": "trwale"
+  },
+  "maslo_orzechowe": {
+    "nazwa": "Masło orzechowe 100%",
+    "jedn": "lyzka",
+    "opak": 22,
+    "cena": 15.0,
+    "kat": "spizarnia",
+    "trw": "trwale"
+  },
+  "maka": {
+    "nazwa": "Mąka pszenna",
+    "jedn": "g",
+    "opak": 1000,
+    "cena": 3.5,
+    "kat": "spizarnia",
+    "trw": "trwale"
+  },
+  "przyprawy": {
+    "nazwa": "Przyprawy (sól, pieprz, papryka, oregano, majeranek)",
+    "jedn": "porcja",
+    "opak": 100,
+    "cena": 15.0,
+    "kat": "spizarnia",
+    "trw": "trwale"
+  },
+  "danie_gotowe": {
+    "nazwa": "Gotowe danie mięsne (słoik/tacka)",
+    "jedn": "g",
+    "opak": 500,
+    "cena": 16.0,
+    "kat": "spizarnia",
+    "trw": "trwale"
+  },
+  "parowki_wolowe": {
+    "nazwa": "Parówki wołowe",
+    "jedn": "szt",
+    "opak": 8,
+    "cena": 14.0,
+    "kat": "mieso",
+    "trw": "chlodnia"
+  },
+  "kabanosy": {
+    "nazwa": "Kabanosy wołowe",
+    "jedn": "g",
+    "opak": 100,
+    "cena": 9.0,
+    "kat": "mieso",
+    "trw": "trwale"
+  },
+  "wedlina_wolowa": {
+    "nazwa": "Wędlina wołowa w plastrach",
+    "jedn": "g",
+    "opak": 100,
+    "cena": 9.0,
+    "kat": "mieso",
+    "trw": "chlodnia"
+  }
 }

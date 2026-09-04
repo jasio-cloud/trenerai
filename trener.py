@@ -69,13 +69,20 @@ QUICK = load(os.path.join(DATA, "quick.json"))["posilki"]
 DNI = load(os.path.join(DATA, "dni.json"))
 TRENINGI = load(os.path.join(DATA, "workouts.json"))
 KROKI = load(os.path.join(DATA, "kroki.json"))
+SUPLE = load(os.path.join(DATA, "suple.json"))
+import dziennik
 
 BAZA_BY_ID = {b["id"]: b for b in BAZY}
 QUICK_BY_ID = {q["id"]: q for q in QUICK}
-CEL = CFG["makra"]
+# Cel kaloryczny = wartosc bazowa z config.json plus korekta wyliczona z trendu wagi.
+# Dzieki temu config zostaje punktem odniesienia, a system i tak dostraja sie do tego,
+# co realnie pokazuje waga (patrz dziennik.przelicz_kalorie).
+CEL = dict(CFG["makra"])
+CEL["kcal"] += dziennik.korekta_kcal()
 SLOTY = ("sniadanie", "drugi", "obiad", "kolacja")
 
 PLAN_PATH = os.path.join(STATE, "plan.json")
+PODMIANY_PATH = os.path.join(STATE, "podmiany.json")
 FRIDGE_PATH = os.path.join(STATE, "fridge.json")
 HIST_PATH = os.path.join(STATE, "historia.json")
 
@@ -278,17 +285,107 @@ def generuj_plan(d=None, force=False):
     return plan
 
 
+def podmiany(d=None):
+    """Reczne zmiany posilkow na dany dzien - nadpisuja wylosowany plan."""
+    d = d or dzis()
+    return load(PODMIANY_PATH, {}).get(d.isoformat(), {})
+
+
+def _zastosuj_podmiany(dzien, d):
+    """Plan jest propozycja, nie wyrokiem. Jesli cos podmieniles, to ma zostac."""
+    zmiany = podmiany(d)
+    if not zmiany:
+        return dzien
+    dzien = dict(dzien)
+    for slot, pid in zmiany.items():
+        if slot in SLOTY:
+            dzien[slot] = pid
+    dzien["makra"] = makra_dnia(dzien)
+    dzien["podmienione"] = list(zmiany)
+    return dzien
+
+
 def plan_dnia(d=None):
     d = d or dzis()
     plan = generuj_plan(d)
     for dzien in plan["dni"]:
         if dzien["data"] == d.isoformat():
-            return plan, dzien
+            return plan, _zastosuj_podmiany(dzien, d)
     plan = generuj_plan(d, force=True)
     for dzien in plan["dni"]:
         if dzien["data"] == d.isoformat():
-            return plan, dzien
+            return plan, _zastosuj_podmiany(dzien, d)
     return plan, plan["dni"][0]
+
+
+def _zapisz_podmiane(slot, pid, d=None):
+    d = d or dzis()
+    w = load(PODMIANY_PATH, {})
+    w.setdefault(d.isoformat(), {})[slot] = pid
+    # trzymamy tylko biezacy tydzien, zeby plik nie puchl w nieskonczonosc
+    granica = (d - datetime.timedelta(days=7)).isoformat()
+    w = {k: v for k, v in w.items() if k >= granica}
+    save(PODMIANY_PATH, w)
+    dziennik.dodaj_zdarzenie("podmiana", d, slot=slot, na=pid)
+
+
+def zamien_posilek(slot, d=None):
+    """Podmienia jeden posilek na inny o zblizonych makrach.
+
+    Nie losujemy czegokolwiek: szukamy dania najblizszego kalorycznie i bialkowo temu,
+    ktore wypada, zeby podmiana nie rozwalila calego dnia. W dniu zmiany bierzemy
+    wylacznie to, co da sie zjesc na zimno z boxa.
+    """
+    d = d or dzis()
+    _, dzien = plan_dnia(d)
+    obecny = dzien[slot]
+    cel = makra_posilku(obecny)
+    box_only = typ_dnia(d) == 0
+
+    if slot == "obiad":
+        kandydaci = [q["id"] for q in QUICK if q.get("bez_gotowania") and (q["box"] if box_only else True)]
+        kandydaci += [b["id"] for b in BAZY if b["id"] != obecny]
+    else:
+        kandydaci = [q["id"] for q in QUICK
+                     if slot in q.get("sloty", []) and (q["box"] if box_only else True)]
+    uzyte = {dzien[s] for s in SLOTY}
+    kandydaci = [k for k in kandydaci if k != obecny and k not in uzyte]
+    if not kandydaci:
+        return None
+
+    def blad(pid):
+        m = makra_posilku(pid)
+        return abs(m["kcal"] - cel["kcal"]) + 8 * abs(m["bialko"] - cel["bialko"])
+
+    kandydaci.sort(key=blad)
+    wybrany = kandydaci[0]
+    _zapisz_podmiane(slot, wybrany, d)
+    return {"z": nazwa_posilku(obecny), "na": nazwa_posilku(wybrany), "id": wybrany,
+            "makra_stare": cel, "makra_nowe": makra_posilku(wybrany)}
+
+
+def bez_gotowania(d=None):
+    """Dzis nie gotujesz - podmieniamy obiad na gotowca o tych samych makrach.
+
+    Sedno: nie chodzi o to, zeby zjesc cokolwiek, tylko zeby dzien nadal sie zgadzal.
+    Dlatego wybieramy pozycje najblizsza kaloriom i bialku porcji, ktora mialbys ugotowac.
+    """
+    d = d or dzis()
+    _, dzien = plan_dnia(d)
+    cel = makra_posilku(dzien["obiad"])
+    box_only = typ_dnia(d) == 0
+    kandydaci = [q["id"] for q in QUICK if q.get("bez_gotowania") and (q["box"] if box_only else True)]
+    if not kandydaci:
+        return None
+    kandydaci.sort(key=lambda pid: (abs(makra_posilku(pid)["kcal"] - cel["kcal"])
+                                    + 8 * abs(makra_posilku(pid)["bialko"] - cel["bialko"])))
+    wybrany = kandydaci[0]
+    _zapisz_podmiane("obiad", wybrany, d)
+    m = makra_posilku(wybrany)
+    return {"na": nazwa_posilku(wybrany), "id": wybrany, "makra": m, "zamiast": cel,
+            "roznica_kcal": m["kcal"] - cel["kcal"], "roznica_b": m["bialko"] - cel["bialko"],
+            "czas": QUICK_BY_ID[wybrany]["czas_min"],
+            "produkty": [(PROD[k]["nazwa"], q, PROD[k]["jedn"]) for k, q in QUICK_BY_ID[wybrany]["produkty"]]}
 
 
 # ----------------------------------------------------------------- lodówka
@@ -422,6 +519,16 @@ def auto_rozlicz():
     godzina_zakupow = CFG["gotowanie"]["godzina_zakupow"]
     if n.strftime("%H:%M") < godzina_zakupow:
         return None
+
+    # KOLEJNOSC MA ZNACZENIE. Najpierw korygujemy kalorie wedlug tego, co pokazala
+    # waga, potem przeliczamy plan na nowy cel, a dopiero na koncu ksiegujemy zakupy.
+    # Odwrotnie kupilbys jedzenie pod nieaktualne zapotrzebowanie.
+    k = dziennik.przelicz_kalorie(CFG["makra"]["kcal"], zastosuj=True)
+    if k.get("zmiana"):
+        CEL["kcal"] = k["kcal_po"]
+        generuj_plan(force=True)
+        tresc = k["ocena"] + "\n" + ("Nowy cel: %d kcal dziennie." % k["kcal_po"])
+        wyslij_ping("⚖️ Korekta kalorii", tresc, priorytet=4)
     return zaksieguj_cykl()
 
 
@@ -722,6 +829,11 @@ def tresc_pinga(e, d):
     if e.get("akcja") == "gotowanie":
         b = BAZA_BY_ID[generuj_plan(d)["baza"]]
         czesci.insert(0, "Dziś gotujesz: %s — %d min, %s." % (b["nazwa"], b["czas_min"], b["naczynia"]))
+    if e.get("akcja") == "podsumowanie":
+        czesci.insert(0, tekst_podsumowania(podsumowanie_cyklu(d)))
+    if e.get("akcja") == "suple":
+        czesci.append("Suple na teraz: " + ", ".join("%s (%s)" % (x["nazwa"], x["ile"])
+                                                     for x in SUPLE["lista"]))
     if e.get("akcja") == "zakupy":
         z = lista_zakupow()
         czesci.insert(0, "%d pozycji, ok. %.2f zł. %d rzeczy już masz w lodówce."
@@ -769,6 +881,41 @@ def tick(okno_min=25, sucho=False):
     return poszlo
 
 
+def podsumowanie_cyklu(d=None):
+    """Co realnie wyszlo z ostatnich trzech dni - liczby, nie wrazenia."""
+    d = d or dzis()
+    start = start_cyklu(d)
+    koniec = start + datetime.timedelta(days=2)
+    plan = generuj_plan(d)
+    t = dziennik.trend_wagi()
+    h = load(HIST_PATH, {})
+    kroki = [k for k in h.get("kroki", []) if start.isoformat() <= k["data"] <= koniec.isoformat()]
+    srednie_kroki = int(sum(k["kroki"] for k in kroki) / len(kroki)) if kroki else None
+    zrobione = sum(1 for v in dziennik.odhaczenia(d).values() if v)
+    return {
+        "od": start.isoformat(), "do": koniec.isoformat(),
+        "baza": BAZA_BY_ID[plan["baza"]]["nazwa"],
+        "treningi": dziennik.treningi_zrobione(start, koniec),
+        "treningi_plan": 2,
+        "kroki_srednio": srednie_kroki,
+        "waga": t,
+        "kalorie": dziennik.przelicz_kalorie(CFG["makra"]["kcal"]),
+        "odhaczone_dzis": zrobione,
+    }
+
+
+def tekst_podsumowania(p):
+    w = []
+    w.append("Cykl %s → %s. Gotowałeś: %s." % (p["od"], p["do"], p["baza"]))
+    w.append("Treningi: %d z %d." % (p["treningi"], p["treningi_plan"]))
+    if p["kroki_srednio"]:
+        w.append("Kroki średnio: %s dziennie." % f"{p['kroki_srednio']:,}".replace(",", " "))
+    if p["waga"]:
+        w.append("Waga: %.1f kg, tempo %+.2f kg/tydz." % (p["waga"]["waga_teraz"], p["waga"]["kg_tydzien"]))
+    w.append(p["kalorie"]["ocena"])
+    return "\n".join(w)
+
+
 # ------------------------------------------------------------------ eksport
 
 def eksport():
@@ -793,6 +940,12 @@ def eksport():
         "posilki": {p["id"]: p for p in QUICK},
         "produkty": {k: v for k, v in PROD.items() if not k.startswith("_")},
         "panel_wersja": CFG.get("panel_wersja", 1),
+        "suple": SUPLE,
+        "odhaczone": dziennik.odhaczenia(d),
+        "podmiany": podmiany(d),
+        "ciezary": dziennik.ciezary(),
+        "kalorie": dziennik.przelicz_kalorie(CFG["makra"]["kcal"]),
+        "cel_bazowy": CFG["makra"]["kcal"],
         "sen": CFG["sen"],
         # skrot potrzebny kalkulatorowi snu w panelu: pobudka i godzina treningu per typ dnia
         "pobudki": {t: {"nazwa": DNI["typy"][t]["nazwa"], "pobudka": DNI["typy"][t]["pobudka"],
@@ -971,6 +1124,73 @@ def main():
     elif cmd == "auto":
         z = auto_rozlicz()
         print("Zaksięgowano cykl (%.2f zł)." % z["koszt"] if z else "Nic do zaksięgowania.")
+    elif cmd == "zamien":
+        slot = (arg or "").lower()
+        if slot not in SLOTY:
+            print("Użycie: py trener.py zamien sniadanie|drugi|obiad|kolacja")
+        else:
+            z = zamien_posilek(slot)
+            if not z:
+                print("Brak sensownego zamiennika na ten slot.")
+            else:
+                print(slot.upper())
+                print("  było: %s (%d kcal, B %d)"
+                      % (z["z"], z["makra_stare"]["kcal"], z["makra_stare"]["bialko"]))
+                print("  jest: %s (%d kcal, B %d)"
+                      % (z["na"], z["makra_nowe"]["kcal"], z["makra_nowe"]["bialko"]))
+    elif cmd == "niegotuje":
+        g = bez_gotowania()
+        if not g:
+            print("Brak gotowca pasującego na dziś.")
+        else:
+            _kreska("DZIŚ BEZ GOTOWANIA")
+            print("Zamiast obiadu: %s  (%d min roboty)" % (g["na"], g["czas"]))
+            print("Makra: %d kcal, B %d  →  planowane było %d kcal, B %d  (różnica %+d kcal, %+d g białka)"
+                  % (g["makra"]["kcal"], g["makra"]["bialko"], g["zamiast"]["kcal"],
+                     g["zamiast"]["bialko"], g["roznica_kcal"], g["roznica_b"]))
+            print()
+            print("DOKUP:")
+            for nazwa, ile, jedn in g["produkty"]:
+                print("   □ %-34s %g %s" % (nazwa, ile, jedn))
+    elif cmd == "serie":
+        if len(sys.argv) < 5:
+            print('Użycie: py trener.py serie "Wyciskanie sztangi leżąc" 60 8 8 7')
+        else:
+            cw, ciezar, powt = sys.argv[2], sys.argv[3], sys.argv[4:]
+            # To samo cwiczenie wystepuje i w sesji glownej, i w krotkiej, ale zakres
+            # powtorzen do progresji bierzemy z GLOWNEJ - to ona wyznacza postep,
+            # krotka jest podtrzymujaca. Stad przerwanie na pierwszym trafieniu.
+            zakres = None
+            for grupa in ("glowne", "krotkie"):
+                for t_ in TRENINGI[grupa]:
+                    for c in t_["cwiczenia"]:
+                        if c["nazwa"].lower() == cw.lower():
+                            zakres = c["powt"]
+                            break
+                    if zakres:
+                        break
+                if zakres:
+                    break
+            w = dziennik.zapisz_serie(cw, ciezar, powt, zakres)
+            print("%s: %s kg × %s" % (cw, ciezar, ", ".join(powt)))
+            print(w["komentarz"])
+    elif cmd == "zrobione":
+        if not arg:
+            print("Użycie: py trener.py zrobione \"13:30|Obiad\"")
+        else:
+            dziennik.odhacz(arg)
+            print("Odhaczone: %s" % arg)
+    elif cmd == "podsumowanie":
+        p = podsumowanie_cyklu()
+        _kreska("PODSUMOWANIE CYKLU")
+        print(tekst_podsumowania(p))
+    elif cmd == "kalorie":
+        w = dziennik.przelicz_kalorie(CFG["makra"]["kcal"], zastosuj=("--zastosuj" in sys.argv))
+        _kreska("KALORIE")
+        print("Teraz: %d kcal (baza %d %+d)" % (w["kcal_teraz"], CFG["makra"]["kcal"], w["korekta_teraz"]))
+        print(w["ocena"])
+        if w.get("zmiana"):
+            print("Po zmianie: %d kcal. Dodaj --zastosuj, żeby zapisać." % w["kcal_po"])
     elif cmd == "kroki":
         if not arg:
             o = kroki_dzis()
