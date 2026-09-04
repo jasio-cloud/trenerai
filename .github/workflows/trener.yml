@@ -47,6 +47,12 @@ jobs:
           NTFY_TOPIC: ${{ secrets.NTFY_TOPIC }}
         run: python trener.py test
 
+      - name: Potwierdź wdrożenie (tylko po pushu)
+        if: github.event_name == 'push'
+        env:
+          NTFY_TOPIC: ${{ secrets.NTFY_TOPIC }}
+        run: python trener.py wdrozenie
+
       - name: Sprawdź plan i wyślij, co się należy
         if: ${{ !inputs.test }}
         env:

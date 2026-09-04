@@ -820,6 +820,18 @@ def main():
     elif cmd == "tick":
         poszlo = tick(sucho=(arg == "sucho"))
         print("Wysłano: %s" % (", ".join(poszlo) if poszlo else "nic (nie ma nic na teraz)"))
+    elif cmd == "wdrozenie":
+        # Odpalane po każdym pushu. Potwierdza, że cala droga
+        # GitHub -> ntfy -> telefon jest drozna, i mowi, co przyjdzie nastepne.
+        n = teraz()
+        nast = [e for e in agenda() if e.get("ping") and e["czas"] > n.strftime("%H:%M")]
+        info = opis_typu(typ_dnia())
+        if nast:
+            tresc = "Dzis: %s. Nastepny ping o %s - %s." % (info["nazwa"], nast[0]["czas"], nast[0]["tytul"])
+        else:
+            tresc = "Dzis: %s. Na dzis to juz wszystko, kolejne pingi jutro." % info["nazwa"]
+        wyslij_ping("✅ Trener AI zaktualizowany", tresc, priorytet=3)
+        print(tresc)
     elif cmd == "test":
         ok = wyslij_ping("🔔 Trener AI działa",
                          "Jeśli to widzisz na telefonie, powiadomienia są ustawione poprawnie.",
