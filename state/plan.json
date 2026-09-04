@@ -1,51 +1,51 @@
 {
-  "cykl": 24,
-  "od": "2026-09-02",
-  "do": "2026-09-04",
-  "baza": "b_leczo",
+  "cykl": 25,
+  "od": "2026-09-05",
+  "do": "2026-09-07",
+  "baza": "b_shepherd",
   "dni": [
     {
-      "sniadanie": "q_twarog",
-      "drugi": "q_skyr",
-      "kolacja": "q_omlet",
-      "obiad": "b_leczo",
-      "data": "2026-09-02",
+      "sniadanie": "q_jajecznica",
+      "drugi": "q_twarog_banan",
+      "kolacja": "q_jajka_kukurydza",
+      "obiad": "b_shepherd",
+      "data": "2026-09-05",
       "typ": 1,
       "makra": {
-        "kcal": 2181,
-        "bialko": 167,
-        "tluszcz": 86,
-        "wegle": 179
+        "kcal": 2235,
+        "bialko": 147,
+        "tluszcz": 93,
+        "wegle": 203
       }
     },
     {
-      "sniadanie": "q_kanapki_jajko",
-      "drugi": "q_twarog_banan",
-      "kolacja": "q_jajka_kukurydza",
-      "obiad": "b_leczo",
-      "data": "2026-09-03",
+      "sniadanie": "q_twarog",
+      "drugi": "q_skyr",
+      "kolacja": "q_kanapki_jajko",
+      "obiad": "b_shepherd",
+      "data": "2026-09-06",
       "typ": 2,
       "makra": {
-        "kcal": 2227,
-        "bialko": 153,
-        "tluszcz": 90,
-        "wegle": 204
+        "kcal": 2191,
+        "bialko": 162,
+        "tluszcz": 83,
+        "wegle": 191
       }
     },
     {
       "sniadanie": "q_kanapki_ser",
       "drugi": "q_jogurt_orzechy",
       "kolacja": "q_serek_box",
-      "obiad": "b_leczo",
-      "data": "2026-09-04",
+      "obiad": "b_shepherd",
+      "data": "2026-09-07",
       "typ": 0,
       "makra": {
-        "kcal": 2194,
-        "bialko": 152,
-        "tluszcz": 98,
-        "wegle": 193
+        "kcal": 2230,
+        "bialko": 150,
+        "tluszcz": 103,
+        "wegle": 190
       }
     }
   ],
-  "wygenerowano": "2026-09-04T14:27:09"
+  "wygenerowano": "2026-09-05T00:12:37+02:00"
 }
