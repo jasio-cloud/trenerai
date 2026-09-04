@@ -8,6 +8,15 @@ name: Trener AI — pingi na telefon
 on:
   schedule:
     - cron: "*/10 * * * *"
+  # Wyzwalacz na push daje dwie rzeczy: natychmiastowy sprawdzian po każdej
+  # zmianie oraz awaryjną drogę, gdy GitHub wyłączy harmonogram (robi to
+  # w repozytoriach nieaktywnych ponad 60 dni). paths-ignore odcina pętlę,
+  # bo workflow sam commituje do state/ i docs/dane.json.
+  push:
+    branches: [main]
+    paths-ignore:
+      - "state/**"
+      - "docs/dane.json"
   workflow_dispatch:
     inputs:
       test:
