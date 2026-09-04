@@ -91,8 +91,8 @@
     background:color-mix(in srgb, var(--karta) 92%, transparent);
     -webkit-backdrop-filter:saturate(180%) blur(18px);backdrop-filter:saturate(180%) blur(18px);
     border-top:1px solid var(--linia);padding-bottom:env(safe-area-inset-bottom)}
-  nav .r{max-width:640px;margin:0 auto;display:grid;grid-template-columns:repeat(5,1fr)}
-  nav button{background:none;border:0;color:var(--slaby);font:inherit;font-size:10.5px;
+  nav .r{max-width:640px;margin:0 auto;display:grid;grid-template-columns:repeat(6,1fr)}
+  nav button{background:none;border:0;color:var(--slaby);font:inherit;font-size:9.5px;
     padding:9px 2px 8px;display:grid;gap:3px;justify-items:center;cursor:pointer}
   nav button b{font-size:18px;font-weight:400;line-height:1}
   nav button[aria-selected="true"]{color:var(--akcent);font-weight:650}
@@ -126,6 +126,7 @@
     <button data-w="zakupy"    aria-selected="false"><b>🛒</b>Zakupy</button>
     <button data-w="gotowanie" aria-selected="false"><b>🍳</b>Gotuję</button>
     <button data-w="trening"   aria-selected="false"><b>🏋️</b>Trening</button>
+    <button data-w="sen"       aria-selected="false"><b>😴</b>Sen</button>
   </div>
 </nav>
 
@@ -294,9 +295,125 @@ function widokTrening(){
     <div class="karta"><h2>Na koniec</h2><div class="op">${esc(t.finisz)}</div></div>`;
 }
 
+/* ---- kalkulator snu -------------------------------------------------------
+   Ta sama logika co w trener.py: cykle po 90 min liczone od ZASNIĘCIA, nie od
+   położenia się, plus świadomość grafiku — w dzień zmiany pobudka jest sztywna
+   i nie ma czego wybierać, a zbyt późne wstanie rozjeżdża plan całego dnia. */
+const doMin = hhmm => { const [h,m] = hhmm.split(":").map(Number); return h*60+m; };
+const doHHMM = m => { m = ((m % 1440) + 1440) % 1440;
+  return String(Math.floor(m/60)).padStart(2,"0") + ":" + String(m%60).padStart(2,"0"); };
+const ileSnu = m => `${Math.floor(m/60)} h ${String(m%60).padStart(2,"0")} min`;
+
+function liczSen(polozenie){
+  const cfg = D.sen, doba = 1440, typDzis = D.typ_dzis;
+  const naSluzbie = typDzis === 0 && (polozenie >= doMin("21:00") || polozenie < doMin("06:00"));
+  const zasypianie = typDzis === 1 ? cfg.zasypianie_zmeczony_min : cfg.zasypianie_min;
+  const zasniecie = polozenie + zasypianie;
+  const typDnia = przesuniecie => String((typDzis + przesuniecie) % 3);
+
+  if(naSluzbie) return {naSluzbie:true, ocena:
+    "Jesteś na służbie. Tu nie planujemy snu cyklami, tylko trzymamy się czterech drzemek z planu: "+
+    "23:00, 00:40, 02:20 i 04:00, każda po 1 h 20. Kalkulator przyda się dopiero w domu."};
+
+  const opcje = [];
+  for(let c = 3; c <= 6; c++){
+    const m = zasniecie + c * cfg.cykl_min;
+    opcje.push({cykli:c, godzina:doHHMM(m), snu:ileSnu(m - polozenie)});
+  }
+
+  const typDoc = typDnia((zasniecie + 4*cfg.cykl_min) >= doba ? 1 : 0);
+  const info = D.pobudki[typDoc];
+  const sztywna = typDoc === "0";
+  const wynik = {naSluzbie:false, sztywna, opcje, zasypianie, typDocelowy:info.nazwa,
+                 pobudkaPlanowa:info.pobudka, uwagi:[]};
+
+  let pm = doMin(info.pobudka);
+  if(pm < polozenie) pm += doba;
+  const snuDoPobudki = pm - polozenie;
+  /* Sztywna pobudka ma sens tylko, gdy naprawdę kładziesz się teraz. Gdy zostało
+     do niej więcej niż 11 h, wpisana godzina nie jest porą snu (np. popołudnie). */
+  if(sztywna && snuDoPobudki > 11*60){ wynik.sztywna = false; wynik.zaDaleko = ileSnu(snuDoPobudki); }
+
+  if(wynik.sztywna){
+    const snu = snuDoPobudki;
+    const pelnych = Math.max(0, Math.floor((snu - zasypianie) / cfg.cykl_min));
+    Object.assign(wynik, {zalecenie:info.pobudka, snuZalecane:ileSnu(snu), cykli:pelnych});
+    wynik.ocena = pelnych >= 5 ? "Spokojnie zdążysz się wyspać."
+      : pelnych === 4 ? "Cztery pełne cykle — akceptowalnie jak na dzień przed zmianą."
+      : pelnych === 3 ? "Trzy cykle. Da się przeżyć, ale na służbie będzie ciężko — kładź się teraz, bez zwłoki."
+      : "Mniej niż trzy cykle. Dziś już nie nadrobisz — prześpij, ile się da, i licz na drzemki na służbie.";
+  } else {
+    const w = opcje[opcje.length-1];
+    Object.assign(wynik, {zalecenie:w.godzina, snuZalecane:w.snu, cykli:w.cykli});
+    wynik.ocena = "Bez sztywnej pobudki — bierz sześć cykli, jeśli możesz, pięć jeśli nie.";
+    if(wynik.zaDaleko) wynik.uwagi.push(
+      `Do najbliższej sztywnej pobudki (${info.pobudka}) zostało ${wynik.zaDaleko}, czyli więcej niż noc. ` +
+      "Zakładam, że nie kładziesz się właśnie teraz — poniżej masz zwykłe cykle.");
+    /* Porównanie z planową pobudką ma sens tylko dla realnej porannej pobudki.
+       Przy różnicy ponad 8 h porównujemy pory z różnych części doby i wychodzą bzdury. */
+    const spoznienie = doMin(w.godzina) - doMin(info.pobudka);
+    if(!wynik.zaDaleko && spoznienie > 60 && spoznienie <= 8*60){
+      wynik.uwagi.push(`Plan tego dnia zakłada pobudkę ${info.pobudka}` +
+        (info.trening ? ` i trening o ${info.trening}` : "") +
+        `, więc budząc się o ${w.godzina} przesuwasz wszystko o ${ileSnu(spoznienie)}.`);
+      if((Number(typDoc) + 1) % 3 === 0){   // dzień po pobudce jest dniem zmiany
+        wynik.uwagi.push(`Nazajutrz ZMIANA z pobudką ${D.pobudki["0"].pobudka}. Po tak późnym wstaniu ` +
+          "nie zaśniesz o 22:00 — licz się z krótką nocą przed służbą.");
+      }
+    }
+  }
+  return wynik;
+}
+
+let senOKtorej = null;   // null = bierz aktualną godzinę
+
+function widokSen(){
+  const teraz = new Date();
+  const wartosc = senOKtorej ?? `${String(teraz.getHours()).padStart(2,"0")}:${String(teraz.getMinutes()).padStart(2,"0")}`;
+  const w = liczSen(doMin(wartosc));
+
+  const pole = `<div class="karta"><h2>O której się kładziesz</h2>
+      <input type="time" id="pora" value="${wartosc}"
+        style="width:100%;font:600 28px/1.2 inherit;font-variant-numeric:tabular-nums;
+               background:var(--tlo);color:var(--tekst);border:1px solid var(--linia);
+               border-radius:10px;padding:12px;text-align:center">
+      <div class="op" style="margin-top:8px">Domyślnie teraz. Zmień, jeśli planujesz z wyprzedzeniem.</div>
+    </div>`;
+
+  if(w.naSluzbie) return pole + `<div class="karta"><h2>Dziś służba</h2><div class="op">${esc(w.ocena)}</div></div>`;
+
+  const glowna = `<div class="karta"><h2>Ustaw budzik na</h2>
+      <div style="font-size:44px;font-weight:650;letter-spacing:-.03em;font-variant-numeric:tabular-nums">${w.zalecenie}</div>
+      <div class="kcal" style="font-size:14px">${w.snuZalecane} snu · ${w.cykli} ${w.cykli===1?"pełny cykl":"pełnych cykli"}</div>
+      <div class="op" style="margin-top:10px">${esc(w.ocena)}</div>
+      ${w.uwagi.map(u=>`<div class="op" style="margin-top:10px;color:var(--uwaga)">⚠ ${esc(u)}</div>`).join("")}
+    </div>`;
+
+  const lista = w.sztywna
+    ? `<div class="karta"><h2>Dlaczego bez wyboru</h2><div class="op">
+         Budzisz się w dzień zmiany, więc pobudka ${w.pobudkaPlanowa} jest ustalona i nie ma czego optymalizować.
+         Jedyne, co możesz zrobić, to położyć się wcześniej.</div></div>`
+    : `<div class="karta"><h2>Pozostałe opcje</h2>
+        ${w.opcje.map(o=>`<div class="poz" style="${o.godzina===w.zalecenie?"":"opacity:.62"}">
+           <span class="nazwa"><b style="font-variant-numeric:tabular-nums">${o.godzina}</b>
+             <span class="kcal"> · ${o.cykli} cykle</span></span>
+           <span class="ile">${o.snu}</span></div>`).join("")}
+      </div>`;
+
+  const stopka = `<div class="karta"><h2>Jak to liczę</h2><div class="op">
+      Sen chodzi cyklami po około 90 minut i budzenie w środku cyklu daje uczucie rozbicia nawet po długim
+      spaniu — dlatego budzik pada na wielokrotność cyklu liczoną od ZAŚNIĘCIA, a nie od położenia się.
+      Doliczam ${w.zasypianie} min na zaśnięcie${w.zasypianie<=5?" (po dobie służby zasypiasz od razu)":""}.
+      Pobudka wypada w dzień: ${esc(w.typDocelowy)}.
+      <br><br>90 minut to średnia — indywidualnie bywa 80–110, więc traktuj wynik jako przybliżenie, nie wyrocznię.
+    </div></div>`;
+
+  return pole + glowna + lista + stopka;
+}
+
 function rysuj(){
   const widoki = {dzis:widokDzis, plan:widokPlan, zakupy:widokZakupy,
-                  gotowanie:widokGotowanie, trening:widokTrening};
+                  gotowanie:widokGotowanie, trening:widokTrening, sen:widokSen};
   $("#widok").innerHTML = widoki[widok]();
 }
 
@@ -314,8 +431,18 @@ function start(dane){
 $("#zakladki").addEventListener("click", e => {
   const b = e.target.closest("button"); if(!b) return;
   widok = b.dataset.w;
+  if(widok === "sen") senOKtorej = null;
   for(const x of $("#zakladki").children) x.setAttribute("aria-selected", String(x === b));
   scrollTo({top:0}); rysuj();
+});
+
+$("#widok").addEventListener("input", e => {
+  if(e.target.id !== "pora") return;
+  senOKtorej = e.target.value;
+  const pos = e.target.selectionStart;
+  rysuj();
+  const pole = $("#pora");
+  if(pole){ pole.focus(); try{ pole.setSelectionRange(pos, pos); }catch{} }
 });
 
 $("#widok").addEventListener("change", e => {

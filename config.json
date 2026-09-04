@@ -49,5 +49,16 @@
     "komentarz": "Temat ntfy działa jak hasło — kto go zna, może Ci wysyłać powiadomienia. Użyj długiego losowego ciągu."
   },
   "panel_url": "https://jasio-cloud.github.io/trenerai/",
-  "strefa": "Europe/Warsaw"
+  "strefa": "Europe/Warsaw",
+  "sen": {
+    "cykl_min": 90,
+    "zasypianie_min": 15,
+    "zasypianie_zmeczony_min": 5,
+    "cykle_dobre": [
+      5,
+      6
+    ],
+    "cykle_minimum": 4,
+    "komentarz": "Sen chodzi cyklami po ok. 90 min. Budzenie w srodku cyklu (zwlaszcza w fazie gebokiej) daje uczucie rozbicia, nawet gdy przespales duzo. Dlatego budzik ustawiamy na WIELOKROTNOSC cyklu liczona od momentu ZASNIECIA, nie polozenia sie. 90 min to srednia - indywidualnie bywa 80-110, wiec traktujemy to jako przyblizenie, a nie wyrocznie."
+  }
 }

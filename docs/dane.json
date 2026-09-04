@@ -1,5 +1,5 @@
 {
-  "wygenerowano": "2026-09-04T14:27:09",
+  "wygenerowano": "2026-09-04T14:35:11",
   "dzis": "2026-09-04",
   "typ_dzis": 0,
   "typy": {
@@ -1643,6 +1643,34 @@
       "cena": 15.0,
       "kat": "spizarnia",
       "trw": "trwale"
+    }
+  },
+  "sen": {
+    "cykl_min": 90,
+    "zasypianie_min": 15,
+    "zasypianie_zmeczony_min": 5,
+    "cykle_dobre": [
+      5,
+      6
+    ],
+    "cykle_minimum": 4,
+    "komentarz": "Sen chodzi cyklami po ok. 90 min. Budzenie w srodku cyklu (zwlaszcza w fazie gebokiej) daje uczucie rozbicia, nawet gdy przespales duzo. Dlatego budzik ustawiamy na WIELOKROTNOSC cyklu liczona od momentu ZASNIECIA, nie polozenia sie. 90 min to srednia - indywidualnie bywa 80-110, wiec traktujemy to jako przyblizenie, a nie wyrocznie."
+  },
+  "pobudki": {
+    "0": {
+      "nazwa": "ZMIANA 24h",
+      "pobudka": "05:30",
+      "trening": null
+    },
+    "1": {
+      "nazwa": "PO ZMIANIE",
+      "pobudka": "13:00",
+      "trening": "13:30"
+    },
+    "2": {
+      "nazwa": "WOLNE",
+      "pobudka": "08:00",
+      "trening": "08:30"
     }
   },
   "historia": {

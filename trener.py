@@ -12,7 +12,8 @@ Założenia, które ten plik realizuje:
 
 CLI:
   py trener.py dzis | plan | nowyplan | zakupy | kupione | gotowanie | trening
-  py trener.py lodowka | waga 81.4 | kroki 6420 [--ping] | eksport | tick | auto | test
+  py trener.py lodowka | waga 81.4 | kroki 6420 [--ping] | budzik 23:33
+  py trener.py eksport | tick | auto | test
 """
 import os, sys, json, math, random, datetime, urllib.request, urllib.error
 
@@ -526,6 +527,139 @@ def budzik_dla(czas_zdarzenia, d=None):
             "typ_docelowy": DNI["typy"][str(typ_dnia(dzien_docelowy))]["nazwa"]}
 
 
+# ----------------------------------------------------------- kalkulator snu
+
+def kalkulator_snu(o_ktorej=None, d=None):
+    """Na którą ustawić budzik, gdy kładziesz się o nietypowej porze.
+
+    Sen chodzi cyklami po ok. 90 minut i budzenie w środku cyklu daje uczucie
+    rozbicia nawet po długim spaniu. Liczymy więc wielokrotności cyklu od chwili
+    ZAŚNIĘCIA, nie położenia się — stąd doliczany czas zasypiania.
+
+    Najważniejsze: kalkulator zna grafik. Jeśli budzisz się w dzień zmiany,
+    05:30 jest nienegocjowalne i wtedy nie proponujemy sześciu cykli, tylko
+    mówimy wprost, ile snu z tego wyjdzie i czy nie kłaść się od razu.
+    """
+    d = d or dzis()
+    cfg = CFG["sen"]
+    n = teraz()
+    if o_ktorej:
+        hh, mm = o_ktorej.split(":")
+        polozenie = int(hh) * 60 + int(mm)
+    else:
+        polozenie = n.hour * 60 + n.minute
+
+    # po dobie służby zasypia się od razu, w normalny wieczór trwa to dłużej
+    zmeczony = typ_dnia(d) == 1
+    zasypianie = cfg["zasypianie_zmeczony_min"] if zmeczony else cfg["zasypianie_min"]
+    zasniecie = polozenie + zasypianie
+
+    # dzień, na który wypada pobudka: jeśli kładziesz się nad ranem, to jeszcze dziś
+    doba = 24 * 60
+    def dzien_pobudki(minuta):
+        return d if minuta < doba else d + datetime.timedelta(days=1)
+
+    opcje = []
+    for cykli in range(3, 7):
+        m = zasniecie + cykli * cfg["cykl_min"]
+        dp = dzien_pobudki(m)
+        opcje.append({
+            "cykli": cykli,
+            "godzina": "%02d:%02d" % ((m % doba) // 60, m % 60),
+            "snu_min": m - polozenie,
+            "snu": "%d h %02d min" % ((m - polozenie) // 60, (m - polozenie) % 60),
+            "jutro": dp != d,
+            "typ_dnia": typ_dnia(dp),
+        })
+
+    # twarde ograniczenie: jeśli budzisz się w dzień zmiany, pobudka jest ustalona
+    dzien_docelowy = dzien_pobudki(zasniecie + 4 * cfg["cykl_min"])
+    typ_doc = typ_dnia(dzien_docelowy)
+    pobudka_plan = DNI["typy"][str(typ_doc)]["pobudka"]
+    sztywna = typ_doc == 0
+
+    # na sluzbie nocna przerwa to drzemki z planu, a nie sen - nie doradzamy tu cykli
+    na_sluzbie = typ_dnia(d) == 0 and (polozenie >= _na_minuty("21:00") or polozenie < _na_minuty("06:00"))
+
+    wynik = {"na_sluzbie": na_sluzbie, "polozenie": "%02d:%02d" % (polozenie // 60 % 24, polozenie % 60),
+             "zasypianie": zasypianie, "opcje": opcje,
+             "typ_docelowy": DNI["typy"][str(typ_doc)]["nazwa"],
+             "pobudka_planowa": pobudka_plan, "sztywna": sztywna}
+
+    if na_sluzbie:
+        wynik["zalecenie"] = "-"
+        wynik["snu_zalecane"] = "-"
+        wynik["cykli_zalecane"] = 0
+        wynik["uwagi"] = []
+        wynik["ocena"] = ("Jesteś na służbie. Tu nie planujemy snu cyklami, tylko trzymamy się czterech "
+                          "drzemek z planu: 23:00, 00:40, 02:20 i 04:00, każda po 1 h 20. "
+                          "Kalkulator przyda się dopiero w domu.")
+        return wynik
+
+    # Sztywna pobudka ma sens tylko, gdy naprawde kladziesz sie teraz. Gdy do niej
+    # zostalo wiecej niz 11 h, wpisana godzina nie jest pora snu (np. popoludnie)
+    # i podawanie "14 h snu" byloby bzdura - wtedy wracamy do liczenia cyklami.
+    if sztywna:
+        pm = _na_minuty(pobudka_plan)
+        if pm < polozenie % doba:
+            pm += doba
+        snu = pm - polozenie % doba
+        if snu > 11 * 60:
+            sztywna = False
+            wynik["sztywna"] = False
+            wynik["za_daleko"] = "%d h %02d min" % (snu // 60, snu % 60)
+
+    if sztywna:
+        pelnych = max(0, (snu - zasypianie) // cfg["cykl_min"])
+        wynik["zalecenie"] = pobudka_plan
+        wynik["snu_zalecane"] = "%d h %02d min" % (snu // 60, snu % 60)
+        wynik["cykli_zalecane"] = int(pelnych)
+        if pelnych >= 5:
+            wynik["ocena"] = "Spokojnie zdążysz się wyspać."
+        elif pelnych == 4:
+            wynik["ocena"] = "Cztery pełne cykle — akceptowalnie jak na dzień przed zmianą."
+        elif pelnych == 3:
+            wynik["ocena"] = "Trzy cykle. Da się przeżyć, ale na służbie będzie ciężko — kładź się teraz, bez zwłoki."
+        else:
+            wynik["ocena"] = ("Mniej niż trzy cykle. Dziś już nie nadrobisz — prześpij, ile się da, "
+                              "i licz na drzemki na służbie.")
+    else:
+        cel = [o for o in opcje if o["cykli"] in cfg["cykle_dobre"]]
+        wybor = cel[-1] if cel else opcje[-1]
+        wynik["zalecenie"] = wybor["godzina"]
+        wynik["snu_zalecane"] = wybor["snu"]
+        wynik["cykli_zalecane"] = wybor["cykli"]
+        wynik["ocena"] = "Bez sztywnej pobudki — bierz sześć cykli, jeśli możesz, pięć jeśli nie."
+
+    # Sam cykl snu to za mało. Późna pobudka potrafi rozwalić plan dnia albo noc
+    # przed zmianą, i to jest ważniejsze niż trafienie w równą wielokrotność.
+    uwagi = []
+    if wynik.get("za_daleko"):
+        uwagi.append("Do najbliższej sztywnej pobudki (%s) zostało %s, czyli więcej niż noc. "
+                     "Zakładam, że nie kładziesz się właśnie teraz — poniżej masz zwykłe cykle."
+                     % (pobudka_plan, wynik["za_daleko"]))
+    # Porownanie z planowa pobudka ma sens tylko dla realnej porannej pobudki.
+    # Przy roznicy ponad 8 h porownujemy pory z roznych czesci doby i wychodza bzdury.
+    if wynik["zalecenie"] != "-" and not wynik.get("za_daleko"):
+        dzien_b = dzien_pobudki(zasniecie + wynik["cykli_zalecane"] * cfg["cykl_min"])
+        typ_b = typ_dnia(dzien_b)
+        plan_pobudka = DNI["typy"][str(typ_b)]["pobudka"]
+        spoznienie = _na_minuty(wynik["zalecenie"]) - _na_minuty(plan_pobudka)
+        if 60 < spoznienie <= 8 * 60:
+            trening = next((e["czas"] for e in DNI["plan"][str(typ_b)] if "TRENING" in e["tytul"]), None)
+            u = "Plan tego dnia zakłada pobudkę %s" % plan_pobudka
+            if trening:
+                u += " i trening o %s" % trening
+            u += ", więc budząc się o %s przesuwasz wszystko o %d h %02d min." % (
+                wynik["zalecenie"], spoznienie // 60, spoznienie % 60)
+            uwagi.append(u)
+            if typ_dnia(dzien_b + datetime.timedelta(days=1)) == 0:
+                uwagi.append("Nazajutrz ZMIANA z pobudką %s. Po tak późnym wstaniu nie zaśniesz o 22:00 — "
+                             "licz się z krótką nocą przed służbą." % DNI["typy"]["0"]["pobudka"])
+    wynik["uwagi"] = uwagi
+    return wynik
+
+
 # ------------------------------------------------------------------ agenda
 
 def agenda(d=None):
@@ -658,6 +792,11 @@ def eksport():
         "nawyki": DNI["nawyki"],
         "posilki": {p["id"]: p for p in QUICK},
         "produkty": {k: v for k, v in PROD.items() if not k.startswith("_")},
+        "sen": CFG["sen"],
+        # skrot potrzebny kalkulatorowi snu w panelu: pobudka i godzina treningu per typ dnia
+        "pobudki": {t: {"nazwa": DNI["typy"][t]["nazwa"], "pobudka": DNI["typy"][t]["pobudka"],
+                        "trening": next((e["czas"] for e in DNI["plan"][t] if "TRENING" in e["tytul"]), None)}
+                    for t in ("0", "1", "2")},
         "historia": load(HIST_PATH, {"bazy": [], "waga": [], "treningi": [], "kroki": []}),
         "kroki": kroki_dzis(d),
         "kroki_cel": KROKI["cele"][str(typ_dnia(d))],
@@ -843,6 +982,30 @@ def main():
             print("%d / %d kroków (%d%%)" % (o["kroki"], o["cel"], o["procent"]))
             print(o["komentarz"])
             print("→ " + o["sugestia"])
+    elif cmd == "budzik":
+        w = kalkulator_snu(arg)
+        _kreska("KŁADZIESZ SIĘ O %s" % w["polozenie"])
+        print("Zasypianie liczone na %d min. Pobudka wypada w dzień: %s." % (w["zasypianie"], w["typ_docelowy"]))
+        if w.get("na_sluzbie"):
+            print()
+            print(w["ocena"])
+        elif w["sztywna"]:
+            print()
+            print("Jutro ZMIANA — pobudka %s jest sztywna, nie ma co wybierać." % w["pobudka_planowa"])
+            print("Budzik: %s  →  %s snu, %d pełnych cykli." % (w["zalecenie"], w["snu_zalecane"], w["cykli_zalecane"]))
+            print(w["ocena"])
+        else:
+            print()
+            for o in w["opcje"]:
+                znak = "◀ TO" if o["godzina"] == w["zalecenie"] else "  "
+                print("   %s  %d cykle  →  %s snu   %s" % (o["godzina"], o["cykli"], o["snu"], znak))
+            print()
+            print(w["ocena"])
+        for u in w.get("uwagi", []):
+            print()
+            print("UWAGA: " + u)
+        print()
+        print("Cykl to średnio 90 min, indywidualnie 80–110. Traktuj to jako przybliżenie.")
     elif cmd == "waga":
         if not arg:
             print("Użycie: py trener.py waga 81.4")
