@@ -1,0 +1,21 @@
+{
+  "name": "Trener AI",
+  "short_name": "Trener",
+  "start_url": ".",
+  "display": "standalone",
+  "background_color": "#0e1117",
+  "theme_color": "#11151c",
+  "icons": [
+    {
+      "src": "ikona.png",
+      "sizes": "180x180",
+      "type": "image/png"
+    },
+    {
+      "src": "ikona-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ]
+}

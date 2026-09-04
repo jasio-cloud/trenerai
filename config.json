@@ -1,21 +1,53 @@
 {
-  "_info": "Sekrety (token, webhook) są w pliku .env – NIE tutaj. Ten plik trafia na GitHub.",
-  "webhook_url": "",
-  "bot_token": "",
-  "command_prefix": "!",
-  "mention": "@everyone",
-  "python_exe": "C:\\Users\\kryst\\AppData\\Local\\Python\\pythoncore-3.14-64\\pythonw.exe",
+  "_info": "Sekrety (ntfy topic) trzymamy w .env albo w sekretach GitHuba — NIE tutaj. Ten plik trafia na GitHub.",
   "user": {
-    "name": "Krystian",
-    "weight_kg": 82,
-    "height_cm": 182,
-    "age": 20,
-    "goal": "rekompozycja (skinny-fat -> mięśnie + płaski brzuch)"
+    "imie": "Krystian",
+    "waga_kg": 82,
+    "wzrost_cm": 182,
+    "wiek": 20,
+    "cel": "redukcja — zejść z wagi, utrzymać mięśnie"
   },
-  "targets": {"kcal": 2300, "protein": 185, "fat": 70, "carbs": 230},
-  "wake_normal": "11:00",
-  "sleep_normal": "01:00",
-  "shift_start_dates": ["2026-06-21", "2026-06-24", "2026-06-27", "2026-06-30"],
-  "plan_days": 4,
-  "late_window_min": 120
+  "makra": {
+    "kcal": 2200,
+    "bialko": 165,
+    "tluszcz": 80,
+    "wegle": 205
+  },
+  "makra_uzasadnienie": "Mifflin-St Jeor: podstawowa przemiana 1862 kcal. Praca zmianowa (dużo stania) + 2 treningi na cykl → zapotrzebowanie ok. 2650 kcal. Deficyt 450 kcal = ok. 0,45 kg tygodniowo. Białko 165 g to 2,0 g/kg — tyle wystarczy, żeby na deficycie nie tracić mięśni, a da się to zjeść z wołowiny, jaj i nabiału bez pchania się w 3000 kcal. Tłuszcz 70 g to minimum dla hormonów. Tłuszcz podniesiony z 70 do 80 g, bo przy filarach wołowina/jaja/nabiał niżej się realnie nie zejdzie bez wycinania jedzenia, które lubisz — kalorie i tak się zgadzają.",
+  "grafik": {
+    "kotwica": "2026-06-21",
+    "cykl_dni": 3,
+    "opis": "System 24/48. (data − kotwica) mod 3: 0 = zmiana, 1 = po zmianie, 2 = wolne.",
+    "zmiana_start": "07:00",
+    "zmiana_koniec": "07:00"
+  },
+  "gotowanie": {
+    "dzien_typ": 1,
+    "godzina_zakupow": "15:30",
+    "godzina_gotowania": "16:30",
+    "porcje_bazy": 3,
+    "komentarz": "Gotowanie ZAWSZE w dzień po zmianie, po odespaniu. Jedna baza = obiady na całe 3 dni."
+  },
+  "wykluczenia": [
+    "ryż",
+    "kurczak",
+    "kasze",
+    "ryby",
+    "owsianka",
+    "naleśniki",
+    "kotlety mielone",
+    "indyk",
+    "rodzynki"
+  ],
+  "filary_bialka": [
+    "wołowina i mielone",
+    "jaja i nabiał"
+  ],
+  "ntfy": {
+    "server": "https://ntfy.sh",
+    "topic_env": "NTFY_TOPIC",
+    "komentarz": "Temat ntfy działa jak hasło — kto go zna, może Ci wysyłać powiadomienia. Użyj długiego losowego ciągu."
+  },
+  "panel_url": "",
+  "strefa": "Europe/Warsaw"
 }

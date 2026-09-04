@@ -1,0 +1,68 @@
+name: Trener AI — pingi na telefon
+
+# Ten workflow zastępuje włączony komputer. Leci w chmurze GitHuba, co 10 minut
+# sprawdza, czy w planie dnia wypadł właśnie jakiś punkt, i wysyła powiadomienie
+# na telefon przez ntfy.sh. Stan (co już wysłano) wraca commitem do repo,
+# więc ten sam ping nigdy nie przyjdzie dwa razy.
+
+on:
+  schedule:
+    - cron: "*/10 * * * *"
+  workflow_dispatch:
+    inputs:
+      test:
+        description: "Wyślij ping testowy zamiast normalnego sprawdzenia"
+        type: boolean
+        default: false
+
+permissions:
+  contents: write
+
+concurrency:
+  group: trener-tick
+  cancel-in-progress: false
+
+jobs:
+  ping:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Ping testowy
+        if: inputs.test
+        env:
+          NTFY_TOPIC: ${{ secrets.NTFY_TOPIC }}
+        run: python trener.py test
+
+      - name: Sprawdź plan i wyślij, co się należy
+        if: ${{ !inputs.test }}
+        env:
+          NTFY_TOPIC: ${{ secrets.NTFY_TOPIC }}
+        run: python trener.py tick
+
+      - name: Zaksięguj zakupy i zużycie (w dniu gotowania, po 15:30)
+        if: ${{ !inputs.test }}
+        run: python trener.py auto
+
+      - name: Odśwież dane dla panelu
+        if: ${{ !inputs.test }}
+        run: python trener.py eksport
+
+      - name: Zapisz stan z powrotem do repo
+        if: ${{ !inputs.test }}
+        run: |
+          git config user.name "trener-ai"
+          git config user.email "trener-ai@users.noreply.github.com"
+          git add state docs/dane.json
+          if git diff --cached --quiet; then
+            echo "Nic się nie zmieniło — bez commita."
+          else
+            git commit -m "stan: $(date -u +%F\ %H:%M) UTC"
+            # ktoś (Ty z komputera) mógł commitować w międzyczasie
+            git pull --rebase --autostash origin ${{ github.ref_name }}
+            git push
+          fi

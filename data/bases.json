@@ -1,0 +1,463 @@
+{
+  "_info": "BAZY = dania gotowane HURTEM raz na 3 dni. produkty = na CAŁY garnek (tyle, ile wychodzi porcji). System dzieli przez porcje, żeby policzyć makro jednej porcji. czas_min = łączny czas, czas_pracy = ile faktycznie stoisz nad garnkiem. Styl: tanie jednogarnkowce. Bez kurczaka, ryżu, kasz i ryb.",
+  "bazy": [
+    {
+      "id": "b_bolo",
+      "nazwa": "Makaron bolognese na wołowinie",
+      "porcje": 3,
+      "czas_min": 40,
+      "czas_pracy": 15,
+      "naczynia": "1 garnek + 1 garnek na makaron",
+      "przechowywanie": "lodówka, 3 dni w pojemnikach",
+      "odgrzewanie": "mikrofala 2,5 min, wymieszać w połowie",
+      "box": true,
+      "produkty": [
+        [
+          "mielone_wolowe",
+          500
+        ],
+        [
+          "makaron",
+          240
+        ],
+        [
+          "passata",
+          500
+        ],
+        [
+          "koncentrat",
+          60
+        ],
+        [
+          "cebula",
+          2
+        ],
+        [
+          "marchew",
+          2
+        ],
+        [
+          "czosnek",
+          3
+        ],
+        [
+          "olej",
+          15
+        ],
+        [
+          "przyprawy",
+          3
+        ]
+      ],
+      "kroki": [
+        "Cebulę pokrój w kostkę, marchew zetrzyj na tarce na grubych oczkach, czosnek posiekaj. To całe krojenie na dziś.",
+        "W dużym garnku rozgrzej 2 łyżki oleju, wrzuć cebulę i marchew, smaż 5 min aż zmiękną.",
+        "Dodaj mieloną wołowinę. Rozbijaj łopatką na drobno i smaż 8 min, aż nie widać różowego mięsa.",
+        "Wrzuć czosnek, koncentrat, sól, pieprz i oregano — smaż 1 min, żeby koncentrat się przypiekł. To daje smak, nie pomijaj.",
+        "Wlej passatę i pół szklanki wody. Zmniejsz ogień i duś 20 min pod uchyloną pokrywką. W tym czasie nic nie musisz robić.",
+        "Równolegle ugotuj cały makaron (240 g) wg opakowania, odcedź, wymieszaj z łyżką oleju żeby się nie skleił.",
+        "Wymieszaj makaron z sosem i od razu rozłóż do 3 pojemników. Ostudź 20 min bez pokrywki, potem zamknij i wstaw do lodówki."
+      ]
+    },
+    {
+      "id": "b_gulasz",
+      "nazwa": "Gulasz wołowy z papryką + ziemniaki",
+      "porcje": 3,
+      "czas_min": 95,
+      "czas_pracy": 20,
+      "naczynia": "1 garnek + 1 garnek na ziemniaki",
+      "przechowywanie": "lodówka, 3 dni (drugiego dnia jest lepszy)",
+      "odgrzewanie": "mikrofala 3 min",
+      "box": true,
+      "produkty": [
+        [
+          "wolowina_gulasz",
+          600
+        ],
+        [
+          "ziemniaki",
+          900
+        ],
+        [
+          "papryka",
+          3
+        ],
+        [
+          "cebula",
+          2
+        ],
+        [
+          "passata",
+          300
+        ],
+        [
+          "bulion",
+          2
+        ],
+        [
+          "maka",
+          20
+        ],
+        [
+          "olej",
+          20
+        ],
+        [
+          "przyprawy",
+          3
+        ]
+      ],
+      "kroki": [
+        "Wołowinę pokrój w kostkę ok. 2 cm, cebulę w piórka, paprykę w paski.",
+        "Rozgrzej garnek mocno, wlej olej i wrzuć mięso jednym rzutem. Smaż 6 min, przez pierwsze 3 min nie mieszaj — ma się przyrumienić, nie zagotować.",
+        "Dodaj cebulę, smaż 4 min. Wsyp łyżkę słodkiej papryki, sól i pieprz, wymieszaj.",
+        "Wlej passatę, 400 ml wody i 2 kostki bulionowe. Zagotuj, przykryj i duś na małym ogniu 60 min. To czas dla Ciebie — zrób w tym czasie coś innego.",
+        "Po 60 min dorzuć paprykę i duś jeszcze 15 min.",
+        "Mąkę rozmieszaj w pół szklanki ZIMNEJ wody, wlej do gulaszu, gotuj 3 min aż zgęstnieje.",
+        "Ziemniaki obierz i ugotuj w osolonej wodzie 20 min. Rozłóż gulasz i ziemniaki do 3 pojemników, ostudź, do lodówki."
+      ]
+    },
+    {
+      "id": "b_zapiekanka",
+      "nazwa": "Zapiekanka makaronowa z mielonym i serem",
+      "porcje": 3,
+      "czas_min": 55,
+      "czas_pracy": 20,
+      "naczynia": "1 patelnia + 1 forma do zapiekania",
+      "przechowywanie": "lodówka, 3 dni — kroisz na kwadraty i pakujesz",
+      "odgrzewanie": "mikrofala 3 min albo piekarnik 10 min",
+      "box": true,
+      "produkty": [
+        [
+          "mielone_wolowe",
+          500
+        ],
+        [
+          "makaron",
+          240
+        ],
+        [
+          "passata",
+          400
+        ],
+        [
+          "ser",
+          100
+        ],
+        [
+          "smietana",
+          120
+        ],
+        [
+          "cebula",
+          2
+        ],
+        [
+          "czosnek",
+          3
+        ],
+        [
+          "olej",
+          15
+        ],
+        [
+          "przyprawy",
+          3
+        ]
+      ],
+      "kroki": [
+        "Nastaw piekarnik na 200°C. Ugotuj makaron 2 minuty KRÓCEJ niż pisze na opakowaniu — dojdzie w piekarniku.",
+        "Na patelni na oleju zeszklij posiekaną cebulę (4 min), dodaj mielone i smaż 8 min rozbijając łopatką.",
+        "Dodaj czosnek, passatę, sól, pieprz i oregano. Duś 10 min.",
+        "Wymieszaj odcedzony makaron z sosem i śmietaną prosto w formie do zapiekania — jedno naczynie mniej do mycia.",
+        "Posyp całość startym serem.",
+        "Piecz 20 min aż ser się zarumieni. Wyjmij i odstaw na 10 min, inaczej rozpadnie się przy krojeniu.",
+        "Potnij na 3 równe części, każdą do pojemnika, ostudź i do lodówki."
+      ]
+    },
+    {
+      "id": "b_leczo",
+      "nazwa": "Leczo z mieloną wołowiną + ziemniaki",
+      "porcje": 3,
+      "czas_min": 40,
+      "czas_pracy": 15,
+      "naczynia": "1 garnek + 1 garnek na ziemniaki",
+      "przechowywanie": "lodówka, 3 dni",
+      "odgrzewanie": "mikrofala 3 min",
+      "box": true,
+      "produkty": [
+        [
+          "mielone_wolowe",
+          600
+        ],
+        [
+          "papryka",
+          3
+        ],
+        [
+          "cukinia",
+          1
+        ],
+        [
+          "cebula",
+          2
+        ],
+        [
+          "passata",
+          400
+        ],
+        [
+          "koncentrat",
+          40
+        ],
+        [
+          "ziemniaki",
+          750
+        ],
+        [
+          "olej",
+          20
+        ],
+        [
+          "przyprawy",
+          3
+        ]
+      ],
+      "kroki": [
+        "Cebulę w piórka, paprykę w paski, cukinię w półplasterki. Nie musi być równo.",
+        "W garnku na oleju smaż cebulę 4 min, dodaj mielone i smaż 8 min rozbijając łopatką.",
+        "Dodaj koncentrat, łyżkę słodkiej papryki, sól i pieprz — smaż 1 min.",
+        "Wrzuć paprykę i cukinię, wlej passatę. Duś 20 min pod przykryciem, zamieszaj raz w połowie.",
+        "W tym czasie ugotuj ziemniaki — 20 min w osolonej wodzie.",
+        "Rozłóż leczo i ziemniaki do 3 pojemników, ostudź, do lodówki."
+      ]
+    },
+    {
+      "id": "b_shepherd",
+      "nazwa": "Zapiekanka pasterska (mielone pod puree)",
+      "porcje": 3,
+      "czas_min": 65,
+      "czas_pracy": 25,
+      "naczynia": "1 patelnia + 1 garnek + 1 forma",
+      "przechowywanie": "lodówka, 3 dni",
+      "odgrzewanie": "mikrofala 3,5 min",
+      "box": true,
+      "produkty": [
+        [
+          "mielone_wolowe",
+          500
+        ],
+        [
+          "ziemniaki",
+          900
+        ],
+        [
+          "mleko",
+          100
+        ],
+        [
+          "maslo",
+          20
+        ],
+        [
+          "ser",
+          70
+        ],
+        [
+          "cebula",
+          2
+        ],
+        [
+          "marchew",
+          2
+        ],
+        [
+          "koncentrat",
+          60
+        ],
+        [
+          "bulion",
+          1
+        ],
+        [
+          "olej",
+          12
+        ],
+        [
+          "przyprawy",
+          3
+        ]
+      ],
+      "kroki": [
+        "Nastaw piekarnik na 200°C. Ziemniaki obierz i wstaw do gotowania (20 min).",
+        "Na patelni na oleju smaż posiekaną cebulę i startą marchew 6 min.",
+        "Dodaj mielone i smaż 8 min. Wrzuć koncentrat, kostkę bulionową, sól, pieprz i 150 ml wody. Duś 10 min aż sos zgęstnieje.",
+        "Ugotowane ziemniaki odcedź, dodaj mleko i masło, ugnieć na puree. Posól.",
+        "Do formy wyłóż mięso, na wierzch puree, rozsmaruj widelcem (rowki się ładnie przypieką), posyp serem.",
+        "Piecz 20 min. Odstaw 10 min, potnij na 3 części, do pojemników, ostudź, do lodówki."
+      ]
+    },
+    {
+      "id": "b_pieczarkowy",
+      "nazwa": "Makaron z wołowiną i pieczarkami w sosie",
+      "porcje": 3,
+      "czas_min": 35,
+      "czas_pracy": 18,
+      "naczynia": "1 patelnia + 1 garnek",
+      "przechowywanie": "lodówka, 3 dni",
+      "odgrzewanie": "mikrofala 2,5 min, dolej łyżkę wody",
+      "box": true,
+      "produkty": [
+        [
+          "mielone_wolowe",
+          500
+        ],
+        [
+          "pieczarki",
+          400
+        ],
+        [
+          "smietana",
+          150
+        ],
+        [
+          "makaron",
+          240
+        ],
+        [
+          "cebula",
+          2
+        ],
+        [
+          "czosnek",
+          3
+        ],
+        [
+          "ser",
+          40
+        ],
+        [
+          "olej",
+          15
+        ],
+        [
+          "przyprawy",
+          3
+        ]
+      ],
+      "kroki": [
+        "Pieczarki pokrój w plastry, cebulę w kostkę.",
+        "Rozgrzej patelnię MOCNO, wrzuć pieczarki bez tłuszczu i smaż 6 min aż odparuje z nich woda i się zrumienią. Nie sól na tym etapie — to cały sekret smaku.",
+        "Dodaj olej i cebulę, smaż 4 min. Potem mielone — 8 min, rozbijając łopatką.",
+        "Dodaj czosnek, sól, pieprz, wlej śmietanę i 100 ml wody. Gotuj 5 min na małym ogniu, wsyp starty ser i mieszaj aż się rozpuści.",
+        "Równolegle ugotuj makaron, odcedź i wymieszaj z sosem.",
+        "Rozłóż do 3 pojemników, ostudź, do lodówki."
+      ]
+    },
+    {
+      "id": "b_wolowina_cebula",
+      "nazwa": "Wołowina duszona w cebuli + ziemniaki",
+      "porcje": 3,
+      "czas_min": 100,
+      "czas_pracy": 15,
+      "naczynia": "1 garnek + 1 garnek na ziemniaki",
+      "przechowywanie": "lodówka, 3 dni",
+      "odgrzewanie": "mikrofala 3 min",
+      "box": true,
+      "produkty": [
+        [
+          "wolowina_gulasz",
+          600
+        ],
+        [
+          "cebula",
+          4
+        ],
+        [
+          "bulion",
+          2
+        ],
+        [
+          "musztarda",
+          2
+        ],
+        [
+          "maka",
+          20
+        ],
+        [
+          "ziemniaki",
+          900
+        ],
+        [
+          "olej",
+          20
+        ],
+        [
+          "przyprawy",
+          3
+        ]
+      ],
+      "kroki": [
+        "Wołowinę pokrój w plastry w poprzek włókien, cebulę w piórka.",
+        "Rozgrzej garnek na maksa, wlej olej, wrzuć mięso i smaż 6 min — przez pierwsze 3 min nie ruszaj, musi się przyrumienić na brązowo.",
+        "Dodaj całą cebulę. 4 sztuki to wygląda na dużo, ale rozpuści się w sos. Smaż 6 min aż zmięknie.",
+        "Dodaj 2 łyżki musztardy, sól, pieprz, 2 kostki bulionowe i 500 ml wody. Przykryj i duś 70 min na najmniejszym ogniu.",
+        "Mąkę rozmieszaj w zimnej wodzie, wlej i gotuj 3 min aż sos zgęstnieje.",
+        "Ugotuj ziemniaki. Rozłóż wszystko do 3 pojemników, ostudź, do lodówki."
+      ]
+    },
+    {
+      "id": "b_kapusta",
+      "nazwa": "Wołowina z kapustą kiszoną i ziemniakami",
+      "porcje": 3,
+      "czas_min": 45,
+      "czas_pracy": 15,
+      "naczynia": "1 garnek + 1 garnek na ziemniaki",
+      "przechowywanie": "lodówka, 3 dni (im dłużej stoi, tym lepsze)",
+      "odgrzewanie": "mikrofala 3 min",
+      "box": true,
+      "produkty": [
+        [
+          "mielone_wolowe",
+          600
+        ],
+        [
+          "kapusta_kiszona",
+          500
+        ],
+        [
+          "cebula",
+          2
+        ],
+        [
+          "koncentrat",
+          60
+        ],
+        [
+          "ziemniaki",
+          750
+        ],
+        [
+          "bulion",
+          1
+        ],
+        [
+          "olej",
+          20
+        ],
+        [
+          "przyprawy",
+          3
+        ]
+      ],
+      "kroki": [
+        "Kapustę odciśnij z soku i posiekaj krócej, żeby się dobrze jadła. Cebulę w kostkę.",
+        "W garnku na oleju smaż cebulę 4 min, dodaj mielone i smaż 8 min.",
+        "Dodaj koncentrat, kostkę bulionową, pieprz i łyżeczkę majeranku — smaż 1 min.",
+        "Wrzuć kapustę, wlej 300 ml wody, przykryj i duś 25 min. Spróbuj — jeśli za kwaśne, dodaj łyżeczkę miodu.",
+        "Ugotuj ziemniaki. Rozłóż do 3 pojemników, ostudź, do lodówki."
+      ]
+    }
+  ]
+}

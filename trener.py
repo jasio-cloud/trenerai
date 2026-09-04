@@ -1,0 +1,745 @@
+# -*- coding: utf-8 -*-
+"""
+Trener AI v2 — planowanie dnia, diety i treningu pod grafik 24/48 na ochronie.
+
+Założenia, które ten plik realizuje:
+  * cykl trwa dokładnie 3 dni: ZMIANA (24h) -> PO ZMIANIE -> WOLNE,
+  * zakupy i gotowanie odbywają się RAZ na cykl, w dniu po zmianie, po odespaniu,
+  * jedno gotowanie = jedna "baza" na 3 obiady, reszta posiłków to składanki do 12 minut,
+  * lodówka jest stanem trwałym, więc nie kupujemy drugi raz tego samego,
+  * makra liczone są ze składników (data/makro.json) — to jedyne źródło prawdy,
+  * pingi lecą na telefon przez ntfy.sh, odpalane cronem GitHub Actions (komputer może być wyłączony).
+
+CLI:
+  py trener.py dzis | plan | nowyplan | zakupy | kupione | gotowanie | trening
+  py trener.py lodowka | waga 81.4 | eksport | tick | auto | test
+"""
+import os, sys, json, math, random, datetime, urllib.request, urllib.error
+
+try:
+    sys.stdout.reconfigure(encoding="utf-8")
+except Exception:
+    pass
+
+BASE = os.path.dirname(os.path.abspath(__file__))
+DATA = os.path.join(BASE, "data")
+STATE = os.path.join(BASE, "state")
+DOCS = os.path.join(BASE, "docs")
+for _d in (STATE, DOCS):
+    os.makedirs(_d, exist_ok=True)
+
+
+# ---------------------------------------------------------------- wczytywanie
+
+def load(path, default=None):
+    try:
+        with open(path, "r", encoding="utf-8") as f:
+            return json.load(f)
+    except FileNotFoundError:
+        if default is None:
+            raise
+        return default
+
+
+def save(path, obj):
+    with open(path, "w", encoding="utf-8") as f:
+        json.dump(obj, f, ensure_ascii=False, indent=2)
+
+
+def _load_dotenv():
+    p = os.path.join(BASE, ".env")
+    if not os.path.exists(p):
+        return
+    with open(p, encoding="utf-8") as f:
+        for line in f:
+            line = line.strip()
+            if line and not line.startswith("#") and "=" in line:
+                k, v = line.split("=", 1)
+                os.environ.setdefault(k.strip(), v.strip().strip('"').strip("'"))
+
+
+_load_dotenv()
+
+CFG = load(os.path.join(BASE, "config.json"))
+PROD = load(os.path.join(DATA, "produkty.json"))
+MAKRO = load(os.path.join(DATA, "makro.json"))
+BAZY = load(os.path.join(DATA, "bases.json"))["bazy"]
+QUICK = load(os.path.join(DATA, "quick.json"))["posilki"]
+DNI = load(os.path.join(DATA, "dni.json"))
+TRENINGI = load(os.path.join(DATA, "workouts.json"))
+
+BAZA_BY_ID = {b["id"]: b for b in BAZY}
+QUICK_BY_ID = {q["id"]: q for q in QUICK}
+CEL = CFG["makra"]
+SLOTY = ("sniadanie", "drugi", "obiad", "kolacja")
+
+PLAN_PATH = os.path.join(STATE, "plan.json")
+FRIDGE_PATH = os.path.join(STATE, "fridge.json")
+HIST_PATH = os.path.join(STATE, "historia.json")
+
+# ile dni realnie wytrzyma produkt od dnia zakupu
+TRWALOSC = {"swieze": 4, "chlodnia": 12, "trwale": 200}
+
+
+# -------------------------------------------------------------------- czas
+
+def teraz():
+    """Lokalny czas w Polsce — także gdy skrypt leci na runnerze GitHuba w UTC."""
+    try:
+        from zoneinfo import ZoneInfo
+        return datetime.datetime.now(ZoneInfo(CFG.get("strefa", "Europe/Warsaw")))
+    except Exception:
+        return datetime.datetime.now()
+
+
+def dzis():
+    return teraz().date()
+
+
+def parse_date(s):
+    return datetime.date.fromisoformat(s)
+
+
+# ------------------------------------------------------------------ grafik
+
+def typ_dnia(d=None):
+    """0 = zmiana 24h, 1 = dzień po zmianie, 2 = dzień wolny."""
+    d = d or dzis()
+    kotwica = parse_date(CFG["grafik"]["kotwica"])
+    return (d - kotwica).days % CFG["grafik"]["cykl_dni"]
+
+
+DZIEN_GOTOWANIA = 1  # typ dnia, w którym robisz zakupy i gotujesz
+
+
+def start_cyklu(d=None):
+    """Data ostatniego dnia gotowania — czyli początek okna, które to gotowanie obsługuje.
+
+    Okno celowo NIE zaczyna się w dniu zmiany. Gotujesz po zmianie, więc jedzenie
+    z tego garnka jesz: dziś wieczorem, jutro (wolne) i pojutrze (następna zmiana).
+    Gdyby okno startowało w dniu zmiany, lista zakupów obejmowałaby dzień, który
+    już minął, i kupowałbyś jedzenie, które zjadłeś dwa dni wcześniej.
+    """
+    d = d or dzis()
+    cofnij = (typ_dnia(d) - DZIEN_GOTOWANIA) % CFG["grafik"]["cykl_dni"]
+    return d - datetime.timedelta(days=cofnij)
+
+
+def nr_cyklu(d=None):
+    """Kolejny numer gotowania, liczony od pierwszego dnia gotowania po kotwicy."""
+    kotwica = parse_date(CFG["grafik"]["kotwica"]) + datetime.timedelta(days=DZIEN_GOTOWANIA)
+    return (start_cyklu(d) - kotwica).days // CFG["grafik"]["cykl_dni"]
+
+
+def opis_typu(t):
+    return DNI["typy"][str(t)]
+
+
+# ------------------------------------------------------------------- makra
+
+def makra_produktow(produkty, dzielnik=1.0):
+    t = {"kcal": 0.0, "bialko": 0.0, "tluszcz": 0.0, "wegle": 0.0}
+    for klucz, ilosc in produkty:
+        m = MAKRO.get(klucz)
+        if not m:
+            continue
+        q = ilosc / dzielnik
+        t["kcal"] += m[0] * q
+        t["bialko"] += m[1] * q
+        t["tluszcz"] += m[2] * q
+        t["wegle"] += m[3] * q
+    return {k: int(round(v)) for k, v in t.items()}
+
+
+def makra_posilku(pid):
+    """Działa i dla szybkiego posiłku, i dla porcji bazy."""
+    if pid in QUICK_BY_ID:
+        return makra_produktow(QUICK_BY_ID[pid]["produkty"])
+    b = BAZA_BY_ID[pid]
+    return makra_produktow(b["produkty"], dzielnik=b["porcje"])
+
+
+def produkty_posilku(pid):
+    if pid in QUICK_BY_ID:
+        return [(k, q) for k, q in QUICK_BY_ID[pid]["produkty"]]
+    b = BAZA_BY_ID[pid]
+    return [(k, q / b["porcje"]) for k, q in b["produkty"]]
+
+
+def nazwa_posilku(pid):
+    if pid in QUICK_BY_ID:
+        return QUICK_BY_ID[pid]["nazwa"]
+    return BAZA_BY_ID[pid]["nazwa"]
+
+
+def makra_dnia(dzien):
+    t = {"kcal": 0, "bialko": 0, "tluszcz": 0, "wegle": 0}
+    for slot in SLOTY:
+        m = makra_posilku(dzien[slot])
+        for k in t:
+            t[k] += m[k]
+    return t
+
+
+# ------------------------------------------------------------------ planer
+
+def _pule(box_only):
+    """Kandydaci na każdy slot; na dniu zmiany tylko to, co da się zjeść na zimno z boxa."""
+    out = {}
+    for slot in ("sniadanie", "drugi", "kolacja"):
+        out[slot] = [q["id"] for q in QUICK
+                     if slot in q["sloty"] and (q["box"] if box_only else True)]
+    return out
+
+
+def _wybierz_baze(historia):
+    """Baza, której dawno nie było — żeby nie jeść bolognese trzeci cykl z rzędu."""
+    ostatnie = historia.get("bazy", [])
+    def klucz(b):
+        return ostatnie.index(b["id"]) if b["id"] in ostatnie else -1
+    kandydaci = sorted(BAZY, key=klucz)[:4]
+    return random.choice(kandydaci)
+
+
+def _blad_dnia(m):
+    return (abs(m["kcal"] - CEL["kcal"]) * 1.0
+            + abs(m["bialko"] - CEL["bialko"]) * 6.0
+            + abs(m["tluszcz"] - CEL["tluszcz"]) * 3.0
+            + abs(m["wegle"] - CEL["wegle"]) * 1.0)
+
+
+def generuj_plan(d=None, force=False):
+    """Układa cały 3-dniowy cykl: jedna baza na obiady + składanki na resztę."""
+    d = d or dzis()
+    start = start_cyklu(d)
+    stary = load(PLAN_PATH, {})
+    if not force and stary.get("od") == start.isoformat():
+        return stary
+
+    historia = load(HIST_PATH, {"bazy": [], "waga": [], "treningi": []})
+    random.seed(nr_cyklu(d) * 7919)
+    baza = _wybierz_baze(historia)
+    makra_bazy = makra_posilku(baza["id"])
+
+    daty = [start + datetime.timedelta(days=i) for i in range(3)]
+    pule = [_pule(box_only=(typ_dnia(dd) == 0)) for dd in daty]
+
+    najlepszy, najlepszy_wynik = None, float("inf")
+    for _ in range(20000):
+        kandydat = []
+        for i in range(3):
+            kandydat.append({
+                "sniadanie": random.choice(pule[i]["sniadanie"]),
+                "drugi": random.choice(pule[i]["drugi"]),
+                "kolacja": random.choice(pule[i]["kolacja"]),
+            })
+        wynik = 0.0
+        uzyte = []
+        klucze_produktow = []
+        for i, dzien in enumerate(kandydat):
+            m = dict(makra_bazy)
+            for slot in ("sniadanie", "drugi", "kolacja"):
+                mm = makra_posilku(dzien[slot])
+                for k in m:
+                    m[k] += mm[k]
+                uzyte.append(dzien[slot])
+                klucze_produktow += [k for k, _ in QUICK_BY_ID[dzien[slot]]["produkty"]]
+            wynik += _blad_dnia(m)
+        # kara za powtarzanie tego samego posiłku w cyklu
+        wynik += 450 * (len(uzyte) - len(set(uzyte)))
+        # premia za wspólne produkty — mniej pozycji na liście i mniej marnowania
+        wynik -= 8 * (len(klucze_produktow) - len(set(klucze_produktow)))
+        if wynik < najlepszy_wynik:
+            najlepszy_wynik, najlepszy = wynik, kandydat
+
+    dni = []
+    for i, dd in enumerate(daty):
+        dzien = dict(najlepszy[i])
+        dzien["obiad"] = baza["id"]
+        dzien["data"] = dd.isoformat()
+        dzien["typ"] = typ_dnia(dd)
+        dzien["makra"] = makra_dnia(dzien)
+        dni.append(dzien)
+
+    plan = {
+        "cykl": nr_cyklu(d),
+        "od": start.isoformat(),
+        "do": daty[-1].isoformat(),
+        "baza": baza["id"],
+        "dni": dni,
+        "wygenerowano": teraz().isoformat(timespec="seconds"),
+    }
+    save(PLAN_PATH, plan)
+
+    historia["bazy"] = ([baza["id"]] + historia.get("bazy", []))[:6]
+    save(HIST_PATH, historia)
+    return plan
+
+
+def plan_dnia(d=None):
+    d = d or dzis()
+    plan = generuj_plan(d)
+    for dzien in plan["dni"]:
+        if dzien["data"] == d.isoformat():
+            return plan, dzien
+    plan = generuj_plan(d, force=True)
+    for dzien in plan["dni"]:
+        if dzien["data"] == d.isoformat():
+            return plan, dzien
+    return plan, plan["dni"][0]
+
+
+# ----------------------------------------------------------------- lodówka
+
+def wczytaj_lodowke():
+    fr = load(FRIDGE_PATH, {"stan": {}, "log": []})
+    dzisiaj = dzis().isoformat()
+    przeterminowane = [k for k, v in fr["stan"].items() if v.get("do", "9999") < dzisiaj]
+    for k in przeterminowane:
+        fr["log"].append({"data": dzisiaj, "co": "wyrzucone", "produkt": k,
+                          "ilosc": fr["stan"][k]["ilosc"]})
+        del fr["stan"][k]
+    if przeterminowane:
+        save(FRIDGE_PATH, fr)
+    return fr
+
+
+def w_lodowce(klucz):
+    return wczytaj_lodowke()["stan"].get(klucz, {}).get("ilosc", 0)
+
+
+def dodaj_do_lodowki(klucz, ilosc, data=None):
+    fr = wczytaj_lodowke()
+    data = data or dzis()
+    dni = TRWALOSC.get(PROD[klucz]["trw"], 7)
+    do = (data + datetime.timedelta(days=dni)).isoformat()
+    poz = fr["stan"].setdefault(klucz, {"ilosc": 0, "do": do})
+    poz["ilosc"] = round(poz["ilosc"] + ilosc, 2)
+    poz["do"] = min(poz["do"], do) if poz.get("do") else do
+    save(FRIDGE_PATH, fr)
+
+
+def zdejmij_z_lodowki(klucz, ilosc):
+    fr = wczytaj_lodowke()
+    if klucz in fr["stan"]:
+        fr["stan"][klucz]["ilosc"] = round(fr["stan"][klucz]["ilosc"] - ilosc, 2)
+        if fr["stan"][klucz]["ilosc"] <= 0.001:
+            del fr["stan"][klucz]
+        save(FRIDGE_PATH, fr)
+
+
+# ------------------------------------------------------------------ zakupy
+
+def potrzebne_na_cykl(plan):
+    """Sumuje wszystkie składniki z 3 dni planu."""
+    suma = {}
+    for dzien in plan["dni"]:
+        for slot in SLOTY:
+            for k, q in produkty_posilku(dzien[slot]):
+                suma[k] = suma.get(k, 0) + q
+    return {k: round(v, 2) for k, v in sorted(suma.items())}
+
+
+def _sciezka_zakupow(plan):
+    return os.path.join(STATE, "zakupy-%s.json" % plan["od"])
+
+
+def lista_zakupow(plan=None):
+    """Kupujemy tylko brakującą różnicę, zaokrągloną w górę do całych opakowań.
+
+    Po zaksięgowaniu cyklu lista jest ZAMROŻONA (czytana z migawki), bo inaczej
+    po zakupach przeliczyłaby się na nowo od już opróżnionej lodówki i pokazała
+    drugą listę na to samo. Migawka to jest ta lista, z którą faktycznie idziesz do sklepu.
+    """
+    plan = plan or generuj_plan()
+    migawka = load(_sciezka_zakupow(plan), None) if os.path.exists(_sciezka_zakupow(plan)) else None
+    if migawka:
+        return migawka
+    potrzeba = potrzebne_na_cykl(plan)
+    stan = wczytaj_lodowke()["stan"]
+    kup, mam, koszt = [], [], 0.0
+    for klucz, ile in potrzeba.items():
+        p = PROD[klucz]
+        w_domu = stan.get(klucz, {}).get("ilosc", 0)
+        brakuje = max(0.0, ile - w_domu)
+        if brakuje <= 0.001:
+            mam.append({"klucz": klucz, "nazwa": p["nazwa"], "potrzeba": ile,
+                        "w_domu": w_domu, "jedn": p["jedn"]})
+            continue
+        opakowan = int(math.ceil(brakuje / p["opak"] - 1e-9))
+        cena = round(opakowan * p["cena"], 2)
+        koszt += cena
+        kup.append({
+            "klucz": klucz, "nazwa": p["nazwa"], "kat": p["kat"], "trw": p["trw"],
+            "opakowan": opakowan, "opak": p["opak"], "jedn": p["jedn"],
+            "brakuje": round(brakuje, 1), "dokupisz": opakowan * p["opak"],
+            "cena": cena,
+        })
+    kolejnosc = {"mieso": 0, "nabial": 1, "warzywa": 2, "pieczywo": 3, "spizarnia": 4}
+    kup.sort(key=lambda x: (kolejnosc.get(x["kat"], 9), x["nazwa"]))
+    return {"kup": kup, "mam": mam, "koszt": round(koszt, 2), "zrobione": False}
+
+
+def zaksieguj_cykl(force=False):
+    """Rozliczenie całego cyklu jedną operacją, wykonywane w dniu zakupów.
+
+    Dokłada do lodówki kupione OPAKOWANIA i od razu zdejmuje wszystko, co ten
+    cykl zje. To, co zostaje (końcówki opakowań), przechodzi na następny cykl —
+    i dlatego następna lista zakupów sama się skraca. Liczone raz na cykl.
+    """
+    plan = generuj_plan()
+    znacznik = "cykl:" + plan["od"]
+    fr = wczytaj_lodowke()
+    if not force and any(w.get("co") == znacznik for w in fr["log"]):
+        return None
+    if force and os.path.exists(_sciezka_zakupow(plan)):
+        os.remove(_sciezka_zakupow(plan))
+    z = lista_zakupow(plan)
+    z["zrobione"] = True
+    save(_sciezka_zakupow(plan), z)   # zamrażamy listę, z którą idziesz do sklepu
+    for poz in z["kup"]:
+        dodaj_do_lodowki(poz["klucz"], poz["dokupisz"])
+    for klucz, ile in potrzebne_na_cykl(plan).items():
+        zdejmij_z_lodowki(klucz, ile)
+    fr = wczytaj_lodowke()
+    fr["log"].append({"data": dzis().isoformat(), "co": znacznik,
+                      "pozycji": len(z["kup"]), "koszt": z["koszt"]})
+    save(FRIDGE_PATH, fr)
+    return z
+
+
+def auto_rozlicz():
+    """Wywoływane przez crona: w dniu gotowania, po zakupach, samo księguje cykl.
+
+    Dzięki temu lodówka jest aktualna nawet gdy komputer w ogóle nie jest włączany.
+    Jeśli w sklepie coś poszło inaczej, poprawiasz ręcznie: py trener.py kupione --force
+    """
+    n = teraz()
+    if typ_dnia(n.date()) != DZIEN_GOTOWANIA:
+        return None
+    godzina_zakupow = CFG["gotowanie"]["godzina_zakupow"]
+    if n.strftime("%H:%M") < godzina_zakupow:
+        return None
+    return zaksieguj_cykl()
+
+
+# ----------------------------------------------------------------- trening
+
+def trening_dnia(d=None):
+    d = d or dzis()
+    t = typ_dnia(d)
+    c = nr_cyklu(d)
+    if t == 0:
+        return {"rodzaj": "zmiana", "trening": TRENINGI["zmiana"]}
+    if t == 1:
+        return {"rodzaj": "krotki", "trening": TRENINGI["krotkie"][c % len(TRENINGI["krotkie"])]}
+    return {"rodzaj": "glowny", "trening": TRENINGI["glowne"][c % len(TRENINGI["glowne"])]}
+
+
+# ------------------------------------------------------------------ agenda
+
+def agenda(d=None):
+    """Plan dnia A-Z. Doklejamy nocne punkty ze zmiany, która trwa jeszcze nad ranem."""
+    d = d or dzis()
+    t = typ_dnia(d)
+    zdarzenia = [dict(e) for e in DNI["plan"][str(t)] if not e.get("nastepny_dzien")]
+    if t == 1:
+        zdarzenia += [dict(e) for e in DNI["plan"]["0"] if e.get("nastepny_dzien")]
+    _, dzien = plan_dnia(d)
+    for e in zdarzenia:
+        if e.get("slot"):
+            pid = dzien[e["slot"]]
+            m = makra_posilku(pid)
+            e["posilek"] = nazwa_posilku(pid)
+            e["posilek_id"] = pid
+            e["makra"] = m
+    zdarzenia.sort(key=lambda e: e["czas"])
+    return zdarzenia
+
+
+# --------------------------------------------------------------- pingi ntfy
+
+def wyslij_ping(tytul, tresc, tagi=None, priorytet=3):
+    topic = os.environ.get(CFG["ntfy"]["topic_env"], "").strip()
+    if not topic:
+        print("[ntfy] brak NTFY_TOPIC — pomijam wysyłkę")
+        return False
+    payload = {
+        "topic": topic,
+        "title": tytul,
+        "message": tresc,
+        "priority": priorytet,
+        "tags": tagi or [],
+    }
+    if CFG.get("panel_url"):
+        payload["click"] = CFG["panel_url"]
+    req = urllib.request.Request(
+        CFG["ntfy"]["server"],
+        data=json.dumps(payload).encode("utf-8"),
+        headers={"Content-Type": "application/json"},
+    )
+    try:
+        with urllib.request.urlopen(req, timeout=15) as r:
+            return r.status < 300
+    except urllib.error.URLError as e:
+        print("[ntfy] błąd wysyłki:", e)
+        return False
+
+
+def tresc_pinga(e, d):
+    czesci = []
+    if e.get("posilek"):
+        m = e["makra"]
+        czesci.append("%s  (%d kcal, %d g B)" % (e["posilek"], m["kcal"], m["bialko"]))
+    if e.get("opis"):
+        czesci.append(e["opis"])
+    if e.get("akcja") == "gotowanie":
+        b = BAZA_BY_ID[generuj_plan(d)["baza"]]
+        czesci.insert(0, "Dziś gotujesz: %s — %d min, %s." % (b["nazwa"], b["czas_min"], b["naczynia"]))
+    if e.get("akcja") == "zakupy":
+        z = lista_zakupow()
+        czesci.insert(0, "%d pozycji, ok. %.2f zł. %d rzeczy już masz w lodówce."
+                      % (len(z["kup"]), z["koszt"], len(z["mam"])))
+    if e.get("akcja") in ("trening_krotki", "trening_glowny"):
+        t = trening_dnia(d)["trening"]
+        czesci.insert(0, "%s — %d min." % (t["nazwa"], t["czas_min"]))
+    return "\n".join(czesci)
+
+
+def tick(okno_min=25, sucho=False):
+    """Odpalane cronem co 10 min. Okno 25 min z zapasem, bo cron GitHuba potrafi się spóźnić;
+    przed dublami chroni plik state/wyslane-DATA.json, a nie wąskie okno."""
+    n = teraz()
+    d = n.date()
+    wyslane_path = os.path.join(STATE, "wyslane-%s.json" % d.isoformat())
+    wyslane = load(wyslane_path, [])
+    poszlo = []
+    for e in agenda(d):
+        if not e.get("ping"):
+            continue
+        klucz = e["czas"] + "|" + e["tytul"]
+        if klucz in wyslane:
+            continue
+        hh, mm = e["czas"].split(":")
+        moment = n.replace(hour=int(hh), minute=int(mm), second=0, microsecond=0)
+        minelo = (n - moment).total_seconds() / 60.0
+        if 0 <= minelo <= okno_min:
+            tytul = "%s %s" % (e.get("ikona", "•"), e["tytul"])
+            tresc = tresc_pinga(e, d)
+            if sucho:
+                print("[SUCHY BIEG]", tytul, "|", tresc.replace("\n", " / "))
+                poszlo.append(klucz)
+            elif wyslij_ping(tytul, tresc, tagi=[], priorytet=4 if e.get("akcja") else 3):
+                wyslane.append(klucz)
+                poszlo.append(klucz)
+    if poszlo and not sucho:
+        save(wyslane_path, wyslane)
+    return poszlo
+
+
+# ------------------------------------------------------------------ eksport
+
+def eksport():
+    """Zrzuca wszystko, czego potrzebuje panel WWW, do jednego pliku."""
+    d = dzis()
+    plan = generuj_plan(d)
+    baza = BAZA_BY_ID[plan["baza"]]
+    dane = {
+        "wygenerowano": teraz().isoformat(timespec="seconds"),
+        "dzis": d.isoformat(),
+        "typ_dzis": typ_dnia(d),
+        "typy": DNI["typy"],
+        "cel": CEL,
+        "user": CFG["user"],
+        "plan": plan,
+        "baza": baza,
+        "agenda": agenda(d),
+        "zakupy": lista_zakupow(plan),
+        "lodowka": wczytaj_lodowke()["stan"],
+        "trening": trening_dnia(d),
+        "nawyki": DNI["nawyki"],
+        "posilki": {p["id"]: p for p in QUICK},
+        "produkty": {k: v for k, v in PROD.items() if not k.startswith("_")},
+        "historia": load(HIST_PATH, {"bazy": [], "waga": [], "treningi": []}),
+    }
+    for dzien in dane["plan"]["dni"]:
+        dzien["nazwy"] = {s: nazwa_posilku(dzien[s]) for s in SLOTY}
+    save(os.path.join(DOCS, "dane.json"), dane)
+    return dane
+
+
+# ---------------------------------------------------------------- wypisanie
+
+def _kreska(t=""):
+    print("\n" + t)
+    print("─" * 58)
+
+
+def pokaz_dzis(d=None):
+    d = d or dzis()
+    t = typ_dnia(d)
+    info = opis_typu(t)
+    _kreska("%s  %s — %s" % (info["emoji"], d.strftime("%A %d.%m"), info["nazwa"]))
+    print(info["opis"])
+    _, dzien = plan_dnia(d)
+    m = dzien["makra"]
+    print("\nMakra dnia: %d kcal  •  B %d g  •  T %d g  •  W %d g   (cel: %d / %d / %d / %d)"
+          % (m["kcal"], m["bialko"], m["tluszcz"], m["wegle"],
+             CEL["kcal"], CEL["bialko"], CEL["tluszcz"], CEL["wegle"]))
+    _kreska("PLAN DNIA")
+    for e in agenda(d):
+        linia = "%s  %s %s" % (e["czas"], e.get("ikona", "•"), e["tytul"])
+        if e.get("posilek"):
+            linia += " → %s (%d kcal)" % (e["posilek"], e["makra"]["kcal"])
+        print(linia)
+        if e.get("opis"):
+            print("        " + e["opis"])
+
+
+def pokaz_plan():
+    plan = generuj_plan()
+    b = BAZA_BY_ID[plan["baza"]]
+    _kreska("CYKL %d:  %s → %s" % (plan["cykl"], plan["od"], plan["do"]))
+    print("Gotujesz raz: %s (%d porcje, %d min, %s)" % (b["nazwa"], b["porcje"], b["czas_min"], b["naczynia"]))
+    for dzien in plan["dni"]:
+        info = opis_typu(dzien["typ"])
+        m = dzien["makra"]
+        print("\n%s %s — %s   [%d kcal, B %d]" % (info["emoji"], dzien["data"], info["nazwa"], m["kcal"], m["bialko"]))
+        for slot in SLOTY:
+            print("   %-11s %s" % (slot + ":", nazwa_posilku(dzien[slot])))
+
+
+def pokaz_zakupy():
+    z = lista_zakupow()
+    _kreska("ZAKUPY NA 3 DNI — ok. %.2f zł" % z["koszt"])
+    ost = None
+    for poz in z["kup"]:
+        if poz["kat"] != ost:
+            ost = poz["kat"]
+            print("\n  " + {"mieso": "MIĘSO", "nabial": "NABIAŁ I JAJA", "warzywa": "WARZYWA I OWOCE",
+                            "pieczywo": "PIECZYWO I MAKARONY", "spizarnia": "SPIŻARNIA"}.get(ost, ost.upper()))
+        print("   □ %-34s %d × %g %s   %5.2f zł"
+              % (poz["nazwa"], poz["opakowan"], poz["opak"], poz["jedn"], poz["cena"]))
+    if z["mam"]:
+        _kreska("JUŻ MASZ — NIE KUPUJ")
+        for poz in z["mam"]:
+            print("   ✓ %-34s w domu %g %s" % (poz["nazwa"], poz["w_domu"], poz["jedn"]))
+
+
+def pokaz_gotowanie():
+    plan = generuj_plan()
+    b = BAZA_BY_ID[plan["baza"]]
+    _kreska("GOTOWANIE: %s" % b["nazwa"])
+    print("%d porcje • %d min łącznie, w tym %d min realnej roboty • %s"
+          % (b["porcje"], b["czas_min"], b["czas_pracy"], b["naczynia"]))
+    m = makra_posilku(b["id"])
+    print("Jedna porcja: %d kcal, B %d g, T %d g, W %d g" % (m["kcal"], m["bialko"], m["tluszcz"], m["wegle"]))
+    print("\nSKŁADNIKI NA CAŁY GARNEK")
+    for k, q in b["produkty"]:
+        print("   • %-32s %g %s" % (PROD[k]["nazwa"], q, PROD[k]["jedn"]))
+    print("\nKROK PO KROKU")
+    for i, krok in enumerate(b["kroki"], 1):
+        print("   %d. %s" % (i, krok))
+    print("\nPrzechowywanie: %s" % b["przechowywanie"])
+    print("Odgrzewanie:    %s" % b["odgrzewanie"])
+
+
+def pokaz_trening(d=None):
+    t = trening_dnia(d)
+    if t["rodzaj"] == "zmiana":
+        w = t["trening"]
+        _kreska(w["nazwa"])
+        print(w["zasada"])
+        print("\nMikro-rozruch co 2-3 h:")
+        for x in w["mikro"]:
+            print("   • " + x)
+        return
+    w = t["trening"]
+    _kreska("%s — %d min" % (w["nazwa"], w["czas_min"]))
+    for r in w["rozgrzewka"]:
+        print("   ▸ " + r)
+    print()
+    for c in w["cwiczenia"]:
+        print("   %-42s %s × %s   (przerwa %s)" % (c["nazwa"], c["serie"], c["powt"], c["przerwa"]))
+        print("        " + c["wskazowka"])
+    print("\n" + w["finisz"])
+
+
+def pokaz_lodowke():
+    fr = wczytaj_lodowke()
+    _kreska("LODÓWKA I SPIŻARNIA")
+    if not fr["stan"]:
+        print("   (pusto — po pierwszych zakupach odpal: py trener.py kupione)")
+        return
+    for k, v in sorted(fr["stan"].items(), key=lambda x: PROD[x[0]]["kat"]):
+        print("   %-34s %8g %-8s  do %s" % (PROD[k]["nazwa"], v["ilosc"], PROD[k]["jedn"], v.get("do", "?")))
+
+
+def zapisz_wage(kg):
+    h = load(HIST_PATH, {"bazy": [], "waga": [], "treningi": []})
+    h["waga"] = [w for w in h.get("waga", []) if w["data"] != dzis().isoformat()]
+    h["waga"].append({"data": dzis().isoformat(), "kg": float(kg)})
+    h["waga"].sort(key=lambda w: w["data"])
+    save(HIST_PATH, h)
+    wagi = h["waga"]
+    print("Zapisane: %.1f kg" % float(kg))
+    if len(wagi) >= 2:
+        delta = wagi[-1]["kg"] - wagi[0]["kg"]
+        dni = (parse_date(wagi[-1]["data"]) - parse_date(wagi[0]["data"])).days or 1
+        print("Od %s: %+.1f kg w %d dni (%+.2f kg/tydzień). Cel redukcji: -0,4 do -0,7 kg/tydzień."
+              % (wagi[0]["data"], delta, dni, delta / dni * 7))
+
+
+# --------------------------------------------------------------------- CLI
+
+def main():
+    cmd = (sys.argv[1] if len(sys.argv) > 1 else "dzis").lower()
+    arg = sys.argv[2] if len(sys.argv) > 2 else None
+    if cmd == "dzis":
+        pokaz_dzis()
+    elif cmd == "plan":
+        pokaz_plan()
+    elif cmd == "nowyplan":
+        generuj_plan(force=True)
+        pokaz_plan()
+    elif cmd == "zakupy":
+        pokaz_zakupy()
+    elif cmd == "kupione":
+        z = zaksieguj_cykl(force=(arg == "--force"))
+        if z is None:
+            print("Ten cykl był już rozliczony. Aby policzyć od nowa: py trener.py kupione --force")
+        else:
+            print("Zaksięgowano zakupy (%d pozycji, %.2f zł) i zużycie na 3 dni." % (len(z["kup"]), z["koszt"]))
+        pokaz_lodowke()
+    elif cmd == "gotowanie":
+        pokaz_gotowanie()
+    elif cmd == "trening":
+        pokaz_trening()
+    elif cmd == "lodowka":
+        pokaz_lodowke()
+    elif cmd == "auto":
+        z = auto_rozlicz()
+        print("Zaksięgowano cykl (%.2f zł)." % z["koszt"] if z else "Nic do zaksięgowania.")
+    elif cmd == "waga":
+        if not arg:
+            print("Użycie: py trener.py waga 81.4")
+        else:
+            zapisz_wage(arg.replace(",", "."))
+    elif cmd == "eksport":
+        d = eksport()
+        print("Zapisano docs/dane.json (%d dni planu, %d pozycji zakupów)."
+              % (len(d["plan"]["dni"]), len(d["zakupy"]["kup"])))
+    elif cmd == "tick":
+        poszlo = tick(sucho=(arg == "sucho"))
+        print("Wysłano: %s" % (", ".join(poszlo) if poszlo else "nic (nie ma nic na teraz)"))
+    elif cmd == "test":
+        ok = wyslij_ping("🔔 Trener AI działa",
+                         "Jeśli to widzisz na telefonie, powiadomienia są ustawione poprawnie.",
+                         priorytet=4)
+        print("Wysłane." if ok else "Nie wysłano — sprawdź NTFY_TOPIC.")
+    else:
+        print(__doc__)
+
+
+if __name__ == "__main__":
+    main()

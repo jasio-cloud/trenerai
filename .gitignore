@@ -1,11 +1,14 @@
-# Sekrety (token bota, webhook) – NIGDY na GitHub
+# Sekrety – NIGDY na GitHub. Temat ntfy trzymamy w .env lokalnie
+# i w Settings → Secrets → NTFY_TOPIC na GitHubie.
 .env
 
-# Dane runtime / osobiste (tworzą się same przy działaniu)
-state/
-progress/
+# UWAGA: state/ NIE jest ignorowane celowo.
+# Cron GitHub Actions startuje za każdym razem na czystej maszynie, więc lodówka,
+# plan i lista wysłanych pingów muszą leżeć w repo — inaczej ten sam ping
+# przychodziłby co 10 minut, a lodówka resetowałaby się w kółko.
+# Nie ma tam nic wrażliwego: tylko jedzenie, waga i daty.
 
-# Python
 __pycache__/
 *.pyc
 _test.py
+legacy/__pycache__/

@@ -1,0 +1,327 @@
+<!doctype html>
+<html lang="pl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Trener AI</title>
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="apple-mobile-web-app-title" content="Trener">
+<meta name="theme-color" content="#11151c">
+<link rel="apple-touch-icon" href="ikona.png">
+<link rel="manifest" href="manifest.json">
+<style>
+  :root{
+    --tlo:#f5f6f8; --karta:#ffffff; --tekst:#11151c; --slaby:#6b7480;
+    --linia:#e3e6ea; --akcent:#c8442b; --ok:#1f7a4d; --uwaga:#a8620a;
+    --cien:0 1px 2px rgba(16,24,40,.06), 0 4px 12px rgba(16,24,40,.05);
+  }
+  @media (prefers-color-scheme: dark){
+    :root{
+      --tlo:#0e1117; --karta:#171b23; --tekst:#e8ebef; --slaby:#98a2b0;
+      --linia:#262c37; --akcent:#ff7a5e; --ok:#4ecb8d; --uwaga:#e0a13c;
+      --cien:none;
+    }
+  }
+  *{box-sizing:border-box}
+  body{margin:0;background:var(--tlo);color:var(--tekst);
+    font:15px/1.5 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif;
+    padding:env(safe-area-inset-top) 0 calc(64px + env(safe-area-inset-bottom));
+    -webkit-font-smoothing:antialiased}
+  .owijka{max-width:640px;margin:0 auto;padding:0 14px}
+
+  header{padding:18px 0 12px}
+  .dzien{display:flex;align-items:baseline;gap:9px;flex-wrap:wrap}
+  .dzien h1{margin:0;font-size:23px;letter-spacing:-.02em}
+  .znacznik{font-size:11px;font-weight:700;letter-spacing:.07em;text-transform:uppercase;
+    padding:3px 9px;border-radius:999px;background:var(--akcent);color:#fff}
+  .podtytul{color:var(--slaby);font-size:13.5px;margin-top:6px}
+
+  .karta{background:var(--karta);border:1px solid var(--linia);border-radius:14px;
+    padding:14px;margin-bottom:12px;box-shadow:var(--cien)}
+  .karta h2{margin:0 0 10px;font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:var(--slaby)}
+
+  .makra{display:grid;grid-template-columns:repeat(4,1fr);gap:8px;text-align:center}
+  .makro .l{font-size:10.5px;letter-spacing:.06em;text-transform:uppercase;color:var(--slaby)}
+  .makro .w{font-size:19px;font-weight:650;letter-spacing:-.02em;font-variant-numeric:tabular-nums}
+  .makro .c{font-size:10.5px;color:var(--slaby);font-variant-numeric:tabular-nums}
+  .pasek{height:3px;border-radius:2px;background:var(--linia);margin-top:6px;overflow:hidden}
+  .pasek i{display:block;height:100%;background:var(--ok)}
+  .pasek i.przekr{background:var(--uwaga)}
+
+  ol.os{list-style:none;margin:0;padding:0}
+  ol.os li{display:grid;grid-template-columns:52px 1fr;gap:10px;padding:11px 0;
+    border-top:1px solid var(--linia)}
+  ol.os li:first-child{border-top:0}
+  ol.os li.minelo{opacity:.42}
+  ol.os li.teraz{background:linear-gradient(90deg,rgba(200,68,43,.09),transparent);
+    margin:0 -8px;padding-left:8px;padding-right:8px;border-radius:9px}
+  .godz{font-variant-numeric:tabular-nums;font-weight:650;color:var(--slaby);font-size:14px;padding-top:1px}
+  .tyt{font-weight:600}
+  .posilek{margin-top:3px;font-size:14px}
+  .kcal{color:var(--slaby);font-size:12.5px;font-variant-numeric:tabular-nums}
+  .op{color:var(--slaby);font-size:13px;margin-top:4px}
+
+  label.poz{display:flex;gap:11px;align-items:flex-start;padding:10px 0;
+    border-top:1px solid var(--linia);cursor:pointer;user-select:none}
+  label.poz:first-of-type{border-top:0}
+  label.poz input{margin:2px 0 0;width:19px;height:19px;accent-color:var(--ok);flex:none}
+  label.poz.zrobione .nazwa{text-decoration:line-through;opacity:.45}
+  .nazwa{flex:1}
+  .ile{color:var(--slaby);font-size:12.5px;font-variant-numeric:tabular-nums;white-space:nowrap}
+  .dzial{font-size:11px;letter-spacing:.07em;text-transform:uppercase;color:var(--slaby);
+    margin:14px 0 2px;font-weight:700}
+  .dzial:first-child{margin-top:0}
+
+  .kroki{counter-reset:k;list-style:none;margin:0;padding:0}
+  .kroki li{counter-increment:k;display:grid;grid-template-columns:26px 1fr;gap:11px;
+    padding:11px 0;border-top:1px solid var(--linia)}
+  .kroki li:first-child{border-top:0}
+  .kroki li::before{content:counter(k);display:grid;place-items:center;width:24px;height:24px;
+    border-radius:50%;background:var(--linia);font-size:12px;font-weight:700;color:var(--slaby)}
+  .kroki li.zrobione{opacity:.4}
+
+  .cw{padding:11px 0;border-top:1px solid var(--linia)}
+  .cw:first-child{border-top:0}
+  .cw .g{display:flex;justify-content:space-between;gap:10px;align-items:baseline}
+  .cw .serie{font-variant-numeric:tabular-nums;font-weight:650;white-space:nowrap;color:var(--akcent)}
+  .cw .w{color:var(--slaby);font-size:13px;margin-top:3px}
+
+  nav{position:fixed;left:0;right:0;bottom:0;z-index:9;
+    background:color-mix(in srgb, var(--karta) 92%, transparent);
+    -webkit-backdrop-filter:saturate(180%) blur(18px);backdrop-filter:saturate(180%) blur(18px);
+    border-top:1px solid var(--linia);padding-bottom:env(safe-area-inset-bottom)}
+  nav .r{max-width:640px;margin:0 auto;display:grid;grid-template-columns:repeat(5,1fr)}
+  nav button{background:none;border:0;color:var(--slaby);font:inherit;font-size:10.5px;
+    padding:9px 2px 8px;display:grid;gap:3px;justify-items:center;cursor:pointer}
+  nav button b{font-size:18px;font-weight:400;line-height:1}
+  nav button[aria-selected="true"]{color:var(--akcent);font-weight:650}
+
+  .pusto{color:var(--slaby);text-align:center;padding:30px 10px}
+  .stopka{color:var(--slaby);font-size:11.5px;text-align:center;padding:6px 0 18px}
+  .suma{display:flex;justify-content:space-between;font-weight:650;padding-top:12px;
+    margin-top:6px;border-top:2px solid var(--linia)}
+  [hidden]{display:none !important}
+</style>
+</head>
+<body>
+
+<div class="owijka">
+  <header>
+    <div class="dzien">
+      <h1 id="data">…</h1>
+      <span class="znacznik" id="typ"></span>
+    </div>
+    <div class="podtytul" id="opis-typu"></div>
+  </header>
+
+  <main id="widok"><div class="pusto">Wczytuję plan…</div></main>
+  <div class="stopka" id="stopka"></div>
+</div>
+
+<nav>
+  <div class="r" id="zakladki">
+    <button data-w="dzis"      aria-selected="true"><b>📋</b>Dziś</button>
+    <button data-w="plan"      aria-selected="false"><b>🗓️</b>Cykl</button>
+    <button data-w="zakupy"    aria-selected="false"><b>🛒</b>Zakupy</button>
+    <button data-w="gotowanie" aria-selected="false"><b>🍳</b>Gotuję</button>
+    <button data-w="trening"   aria-selected="false"><b>🏋️</b>Trening</button>
+  </div>
+</nav>
+
+<script>
+const $ = (s,r=document)=>r.querySelector(s);
+const esc = s => String(s??"").replace(/[&<>"]/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
+let D = null, widok = "dzis";
+
+/* Odhaczenia trzymamy lokalnie na telefonie i kasujemy przy nowym cyklu,
+   żeby lista zakupów nie wstawała odhaczona po następnych zakupach. */
+const kluczCyklu = () => "trener:" + (D?.plan?.od ?? "?");
+function zapamietane(){ try{ return JSON.parse(localStorage.getItem(kluczCyklu()) || "{}"); }catch{ return {}; } }
+function przelacz(id, on){
+  try{ const s = zapamietane(); on ? s[id]=1 : delete s[id];
+       localStorage.setItem(kluczCyklu(), JSON.stringify(s)); }catch{}
+}
+function sprzatajStare(){
+  try{ for(let i=localStorage.length-1;i>=0;i--){ const k=localStorage.key(i);
+       if(k?.startsWith("trener:") && k!==kluczCyklu()) localStorage.removeItem(k); } }catch{}
+}
+
+const DNI_PL = ["niedziela","poniedziałek","wtorek","środa","czwartek","piątek","sobota"];
+const MIES_PL = ["stycznia","lutego","marca","kwietnia","maja","czerwca","lipca","sierpnia","września","października","listopada","grudnia"];
+function ladnaData(iso){
+  const d = new Date(iso + "T12:00:00");
+  return DNI_PL[d.getDay()] + ", " + d.getDate() + " " + MIES_PL[d.getMonth()];
+}
+const minuty = hhmm => { const [h,m] = hhmm.split(":").map(Number); return h*60+m; };
+
+function makra(m, cel){
+  const p = [["kcal","kcal",m.kcal,cel.kcal],["białko","g",m.bialko,cel.bialko],
+             ["tłuszcz","g",m.tluszcz,cel.tluszcz],["węgle","g",m.wegle,cel.wegle]];
+  return `<div class="makra">${p.map(([n,j,w,c])=>{
+    const pr = Math.min(100, Math.round(w/c*100));
+    return `<div class="makro"><div class="l">${n}</div>
+      <div class="w">${w}<span class="c" style="font-size:11px"> ${j==="g"?"g":""}</span></div>
+      <div class="c">cel ${c}</div>
+      <div class="pasek"><i class="${w>c*1.08?"przekr":""}" style="width:${pr}%"></i></div></div>`;
+  }).join("")}</div>`;
+}
+
+function widokDzis(){
+  const teraz = new Date(), tm = teraz.getHours()*60 + teraz.getMinutes();
+  const dzis = D.plan.dni.find(d => d.data === D.dzis) || D.plan.dni[0];
+  const nastepny = D.agenda.filter(e => minuty(e.czas) > tm)[0];
+
+  const lista = D.agenda.map(e => {
+    const minelo = minuty(e.czas) <= tm;
+    const teraz_ = nastepny && e.czas === nastepny.czas;
+    return `<li class="${minelo?"minelo":""} ${teraz_?"teraz":""}">
+      <span class="godz">${e.czas}</span>
+      <div><div class="tyt">${e.ikona||""} ${esc(e.tytul)}</div>
+        ${e.posilek ? `<div class="posilek">${esc(e.posilek)}
+           <span class="kcal">· ${e.makra.kcal} kcal, ${e.makra.bialko} g B</span></div>` : ""}
+        ${e.opis ? `<div class="op">${esc(e.opis)}</div>` : ""}
+      </div></li>`;
+  }).join("");
+
+  return `<div class="karta"><h2>Makra na dziś</h2>${makra(dzis.makra, D.cel)}</div>
+    <div class="karta"><h2>Plan dnia</h2><ol class="os">${lista}</ol></div>
+    <div class="karta"><h2>Nawyki</h2>
+      ${D.nawyki.map(n=>`<div class="cw"><div class="g"><b>${esc(n.nazwa)}</b></div>
+        <div class="w">${esc(n.opis)}</div></div>`).join("")}</div>`;
+}
+
+function widokPlan(){
+  const b = D.baza;
+  return `<div class="karta"><h2>Gotujesz raz na cały cykl</h2>
+      <div class="tyt">${esc(b.nazwa)}</div>
+      <div class="op">${b.porcje} porcje · ${b.czas_min} min, w tym ${b.czas_pracy} min realnej roboty · ${esc(b.naczynia)}</div></div>
+    ${D.plan.dni.map(d=>{
+      const t = D.typy[String(d.typ)];
+      return `<div class="karta"><h2>${t.emoji} ${ladnaData(d.data)} — ${esc(t.nazwa)}</h2>
+        ${["sniadanie","drugi","obiad","kolacja"].map(s=>
+          `<div class="cw"><div class="g"><span>${esc(d.nazwy[s])}</span></div>
+           <div class="w">${{sniadanie:"śniadanie",drugi:"drugi posiłek",obiad:"obiad",kolacja:"kolacja"}[s]}</div></div>`).join("")}
+        <div class="op" style="margin-top:10px">${d.makra.kcal} kcal · B ${d.makra.bialko} g · T ${d.makra.tluszcz} g · W ${d.makra.wegle} g</div>
+      </div>`;
+    }).join("")}`;
+}
+
+function widokZakupy(){
+  const z = D.zakupy, s = zapamietane();
+  if(!z.kup.length) return `<div class="karta"><div class="pusto">Nic nie musisz kupować — wszystko masz w lodówce.</div></div>`;
+  const nazwyDzialow = {mieso:"Mięso", nabial:"Nabiał i jaja", warzywa:"Warzywa i owoce",
+                        pieczywo:"Pieczywo i makarony", spizarnia:"Spiżarnia"};
+  let html = "", ost = null;
+  for(const p of z.kup){
+    if(p.kat !== ost){ ost = p.kat; html += `<div class="dzial">${nazwyDzialow[ost] ?? ost}</div>`; }
+    const id = "z_" + p.klucz, on = !!s[id];
+    html += `<label class="poz ${on?"zrobione":""}">
+      <input type="checkbox" data-id="${id}" ${on?"checked":""}>
+      <span class="nazwa">${esc(p.nazwa)}</span>
+      <span class="ile">${p.opakowan} × ${p.opak} ${esc(p.jedn)} · ${p.cena.toFixed(2)} zł</span></label>`;
+  }
+  html += `<div class="suma"><span>Razem</span><span>${z.koszt.toFixed(2)} zł</span></div>`;
+
+  const mam = z.mam.length ? `<div class="karta"><h2>Już masz — nie kupuj</h2>
+    ${z.mam.map(p=>`<div class="poz" style="opacity:.6"><span class="nazwa">✓ ${esc(p.nazwa)}</span>
+      <span class="ile">${p.w_domu} ${esc(p.jedn)}</span></div>`).join("")}</div>` : "";
+
+  const lod = Object.keys(D.lodowka).length ? `<div class="karta"><h2>Lodówka i spiżarnia</h2>
+    ${Object.entries(D.lodowka).map(([k,v])=>`<div class="poz">
+      <span class="nazwa">${esc(D.produkty[k]?.nazwa ?? k)}</span>
+      <span class="ile">${v.ilosc} ${esc(D.produkty[k]?.jedn ?? "")} · do ${v.do}</span></div>`).join("")}</div>` : "";
+
+  const banner = z.zrobione ? `<div class="op" style="margin:-4px 0 10px">
+      ✓ Ta lista jest już zaksięgowana — lodówka policzona. Odhaczaj przy półce,
+      żeby wiedzieć, co masz w koszyku.</div>` : "";
+
+  return `<div class="karta"><h2>Zakupy na 3 dni</h2>${banner}${html}</div>${mam}${lod}`;
+}
+
+function widokGotowanie(){
+  const b = D.baza, s = zapamietane();
+  const naPorcje = k => Math.round(k*10)/10;
+  return `<div class="karta"><h2>Gotowanie na 3 dni</h2>
+      <div class="tyt" style="font-size:17px">${esc(b.nazwa)}</div>
+      <div class="op">${b.porcje} porcje · ${b.czas_min} min (${b.czas_pracy} min realnej roboty) · ${esc(b.naczynia)}</div></div>
+    <div class="karta"><h2>Składniki na cały garnek</h2>
+      ${b.produkty.map(([k,q])=>`<div class="poz">
+        <span class="nazwa">${esc(D.produkty[k]?.nazwa ?? k)}</span>
+        <span class="ile">${naPorcje(q)} ${esc(D.produkty[k]?.jedn ?? "")}</span></div>`).join("")}</div>
+    <div class="karta"><h2>Krok po kroku</h2><ol class="kroki">
+      ${b.kroki.map((krok,i)=>{ const id = "k_"+b.id+"_"+i, on = !!s[id];
+        return `<li class="${on?"zrobione":""}" data-krok="${id}">${esc(krok)}</li>`; }).join("")}
+    </ol></div>
+    <div class="karta"><h2>Po ugotowaniu</h2>
+      <div class="cw"><div class="g"><b>Przechowywanie</b></div><div class="w">${esc(b.przechowywanie)}</div></div>
+      <div class="cw"><div class="g"><b>Odgrzewanie</b></div><div class="w">${esc(b.odgrzewanie)}</div></div></div>`;
+}
+
+function widokTrening(){
+  const t = D.trening.trening;
+  if(D.trening.rodzaj === "zmiana"){
+    return `<div class="karta"><h2>${esc(t.nazwa)}</h2>
+      <div class="op">${esc(t.zasada)}</div></div>
+      <div class="karta"><h2>Mikro-rozruch co 2–3 h</h2>
+      ${t.mikro.map(x=>`<div class="poz"><span class="nazwa">${esc(x)}</span></div>`).join("")}</div>`;
+  }
+  return `<div class="karta"><h2>${esc(t.nazwa)} · ${t.czas_min} min</h2>
+      ${t.rozgrzewka.map(r=>`<div class="op">▸ ${esc(r)}</div>`).join("")}</div>
+    <div class="karta"><h2>Ćwiczenia</h2>
+      ${t.cwiczenia.map(c=>`<div class="cw">
+        <div class="g"><b>${esc(c.nazwa)}</b><span class="serie">${c.serie} × ${esc(c.powt)}</span></div>
+        <div class="w">${esc(c.wskazowka)}</div>
+        <div class="w">przerwa ${esc(c.przerwa)}</div></div>`).join("")}</div>
+    <div class="karta"><h2>Na koniec</h2><div class="op">${esc(t.finisz)}</div></div>`;
+}
+
+function rysuj(){
+  const widoki = {dzis:widokDzis, plan:widokPlan, zakupy:widokZakupy,
+                  gotowanie:widokGotowanie, trening:widokTrening};
+  $("#widok").innerHTML = widoki[widok]();
+}
+
+function start(dane){
+  D = dane;
+  sprzatajStare();
+  const t = D.typy[String(D.typ_dzis)];
+  $("#data").textContent = ladnaData(D.dzis);
+  $("#typ").textContent = t.emoji + " " + t.nazwa;
+  $("#opis-typu").textContent = t.opis;
+  $("#stopka").textContent = "Dane odświeżone " + D.wygenerowano.replace("T"," ").slice(0,16);
+  rysuj();
+}
+
+$("#zakladki").addEventListener("click", e => {
+  const b = e.target.closest("button"); if(!b) return;
+  widok = b.dataset.w;
+  for(const x of $("#zakladki").children) x.setAttribute("aria-selected", String(x === b));
+  scrollTo({top:0}); rysuj();
+});
+
+$("#widok").addEventListener("change", e => {
+  const cb = e.target.closest('input[type="checkbox"]'); if(!cb) return;
+  przelacz(cb.dataset.id, cb.checked);
+  cb.closest("label").classList.toggle("zrobione", cb.checked);
+});
+
+$("#widok").addEventListener("click", e => {
+  const li = e.target.closest("li[data-krok]"); if(!li) return;
+  const on = !li.classList.contains("zrobione");
+  li.classList.toggle("zrobione", on);
+  przelacz(li.dataset.krok, on);
+});
+
+fetch("dane.json?t=" + Date.now())
+  .then(r => { if(!r.ok) throw new Error(r.status); return r.json(); })
+  .then(start)
+  .catch(err => {
+    $("#widok").innerHTML = `<div class="karta"><div class="pusto">
+      Nie udało się wczytać planu (${esc(err.message)}).<br><br>
+      Na komputerze odpal <code>py trener.py eksport</code> i wypchnij zmiany na GitHuba,
+      albo poczekaj — cron robi to sam co 10 minut.</div></div>`;
+  });
+</script>
+</body>
+</html>

@@ -1,0 +1,318 @@
+{
+  "_info": "Szablony dnia A-Z dla cyklu 24/48. typ 0 = dzień zmiany (24h służby 07:00-07:00), typ 1 = dzień po zmianie (wracasz 7:30, odsypiasz, zakupy + gotowanie), typ 2 = dzień wolny (główny trening, pakowanie boxów). ping=true → leci powiadomienie na telefon. slot wskazuje, który posiłek z planu podstawić w treść.",
+  "typy": {
+    "0": {
+      "nazwa": "ZMIANA 24h",
+      "emoji": "🛡️",
+      "opis": "Służba 07:00–07:00. Jesz wyłącznie z boxów spakowanych wczoraj. Zero gotowania, zero treningu."
+    },
+    "1": {
+      "nazwa": "PO ZMIANIE",
+      "emoji": "😴",
+      "opis": "Wracasz 7:30, odsypiasz do 14:15. Po południu: zakupy + gotowanie na 3 dni + krótki trening."
+    },
+    "2": {
+      "nazwa": "WOLNE",
+      "emoji": "💪",
+      "opis": "Pełny dzień w domu. Główny trening, jedzenie z lodówki, wieczorem pakujesz boxy na jutrzejszą zmianę."
+    }
+  },
+  "plan": {
+    "0": [
+      {
+        "czas": "05:30",
+        "tytul": "Pobudka",
+        "opis": "Szklanka wody od razu po wstaniu. Boxy masz spakowane w lodówce od wczoraj — wyjmij je teraz, żeby nie zapomnieć.",
+        "ping": true,
+        "ikona": "⏰"
+      },
+      {
+        "czas": "05:45",
+        "tytul": "Śniadanie w domu",
+        "opis": "Zjedz na spokojnie w domu, nie w biegu.",
+        "slot": "sniadanie",
+        "ping": false,
+        "ikona": "🍳"
+      },
+      {
+        "czas": "06:20",
+        "tytul": "Wyjście z domu",
+        "opis": "Sprawdź: boxy, butelka wody 1,5 l, ładowarka.",
+        "ping": true,
+        "ikona": "🚪"
+      },
+      {
+        "czas": "07:00",
+        "tytul": "Początek służby",
+        "opis": "Zmiana 24h. Plan na dziś: jeść regularnie, wypić 3 l wody, co 2-3 h wstać i się rozruszać.",
+        "ping": false,
+        "ikona": "🛡️"
+      },
+      {
+        "czas": "09:30",
+        "tytul": "Drugi posiłek",
+        "opis": "Z boxa. Nie odkładaj — po 4 godzinach głodu zawsze dojadasz byle czym z automatu.",
+        "slot": "drugi",
+        "ping": true,
+        "ikona": "🥪"
+      },
+      {
+        "czas": "12:00",
+        "tytul": "Rozruszaj się",
+        "opis": "5 minut: 10 przysiadów, krążenia ramion, rozciągnięcie karku. Plecy po staniu Ci podziękują.",
+        "ping": true,
+        "ikona": "🤸"
+      },
+      {
+        "czas": "13:30",
+        "tytul": "Obiad",
+        "opis": "Główny box z lodówki — odgrzej w mikrofali.",
+        "slot": "obiad",
+        "ping": true,
+        "ikona": "🍽️"
+      },
+      {
+        "czas": "17:00",
+        "tytul": "Woda — kontrola",
+        "opis": "Powinieneś mieć wypite ok. 2 l. Jak nie masz, nadrabiaj teraz, nie w nocy.",
+        "ping": true,
+        "ikona": "💧"
+      },
+      {
+        "czas": "20:30",
+        "tytul": "Kolacja",
+        "opis": "Ostatni posiłek na zmianie. Lekki, żeby nie leżeć z pełnym brzuchem.",
+        "slot": "kolacja",
+        "ping": true,
+        "ikona": "🌙"
+      },
+      {
+        "czas": "23:00",
+        "tytul": "Noc — rozciąganie",
+        "opis": "5 minut rozciągania zginaczy bioder i karku. Bez tego wracasz do domu ze sztywnymi plecami.",
+        "ping": true,
+        "ikona": "🤸"
+      },
+      {
+        "czas": "03:00",
+        "tytul": "Środek nocy",
+        "opis": "Szklanka wody. Jeśli regulamin pozwala na drzemkę — połóż się teraz, nie nad ranem.",
+        "ping": true,
+        "ikona": "💧",
+        "nastepny_dzien": true
+      },
+      {
+        "czas": "06:45",
+        "tytul": "Zdanie służby",
+        "opis": "Za 15 minut kończysz. Nie kupuj nic po drodze — w domu masz jedzenie i za chwilę i tak idziesz spać.",
+        "ping": true,
+        "ikona": "🏁",
+        "nastepny_dzien": true
+      }
+    ],
+    "1": [
+      {
+        "czas": "07:35",
+        "tytul": "Jesteś w domu",
+        "opis": "Prysznic, zasłoń okna. NIE siadaj do telefonu — po 24h na nogach jedno przewijanie kosztuje Cię godzinę snu.",
+        "ping": true,
+        "ikona": "🚿"
+      },
+      {
+        "czas": "07:50",
+        "tytul": "Mały posiłek przed snem",
+        "opis": "Coś lekkiego i białkowego. Na pusty żołądek gorzej zaśniesz, na pełny obudzisz się rozbity.",
+        "slot": "sniadanie",
+        "ping": true,
+        "ikona": "🥛"
+      },
+      {
+        "czas": "08:15",
+        "tytul": "SEN — najważniejsza rzecz dziś",
+        "opis": "Budzik na 14:15, czyli 6 godzin. Nie dłużej, inaczej nie zaśniesz wieczorem i rozjedzie Ci się cały cykl.",
+        "ping": true,
+        "ikona": "😴"
+      },
+      {
+        "czas": "14:15",
+        "tytul": "Pobudka",
+        "opis": "Duża szklanka wody i 10 minut na świetle dziennym — najszybszy sposób, żeby przestać być zombie.",
+        "ping": true,
+        "ikona": "⏰"
+      },
+      {
+        "czas": "14:40",
+        "tytul": "Posiłek",
+        "opis": "Pierwszy porządny posiłek po odespaniu.",
+        "slot": "drugi",
+        "ping": true,
+        "ikona": "🍽️"
+      },
+      {
+        "czas": "15:30",
+        "tytul": "ZAKUPY na 3 dni",
+        "opis": "Lista jest w panelu — kupujesz tylko to, czego nie ma w lodówce. Trzymaj się listy, nie chodź po sklepie głodny.",
+        "ping": true,
+        "ikona": "🛒",
+        "akcja": "zakupy"
+      },
+      {
+        "czas": "16:30",
+        "tytul": "GOTOWANIE na 3 dni",
+        "opis": "Jeden garnek, jedno podejście, 3 pojemniki. Przepis krok po kroku masz w panelu.",
+        "ping": true,
+        "ikona": "🍳",
+        "akcja": "gotowanie"
+      },
+      {
+        "czas": "18:15",
+        "tytul": "Obiad",
+        "opis": "Prosto z garnka, świeży. Reszta ostudzona idzie do lodówki.",
+        "slot": "obiad",
+        "ping": true,
+        "ikona": "🍲"
+      },
+      {
+        "czas": "19:15",
+        "tytul": "TRENING krótki",
+        "opis": "35 minut, ciężary 80% normy. Po nieprzespanej dobie to jest sukces sam w sobie.",
+        "ping": true,
+        "ikona": "🏋️",
+        "akcja": "trening_krotki"
+      },
+      {
+        "czas": "20:30",
+        "tytul": "Kolacja",
+        "opis": "Po treningu, z białkiem.",
+        "slot": "kolacja",
+        "ping": true,
+        "ikona": "🌙"
+      },
+      {
+        "czas": "22:00",
+        "tytul": "Odkładasz telefon",
+        "opis": "Ekran w dół. Za 30 minut śpisz i to Ci resetuje rytm po zmianie.",
+        "ping": true,
+        "ikona": "📵"
+      },
+      {
+        "czas": "22:30",
+        "tytul": "Sen",
+        "opis": "Długi sen do rana. Dziś śpisz łącznie ~15 h i to jest zamierzone — spłacasz dług z doby na służbie.",
+        "ping": true,
+        "ikona": "😴"
+      }
+    ],
+    "2": [
+      {
+        "czas": "08:00",
+        "tytul": "Pobudka + waga",
+        "opis": "Zważ się od razu po wstaniu, przed jedzeniem i piciem. Wpisz w panelu. Jedna liczba nic nie znaczy — liczy się kierunek przez 2 tygodnie.",
+        "ping": true,
+        "ikona": "⚖️",
+        "akcja": "waga"
+      },
+      {
+        "czas": "08:30",
+        "tytul": "Śniadanie",
+        "opis": "Spokojne śniadanie w domu.",
+        "slot": "sniadanie",
+        "ping": true,
+        "ikona": "🍳"
+      },
+      {
+        "czas": "12:30",
+        "tytul": "Drugi posiłek",
+        "opis": "",
+        "slot": "drugi",
+        "ping": true,
+        "ikona": "🥪"
+      },
+      {
+        "czas": "15:30",
+        "tytul": "Obiad",
+        "opis": "Box z lodówki, mikrofala, zero roboty.",
+        "slot": "obiad",
+        "ping": true,
+        "ikona": "🍽️"
+      },
+      {
+        "czas": "16:30",
+        "tytul": "TRENING GŁÓWNY",
+        "opis": "Najlepszy dzień w cyklu — wyspany i najedzony. Tu robisz rekordy, nie w dniu po zmianie.",
+        "ping": true,
+        "ikona": "🏋️",
+        "akcja": "trening_glowny"
+      },
+      {
+        "czas": "18:00",
+        "tytul": "Spacer / świeże powietrze",
+        "opis": "20-30 minut. Nie kardio — to jest po to, żeby ruszyć plecy i biodra po tygodniu stania na służbie.",
+        "ping": true,
+        "ikona": "🚶"
+      },
+      {
+        "czas": "19:30",
+        "tytul": "Kolacja",
+        "opis": "",
+        "slot": "kolacja",
+        "ping": true,
+        "ikona": "🌙"
+      },
+      {
+        "czas": "21:00",
+        "tytul": "PAKOWANIE BOXÓW na jutro",
+        "opis": "To jest najważniejsze 15 minut w całym cyklu. Bez tego jutro na zmianie jesz z automatu i cała robota z gotowaniem idzie w piach.",
+        "ping": true,
+        "ikona": "📦",
+        "akcja": "boxy"
+      },
+      {
+        "czas": "21:30",
+        "tytul": "Odkładasz telefon",
+        "opis": "Jutro pobudka 05:30 — musisz zasnąć przed 22:30.",
+        "ping": true,
+        "ikona": "📵"
+      },
+      {
+        "czas": "22:00",
+        "tytul": "Sen",
+        "opis": "Krótka noc przed zmianą, ale jeśli położysz się teraz, wstaniesz w miarę ludzko.",
+        "ping": true,
+        "ikona": "😴"
+      }
+    ]
+  },
+  "nawyki": [
+    {
+      "id": "woda",
+      "nazwa": "3 litry wody",
+      "opis": "Butelka 1,5 l wypita dwa razy. Na zmianie najłatwiej zapomnieć — dlatego jest ping o 17:00."
+    },
+    {
+      "id": "bialko",
+      "nazwa": "Trafić w białko",
+      "opis": "Na redukcji białko jest ważniejsze niż same kalorie. Trzyma mięśnie i najedzenie."
+    },
+    {
+      "id": "kroki",
+      "nazwa": "8 000 kroków",
+      "opis": "Na zmianie zbierasz je sam z siebie. W dni wolne trzeba wyjść na spacer."
+    },
+    {
+      "id": "sen",
+      "nazwa": "Sen zgodnie z planem",
+      "opis": "6 h po zmianie + długa noc. Odsypianie 12 h jednym ciągiem rozwala rytm na kolejne dni."
+    },
+    {
+      "id": "waga",
+      "nazwa": "Waga w dzień wolny",
+      "opis": "Raz na cykl, rano, na czczo. Cel redukcji: -0,4 do -0,7 kg na tydzień."
+    },
+    {
+      "id": "telefon",
+      "nazwa": "Telefon w dół 30 min przed snem",
+      "opis": "Najtańszy sposób na lepszy sen przy pracy zmianowej."
+    }
+  ]
+}

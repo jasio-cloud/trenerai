@@ -1,0 +1,581 @@
+{
+  "_info": "SZYBKIE POSIŁKI — bez gotowania albo do 12 minut. sloty = gdzie pasuje (sniadanie / drugi / kolacja). box=true znaczy, że można to spakować i zjeść na zimno na 24h zmianie. czas_min liczony realnie, z wyjmowaniem rzeczy z lodówki.",
+  "posilki": [
+    {
+      "id": "q_jajecznica",
+      "nazwa": "Jajecznica z 3 jaj + 2 kromki + pomidor",
+      "sloty": [
+        "sniadanie",
+        "kolacja"
+      ],
+      "box": false,
+      "czas_min": 8,
+      "produkty": [
+        [
+          "jaja",
+          3
+        ],
+        [
+          "chleb",
+          2
+        ],
+        [
+          "pomidor",
+          1
+        ],
+        [
+          "maslo",
+          6
+        ],
+        [
+          "przyprawy",
+          1
+        ]
+      ],
+      "kroki": [
+        "Rozgrzej patelnię na średnim ogniu i rozpuść na niej kawałek masła.",
+        "Wbij jaja do kubka, posól, popieprz, rozbełtaj widelcem.",
+        "Wlej na patelnię, odczekaj 20 sekund, potem zgarniaj łopatką co kilka sekund.",
+        "Zdejmij z ognia, gdy jaja są ścięte, ale jeszcze błyszczące — dojdą na talerzu. Pomidor w plastry obok."
+      ]
+    },
+    {
+      "id": "q_omlet",
+      "nazwa": "Omlet z serem i pomidorem",
+      "sloty": [
+        "sniadanie",
+        "kolacja"
+      ],
+      "box": false,
+      "czas_min": 10,
+      "produkty": [
+        [
+          "jaja",
+          3
+        ],
+        [
+          "ser_zolty",
+          2
+        ],
+        [
+          "pomidor",
+          1
+        ],
+        [
+          "maslo",
+          6
+        ],
+        [
+          "chleb",
+          1
+        ],
+        [
+          "przyprawy",
+          1
+        ]
+      ],
+      "kroki": [
+        "Rozbełtaj 3 jaja z solą i pieprzem.",
+        "Na patelni rozpuść masło, wlej jaja i NIE mieszaj. Smaż 3 min na małym ogniu pod przykryciem.",
+        "Gdy wierzch jest już prawie ścięty, połóż na połowie plastry sera i pomidora.",
+        "Złóż omlet na pół łopatką, smaż jeszcze 1 min. Zjedz z kromką chleba."
+      ]
+    },
+    {
+      "id": "q_twarog",
+      "nazwa": "Twarożek ze szczypiorkiem + 2 kromki",
+      "sloty": [
+        "sniadanie",
+        "kolacja"
+      ],
+      "box": true,
+      "czas_min": 5,
+      "produkty": [
+        [
+          "twarog",
+          200
+        ],
+        [
+          "smietana",
+          20
+        ],
+        [
+          "szczypiorek",
+          2
+        ],
+        [
+          "chleb",
+          2
+        ],
+        [
+          "ogorek",
+          0.3
+        ],
+        [
+          "przyprawy",
+          1
+        ]
+      ],
+      "kroki": [
+        "Twaróg rozgnieć widelcem w miseczce ze śmietaną — będzie kremowy, a nie suchy.",
+        "Wsyp posiekany szczypiorek, sól, pieprz, wymieszaj.",
+        "Ogórek w plastry. Jeść z chlebem. Do boxa: twarożek do zakręcanego pojemnika, chleb osobno."
+      ]
+    },
+    {
+      "id": "q_skyr",
+      "nazwa": "Skyr z bananem i masłem orzechowym",
+      "sloty": [
+        "sniadanie",
+        "drugi"
+      ],
+      "box": true,
+      "czas_min": 3,
+      "produkty": [
+        [
+          "skyr",
+          300
+        ],
+        [
+          "banan",
+          1
+        ],
+        [
+          "maslo_orzechowe",
+          1
+        ]
+      ],
+      "kroki": [
+        "Skyr do miski lub pojemnika.",
+        "Banan w plastry, łyżka masła orzechowego na wierzch. Wymieszaj albo zostaw warstwami.",
+        "Na zmianę: wszystko do zakręcanego pojemnika, banan dorzucasz na miejscu żeby nie sczerniał."
+      ]
+    },
+    {
+      "id": "q_kanapki_jajko",
+      "nazwa": "Kanapki z jajkiem na twardo i serem (2 kromki)",
+      "sloty": [
+        "sniadanie",
+        "drugi",
+        "kolacja"
+      ],
+      "box": true,
+      "czas_min": 12,
+      "produkty": [
+        [
+          "jaja",
+          2
+        ],
+        [
+          "chleb",
+          2
+        ],
+        [
+          "ser_zolty",
+          2
+        ],
+        [
+          "musztarda",
+          1
+        ],
+        [
+          "ogorek_kiszony",
+          1
+        ],
+        [
+          "przyprawy",
+          1
+        ]
+      ],
+      "kroki": [
+        "Jajka wrzuć do wrzącej wody i gotuj 9 min, potem zalej zimną wodą — same się obiorą.",
+        "Chleb posmaruj cienko musztardą, połóż ser, na to plastry jajka.",
+        "Posól, popieprz, ogórek kiszony w plastrach na wierzch. Do boxa zawijasz w folię."
+      ]
+    },
+    {
+      "id": "q_serek_box",
+      "nazwa": "Box: serek wiejski + jajka na twardo + ogórki",
+      "sloty": [
+        "drugi",
+        "kolacja"
+      ],
+      "box": true,
+      "czas_min": 12,
+      "produkty": [
+        [
+          "serek_wiejski",
+          1
+        ],
+        [
+          "jaja",
+          3
+        ],
+        [
+          "ogorek_kiszony",
+          2
+        ],
+        [
+          "chleb",
+          1
+        ],
+        [
+          "przyprawy",
+          1
+        ]
+      ],
+      "kroki": [
+        "Ugotuj jajka na twardo (9 min od wrzenia), zalej zimną wodą, obierz.",
+        "Do pojemnika: serek wiejski, obok pokrojone jajka, obok ogórki kiszone.",
+        "Posól i popieprz jajka od razu, żeby nie nosić soli. Chleb do osobnej torebki.",
+        "To najprostszy box na zmianę — nic nie trzeba odgrzewać."
+      ]
+    },
+    {
+      "id": "q_shakshuka",
+      "nazwa": "Jajka w sosie pomidorowym (shakshuka)",
+      "sloty": [
+        "sniadanie",
+        "kolacja"
+      ],
+      "box": false,
+      "czas_min": 12,
+      "produkty": [
+        [
+          "jaja",
+          3
+        ],
+        [
+          "passata",
+          200
+        ],
+        [
+          "cebula",
+          1
+        ],
+        [
+          "czosnek",
+          1
+        ],
+        [
+          "papryka",
+          0.5
+        ],
+        [
+          "chleb",
+          1
+        ],
+        [
+          "olej",
+          8
+        ],
+        [
+          "przyprawy",
+          1
+        ]
+      ],
+      "kroki": [
+        "Na patelni na oleju smaż posiekaną cebulę i paprykę 5 min.",
+        "Dodaj czosnek, passatę, sól, pieprz, szczyptę słodkiej papryki. Gotuj 3 min.",
+        "Zrób łyżką 3 wgłębienia w sosie i wbij w nie jajka.",
+        "Przykryj i trzymaj 5 min na małym ogniu — białka mają się ściąć, żółtka zostać płynne. Maczasz chlebem prosto z patelni, zero talerzy."
+      ]
+    },
+    {
+      "id": "q_tortilla",
+      "nazwa": "Tortilla z jajecznicą, serem i sałatą",
+      "sloty": [
+        "sniadanie",
+        "drugi",
+        "kolacja"
+      ],
+      "box": false,
+      "czas_min": 9,
+      "produkty": [
+        [
+          "tortilla",
+          1
+        ],
+        [
+          "jaja",
+          3
+        ],
+        [
+          "ser",
+          25
+        ],
+        [
+          "salata",
+          40
+        ],
+        [
+          "pomidor",
+          1
+        ],
+        [
+          "maslo",
+          6
+        ],
+        [
+          "przyprawy",
+          1
+        ]
+      ],
+      "kroki": [
+        "Zrób gęstą jajecznicę z 4 jaj na maśle — trochę bardziej ściętą niż zwykle, żeby nie ciekła z tortilli.",
+        "Tortille podgrzej 20 sekund na suchej patelni, żeby się nie łamały przy zwijaniu.",
+        "Na każdą wyłóż jajecznicę, posyp serem, dorzuć sałatę i plastry pomidora.",
+        "Zawiń boki do środka i zroluj. Na suchej patelni podsmaż 1 min z każdej strony — wtedy trzyma się kupy."
+      ]
+    },
+    {
+      "id": "q_jogurt_orzechy",
+      "nazwa": "Jogurt grecki z orzechami i miodem",
+      "sloty": [
+        "drugi"
+      ],
+      "box": true,
+      "czas_min": 3,
+      "produkty": [
+        [
+          "jogurt_grecki",
+          300
+        ],
+        [
+          "orzechy",
+          15
+        ],
+        [
+          "miod",
+          1
+        ],
+        [
+          "jablko",
+          1
+        ]
+      ],
+      "kroki": [
+        "Jogurt do pojemnika, wsyp orzechy, polej łyżką miodu.",
+        "Jabłko w kostkę na wierzch. Gotowe."
+      ]
+    },
+    {
+      "id": "q_grzanki",
+      "nazwa": "Grzanki z serem, jajkiem i pomidorem",
+      "sloty": [
+        "sniadanie",
+        "kolacja"
+      ],
+      "box": false,
+      "czas_min": 10,
+      "produkty": [
+        [
+          "chleb",
+          2
+        ],
+        [
+          "ser_zolty",
+          2
+        ],
+        [
+          "jaja",
+          2
+        ],
+        [
+          "pomidor",
+          1
+        ],
+        [
+          "ketchup",
+          1
+        ],
+        [
+          "przyprawy",
+          1
+        ]
+      ],
+      "kroki": [
+        "Nastaw piekarnik na grill/250°C albo użyj opiekacza.",
+        "Na kromki połóż plaster sera i plastry pomidora, posól.",
+        "Piecz 6 min aż ser się rozpuści i zacznie brązowieć.",
+        "Równolegle usmaż 2 jajka sadzone i połóż na grzankach. Kropka ketchupu."
+      ]
+    },
+    {
+      "id": "q_salatka_feta",
+      "nazwa": "Sałatka z fetą, jajkiem i pomidorem + kromka",
+      "sloty": [
+        "drugi",
+        "kolacja"
+      ],
+      "box": true,
+      "czas_min": 7,
+      "produkty": [
+        [
+          "feta",
+          70
+        ],
+        [
+          "jaja",
+          2
+        ],
+        [
+          "pomidor",
+          2
+        ],
+        [
+          "ogorek",
+          0.5
+        ],
+        [
+          "salata",
+          60
+        ],
+        [
+          "oliwa",
+          8
+        ],
+        [
+          "chleb",
+          1
+        ],
+        [
+          "przyprawy",
+          1
+        ]
+      ],
+      "kroki": [
+        "Ugotuj 2 jajka na twardo (9 min od wrzenia), zalej zimną wodą, obierz.",
+        "Pomidory i ogórka pokrój w grubą kostkę, wrzuć do miski na sałatę, dołóż jajka w ćwiartkach.",
+        "Fetę pokrusz palcami na wierzch.",
+        "Polej oliwą, posól, popieprz, wsyp oregano. Nie mieszaj mocno, żeby feta się nie rozpadła.",
+        "Do boxa: oliwę wlewasz dopiero na miejscu, inaczej sałata zwiotczeje."
+      ]
+    },
+    {
+      "id": "q_twarog_banan",
+      "nazwa": "Twaróg z bananem i miodem",
+      "sloty": [
+        "sniadanie",
+        "drugi"
+      ],
+      "box": true,
+      "czas_min": 4,
+      "produkty": [
+        [
+          "twarog",
+          180
+        ],
+        [
+          "banan",
+          1
+        ],
+        [
+          "miod",
+          1
+        ],
+        [
+          "orzechy",
+          10
+        ],
+        [
+          "mleko",
+          50
+        ]
+      ],
+      "kroki": [
+        "Twaróg rozgnieć widelcem z mlekiem — zrobi się kremowy.",
+        "Banan w plastry, miód, orzechy na wierzch.",
+        "Wersja na zmianę: wszystko do zakręcanego pojemnika."
+      ]
+    },
+    {
+      "id": "q_kanapki_ser",
+      "nazwa": "Kanapki z serem, musztardą i kiszonym ogórkiem",
+      "sloty": [
+        "sniadanie",
+        "drugi",
+        "kolacja"
+      ],
+      "box": true,
+      "czas_min": 4,
+      "produkty": [
+        [
+          "chleb",
+          2
+        ],
+        [
+          "ser_zolty",
+          3
+        ],
+        [
+          "musztarda",
+          1
+        ],
+        [
+          "ogorek_kiszony",
+          2
+        ],
+        [
+          "maslo",
+          6
+        ],
+        [
+          "pomidor",
+          1
+        ]
+      ],
+      "kroki": [
+        "Chleb cienko masłem, potem musztardą.",
+        "Po plastrze sera na kromkę, na to plastry ogórka kiszonego i pomidora.",
+        "Najszybszy posiłek w bazie — 4 minuty i masz 30 g białka."
+      ]
+    },
+    {
+      "id": "q_jajka_kukurydza",
+      "nazwa": "Box: sałatka jajeczna z kukurydzą",
+      "sloty": [
+        "drugi",
+        "kolacja"
+      ],
+      "box": true,
+      "czas_min": 12,
+      "produkty": [
+        [
+          "jaja",
+          3
+        ],
+        [
+          "kukurydza",
+          100
+        ],
+        [
+          "jogurt_grecki",
+          80
+        ],
+        [
+          "musztarda",
+          1
+        ],
+        [
+          "szczypiorek",
+          2
+        ],
+        [
+          "chleb",
+          1
+        ],
+        [
+          "przyprawy",
+          1
+        ]
+      ],
+      "kroki": [
+        "Jajka na twardo (9 min od wrzenia), zalej zimną wodą, obierz i pokrój w kostkę.",
+        "Wymieszaj z odsączoną kukurydzą, jogurtem greckim i łyżką musztardy.",
+        "Szczypiorek, sól, pieprz. Do pojemnika, chleb osobno.",
+        "Trzyma się w lodówce 2 dni — możesz zrobić podwójną porcję w dniu gotowania."
+      ]
+    }
+  ]
+}

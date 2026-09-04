@@ -1,96 +1,73 @@
 {
-  "_info": "Stały plan 4x/tydzień pod Marbo Kelton (sztanga, EZ, hantle, ławka regulowana, rack). Ćwiczenia są niezmienne, żeby robić progresję: gdy zrobisz górny zakres powtórzeń we WSZYSTKICH seriach -> +2,5 kg następnym razem. Przerwy: 2-3 min serie główne, 60-90 s izolacje.",
-  "weekday_plan": {
-    "0": "lift_A",
-    "1": "cardio",
-    "2": "lift_B",
-    "3": "lift_C",
-    "4": "cardio",
-    "5": "lift_D",
-    "6": "rest"
-  },
-  "workouts": {
-    "lift_A": {
-      "title": "DZIEŃ A – NOGI (akcent przysiad)",
+  "_info": "Trening w domu na Marbo Kelton (ławka, rack, sztanga, EZ, hantle ~130 kg). Cykl 24/48 daje 2 sesje na 3 dni: KRÓTKA wieczorem w dniu po zmianie (jesteś po 24h na nogach i 6h snu — objętość zbita, ciężary te same) i GŁÓWNA w dniu wolnym. Cel: redukcja — ciężary trzymamy wysoko, żeby nie stracić mięśni, deficyt robi dieta, nie kardio.",
+  "glowne": [
+    {
+      "id": "w_push", "nazwa": "GŁÓWNY A — Klatka, barki, triceps", "czas_min": 60,
+      "rozgrzewka": ["5 min: krążenia ramion, 20 pompek, rozciąganie klatki w drzwiach", "Sztanga sama (20 kg) x15 na ławce, potem 50% ciężaru roboczego x8"],
       "cwiczenia": [
-        "Przysiad ze sztangą — 4 serie × 6-8",
-        "Rumuński martwy ciąg (RDL) ze sztangą — 3 × 8-10",
-        "Przysiad bułgarski z hantlami (noga na ławce) — 3 × 10 / nogę",
-        "Wspięcia na palce ze sztangą na barkach — 4 × 15",
-        "Unoszenie nóg w leżeniu (brzuch) — 3 × 12-15",
-        "FINISZER: plank 3 × 45 s"
-      ]
+        {"nazwa": "Wyciskanie sztangi leżąc", "serie": 4, "powt": "6-8", "przerwa": "2-3 min", "wskazowka": "Łopatki ściągnięte i wbite w ławkę przez cały ruch. Sztanga schodzi do dolnej części klatki, nie do szyi."},
+        {"nazwa": "Wyciskanie hantli nad głowę (siedząc)", "serie": 3, "powt": "8-10", "przerwa": "2 min", "wskazowka": "Nie odchylaj się do tyłu. Żebra ściągnięte w dół, pośladki napięte."},
+        {"nazwa": "Wyciskanie hantli na skos (ławka pod kątem)", "serie": 3, "powt": "10-12", "przerwa": "90 s", "wskazowka": "Kąt ok. 30 stopni. Wyżej i robi się z tego ćwiczenie na barki."},
+        {"nazwa": "Rozpiętki z hantlami", "serie": 3, "powt": "12-15", "przerwa": "75 s", "wskazowka": "Lekko ugięte łokcie, ruch szeroki. Ciężar mały — to ma rozciągać, nie dźwigać."},
+        {"nazwa": "Wyciskanie francuskie EZ", "serie": 3, "powt": "10-12", "przerwa": "75 s", "wskazowka": "Łokcie stoją w miejscu, rusza się tylko przedramię."},
+        {"nazwa": "Pompki do odmowy", "serie": 2, "powt": "max", "przerwa": "60 s", "wskazowka": "Na koniec, żeby dobić klatkę. Licz i zapisuj — to Twój wskaźnik postępu."}
+      ],
+      "finisz": "3 min rozciągania klatki i barków. Zapisz ciężary w panelu."
     },
-    "lift_B": {
-      "title": "DZIEŃ B – GÓRA (push: klatka, barki, triceps)",
+    {
+      "id": "w_pull", "nazwa": "GŁÓWNY B — Plecy i biceps", "czas_min": 60,
+      "rozgrzewka": ["5 min: krążenia ramion, martwe zwisy albo rozciąganie pleców", "Wiosłowanie samą sztangą x15"],
       "cwiczenia": [
-        "Wyciskanie sztangi na ławce płaskiej — 4 × 6-8",
-        "Wyciskanie żołnierskie (OHP) sztangą stojąc — 3 × 8-10",
-        "Wyciskanie hantli na ławce skośnej — 3 × 10-12",
-        "Wznosy hantli bokiem (barki) — 3 × 12-15",
-        "Wyciskanie francuskie EZ leżąc / skullcrusher (triceps) — 3 × 10-12",
-        "FINISZER: pompki do upadku — 2 serie"
-      ]
+        {"nazwa": "Martwy ciąg", "serie": 4, "powt": "5-6", "przerwa": "3 min", "wskazowka": "Plecy proste jak deska. Jak zaczynają się garbić — koniec serii, nawet jeśli miałeś zrobić więcej."},
+        {"nazwa": "Wiosłowanie sztangą w opadzie", "serie": 4, "powt": "8-10", "przerwa": "2 min", "wskazowka": "Tułów prawie równolegle do podłogi. Ciągniesz do brzucha, nie do klatki."},
+        {"nazwa": "Podciąganie na drążku racka", "serie": 3, "powt": "max (cel 8)", "przerwa": "2 min", "wskazowka": "Jak nie wyrabiasz — negatywy: wskakujesz na górę i schodzisz 4 sekundy."},
+        {"nazwa": "Wiosłowanie jednorącz hantlą", "serie": 3, "powt": "10-12", "przerwa": "90 s", "wskazowka": "Kolano i ręka na ławce. Nie skręcaj tułowia, żeby dociągnąć — to oszukiwanie."},
+        {"nazwa": "Uginanie ramion EZ", "serie": 3, "powt": "10-12", "przerwa": "75 s", "wskazowka": "Łokcie przy tułowiu. Bez bujania biodrami."},
+        {"nazwa": "Uginanie młotkowe hantlami", "serie": 2, "powt": "12-15", "przerwa": "60 s", "wskazowka": "Chwyt neutralny, buduje grubość ramienia."}
+      ],
+      "finisz": "3 min rozciągania pleców i bicepsów. Zapisz ciężary."
     },
-    "lift_C": {
-      "title": "DZIEŃ C – NOGI (akcent martwy ciąg)",
+    {
+      "id": "w_nogi", "nazwa": "GŁÓWNY C — Nogi i brzuch", "czas_min": 55,
+      "rozgrzewka": ["5 min: 30 przysiadów bez ciężaru, krążenia bioder, wykroki w miejscu", "Przysiad sama sztanga x15, potem 50% x8"],
       "cwiczenia": [
-        "Martwy ciąg klasyczny — 4 × 5-6",
-        "Hip thrust ze sztangą (pośladki) — 3 × 10-12",
-        "Wykroki chodzone z hantlami — 3 × 10 / nogę",
-        "Wspięcia na palce z hantlami (łydki) — 4 × 15-20",
-        "Scyzoryk / unoszenie nóg (brzuch) — 3 × 15",
-        "FINISZER: spacer farmera z hantlami — 3 × 30 m"
-      ]
-    },
-    "lift_D": {
-      "title": "DZIEŃ D – GÓRA (pull: plecy, biceps)",
-      "cwiczenia": [
-        "Wiosłowanie sztangą w opadzie — 4 × 8-10",
-        "Podciąganie na drążku LUB wiosłowanie hantlą jednorącz — 3 × 10",
-        "Szrugsy (wznosy barków) ze sztangą lub hantlami — 3 × 12",
-        "Uginanie ramion ze sztangą EZ (biceps) — 3 × 10-12",
-        "Uginanie hantli młotkowe — 3 × 12",
-        "FINISZER: rozpiętki w opadzie z hantlami (tył barku) — 3 × 15"
-      ]
-    },
-    "cardio": {
-      "title": "CARDIO – spalanie tłuszczu z brzucha",
-      "cwiczenia": [
-        "Szybki marsz / marsz pod górkę — 35-40 min (tętno 120-140, masz móc rozmawiać)",
-        "LUB rower/orbitrek — 30 min spokojnie",
-        "Obwód na brzuch (3 rundy): plank 45 s + unoszenie nóg 15 + russian twist 20",
-        "Cel dnia: 10 000 kroków – rozłóż na cały dzień"
-      ]
-    },
-    "recovery": {
-      "title": "REGENERACJA AKTYWNA (bez ciężarów)",
-      "cwiczenia": [
-        "Spacer 30-45 min (8 000+ kroków)",
-        "Rozciąganie / mobilność 10-15 min (biodra, klatka, plecy)",
-        "Rolowanie obolałych partii 10 min",
-        "ZERO ciężarów – dziś ciało się odbudowuje"
-      ]
-    },
-    "rest": {
-      "title": "DZIEŃ WOLNY",
-      "cwiczenia": [
-        "Odpoczynek. Możesz wyjść na luźny spacer.",
-        "Zadbaj o sen 7-8 h i nawodnienie.",
-        "Przygotuj zakupy / posiłki na kolejne dni."
-      ]
-    },
-    "bodyweight_shift": {
-      "title": "OBWÓD NA ZMIANIE 24H (bez sprzętu, między obchodami)",
-      "cwiczenia": [
-        "4 rundy obwodu:",
-        "20 pompek",
-        "30 przysiadów",
-        "15 wykroków na nogę",
-        "40 s plank",
-        "20 wspięć na palce",
-        "+ jak najwięcej chodzenia podczas zmiany (kroki = spalanie)"
-      ]
+        {"nazwa": "Przysiad ze sztangą (w racku, z bolcami)", "serie": 4, "powt": "6-8", "przerwa": "3 min", "wskazowka": "Bolce ustawione na wysokości dołu ruchu — trenujesz sam, to jest obowiązkowe."},
+        {"nazwa": "Rumuński martwy ciąg", "serie": 3, "powt": "8-10", "przerwa": "2 min", "wskazowka": "Kolana prawie proste, biodra jadą do tyłu. Poczujesz ciągnięcie z tyłu uda — o to chodzi."},
+        {"nazwa": "Wykroki chodzone z hantlami", "serie": 3, "powt": "10 na nogę", "przerwa": "90 s", "wskazowka": "Długi krok. Krótki krok robi z tego ćwiczenie na kolana."},
+        {"nazwa": "Wspięcia na palce z hantlami", "serie": 3, "powt": "15-20", "przerwa": "60 s", "wskazowka": "Pełny zakres, sekunda przytrzymania na górze."},
+        {"nazwa": "Plank", "serie": 3, "powt": "45-60 s", "przerwa": "45 s", "wskazowka": "Pośladki napięte, biodra nie lecą w dół ani w górę."},
+        {"nazwa": "Unoszenie nóg w zwisie albo leżąc", "serie": 3, "powt": "12-15", "przerwa": "60 s", "wskazowka": "Ruch z dołu brzucha, nie z bioder. Wolno w dół."}
+      ],
+      "finisz": "5 min rozciągania nóg. Nogi po 24h stania na zmianie lubią to szczególnie."
     }
+  ],
+  "krotkie": [
+    {
+      "id": "w_fbw_a", "nazwa": "KRÓTKI A — Full body (dzień po zmianie)", "czas_min": 35,
+      "rozgrzewka": ["5 min spokojnego ruchu: krążenia, 20 przysiadów, 15 pompek", "Jesteś po 24h służby — rozgrzewki NIE skracaj, nawet kosztem serii roboczej."],
+      "cwiczenia": [
+        {"nazwa": "Przysiad ze sztangą", "serie": 3, "powt": "8", "przerwa": "2 min", "wskazowka": "Ciężar 80% tego, co dajesz w dniu wolnym. Dziś chodzi o utrzymanie, nie o rekord."},
+        {"nazwa": "Wyciskanie sztangi leżąc", "serie": 3, "powt": "8", "przerwa": "2 min", "wskazowka": "To samo — 80% i zostaw 2 powtórzenia w zapasie."},
+        {"nazwa": "Wiosłowanie sztangą", "serie": 3, "powt": "10", "przerwa": "90 s", "wskazowka": "Kontrolowany opust, bez szarpania."},
+        {"nazwa": "Plank", "serie": 2, "powt": "45 s", "przerwa": "45 s", "wskazowka": "Domykasz i idziesz jeść."}
+      ],
+      "finisz": "Jeśli w trakcie czujesz, że kręci Ci się w głowie albo ciężar leci — kończysz. Po nieprzespanej dobie to normalne i nie jest to porażka."
+    },
+    {
+      "id": "w_fbw_b", "nazwa": "KRÓTKI B — Full body (dzień po zmianie)", "czas_min": 35,
+      "rozgrzewka": ["5 min: krążenia bioder i ramion, 20 przysiadów, martwy zwis 2x20 s"],
+      "cwiczenia": [
+        {"nazwa": "Rumuński martwy ciąg", "serie": 3, "powt": "10", "przerwa": "2 min", "wskazowka": "Umiarkowany ciężar. Po dobie stania plecy są zmęczone — technika ważniejsza niż kilogramy."},
+        {"nazwa": "Wyciskanie hantli nad głowę", "serie": 3, "powt": "10", "przerwa": "90 s", "wskazowka": "Siedząc, z oparciem — stabilniej gdy jesteś zmęczony."},
+        {"nazwa": "Podciąganie albo wiosłowanie hantlą", "serie": 3, "powt": "8-12", "przerwa": "90 s", "wskazowka": "Wybierz to, na co masz dziś siłę."},
+        {"nazwa": "Uginanie EZ + pompki (superseria)", "serie": 2, "powt": "12 + max", "przerwa": "75 s", "wskazowka": "Jedno po drugim bez przerwy, potem odpoczynek."}
+      ],
+      "finisz": "Rozciągnij nogi i biodra — po 24h na służbie to najbardziej zapięte miejsca."
+    }
+  ],
+  "zmiana": {
+    "nazwa": "Dzień zmiany — bez treningu",
+    "zasada": "Na 24h służbie nie trenujesz. Zamiast tego: co 2-3 godziny wstań i przejdź się 5 minut, zrób 10 przysiadów i rozciągnij kark. To nie jest trening, to profilaktyka pleców przy staniu i siedzeniu.",
+    "mikro": ["10 przysiadów bez ciężaru", "10 krążeń ramion w tył", "30 s rozciągania zginaczy bioder na każdą nogę", "Odchylenie głowy w tył i na boki po 15 s"]
   }
 }

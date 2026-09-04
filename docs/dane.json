@@ -1,0 +1,1646 @@
+{
+  "wygenerowano": "2026-09-04T11:25:03",
+  "dzis": "2026-09-04",
+  "typ_dzis": 0,
+  "typy": {
+    "0": {
+      "nazwa": "ZMIANA 24h",
+      "emoji": "🛡️",
+      "opis": "Służba 07:00–07:00. Jesz wyłącznie z boxów spakowanych wczoraj. Zero gotowania, zero treningu."
+    },
+    "1": {
+      "nazwa": "PO ZMIANIE",
+      "emoji": "😴",
+      "opis": "Wracasz 7:30, odsypiasz do 14:15. Po południu: zakupy + gotowanie na 3 dni + krótki trening."
+    },
+    "2": {
+      "nazwa": "WOLNE",
+      "emoji": "💪",
+      "opis": "Pełny dzień w domu. Główny trening, jedzenie z lodówki, wieczorem pakujesz boxy na jutrzejszą zmianę."
+    }
+  },
+  "cel": {
+    "kcal": 2200,
+    "bialko": 165,
+    "tluszcz": 80,
+    "wegle": 205
+  },
+  "user": {
+    "imie": "Krystian",
+    "waga_kg": 82,
+    "wzrost_cm": 182,
+    "wiek": 20,
+    "cel": "redukcja — zejść z wagi, utrzymać mięśnie"
+  },
+  "plan": {
+    "cykl": 24,
+    "od": "2026-09-02",
+    "do": "2026-09-04",
+    "baza": "b_gulasz",
+    "dni": [
+      {
+        "sniadanie": "q_twarog",
+        "drugi": "q_skyr",
+        "kolacja": "q_omlet",
+        "obiad": "b_gulasz",
+        "data": "2026-09-02",
+        "typ": 1,
+        "makra": {
+          "kcal": 2179,
+          "bialko": 167,
+          "tluszcz": 83,
+          "wegle": 185
+        },
+        "nazwy": {
+          "sniadanie": "Twarożek ze szczypiorkiem + 2 kromki",
+          "drugi": "Skyr z bananem i masłem orzechowym",
+          "obiad": "Gulasz wołowy z papryką + ziemniaki",
+          "kolacja": "Omlet z serem i pomidorem"
+        }
+      },
+      {
+        "sniadanie": "q_kanapki_jajko",
+        "drugi": "q_twarog_banan",
+        "kolacja": "q_jajka_kukurydza",
+        "obiad": "b_gulasz",
+        "data": "2026-09-03",
+        "typ": 2,
+        "makra": {
+          "kcal": 2225,
+          "bialko": 153,
+          "tluszcz": 87,
+          "wegle": 210
+        },
+        "nazwy": {
+          "sniadanie": "Kanapki z jajkiem na twardo i serem (2 kromki)",
+          "drugi": "Twaróg z bananem i miodem",
+          "obiad": "Gulasz wołowy z papryką + ziemniaki",
+          "kolacja": "Box: sałatka jajeczna z kukurydzą"
+        }
+      },
+      {
+        "sniadanie": "q_kanapki_ser",
+        "drugi": "q_jogurt_orzechy",
+        "kolacja": "q_serek_box",
+        "obiad": "b_gulasz",
+        "data": "2026-09-04",
+        "typ": 0,
+        "makra": {
+          "kcal": 2192,
+          "bialko": 152,
+          "tluszcz": 95,
+          "wegle": 199
+        },
+        "nazwy": {
+          "sniadanie": "Kanapki z serem, musztardą i kiszonym ogórkiem",
+          "drugi": "Jogurt grecki z orzechami i miodem",
+          "obiad": "Gulasz wołowy z papryką + ziemniaki",
+          "kolacja": "Box: serek wiejski + jajka na twardo + ogórki"
+        }
+      }
+    ],
+    "wygenerowano": "2026-09-04T11:25:02"
+  },
+  "baza": {
+    "id": "b_gulasz",
+    "nazwa": "Gulasz wołowy z papryką + ziemniaki",
+    "porcje": 3,
+    "czas_min": 95,
+    "czas_pracy": 20,
+    "naczynia": "1 garnek + 1 garnek na ziemniaki",
+    "przechowywanie": "lodówka, 3 dni (drugiego dnia jest lepszy)",
+    "odgrzewanie": "mikrofala 3 min",
+    "box": true,
+    "produkty": [
+      [
+        "wolowina_gulasz",
+        600
+      ],
+      [
+        "ziemniaki",
+        900
+      ],
+      [
+        "papryka",
+        3
+      ],
+      [
+        "cebula",
+        2
+      ],
+      [
+        "passata",
+        300
+      ],
+      [
+        "bulion",
+        2
+      ],
+      [
+        "maka",
+        20
+      ],
+      [
+        "olej",
+        20
+      ],
+      [
+        "przyprawy",
+        3
+      ]
+    ],
+    "kroki": [
+      "Wołowinę pokrój w kostkę ok. 2 cm, cebulę w piórka, paprykę w paski.",
+      "Rozgrzej garnek mocno, wlej olej i wrzuć mięso jednym rzutem. Smaż 6 min, przez pierwsze 3 min nie mieszaj — ma się przyrumienić, nie zagotować.",
+      "Dodaj cebulę, smaż 4 min. Wsyp łyżkę słodkiej papryki, sól i pieprz, wymieszaj.",
+      "Wlej passatę, 400 ml wody i 2 kostki bulionowe. Zagotuj, przykryj i duś na małym ogniu 60 min. To czas dla Ciebie — zrób w tym czasie coś innego.",
+      "Po 60 min dorzuć paprykę i duś jeszcze 15 min.",
+      "Mąkę rozmieszaj w pół szklanki ZIMNEJ wody, wlej do gulaszu, gotuj 3 min aż zgęstnieje.",
+      "Ziemniaki obierz i ugotuj w osolonej wodzie 20 min. Rozłóż gulasz i ziemniaki do 3 pojemników, ostudź, do lodówki."
+    ]
+  },
+  "agenda": [
+    {
+      "czas": "05:30",
+      "tytul": "Pobudka",
+      "opis": "Szklanka wody od razu po wstaniu. Boxy masz spakowane w lodówce od wczoraj — wyjmij je teraz, żeby nie zapomnieć.",
+      "ping": true,
+      "ikona": "⏰"
+    },
+    {
+      "czas": "05:45",
+      "tytul": "Śniadanie w domu",
+      "opis": "Zjedz na spokojnie w domu, nie w biegu.",
+      "slot": "sniadanie",
+      "ping": false,
+      "ikona": "🍳",
+      "posilek": "Kanapki z serem, musztardą i kiszonym ogórkiem",
+      "posilek_id": "q_kanapki_ser",
+      "makra": {
+        "kcal": 491,
+        "bialko": 24,
+        "tluszcz": 25,
+        "wegle": 42
+      }
+    },
+    {
+      "czas": "06:20",
+      "tytul": "Wyjście z domu",
+      "opis": "Sprawdź: boxy, butelka wody 1,5 l, ładowarka.",
+      "ping": true,
+      "ikona": "🚪"
+    },
+    {
+      "czas": "07:00",
+      "tytul": "Początek służby",
+      "opis": "Zmiana 24h. Plan na dziś: jeść regularnie, wypić 3 l wody, co 2-3 h wstać i się rozruszać.",
+      "ping": false,
+      "ikona": "🛡️"
+    },
+    {
+      "czas": "09:30",
+      "tytul": "Drugi posiłek",
+      "opis": "Z boxa. Nie odkładaj — po 4 godzinach głodu zawsze dojadasz byle czym z automatu.",
+      "slot": "drugi",
+      "ping": true,
+      "ikona": "🥪",
+      "posilek": "Jogurt grecki z orzechami i miodem",
+      "posilek_id": "q_jogurt_orzechy",
+      "makra": {
+        "kcal": 415,
+        "bialko": 30,
+        "tluszcz": 15,
+        "wegle": 52
+      }
+    },
+    {
+      "czas": "12:00",
+      "tytul": "Rozruszaj się",
+      "opis": "5 minut: 10 przysiadów, krążenia ramion, rozciągnięcie karku. Plecy po staniu Ci podziękują.",
+      "ping": true,
+      "ikona": "🤸"
+    },
+    {
+      "czas": "13:30",
+      "tytul": "Obiad",
+      "opis": "Główny box z lodówki — odgrzej w mikrofali.",
+      "slot": "obiad",
+      "ping": true,
+      "ikona": "🍽️",
+      "posilek": "Gulasz wołowy z papryką + ziemniaki",
+      "posilek_id": "b_gulasz",
+      "makra": {
+        "kcal": 786,
+        "bialko": 51,
+        "tluszcz": 31,
+        "wegle": 78
+      }
+    },
+    {
+      "czas": "17:00",
+      "tytul": "Woda — kontrola",
+      "opis": "Powinieneś mieć wypite ok. 2 l. Jak nie masz, nadrabiaj teraz, nie w nocy.",
+      "ping": true,
+      "ikona": "💧"
+    },
+    {
+      "czas": "20:30",
+      "tytul": "Kolacja",
+      "opis": "Ostatni posiłek na zmianie. Lekki, żeby nie leżeć z pełnym brzuchem.",
+      "slot": "kolacja",
+      "ping": true,
+      "ikona": "🌙",
+      "posilek": "Box: serek wiejski + jajka na twardo + ogórki",
+      "posilek_id": "q_serek_box",
+      "makra": {
+        "kcal": 500,
+        "bialko": 47,
+        "tluszcz": 24,
+        "wegle": 27
+      }
+    },
+    {
+      "czas": "23:00",
+      "tytul": "Noc — rozciąganie",
+      "opis": "5 minut rozciągania zginaczy bioder i karku. Bez tego wracasz do domu ze sztywnymi plecami.",
+      "ping": true,
+      "ikona": "🤸"
+    }
+  ],
+  "zakupy": {
+    "kup": [
+      {
+        "klucz": "wolowina_gulasz",
+        "nazwa": "Wołowina na gulasz (łopatka)",
+        "kat": "mieso",
+        "trw": "swieze",
+        "opakowan": 2,
+        "opak": 500,
+        "jedn": "g",
+        "brakuje": 600.0,
+        "dokupisz": 1000,
+        "cena": 50.0
+      },
+      {
+        "klucz": "jaja",
+        "nazwa": "Jaja",
+        "kat": "nabial",
+        "trw": "chlodnia",
+        "opakowan": 2,
+        "opak": 10,
+        "jedn": "szt",
+        "brakuje": 11,
+        "dokupisz": 20,
+        "cena": 24.0
+      },
+      {
+        "klucz": "jogurt_grecki",
+        "nazwa": "Jogurt grecki 2%",
+        "kat": "nabial",
+        "trw": "chlodnia",
+        "opakowan": 1,
+        "opak": 400,
+        "jedn": "g",
+        "brakuje": 380,
+        "dokupisz": 400,
+        "cena": 6.0
+      },
+      {
+        "klucz": "maslo",
+        "nazwa": "Masło",
+        "kat": "nabial",
+        "trw": "chlodnia",
+        "opakowan": 1,
+        "opak": 200,
+        "jedn": "g",
+        "brakuje": 12,
+        "dokupisz": 200,
+        "cena": 8.5
+      },
+      {
+        "klucz": "mleko",
+        "nazwa": "Mleko 2%",
+        "kat": "nabial",
+        "trw": "chlodnia",
+        "opakowan": 1,
+        "opak": 1000,
+        "jedn": "ml",
+        "brakuje": 50,
+        "dokupisz": 1000,
+        "cena": 4.0
+      },
+      {
+        "klucz": "ser_zolty",
+        "nazwa": "Ser żółty w plastrach",
+        "kat": "nabial",
+        "trw": "chlodnia",
+        "opakowan": 1,
+        "opak": 12,
+        "jedn": "plaster",
+        "brakuje": 7,
+        "dokupisz": 12,
+        "cena": 10.0
+      },
+      {
+        "klucz": "serek_wiejski",
+        "nazwa": "Serek wiejski",
+        "kat": "nabial",
+        "trw": "chlodnia",
+        "opakowan": 1,
+        "opak": 1,
+        "jedn": "opak",
+        "brakuje": 1,
+        "dokupisz": 1,
+        "cena": 3.5
+      },
+      {
+        "klucz": "skyr",
+        "nazwa": "Skyr naturalny",
+        "kat": "nabial",
+        "trw": "chlodnia",
+        "opakowan": 1,
+        "opak": 400,
+        "jedn": "g",
+        "brakuje": 300,
+        "dokupisz": 400,
+        "cena": 8.0
+      },
+      {
+        "klucz": "twarog",
+        "nazwa": "Twaróg półtłusty",
+        "kat": "nabial",
+        "trw": "chlodnia",
+        "opakowan": 2,
+        "opak": 250,
+        "jedn": "g",
+        "brakuje": 380,
+        "dokupisz": 500,
+        "cena": 11.0
+      },
+      {
+        "klucz": "smietana",
+        "nazwa": "Śmietana 18%",
+        "kat": "nabial",
+        "trw": "chlodnia",
+        "opakowan": 1,
+        "opak": 200,
+        "jedn": "ml",
+        "brakuje": 20,
+        "dokupisz": 200,
+        "cena": 3.5
+      },
+      {
+        "klucz": "banan",
+        "nazwa": "Banan",
+        "kat": "warzywa",
+        "trw": "chlodnia",
+        "opakowan": 2,
+        "opak": 1,
+        "jedn": "szt",
+        "brakuje": 2,
+        "dokupisz": 2,
+        "cena": 2.4
+      },
+      {
+        "klucz": "cebula",
+        "nazwa": "Cebula",
+        "kat": "warzywa",
+        "trw": "trwale",
+        "opakowan": 2,
+        "opak": 1,
+        "jedn": "szt",
+        "brakuje": 2.0,
+        "dokupisz": 2,
+        "cena": 1.2
+      },
+      {
+        "klucz": "jablko",
+        "nazwa": "Jabłko",
+        "kat": "warzywa",
+        "trw": "trwale",
+        "opakowan": 1,
+        "opak": 1,
+        "jedn": "szt",
+        "brakuje": 1,
+        "dokupisz": 1,
+        "cena": 1.2
+      },
+      {
+        "klucz": "ogorek",
+        "nazwa": "Ogórek długi",
+        "kat": "warzywa",
+        "trw": "swieze",
+        "opakowan": 1,
+        "opak": 1,
+        "jedn": "szt",
+        "brakuje": 0.3,
+        "dokupisz": 1,
+        "cena": 2.5
+      },
+      {
+        "klucz": "ogorek_kiszony",
+        "nazwa": "Ogórek kiszony",
+        "kat": "warzywa",
+        "trw": "trwale",
+        "opakowan": 1,
+        "opak": 8,
+        "jedn": "szt",
+        "brakuje": 5,
+        "dokupisz": 8,
+        "cena": 8.0
+      },
+      {
+        "klucz": "papryka",
+        "nazwa": "Papryka",
+        "kat": "warzywa",
+        "trw": "chlodnia",
+        "opakowan": 3,
+        "opak": 1,
+        "jedn": "szt",
+        "brakuje": 3.0,
+        "dokupisz": 3,
+        "cena": 12.0
+      },
+      {
+        "klucz": "pomidor",
+        "nazwa": "Pomidor",
+        "kat": "warzywa",
+        "trw": "swieze",
+        "opakowan": 2,
+        "opak": 1,
+        "jedn": "szt",
+        "brakuje": 2,
+        "dokupisz": 2,
+        "cena": 3.0
+      },
+      {
+        "klucz": "szczypiorek",
+        "nazwa": "Szczypiorek",
+        "kat": "warzywa",
+        "trw": "swieze",
+        "opakowan": 1,
+        "opak": 12,
+        "jedn": "lyzka",
+        "brakuje": 4,
+        "dokupisz": 12,
+        "cena": 3.0
+      },
+      {
+        "klucz": "ziemniaki",
+        "nazwa": "Ziemniaki",
+        "kat": "warzywa",
+        "trw": "trwale",
+        "opakowan": 1,
+        "opak": 2000,
+        "jedn": "g",
+        "brakuje": 900.0,
+        "dokupisz": 2000,
+        "cena": 7.0
+      },
+      {
+        "klucz": "chleb",
+        "nazwa": "Chleb żytni / pełnoziarnisty",
+        "kat": "pieczywo",
+        "trw": "chlodnia",
+        "opakowan": 1,
+        "opak": 16,
+        "jedn": "kromka",
+        "brakuje": 9,
+        "dokupisz": 16,
+        "cena": 6.0
+      },
+      {
+        "klucz": "bulion",
+        "nazwa": "Kostka bulionowa",
+        "kat": "spizarnia",
+        "trw": "trwale",
+        "opakowan": 1,
+        "opak": 6,
+        "jedn": "kostka",
+        "brakuje": 2.0,
+        "dokupisz": 6,
+        "cena": 4.0
+      },
+      {
+        "klucz": "kukurydza",
+        "nazwa": "Kukurydza konserwowa",
+        "kat": "spizarnia",
+        "trw": "trwale",
+        "opakowan": 1,
+        "opak": 200,
+        "jedn": "g",
+        "brakuje": 100,
+        "dokupisz": 200,
+        "cena": 4.0
+      },
+      {
+        "klucz": "maslo_orzechowe",
+        "nazwa": "Masło orzechowe 100%",
+        "kat": "spizarnia",
+        "trw": "trwale",
+        "opakowan": 1,
+        "opak": 22,
+        "jedn": "lyzka",
+        "brakuje": 1,
+        "dokupisz": 22,
+        "cena": 15.0
+      },
+      {
+        "klucz": "miod",
+        "nazwa": "Miód",
+        "kat": "spizarnia",
+        "trw": "trwale",
+        "opakowan": 1,
+        "opak": 20,
+        "jedn": "lyzka",
+        "brakuje": 2,
+        "dokupisz": 20,
+        "cena": 18.0
+      },
+      {
+        "klucz": "musztarda",
+        "nazwa": "Musztarda",
+        "kat": "spizarnia",
+        "trw": "trwale",
+        "opakowan": 1,
+        "opak": 12,
+        "jedn": "lyzka",
+        "brakuje": 3,
+        "dokupisz": 12,
+        "cena": 4.0
+      },
+      {
+        "klucz": "maka",
+        "nazwa": "Mąka pszenna",
+        "kat": "spizarnia",
+        "trw": "trwale",
+        "opakowan": 1,
+        "opak": 1000,
+        "jedn": "g",
+        "brakuje": 20.0,
+        "dokupisz": 1000,
+        "cena": 3.5
+      },
+      {
+        "klucz": "olej",
+        "nazwa": "Olej rzepakowy",
+        "kat": "spizarnia",
+        "trw": "trwale",
+        "opakowan": 1,
+        "opak": 1000,
+        "jedn": "ml",
+        "brakuje": 20.0,
+        "dokupisz": 1000,
+        "cena": 9.0
+      },
+      {
+        "klucz": "orzechy",
+        "nazwa": "Orzechy / migdały",
+        "kat": "spizarnia",
+        "trw": "trwale",
+        "opakowan": 1,
+        "opak": 200,
+        "jedn": "g",
+        "brakuje": 25,
+        "dokupisz": 200,
+        "cena": 12.0
+      },
+      {
+        "klucz": "passata",
+        "nazwa": "Passata pomidorowa",
+        "kat": "spizarnia",
+        "trw": "trwale",
+        "opakowan": 1,
+        "opak": 500,
+        "jedn": "g",
+        "brakuje": 300.0,
+        "dokupisz": 500,
+        "cena": 5.0
+      },
+      {
+        "klucz": "przyprawy",
+        "nazwa": "Przyprawy (sól, pieprz, papryka, oregano, majeranek)",
+        "kat": "spizarnia",
+        "trw": "trwale",
+        "opakowan": 1,
+        "opak": 100,
+        "jedn": "porcja",
+        "brakuje": 8.0,
+        "dokupisz": 100,
+        "cena": 15.0
+      }
+    ],
+    "mam": [],
+    "koszt": 264.3,
+    "zrobione": false
+  },
+  "lodowka": {},
+  "trening": {
+    "rodzaj": "zmiana",
+    "trening": {
+      "nazwa": "Dzień zmiany — bez treningu",
+      "zasada": "Na 24h służbie nie trenujesz. Zamiast tego: co 2-3 godziny wstań i przejdź się 5 minut, zrób 10 przysiadów i rozciągnij kark. To nie jest trening, to profilaktyka pleców przy staniu i siedzeniu.",
+      "mikro": [
+        "10 przysiadów bez ciężaru",
+        "10 krążeń ramion w tył",
+        "30 s rozciągania zginaczy bioder na każdą nogę",
+        "Odchylenie głowy w tył i na boki po 15 s"
+      ]
+    }
+  },
+  "nawyki": [
+    {
+      "id": "woda",
+      "nazwa": "3 litry wody",
+      "opis": "Butelka 1,5 l wypita dwa razy. Na zmianie najłatwiej zapomnieć — dlatego jest ping o 17:00."
+    },
+    {
+      "id": "bialko",
+      "nazwa": "Trafić w białko",
+      "opis": "Na redukcji białko jest ważniejsze niż same kalorie. Trzyma mięśnie i najedzenie."
+    },
+    {
+      "id": "kroki",
+      "nazwa": "8 000 kroków",
+      "opis": "Na zmianie zbierasz je sam z siebie. W dni wolne trzeba wyjść na spacer."
+    },
+    {
+      "id": "sen",
+      "nazwa": "Sen zgodnie z planem",
+      "opis": "6 h po zmianie + długa noc. Odsypianie 12 h jednym ciągiem rozwala rytm na kolejne dni."
+    },
+    {
+      "id": "waga",
+      "nazwa": "Waga w dzień wolny",
+      "opis": "Raz na cykl, rano, na czczo. Cel redukcji: -0,4 do -0,7 kg na tydzień."
+    },
+    {
+      "id": "telefon",
+      "nazwa": "Telefon w dół 30 min przed snem",
+      "opis": "Najtańszy sposób na lepszy sen przy pracy zmianowej."
+    }
+  ],
+  "posilki": {
+    "q_jajecznica": {
+      "id": "q_jajecznica",
+      "nazwa": "Jajecznica z 3 jaj + 2 kromki + pomidor",
+      "sloty": [
+        "sniadanie",
+        "kolacja"
+      ],
+      "box": false,
+      "czas_min": 8,
+      "produkty": [
+        [
+          "jaja",
+          3
+        ],
+        [
+          "chleb",
+          2
+        ],
+        [
+          "pomidor",
+          1
+        ],
+        [
+          "maslo",
+          6
+        ],
+        [
+          "przyprawy",
+          1
+        ]
+      ],
+      "kroki": [
+        "Rozgrzej patelnię na średnim ogniu i rozpuść na niej kawałek masła.",
+        "Wbij jaja do kubka, posól, popieprz, rozbełtaj widelcem.",
+        "Wlej na patelnię, odczekaj 20 sekund, potem zgarniaj łopatką co kilka sekund.",
+        "Zdejmij z ognia, gdy jaja są ścięte, ale jeszcze błyszczące — dojdą na talerzu. Pomidor w plastry obok."
+      ]
+    },
+    "q_omlet": {
+      "id": "q_omlet",
+      "nazwa": "Omlet z serem i pomidorem",
+      "sloty": [
+        "sniadanie",
+        "kolacja"
+      ],
+      "box": false,
+      "czas_min": 10,
+      "produkty": [
+        [
+          "jaja",
+          3
+        ],
+        [
+          "ser_zolty",
+          2
+        ],
+        [
+          "pomidor",
+          1
+        ],
+        [
+          "maslo",
+          6
+        ],
+        [
+          "chleb",
+          1
+        ],
+        [
+          "przyprawy",
+          1
+        ]
+      ],
+      "kroki": [
+        "Rozbełtaj 3 jaja z solą i pieprzem.",
+        "Na patelni rozpuść masło, wlej jaja i NIE mieszaj. Smaż 3 min na małym ogniu pod przykryciem.",
+        "Gdy wierzch jest już prawie ścięty, połóż na połowie plastry sera i pomidora.",
+        "Złóż omlet na pół łopatką, smaż jeszcze 1 min. Zjedz z kromką chleba."
+      ]
+    },
+    "q_twarog": {
+      "id": "q_twarog",
+      "nazwa": "Twarożek ze szczypiorkiem + 2 kromki",
+      "sloty": [
+        "sniadanie",
+        "kolacja"
+      ],
+      "box": true,
+      "czas_min": 5,
+      "produkty": [
+        [
+          "twarog",
+          200
+        ],
+        [
+          "smietana",
+          20
+        ],
+        [
+          "szczypiorek",
+          2
+        ],
+        [
+          "chleb",
+          2
+        ],
+        [
+          "ogorek",
+          0.3
+        ],
+        [
+          "przyprawy",
+          1
+        ]
+      ],
+      "kroki": [
+        "Twaróg rozgnieć widelcem w miseczce ze śmietaną — będzie kremowy, a nie suchy.",
+        "Wsyp posiekany szczypiorek, sól, pieprz, wymieszaj.",
+        "Ogórek w plastry. Jeść z chlebem. Do boxa: twarożek do zakręcanego pojemnika, chleb osobno."
+      ]
+    },
+    "q_skyr": {
+      "id": "q_skyr",
+      "nazwa": "Skyr z bananem i masłem orzechowym",
+      "sloty": [
+        "sniadanie",
+        "drugi"
+      ],
+      "box": true,
+      "czas_min": 3,
+      "produkty": [
+        [
+          "skyr",
+          300
+        ],
+        [
+          "banan",
+          1
+        ],
+        [
+          "maslo_orzechowe",
+          1
+        ]
+      ],
+      "kroki": [
+        "Skyr do miski lub pojemnika.",
+        "Banan w plastry, łyżka masła orzechowego na wierzch. Wymieszaj albo zostaw warstwami.",
+        "Na zmianę: wszystko do zakręcanego pojemnika, banan dorzucasz na miejscu żeby nie sczerniał."
+      ]
+    },
+    "q_kanapki_jajko": {
+      "id": "q_kanapki_jajko",
+      "nazwa": "Kanapki z jajkiem na twardo i serem (2 kromki)",
+      "sloty": [
+        "sniadanie",
+        "drugi",
+        "kolacja"
+      ],
+      "box": true,
+      "czas_min": 12,
+      "produkty": [
+        [
+          "jaja",
+          2
+        ],
+        [
+          "chleb",
+          2
+        ],
+        [
+          "ser_zolty",
+          2
+        ],
+        [
+          "musztarda",
+          1
+        ],
+        [
+          "ogorek_kiszony",
+          1
+        ],
+        [
+          "przyprawy",
+          1
+        ]
+      ],
+      "kroki": [
+        "Jajka wrzuć do wrzącej wody i gotuj 9 min, potem zalej zimną wodą — same się obiorą.",
+        "Chleb posmaruj cienko musztardą, połóż ser, na to plastry jajka.",
+        "Posól, popieprz, ogórek kiszony w plastrach na wierzch. Do boxa zawijasz w folię."
+      ]
+    },
+    "q_serek_box": {
+      "id": "q_serek_box",
+      "nazwa": "Box: serek wiejski + jajka na twardo + ogórki",
+      "sloty": [
+        "drugi",
+        "kolacja"
+      ],
+      "box": true,
+      "czas_min": 12,
+      "produkty": [
+        [
+          "serek_wiejski",
+          1
+        ],
+        [
+          "jaja",
+          3
+        ],
+        [
+          "ogorek_kiszony",
+          2
+        ],
+        [
+          "chleb",
+          1
+        ],
+        [
+          "przyprawy",
+          1
+        ]
+      ],
+      "kroki": [
+        "Ugotuj jajka na twardo (9 min od wrzenia), zalej zimną wodą, obierz.",
+        "Do pojemnika: serek wiejski, obok pokrojone jajka, obok ogórki kiszone.",
+        "Posól i popieprz jajka od razu, żeby nie nosić soli. Chleb do osobnej torebki.",
+        "To najprostszy box na zmianę — nic nie trzeba odgrzewać."
+      ]
+    },
+    "q_shakshuka": {
+      "id": "q_shakshuka",
+      "nazwa": "Jajka w sosie pomidorowym (shakshuka)",
+      "sloty": [
+        "sniadanie",
+        "kolacja"
+      ],
+      "box": false,
+      "czas_min": 12,
+      "produkty": [
+        [
+          "jaja",
+          3
+        ],
+        [
+          "passata",
+          200
+        ],
+        [
+          "cebula",
+          1
+        ],
+        [
+          "czosnek",
+          1
+        ],
+        [
+          "papryka",
+          0.5
+        ],
+        [
+          "chleb",
+          1
+        ],
+        [
+          "olej",
+          8
+        ],
+        [
+          "przyprawy",
+          1
+        ]
+      ],
+      "kroki": [
+        "Na patelni na oleju smaż posiekaną cebulę i paprykę 5 min.",
+        "Dodaj czosnek, passatę, sól, pieprz, szczyptę słodkiej papryki. Gotuj 3 min.",
+        "Zrób łyżką 3 wgłębienia w sosie i wbij w nie jajka.",
+        "Przykryj i trzymaj 5 min na małym ogniu — białka mają się ściąć, żółtka zostać płynne. Maczasz chlebem prosto z patelni, zero talerzy."
+      ]
+    },
+    "q_tortilla": {
+      "id": "q_tortilla",
+      "nazwa": "Tortilla z jajecznicą, serem i sałatą",
+      "sloty": [
+        "sniadanie",
+        "drugi",
+        "kolacja"
+      ],
+      "box": false,
+      "czas_min": 9,
+      "produkty": [
+        [
+          "tortilla",
+          1
+        ],
+        [
+          "jaja",
+          3
+        ],
+        [
+          "ser",
+          25
+        ],
+        [
+          "salata",
+          40
+        ],
+        [
+          "pomidor",
+          1
+        ],
+        [
+          "maslo",
+          6
+        ],
+        [
+          "przyprawy",
+          1
+        ]
+      ],
+      "kroki": [
+        "Zrób gęstą jajecznicę z 4 jaj na maśle — trochę bardziej ściętą niż zwykle, żeby nie ciekła z tortilli.",
+        "Tortille podgrzej 20 sekund na suchej patelni, żeby się nie łamały przy zwijaniu.",
+        "Na każdą wyłóż jajecznicę, posyp serem, dorzuć sałatę i plastry pomidora.",
+        "Zawiń boki do środka i zroluj. Na suchej patelni podsmaż 1 min z każdej strony — wtedy trzyma się kupy."
+      ]
+    },
+    "q_jogurt_orzechy": {
+      "id": "q_jogurt_orzechy",
+      "nazwa": "Jogurt grecki z orzechami i miodem",
+      "sloty": [
+        "drugi"
+      ],
+      "box": true,
+      "czas_min": 3,
+      "produkty": [
+        [
+          "jogurt_grecki",
+          300
+        ],
+        [
+          "orzechy",
+          15
+        ],
+        [
+          "miod",
+          1
+        ],
+        [
+          "jablko",
+          1
+        ]
+      ],
+      "kroki": [
+        "Jogurt do pojemnika, wsyp orzechy, polej łyżką miodu.",
+        "Jabłko w kostkę na wierzch. Gotowe."
+      ]
+    },
+    "q_grzanki": {
+      "id": "q_grzanki",
+      "nazwa": "Grzanki z serem, jajkiem i pomidorem",
+      "sloty": [
+        "sniadanie",
+        "kolacja"
+      ],
+      "box": false,
+      "czas_min": 10,
+      "produkty": [
+        [
+          "chleb",
+          2
+        ],
+        [
+          "ser_zolty",
+          2
+        ],
+        [
+          "jaja",
+          2
+        ],
+        [
+          "pomidor",
+          1
+        ],
+        [
+          "ketchup",
+          1
+        ],
+        [
+          "przyprawy",
+          1
+        ]
+      ],
+      "kroki": [
+        "Nastaw piekarnik na grill/250°C albo użyj opiekacza.",
+        "Na kromki połóż plaster sera i plastry pomidora, posól.",
+        "Piecz 6 min aż ser się rozpuści i zacznie brązowieć.",
+        "Równolegle usmaż 2 jajka sadzone i połóż na grzankach. Kropka ketchupu."
+      ]
+    },
+    "q_salatka_feta": {
+      "id": "q_salatka_feta",
+      "nazwa": "Sałatka z fetą, jajkiem i pomidorem + kromka",
+      "sloty": [
+        "drugi",
+        "kolacja"
+      ],
+      "box": true,
+      "czas_min": 7,
+      "produkty": [
+        [
+          "feta",
+          70
+        ],
+        [
+          "jaja",
+          2
+        ],
+        [
+          "pomidor",
+          2
+        ],
+        [
+          "ogorek",
+          0.5
+        ],
+        [
+          "salata",
+          60
+        ],
+        [
+          "oliwa",
+          8
+        ],
+        [
+          "chleb",
+          1
+        ],
+        [
+          "przyprawy",
+          1
+        ]
+      ],
+      "kroki": [
+        "Ugotuj 2 jajka na twardo (9 min od wrzenia), zalej zimną wodą, obierz.",
+        "Pomidory i ogórka pokrój w grubą kostkę, wrzuć do miski na sałatę, dołóż jajka w ćwiartkach.",
+        "Fetę pokrusz palcami na wierzch.",
+        "Polej oliwą, posól, popieprz, wsyp oregano. Nie mieszaj mocno, żeby feta się nie rozpadła.",
+        "Do boxa: oliwę wlewasz dopiero na miejscu, inaczej sałata zwiotczeje."
+      ]
+    },
+    "q_twarog_banan": {
+      "id": "q_twarog_banan",
+      "nazwa": "Twaróg z bananem i miodem",
+      "sloty": [
+        "sniadanie",
+        "drugi"
+      ],
+      "box": true,
+      "czas_min": 4,
+      "produkty": [
+        [
+          "twarog",
+          180
+        ],
+        [
+          "banan",
+          1
+        ],
+        [
+          "miod",
+          1
+        ],
+        [
+          "orzechy",
+          10
+        ],
+        [
+          "mleko",
+          50
+        ]
+      ],
+      "kroki": [
+        "Twaróg rozgnieć widelcem z mlekiem — zrobi się kremowy.",
+        "Banan w plastry, miód, orzechy na wierzch.",
+        "Wersja na zmianę: wszystko do zakręcanego pojemnika."
+      ]
+    },
+    "q_kanapki_ser": {
+      "id": "q_kanapki_ser",
+      "nazwa": "Kanapki z serem, musztardą i kiszonym ogórkiem",
+      "sloty": [
+        "sniadanie",
+        "drugi",
+        "kolacja"
+      ],
+      "box": true,
+      "czas_min": 4,
+      "produkty": [
+        [
+          "chleb",
+          2
+        ],
+        [
+          "ser_zolty",
+          3
+        ],
+        [
+          "musztarda",
+          1
+        ],
+        [
+          "ogorek_kiszony",
+          2
+        ],
+        [
+          "maslo",
+          6
+        ],
+        [
+          "pomidor",
+          1
+        ]
+      ],
+      "kroki": [
+        "Chleb cienko masłem, potem musztardą.",
+        "Po plastrze sera na kromkę, na to plastry ogórka kiszonego i pomidora.",
+        "Najszybszy posiłek w bazie — 4 minuty i masz 30 g białka."
+      ]
+    },
+    "q_jajka_kukurydza": {
+      "id": "q_jajka_kukurydza",
+      "nazwa": "Box: sałatka jajeczna z kukurydzą",
+      "sloty": [
+        "drugi",
+        "kolacja"
+      ],
+      "box": true,
+      "czas_min": 12,
+      "produkty": [
+        [
+          "jaja",
+          3
+        ],
+        [
+          "kukurydza",
+          100
+        ],
+        [
+          "jogurt_grecki",
+          80
+        ],
+        [
+          "musztarda",
+          1
+        ],
+        [
+          "szczypiorek",
+          2
+        ],
+        [
+          "chleb",
+          1
+        ],
+        [
+          "przyprawy",
+          1
+        ]
+      ],
+      "kroki": [
+        "Jajka na twardo (9 min od wrzenia), zalej zimną wodą, obierz i pokrój w kostkę.",
+        "Wymieszaj z odsączoną kukurydzą, jogurtem greckim i łyżką musztardy.",
+        "Szczypiorek, sól, pieprz. Do pojemnika, chleb osobno.",
+        "Trzyma się w lodówce 2 dni — możesz zrobić podwójną porcję w dniu gotowania."
+      ]
+    }
+  },
+  "produkty": {
+    "jaja": {
+      "nazwa": "Jaja",
+      "jedn": "szt",
+      "opak": 10,
+      "cena": 12.0,
+      "kat": "nabial",
+      "trw": "chlodnia"
+    },
+    "twarog": {
+      "nazwa": "Twaróg półtłusty",
+      "jedn": "g",
+      "opak": 250,
+      "cena": 5.5,
+      "kat": "nabial",
+      "trw": "chlodnia"
+    },
+    "skyr": {
+      "nazwa": "Skyr naturalny",
+      "jedn": "g",
+      "opak": 400,
+      "cena": 8.0,
+      "kat": "nabial",
+      "trw": "chlodnia"
+    },
+    "jogurt_grecki": {
+      "nazwa": "Jogurt grecki 2%",
+      "jedn": "g",
+      "opak": 400,
+      "cena": 6.0,
+      "kat": "nabial",
+      "trw": "chlodnia"
+    },
+    "serek_wiejski": {
+      "nazwa": "Serek wiejski",
+      "jedn": "opak",
+      "opak": 1,
+      "cena": 3.5,
+      "kat": "nabial",
+      "trw": "chlodnia"
+    },
+    "ser_zolty": {
+      "nazwa": "Ser żółty w plastrach",
+      "jedn": "plaster",
+      "opak": 12,
+      "cena": 10.0,
+      "kat": "nabial",
+      "trw": "chlodnia"
+    },
+    "ser": {
+      "nazwa": "Ser żółty starty",
+      "jedn": "g",
+      "opak": 200,
+      "cena": 9.0,
+      "kat": "nabial",
+      "trw": "chlodnia"
+    },
+    "mozzarella": {
+      "nazwa": "Mozzarella",
+      "jedn": "g",
+      "opak": 125,
+      "cena": 5.0,
+      "kat": "nabial",
+      "trw": "chlodnia"
+    },
+    "feta": {
+      "nazwa": "Ser feta",
+      "jedn": "g",
+      "opak": 200,
+      "cena": 8.0,
+      "kat": "nabial",
+      "trw": "chlodnia"
+    },
+    "mleko": {
+      "nazwa": "Mleko 2%",
+      "jedn": "ml",
+      "opak": 1000,
+      "cena": 4.0,
+      "kat": "nabial",
+      "trw": "chlodnia"
+    },
+    "maslo": {
+      "nazwa": "Masło",
+      "jedn": "g",
+      "opak": 200,
+      "cena": 8.5,
+      "kat": "nabial",
+      "trw": "chlodnia"
+    },
+    "smietana": {
+      "nazwa": "Śmietana 18%",
+      "jedn": "ml",
+      "opak": 200,
+      "cena": 3.5,
+      "kat": "nabial",
+      "trw": "chlodnia"
+    },
+    "mielone_wolowe": {
+      "nazwa": "Mielona wołowina",
+      "jedn": "g",
+      "opak": 400,
+      "cena": 18.0,
+      "kat": "mieso",
+      "trw": "swieze"
+    },
+    "wolowina_gulasz": {
+      "nazwa": "Wołowina na gulasz (łopatka)",
+      "jedn": "g",
+      "opak": 500,
+      "cena": 25.0,
+      "kat": "mieso",
+      "trw": "swieze"
+    },
+    "chleb": {
+      "nazwa": "Chleb żytni / pełnoziarnisty",
+      "jedn": "kromka",
+      "opak": 16,
+      "cena": 6.0,
+      "kat": "pieczywo",
+      "trw": "chlodnia"
+    },
+    "tortilla": {
+      "nazwa": "Tortilla pszenna",
+      "jedn": "szt",
+      "opak": 8,
+      "cena": 8.0,
+      "kat": "pieczywo",
+      "trw": "trwale"
+    },
+    "makaron": {
+      "nazwa": "Makaron (świderki/penne)",
+      "jedn": "g",
+      "opak": 500,
+      "cena": 4.5,
+      "kat": "pieczywo",
+      "trw": "trwale"
+    },
+    "ziemniaki": {
+      "nazwa": "Ziemniaki",
+      "jedn": "g",
+      "opak": 2000,
+      "cena": 7.0,
+      "kat": "warzywa",
+      "trw": "trwale"
+    },
+    "pomidor": {
+      "nazwa": "Pomidor",
+      "jedn": "szt",
+      "opak": 1,
+      "cena": 1.5,
+      "kat": "warzywa",
+      "trw": "swieze"
+    },
+    "ogorek": {
+      "nazwa": "Ogórek długi",
+      "jedn": "szt",
+      "opak": 1,
+      "cena": 2.5,
+      "kat": "warzywa",
+      "trw": "swieze"
+    },
+    "cebula": {
+      "nazwa": "Cebula",
+      "jedn": "szt",
+      "opak": 1,
+      "cena": 0.6,
+      "kat": "warzywa",
+      "trw": "trwale"
+    },
+    "czosnek": {
+      "nazwa": "Czosnek",
+      "jedn": "zabek",
+      "opak": 10,
+      "cena": 3.0,
+      "kat": "warzywa",
+      "trw": "trwale"
+    },
+    "papryka": {
+      "nazwa": "Papryka",
+      "jedn": "szt",
+      "opak": 1,
+      "cena": 4.0,
+      "kat": "warzywa",
+      "trw": "chlodnia"
+    },
+    "marchew": {
+      "nazwa": "Marchew",
+      "jedn": "szt",
+      "opak": 1,
+      "cena": 0.5,
+      "kat": "warzywa",
+      "trw": "trwale"
+    },
+    "pieczarki": {
+      "nazwa": "Pieczarki",
+      "jedn": "g",
+      "opak": 400,
+      "cena": 6.0,
+      "kat": "warzywa",
+      "trw": "swieze"
+    },
+    "cukinia": {
+      "nazwa": "Cukinia",
+      "jedn": "szt",
+      "opak": 1,
+      "cena": 4.0,
+      "kat": "warzywa",
+      "trw": "chlodnia"
+    },
+    "kapusta_kiszona": {
+      "nazwa": "Kapusta kiszona",
+      "jedn": "g",
+      "opak": 500,
+      "cena": 5.0,
+      "kat": "warzywa",
+      "trw": "chlodnia"
+    },
+    "ogorek_kiszony": {
+      "nazwa": "Ogórek kiszony",
+      "jedn": "szt",
+      "opak": 8,
+      "cena": 8.0,
+      "kat": "warzywa",
+      "trw": "trwale"
+    },
+    "szczypiorek": {
+      "nazwa": "Szczypiorek",
+      "jedn": "lyzka",
+      "opak": 12,
+      "cena": 3.0,
+      "kat": "warzywa",
+      "trw": "swieze"
+    },
+    "salata": {
+      "nazwa": "Sałata / mix sałat",
+      "jedn": "g",
+      "opak": 150,
+      "cena": 5.0,
+      "kat": "warzywa",
+      "trw": "swieze"
+    },
+    "kukurydza": {
+      "nazwa": "Kukurydza konserwowa",
+      "jedn": "g",
+      "opak": 200,
+      "cena": 4.0,
+      "kat": "spizarnia",
+      "trw": "trwale"
+    },
+    "fasolka": {
+      "nazwa": "Fasolka szparagowa mrożona",
+      "jedn": "g",
+      "opak": 450,
+      "cena": 6.0,
+      "kat": "warzywa",
+      "trw": "trwale"
+    },
+    "brokul": {
+      "nazwa": "Brokuł mrożony",
+      "jedn": "g",
+      "opak": 450,
+      "cena": 7.0,
+      "kat": "warzywa",
+      "trw": "trwale"
+    },
+    "banan": {
+      "nazwa": "Banan",
+      "jedn": "szt",
+      "opak": 1,
+      "cena": 1.2,
+      "kat": "warzywa",
+      "trw": "chlodnia"
+    },
+    "jablko": {
+      "nazwa": "Jabłko",
+      "jedn": "szt",
+      "opak": 1,
+      "cena": 1.2,
+      "kat": "warzywa",
+      "trw": "trwale"
+    },
+    "passata": {
+      "nazwa": "Passata pomidorowa",
+      "jedn": "g",
+      "opak": 500,
+      "cena": 5.0,
+      "kat": "spizarnia",
+      "trw": "trwale"
+    },
+    "koncentrat": {
+      "nazwa": "Koncentrat pomidorowy",
+      "jedn": "g",
+      "opak": 200,
+      "cena": 4.0,
+      "kat": "spizarnia",
+      "trw": "trwale"
+    },
+    "olej": {
+      "nazwa": "Olej rzepakowy",
+      "jedn": "ml",
+      "opak": 1000,
+      "cena": 9.0,
+      "kat": "spizarnia",
+      "trw": "trwale"
+    },
+    "oliwa": {
+      "nazwa": "Oliwa z oliwek",
+      "jedn": "ml",
+      "opak": 500,
+      "cena": 20.0,
+      "kat": "spizarnia",
+      "trw": "trwale"
+    },
+    "bulion": {
+      "nazwa": "Kostka bulionowa",
+      "jedn": "kostka",
+      "opak": 6,
+      "cena": 4.0,
+      "kat": "spizarnia",
+      "trw": "trwale"
+    },
+    "musztarda": {
+      "nazwa": "Musztarda",
+      "jedn": "lyzka",
+      "opak": 12,
+      "cena": 4.0,
+      "kat": "spizarnia",
+      "trw": "trwale"
+    },
+    "ketchup": {
+      "nazwa": "Ketchup",
+      "jedn": "lyzka",
+      "opak": 30,
+      "cena": 6.0,
+      "kat": "spizarnia",
+      "trw": "trwale"
+    },
+    "miod": {
+      "nazwa": "Miód",
+      "jedn": "lyzka",
+      "opak": 20,
+      "cena": 18.0,
+      "kat": "spizarnia",
+      "trw": "trwale"
+    },
+    "orzechy": {
+      "nazwa": "Orzechy / migdały",
+      "jedn": "g",
+      "opak": 200,
+      "cena": 12.0,
+      "kat": "spizarnia",
+      "trw": "trwale"
+    },
+    "maslo_orzechowe": {
+      "nazwa": "Masło orzechowe 100%",
+      "jedn": "lyzka",
+      "opak": 22,
+      "cena": 15.0,
+      "kat": "spizarnia",
+      "trw": "trwale"
+    },
+    "maka": {
+      "nazwa": "Mąka pszenna",
+      "jedn": "g",
+      "opak": 1000,
+      "cena": 3.5,
+      "kat": "spizarnia",
+      "trw": "trwale"
+    },
+    "przyprawy": {
+      "nazwa": "Przyprawy (sól, pieprz, papryka, oregano, majeranek)",
+      "jedn": "porcja",
+      "opak": 100,
+      "cena": 15.0,
+      "kat": "spizarnia",
+      "trw": "trwale"
+    }
+  },
+  "historia": {
+    "bazy": [
+      "b_gulasz"
+    ],
+    "waga": [],
+    "treningi": []
+  }
+}

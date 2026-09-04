@@ -1,0 +1,51 @@
+{
+  "cykl": 24,
+  "od": "2026-09-02",
+  "do": "2026-09-04",
+  "baza": "b_gulasz",
+  "dni": [
+    {
+      "sniadanie": "q_twarog",
+      "drugi": "q_skyr",
+      "kolacja": "q_omlet",
+      "obiad": "b_gulasz",
+      "data": "2026-09-02",
+      "typ": 1,
+      "makra": {
+        "kcal": 2179,
+        "bialko": 167,
+        "tluszcz": 83,
+        "wegle": 185
+      }
+    },
+    {
+      "sniadanie": "q_kanapki_jajko",
+      "drugi": "q_twarog_banan",
+      "kolacja": "q_jajka_kukurydza",
+      "obiad": "b_gulasz",
+      "data": "2026-09-03",
+      "typ": 2,
+      "makra": {
+        "kcal": 2225,
+        "bialko": 153,
+        "tluszcz": 87,
+        "wegle": 210
+      }
+    },
+    {
+      "sniadanie": "q_kanapki_ser",
+      "drugi": "q_jogurt_orzechy",
+      "kolacja": "q_serek_box",
+      "obiad": "b_gulasz",
+      "data": "2026-09-04",
+      "typ": 0,
+      "makra": {
+        "kcal": 2192,
+        "bialko": 152,
+        "tluszcz": 95,
+        "wegle": 199
+      }
+    }
+  ],
+  "wygenerowano": "2026-09-04T11:25:02"
+}
