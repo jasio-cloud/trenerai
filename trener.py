@@ -12,7 +12,7 @@ Założenia, które ten plik realizuje:
 
 CLI:
   py trener.py dzis | plan | nowyplan | zakupy | kupione | gotowanie | trening
-  py trener.py lodowka | waga 81.4 | eksport | tick | auto | test
+  py trener.py lodowka | waga 81.4 | kroki 6420 [--ping] | eksport | tick | auto | test
 """
 import os, sys, json, math, random, datetime, urllib.request, urllib.error
 
@@ -67,6 +67,7 @@ BAZY = load(os.path.join(DATA, "bases.json"))["bazy"]
 QUICK = load(os.path.join(DATA, "quick.json"))["posilki"]
 DNI = load(os.path.join(DATA, "dni.json"))
 TRENINGI = load(os.path.join(DATA, "workouts.json"))
+KROKI = load(os.path.join(DATA, "kroki.json"))
 
 BAZA_BY_ID = {b["id"]: b for b in BAZY}
 QUICK_BY_ID = {q["id"]: q for q in QUICK}
@@ -423,6 +424,68 @@ def auto_rozlicz():
     return zaksieguj_cykl()
 
 
+# ------------------------------------------------------------------- kroki
+
+def ocena_krokow(kroki, d=None, godzina=None):
+    """Ile kroków, ile trzeba i co realnie z tym zrobić o tej porze dnia.
+
+    Cel zależy od typu dnia. Po godzinie granicznej system przestaje wysyłać
+    na spacer — o 22:00 nadrabianie kroków kosztuje sen, a sen na redukcji
+    jest wart więcej niż dwa tysiące kroków.
+    """
+    d = d or dzis()
+    kroki = int(kroki)
+    t = str(typ_dnia(d))
+    cel = KROKI["cele"][t]["cel"]
+    brakuje = max(0, cel - kroki)
+    godzina = godzina or teraz().strftime("%H:%M")
+    pozno = godzina >= KROKI["godzina_pozno"]
+
+    if kroki >= cel * KROKI["progi"]["blisko"]:
+        status = "ok" if kroki >= cel else "blisko"
+        sugestia = random.choice(KROKI["pochwaly"])
+    else:
+        status = "malo"
+        if pozno:
+            sugestia = random.choice(KROKI["sugestie_pozno"])
+        else:
+            sugestia = next(x["tekst"] for x in KROKI["sugestie"][t] if brakuje <= x["do"])
+
+    return {"kroki": kroki, "cel": cel, "brakuje": brakuje, "status": status,
+            "sugestia": sugestia, "komentarz": KROKI["cele"][t]["komentarz"],
+            "procent": min(100, int(round(kroki / cel * 100)))}
+
+
+def zapisz_kroki(ile, d=None, ping=False):
+    """Przyjmuje liczbę kroków z iPhone'a (Skrót -> GitHub) i odsyła podpowiedź."""
+    d = d or dzis()
+    h = load(HIST_PATH, {"bazy": [], "waga": [], "treningi": [], "kroki": []})
+    h.setdefault("kroki", [])
+    h["kroki"] = [k for k in h["kroki"] if k["data"] != d.isoformat()]
+    o = ocena_krokow(ile, d)
+    h["kroki"].append({"data": d.isoformat(), "kroki": o["kroki"],
+                       "cel": o["cel"], "status": o["status"]})
+    h["kroki"].sort(key=lambda k: k["data"])
+    h["kroki"] = h["kroki"][-60:]
+    save(HIST_PATH, h)
+
+    if ping:
+        ikona = {"ok": "✅", "blisko": "🟢", "malo": "🚶"}[o["status"]]
+        tytul = "%s Kroki: %s / %s" % (ikona, f"{o['kroki']:,}".replace(",", " "),
+                                       f"{o['cel']:,}".replace(",", " "))
+        wyslij_ping(tytul, o["sugestia"], priorytet=3 if o["status"] == "malo" else 2)
+    return o
+
+
+def kroki_dzis(d=None):
+    d = d or dzis()
+    h = load(HIST_PATH, {})
+    for k in reversed(h.get("kroki", [])):
+        if k["data"] == d.isoformat():
+            return ocena_krokow(k["kroki"], d)
+    return None
+
+
 # ----------------------------------------------------------------- trening
 
 def trening_dnia(d=None):
@@ -560,7 +623,9 @@ def eksport():
         "nawyki": DNI["nawyki"],
         "posilki": {p["id"]: p for p in QUICK},
         "produkty": {k: v for k, v in PROD.items() if not k.startswith("_")},
-        "historia": load(HIST_PATH, {"bazy": [], "waga": [], "treningi": []}),
+        "historia": load(HIST_PATH, {"bazy": [], "waga": [], "treningi": [], "kroki": []}),
+        "kroki": kroki_dzis(d),
+        "kroki_cel": KROKI["cele"][str(typ_dnia(d))],
     }
     for dzien in dane["plan"]["dni"]:
         dzien["nazwy"] = {s: nazwa_posilku(dzien[s]) for s in SLOTY}
@@ -720,6 +785,18 @@ def main():
     elif cmd == "auto":
         z = auto_rozlicz()
         print("Zaksięgowano cykl (%.2f zł)." % z["koszt"] if z else "Nic do zaksięgowania.")
+    elif cmd == "kroki":
+        if not arg:
+            o = kroki_dzis()
+            if o:
+                print("Dziś: %d / %d kroków (%d%%). %s" % (o["kroki"], o["cel"], o["procent"], o["sugestia"]))
+            else:
+                print("Brak zapisu kroków na dziś. Użycie: py trener.py kroki 6420")
+        else:
+            o = zapisz_kroki(arg, ping=("--ping" in sys.argv))
+            print("%d / %d kroków (%d%%)" % (o["kroki"], o["cel"], o["procent"]))
+            print(o["komentarz"])
+            print("→ " + o["sugestia"])
     elif cmd == "waga":
         if not arg:
             print("Użycie: py trener.py waga 81.4")

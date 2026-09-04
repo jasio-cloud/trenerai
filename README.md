@@ -18,6 +18,19 @@ Bez kurczaka, ryżu, kasz i ryb. Białko stoi na wołowinie, mielonym, jajach i 
 
 ---
 
+## Najpierw zobacz, jak działa (bez żadnej konfiguracji)
+
+Otwórz terminal w tym katalogu i odpal:
+
+```bash
+py trener.py dzis
+```
+
+Zobaczysz cały dzisiejszy dzień od pobudki do snu, z posiłkami i makrami. Dalej:
+`py trener.py plan`, `py trener.py zakupy`, `py trener.py gotowanie`, `py trener.py trening`.
+Nic nie psujesz — to tylko czytanie. Dopiero poniższa konfiguracja sprawia,
+że pingi zaczynają chodzić same, bez włączonego komputera.
+
 ## Uruchomienie (raz, ok. 15 minut)
 
 ### 1. Apka ntfy na iPhone
@@ -66,6 +79,41 @@ Od tej chwili wygląda i odpala się jak zwykła apka, z własną ikoną i bez p
 W repo: **Actions → „Trener AI — pingi na telefon" → Run workflow**, zaznacz `test` → **Run**.
 Na telefon powinno przyjść powiadomienie „Trener AI działa". Jeśli przyszło — koniec konfiguracji.
 
+### 6. Kroki z iPhone'a (opcjonalne, 5 minut)
+
+iPhone i tak liczy kroki w apce Zdrowie. Skrót raz dziennie odczyta tę liczbę i wyśle do systemu,
+a system odeśle konkretną podpowiedź — inną w dniu wolnym (cel 10 000), inną na 24-godzinnej
+służbie (7 000), inną w dniu odsypiania (4 000). Po 21:30 przestaje wysyłać na spacer,
+bo sen na redukcji jest wart więcej niż dwa tysiące kroków.
+
+**Token dostępu.** GitHub → **Settings → Developer settings → Personal access tokens →
+Fine-grained tokens → Generate new token**. Wybierz tylko repozytorium `trener`,
+uprawnienie **Contents: Read and write**. Skopiuj token — pokaże się raz.
+
+**Skrót.** Apka **Skróty → Automatyzacja → + → Pora dnia → 20:00 → Codziennie →
+Uruchom natychmiast** (żeby nie pytał o potwierdzenie). Dodaj trzy akcje:
+
+1. **Znajdź próbki zdrowia** — Typ: `Kroki`, filtr: `Data rozpoczęcia` jest `dzisiaj`
+2. **Oblicz statystyki** — `Suma` z wyniku poprzedniej akcji
+3. **Pobierz zawartość URL**
+   - URL: `https://api.github.com/repos/TWOJ-LOGIN/trener/dispatches`
+   - Metoda: `POST`
+   - Nagłówki: `Authorization` = `Bearer TWOJ_TOKEN`, `Accept` = `application/vnd.github+json`
+   - Treść żądania: `JSON`
+     - `event_type` (Tekst) = `kroki`
+     - `client_payload` (Słownik) → w środku `kroki` (Liczba) = wynik z akcji „Oblicz statystyki"
+
+Test: uruchom skrót ręcznie. W ciągu minuty powinno przyjść powiadomienie z liczbą kroków
+i podpowiedzią. Możesz też sprawdzić bez telefonu: **Actions → „Trener AI — kroki z iPhone'a"
+→ Run workflow** i wpisz dowolną liczbę.
+
+> Token siedzi na Twoim telefonie w Skrócie. Dlatego ma być **fine-grained** i ograniczony
+> do tego jednego repo — nawet gdyby wyciekł, nie daje dostępu do niczego innego.
+
+**Wersja bez tokena**, jeśli nie chcesz się w to bawić: te same trzy akcje, ale zamiast
+„Pobierz zawartość URL" dajesz **Jeżeli** wynik jest mniejszy niż 10000 → **Pokaż
+powiadomienie**. Działa w całości na telefonie, ale nie zna typu dnia i nie trafia do panelu.
+
 ---
 
 ## Codzienne używanie
@@ -82,6 +130,7 @@ py trener.py gotowanie   # przepis na dziś, krok po kroku
 py trener.py trening     # dzisiejszy trening z ciężarami i wskazówkami
 py trener.py lodowka     # co masz w domu i do kiedy jest dobre
 py trener.py waga 81.4   # zapis wagi + tempo redukcji
+py trener.py kroki 6420  # ręczny zapis kroków (normalnie robi to Skrót z iPhone'a)
 py trener.py nowyplan    # przelosuj posiłki, jeśli plan Ci nie pasuje
 py trener.py kupione     # ręczne zaksięgowanie zakupów (cron robi to sam o 15:30)
 ```
@@ -102,6 +151,7 @@ Po zmianie czegokolwiek lokalnie zrób `git push` — inaczej chmura o tym nie w
 | `data/quick.json` | Posiłki do 12 minut; `box: true` = da się zjeść na zimno na zmianie |
 | `data/workouts.json` | Treningi domowe: główne i krótkie po zmianie |
 | `data/dni.json` | Szablony dnia A–Z dla trzech typów dnia + nawyki |
+| `data/kroki.json` | Cele kroków na każdy typ dnia i podpowiedzi, gdy brakuje |
 | `docs/` | Panel WWW (GitHub Pages) — to jest ta „apka" na telefonie |
 | `state/` | Lodówka, aktualny plan, historia wagi, wysłane pingi |
 | `legacy/` | Poprzednia wersja na Discorda, zostawiona na wszelki wypadek |

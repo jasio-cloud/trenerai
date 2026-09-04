@@ -1,0 +1,55 @@
+name: Trener AI — kroki z iPhone'a
+
+# Odpalane przez Skrót na iPhonie (Automatyzacja o 20:00): telefon czyta liczbę
+# kroków z apki Zdrowie i wysyła ją tutaj. System porównuje z celem na dziś
+# (inny na zmianie, inny w dniu wolnym) i odsyła na telefon konkretną podpowiedź,
+# jeśli brakuje. Nic nie musi chodzić na komputerze.
+
+on:
+  repository_dispatch:
+    types: [kroki]
+  workflow_dispatch:
+    inputs:
+      kroki:
+        description: "Liczba kroków (do testu z przeglądarki)"
+        required: true
+        default: "6000"
+
+permissions:
+  contents: write
+
+concurrency:
+  group: trener-kroki
+  cancel-in-progress: false
+
+jobs:
+  zapisz:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Zapisz kroki i odeślij podpowiedź
+        env:
+          NTFY_TOPIC: ${{ secrets.NTFY_TOPIC }}
+          KROKI: ${{ github.event.client_payload.kroki || inputs.kroki }}
+        run: python trener.py kroki "$KROKI" --ping
+
+      - name: Odśwież panel
+        run: python trener.py eksport
+
+      - name: Zapisz stan do repo
+        run: |
+          git config user.name "trener-ai"
+          git config user.email "trener-ai@users.noreply.github.com"
+          git add state docs/dane.json
+          if git diff --cached --quiet; then
+            echo "Bez zmian."
+          else
+            git commit -m "kroki: $(date -u +%F)"
+            git pull --rebase --autostash origin ${{ github.ref_name }}
+            git push
+          fi

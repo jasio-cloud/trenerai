@@ -184,7 +184,25 @@ function widokDzis(){
       </div></li>`;
   }).join("");
 
+  const k = D.kroki;
+  const kartaKrokow = k
+    ? `<div class="karta"><h2>Kroki</h2>
+        <div style="display:flex;justify-content:space-between;align-items:baseline;gap:10px">
+          <div class="w" style="font-size:26px;font-weight:650;letter-spacing:-.02em;font-variant-numeric:tabular-nums">
+            ${k.kroki.toLocaleString("pl-PL")}<span class="kcal" style="font-size:15px"> / ${k.cel.toLocaleString("pl-PL")}</span></div>
+          <div class="kcal">${k.procent}%</div>
+        </div>
+        <div class="pasek" style="height:5px;margin-top:8px"><i class="${k.status==="malo"?"przekr":""}" style="width:${k.procent}%"></i></div>
+        <div class="op" style="margin-top:9px">${k.status==="malo"?"→ ":"✓ "}${esc(k.sugestia)}</div>
+      </div>`
+    : `<div class="karta"><h2>Kroki</h2>
+        <div class="op">Dziś jeszcze bez odczytu. Skrót na iPhonie wysyła liczbę kroków o 20:00 —
+        cel na taki dzień to ${D.kroki_cel.cel.toLocaleString("pl-PL")}.</div>
+        <div class="op" style="margin-top:6px">${esc(D.kroki_cel.komentarz)}</div>
+      </div>`;
+
   return `<div class="karta"><h2>Makra na dziś</h2>${makra(dzis.makra, D.cel)}</div>
+    ${kartaKrokow}
     <div class="karta"><h2>Plan dnia</h2><ol class="os">${lista}</ol></div>
     <div class="karta"><h2>Nawyki</h2>
       ${D.nawyki.map(n=>`<div class="cw"><div class="g"><b>${esc(n.nazwa)}</b></div>

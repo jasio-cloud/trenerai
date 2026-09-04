@@ -1,0 +1,45 @@
+{
+  "_info": "Cele kroków i podpowiedzi, gdy jest ich za mało. Cel zależy od typu dnia — na 24h służbie chodzisz sam z siebie, w dniu po zmianie przesypiasz pół doby, więc wymaganie 10 tys. wszędzie po równo nie ma sensu. Podpowiedzi dobierane są do tego, ILE brakuje i O KTÓREJ pytamy: o 22:00 nikt nie pójdzie na godzinny spacer.",
+
+  "cele": {
+    "0": {"cel": 7000,  "komentarz": "Na służbie kroki robią się same z obchodów — ten cel to sygnał, żebyś nie przesiedział całej doby na krześle."},
+    "1": {"cel": 4000,  "komentarz": "Pół doby przesypiasz, a wieczorem masz trening. Niski cel jest tu zamierzony — nie nadrabiaj na siłę."},
+    "2": {"cel": 10000, "komentarz": "Jedyny pełny dzień w domu. Tu robisz większość tygodniowego chodzenia."}
+  },
+
+  "progi": {
+    "blisko": 0.85,
+    "komentarz": "Powyżej 85% celu uznajemy dzień za zaliczony i nie marudzimy."
+  },
+
+  "sugestie": {
+    "0": [
+      {"do": 1200, "tekst": "Zrób jeden dodatkowy obchód obiektu. To zwykle domyka dzień."},
+      {"do": 3000, "tekst": "Dwa obchody zamiast jednego, a między nimi wejdź na piętro schodami. Rozbij to na dwa razy, nie rób wszystkiego naraz."},
+      {"do": 99999, "tekst": "Dziś siedziałeś prawie całą dobę. Nie nadrobisz tego w nocy i nie ma sensu próbować — zrób 10 minut chodzenia teraz i rozciągnij plecy, żeby jutro nie bolały."}
+    ],
+    "1": [
+      {"do": 1200, "tekst": "10 minut spaceru po treningu. Przy okazji lepiej zaśniesz."},
+      {"do": 3000, "tekst": "20 minut spaceru wieczorem. Po dobie na służbie to bardziej rozprostowanie niż wysiłek."},
+      {"do": 99999, "tekst": "Dzisiaj odsypiasz i to jest priorytet — kroki są na drugim miejscu. Wystarczy 15 minut na świeżym powietrzu przed snem."}
+    ],
+    "2": [
+      {"do": 1500, "tekst": "15 minut wokół bloku i masz dzień zamknięty."},
+      {"do": 4000, "tekst": "35 minut spaceru. Wyjdź teraz, zanim usiądziesz na kanapie — po usiądnięciu już nie wyjdziesz."},
+      {"do": 7000, "tekst": "Brakuje sporo. Zrób dłuższy spacer i wróć piechotą zamiast jechać — najprościej wyjść z domu i iść 25 minut w jedną stronę, wtedy powrót zrobi resztę."},
+      {"do": 99999, "tekst": "Praktycznie nie wychodziłeś dziś z domu. To Twój jedyny wolny dzień w cyklu — jutro wracasz na 24 h, więc te kilka tysięcy kroków dziś realnie zmienia, jak się będziesz czuł na zmianie."}
+    ]
+  },
+
+  "sugestie_pozno": [
+    "Jest już późno — nie wychodź nadrabiać. 10 minut chodzenia po mieszkaniu i rozciąganie zrobi więcej dla snu niż forsowny spacer.",
+    "O tej porze lepiej zejść z tempa niż je podbijać. Odpuść kroki, połóż się o czasie — sen na redukcji robi więcej niż dwa tysiące kroków."
+  ],
+  "godzina_pozno": "21:30",
+
+  "pochwaly": [
+    "Cel zrobiony. Nic nie musisz dorabiać.",
+    "Kroki zaliczone — dzień zamknięty.",
+    "Jest cel. Odpuść sobie dokładanie czegokolwiek."
+  ]
+}
