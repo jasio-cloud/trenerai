@@ -1,7 +1,7 @@
 {
-  "wygenerowano": "2026-09-05T17:09:13+02:00",
-  "dzis": "2026-09-05",
-  "typ_dzis": 1,
+  "wygenerowano": "2026-09-06T01:09:14+02:00",
+  "dzis": "2026-09-06",
+  "typ_dzis": 2,
   "typy": {
     "0": {
       "nazwa": "ZMIANA 24h",
@@ -171,138 +171,60 @@
   },
   "agenda": [
     {
-      "czas": "00:40",
-      "tytul": "Drzemka 2 z 4 — do 02:00",
-      "ikona": "😴",
+      "czas": "08:00",
+      "tytul": "Pobudka + waga",
+      "ikona": "⚖️",
       "ping": true,
-      "nastepny_dzien": true,
-      "opis": "Między drzemkami łyk wody. Nie sięgaj po telefon — światło ekranu kosztuje Cię zaśnięcie przy kolejnej."
+      "akcja": "suple",
+      "opis": "Zważ się od razu po wstaniu, przed jedzeniem i piciem. Potem woda, suple, toaleta — i bez telefonu."
     },
     {
-      "czas": "02:20",
-      "tytul": "Drzemka 3 z 4 — do 03:40",
-      "ikona": "😴",
+      "czas": "08:30",
+      "tytul": "TRENING GŁÓWNY — pierwsza rzecz dnia",
+      "ikona": "🏋️",
       "ping": true,
-      "nastepny_dzien": true,
-      "opis": "To najcięższa pora doby. Jak nie zaśniesz w 15 minut, po prostu leż z zamkniętymi oczami — to też się liczy."
+      "akcja": "trening_glowny",
+      "opis": "Najlepsza sesja w cyklu: wyspany, po dniu normalnego jedzenia. Tu bijesz rekordy. Wchodzisz i robisz, zero telefonu przed."
     },
     {
-      "czas": "04:00",
-      "tytul": "Drzemka 4 z 4 — do 05:20",
-      "ikona": "😴",
-      "ping": true,
-      "nastepny_dzien": true,
-      "opis": "Ostatnia. Po niej zostaje już tylko zdanie służby."
-    },
-    {
-      "czas": "06:45",
-      "tytul": "Zdanie służby",
-      "ikona": "🏁",
-      "ping": true,
-      "nastepny_dzien": true,
-      "opis": "Za 15 minut kończysz. Nie kupuj nic po drodze — w domu masz jedzenie, a za chwilę i tak idziesz spać."
-    },
-    {
-      "czas": "07:35",
-      "tytul": "Jesteś w domu",
-      "ikona": "🚿",
-      "ping": true,
-      "opis": "Prysznic, zasłoń okna. NIE siadaj do telefonu — po dobie na nogach jedno przewijanie kosztuje Cię godzinę snu."
-    },
-    {
-      "czas": "07:50",
-      "tytul": "Mały posiłek przed snem",
-      "ikona": "🥛",
+      "czas": "09:45",
+      "tytul": "Śniadanie po treningu",
+      "ikona": "🍳",
       "ping": true,
       "slot": "sniadanie",
-      "opis": "Coś lekkiego i białkowego. Na pusty żołądek gorzej zaśniesz, na pełny obudzisz się rozbity.",
-      "posilek": "Jajecznica z 3 jaj + 2 kromki + pomidor",
-      "posilek_id": "q_jajecznica",
+      "opis": "Pierwszy posiłek dnia, zaraz po sztandze.",
+      "posilek": "Twarożek ze szczypiorkiem + 2 kromki",
+      "posilek_id": "q_twarog",
       "makra": {
-        "kcal": 462,
-        "bialko": 26,
-        "tluszcz": 22,
-        "wegle": 39
-      }
-    },
-    {
-      "czas": "08:15",
-      "tytul": "SEN — najważniejsza rzecz dziś",
-      "ikona": "😴",
-      "ping": true,
-      "akcja": "budzik",
-      "opis": "To Twój główny sen po dobie służby. Noc na czterech drzemkach go nie zastąpiła.",
-      "budzik": {
-        "godzina": "13:00",
-        "minut": 285,
-        "jutro": false,
-        "ile": "4 h 45 min",
-        "typ_docelowy": "PO ZMIANIE"
+        "kcal": 488,
+        "bialko": 45,
+        "tluszcz": 11,
+        "wegle": 43
       }
     },
     {
       "czas": "13:00",
-      "tytul": "Pobudka",
-      "ikona": "⏰",
-      "ping": true,
-      "opis": "Woda, suple, toaleta. Bez telefonu — dziś zaczynasz od sztangi, nie od ekranu.",
-      "akcja": "suple"
-    },
-    {
-      "czas": "13:30",
-      "tytul": "TRENING — pierwsza rzecz dnia",
-      "ikona": "🏋️",
-      "ping": true,
-      "akcja": "trening_krotki",
-      "opis": "35 minut, ciężary 80% normy. Zaczynasz dzień od zrobionej roboty, zanim cokolwiek zdąży w tym przeszkodzić."
-    },
-    {
-      "czas": "14:30",
-      "tytul": "Posiłek po treningu",
-      "ikona": "🍽️",
+      "tytul": "Drugi posiłek",
+      "ikona": "🥪",
       "ping": true,
       "slot": "drugi",
-      "opis": "Pierwszy porządny posiłek dnia. Trenowałeś na czczo, więc nie odkładaj go na później.",
-      "posilek": "Twaróg z bananem i miodem",
-      "posilek_id": "q_twarog_banan",
+      "opis": "",
+      "posilek": "Skyr z bananem i masłem orzechowym",
+      "posilek_id": "q_skyr",
       "makra": {
-        "kcal": 490,
+        "kcal": 389,
         "bialko": 38,
-        "tluszcz": 12,
-        "wegle": 53
+        "tluszcz": 9,
+        "wegle": 42
       }
     },
     {
-      "czas": "15:15",
-      "tytul": "Podsumowanie cyklu",
-      "ikona": "📊",
-      "ping": true,
-      "akcja": "podsumowanie",
-      "opis": "Trzy dni za Tobą. Zanim pójdziesz po zakupy, zobacz, co z nich wyszło."
-    },
-    {
-      "czas": "15:30",
-      "tytul": "ZAKUPY na 3 dni",
-      "ikona": "🛒",
-      "ping": true,
-      "akcja": "zakupy",
-      "opis": "Lista jest w panelu — kupujesz tylko to, czego nie ma w lodówce. Trzymaj się listy, nie chodź po sklepie głodny."
-    },
-    {
-      "czas": "16:30",
-      "tytul": "GOTOWANIE na 3 dni",
-      "ikona": "🍳",
-      "ping": true,
-      "akcja": "gotowanie",
-      "opis": "Jeden garnek, jedno podejście, 3 pojemniki. Przepis krok po kroku masz w panelu."
-    },
-    {
-      "czas": "18:15",
+      "czas": "16:00",
       "tytul": "Obiad",
-      "ikona": "🍲",
+      "ikona": "🍽️",
       "ping": true,
       "slot": "obiad",
-      "opis": "Prosto z garnka, świeży. Reszta ostudzona idzie do lodówki.",
+      "opis": "Box z lodówki, mikrofala, zero roboty.",
       "posilek": "Zapiekanka pasterska (mielone pod puree)",
       "posilek_id": "b_shepherd",
       "makra": {
@@ -313,42 +235,57 @@
       }
     },
     {
-      "czas": "20:30",
+      "czas": "18:00",
+      "tytul": "Spacer",
+      "ikona": "🚶",
+      "ping": true,
+      "opis": "20–30 minut. Nie kardio — chodzi o rozruszanie bioder i pleców oraz o kroki, których dziś nie zrobisz sam z siebie."
+    },
+    {
+      "czas": "19:30",
       "tytul": "Kolacja",
       "ikona": "🌙",
       "ping": true,
       "slot": "kolacja",
       "opis": "",
-      "posilek": "Box: sałatka jajeczna z kukurydzą",
-      "posilek_id": "q_jajka_kukurydza",
+      "posilek": "Kanapki z jajkiem na twardo i serem (2 kromki)",
+      "posilek_id": "q_kanapki_jajko",
       "makra": {
-        "kcal": 459,
-        "bialko": 34,
-        "tluszcz": 20,
-        "wegle": 42
+        "kcal": 490,
+        "bialko": 30,
+        "tluszcz": 24,
+        "wegle": 37
+      }
+    },
+    {
+      "czas": "21:00",
+      "tytul": "PAKOWANIE BOXÓW na jutro",
+      "ikona": "📦",
+      "ping": true,
+      "akcja": "boxy",
+      "opis": "Najważniejsze 15 minut w całym cyklu. Bez tego jutro na zmianie jesz z automatu i cała robota z gotowaniem idzie w piach."
+    },
+    {
+      "czas": "21:30",
+      "tytul": "Telefon w dół + budzik",
+      "ikona": "📵",
+      "ping": true,
+      "akcja": "budzik",
+      "opis": "Jutro zmiana — to jest ten wieczór, którego nie można przespać po łebkach.",
+      "budzik": {
+        "godzina": "05:30",
+        "minut": 480,
+        "jutro": true,
+        "ile": "8 h 00 min",
+        "typ_docelowy": "ZMIANA 24h"
       }
     },
     {
       "czas": "22:00",
-      "tytul": "Odkładasz telefon",
-      "ikona": "📵",
-      "ping": true,
-      "opis": "Ekran w dół. Za 30 minut śpisz i to Ci resetuje rytm po zmianie."
-    },
-    {
-      "czas": "22:30",
       "tytul": "Sen",
       "ikona": "😴",
       "ping": true,
-      "akcja": "budzik",
-      "opis": "Długa noc jednym ciągiem — po dobie na drzemkach jest Ci potrzebna.",
-      "budzik": {
-        "godzina": "08:00",
-        "minut": 570,
-        "jutro": true,
-        "ile": "9 h 30 min",
-        "typ_docelowy": "WOLNE"
-      }
+      "opis": "Krótka noc przed zmianą, ale jak położysz się teraz, wstaniesz w miarę ludzko."
     }
   ],
   "zakupy": {
@@ -817,47 +754,61 @@
     }
   },
   "trening": {
-    "rodzaj": "krotki",
+    "rodzaj": "glowny",
     "trening": {
-      "id": "w_fbw_b",
-      "nazwa": "KRÓTKI B — Full body (dzień po zmianie)",
-      "czas_min": 35,
+      "id": "w_pull",
+      "nazwa": "GŁÓWNY B — Plecy i biceps",
+      "czas_min": 60,
       "rozgrzewka": [
-        "Po 24 h służby, ok. 4,5 h snu i na czczo. Rozgrzewka 8 min, bez pośpiechu.",
-        "30 przysiadów bez ciężaru, krążenia ramion i bioder, 15 pompek, martwy zwis 2×20 s.",
-        "Pierwszą serię roboczą poprzedź serią na 50% ciężaru."
+        "Trenujesz zaraz po wstaniu, na czczo — rozgrzewki NIE skracaj, to nie jest miejsce na oszczędzanie czasu.",
+        "8 min: 30 przysiadów bez ciężaru, krążenia ramion i bioder, 20 pompek.",
+        "Wiosłowanie samą sztangą x15"
       ],
       "cwiczenia": [
         {
-          "nazwa": "Rumuński martwy ciąg",
-          "serie": 3,
-          "powt": "10",
+          "nazwa": "Martwy ciąg",
+          "serie": 4,
+          "powt": "5-6",
+          "przerwa": "3 min",
+          "wskazowka": "Plecy proste jak deska. Jak zaczynają się garbić — koniec serii, nawet jeśli miałeś zrobić więcej."
+        },
+        {
+          "nazwa": "Wiosłowanie sztangą w opadzie",
+          "serie": 4,
+          "powt": "8-10",
           "przerwa": "2 min",
-          "wskazowka": "Umiarkowany ciężar. Po dobie stania plecy są zmęczone — technika ważniejsza niż kilogramy."
+          "wskazowka": "Tułów prawie równolegle do podłogi. Ciągniesz do brzucha, nie do klatki."
         },
         {
-          "nazwa": "Wyciskanie hantli nad głowę",
+          "nazwa": "Podciąganie na drążku racka",
           "serie": 3,
-          "powt": "10",
-          "przerwa": "90 s",
-          "wskazowka": "Siedząc, z oparciem — stabilniej gdy jesteś zmęczony."
+          "powt": "max (cel 8)",
+          "przerwa": "2 min",
+          "wskazowka": "Jak nie wyrabiasz — negatywy: wskakujesz na górę i schodzisz 4 sekundy."
         },
         {
-          "nazwa": "Podciąganie albo wiosłowanie hantlą",
+          "nazwa": "Wiosłowanie jednorącz hantlą",
           "serie": 3,
-          "powt": "8-12",
+          "powt": "10-12",
           "przerwa": "90 s",
-          "wskazowka": "Wybierz to, na co masz dziś siłę."
+          "wskazowka": "Kolano i ręka na ławce. Nie skręcaj tułowia, żeby dociągnąć — to oszukiwanie."
         },
         {
-          "nazwa": "Uginanie EZ + pompki (superseria)",
-          "serie": 2,
-          "powt": "12 + max",
+          "nazwa": "Uginanie ramion EZ",
+          "serie": 3,
+          "powt": "10-12",
           "przerwa": "75 s",
-          "wskazowka": "Jedno po drugim bez przerwy, potem odpoczynek."
+          "wskazowka": "Łokcie przy tułowiu. Bez bujania biodrami."
+        },
+        {
+          "nazwa": "Uginanie młotkowe hantlami",
+          "serie": 2,
+          "powt": "12-15",
+          "przerwa": "60 s",
+          "wskazowka": "Chwyt neutralny, buduje grubość ramienia."
         }
       ],
-      "finisz": "Kręci Ci się w głowie albo ciężar leci — kończysz. Po nieprzespanej dobie to normalne i nie jest to porażka. Zaraz po treningu jesz pierwszy porządny posiłek dnia."
+      "finisz": "3 min rozciągania pleców i bicepsów. Zapisz ciężary."
     }
   },
   "nawyki": [
@@ -2081,27 +2032,19 @@
   "alternatywy": {
     "sniadanie": [
       {
-        "id": "q_kanapki_ser",
-        "nazwa": "Kanapki z serem, musztardą i kiszonym ogórkiem",
-        "kcal": 491,
-        "bialko": 24,
+        "id": "q_twarog_banan",
+        "nazwa": "Twaróg z bananem i miodem",
+        "kcal": 490,
+        "bialko": 38,
         "czas": 4,
         "bez_gotowania": false
       },
       {
-        "id": "q_shakshuka",
-        "nazwa": "Jajka w sosie pomidorowym (shakshuka)",
-        "kcal": 504,
-        "bialko": 27,
-        "czas": 12,
-        "bez_gotowania": false
-      },
-      {
-        "id": "q_kanapki_jajko",
-        "nazwa": "Kanapki z jajkiem na twardo i serem (2 kromki)",
-        "kcal": 490,
-        "bialko": 30,
-        "czas": 12,
+        "id": "q_omlet",
+        "nazwa": "Omlet z serem i pomidorem",
+        "kcal": 516,
+        "bialko": 33,
+        "czas": 10,
         "bez_gotowania": false
       },
       {
@@ -2111,14 +2054,38 @@
         "bialko": 30,
         "czas": 10,
         "bez_gotowania": false
+      },
+      {
+        "id": "q_shakshuka",
+        "nazwa": "Jajka w sosie pomidorowym (shakshuka)",
+        "kcal": 504,
+        "bialko": 27,
+        "czas": 12,
+        "bez_gotowania": false
       }
     ],
     "drugi": [
       {
-        "id": "q_kanapki_jajko",
-        "nazwa": "Kanapki z jajkiem na twardo i serem (2 kromki)",
-        "kcal": 490,
+        "id": "q_jogurt_orzechy",
+        "nazwa": "Jogurt grecki z orzechami i miodem",
+        "kcal": 415,
         "bialko": 30,
+        "czas": 3,
+        "bez_gotowania": false
+      },
+      {
+        "id": "q_twarog_banan",
+        "nazwa": "Twaróg z bananem i miodem",
+        "kcal": 490,
+        "bialko": 38,
+        "czas": 4,
+        "bez_gotowania": false
+      },
+      {
+        "id": "q_jajka_kukurydza",
+        "nazwa": "Box: sałatka jajeczna z kukurydzą",
+        "kcal": 459,
+        "bialko": 34,
         "czas": 12,
         "bez_gotowania": false
       },
@@ -2128,22 +2095,6 @@
         "kcal": 500,
         "bialko": 47,
         "czas": 12,
-        "bez_gotowania": false
-      },
-      {
-        "id": "q_skyr",
-        "nazwa": "Skyr z bananem i masłem orzechowym",
-        "kcal": 389,
-        "bialko": 38,
-        "czas": 3,
-        "bez_gotowania": false
-      },
-      {
-        "id": "q_kanapki_ser",
-        "nazwa": "Kanapki z serem, musztardą i kiszonym ogórkiem",
-        "kcal": 491,
-        "bialko": 24,
-        "czas": 4,
         "bez_gotowania": false
       }
     ],
@@ -2183,22 +2134,6 @@
     ],
     "kolacja": [
       {
-        "id": "q_kanapki_jajko",
-        "nazwa": "Kanapki z jajkiem na twardo i serem (2 kromki)",
-        "kcal": 490,
-        "bialko": 30,
-        "czas": 12,
-        "bez_gotowania": false
-      },
-      {
-        "id": "q_omlet",
-        "nazwa": "Omlet z serem i pomidorem",
-        "kcal": 516,
-        "bialko": 33,
-        "czas": 10,
-        "bez_gotowania": false
-      },
-      {
         "id": "q_grzanki",
         "nazwa": "Grzanki z serem, jajkiem i pomidorem",
         "kcal": 507,
@@ -2212,6 +2147,22 @@
         "kcal": 504,
         "bialko": 27,
         "czas": 12,
+        "bez_gotowania": false
+      },
+      {
+        "id": "q_kanapki_ser",
+        "nazwa": "Kanapki z serem, musztardą i kiszonym ogórkiem",
+        "kcal": 491,
+        "bialko": 24,
+        "czas": 4,
+        "bez_gotowania": false
+      },
+      {
+        "id": "q_omlet",
+        "nazwa": "Omlet z serem i pomidorem",
+        "kcal": 516,
+        "bialko": 33,
+        "czas": 10,
         "bez_gotowania": false
       }
     ]
@@ -2573,7 +2524,7 @@
   },
   "kroki": null,
   "kroki_cel": {
-    "cel": 4000,
-    "komentarz": "Pół doby przesypiasz, a wieczorem masz trening. Niski cel jest tu zamierzony — nie nadrabiaj na siłę."
+    "cel": 10000,
+    "komentarz": "Jedyny pełny dzień w domu. Tu robisz większość tygodniowego chodzenia."
   }
 }
