@@ -139,6 +139,7 @@ py trener.py serie "Przysiad ze sztangą (w racku, z bolcami)" 80 8 8 8
 py trener.py podsumowanie          # co wyszło z ostatnich 3 dni
 py trener.py kalorie [--zastosuj]  # trend wagi i korekta celu
 py trener.py przetworz             # zastosuj zdarzenia wysłane z panelu
+py trener.py zaplanuj [sucho]      # zaplanuj pingi z góry w ntfy
 ```
 
 Po zmianie czegokolwiek lokalnie zrób `git push` — inaczej chmura o tym nie wie.
@@ -178,6 +179,20 @@ Cała reszta liczy się z niej: `(dzisiaj − kotwica) mod 3` daje typ dnia.
 Jeśli kiedyś zmienisz się z kimś służbą i grafik się przesunie, poprawiasz tę jedną datę.
 
 ---
+
+## Skąd punktualność pingów
+
+Darmowy cron GitHuba **nie dotrzymuje harmonogramu** — na tym repo wyszły 24 przebiegi
+w 45 godzin, czyli raz na jakieś 2 godziny zamiast deklarowanych 10 minut. Sprawdzanie
+„czy coś wypada teraz" traciło przy tym prawie każdy punkt planu.
+
+Dlatego system nie sprawdza, tylko **planuje z góry**: przy każdym przebiegu wysyła do
+ntfy pingi na dziś i jutro z parametrem `delay`, a ntfy dostarcza je o zadanej godzinie
+co do minuty. Wystarczy, że zadanie odpali się raz na kilka godzin. Dzień następny
+planujemy dlatego, że pobudka o 05:30 wypada, zanim cron zdąży się tego dnia obudzić.
+
+Efekt uboczny: jeśli podmienisz posiłek po zaplanowaniu pinga, powiadomienie przyjdzie
+ze starą nazwą dania. Plan w panelu jest wtedy źródłem prawdy, nie treść powiadomienia.
 
 ## Zapis z telefonu
 

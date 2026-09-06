@@ -1,9 +1,14 @@
 name: Trener AI — pingi na telefon
 
-# Ten workflow zastępuje włączony komputer. Leci w chmurze GitHuba, co 10 minut
-# sprawdza, czy w planie dnia wypadł właśnie jakiś punkt, i wysyła powiadomienie
-# na telefon przez ntfy.sh. Stan (co już wysłano) wraca commitem do repo,
-# więc ten sam ping nigdy nie przyjdzie dwa razy.
+# Ten workflow zastępuje włączony komputer. Leci w chmurze GitHuba i PLANUJE
+# powiadomienia z góry: ntfy przyjmuje wiadomość teraz i dostarcza ją o zadanej
+# godzinie co do minuty.
+#
+# Dlaczego nie sprawdzamy po prostu "co wypada teraz": darmowy cron GitHuba nie
+# dotrzymuje harmonogramu. Zmierzone na tym repo — 24 przebiegi w 45 godzin,
+# czyli realnie raz na ~2 godziny zamiast co 10 minut. Przy sprawdzaniu okienkiem
+# prawie każdy punkt planu przepadał. Przy planowaniu z góry wystarczy, że zadanie
+# odpali się raz na kilka godzin, a pingi i tak przychodzą punktualnie.
 
 on:
   schedule:
@@ -53,7 +58,7 @@ jobs:
           NTFY_TOPIC: ${{ secrets.NTFY_TOPIC }}
         run: python trener.py wdrozenie
 
-      - name: Sprawdź plan i wyślij, co się należy
+      - name: Zaplanuj pingi na dziś i jutro (plus nadrobienie zaległych)
         if: ${{ !inputs.test }}
         env:
           NTFY_TOPIC: ${{ secrets.NTFY_TOPIC }}

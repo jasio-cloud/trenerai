@@ -861,7 +861,7 @@ def agenda(d=None):
 
 # --------------------------------------------------------------- pingi ntfy
 
-def wyslij_ping(tytul, tresc, tagi=None, priorytet=3):
+def wyslij_ping(tytul, tresc, tagi=None, priorytet=3, kiedy=None):
     topic = os.environ.get(CFG["ntfy"]["topic_env"], "").strip()
     if not topic:
         print("[ntfy] brak NTFY_TOPIC — pomijam wysyłkę")
@@ -875,6 +875,9 @@ def wyslij_ping(tytul, tresc, tagi=None, priorytet=3):
     }
     if CFG.get("panel_url"):
         payload["click"] = CFG["panel_url"]
+    if kiedy is not None:
+        # ntfy przyjmuje wiadomosc teraz i dostarcza ja o podanej sekundzie
+        payload["delay"] = str(int(kiedy))
     req = urllib.request.Request(
         CFG["ntfy"]["server"],
         data=json.dumps(payload).encode("utf-8"),
@@ -919,9 +922,70 @@ def tresc_pinga(e, d):
     return "\n".join(czesci)
 
 
+ZAPLANOWANE_PATH = os.path.join(STATE, "zaplanowane.json")
+
+
+def _klucz_punktu(e):
+    return e["czas"] + "|" + e["tytul"]
+
+
+def zaplanuj_pingi(dni_naprzod=1, sucho=False):
+    """Wysyla pingi Z GORY, z terminem dostarczenia zamiast sprawdzania 'co teraz'.
+
+    Powod: cron GitHuba na darmowym planie nie chodzi co 10 minut, tylko realnie
+    raz na okolo dwie godziny (24 przebiegi w 45 godzin). Przy sprawdzaniu okienkiem
+    prawie kazdy punkt planu przepadal. ntfy potrafi natomiast przyjac wiadomosc
+    teraz i dostarczyc ja o zadanej godzinie co do minuty - wiec punktualnosc
+    przestaje zalezec od tego, kiedy GitHub raczy odpalic zadanie.
+
+    Planujemy tez dzien nastepny, bo poranne pingi (pobudka 05:30) wypadaja
+    zanim cron zdazy sie tego dnia obudzic.
+    """
+    n = teraz()
+    zapl = load(ZAPLANOWANE_PATH, {})
+    nowe = []
+    for przesuniecie in range(dni_naprzod + 1):
+        d = n.date() + datetime.timedelta(days=przesuniecie)
+        ds = d.isoformat()
+        juz = set(zapl.get(ds, []))
+        for e in agenda(d):
+            if not e.get("ping"):
+                continue
+            klucz = _klucz_punktu(e)
+            if klucz in juz:
+                continue
+            hh, mm = e["czas"].split(":")
+            termin = n.replace(year=d.year, month=d.month, day=d.day,
+                               hour=int(hh), minute=int(mm), second=0, microsecond=0)
+            # minutowy zapas: ntfy odrzuca terminy z przeszlosci
+            if (termin - n).total_seconds() < 60:
+                continue
+            tytul = "%s %s" % (e.get("ikona", "\u2022"), e["tytul"])
+            if sucho:
+                print("[SUCHY BIEG] %s %s -> %s" % (ds, e["czas"], tytul))
+            elif not wyslij_ping(tytul, tresc_pinga(e, d), priorytet=4 if e.get("akcja") else 3,
+                                 kiedy=termin.timestamp()):
+                continue
+            zapl.setdefault(ds, []).append(klucz)
+            nowe.append("%s %s %s" % (ds, e["czas"], e["tytul"]))
+    if nowe and not sucho:
+        # trzymamy tylko ostatnie kilka dni, zeby plik nie puchl
+        granica = (n.date() - datetime.timedelta(days=3)).isoformat()
+        zapl = {k: v for k, v in zapl.items() if k >= granica}
+        save(ZAPLANOWANE_PATH, zapl)
+    return nowe
+
+
 def tick(okno_min=25, sucho=False):
     """Odpalane cronem co 10 min. Okno 25 min z zapasem, bo cron GitHuba potrafi się spóźnić;
     przed dublami chroni plik state/wyslane-DATA.json, a nie wąskie okno."""
+    # Najwazniejsze dzieje sie tutaj: planujemy przyszle pingi z gory. Ponizsza
+    # petla to juz tylko siatka bezpieczenstwa na punkty, ktore minely, zanim
+    # cokolwiek zdazylo je zaplanowac (np. tuz po wdrozeniu zmiany w planie).
+    zaplanowane = zaplanuj_pingi(sucho=sucho)
+    for x in zaplanowane:
+        print("zaplanowano:", x)
+
     n = teraz()
     d = n.date()
     wyslane_path = os.path.join(STATE, "wyslane-%s.json" % d.isoformat())
@@ -1242,6 +1306,11 @@ def main():
         else:
             dziennik.odhacz(arg)
             print("Odhaczone: %s" % arg)
+    elif cmd == "zaplanuj":
+        nowe = zaplanuj_pingi(sucho=(arg == "sucho"))
+        print("Zaplanowano %d pingow." % len(nowe) if nowe else "Wszystko juz zaplanowane.")
+        for x in nowe:
+            print("   " + x)
     elif cmd == "przetworz":
         z = przetworz_zdarzenia()
         print("Zastosowano %d zdarzeń z telefonu." % len(z) if z else "Nic nowego z telefonu.")
