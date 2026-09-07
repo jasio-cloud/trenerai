@@ -1,51 +1,51 @@
 {
-  "cykl": 25,
-  "od": "2026-09-05",
-  "do": "2026-09-07",
+  "cykl": 26,
+  "od": "2026-09-08",
+  "do": "2026-09-10",
   "baza": "b_zapiekanka",
   "dni": [
     {
-      "sniadanie": "q_twarog",
-      "drugi": "q_jogurt_orzechy",
-      "kolacja": "q_omlet",
+      "sniadanie": "q_kanapki_jajko",
+      "drugi": "q_skyr",
+      "kolacja": "q_twarog",
       "obiad": "b_zapiekanka",
-      "data": "2026-09-05",
+      "data": "2026-09-08",
       "typ": 1,
       "makra": {
-        "kcal": 2355,
-        "bialko": 164,
-        "tluszcz": 103,
-        "wegle": 192
+        "kcal": 2303,
+        "bialko": 169,
+        "tluszcz": 89,
+        "wegle": 197
+      }
+    },
+    {
+      "sniadanie": "q_grzanki",
+      "drugi": "q_jogurt_orzechy",
+      "kolacja": "q_serek_box",
+      "obiad": "b_zapiekanka",
+      "data": "2026-09-09",
+      "typ": 2,
+      "makra": {
+        "kcal": 2358,
+        "bialko": 163,
+        "tluszcz": 107,
+        "wegle": 196
       }
     },
     {
       "sniadanie": "q_twarog_banan",
-      "drugi": "q_serek_box",
-      "kolacja": "q_jajecznica",
-      "obiad": "b_zapiekanka",
-      "data": "2026-09-06",
-      "typ": 2,
-      "makra": {
-        "kcal": 2388,
-        "bialko": 167,
-        "tluszcz": 103,
-        "wegle": 194
-      }
-    },
-    {
-      "sniadanie": "q_kanapki_jajko",
-      "drugi": "q_skyr",
+      "drugi": "q_kanapki_ser",
       "kolacja": "q_jajka_kukurydza",
       "obiad": "b_zapiekanka",
-      "data": "2026-09-07",
+      "data": "2026-09-10",
       "typ": 0,
       "makra": {
-        "kcal": 2274,
-        "bialko": 158,
-        "tluszcz": 98,
-        "wegle": 196
+        "kcal": 2376,
+        "bialko": 152,
+        "tluszcz": 102,
+        "wegle": 212
       }
     }
   ],
-  "wygenerowano": "2026-09-07T21:26:23+02:00"
+  "wygenerowano": "2026-09-08T00:13:54+02:00"
 }
