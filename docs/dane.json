@@ -1,5 +1,5 @@
 {
-  "wygenerowano": "2026-09-07T12:01:03+02:00",
+  "wygenerowano": "2026-09-07T17:48:51+02:00",
   "dzis": "2026-09-07",
   "typ_dzis": 0,
   "typy": {
@@ -39,113 +39,113 @@
     "cykl": 25,
     "od": "2026-09-05",
     "do": "2026-09-07",
-    "baza": "b_pieczarkowy",
+    "baza": "b_gulasz",
     "dni": [
       {
-        "sniadanie": "q_twarog",
-        "drugi": "q_jogurt_orzechy",
-        "kolacja": "q_omlet",
-        "obiad": "b_pieczarkowy",
+        "sniadanie": "q_jajecznica",
+        "drugi": "q_twarog_banan",
+        "kolacja": "q_jajka_kukurydza",
+        "obiad": "b_gulasz",
         "data": "2026-09-05",
         "typ": 1,
         "makra": {
-          "kcal": 2286,
-          "bialko": 161,
-          "tluszcz": 99,
-          "wegle": 188
+          "kcal": 2197,
+          "bialko": 149,
+          "tluszcz": 85,
+          "wegle": 212
         },
         "nazwy": {
-          "sniadanie": "Twarożek ze szczypiorkiem + 2 kromki",
-          "drugi": "Jogurt grecki z orzechami i miodem",
-          "obiad": "Makaron z wołowiną i pieczarkami w sosie",
-          "kolacja": "Omlet z serem i pomidorem"
+          "sniadanie": "Jajecznica z 3 jaj + 2 kromki + pomidor",
+          "drugi": "Twaróg z bananem i miodem",
+          "obiad": "Gulasz wołowy z papryką + ziemniaki",
+          "kolacja": "Box: sałatka jajeczna z kukurydzą"
         }
       },
       {
-        "sniadanie": "q_twarog_banan",
-        "drugi": "q_serek_box",
-        "kolacja": "q_jajecznica",
-        "obiad": "b_pieczarkowy",
+        "sniadanie": "q_twarog",
+        "drugi": "q_skyr",
+        "kolacja": "q_kanapki_jajko",
+        "obiad": "b_gulasz",
         "data": "2026-09-06",
         "typ": 2,
         "makra": {
-          "kcal": 2319,
+          "kcal": 2153,
           "bialko": 164,
-          "tluszcz": 99,
-          "wegle": 190
+          "tluszcz": 75,
+          "wegle": 200
         },
         "nazwy": {
-          "sniadanie": "Twaróg z bananem i miodem",
-          "drugi": "Box: serek wiejski + jajka na twardo + ogórki",
-          "obiad": "Makaron z wołowiną i pieczarkami w sosie",
-          "kolacja": "Jajecznica z 3 jaj + 2 kromki + pomidor"
+          "sniadanie": "Twarożek ze szczypiorkiem + 2 kromki",
+          "drugi": "Skyr z bananem i masłem orzechowym",
+          "obiad": "Gulasz wołowy z papryką + ziemniaki",
+          "kolacja": "Kanapki z jajkiem na twardo i serem (2 kromki)"
         }
       },
       {
-        "sniadanie": "q_kanapki_jajko",
-        "drugi": "q_skyr",
-        "kolacja": "q_jajka_kukurydza",
-        "obiad": "b_pieczarkowy",
+        "sniadanie": "q_kanapki_ser",
+        "drugi": "q_jogurt_orzechy",
+        "kolacja": "q_serek_box",
+        "obiad": "b_gulasz",
         "data": "2026-09-07",
         "typ": 0,
         "makra": {
-          "kcal": 2205,
-          "bialko": 155,
-          "tluszcz": 94,
-          "wegle": 192
+          "kcal": 2192,
+          "bialko": 152,
+          "tluszcz": 95,
+          "wegle": 199
         },
         "nazwy": {
-          "sniadanie": "Kanapki z jajkiem na twardo i serem (2 kromki)",
-          "drugi": "Skyr z bananem i masłem orzechowym",
-          "obiad": "Makaron z wołowiną i pieczarkami w sosie",
-          "kolacja": "Box: sałatka jajeczna z kukurydzą"
+          "sniadanie": "Kanapki z serem, musztardą i kiszonym ogórkiem",
+          "drugi": "Jogurt grecki z orzechami i miodem",
+          "obiad": "Gulasz wołowy z papryką + ziemniaki",
+          "kolacja": "Box: serek wiejski + jajka na twardo + ogórki"
         }
       }
     ],
-    "wygenerowano": "2026-09-07T12:01:02+02:00"
+    "wygenerowano": "2026-09-07T17:48:50+02:00"
   },
   "baza": {
-    "id": "b_pieczarkowy",
-    "nazwa": "Makaron z wołowiną i pieczarkami w sosie",
+    "id": "b_gulasz",
+    "nazwa": "Gulasz wołowy z papryką + ziemniaki",
     "porcje": 3,
-    "czas_min": 35,
-    "czas_pracy": 18,
-    "naczynia": "1 patelnia + 1 garnek",
-    "przechowywanie": "lodówka, 3 dni",
-    "odgrzewanie": "mikrofala 2,5 min, dolej łyżkę wody",
+    "czas_min": 95,
+    "czas_pracy": 20,
+    "naczynia": "1 garnek + 1 garnek na ziemniaki",
+    "przechowywanie": "lodówka, 3 dni (drugiego dnia jest lepszy)",
+    "odgrzewanie": "mikrofala 3 min",
     "box": true,
     "produkty": [
       [
-        "mielone_wolowe",
-        500
+        "wolowina_gulasz",
+        600
       ],
       [
-        "pieczarki",
-        400
+        "ziemniaki",
+        900
       ],
       [
-        "smietana",
-        150
-      ],
-      [
-        "makaron",
-        240
+        "papryka",
+        3
       ],
       [
         "cebula",
         2
       ],
       [
-        "czosnek",
-        3
+        "passata",
+        300
       ],
       [
-        "ser",
-        40
+        "bulion",
+        2
+      ],
+      [
+        "maka",
+        20
       ],
       [
         "olej",
-        15
+        20
       ],
       [
         "przyprawy",
@@ -153,12 +153,13 @@
       ]
     ],
     "kroki": [
-      "Pieczarki pokrój w plastry, cebulę w kostkę.",
-      "Rozgrzej patelnię MOCNO, wrzuć pieczarki bez tłuszczu i smaż 6 min aż odparuje z nich woda i się zrumienią. Nie sól na tym etapie — to cały sekret smaku.",
-      "Dodaj olej i cebulę, smaż 4 min. Potem mielone — 8 min, rozbijając łopatką.",
-      "Dodaj czosnek, sól, pieprz, wlej śmietanę i 100 ml wody. Gotuj 5 min na małym ogniu, wsyp starty ser i mieszaj aż się rozpuści.",
-      "Równolegle ugotuj makaron, odcedź i wymieszaj z sosem.",
-      "Rozłóż do 3 pojemników, ostudź, do lodówki."
+      "Wołowinę pokrój w kostkę ok. 2 cm, cebulę w piórka, paprykę w paski.",
+      "Rozgrzej garnek mocno, wlej olej i wrzuć mięso jednym rzutem. Smaż 6 min, przez pierwsze 3 min nie mieszaj — ma się przyrumienić, nie zagotować.",
+      "Dodaj cebulę, smaż 4 min. Wsyp łyżkę słodkiej papryki, sól i pieprz, wymieszaj.",
+      "Wlej passatę, 400 ml wody i 2 kostki bulionowe. Zagotuj, przykryj i duś na małym ogniu 60 min. To czas dla Ciebie — zrób w tym czasie coś innego.",
+      "Po 60 min dorzuć paprykę i duś jeszcze 15 min.",
+      "Mąkę rozmieszaj w pół szklanki ZIMNEJ wody, wlej do gulaszu, gotuj 3 min aż zgęstnieje.",
+      "Ziemniaki obierz i ugotuj w osolonej wodzie 20 min. Rozłóż gulasz i ziemniaki do 3 pojemników, ostudź, do lodówki."
     ]
   },
   "agenda": [
@@ -177,13 +178,13 @@
       "ping": false,
       "slot": "sniadanie",
       "opis": "Zjedz na spokojnie w domu, nie w biegu.",
-      "posilek": "Kanapki z jajkiem na twardo i serem (2 kromki)",
-      "posilek_id": "q_kanapki_jajko",
+      "posilek": "Kanapki z serem, musztardą i kiszonym ogórkiem",
+      "posilek_id": "q_kanapki_ser",
       "makra": {
-        "kcal": 490,
-        "bialko": 30,
-        "tluszcz": 24,
-        "wegle": 37
+        "kcal": 491,
+        "bialko": 24,
+        "tluszcz": 25,
+        "wegle": 42
       }
     },
     {
@@ -207,13 +208,13 @@
       "ping": true,
       "slot": "drugi",
       "opis": "Z boxa. Nie odkładaj — po czterech godzinach głodu zawsze dojadasz byle czym z automatu.",
-      "posilek": "Skyr z bananem i masłem orzechowym",
-      "posilek_id": "q_skyr",
+      "posilek": "Jogurt grecki z orzechami i miodem",
+      "posilek_id": "q_jogurt_orzechy",
       "makra": {
-        "kcal": 389,
-        "bialko": 38,
-        "tluszcz": 9,
-        "wegle": 42
+        "kcal": 415,
+        "bialko": 30,
+        "tluszcz": 15,
+        "wegle": 52
       }
     },
     {
@@ -230,13 +231,13 @@
       "ping": true,
       "slot": "obiad",
       "opis": "Główny box z lodówki — odgrzej w mikrofali.",
-      "posilek": "Makaron z wołowiną i pieczarkami w sosie",
-      "posilek_id": "b_pieczarkowy",
+      "posilek": "Gulasz wołowy z papryką + ziemniaki",
+      "posilek_id": "b_gulasz",
       "makra": {
-        "kcal": 867,
-        "bialko": 53,
-        "tluszcz": 41,
-        "wegle": 71
+        "kcal": 786,
+        "bialko": 51,
+        "tluszcz": 31,
+        "wegle": 78
       }
     },
     {
@@ -253,13 +254,13 @@
       "ping": true,
       "slot": "kolacja",
       "opis": "Ostatni posiłek na zmianie. Lekki, żeby nie leżeć z pełnym brzuchem przed pierwszą drzemką.",
-      "posilek": "Box: sałatka jajeczna z kukurydzą",
-      "posilek_id": "q_jajka_kukurydza",
+      "posilek": "Box: serek wiejski + jajka na twardo + ogórki",
+      "posilek_id": "q_serek_box",
       "makra": {
-        "kcal": 459,
-        "bialko": 34,
-        "tluszcz": 20,
-        "wegle": 42
+        "kcal": 500,
+        "bialko": 47,
+        "tluszcz": 24,
+        "wegle": 27
       }
     },
     {
@@ -1976,11 +1977,11 @@
   "alternatywy": {
     "sniadanie": [
       {
-        "id": "q_kanapki_ser",
-        "nazwa": "Kanapki z serem, musztardą i kiszonym ogórkiem",
-        "kcal": 491,
-        "bialko": 24,
-        "czas": 4,
+        "id": "q_kanapki_jajko",
+        "nazwa": "Kanapki z jajkiem na twardo i serem (2 kromki)",
+        "kcal": 490,
+        "bialko": 30,
+        "czas": 12,
         "bez_gotowania": false
       },
       {
@@ -1998,14 +1999,38 @@
         "bialko": 45,
         "czas": 5,
         "bez_gotowania": false
+      },
+      {
+        "id": "q_skyr",
+        "nazwa": "Skyr z bananem i masłem orzechowym",
+        "kcal": 389,
+        "bialko": 38,
+        "czas": 3,
+        "bez_gotowania": false
       }
     ],
     "drugi": [
       {
-        "id": "q_jogurt_orzechy",
-        "nazwa": "Jogurt grecki z orzechami i miodem",
-        "kcal": 415,
+        "id": "q_kanapki_jajko",
+        "nazwa": "Kanapki z jajkiem na twardo i serem (2 kromki)",
+        "kcal": 490,
         "bialko": 30,
+        "czas": 12,
+        "bez_gotowania": false
+      },
+      {
+        "id": "q_jajka_kukurydza",
+        "nazwa": "Box: sałatka jajeczna z kukurydzą",
+        "kcal": 459,
+        "bialko": 34,
+        "czas": 12,
+        "bez_gotowania": false
+      },
+      {
+        "id": "q_skyr",
+        "nazwa": "Skyr z bananem i masłem orzechowym",
+        "kcal": 389,
+        "bialko": 38,
         "czas": 3,
         "bez_gotowania": false
       },
@@ -2016,40 +2041,32 @@
         "bialko": 38,
         "czas": 4,
         "bez_gotowania": false
-      },
-      {
-        "id": "q_serek_box",
-        "nazwa": "Box: serek wiejski + jajka na twardo + ogórki",
-        "kcal": 500,
-        "bialko": 47,
-        "czas": 12,
-        "bez_gotowania": false
-      },
-      {
-        "id": "q_kanapki_ser",
-        "nazwa": "Kanapki z serem, musztardą i kiszonym ogórkiem",
-        "kcal": 491,
-        "bialko": 24,
-        "czas": 4,
-        "bez_gotowania": false
       }
     ],
     "obiad": [
       {
-        "id": "o_slojek",
-        "nazwa": "Gotowe danie ze słoika + pieczywo",
-        "kcal": 863,
-        "bialko": 52,
-        "czas": 4,
-        "bez_gotowania": true
+        "id": "b_leczo",
+        "nazwa": "Leczo z mieloną wołowiną + ziemniaki",
+        "kcal": 788,
+        "bialko": 51,
+        "czas": 40,
+        "bez_gotowania": false
       },
       {
-        "id": "o_kanapki_xl",
-        "nazwa": "Duże kanapki z wędliną wołową i serem",
-        "kcal": 855,
-        "bialko": 57,
-        "czas": 6,
-        "bez_gotowania": true
+        "id": "b_bolo",
+        "nazwa": "Makaron bolognese na wołowinie",
+        "kcal": 788,
+        "bialko": 48,
+        "czas": 40,
+        "bez_gotowania": false
+      },
+      {
+        "id": "b_wolowina_cebula",
+        "nazwa": "Wołowina duszona w cebuli + ziemniaki",
+        "kcal": 751,
+        "bialko": 49,
+        "czas": 100,
+        "bez_gotowania": false
       },
       {
         "id": "b_shepherd",
@@ -2058,25 +2075,9 @@
         "bialko": 49,
         "czas": 65,
         "bez_gotowania": false
-      },
-      {
-        "id": "b_zapiekanka",
-        "nazwa": "Zapiekanka makaronowa z mielonym i serem",
-        "kcal": 936,
-        "bialko": 56,
-        "czas": 55,
-        "bez_gotowania": false
       }
     ],
     "kolacja": [
-      {
-        "id": "q_kanapki_ser",
-        "nazwa": "Kanapki z serem, musztardą i kiszonym ogórkiem",
-        "kcal": 491,
-        "bialko": 24,
-        "czas": 4,
-        "bez_gotowania": false
-      },
       {
         "id": "q_twarog",
         "nazwa": "Twarożek ze szczypiorkiem + 2 kromki",
@@ -2086,19 +2087,27 @@
         "bez_gotowania": false
       },
       {
+        "id": "q_jajka_kukurydza",
+        "nazwa": "Box: sałatka jajeczna z kukurydzą",
+        "kcal": 459,
+        "bialko": 34,
+        "czas": 12,
+        "bez_gotowania": false
+      },
+      {
+        "id": "q_kanapki_jajko",
+        "nazwa": "Kanapki z jajkiem na twardo i serem (2 kromki)",
+        "kcal": 490,
+        "bialko": 30,
+        "czas": 12,
+        "bez_gotowania": false
+      },
+      {
         "id": "q_salatka_feta",
         "nazwa": "Sałatka z fetą, jajkiem i pomidorem + kromka",
         "kcal": 551,
         "bialko": 29,
         "czas": 7,
-        "bez_gotowania": false
-      },
-      {
-        "id": "q_serek_box",
-        "nazwa": "Box: serek wiejski + jajka na twardo + ogórki",
-        "kcal": 500,
-        "bialko": 47,
-        "czas": 12,
         "bez_gotowania": false
       }
     ]
@@ -2434,12 +2443,12 @@
   },
   "historia": {
     "bazy": [
+      "b_gulasz",
+      "b_wolowina_cebula",
       "b_pieczarkowy",
       "b_leczo",
       "b_leczo",
-      "b_shepherd",
-      "b_zapiekanka",
-      "b_kapusta"
+      "b_shepherd"
     ],
     "waga": [],
     "treningi": [],
