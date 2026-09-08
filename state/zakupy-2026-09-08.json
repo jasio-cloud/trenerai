@@ -1,0 +1,298 @@
+{
+  "kup": [
+    {
+      "klucz": "mielone_wolowe",
+      "nazwa": "Mielona wołowina",
+      "kat": "mieso",
+      "trw": "swieze",
+      "opakowan": 1,
+      "opak": 400,
+      "jedn": "g",
+      "brakuje": 200.0,
+      "dokupisz": 400,
+      "cena": 18.0
+    },
+    {
+      "klucz": "jaja",
+      "nazwa": "Jaja",
+      "kat": "nabial",
+      "trw": "chlodnia",
+      "opakowan": 1,
+      "opak": 10,
+      "jedn": "szt",
+      "brakuje": 1,
+      "dokupisz": 10,
+      "cena": 12.0
+    },
+    {
+      "klucz": "jogurt_grecki",
+      "nazwa": "Jogurt grecki 2%",
+      "kat": "nabial",
+      "trw": "chlodnia",
+      "opakowan": 1,
+      "opak": 400,
+      "jedn": "g",
+      "brakuje": 360,
+      "dokupisz": 400,
+      "cena": 6.0
+    },
+    {
+      "klucz": "serek_wiejski",
+      "nazwa": "Serek wiejski",
+      "kat": "nabial",
+      "trw": "chlodnia",
+      "opakowan": 1,
+      "opak": 1,
+      "jedn": "opak",
+      "brakuje": 1,
+      "dokupisz": 1,
+      "cena": 3.5
+    },
+    {
+      "klucz": "skyr",
+      "nazwa": "Skyr naturalny",
+      "kat": "nabial",
+      "trw": "chlodnia",
+      "opakowan": 1,
+      "opak": 400,
+      "jedn": "g",
+      "brakuje": 200,
+      "dokupisz": 400,
+      "cena": 8.0
+    },
+    {
+      "klucz": "twarog",
+      "nazwa": "Twaróg półtłusty",
+      "kat": "nabial",
+      "trw": "chlodnia",
+      "opakowan": 2,
+      "opak": 250,
+      "jedn": "g",
+      "brakuje": 260,
+      "dokupisz": 500,
+      "cena": 11.0
+    },
+    {
+      "klucz": "banan",
+      "nazwa": "Banan",
+      "kat": "warzywa",
+      "trw": "chlodnia",
+      "opakowan": 2,
+      "opak": 1,
+      "jedn": "szt",
+      "brakuje": 2,
+      "dokupisz": 2,
+      "cena": 2.4
+    },
+    {
+      "klucz": "cebula",
+      "nazwa": "Cebula",
+      "kat": "warzywa",
+      "trw": "trwale",
+      "opakowan": 2,
+      "opak": 1,
+      "jedn": "szt",
+      "brakuje": 2.0,
+      "dokupisz": 2,
+      "cena": 1.2
+    },
+    {
+      "klucz": "czosnek",
+      "nazwa": "Czosnek",
+      "kat": "warzywa",
+      "trw": "trwale",
+      "opakowan": 1,
+      "opak": 10,
+      "jedn": "zabek",
+      "brakuje": 3.0,
+      "dokupisz": 10,
+      "cena": 3.0
+    },
+    {
+      "klucz": "jablko",
+      "nazwa": "Jabłko",
+      "kat": "warzywa",
+      "trw": "trwale",
+      "opakowan": 1,
+      "opak": 1,
+      "jedn": "szt",
+      "brakuje": 1,
+      "dokupisz": 1,
+      "cena": 1.2
+    },
+    {
+      "klucz": "ogorek_kiszony",
+      "nazwa": "Ogórek kiszony",
+      "kat": "warzywa",
+      "trw": "trwale",
+      "opakowan": 1,
+      "opak": 8,
+      "jedn": "szt",
+      "brakuje": 2,
+      "dokupisz": 8,
+      "cena": 8.0
+    },
+    {
+      "klucz": "pomidor",
+      "nazwa": "Pomidor",
+      "kat": "warzywa",
+      "trw": "swieze",
+      "opakowan": 2,
+      "opak": 1,
+      "jedn": "szt",
+      "brakuje": 2,
+      "dokupisz": 2,
+      "cena": 3.0
+    },
+    {
+      "klucz": "chleb",
+      "nazwa": "Chleb żytni / pełnoziarnisty",
+      "kat": "pieczywo",
+      "trw": "chlodnia",
+      "opakowan": 1,
+      "opak": 16,
+      "jedn": "kromka",
+      "brakuje": 4,
+      "dokupisz": 16,
+      "cena": 6.0
+    },
+    {
+      "klucz": "makaron",
+      "nazwa": "Makaron (świderki/penne)",
+      "kat": "pieczywo",
+      "trw": "trwale",
+      "opakowan": 1,
+      "opak": 500,
+      "jedn": "g",
+      "brakuje": 240.0,
+      "dokupisz": 500,
+      "cena": 4.5
+    },
+    {
+      "klucz": "ketchup",
+      "nazwa": "Ketchup",
+      "kat": "spizarnia",
+      "trw": "trwale",
+      "opakowan": 1,
+      "opak": 30,
+      "jedn": "lyzka",
+      "brakuje": 1,
+      "dokupisz": 30,
+      "cena": 6.0
+    },
+    {
+      "klucz": "passata",
+      "nazwa": "Passata pomidorowa",
+      "kat": "spizarnia",
+      "trw": "trwale",
+      "opakowan": 1,
+      "opak": 500,
+      "jedn": "g",
+      "brakuje": 400.0,
+      "dokupisz": 500,
+      "cena": 5.0
+    }
+  ],
+  "mam": [
+    {
+      "klucz": "kukurydza",
+      "nazwa": "Kukurydza konserwowa",
+      "potrzeba": 100,
+      "w_domu": 100,
+      "jedn": "g"
+    },
+    {
+      "klucz": "maslo",
+      "nazwa": "Masło",
+      "potrzeba": 6,
+      "w_domu": 168.0,
+      "jedn": "g"
+    },
+    {
+      "klucz": "maslo_orzechowe",
+      "nazwa": "Masło orzechowe 100%",
+      "potrzeba": 1,
+      "w_domu": 21,
+      "jedn": "lyzka"
+    },
+    {
+      "klucz": "miod",
+      "nazwa": "Miód",
+      "potrzeba": 2,
+      "w_domu": 18,
+      "jedn": "lyzka"
+    },
+    {
+      "klucz": "mleko",
+      "nazwa": "Mleko 2%",
+      "potrzeba": 50,
+      "w_domu": 850.0,
+      "jedn": "ml"
+    },
+    {
+      "klucz": "musztarda",
+      "nazwa": "Musztarda",
+      "potrzeba": 3,
+      "w_domu": 9,
+      "jedn": "lyzka"
+    },
+    {
+      "klucz": "ogorek",
+      "nazwa": "Ogórek długi",
+      "potrzeba": 0.3,
+      "w_domu": 0.7,
+      "jedn": "szt"
+    },
+    {
+      "klucz": "olej",
+      "nazwa": "Olej rzepakowy",
+      "potrzeba": 15.0,
+      "w_domu": 988.0,
+      "jedn": "ml"
+    },
+    {
+      "klucz": "orzechy",
+      "nazwa": "Orzechy / migdały",
+      "potrzeba": 25,
+      "w_domu": 175,
+      "jedn": "g"
+    },
+    {
+      "klucz": "przyprawy",
+      "nazwa": "Przyprawy (sól, pieprz, papryka, oregano, majeranek)",
+      "potrzeba": 8.0,
+      "w_domu": 92.0,
+      "jedn": "porcja"
+    },
+    {
+      "klucz": "ser",
+      "nazwa": "Ser żółty starty",
+      "potrzeba": 100.0,
+      "w_domu": 130.0,
+      "jedn": "g"
+    },
+    {
+      "klucz": "ser_zolty",
+      "nazwa": "Ser żółty w plastrach",
+      "potrzeba": 7,
+      "w_domu": 7,
+      "jedn": "plaster"
+    },
+    {
+      "klucz": "smietana",
+      "nazwa": "Śmietana 18%",
+      "potrzeba": 140.0,
+      "w_domu": 180,
+      "jedn": "ml"
+    },
+    {
+      "klucz": "szczypiorek",
+      "nazwa": "Szczypiorek",
+      "potrzeba": 4,
+      "w_domu": 8,
+      "jedn": "lyzka"
+    }
+  ],
+  "koszt": 98.8,
+  "zrobione": true
+}

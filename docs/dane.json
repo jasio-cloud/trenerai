@@ -1,5 +1,5 @@
 {
-  "wygenerowano": "2026-09-08T00:13:54+02:00",
+  "wygenerowano": "2026-09-08T15:54:58+02:00",
   "dzis": "2026-09-08",
   "typ_dzis": 1,
   "typy": {
@@ -640,11 +640,11 @@
       }
     ],
     "koszt": 98.8,
-    "zrobione": false
+    "zrobione": true
   },
   "lodowka": {
     "mielone_wolowe": {
-      "ilosc": 300.0,
+      "ilosc": 200.0,
       "do": "2026-09-09"
     },
     "jaja": {
@@ -652,47 +652,43 @@
       "do": "2026-09-17"
     },
     "jogurt_grecki": {
-      "ilosc": 20,
+      "ilosc": 40,
       "do": "2026-09-17"
     },
     "maslo": {
-      "ilosc": 168.0,
+      "ilosc": 162.0,
       "do": "2026-09-17"
     },
     "mleko": {
-      "ilosc": 850.0,
+      "ilosc": 800.0,
       "do": "2026-09-17"
     },
     "ser": {
-      "ilosc": 130.0,
-      "do": "2026-09-17"
-    },
-    "ser_zolty": {
-      "ilosc": 7,
+      "ilosc": 30.0,
       "do": "2026-09-17"
     },
     "skyr": {
-      "ilosc": 100,
+      "ilosc": 200,
       "do": "2026-09-17"
     },
     "twarog": {
-      "ilosc": 120,
+      "ilosc": 240,
       "do": "2026-09-17"
     },
     "smietana": {
-      "ilosc": 180,
+      "ilosc": 40.0,
       "do": "2026-09-17"
     },
     "ogorek": {
-      "ilosc": 0.7,
+      "ilosc": 0.4,
       "do": "2026-09-09"
     },
     "ogorek_kiszony": {
-      "ilosc": 3,
+      "ilosc": 6,
       "do": "2027-03-24"
     },
     "szczypiorek": {
-      "ilosc": 8,
+      "ilosc": 4,
       "do": "2026-09-09"
     },
     "ziemniaki": {
@@ -700,7 +696,7 @@
       "do": "2027-03-24"
     },
     "chleb": {
-      "ilosc": 6,
+      "ilosc": 12,
       "do": "2026-09-17"
     },
     "koncentrat": {
@@ -711,33 +707,45 @@
       "ilosc": 5.0,
       "do": "2027-03-24"
     },
-    "kukurydza": {
-      "ilosc": 100,
-      "do": "2027-03-24"
-    },
     "maslo_orzechowe": {
-      "ilosc": 21,
+      "ilosc": 20,
       "do": "2027-03-24"
     },
     "miod": {
-      "ilosc": 18,
+      "ilosc": 16,
       "do": "2027-03-24"
     },
     "musztarda": {
-      "ilosc": 9,
+      "ilosc": 6,
       "do": "2027-03-24"
     },
     "olej": {
-      "ilosc": 988.0,
+      "ilosc": 973.0,
       "do": "2027-03-24"
     },
     "orzechy": {
-      "ilosc": 175,
+      "ilosc": 150,
       "do": "2027-03-24"
     },
     "przyprawy": {
-      "ilosc": 92.0,
+      "ilosc": 84.0,
       "do": "2027-03-24"
+    },
+    "czosnek": {
+      "ilosc": 7.0,
+      "do": "2027-03-27"
+    },
+    "makaron": {
+      "ilosc": 260.0,
+      "do": "2027-03-27"
+    },
+    "ketchup": {
+      "ilosc": 29,
+      "do": "2027-03-27"
+    },
+    "passata": {
+      "ilosc": 100.0,
+      "do": "2027-03-27"
     }
   },
   "trening": {
