@@ -2,50 +2,50 @@
   "cykl": 26,
   "od": "2026-09-08",
   "do": "2026-09-10",
-  "baza": "b_zapiekanka",
+  "baza": "b_wolowina_cebula",
   "dni": [
     {
-      "sniadanie": "q_kanapki_jajko",
-      "drugi": "q_skyr",
-      "kolacja": "q_twarog",
-      "obiad": "b_zapiekanka",
+      "sniadanie": "q_skyr",
+      "drugi": "q_tortilla",
+      "kolacja": "q_kanapki_jajko",
+      "obiad": "b_wolowina_cebula",
       "data": "2026-09-08",
       "typ": 1,
       "makra": {
-        "kcal": 2303,
-        "bialko": 169,
-        "tluszcz": 89,
-        "wegle": 197
+        "kcal": 2201,
+        "bialko": 149,
+        "tluszcz": 96,
+        "wegle": 187
       }
     },
     {
-      "sniadanie": "q_grzanki",
-      "drugi": "q_jogurt_orzechy",
-      "kolacja": "q_serek_box",
-      "obiad": "b_zapiekanka",
+      "sniadanie": "q_twarog",
+      "drugi": "q_jajka_kukurydza",
+      "kolacja": "q_omlet",
+      "obiad": "b_wolowina_cebula",
       "data": "2026-09-09",
       "typ": 2,
       "makra": {
-        "kcal": 2358,
-        "bialko": 163,
-        "tluszcz": 107,
-        "wegle": 196
+        "kcal": 2214,
+        "bialko": 161,
+        "tluszcz": 94,
+        "wegle": 177
       }
     },
     {
       "sniadanie": "q_twarog_banan",
-      "drugi": "q_kanapki_ser",
-      "kolacja": "q_jajka_kukurydza",
-      "obiad": "b_zapiekanka",
+      "drugi": "q_jogurt_orzechy",
+      "kolacja": "q_serek_box",
+      "obiad": "b_wolowina_cebula",
       "data": "2026-09-10",
       "typ": 0,
       "makra": {
-        "kcal": 2376,
-        "bialko": 152,
-        "tluszcz": 102,
-        "wegle": 212
+        "kcal": 2156,
+        "bialko": 164,
+        "tluszcz": 82,
+        "wegle": 202
       }
     }
   ],
-  "wygenerowano": "2026-09-08T00:13:54+02:00"
+  "wygenerowano": "2026-09-10T01:20:09+02:00"
 }

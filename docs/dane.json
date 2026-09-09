@@ -1,7 +1,7 @@
 {
-  "wygenerowano": "2026-09-09T00:53:55+02:00",
-  "dzis": "2026-09-09",
-  "typ_dzis": 2,
+  "wygenerowano": "2026-09-10T01:20:09+02:00",
+  "dzis": "2026-09-10",
+  "typ_dzis": 0,
   "typy": {
     "0": {
       "nazwa": "ZMIANA 24h",
@@ -39,113 +39,109 @@
     "cykl": 26,
     "od": "2026-09-08",
     "do": "2026-09-10",
-    "baza": "b_zapiekanka",
+    "baza": "b_wolowina_cebula",
     "dni": [
       {
-        "sniadanie": "q_kanapki_jajko",
-        "drugi": "q_skyr",
-        "kolacja": "q_twarog",
-        "obiad": "b_zapiekanka",
+        "sniadanie": "q_skyr",
+        "drugi": "q_tortilla",
+        "kolacja": "q_kanapki_jajko",
+        "obiad": "b_wolowina_cebula",
         "data": "2026-09-08",
         "typ": 1,
         "makra": {
-          "kcal": 2303,
-          "bialko": 169,
-          "tluszcz": 89,
-          "wegle": 197
+          "kcal": 2201,
+          "bialko": 149,
+          "tluszcz": 96,
+          "wegle": 187
         },
         "nazwy": {
-          "sniadanie": "Kanapki z jajkiem na twardo i serem (2 kromki)",
-          "drugi": "Skyr z bananem i masłem orzechowym",
-          "obiad": "Zapiekanka makaronowa z mielonym i serem",
-          "kolacja": "Twarożek ze szczypiorkiem + 2 kromki"
+          "sniadanie": "Skyr z bananem i masłem orzechowym",
+          "drugi": "Tortilla z jajecznicą, serem i sałatą",
+          "obiad": "Wołowina duszona w cebuli + ziemniaki",
+          "kolacja": "Kanapki z jajkiem na twardo i serem (2 kromki)"
         }
       },
       {
-        "sniadanie": "q_grzanki",
-        "drugi": "q_jogurt_orzechy",
-        "kolacja": "q_serek_box",
-        "obiad": "b_zapiekanka",
+        "sniadanie": "q_twarog",
+        "drugi": "q_jajka_kukurydza",
+        "kolacja": "q_omlet",
+        "obiad": "b_wolowina_cebula",
         "data": "2026-09-09",
         "typ": 2,
         "makra": {
-          "kcal": 2358,
-          "bialko": 163,
-          "tluszcz": 107,
-          "wegle": 196
+          "kcal": 2214,
+          "bialko": 161,
+          "tluszcz": 94,
+          "wegle": 177
         },
         "nazwy": {
-          "sniadanie": "Grzanki z serem, jajkiem i pomidorem",
-          "drugi": "Jogurt grecki z orzechami i miodem",
-          "obiad": "Zapiekanka makaronowa z mielonym i serem",
-          "kolacja": "Box: serek wiejski + jajka na twardo + ogórki"
+          "sniadanie": "Twarożek ze szczypiorkiem + 2 kromki",
+          "drugi": "Box: sałatka jajeczna z kukurydzą",
+          "obiad": "Wołowina duszona w cebuli + ziemniaki",
+          "kolacja": "Omlet z serem i pomidorem"
         }
       },
       {
         "sniadanie": "q_twarog_banan",
-        "drugi": "q_kanapki_ser",
-        "kolacja": "q_jajka_kukurydza",
-        "obiad": "b_zapiekanka",
+        "drugi": "q_jogurt_orzechy",
+        "kolacja": "q_serek_box",
+        "obiad": "b_wolowina_cebula",
         "data": "2026-09-10",
         "typ": 0,
         "makra": {
-          "kcal": 2376,
-          "bialko": 152,
-          "tluszcz": 102,
-          "wegle": 212
+          "kcal": 2156,
+          "bialko": 164,
+          "tluszcz": 82,
+          "wegle": 202
         },
         "nazwy": {
           "sniadanie": "Twaróg z bananem i miodem",
-          "drugi": "Kanapki z serem, musztardą i kiszonym ogórkiem",
-          "obiad": "Zapiekanka makaronowa z mielonym i serem",
-          "kolacja": "Box: sałatka jajeczna z kukurydzą"
+          "drugi": "Jogurt grecki z orzechami i miodem",
+          "obiad": "Wołowina duszona w cebuli + ziemniaki",
+          "kolacja": "Box: serek wiejski + jajka na twardo + ogórki"
         }
       }
     ],
-    "wygenerowano": "2026-09-08T00:13:54+02:00"
+    "wygenerowano": "2026-09-10T01:20:09+02:00"
   },
   "baza": {
-    "id": "b_zapiekanka",
-    "nazwa": "Zapiekanka makaronowa z mielonym i serem",
+    "id": "b_wolowina_cebula",
+    "nazwa": "Wołowina duszona w cebuli + ziemniaki",
     "porcje": 3,
-    "czas_min": 55,
-    "czas_pracy": 20,
-    "naczynia": "1 patelnia + 1 forma do zapiekania",
-    "przechowywanie": "lodówka, 3 dni — kroisz na kwadraty i pakujesz",
-    "odgrzewanie": "mikrofala 3 min albo piekarnik 10 min",
+    "czas_min": 100,
+    "czas_pracy": 15,
+    "naczynia": "1 garnek + 1 garnek na ziemniaki",
+    "przechowywanie": "lodówka, 3 dni",
+    "odgrzewanie": "mikrofala 3 min",
     "box": true,
     "produkty": [
       [
-        "mielone_wolowe",
-        500
-      ],
-      [
-        "makaron",
-        240
-      ],
-      [
-        "passata",
-        400
-      ],
-      [
-        "ser",
-        100
-      ],
-      [
-        "smietana",
-        120
+        "wolowina_gulasz",
+        600
       ],
       [
         "cebula",
+        4
+      ],
+      [
+        "bulion",
         2
       ],
       [
-        "czosnek",
-        3
+        "musztarda",
+        2
+      ],
+      [
+        "maka",
+        20
+      ],
+      [
+        "ziemniaki",
+        900
       ],
       [
         "olej",
-        15
+        20
       ],
       [
         "przyprawy",
@@ -153,55 +149,60 @@
       ]
     ],
     "kroki": [
-      "Nastaw piekarnik na 200°C. Ugotuj makaron 2 minuty KRÓCEJ niż pisze na opakowaniu — dojdzie w piekarniku.",
-      "Na patelni na oleju zeszklij posiekaną cebulę (4 min), dodaj mielone i smaż 8 min rozbijając łopatką.",
-      "Dodaj czosnek, passatę, sól, pieprz i oregano. Duś 10 min.",
-      "Wymieszaj odcedzony makaron z sosem i śmietaną prosto w formie do zapiekania — jedno naczynie mniej do mycia.",
-      "Posyp całość startym serem.",
-      "Piecz 20 min aż ser się zarumieni. Wyjmij i odstaw na 10 min, inaczej rozpadnie się przy krojeniu.",
-      "Potnij na 3 równe części, każdą do pojemnika, ostudź i do lodówki."
+      "Wołowinę pokrój w plastry w poprzek włókien, cebulę w piórka.",
+      "Rozgrzej garnek na maksa, wlej olej, wrzuć mięso i smaż 6 min — przez pierwsze 3 min nie ruszaj, musi się przyrumienić na brązowo.",
+      "Dodaj całą cebulę. 4 sztuki to wygląda na dużo, ale rozpuści się w sos. Smaż 6 min aż zmięknie.",
+      "Dodaj 2 łyżki musztardy, sól, pieprz, 2 kostki bulionowe i 500 ml wody. Przykryj i duś 70 min na najmniejszym ogniu.",
+      "Mąkę rozmieszaj w zimnej wodzie, wlej i gotuj 3 min aż sos zgęstnieje.",
+      "Ugotuj ziemniaki. Rozłóż wszystko do 3 pojemników, ostudź, do lodówki."
     ]
   },
   "agenda": [
     {
-      "czas": "08:00",
-      "tytul": "Pobudka + waga",
-      "ikona": "⚖️",
+      "czas": "05:30",
+      "tytul": "Pobudka",
+      "ikona": "⏰",
       "ping": true,
-      "akcja": "suple",
-      "opis": "Zważ się od razu po wstaniu, przed jedzeniem i piciem. Potem woda, suple, toaleta — i bez telefonu."
+      "opis": "Szklanka wody od razu po wstaniu. Boxy masz spakowane w lodówce od wczoraj — wyjmij je teraz, żeby nie zapomnieć.",
+      "akcja": "suple"
     },
     {
-      "czas": "08:30",
-      "tytul": "TRENING GŁÓWNY — pierwsza rzecz dnia",
-      "ikona": "🏋️",
-      "ping": true,
-      "akcja": "trening_glowny",
-      "opis": "Najlepsza sesja w cyklu: wyspany, po dniu normalnego jedzenia. Tu bijesz rekordy. Wchodzisz i robisz, zero telefonu przed."
-    },
-    {
-      "czas": "09:45",
-      "tytul": "Śniadanie po treningu",
+      "czas": "05:45",
+      "tytul": "Śniadanie w domu",
       "ikona": "🍳",
-      "ping": true,
+      "ping": false,
       "slot": "sniadanie",
-      "opis": "Pierwszy posiłek dnia, zaraz po sztandze.",
-      "posilek": "Grzanki z serem, jajkiem i pomidorem",
-      "posilek_id": "q_grzanki",
+      "opis": "Zjedz na spokojnie w domu, nie w biegu.",
+      "posilek": "Twaróg z bananem i miodem",
+      "posilek_id": "q_twarog_banan",
       "makra": {
-        "kcal": 507,
-        "bialko": 30,
-        "tluszcz": 23,
-        "wegle": 42
+        "kcal": 490,
+        "bialko": 38,
+        "tluszcz": 12,
+        "wegle": 53
       }
     },
     {
-      "czas": "13:00",
+      "czas": "06:20",
+      "tytul": "Wyjście z domu",
+      "ikona": "🚪",
+      "ping": true,
+      "opis": "Sprawdź: boxy, butelka wody 1,5 l, ładowarka."
+    },
+    {
+      "czas": "07:00",
+      "tytul": "Początek służby",
+      "ikona": "🛡️",
+      "ping": false,
+      "opis": "Dziś bez treningu — jedyny dzień w cyklu, kiedy nie dźwigasz. Zadanie na dobę: jeść regularnie, wypić 3 l wody i przespać swoje drzemki."
+    },
+    {
+      "czas": "09:30",
       "tytul": "Drugi posiłek",
       "ikona": "🥪",
       "ping": true,
       "slot": "drugi",
-      "opis": "",
+      "opis": "Z boxa. Nie odkładaj — po czterech godzinach głodu zawsze dojadasz byle czym z automatu.",
       "posilek": "Jogurt grecki z orzechami i miodem",
       "posilek_id": "q_jogurt_orzechy",
       "makra": {
@@ -212,35 +213,42 @@
       }
     },
     {
-      "czas": "16:00",
+      "czas": "12:00",
+      "tytul": "Rozruszaj się",
+      "ikona": "🤸",
+      "ping": true,
+      "opis": "5 minut: 10 przysiadów, krążenia ramion, rozciągnięcie karku. Plecy po staniu Ci podziękują."
+    },
+    {
+      "czas": "13:30",
       "tytul": "Obiad",
       "ikona": "🍽️",
       "ping": true,
       "slot": "obiad",
-      "opis": "Box z lodówki, mikrofala, zero roboty.",
-      "posilek": "Zapiekanka makaronowa z mielonym i serem",
-      "posilek_id": "b_zapiekanka",
+      "opis": "Główny box z lodówki — odgrzej w mikrofali.",
+      "posilek": "Wołowina duszona w cebuli + ziemniaki",
+      "posilek_id": "b_wolowina_cebula",
       "makra": {
-        "kcal": 936,
-        "bialko": 56,
-        "tluszcz": 45,
-        "wegle": 75
+        "kcal": 751,
+        "bialko": 49,
+        "tluszcz": 31,
+        "wegle": 70
       }
     },
     {
-      "czas": "18:00",
-      "tytul": "Spacer",
-      "ikona": "🚶",
+      "czas": "17:00",
+      "tytul": "Woda — kontrola",
+      "ikona": "💧",
       "ping": true,
-      "opis": "20–30 minut. Nie kardio — chodzi o rozruszanie bioder i pleców oraz o kroki, których dziś nie zrobisz sam z siebie."
+      "opis": "Powinieneś mieć wypite ok. 2 l. Nadrabiaj teraz, nie w nocy — inaczej przedrzemiesz noc na chodzeniu do toalety."
     },
     {
-      "czas": "19:30",
+      "czas": "20:30",
       "tytul": "Kolacja",
       "ikona": "🌙",
       "ping": true,
       "slot": "kolacja",
-      "opis": "",
+      "opis": "Ostatni posiłek na zmianie. Lekki, żeby nie leżeć z pełnym brzuchem przed pierwszą drzemką.",
       "posilek": "Box: serek wiejski + jajka na twardo + ogórki",
       "posilek_id": "q_serek_box",
       "makra": {
@@ -251,34 +259,18 @@
       }
     },
     {
-      "czas": "21:00",
-      "tytul": "PAKOWANIE BOXÓW na jutro",
-      "ikona": "📦",
+      "czas": "22:40",
+      "tytul": "Przygotuj się do nocy",
+      "ikona": "🤸",
       "ping": true,
-      "akcja": "boxy",
-      "opis": "Najważniejsze 15 minut w całym cyklu. Bez tego jutro na zmianie jesz z automatu i cała robota z gotowaniem idzie w piach."
+      "opis": "5 minut rozciągania bioder i karku. Ustaw cztery budziki na końce drzemek: 00:20, 02:00, 03:40, 05:20."
     },
     {
-      "czas": "21:30",
-      "tytul": "Telefon w dół + budzik",
-      "ikona": "📵",
-      "ping": true,
-      "akcja": "budzik",
-      "opis": "Jutro zmiana — to jest ten wieczór, którego nie można przespać po łebkach.",
-      "budzik": {
-        "godzina": "05:30",
-        "minut": 480,
-        "jutro": true,
-        "ile": "8 h 00 min",
-        "typ_docelowy": "ZMIANA 24h"
-      }
-    },
-    {
-      "czas": "22:00",
-      "tytul": "Sen",
+      "czas": "23:00",
+      "tytul": "Drzemka 1 z 4 — do 00:20",
       "ikona": "😴",
       "ping": true,
-      "opis": "Krótka noc przed zmianą, ale jak położysz się teraz, wstaniesz w miarę ludzko."
+      "opis": "1 h 20 to prawie pełny cykl snu i dlatego wstajesz po niej mniej rozbity niż po czterdziestu minutach. Telefon ekranem w dół."
     }
   ],
   "zakupy": {
@@ -580,10 +572,6 @@
     "zrobione": true
   },
   "lodowka": {
-    "mielone_wolowe": {
-      "ilosc": 200.0,
-      "do": "2026-09-09"
-    },
     "jaja": {
       "ilosc": 9,
       "do": "2026-09-17"
@@ -616,17 +604,9 @@
       "ilosc": 40.0,
       "do": "2026-09-17"
     },
-    "ogorek": {
-      "ilosc": 0.4,
-      "do": "2026-09-09"
-    },
     "ogorek_kiszony": {
       "ilosc": 6,
       "do": "2027-03-24"
-    },
-    "szczypiorek": {
-      "ilosc": 4,
-      "do": "2026-09-09"
     },
     "ziemniaki": {
       "ilosc": 1100.0,
@@ -686,61 +666,16 @@
     }
   },
   "trening": {
-    "rodzaj": "glowny",
+    "rodzaj": "zmiana",
     "trening": {
-      "id": "w_nogi",
-      "nazwa": "GŁÓWNY C — Nogi i brzuch",
-      "czas_min": 55,
-      "rozgrzewka": [
-        "Trenujesz zaraz po wstaniu, na czczo — rozgrzewki NIE skracaj, to nie jest miejsce na oszczędzanie czasu.",
-        "8 min: 30 przysiadów bez ciężaru, krążenia ramion i bioder, 20 pompek.",
-        "Przysiad sama sztanga x15, potem 50% x8"
-      ],
-      "cwiczenia": [
-        {
-          "nazwa": "Przysiad ze sztangą (w racku, z bolcami)",
-          "serie": 4,
-          "powt": "6-8",
-          "przerwa": "3 min",
-          "wskazowka": "Bolce ustawione na wysokości dołu ruchu — trenujesz sam, to jest obowiązkowe."
-        },
-        {
-          "nazwa": "Rumuński martwy ciąg",
-          "serie": 3,
-          "powt": "8-10",
-          "przerwa": "2 min",
-          "wskazowka": "Kolana prawie proste, biodra jadą do tyłu. Poczujesz ciągnięcie z tyłu uda — o to chodzi."
-        },
-        {
-          "nazwa": "Wykroki chodzone z hantlami",
-          "serie": 3,
-          "powt": "10 na nogę",
-          "przerwa": "90 s",
-          "wskazowka": "Długi krok. Krótki krok robi z tego ćwiczenie na kolana."
-        },
-        {
-          "nazwa": "Wspięcia na palce z hantlami",
-          "serie": 3,
-          "powt": "15-20",
-          "przerwa": "60 s",
-          "wskazowka": "Pełny zakres, sekunda przytrzymania na górze."
-        },
-        {
-          "nazwa": "Plank",
-          "serie": 3,
-          "powt": "45-60 s",
-          "przerwa": "45 s",
-          "wskazowka": "Pośladki napięte, biodra nie lecą w dół ani w górę."
-        },
-        {
-          "nazwa": "Unoszenie nóg w zwisie albo leżąc",
-          "serie": 3,
-          "powt": "12-15",
-          "przerwa": "60 s",
-          "wskazowka": "Ruch z dołu brzucha, nie z bioder. Wolno w dół."
-        }
-      ],
-      "finisz": "5 min rozciągania nóg. Nogi po 24h stania na zmianie lubią to szczególnie."
+      "nazwa": "Dzień zmiany — bez treningu",
+      "zasada": "Na 24h służbie nie trenujesz. Zamiast tego: co 2-3 godziny wstań i przejdź się 5 minut, zrób 10 przysiadów i rozciągnij kark. To nie jest trening, to profilaktyka pleców przy staniu i siedzeniu.",
+      "mikro": [
+        "10 przysiadów bez ciężaru",
+        "10 krążeń ramion w tył",
+        "30 s rozciągania zginaczy bioder na każdą nogę",
+        "Odchylenie głowy w tył i na boki po 15 s"
+      ]
     }
   },
   "nawyki": [
@@ -1964,6 +1899,14 @@
   "alternatywy": {
     "sniadanie": [
       {
+        "id": "q_twarog",
+        "nazwa": "Twarożek ze szczypiorkiem + 2 kromki",
+        "kcal": 488,
+        "bialko": 45,
+        "czas": 5,
+        "bez_gotowania": false
+      },
+      {
         "id": "q_kanapki_jajko",
         "nazwa": "Kanapki z jajkiem na twardo i serem (2 kromki)",
         "kcal": 490,
@@ -1972,19 +1915,11 @@
         "bez_gotowania": false
       },
       {
-        "id": "q_shakshuka",
-        "nazwa": "Jajka w sosie pomidorowym (shakshuka)",
-        "kcal": 504,
-        "bialko": 27,
-        "czas": 12,
-        "bez_gotowania": false
-      },
-      {
-        "id": "q_omlet",
-        "nazwa": "Omlet z serem i pomidorem",
-        "kcal": 516,
-        "bialko": 33,
-        "czas": 10,
+        "id": "q_skyr",
+        "nazwa": "Skyr z bananem i masłem orzechowym",
+        "kcal": 389,
+        "bialko": 38,
+        "czas": 3,
         "bez_gotowania": false
       },
       {
@@ -2032,36 +1967,36 @@
     ],
     "obiad": [
       {
-        "id": "o_kanapki_xl",
-        "nazwa": "Duże kanapki z wędliną wołową i serem",
-        "kcal": 855,
-        "bialko": 57,
-        "czas": 6,
-        "bez_gotowania": true
-      },
-      {
-        "id": "b_pieczarkowy",
-        "nazwa": "Makaron z wołowiną i pieczarkami w sosie",
-        "kcal": 867,
-        "bialko": 53,
-        "czas": 35,
+        "id": "b_kapusta",
+        "nazwa": "Wołowina z kapustą kiszoną i ziemniakami",
+        "kcal": 733,
+        "bialko": 48,
+        "czas": 45,
         "bez_gotowania": false
       },
       {
-        "id": "o_slojek",
-        "nazwa": "Gotowe danie ze słoika + pieczywo",
-        "kcal": 863,
-        "bialko": 52,
-        "czas": 4,
-        "bez_gotowania": true
+        "id": "b_bolo",
+        "nazwa": "Makaron bolognese na wołowinie",
+        "kcal": 788,
+        "bialko": 48,
+        "czas": 40,
+        "bez_gotowania": false
       },
       {
-        "id": "o_parowki",
-        "nazwa": "Parówki wołowe z jajkami i pieczywem",
-        "kcal": 856,
-        "bialko": 46,
-        "czas": 8,
-        "bez_gotowania": true
+        "id": "b_gulasz",
+        "nazwa": "Gulasz wołowy z papryką + ziemniaki",
+        "kcal": 786,
+        "bialko": 51,
+        "czas": 95,
+        "bez_gotowania": false
+      },
+      {
+        "id": "b_leczo",
+        "nazwa": "Leczo z mieloną wołowiną + ziemniaki",
+        "kcal": 788,
+        "bialko": 51,
+        "czas": 40,
+        "bez_gotowania": false
       }
     ],
     "kolacja": [
@@ -2071,14 +2006,6 @@
         "kcal": 488,
         "bialko": 45,
         "czas": 5,
-        "bez_gotowania": false
-      },
-      {
-        "id": "q_omlet",
-        "nazwa": "Omlet z serem i pomidorem",
-        "kcal": 516,
-        "bialko": 33,
-        "czas": 10,
         "bez_gotowania": false
       },
       {
@@ -2096,18 +2023,18 @@
         "bialko": 30,
         "czas": 12,
         "bez_gotowania": false
+      },
+      {
+        "id": "q_kanapki_ser",
+        "nazwa": "Kanapki z serem, musztardą i kiszonym ogórkiem",
+        "kcal": 491,
+        "bialko": 24,
+        "czas": 4,
+        "bez_gotowania": false
       }
     ]
   },
   "gotowce": [
-    {
-      "id": "o_kanapki_xl",
-      "nazwa": "Duże kanapki z wędliną wołową i serem",
-      "kcal": 855,
-      "bialko": 57,
-      "czas": 6,
-      "bez_gotowania": true
-    },
     {
       "id": "o_slojek",
       "nazwa": "Gotowe danie ze słoika + pieczywo",
@@ -2117,11 +2044,11 @@
       "bez_gotowania": true
     },
     {
-      "id": "o_parowki",
-      "nazwa": "Parówki wołowe z jajkami i pieczywem",
-      "kcal": 856,
-      "bialko": 46,
-      "czas": 8,
+      "id": "o_kanapki_xl",
+      "nazwa": "Duże kanapki z wędliną wołową i serem",
+      "kcal": 855,
+      "bialko": 57,
+      "czas": 6,
       "bez_gotowania": true
     },
     {
@@ -2438,12 +2365,12 @@
   },
   "historia": {
     "bazy": [
-      "b_zapiekanka",
-      "b_zapiekanka",
-      "b_kapusta",
-      "b_gulasz",
       "b_wolowina_cebula",
-      "b_pieczarkowy"
+      "b_leczo",
+      "b_pieczarkowy",
+      "b_bolo",
+      "b_zapiekanka",
+      "b_zapiekanka"
     ],
     "waga": [],
     "treningi": [],
@@ -2458,7 +2385,7 @@
   },
   "kroki": null,
   "kroki_cel": {
-    "cel": 10000,
-    "komentarz": "Jedyny pełny dzień w domu. Tu robisz większość tygodniowego chodzenia."
+    "cel": 7000,
+    "komentarz": "Na służbie kroki robią się same z obchodów — ten cel to sygnał, żebyś nie przesiedział całej doby na krześle."
   }
 }
