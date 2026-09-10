@@ -1,5 +1,5 @@
 {
-  "wygenerowano": "2026-09-10T01:20:09+02:00",
+  "wygenerowano": "2026-09-10T03:12:43+02:00",
   "dzis": "2026-09-10",
   "typ_dzis": 0,
   "typy": {
@@ -39,25 +39,25 @@
     "cykl": 26,
     "od": "2026-09-08",
     "do": "2026-09-10",
-    "baza": "b_wolowina_cebula",
+    "baza": "b_gulasz",
     "dni": [
       {
         "sniadanie": "q_skyr",
         "drugi": "q_tortilla",
         "kolacja": "q_kanapki_jajko",
-        "obiad": "b_wolowina_cebula",
+        "obiad": "b_gulasz",
         "data": "2026-09-08",
         "typ": 1,
         "makra": {
-          "kcal": 2201,
-          "bialko": 149,
+          "kcal": 2236,
+          "bialko": 151,
           "tluszcz": 96,
-          "wegle": 187
+          "wegle": 195
         },
         "nazwy": {
           "sniadanie": "Skyr z bananem i masłem orzechowym",
           "drugi": "Tortilla z jajecznicą, serem i sałatą",
-          "obiad": "Wołowina duszona w cebuli + ziemniaki",
+          "obiad": "Gulasz wołowy z papryką + ziemniaki",
           "kolacja": "Kanapki z jajkiem na twardo i serem (2 kromki)"
         }
       },
@@ -65,19 +65,19 @@
         "sniadanie": "q_twarog",
         "drugi": "q_jajka_kukurydza",
         "kolacja": "q_omlet",
-        "obiad": "b_wolowina_cebula",
+        "obiad": "b_gulasz",
         "data": "2026-09-09",
         "typ": 2,
         "makra": {
-          "kcal": 2214,
-          "bialko": 161,
+          "kcal": 2249,
+          "bialko": 163,
           "tluszcz": 94,
-          "wegle": 177
+          "wegle": 185
         },
         "nazwy": {
           "sniadanie": "Twarożek ze szczypiorkiem + 2 kromki",
           "drugi": "Box: sałatka jajeczna z kukurydzą",
-          "obiad": "Wołowina duszona w cebuli + ziemniaki",
+          "obiad": "Gulasz wołowy z papryką + ziemniaki",
           "kolacja": "Omlet z serem i pomidorem"
         }
       },
@@ -85,33 +85,33 @@
         "sniadanie": "q_twarog_banan",
         "drugi": "q_jogurt_orzechy",
         "kolacja": "q_serek_box",
-        "obiad": "b_wolowina_cebula",
+        "obiad": "b_gulasz",
         "data": "2026-09-10",
         "typ": 0,
         "makra": {
-          "kcal": 2156,
-          "bialko": 164,
+          "kcal": 2191,
+          "bialko": 166,
           "tluszcz": 82,
-          "wegle": 202
+          "wegle": 210
         },
         "nazwy": {
           "sniadanie": "Twaróg z bananem i miodem",
           "drugi": "Jogurt grecki z orzechami i miodem",
-          "obiad": "Wołowina duszona w cebuli + ziemniaki",
+          "obiad": "Gulasz wołowy z papryką + ziemniaki",
           "kolacja": "Box: serek wiejski + jajka na twardo + ogórki"
         }
       }
     ],
-    "wygenerowano": "2026-09-10T01:20:09+02:00"
+    "wygenerowano": "2026-09-10T03:12:43+02:00"
   },
   "baza": {
-    "id": "b_wolowina_cebula",
-    "nazwa": "Wołowina duszona w cebuli + ziemniaki",
+    "id": "b_gulasz",
+    "nazwa": "Gulasz wołowy z papryką + ziemniaki",
     "porcje": 3,
-    "czas_min": 100,
-    "czas_pracy": 15,
+    "czas_min": 95,
+    "czas_pracy": 20,
     "naczynia": "1 garnek + 1 garnek na ziemniaki",
-    "przechowywanie": "lodówka, 3 dni",
+    "przechowywanie": "lodówka, 3 dni (drugiego dnia jest lepszy)",
     "odgrzewanie": "mikrofala 3 min",
     "box": true,
     "produkty": [
@@ -120,24 +120,28 @@
         600
       ],
       [
+        "ziemniaki",
+        900
+      ],
+      [
+        "papryka",
+        3
+      ],
+      [
         "cebula",
-        4
+        2
+      ],
+      [
+        "passata",
+        300
       ],
       [
         "bulion",
         2
       ],
       [
-        "musztarda",
-        2
-      ],
-      [
         "maka",
         20
-      ],
-      [
-        "ziemniaki",
-        900
       ],
       [
         "olej",
@@ -149,12 +153,13 @@
       ]
     ],
     "kroki": [
-      "Wołowinę pokrój w plastry w poprzek włókien, cebulę w piórka.",
-      "Rozgrzej garnek na maksa, wlej olej, wrzuć mięso i smaż 6 min — przez pierwsze 3 min nie ruszaj, musi się przyrumienić na brązowo.",
-      "Dodaj całą cebulę. 4 sztuki to wygląda na dużo, ale rozpuści się w sos. Smaż 6 min aż zmięknie.",
-      "Dodaj 2 łyżki musztardy, sól, pieprz, 2 kostki bulionowe i 500 ml wody. Przykryj i duś 70 min na najmniejszym ogniu.",
-      "Mąkę rozmieszaj w zimnej wodzie, wlej i gotuj 3 min aż sos zgęstnieje.",
-      "Ugotuj ziemniaki. Rozłóż wszystko do 3 pojemników, ostudź, do lodówki."
+      "Wołowinę pokrój w kostkę ok. 2 cm, cebulę w piórka, paprykę w paski.",
+      "Rozgrzej garnek mocno, wlej olej i wrzuć mięso jednym rzutem. Smaż 6 min, przez pierwsze 3 min nie mieszaj — ma się przyrumienić, nie zagotować.",
+      "Dodaj cebulę, smaż 4 min. Wsyp łyżkę słodkiej papryki, sól i pieprz, wymieszaj.",
+      "Wlej passatę, 400 ml wody i 2 kostki bulionowe. Zagotuj, przykryj i duś na małym ogniu 60 min. To czas dla Ciebie — zrób w tym czasie coś innego.",
+      "Po 60 min dorzuć paprykę i duś jeszcze 15 min.",
+      "Mąkę rozmieszaj w pół szklanki ZIMNEJ wody, wlej do gulaszu, gotuj 3 min aż zgęstnieje.",
+      "Ziemniaki obierz i ugotuj w osolonej wodzie 20 min. Rozłóż gulasz i ziemniaki do 3 pojemników, ostudź, do lodówki."
     ]
   },
   "agenda": [
@@ -226,13 +231,13 @@
       "ping": true,
       "slot": "obiad",
       "opis": "Główny box z lodówki — odgrzej w mikrofali.",
-      "posilek": "Wołowina duszona w cebuli + ziemniaki",
-      "posilek_id": "b_wolowina_cebula",
+      "posilek": "Gulasz wołowy z papryką + ziemniaki",
+      "posilek_id": "b_gulasz",
       "makra": {
-        "kcal": 751,
-        "bialko": 49,
+        "kcal": 786,
+        "bialko": 51,
         "tluszcz": 31,
-        "wegle": 70
+        "wegle": 78
       }
     },
     {
@@ -1967,11 +1972,11 @@
     ],
     "obiad": [
       {
-        "id": "b_kapusta",
-        "nazwa": "Wołowina z kapustą kiszoną i ziemniakami",
-        "kcal": 733,
-        "bialko": 48,
-        "czas": 45,
+        "id": "b_leczo",
+        "nazwa": "Leczo z mieloną wołowiną + ziemniaki",
+        "kcal": 788,
+        "bialko": 51,
+        "czas": 40,
         "bez_gotowania": false
       },
       {
@@ -1983,19 +1988,19 @@
         "bez_gotowania": false
       },
       {
-        "id": "b_gulasz",
-        "nazwa": "Gulasz wołowy z papryką + ziemniaki",
-        "kcal": 786,
-        "bialko": 51,
-        "czas": 95,
+        "id": "b_wolowina_cebula",
+        "nazwa": "Wołowina duszona w cebuli + ziemniaki",
+        "kcal": 751,
+        "bialko": 49,
+        "czas": 100,
         "bez_gotowania": false
       },
       {
-        "id": "b_leczo",
-        "nazwa": "Leczo z mieloną wołowiną + ziemniaki",
-        "kcal": 788,
-        "bialko": 51,
-        "czas": 40,
+        "id": "b_shepherd",
+        "nazwa": "Zapiekanka pasterska (mielone pod puree)",
+        "kcal": 824,
+        "bialko": 49,
+        "czas": 65,
         "bez_gotowania": false
       }
     ],
@@ -2365,12 +2370,12 @@
   },
   "historia": {
     "bazy": [
+      "b_gulasz",
+      "b_gulasz",
       "b_wolowina_cebula",
       "b_leczo",
       "b_pieczarkowy",
-      "b_bolo",
-      "b_zapiekanka",
-      "b_zapiekanka"
+      "b_bolo"
     ],
     "waga": [],
     "treningi": [],
