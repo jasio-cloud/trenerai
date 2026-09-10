@@ -2,50 +2,50 @@
   "cykl": 26,
   "od": "2026-09-08",
   "do": "2026-09-10",
-  "baza": "b_kapusta",
+  "baza": "b_pieczarkowy",
   "dni": [
     {
-      "sniadanie": "q_skyr",
-      "drugi": "q_tortilla",
-      "kolacja": "q_kanapki_jajko",
-      "obiad": "b_kapusta",
+      "sniadanie": "q_kanapki_jajko",
+      "drugi": "q_skyr",
+      "kolacja": "q_twarog",
+      "obiad": "b_pieczarkowy",
       "data": "2026-09-08",
       "typ": 1,
       "makra": {
-        "kcal": 2183,
-        "bialko": 148,
-        "tluszcz": 99,
-        "wegle": 177
+        "kcal": 2234,
+        "bialko": 166,
+        "tluszcz": 85,
+        "wegle": 193
       }
     },
     {
-      "sniadanie": "q_twarog",
-      "drugi": "q_jajka_kukurydza",
-      "kolacja": "q_omlet",
-      "obiad": "b_kapusta",
+      "sniadanie": "q_grzanki",
+      "drugi": "q_jogurt_orzechy",
+      "kolacja": "q_serek_box",
+      "obiad": "b_pieczarkowy",
       "data": "2026-09-09",
       "typ": 2,
       "makra": {
-        "kcal": 2196,
+        "kcal": 2289,
         "bialko": 160,
-        "tluszcz": 97,
-        "wegle": 167
+        "tluszcz": 103,
+        "wegle": 192
       }
     },
     {
       "sniadanie": "q_twarog_banan",
-      "drugi": "q_jogurt_orzechy",
-      "kolacja": "q_serek_box",
-      "obiad": "b_kapusta",
+      "drugi": "q_kanapki_ser",
+      "kolacja": "q_jajka_kukurydza",
+      "obiad": "b_pieczarkowy",
       "data": "2026-09-10",
       "typ": 0,
       "makra": {
-        "kcal": 2138,
-        "bialko": 163,
-        "tluszcz": 85,
-        "wegle": 192
+        "kcal": 2307,
+        "bialko": 149,
+        "tluszcz": 98,
+        "wegle": 208
       }
     }
   ],
-  "wygenerowano": "2026-09-10T08:04:35+02:00"
+  "wygenerowano": "2026-09-10T13:13:39+02:00"
 }
