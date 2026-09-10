@@ -1,5 +1,5 @@
 {
-  "wygenerowano": "2026-09-10T13:13:39+02:00",
+  "wygenerowano": "2026-09-10T17:02:11+02:00",
   "dzis": "2026-09-10",
   "typ_dzis": 0,
   "typy": {
@@ -39,25 +39,25 @@
     "cykl": 26,
     "od": "2026-09-08",
     "do": "2026-09-10",
-    "baza": "b_pieczarkowy",
+    "baza": "b_leczo",
     "dni": [
       {
         "sniadanie": "q_kanapki_jajko",
         "drugi": "q_skyr",
         "kolacja": "q_twarog",
-        "obiad": "b_pieczarkowy",
+        "obiad": "b_leczo",
         "data": "2026-09-08",
         "typ": 1,
         "makra": {
-          "kcal": 2234,
-          "bialko": 166,
-          "tluszcz": 85,
-          "wegle": 193
+          "kcal": 2155,
+          "bialko": 164,
+          "tluszcz": 78,
+          "wegle": 194
         },
         "nazwy": {
           "sniadanie": "Kanapki z jajkiem na twardo i serem (2 kromki)",
           "drugi": "Skyr z bananem i masłem orzechowym",
-          "obiad": "Makaron z wołowiną i pieczarkami w sosie",
+          "obiad": "Leczo z mieloną wołowiną + ziemniaki",
           "kolacja": "Twarożek ze szczypiorkiem + 2 kromki"
         }
       },
@@ -65,19 +65,19 @@
         "sniadanie": "q_grzanki",
         "drugi": "q_jogurt_orzechy",
         "kolacja": "q_serek_box",
-        "obiad": "b_pieczarkowy",
+        "obiad": "b_leczo",
         "data": "2026-09-09",
         "typ": 2,
         "makra": {
-          "kcal": 2289,
-          "bialko": 160,
-          "tluszcz": 103,
-          "wegle": 192
+          "kcal": 2210,
+          "bialko": 158,
+          "tluszcz": 96,
+          "wegle": 193
         },
         "nazwy": {
           "sniadanie": "Grzanki z serem, jajkiem i pomidorem",
           "drugi": "Jogurt grecki z orzechami i miodem",
-          "obiad": "Makaron z wołowiną i pieczarkami w sosie",
+          "obiad": "Leczo z mieloną wołowiną + ziemniaki",
           "kolacja": "Box: serek wiejski + jajka na twardo + ogórki"
         }
       },
@@ -85,67 +85,67 @@
         "sniadanie": "q_twarog_banan",
         "drugi": "q_kanapki_ser",
         "kolacja": "q_jajka_kukurydza",
-        "obiad": "b_pieczarkowy",
+        "obiad": "b_leczo",
         "data": "2026-09-10",
         "typ": 0,
         "makra": {
-          "kcal": 2307,
-          "bialko": 149,
-          "tluszcz": 98,
-          "wegle": 208
+          "kcal": 2228,
+          "bialko": 147,
+          "tluszcz": 91,
+          "wegle": 209
         },
         "nazwy": {
           "sniadanie": "Twaróg z bananem i miodem",
           "drugi": "Kanapki z serem, musztardą i kiszonym ogórkiem",
-          "obiad": "Makaron z wołowiną i pieczarkami w sosie",
+          "obiad": "Leczo z mieloną wołowiną + ziemniaki",
           "kolacja": "Box: sałatka jajeczna z kukurydzą"
         }
       }
     ],
-    "wygenerowano": "2026-09-10T13:13:39+02:00"
+    "wygenerowano": "2026-09-10T17:02:11+02:00"
   },
   "baza": {
-    "id": "b_pieczarkowy",
-    "nazwa": "Makaron z wołowiną i pieczarkami w sosie",
+    "id": "b_leczo",
+    "nazwa": "Leczo z mieloną wołowiną + ziemniaki",
     "porcje": 3,
-    "czas_min": 35,
-    "czas_pracy": 18,
-    "naczynia": "1 patelnia + 1 garnek",
+    "czas_min": 40,
+    "czas_pracy": 15,
+    "naczynia": "1 garnek + 1 garnek na ziemniaki",
     "przechowywanie": "lodówka, 3 dni",
-    "odgrzewanie": "mikrofala 2,5 min, dolej łyżkę wody",
+    "odgrzewanie": "mikrofala 3 min",
     "box": true,
     "produkty": [
       [
         "mielone_wolowe",
-        500
+        600
       ],
       [
-        "pieczarki",
-        400
+        "papryka",
+        3
       ],
       [
-        "smietana",
-        150
-      ],
-      [
-        "makaron",
-        240
+        "cukinia",
+        1
       ],
       [
         "cebula",
         2
       ],
       [
-        "czosnek",
-        3
+        "passata",
+        400
       ],
       [
-        "ser",
+        "koncentrat",
         40
       ],
       [
+        "ziemniaki",
+        750
+      ],
+      [
         "olej",
-        15
+        20
       ],
       [
         "przyprawy",
@@ -153,12 +153,12 @@
       ]
     ],
     "kroki": [
-      "Pieczarki pokrój w plastry, cebulę w kostkę.",
-      "Rozgrzej patelnię MOCNO, wrzuć pieczarki bez tłuszczu i smaż 6 min aż odparuje z nich woda i się zrumienią. Nie sól na tym etapie — to cały sekret smaku.",
-      "Dodaj olej i cebulę, smaż 4 min. Potem mielone — 8 min, rozbijając łopatką.",
-      "Dodaj czosnek, sól, pieprz, wlej śmietanę i 100 ml wody. Gotuj 5 min na małym ogniu, wsyp starty ser i mieszaj aż się rozpuści.",
-      "Równolegle ugotuj makaron, odcedź i wymieszaj z sosem.",
-      "Rozłóż do 3 pojemników, ostudź, do lodówki."
+      "Cebulę w piórka, paprykę w paski, cukinię w półplasterki. Nie musi być równo.",
+      "W garnku na oleju smaż cebulę 4 min, dodaj mielone i smaż 8 min rozbijając łopatką.",
+      "Dodaj koncentrat, łyżkę słodkiej papryki, sól i pieprz — smaż 1 min.",
+      "Wrzuć paprykę i cukinię, wlej passatę. Duś 20 min pod przykryciem, zamieszaj raz w połowie.",
+      "W tym czasie ugotuj ziemniaki — 20 min w osolonej wodzie.",
+      "Rozłóż leczo i ziemniaki do 3 pojemników, ostudź, do lodówki."
     ]
   },
   "agenda": [
@@ -230,13 +230,13 @@
       "ping": true,
       "slot": "obiad",
       "opis": "Główny box z lodówki — odgrzej w mikrofali.",
-      "posilek": "Makaron z wołowiną i pieczarkami w sosie",
-      "posilek_id": "b_pieczarkowy",
+      "posilek": "Leczo z mieloną wołowiną + ziemniaki",
+      "posilek_id": "b_leczo",
       "makra": {
-        "kcal": 867,
-        "bialko": 53,
-        "tluszcz": 41,
-        "wegle": 71
+        "kcal": 788,
+        "bialko": 51,
+        "tluszcz": 34,
+        "wegle": 72
       }
     },
     {
@@ -1963,20 +1963,20 @@
     ],
     "obiad": [
       {
-        "id": "o_slojek",
-        "nazwa": "Gotowe danie ze słoika + pieczywo",
-        "kcal": 863,
-        "bialko": 52,
-        "czas": 4,
-        "bez_gotowania": true
+        "id": "b_gulasz",
+        "nazwa": "Gulasz wołowy z papryką + ziemniaki",
+        "kcal": 786,
+        "bialko": 51,
+        "czas": 95,
+        "bez_gotowania": false
       },
       {
-        "id": "o_kanapki_xl",
-        "nazwa": "Duże kanapki z wędliną wołową i serem",
-        "kcal": 855,
-        "bialko": 57,
-        "czas": 6,
-        "bez_gotowania": true
+        "id": "b_bolo",
+        "nazwa": "Makaron bolognese na wołowinie",
+        "kcal": 788,
+        "bialko": 48,
+        "czas": 40,
+        "bez_gotowania": false
       },
       {
         "id": "b_shepherd",
@@ -1987,11 +1987,11 @@
         "bez_gotowania": false
       },
       {
-        "id": "b_zapiekanka",
-        "nazwa": "Zapiekanka makaronowa z mielonym i serem",
-        "kcal": 936,
-        "bialko": 56,
-        "czas": 55,
+        "id": "b_wolowina_cebula",
+        "nazwa": "Wołowina duszona w cebuli + ziemniaki",
+        "kcal": 751,
+        "bialko": 49,
+        "czas": 100,
         "bez_gotowania": false
       }
     ],
@@ -2361,12 +2361,12 @@
   },
   "historia": {
     "bazy": [
+      "b_leczo",
+      "b_leczo",
       "b_pieczarkowy",
       "b_bolo",
       "b_kapusta",
-      "b_zapiekanka",
-      "b_gulasz",
-      "b_gulasz"
+      "b_zapiekanka"
     ],
     "waga": [],
     "treningi": [],
