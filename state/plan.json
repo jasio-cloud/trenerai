@@ -2,50 +2,50 @@
   "cykl": 26,
   "od": "2026-09-08",
   "do": "2026-09-10",
-  "baza": "b_gulasz",
+  "baza": "b_kapusta",
   "dni": [
     {
       "sniadanie": "q_skyr",
       "drugi": "q_tortilla",
       "kolacja": "q_kanapki_jajko",
-      "obiad": "b_gulasz",
+      "obiad": "b_kapusta",
       "data": "2026-09-08",
       "typ": 1,
       "makra": {
-        "kcal": 2236,
-        "bialko": 151,
-        "tluszcz": 96,
-        "wegle": 195
+        "kcal": 2183,
+        "bialko": 148,
+        "tluszcz": 99,
+        "wegle": 177
       }
     },
     {
       "sniadanie": "q_twarog",
       "drugi": "q_jajka_kukurydza",
       "kolacja": "q_omlet",
-      "obiad": "b_gulasz",
+      "obiad": "b_kapusta",
       "data": "2026-09-09",
       "typ": 2,
       "makra": {
-        "kcal": 2249,
-        "bialko": 163,
-        "tluszcz": 94,
-        "wegle": 185
+        "kcal": 2196,
+        "bialko": 160,
+        "tluszcz": 97,
+        "wegle": 167
       }
     },
     {
       "sniadanie": "q_twarog_banan",
       "drugi": "q_jogurt_orzechy",
       "kolacja": "q_serek_box",
-      "obiad": "b_gulasz",
+      "obiad": "b_kapusta",
       "data": "2026-09-10",
       "typ": 0,
       "makra": {
-        "kcal": 2191,
-        "bialko": 166,
-        "tluszcz": 82,
-        "wegle": 210
+        "kcal": 2138,
+        "bialko": 163,
+        "tluszcz": 85,
+        "wegle": 192
       }
     }
   ],
-  "wygenerowano": "2026-09-10T03:12:43+02:00"
+  "wygenerowano": "2026-09-10T08:04:35+02:00"
 }
