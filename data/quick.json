@@ -3,7 +3,7 @@
   "posilki": [
     {
       "id": "q_jajecznica",
-      "nazwa": "Jajecznica z 3 jaj + 2 kromki + pomidor",
+      "nazwa": "Jajecznica z pieczywem i pomidorem",
       "sloty": [
         "sniadanie",
         "kolacja"
@@ -34,7 +34,7 @@
       ],
       "kroki": [
         "Rozgrzej patelnię na średnim ogniu i rozpuść na niej kawałek masła.",
-        "Wbij jaja do kubka, posól, popieprz, rozbełtaj widelcem.",
+        "Wbij jaja do kubka (ile — patrz rozpiska), posól, popieprz, rozbełtaj widelcem.",
         "Wlej na patelnię, odczekaj 20 sekund, potem zgarniaj łopatką co kilka sekund.",
         "Zdejmij z ognia, gdy jaja są ścięte, ale jeszcze błyszczące — dojdą na talerzu. Pomidor w plastry obok."
       ]
@@ -75,7 +75,7 @@
         ]
       ],
       "kroki": [
-        "Rozbełtaj 3 jaja z solą i pieprzem.",
+        "Rozbełtaj jaja (ile — patrz rozpiska) z solą i pieprzem.",
         "Na patelni rozpuść masło, wlej jaja i NIE mieszaj. Smaż 3 min na małym ogniu pod przykryciem.",
         "Gdy wierzch jest już prawie ścięty, połóż na połowie plastry sera i pomidora.",
         "Złóż omlet na pół łopatką, smaż jeszcze 1 min. Zjedz z kromką chleba."
@@ -83,7 +83,7 @@
     },
     {
       "id": "q_twarog",
-      "nazwa": "Twarożek ze szczypiorkiem + 2 kromki",
+      "nazwa": "Twarożek ze szczypiorkiem + pieczywo",
       "sloty": [
         "sniadanie",
         "kolacja"
@@ -153,7 +153,7 @@
     },
     {
       "id": "q_kanapki_jajko",
-      "nazwa": "Kanapki z jajkiem na twardo i serem (2 kromki)",
+      "nazwa": "Kanapki z jajkiem na twardo i serem",
       "sloty": [
         "sniadanie",
         "drugi",
@@ -277,7 +277,7 @@
       "kroki": [
         "Na patelni na oleju smaż posiekaną cebulę i paprykę 5 min.",
         "Dodaj czosnek, passatę, sól, pieprz, szczyptę słodkiej papryki. Gotuj 3 min.",
-        "Zrób łyżką 3 wgłębienia w sosie i wbij w nie jajka.",
+        "Zrób łyżką wgłębienie na każde jajko i wbij je.",
         "Przykryj i trzymaj 5 min na małym ogniu — białka mają się ściąć, żółtka zostać płynne. Maczasz chlebem prosto z patelni, zero talerzy."
       ]
     },
@@ -403,7 +403,7 @@
     },
     {
       "id": "q_salatka_feta",
-      "nazwa": "Sałatka z fetą, jajkiem i pomidorem + kromka",
+      "nazwa": "Sałatka z fetą, jajkiem i pomidorem + pieczywo",
       "sloty": [
         "drugi",
         "kolacja"

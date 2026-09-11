@@ -121,6 +121,12 @@
   input.ptk:checked{border-color:var(--ok)}
   input.ptk:checked::before{transform:scale(1)}
   ol.os li.odhaczone .tyt{text-decoration:line-through;opacity:.5}
+  table.sklad{width:100%;border-collapse:collapse;margin-top:7px;font-size:12.5px}
+  table.sklad td{padding:3px 0;border-top:1px solid var(--linia);vertical-align:top}
+  table.sklad td.ile{white-space:nowrap;padding-right:8px;font-variant-numeric:tabular-nums;font-weight:600}
+  table.sklad td.liczby{text-align:right;white-space:nowrap;color:var(--slaby);font-variant-numeric:tabular-nums;padding-left:6px}
+  table.sklad tr.dobitka td{color:var(--ok)}
+  table.sklad tr.suma-sklad td{font-weight:650;color:var(--tekst)}
   [hidden]{display:none !important}
 </style>
 </head>
@@ -156,7 +162,7 @@ const esc = s => String(s??"").replace(/[&<>"]/g, c => ({"&":"&amp;","<":"&lt;",
 /* Wersja panelu. iPhone dodany do ekranu głównego potrafi trzymać stary HTML
    w nieskończoność. dane.json leci zawsze świeży, więc porównujemy numery
    i przy różnicy przeładowujemy stronę z ?v=, co omija cache przeglądarki. */
-const WERSJA = 4;
+const WERSJA = 5;
 let D = null, widok = "dzis";
 
 /* ---- zapis z telefonu ------------------------------------------------------
@@ -294,6 +300,15 @@ function widokDzis(){
         ${e.posilek ? `<div class="posilek">${esc(e.posilek)}
            <span class="kcal">· ${e.makra.kcal} kcal, ${e.makra.bialko} g B</span>
            ${e.slot ? `<button class="mini" data-zamien="${e.slot}">zamień</button>` : ""}</div>` : ""}
+        ${(e.skladniki && e.skladniki.length) ? `<table class="sklad">
+            ${e.skladniki.map(x=>`<tr><td class="ile">${esc(x.ile)}</td><td>${esc(x.nazwa)}</td>
+              <td class="liczby">${x.kcal} kcal · B ${x.bialko}</td></tr>`).join("")}
+            ${e.dobitka ? `<tr class="dobitka"><td class="ile">+ ${esc(e.dobitka.ile)}</td>
+              <td>${esc(e.dobitka.nazwa)} <span class="kcal">— dobitka białka</span></td>
+              <td class="liczby">${e.dobitka.kcal} kcal · B ${e.dobitka.bialko}</td></tr>` : ""}
+            <tr class="suma-sklad"><td></td><td>razem</td>
+              <td class="liczby">${e.makra.kcal} kcal · B ${e.makra.bialko} · T ${e.makra.tluszcz} · W ${e.makra.wegle}</td></tr>
+          </table>` : ""}
         ${e.opis ? `<div class="op">${esc(e.opis)}</div>` : ""}
       </div></li>`;
   }).join("");

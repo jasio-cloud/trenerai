@@ -146,33 +146,156 @@ def opis_typu(t):
 
 # ------------------------------------------------------------------- makra
 
+def gramy(klucz, ilosc):
+    """Ile to gramow (dla plynow: ml). 3 jaja -> 165, 2 kromki -> 70."""
+    return ilosc * PROD[klucz].get("g", 1)
+
+
+def makra_skladnika(klucz, ilosc):
+    """Makro jednego skladnika w tej ilosci, z makro.json podanego na 100 g/ml.
+
+    Liczymy przez gramy, a nie przez sztuki, bo tak robi etykieta i Fitatu —
+    dzieki temu kazda liczbe da sie sprawdzic z opakowaniem.
+    """
+    m = MAKRO.get(klucz)
+    g = gramy(klucz, ilosc)
+    if not m:
+        return {"g": g, "kcal": 0.0, "bialko": 0.0, "tluszcz": 0.0, "wegle": 0.0}
+    f = g / 100.0
+    return {"g": g, "kcal": m[0] * f, "bialko": m[1] * f, "tluszcz": m[2] * f, "wegle": m[3] * f}
+
+
 def makra_produktow(produkty, dzielnik=1.0):
     t = {"kcal": 0.0, "bialko": 0.0, "tluszcz": 0.0, "wegle": 0.0}
     for klucz, ilosc in produkty:
-        m = MAKRO.get(klucz)
-        if not m:
-            continue
-        q = ilosc / dzielnik
-        t["kcal"] += m[0] * q
-        t["bialko"] += m[1] * q
-        t["tluszcz"] += m[2] * q
-        t["wegle"] += m[3] * q
+        s = makra_skladnika(klucz, ilosc / dzielnik)
+        for k in t:
+            t[k] += s[k]
+    # sumujemy na nieobcietych liczbach i dopiero wynik zaokraglamy — inaczej
+    # przy 8 skladnikach blad zaokraglen potrafi urosnac do kilkunastu kcal
     return {k: int(round(v)) for k, v in t.items()}
 
 
-def makra_posilku(pid):
+_ODMIANA = {  # jednostka: (1, 2-4, 5+)
+    "szt": ("szt.", "szt.", "szt."), "kromka": ("kromka", "kromki", "kromek"),
+    "plaster": ("plaster", "plastry", "plastrów"), "lyzka": ("łyżka", "łyżki", "łyżek"),
+    "zabek": ("ząbek", "ząbki", "ząbków"), "kostka": ("kostka", "kostki", "kostek"),
+    "opak": ("opak.", "opak.", "opak."), "porcja": ("porcja", "porcje", "porcji"),
+}
+
+
+def fmt_ilosc(klucz, ilosc):
+    """'3 szt. (165 g)', '2 kromki (70 g)', '200 g', '15 ml'.
+
+    Gramy sa zawsze. Sztuki dopisujemy tylko wtedy, gdy wychodzi ich cala liczba —
+    '0,3 ogorka' nic nie mowi, '90 g ogorka' juz tak.
+    """
+    p = PROD[klucz]
+    g = gramy(klucz, ilosc)
+    baza = p.get("baza", "g")
+    zaokr = int(round(g / 5.0) * 5) if g >= 50 else int(round(g))
+    if p["jedn"] in ("g", "ml"):
+        return "%d %s" % (zaokr, baza)
+    if abs(ilosc - round(ilosc)) < 0.01 and ilosc >= 1:
+        n = int(round(ilosc))
+        formy = _ODMIANA.get(p["jedn"], (p["jedn"],) * 3)
+        forma = formy[0] if n == 1 else formy[1] if 2 <= n % 10 <= 4 and not 12 <= n % 100 <= 14 else formy[2]
+        return "%d %s (%d %s)" % (n, forma, zaokr, baza)
+    return "%d %s" % (zaokr, baza)
+
+
+def rozpiska(pid, porcja=1.0):
+    """Skladniki posilku z gramatura i makro kazdego z nich — do panelu i pingow."""
+    out = []
+    for k, q in produkty_posilku(pid, porcja):
+        if k == "przyprawy":
+            continue
+        s = makra_skladnika(k, q)
+        out.append({"nazwa": PROD[k]["nazwa"], "ile": fmt_ilosc(k, q), "g": round(s["g"]),
+                    "kcal": round(s["kcal"]), "bialko": round(s["bialko"], 1),
+                    "tluszcz": round(s["tluszcz"], 1), "wegle": round(s["wegle"], 1)})
+    return out
+
+
+def makra_posilku(pid, porcja=1.0):
     """Działa i dla szybkiego posiłku, i dla porcji bazy."""
-    if pid in QUICK_BY_ID:
-        return makra_produktow(QUICK_BY_ID[pid]["produkty"])
-    b = BAZA_BY_ID[pid]
-    return makra_produktow(b["produkty"], dzielnik=b["porcje"])
+    return makra_produktow(produkty_posilku(pid, porcja))
 
 
-def produkty_posilku(pid):
+# Skladniki liczone w sztukach, ktorych nie da sie sensownie przepolowic.
+CALE_SZTUKI = {"jaja", "tortilla", "parowki_wolowe", "serek_wiejski", "banan", "jablko",
+               "chleb", "ser_zolty", "czosnek", "bulion"}
+
+
+def _zaokraglij(klucz, q):
+    """Ilosc po przeskalowaniu porcji musi byc do odmierzenia w kuchni."""
+    if PROD[klucz]["jedn"] in ("g", "ml"):
+        return max(5, round(q / 5.0) * 5) if q >= 20 else max(1, round(q))
+    if klucz in CALE_SZTUKI:
+        return max(1, int(round(q)))
+    return max(0.5, round(q * 2) / 2.0)
+
+
+def produkty_posilku(pid, porcja=1.0):
+    """Skladniki posilku. porcja != 1 skaluje posilek i zaokragla do odmierzalnych ilosci."""
     if pid in QUICK_BY_ID:
-        return [(k, q) for k, q in QUICK_BY_ID[pid]["produkty"]]
+        sklad = [(k, q) for k, q in QUICK_BY_ID[pid]["produkty"]]
+        if abs(porcja - 1.0) < 1e-9:
+            return sklad
+        return [(k, q if k == "przyprawy" else _zaokraglij(k, q * porcja)) for k, q in sklad]
     b = BAZA_BY_ID[pid]
+    # obiad z garnka zawsze 1/3 garnka — gotujesz jeden garnek, nie trzy rozne porcje
     return [(k, q / b["porcje"]) for k, q in b["produkty"]]
+
+
+PORCJE = (0.8, 0.9, 1.0, 1.1, 1.2, 1.3)
+
+# Dobitka bialkowa: skyr dokladany do drugiego posilku tylko wtedy, gdy dzien go
+# potrzebuje. Powod jest strukturalny, nie kosmetyczny — w puli dan, ktore da sie
+# zjesc z pudelka na zmianie, brakuje chudego bialka, a obiad z garnka dokłada ~30 g
+# tluszczu. Samo skalowanie porcji zostawialo dzien zmiany z ~20 g dziury w bialku.
+DOBITKA_PRODUKT = "skyr"
+DOBITKI = (0, 150, 250)
+_cache_makr = {}
+
+
+def _makra_porcji(pid, porcja):
+    klucz = (pid, porcja)
+    if klucz not in _cache_makr:
+        _cache_makr[klucz] = makra_posilku(pid, porcja)
+    return _cache_makr[klucz]
+
+
+def dopasuj_porcje(dzien):
+    """Dobiera wielkosc porcji posilkow, zeby CALY dzien trafial w cel makro.
+
+    Sam wybor dan zbliza dzien do celu, ale zostawia np. 15 g bialka dziury.
+    Tu przeszukujemy wszystkie kombinacje 80-130% porcji dla posilkow nie z garnka
+    (216 kombinacji na dzien) i liczymy makro PO zaokragleniu gramatur — wiec
+    to, co widzisz w przepisie, dokladnie odpowiada temu, co wychodzi w sumie.
+    """
+    sloty = [s for s in SLOTY if dzien[s] in QUICK_BY_ID]
+    stale = {"kcal": 0, "bialko": 0, "tluszcz": 0, "wegle": 0}
+    for s in SLOTY:
+        if s not in sloty:
+            for k, v in makra_posilku(dzien[s]).items():
+                stale[k] += v
+    najlepsze, najmniejszy, dobitka = {s: 1.0 for s in sloty}, None, 0
+    import itertools
+    makra_dobitek = {g: makra_produktow([(DOBITKA_PRODUKT, g)]) for g in DOBITKI}
+    for kombinacja in itertools.product(PORCJE, repeat=len(sloty)):
+        m0 = dict(stale)
+        for s, p in zip(sloty, kombinacja):
+            for k, v in _makra_porcji(dzien[s], p).items():
+                m0[k] += v
+        for g in DOBITKI:
+            m = {k: m0[k] + makra_dobitek[g][k] for k in m0}
+            # lekkie kary: przy remisie wolimy przepis bez zmian i dzien bez dokladki
+            blad = _blad_dnia(m) + 15 * sum(abs(p - 1.0) for p in kombinacja) + 0.05 * g
+            if najmniejszy is None or blad < najmniejszy:
+                najmniejszy, najlepsze, dobitka = blad, dict(zip(sloty, kombinacja)), g
+    najlepsze["_dobitka"] = dobitka
+    return najlepsze
 
 
 def nazwa_posilku(pid):
@@ -183,10 +306,14 @@ def nazwa_posilku(pid):
 
 def makra_dnia(dzien):
     t = {"kcal": 0, "bialko": 0, "tluszcz": 0, "wegle": 0}
+    porcje = dzien.get("porcje", {})
     for slot in SLOTY:
-        m = makra_posilku(dzien[slot])
+        m = makra_posilku(dzien[slot], porcje.get(slot, 1.0))
         for k in t:
             t[k] += m[k]
+    if dzien.get("dobitka"):
+        for k, v in makra_produktow([(DOBITKA_PRODUKT, dzien["dobitka"])]).items():
+            t[k] += v
     return t
 
 
@@ -233,8 +360,9 @@ def generuj_plan(d=None, force=False):
     daty = [start + datetime.timedelta(days=i) for i in range(3)]
     pule = [_pule(box_only=(typ_dnia(dd) == 0)) for dd in daty]
 
-    najlepszy, najlepszy_wynik = None, float("inf")
-    for _ in range(20000):
+    import heapq
+    czolowka = []   # najlepsi kandydaci PRZED dopasowaniem porcji
+    for nr in range(20000):
         kandydat = []
         for i in range(3):
             kandydat.append({
@@ -258,6 +386,25 @@ def generuj_plan(d=None, force=False):
         wynik += 450 * (len(uzyte) - len(set(uzyte)))
         # premia za wspólne produkty — mniej pozycji na liście i mniej marnowania
         wynik -= 8 * (len(klucze_produktow) - len(set(klucze_produktow)))
+        kary = 450 * (len(uzyte) - len(set(uzyte))) - 8 * (len(klucze_produktow) - len(set(klucze_produktow)))
+        wpis = (-wynik, nr, kandydat, kary)
+        if len(czolowka) < 80:
+            heapq.heappush(czolowka, wpis)
+        elif wpis > czolowka[0]:
+            heapq.heapreplace(czolowka, wpis)
+
+    # Druga runda: 80 najlepszych zestawow oceniamy PO dopasowaniu porcji.
+    # Sam wybor dan nie wie, ze skyr da sie zwiekszyc, a ser zmniejszyc — bez tej
+    # rundy dzien zmiany potrafil zostac z 22 g dziury w bialku mimo dopasowania.
+    najlepszy, najlepszy_wynik = None, float("inf")
+    for _, _, kandydat, kary in czolowka:
+        wynik = kary
+        for dzien in kandydat:
+            pelny = dict(dzien, obiad=baza["id"])
+            porcje = dopasuj_porcje(pelny)
+            pelny["dobitka"] = porcje.pop("_dobitka", 0)
+            pelny["porcje"] = porcje
+            wynik += _blad_dnia(makra_dnia(pelny))
         if wynik < najlepszy_wynik:
             najlepszy_wynik, najlepszy = wynik, kandydat
 
@@ -294,14 +441,18 @@ def podmiany(d=None):
 def _zastosuj_podmiany(dzien, d):
     """Plan jest propozycja, nie wyrokiem. Jesli cos podmieniles, to ma zostac."""
     zmiany = podmiany(d)
-    if not zmiany:
-        return dzien
     dzien = dict(dzien)
     for slot, pid in zmiany.items():
         if slot in SLOTY:
             dzien[slot] = pid
+    if zmiany:
+        dzien["podmienione"] = list(zmiany)
+    # porcje liczone zawsze od nowa na ostatecznym zestawie dan: po podmianie
+    # posilku reszta dnia sama sie dostraja, zeby suma dalej trafiala w cel
+    porcje = dopasuj_porcje(dzien)
+    dzien["dobitka"] = porcje.pop("_dobitka", 0)
+    dzien["porcje"] = porcje
     dzien["makra"] = makra_dnia(dzien)
-    dzien["podmienione"] = list(zmiany)
     return dzien
 
 
@@ -501,10 +652,14 @@ def zdejmij_z_lodowki(klucz, ilosc):
 def potrzebne_na_cykl(plan):
     """Sumuje wszystkie składniki z 3 dni planu."""
     suma = {}
-    for dzien in plan["dni"]:
+    for surowy in plan["dni"]:
+        # kupujemy pod OSTATECZNE porcje dnia (po podmianach i dopasowaniu), nie wzorcowe
+        dzien = _zastosuj_podmiany(surowy, parse_date(surowy["data"]))
         for slot in SLOTY:
-            for k, q in produkty_posilku(dzien[slot]):
+            for k, q in produkty_posilku(dzien[slot], dzien["porcje"].get(slot, 1.0)):
                 suma[k] = suma.get(k, 0) + q
+        if dzien.get("dobitka"):
+            suma[DOBITKA_PRODUKT] = suma.get(DOBITKA_PRODUKT, 0) + dzien["dobitka"]
     return {k: round(v, 2) for k, v in sorted(suma.items())}
 
 
@@ -851,10 +1006,29 @@ def agenda(d=None):
             e["budzik"] = budzik_dla(e["czas"], d)
         if e.get("slot"):
             pid = dzien[e["slot"]]
-            m = makra_posilku(pid)
+            porcja = dzien.get("porcje", {}).get(e["slot"], 1.0)
             e["posilek"] = nazwa_posilku(pid)
             e["posilek_id"] = pid
-            e["makra"] = m
+            e["porcja"] = porcja
+            e["makra"] = makra_posilku(pid, porcja)
+            e["skladniki"] = rozpiska(pid, porcja)
+            if e["slot"] == "drugi" and dzien.get("dobitka"):
+                g = dzien["dobitka"]
+                s = makra_skladnika(DOBITKA_PRODUKT, g)
+                e["dobitka"] = {"nazwa": PROD[DOBITKA_PRODUKT]["nazwa"], "ile": "%d g" % g, "g": g,
+                                "kcal": round(s["kcal"]), "bialko": round(s["bialko"], 1),
+                                "tluszcz": round(s["tluszcz"], 1), "wegle": round(s["wegle"], 1)}
+                for k in e["makra"]:
+                    e["makra"][k] += int(round(s[k]))
+                # Jesli posilek juz ma ten produkt (skyr z bananem), dobitka wchodzi do tego
+                # samego wiersza. Nikt nie odmierza skyru dwa razy do jednej miski.
+                wiersz = next((x for x in e["skladniki"] if x["nazwa"] == e["dobitka"]["nazwa"]), None)
+                if wiersz:
+                    wiersz["g"] += g
+                    wiersz["ile"] = "%d g (w tym %d g dobitki)" % (wiersz["g"], g)
+                    for k in ("kcal", "bialko", "tluszcz", "wegle"):
+                        wiersz[k] = round(wiersz[k] + e["dobitka"][k], 1 if k != "kcal" else None)
+                    del e["dobitka"]
     zdarzenia.sort(key=lambda e: e["czas"])
     return zdarzenia
 
@@ -895,7 +1069,14 @@ def tresc_pinga(e, d):
     czesci = []
     if e.get("posilek"):
         m = e["makra"]
-        czesci.append("%s  (%d kcal, %d g B)" % (e["posilek"], m["kcal"], m["bialko"]))
+        czesci.append("%s  (%d kcal, B %d, T %d, W %d)"
+                      % (e["posilek"], m["kcal"], m["bialko"], m["tluszcz"], m["wegle"]))
+        # gramatury od razu w powiadomieniu — zeby nie trzeba bylo otwierac panelu przy wadze
+        sklad = ["%s %s" % (x["nazwa"].split(" (")[0].split(" / ")[0], x["ile"]) for x in e.get("skladniki", [])]
+        if e.get("dobitka"):
+            sklad.append("+ %s %s" % (e["dobitka"]["nazwa"], e["dobitka"]["ile"]))
+        if sklad:
+            czesci.append("\n".join("• " + x for x in sklad))
     if e.get("opis"):
         czesci.append(e["opis"])
     if e.get("akcja") == "gotowanie":
@@ -1134,8 +1315,14 @@ def pokaz_dzis(d=None):
     for e in agenda(d):
         linia = "%s  %s %s" % (e["czas"], e.get("ikona", "•"), e["tytul"])
         if e.get("posilek"):
-            linia += " → %s (%d kcal)" % (e["posilek"], e["makra"]["kcal"])
+            mm = e["makra"]
+            linia += " → %s  [%d kcal, B %d, T %d, W %d]" % (e["posilek"], mm["kcal"], mm["bialko"], mm["tluszcz"], mm["wegle"])
         print(linia)
+        for x in e.get("skladniki", []):
+            print("          %-22s %-32s %4d kcal  B %4.1f" % (x["ile"], x["nazwa"][:32], x["kcal"], x["bialko"]))
+        if e.get("dobitka"):
+            x = e["dobitka"]
+            print("        + %-22s %-32s %4d kcal  B %4.1f   (dobitka białka)" % (x["ile"], x["nazwa"][:32], x["kcal"], x["bialko"]))
         if e.get("opis"):
             print("        " + e["opis"])
 
@@ -1180,7 +1367,7 @@ def pokaz_gotowanie():
     print("Jedna porcja: %d kcal, B %d g, T %d g, W %d g" % (m["kcal"], m["bialko"], m["tluszcz"], m["wegle"]))
     print("\nSKŁADNIKI NA CAŁY GARNEK")
     for k, q in b["produkty"]:
-        print("   • %-32s %g %s" % (PROD[k]["nazwa"], q, PROD[k]["jedn"]))
+        print("   • %-32s %s" % (PROD[k]["nazwa"], fmt_ilosc(k, q)))
     print("\nKROK PO KROKU")
     for i, krok in enumerate(b["kroki"], 1):
         print("   %d. %s" % (i, krok))
