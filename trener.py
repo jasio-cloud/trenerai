@@ -180,7 +180,7 @@ _ODMIANA = {  # jednostka: (1, 2-4, 5+)
     "szt": ("szt.", "szt.", "szt."), "kromka": ("kromka", "kromki", "kromek"),
     "plaster": ("plaster", "plastry", "plastrów"), "lyzka": ("łyżka", "łyżki", "łyżek"),
     "zabek": ("ząbek", "ząbki", "ząbków"), "kostka": ("kostka", "kostki", "kostek"),
-    "opak": ("opak.", "opak.", "opak."), "porcja": ("porcja", "porcje", "porcji"),
+    "opak": ("opak.", "opak.", "opak."), "kubek": ("kubek", "kubki", "kubków"), "porcja": ("porcja", "porcje", "porcji"),
 }
 
 
@@ -223,7 +223,7 @@ def makra_posilku(pid, porcja=1.0):
 
 
 # Skladniki liczone w sztukach, ktorych nie da sie sensownie przepolowic.
-CALE_SZTUKI = {"jaja", "tortilla", "parowki_wolowe", "serek_wiejski", "banan", "jablko",
+CALE_SZTUKI = {"skyr", "jaja", "tortilla", "parowki_wolowe", "serek_wiejski", "banan", "jablko",
                "chleb", "ser_zolty", "czosnek", "bulion"}
 
 
@@ -255,7 +255,9 @@ PORCJE = (0.8, 0.9, 1.0, 1.1, 1.2, 1.3)
 # zjesc z pudelka na zmianie, brakuje chudego bialka, a obiad z garnka dokłada ~30 g
 # tluszczu. Samo skalowanie porcji zostawialo dzien zmiany z ~20 g dziury w bialku.
 DOBITKA_PRODUKT = "skyr"
-DOBITKI = (0, 150, 250)
+# w KUBKACH (1 kubek = 150 g): dobitka ma byc tym, co realnie wyjmujesz z lodowki,
+# a nie gramatura do odwazenia — inaczej wpis w Fitatu rozjezdza sie z panelem
+DOBITKI = (0, 1, 2)
 _cache_makr = {}
 
 
@@ -291,7 +293,7 @@ def dopasuj_porcje(dzien):
         for g in DOBITKI:
             m = {k: m0[k] + makra_dobitek[g][k] for k in m0}
             # lekkie kary: przy remisie wolimy przepis bez zmian i dzien bez dokladki
-            blad = _blad_dnia(m) + 15 * sum(abs(p - 1.0) for p in kombinacja) + 0.05 * g
+            blad = _blad_dnia(m) + 15 * sum(abs(p - 1.0) for p in kombinacja) + 0.05 * gramy(DOBITKA_PRODUKT, g)
             if najmniejszy is None or blad < najmniejszy:
                 najmniejszy, najlepsze, dobitka = blad, dict(zip(sloty, kombinacja)), g
     najlepsze["_dobitka"] = dobitka
@@ -1013,9 +1015,10 @@ def agenda(d=None):
             e["makra"] = makra_posilku(pid, porcja)
             e["skladniki"] = rozpiska(pid, porcja)
             if e["slot"] == "drugi" and dzien.get("dobitka"):
-                g = dzien["dobitka"]
-                s = makra_skladnika(DOBITKA_PRODUKT, g)
-                e["dobitka"] = {"nazwa": PROD[DOBITKA_PRODUKT]["nazwa"], "ile": "%d g" % g, "g": g,
+                n = dzien["dobitka"]
+                s = makra_skladnika(DOBITKA_PRODUKT, n)
+                e["dobitka"] = {"nazwa": PROD[DOBITKA_PRODUKT]["nazwa"], "ile": fmt_ilosc(DOBITKA_PRODUKT, n),
+                                "g": round(s["g"]), "n": n,
                                 "kcal": round(s["kcal"]), "bialko": round(s["bialko"], 1),
                                 "tluszcz": round(s["tluszcz"], 1), "wegle": round(s["wegle"], 1)}
                 for k in e["makra"]:
@@ -1024,8 +1027,10 @@ def agenda(d=None):
                 # samego wiersza. Nikt nie odmierza skyru dwa razy do jednej miski.
                 wiersz = next((x for x in e["skladniki"] if x["nazwa"] == e["dobitka"]["nazwa"]), None)
                 if wiersz:
-                    wiersz["g"] += g
-                    wiersz["ile"] = "%d g (w tym %d g dobitki)" % (wiersz["g"], g)
+                    razem = wiersz["g"] / PROD[DOBITKA_PRODUKT]["g"] + n
+                    wiersz["g"] += round(s["g"])
+                    wiersz["ile"] = "%s, w tym %s dobitki" % (fmt_ilosc(DOBITKA_PRODUKT, razem),
+                                                            fmt_ilosc(DOBITKA_PRODUKT, n).split(" (")[0])
                     for k in ("kcal", "bialko", "tluszcz", "wegle"):
                         wiersz[k] = round(wiersz[k] + e["dobitka"][k], 1 if k != "kcal" else None)
                     del e["dobitka"]
