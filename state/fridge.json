@@ -1,39 +1,35 @@
 {
   "stan": {
     "jaja": {
-      "ilosc": 6,
+      "ilosc": 9,
       "do": "2026-09-17"
     },
     "jogurt_grecki": {
-      "ilosc": 60,
+      "ilosc": 135,
       "do": "2026-09-17"
     },
     "maslo": {
-      "ilosc": 156.0,
+      "ilosc": 157.0,
       "do": "2026-09-17"
     },
     "mleko": {
-      "ilosc": 750.0,
+      "ilosc": 760.0,
       "do": "2026-09-17"
     },
     "ser": {
       "ilosc": 30.0,
       "do": "2026-09-17"
     },
-    "skyr": {
-      "ilosc": 300,
-      "do": "2026-09-17"
-    },
     "twarog": {
-      "ilosc": 110,
+      "ilosc": 185,
       "do": "2026-09-17"
     },
     "smietana": {
-      "ilosc": 20.0,
+      "ilosc": 24.0,
       "do": "2026-09-17"
     },
     "ogorek_kiszony": {
-      "ilosc": 3,
+      "ilosc": 3.5,
       "do": "2027-03-24"
     },
     "ziemniaki": {
@@ -69,7 +65,7 @@
       "do": "2027-03-24"
     },
     "orzechy": {
-      "ilosc": 125,
+      "ilosc": 130,
       "do": "2027-03-24"
     },
     "przyprawy": {
@@ -97,32 +93,32 @@
       "do": "2026-09-15"
     },
     "feta": {
-      "ilosc": 130,
+      "ilosc": 145,
       "do": "2026-09-23"
     },
     "ser_zolty": {
       "ilosc": 8,
       "do": "2026-09-23"
     },
-    "ogorek": {
-      "ilosc": 0.2,
-      "do": "2026-09-15"
-    },
     "salata": {
-      "ilosc": 90,
+      "ilosc": 100,
       "do": "2026-09-15"
     },
     "szczypiorek": {
-      "ilosc": 8,
+      "ilosc": 9.0,
       "do": "2026-09-15"
     },
     "kukurydza": {
-      "ilosc": 100,
+      "ilosc": 120,
       "do": "2027-03-30"
     },
     "oliwa": {
-      "ilosc": 492,
+      "ilosc": 494,
       "do": "2027-03-30"
+    },
+    "pomidor": {
+      "ilosc": 0.5,
+      "do": "2026-09-15"
     }
   },
   "log": [
@@ -161,6 +157,11 @@
       "co": "cykl:2026-09-11",
       "pozycji": 19,
       "koszt": 138.8
+    },
+    {
+      "data": "2026-09-11",
+      "co": "korekta-porcji:2026-09-11",
+      "opis": "zuzycie cyklu przeliczone na nowe porcje i dobitke bialkowa"
     }
   ]
 }
