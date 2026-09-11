@@ -1,0 +1,167 @@
+{
+  "stan": {
+    "jaja": {
+      "ilosc": 9,
+      "do": "2026-09-17"
+    },
+    "jogurt_grecki": {
+      "ilosc": 135,
+      "do": "2026-09-17"
+    },
+    "maslo": {
+      "ilosc": 157.0,
+      "do": "2026-09-17"
+    },
+    "mleko": {
+      "ilosc": 760.0,
+      "do": "2026-09-17"
+    },
+    "ser": {
+      "ilosc": 30.0,
+      "do": "2026-09-17"
+    },
+    "twarog": {
+      "ilosc": 185,
+      "do": "2026-09-17"
+    },
+    "smietana": {
+      "ilosc": 24.0,
+      "do": "2026-09-17"
+    },
+    "ogorek_kiszony": {
+      "ilosc": 3.5,
+      "do": "2027-03-24"
+    },
+    "ziemniaki": {
+      "ilosc": 1100.0,
+      "do": "2027-03-24"
+    },
+    "chleb": {
+      "ilosc": 4,
+      "do": "2026-09-17"
+    },
+    "koncentrat": {
+      "ilosc": 80.0,
+      "do": "2027-03-24"
+    },
+    "bulion": {
+      "ilosc": 5.0,
+      "do": "2027-03-24"
+    },
+    "maslo_orzechowe": {
+      "ilosc": 19,
+      "do": "2027-03-24"
+    },
+    "miod": {
+      "ilosc": 14,
+      "do": "2027-03-24"
+    },
+    "musztarda": {
+      "ilosc": 4,
+      "do": "2027-03-24"
+    },
+    "olej": {
+      "ilosc": 958.0,
+      "do": "2027-03-24"
+    },
+    "orzechy": {
+      "ilosc": 130,
+      "do": "2027-03-24"
+    },
+    "przyprawy": {
+      "ilosc": 75.0,
+      "do": "2027-03-24"
+    },
+    "czosnek": {
+      "ilosc": 4.0,
+      "do": "2027-03-27"
+    },
+    "makaron": {
+      "ilosc": 20.0,
+      "do": "2027-03-27"
+    },
+    "ketchup": {
+      "ilosc": 29,
+      "do": "2027-03-27"
+    },
+    "passata": {
+      "ilosc": 100.0,
+      "do": "2027-03-27"
+    },
+    "mielone_wolowe": {
+      "ilosc": 300.0,
+      "do": "2026-09-15"
+    },
+    "feta": {
+      "ilosc": 145,
+      "do": "2026-09-23"
+    },
+    "ser_zolty": {
+      "ilosc": 8,
+      "do": "2026-09-23"
+    },
+    "salata": {
+      "ilosc": 100,
+      "do": "2026-09-15"
+    },
+    "szczypiorek": {
+      "ilosc": 9.0,
+      "do": "2026-09-15"
+    },
+    "kukurydza": {
+      "ilosc": 120,
+      "do": "2027-03-30"
+    },
+    "oliwa": {
+      "ilosc": 494,
+      "do": "2027-03-30"
+    },
+    "pomidor": {
+      "ilosc": 0.5,
+      "do": "2026-09-15"
+    }
+  },
+  "log": [
+    {
+      "data": "2026-09-05",
+      "co": "cykl:2026-09-05",
+      "pozycji": 30,
+      "koszt": 243.8
+    },
+    {
+      "data": "2026-09-08",
+      "co": "cykl:2026-09-08",
+      "pozycji": 16,
+      "koszt": 98.8
+    },
+    {
+      "data": "2026-09-10",
+      "co": "wyrzucone",
+      "produkt": "mielone_wolowe",
+      "ilosc": 200.0
+    },
+    {
+      "data": "2026-09-10",
+      "co": "wyrzucone",
+      "produkt": "ogorek",
+      "ilosc": 0.4
+    },
+    {
+      "data": "2026-09-10",
+      "co": "wyrzucone",
+      "produkt": "szczypiorek",
+      "ilosc": 4
+    },
+    {
+      "data": "2026-09-11",
+      "co": "cykl:2026-09-11",
+      "pozycji": 19,
+      "koszt": 138.8
+    },
+    {
+      "data": "2026-09-11",
+      "co": "korekta-porcji:2026-09-11",
+      "opis": "zuzycie cyklu przeliczone na nowe porcje i dobitke bialkowa"
+    }
+  ]
+}
