@@ -176,7 +176,7 @@ const esc = s => String(s??"").replace(/[&<>"]/g, c => ({"&":"&amp;","<":"&lt;",
 /* Wersja panelu. iPhone dodany do ekranu głównego potrafi trzymać stary HTML
    w nieskończoność. dane.json leci zawsze świeży, więc porównujemy numery
    i przy różnicy przeładowujemy stronę z ?v=, co omija cache przeglądarki. */
-const WERSJA = 7;
+const WERSJA = 8;
 let D = null, widok = "dzis";
 
 /* ---- zapis z telefonu ------------------------------------------------------
@@ -933,6 +933,21 @@ fetch("dane.json?t=" + Date.now())
       Na komputerze odpal <code>py trener.py eksport</code> i wypchnij zmiany na GitHuba,
       albo poczekaj — cron robi to sam co 10 minut.</div></div>`;
   });
+
+/* Apka z ekranu glownego iPhone'a przy powrocie NIE przeladowuje sie — iOS wybudza ja
+   z pamieci w stanie sprzed wyjscia. Bez tego nowa wersja panelu i swieze dane
+   pojawialy sie dopiero po recznym zamknieciu apki w przelaczniku aplikacji.
+   Przy kazdym powrocie (nie czesciej niz co 30 s) pobieramy dane od nowa; start()
+   sam przeladuje strone, jesli na serwerze jest nowsza wersja panelu. */
+let ostatnieOdswiezenie = Date.now();
+document.addEventListener("visibilitychange", () => {
+  if(document.visibilityState !== "visible" || Date.now() - ostatnieOdswiezenie < 30000) return;
+  ostatnieOdswiezenie = Date.now();
+  fetch("dane.json?t=" + Date.now())
+    .then(r => r.ok ? r.json() : null)
+    .then(dane => { if(dane) start(dane); })
+    .catch(() => {});
+});
 </script>
 </body>
 </html>
