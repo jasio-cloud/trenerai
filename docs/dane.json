@@ -1,5 +1,5 @@
 {
-  "wygenerowano": "2026-09-11T20:33:45+02:00",
+  "wygenerowano": "2026-09-11T20:34:47+02:00",
   "dzis": "2026-09-11",
   "typ_dzis": 1,
   "typy": {
@@ -39,121 +39,113 @@
     "cykl": 27,
     "od": "2026-09-11",
     "do": "2026-09-13",
-    "baza": "b_shepherd",
+    "baza": "b_leczo",
     "dni": [
       {
-        "sniadanie": "q_kanapki_ser",
-        "drugi": "q_jogurt_orzechy",
-        "kolacja": "q_twarog",
-        "obiad": "b_shepherd",
+        "sniadanie": "q_twarog",
+        "drugi": "q_twarog_banan",
+        "kolacja": "q_jajka_kukurydza",
+        "obiad": "b_leczo",
         "data": "2026-09-11",
         "typ": 1,
         "makra": {
-          "kcal": 2250,
-          "bialko": 144,
-          "tluszcz": 95,
-          "wegle": 188
+          "kcal": 2274,
+          "bialko": 165,
+          "tluszcz": 88,
+          "wegle": 190
+        },
+        "nazwy": {
+          "sniadanie": "Twarożek ze szczypiorkiem + pieczywo",
+          "drugi": "Twaróg z bananem i miodem",
+          "obiad": "Leczo z mieloną wołowiną + ziemniaki",
+          "kolacja": "Box: sałatka jajeczna z kukurydzą"
+        }
+      },
+      {
+        "sniadanie": "q_shakshuka",
+        "drugi": "q_skyr",
+        "kolacja": "d_sernik",
+        "obiad": "b_leczo",
+        "data": "2026-09-12",
+        "typ": 2,
+        "makra": {
+          "kcal": 2314,
+          "bialko": 173,
+          "tluszcz": 87,
+          "wegle": 193
+        },
+        "nazwy": {
+          "sniadanie": "Jajka w sosie pomidorowym (shakshuka)",
+          "drugi": "Skyr z bananem i masłem orzechowym",
+          "obiad": "Leczo z mieloną wołowiną + ziemniaki",
+          "kolacja": "Deser: sernik na zimno w kubku (bez pieczenia)"
+        }
+      },
+      {
+        "sniadanie": "q_kanapki_ser",
+        "drugi": "q_jogurt_orzechy",
+        "kolacja": "d_twarog_kakao",
+        "obiad": "b_leczo",
+        "data": "2026-09-13",
+        "typ": 0,
+        "makra": {
+          "kcal": 2231,
+          "bialko": 148,
+          "tluszcz": 97,
+          "wegle": 179
         },
         "nazwy": {
           "sniadanie": "Kanapki z serem, musztardą i kiszonym ogórkiem",
           "drugi": "Jogurt grecki z orzechami i miodem",
-          "obiad": "Zapiekanka pasterska (mielone pod puree)",
-          "kolacja": "Twarożek ze szczypiorkiem + pieczywo"
-        }
-      },
-      {
-        "sniadanie": "q_skyr",
-        "drugi": "d_pudding",
-        "kolacja": "q_omlet",
-        "obiad": "b_shepherd",
-        "data": "2026-09-12",
-        "typ": 2,
-        "makra": {
-          "kcal": 2184,
-          "bialko": 159,
-          "tluszcz": 87,
-          "wegle": 174
-        },
-        "nazwy": {
-          "sniadanie": "Skyr z bananem i masłem orzechowym",
-          "drugi": "Deser: czekoladowy pudding ze skyru z bananem",
-          "obiad": "Zapiekanka pasterska (mielone pod puree)",
-          "kolacja": "Omlet z serem i pomidorem"
-        }
-      },
-      {
-        "sniadanie": "q_twarog_banan",
-        "drugi": "q_jajka_kukurydza",
-        "kolacja": "d_twarog_kakao",
-        "obiad": "b_shepherd",
-        "data": "2026-09-13",
-        "typ": 0,
-        "makra": {
-          "kcal": 2293,
-          "bialko": 165,
-          "tluszcz": 98,
-          "wegle": 177
-        },
-        "nazwy": {
-          "sniadanie": "Twaróg z bananem i miodem",
-          "drugi": "Box: sałatka jajeczna z kukurydzą",
-          "obiad": "Zapiekanka pasterska (mielone pod puree)",
+          "obiad": "Leczo z mieloną wołowiną + ziemniaki",
           "kolacja": "Deser: twarożek kakaowy z masłem orzechowym"
         }
       }
     ],
-    "wygenerowano": "2026-09-11T20:33:44+02:00"
+    "wygenerowano": "2026-09-11T20:34:47+02:00"
   },
   "baza": {
-    "id": "b_shepherd",
-    "nazwa": "Zapiekanka pasterska (mielone pod puree)",
+    "id": "b_leczo",
+    "nazwa": "Leczo z mieloną wołowiną + ziemniaki",
     "porcje": 3,
-    "czas_min": 65,
-    "czas_pracy": 25,
-    "naczynia": "1 patelnia + 1 garnek + 1 forma",
+    "czas_min": 40,
+    "czas_pracy": 15,
+    "naczynia": "1 garnek + 1 garnek na ziemniaki",
     "przechowywanie": "lodówka, 3 dni",
-    "odgrzewanie": "mikrofala 3,5 min",
+    "odgrzewanie": "mikrofala 3 min",
     "box": true,
     "produkty": [
       [
         "mielone_wolowe",
-        500
+        600
       ],
       [
-        "ziemniaki",
-        900
+        "papryka",
+        3
       ],
       [
-        "mleko",
-        100
-      ],
-      [
-        "maslo",
-        20
-      ],
-      [
-        "ser",
-        70
+        "cukinia",
+        1
       ],
       [
         "cebula",
         2
       ],
       [
-        "marchew",
-        2
+        "passata",
+        400
       ],
       [
         "koncentrat",
-        60
+        40
       ],
       [
-        "bulion",
-        1
+        "ziemniaki",
+        750
       ],
       [
         "olej",
-        12
+        20
       ],
       [
         "przyprawy",
@@ -161,12 +153,12 @@
       ]
     ],
     "kroki": [
-      "Nastaw piekarnik na 200°C. Ziemniaki obierz i wstaw do gotowania (20 min).",
-      "Na patelni na oleju smaż posiekaną cebulę i startą marchew 6 min.",
-      "Dodaj mielone i smaż 8 min. Wrzuć koncentrat, kostkę bulionową, sól, pieprz i 150 ml wody. Duś 10 min aż sos zgęstnieje.",
-      "Ugotowane ziemniaki odcedź, dodaj mleko i masło, ugnieć na puree. Posól.",
-      "Do formy wyłóż mięso, na wierzch puree, rozsmaruj widelcem (rowki się ładnie przypieką), posyp serem.",
-      "Piecz 20 min. Odstaw 10 min, potnij na 3 części, do pojemników, ostudź, do lodówki."
+      "Cebulę w piórka, paprykę w paski, cukinię w półplasterki. Nie musi być równo.",
+      "W garnku na oleju smaż cebulę 4 min, dodaj mielone i smaż 8 min rozbijając łopatką.",
+      "Dodaj koncentrat, łyżkę słodkiej papryki, sól i pieprz — smaż 1 min.",
+      "Wrzuć paprykę i cukinię, wlej passatę. Duś 20 min pod przykryciem, zamieszaj raz w połowie.",
+      "W tym czasie ugotuj ziemniaki — 20 min w osolonej wodzie.",
+      "Rozłóż leczo i ziemniaki do 3 pojemników, ostudź, do lodówki."
     ]
   },
   "agenda": [
@@ -216,16 +208,43 @@
       "ping": true,
       "slot": "sniadanie",
       "opis": "Coś lekkiego i białkowego. Na pusty żołądek gorzej zaśniesz, na pełny obudzisz się rozbity.",
-      "posilek": "Kanapki z serem, musztardą i kiszonym ogórkiem",
-      "posilek_id": "q_kanapki_ser",
-      "porcja": 0.8,
+      "posilek": "Twarożek ze szczypiorkiem + pieczywo",
+      "posilek_id": "q_twarog",
+      "porcja": 1.0,
       "makra": {
-        "kcal": 385,
-        "bialko": 17,
-        "tluszcz": 18,
-        "wegle": 36
+        "kcal": 476,
+        "bialko": 43,
+        "tluszcz": 14,
+        "wegle": 40
       },
       "skladniki": [
+        {
+          "nazwa": "Twaróg półtłusty",
+          "ile": "200 g",
+          "g": 200,
+          "kcal": 266,
+          "bialko": 37.4,
+          "tluszcz": 9.4,
+          "wegle": 7.4
+        },
+        {
+          "nazwa": "Śmietana 18%",
+          "ile": "20 ml",
+          "g": 20,
+          "kcal": 37,
+          "bialko": 0.5,
+          "tluszcz": 3.6,
+          "wegle": 0.7
+        },
+        {
+          "nazwa": "Szczypiorek",
+          "ile": "2 łyżki (10 g)",
+          "g": 10,
+          "kcal": 3,
+          "bialko": 0.3,
+          "tluszcz": 0.1,
+          "wegle": 0.2
+        },
         {
           "nazwa": "Chleb żytni / pełnoziarnisty",
           "ile": "2 kromki (70 g)",
@@ -236,49 +255,13 @@
           "wegle": 29.4
         },
         {
-          "nazwa": "Ser żółty w plastrach",
-          "ile": "2 plastry (40 g)",
-          "g": 40,
-          "kcal": 140,
-          "bialko": 10.2,
-          "tluszcz": 10.8,
-          "wegle": 0.2
-        },
-        {
-          "nazwa": "Musztarda",
-          "ile": "1 łyżka (15 g)",
-          "g": 15,
-          "kcal": 16,
-          "bialko": 0.8,
-          "tluszcz": 0.9,
-          "wegle": 1.2
-        },
-        {
-          "nazwa": "Ogórek kiszony",
-          "ile": "100 g",
-          "g": 98,
-          "kcal": 12,
-          "bialko": 0.5,
-          "tluszcz": 0.2,
-          "wegle": 1.9
-        },
-        {
-          "nazwa": "Masło",
-          "ile": "5 g",
-          "g": 5,
-          "kcal": 37,
-          "bialko": 0.0,
-          "tluszcz": 4.1,
-          "wegle": 0.0
-        },
-        {
-          "nazwa": "Pomidor",
-          "ile": "1 szt. (120 g)",
-          "g": 120,
-          "kcal": 22,
-          "bialko": 1.1,
-          "tluszcz": 0.2,
-          "wegle": 3.2
+          "nazwa": "Ogórek długi",
+          "ile": "90 g",
+          "g": 90,
+          "kcal": 13,
+          "bialko": 0.6,
+          "tluszcz": 0.1,
+          "wegle": 2.6
         }
       ]
     },
@@ -320,33 +303,33 @@
       "ping": true,
       "slot": "drugi",
       "opis": "Pierwszy porządny posiłek dnia. Trenowałeś na czczo, więc nie odkładaj go na później.",
-      "posilek": "Jogurt grecki z orzechami i miodem",
-      "posilek_id": "q_jogurt_orzechy",
+      "posilek": "Twaróg z bananem i miodem",
+      "posilek_id": "q_twarog_banan",
       "porcja": 0.8,
       "makra": {
-        "kcal": 590,
-        "bialko": 61,
+        "kcal": 526,
+        "bialko": 48,
         "tluszcz": 13,
         "wegle": 55
       },
       "skladniki": [
         {
-          "nazwa": "Jogurt grecki 2%",
-          "ile": "240 g",
-          "g": 240,
-          "kcal": 175,
-          "bialko": 23.8,
-          "tluszcz": 4.8,
-          "wegle": 7.4
+          "nazwa": "Twaróg półtłusty",
+          "ile": "145 g",
+          "g": 145,
+          "kcal": 193,
+          "bialko": 27.1,
+          "tluszcz": 6.8,
+          "wegle": 5.4
         },
         {
-          "nazwa": "Orzechy / migdały",
-          "ile": "12 g",
-          "g": 12,
-          "kcal": 77,
-          "bialko": 2.3,
-          "tluszcz": 6.8,
-          "wegle": 1.2
+          "nazwa": "Banan",
+          "ile": "1 szt. (120 g)",
+          "g": 120,
+          "kcal": 106,
+          "bialko": 1.3,
+          "tluszcz": 0.4,
+          "wegle": 24.2
         },
         {
           "nazwa": "Miód",
@@ -358,24 +341,33 @@
           "wegle": 16.4
         },
         {
-          "nazwa": "Jabłko",
-          "ile": "1 szt. (170 g)",
-          "g": 170,
-          "kcal": 85,
-          "bialko": 0.5,
-          "tluszcz": 0.3,
-          "wegle": 19.4
+          "nazwa": "Orzechy / migdały",
+          "ile": "8 g",
+          "g": 8,
+          "kcal": 51,
+          "bialko": 1.5,
+          "tluszcz": 4.6,
+          "wegle": 0.8
+        },
+        {
+          "nazwa": "Mleko 2%",
+          "ile": "40 ml",
+          "g": 40,
+          "kcal": 20,
+          "bialko": 1.3,
+          "tluszcz": 0.8,
+          "wegle": 1.9
         }
       ],
       "dobitka": {
         "nazwa": "Skyr naturalny (kubek 150 g)",
-        "ile": "2 kubki (300 g)",
-        "g": 300,
-        "n": 2,
-        "kcal": 192,
-        "bialko": 34.5,
-        "tluszcz": 0.6,
-        "wegle": 11.4
+        "ile": "1 kubek (150 g)",
+        "g": 150,
+        "n": 1,
+        "kcal": 96,
+        "bialko": 17.2,
+        "tluszcz": 0.3,
+        "wegle": 5.7
       }
     },
     {
@@ -409,60 +401,42 @@
       "ping": true,
       "slot": "obiad",
       "opis": "Prosto z garnka, świeży. Reszta ostudzona idzie do lodówki.",
-      "posilek": "Zapiekanka pasterska (mielone pod puree)",
-      "posilek_id": "b_shepherd",
+      "posilek": "Leczo z mieloną wołowiną + ziemniaki",
+      "posilek_id": "b_leczo",
       "porcja": 1.0,
       "makra": {
-        "kcal": 847,
-        "bialko": 46,
-        "tluszcz": 42,
-        "wegle": 64
+        "kcal": 828,
+        "bialko": 48,
+        "tluszcz": 38,
+        "wegle": 66
       },
       "skladniki": [
         {
           "nazwa": "Mielona wołowina",
-          "ile": "165 g",
-          "g": 167,
-          "kcal": 358,
-          "bialko": 31.0,
-          "tluszcz": 25.0,
+          "ile": "200 g",
+          "g": 200,
+          "kcal": 430,
+          "bialko": 37.2,
+          "tluszcz": 30.0,
           "wegle": 0.0
         },
         {
-          "nazwa": "Ziemniaki",
-          "ile": "300 g",
-          "g": 300,
-          "kcal": 231,
-          "bialko": 6.0,
-          "tluszcz": 0.3,
-          "wegle": 49.5
+          "nazwa": "Papryka",
+          "ile": "1 szt. (170 g)",
+          "g": 170,
+          "kcal": 53,
+          "bialko": 1.7,
+          "tluszcz": 0.5,
+          "wegle": 7.8
         },
         {
-          "nazwa": "Mleko 2%",
-          "ile": "33 ml",
-          "g": 33,
+          "nazwa": "Cukinia",
+          "ile": "100 g",
+          "g": 100,
           "kcal": 17,
-          "bialko": 1.1,
-          "tluszcz": 0.7,
-          "wegle": 1.6
-        },
-        {
-          "nazwa": "Masło",
-          "ile": "7 g",
-          "g": 7,
-          "kcal": 50,
-          "bialko": 0.0,
-          "tluszcz": 5.5,
-          "wegle": 0.0
-        },
-        {
-          "nazwa": "Ser żółty starty",
-          "ile": "23 g",
-          "g": 23,
-          "kcal": 82,
-          "bialko": 5.9,
-          "tluszcz": 6.3,
-          "wegle": 0.1
+          "bialko": 1.2,
+          "tluszcz": 0.3,
+          "wegle": 2.1
         },
         {
           "nazwa": "Cebula",
@@ -474,39 +448,39 @@
           "wegle": 5.1
         },
         {
-          "nazwa": "Marchew",
-          "ile": "55 g",
-          "g": 53,
-          "kcal": 22,
-          "bialko": 0.5,
-          "tluszcz": 0.1,
-          "wegle": 3.7
+          "nazwa": "Passata pomidorowa",
+          "ile": "135 g",
+          "g": 133,
+          "kcal": 41,
+          "bialko": 1.9,
+          "tluszcz": 0.3,
+          "wegle": 7.5
         },
         {
           "nazwa": "Koncentrat pomidorowy",
-          "ile": "20 g",
-          "g": 20,
-          "kcal": 19,
-          "bialko": 0.9,
+          "ile": "13 g",
+          "g": 13,
+          "kcal": 13,
+          "bialko": 0.6,
           "tluszcz": 0.1,
-          "wegle": 3.4
+          "wegle": 2.3
         },
         {
-          "nazwa": "Kostka bulionowa",
-          "ile": "3 g",
-          "g": 3,
-          "kcal": 8,
-          "bialko": 0.3,
-          "tluszcz": 0.7,
-          "wegle": 0.5
+          "nazwa": "Ziemniaki",
+          "ile": "250 g",
+          "g": 250,
+          "kcal": 192,
+          "bialko": 5.0,
+          "tluszcz": 0.2,
+          "wegle": 41.2
         },
         {
           "nazwa": "Olej rzepakowy",
-          "ile": "4 ml",
-          "g": 4,
-          "kcal": 33,
+          "ile": "7 ml",
+          "g": 7,
+          "kcal": 55,
           "bialko": 0.0,
-          "tluszcz": 3.7,
+          "tluszcz": 6.1,
           "wegle": 0.0
         }
       ]
@@ -518,33 +492,51 @@
       "ping": true,
       "slot": "kolacja",
       "opis": "",
-      "posilek": "Twarożek ze szczypiorkiem + pieczywo",
-      "posilek_id": "q_twarog",
+      "posilek": "Box: sałatka jajeczna z kukurydzą",
+      "posilek_id": "q_jajka_kukurydza",
       "porcja": 0.8,
       "makra": {
-        "kcal": 423,
-        "bialko": 36,
-        "tluszcz": 12,
-        "wegle": 40
+        "kcal": 368,
+        "bialko": 26,
+        "tluszcz": 14,
+        "wegle": 29
       },
       "skladniki": [
         {
-          "nazwa": "Twaróg półtłusty",
-          "ile": "160 g",
-          "g": 160,
-          "kcal": 213,
-          "bialko": 29.9,
-          "tluszcz": 7.5,
-          "wegle": 5.9
+          "nazwa": "Jaja",
+          "ile": "2 szt. (110 g)",
+          "g": 110,
+          "kcal": 157,
+          "bialko": 13.9,
+          "tluszcz": 10.5,
+          "wegle": 0.8
         },
         {
-          "nazwa": "Śmietana 18%",
-          "ile": "16 ml",
-          "g": 16,
-          "kcal": 29,
-          "bialko": 0.4,
-          "tluszcz": 2.9,
-          "wegle": 0.5
+          "nazwa": "Kukurydza konserwowa",
+          "ile": "80 g",
+          "g": 80,
+          "kcal": 66,
+          "bialko": 2.2,
+          "tluszcz": 1.0,
+          "wegle": 10.4
+        },
+        {
+          "nazwa": "Jogurt grecki 2%",
+          "ile": "65 g",
+          "g": 65,
+          "kcal": 47,
+          "bialko": 6.4,
+          "tluszcz": 1.3,
+          "wegle": 2.0
+        },
+        {
+          "nazwa": "Musztarda",
+          "ile": "1 łyżka (15 g)",
+          "g": 15,
+          "kcal": 16,
+          "bialko": 0.8,
+          "tluszcz": 0.9,
+          "wegle": 1.2
         },
         {
           "nazwa": "Szczypiorek",
@@ -557,21 +549,12 @@
         },
         {
           "nazwa": "Chleb żytni / pełnoziarnisty",
-          "ile": "2 kromki (70 g)",
-          "g": 70,
-          "kcal": 158,
-          "bialko": 4.5,
-          "tluszcz": 1.3,
-          "wegle": 29.4
-        },
-        {
-          "nazwa": "Ogórek długi",
-          "ile": "150 g",
-          "g": 150,
-          "kcal": 21,
-          "bialko": 1.0,
-          "tluszcz": 0.2,
-          "wegle": 4.3
+          "ile": "1 kromka (35 g)",
+          "g": 35,
+          "kcal": 79,
+          "bialko": 2.3,
+          "tluszcz": 0.6,
+          "wegle": 14.7
         }
       ]
     },
@@ -608,7 +591,7 @@
         "opakowan": 2,
         "opak": 400,
         "jedn": "g",
-        "brakuje": 500.0,
+        "brakuje": 600.0,
         "dokupisz": 800,
         "cena": 36.0
       },
@@ -644,7 +627,7 @@
         "opakowan": 1,
         "opak": 200,
         "jedn": "g",
-        "brakuje": 30.0,
+        "brakuje": 5,
         "dokupisz": 200,
         "cena": 8.5
       },
@@ -656,21 +639,9 @@
         "opakowan": 1,
         "opak": 1000,
         "jedn": "ml",
-        "brakuje": 180.0,
+        "brakuje": 70,
         "dokupisz": 1000,
         "cena": 4.0
-      },
-      {
-        "klucz": "ser",
-        "nazwa": "Ser żółty starty",
-        "kat": "nabial",
-        "trw": "chlodnia",
-        "opakowan": 1,
-        "opak": 200,
-        "jedn": "g",
-        "brakuje": 70.0,
-        "dokupisz": 200,
-        "cena": 9.0
       },
       {
         "klucz": "ser_zolty",
@@ -680,7 +651,7 @@
         "opakowan": 1,
         "opak": 12,
         "jedn": "plaster",
-        "brakuje": 4,
+        "brakuje": 2,
         "dokupisz": 12,
         "cena": 10.0
       },
@@ -689,12 +660,12 @@
         "nazwa": "Skyr naturalny (kubek 150 g)",
         "kat": "nabial",
         "trw": "chlodnia",
-        "opakowan": 8,
+        "opakowan": 6,
         "opak": 1,
         "jedn": "kubek",
-        "brakuje": 8.0,
-        "dokupisz": 8,
-        "cena": 30.4
+        "brakuje": 6.0,
+        "dokupisz": 6,
+        "cena": 22.8
       },
       {
         "klucz": "twarog",
@@ -704,7 +675,7 @@
         "opakowan": 3,
         "opak": 250,
         "jedn": "g",
-        "brakuje": 505,
+        "brakuje": 705,
         "dokupisz": 750,
         "cena": 16.5
       },
@@ -716,7 +687,7 @@
         "opakowan": 1,
         "opak": 200,
         "jedn": "ml",
-        "brakuje": 16,
+        "brakuje": 20,
         "dokupisz": 200,
         "cena": 3.5
       },
@@ -725,48 +696,60 @@
         "nazwa": "Banan",
         "kat": "warzywa",
         "trw": "chlodnia",
-        "opakowan": 3,
+        "opakowan": 2,
         "opak": 1,
         "jedn": "szt",
-        "brakuje": 3,
-        "dokupisz": 3,
-        "cena": 3.6
+        "brakuje": 2,
+        "dokupisz": 2,
+        "cena": 2.4
       },
       {
         "klucz": "cebula",
         "nazwa": "Cebula",
         "kat": "warzywa",
         "trw": "trwale",
-        "opakowan": 2,
+        "opakowan": 3,
         "opak": 1,
         "jedn": "szt",
-        "brakuje": 2.0,
-        "dokupisz": 2,
-        "cena": 1.2
+        "brakuje": 3.0,
+        "dokupisz": 3,
+        "cena": 1.8
+      },
+      {
+        "klucz": "cukinia",
+        "nazwa": "Cukinia",
+        "kat": "warzywa",
+        "trw": "chlodnia",
+        "opakowan": 1,
+        "opak": 1,
+        "jedn": "szt",
+        "brakuje": 1.0,
+        "dokupisz": 1,
+        "cena": 4.0
+      },
+      {
+        "klucz": "czosnek",
+        "nazwa": "Czosnek",
+        "kat": "warzywa",
+        "trw": "trwale",
+        "opakowan": 1,
+        "opak": 10,
+        "jedn": "zabek",
+        "brakuje": 1,
+        "dokupisz": 10,
+        "cena": 3.0
       },
       {
         "klucz": "jablko",
         "nazwa": "Jabłko",
         "kat": "warzywa",
         "trw": "trwale",
-        "opakowan": 1,
-        "opak": 1,
-        "jedn": "szt",
-        "brakuje": 1,
-        "dokupisz": 1,
-        "cena": 1.2
-      },
-      {
-        "klucz": "marchew",
-        "nazwa": "Marchew",
-        "kat": "warzywa",
-        "trw": "trwale",
         "opakowan": 2,
         "opak": 1,
         "jedn": "szt",
-        "brakuje": 2.0,
+        "brakuje": 2,
         "dokupisz": 2,
-        "cena": 1.0
+        "cena": 2.4
       },
       {
         "klucz": "ogorek",
@@ -776,7 +759,7 @@
         "opakowan": 1,
         "opak": 1,
         "jedn": "szt",
-        "brakuje": 0.5,
+        "brakuje": 0.3,
         "dokupisz": 1,
         "cena": 2.5
       },
@@ -793,16 +776,28 @@
         "cena": 8.0
       },
       {
+        "klucz": "papryka",
+        "nazwa": "Papryka",
+        "kat": "warzywa",
+        "trw": "chlodnia",
+        "opakowan": 4,
+        "opak": 1,
+        "jedn": "szt",
+        "brakuje": 3.5,
+        "dokupisz": 4,
+        "cena": 16.0
+      },
+      {
         "klucz": "pomidor",
         "nazwa": "Pomidor",
         "kat": "warzywa",
         "trw": "swieze",
-        "opakowan": 2,
+        "opakowan": 1,
         "opak": 1,
         "jedn": "szt",
-        "brakuje": 2.0,
-        "dokupisz": 2,
-        "cena": 3.0
+        "brakuje": 1.0,
+        "dokupisz": 1,
+        "cena": 1.5
       },
       {
         "klucz": "szczypiorek",
@@ -812,7 +807,7 @@
         "opakowan": 1,
         "opak": 12,
         "jedn": "lyzka",
-        "brakuje": 3.0,
+        "brakuje": 3.5,
         "dokupisz": 12,
         "cena": 3.0
       },
@@ -824,7 +819,7 @@
         "opakowan": 1,
         "opak": 2000,
         "jedn": "g",
-        "brakuje": 900.0,
+        "brakuje": 750.0,
         "dokupisz": 2000,
         "cena": 7.0
       },
@@ -848,7 +843,7 @@
         "opakowan": 1,
         "opak": 19,
         "jedn": "lyzka",
-        "brakuje": 3,
+        "brakuje": 1.0,
         "dokupisz": 19,
         "cena": 9.0
       },
@@ -860,20 +855,8 @@
         "opakowan": 1,
         "opak": 200,
         "jedn": "g",
-        "brakuje": 60.0,
+        "brakuje": 40.0,
         "dokupisz": 200,
-        "cena": 4.0
-      },
-      {
-        "klucz": "bulion",
-        "nazwa": "Kostka bulionowa",
-        "kat": "spizarnia",
-        "trw": "trwale",
-        "opakowan": 1,
-        "opak": 6,
-        "jedn": "kostka",
-        "brakuje": 1.0,
-        "dokupisz": 6,
         "cena": 4.0
       },
       {
@@ -896,7 +879,7 @@
         "opakowan": 1,
         "opak": 22,
         "jedn": "lyzka",
-        "brakuje": 2,
+        "brakuje": 2.0,
         "dokupisz": 22,
         "cena": 15.0
       },
@@ -932,7 +915,7 @@
         "opakowan": 1,
         "opak": 1000,
         "jedn": "ml",
-        "brakuje": 12.0,
+        "brakuje": 26.0,
         "dokupisz": 1000,
         "cena": 9.0
       },
@@ -944,9 +927,21 @@
         "opakowan": 1,
         "opak": 200,
         "jedn": "g",
-        "brakuje": 20,
+        "brakuje": 30,
         "dokupisz": 200,
         "cena": 12.0
+      },
+      {
+        "klucz": "passata",
+        "nazwa": "Passata pomidorowa",
+        "kat": "spizarnia",
+        "trw": "trwale",
+        "opakowan": 2,
+        "opak": 500,
+        "jedn": "g",
+        "brakuje": 560.0,
+        "dokupisz": 1000,
+        "cena": 10.0
       },
       {
         "klucz": "przyprawy",
@@ -962,12 +957,12 @@
       }
     ],
     "mam": [],
-    "koszt": 266.4,
+    "koszt": 276.9,
     "zrobione": true
   },
   "lodowka": {
     "mielone_wolowe": {
-      "ilosc": 300.0,
+      "ilosc": 200.0,
       "do": "2026-09-15"
     },
     "jaja": {
@@ -979,43 +974,47 @@
       "do": "2026-09-23"
     },
     "maslo": {
-      "ilosc": 170.0,
+      "ilosc": 195,
       "do": "2026-09-23"
     },
     "mleko": {
-      "ilosc": 820.0,
-      "do": "2026-09-23"
-    },
-    "ser": {
-      "ilosc": 130.0,
+      "ilosc": 930,
       "do": "2026-09-23"
     },
     "ser_zolty": {
-      "ilosc": 8,
+      "ilosc": 10,
       "do": "2026-09-23"
     },
     "twarog": {
-      "ilosc": 245,
+      "ilosc": 45,
       "do": "2026-09-23"
     },
     "smietana": {
-      "ilosc": 184,
+      "ilosc": 180,
       "do": "2026-09-23"
     },
+    "czosnek": {
+      "ilosc": 9,
+      "do": "2027-03-30"
+    },
     "ogorek": {
-      "ilosc": 0.5,
+      "ilosc": 0.7,
       "do": "2026-09-15"
     },
     "ogorek_kiszony": {
       "ilosc": 6.5,
       "do": "2027-03-30"
     },
+    "papryka": {
+      "ilosc": 0.5,
+      "do": "2026-09-23"
+    },
     "szczypiorek": {
-      "ilosc": 9.0,
+      "ilosc": 8.5,
       "do": "2026-09-15"
     },
     "ziemniaki": {
-      "ilosc": 1100.0,
+      "ilosc": 1250.0,
       "do": "2027-03-30"
     },
     "chleb": {
@@ -1023,15 +1022,11 @@
       "do": "2026-09-23"
     },
     "kakao": {
-      "ilosc": 16,
+      "ilosc": 18.0,
       "do": "2027-03-30"
     },
     "koncentrat": {
-      "ilosc": 140.0,
-      "do": "2027-03-30"
-    },
-    "bulion": {
-      "ilosc": 5.0,
+      "ilosc": 160.0,
       "do": "2027-03-30"
     },
     "kukurydza": {
@@ -1039,7 +1034,7 @@
       "do": "2027-03-30"
     },
     "maslo_orzechowe": {
-      "ilosc": 20,
+      "ilosc": 20.0,
       "do": "2027-03-30"
     },
     "miod": {
@@ -1051,11 +1046,15 @@
       "do": "2027-03-30"
     },
     "olej": {
-      "ilosc": 988.0,
+      "ilosc": 974.0,
       "do": "2027-03-30"
     },
     "orzechy": {
-      "ilosc": 180,
+      "ilosc": 170,
+      "do": "2027-03-30"
+    },
+    "passata": {
+      "ilosc": 440.0,
       "do": "2027-03-30"
     },
     "przyprawy": {
@@ -2518,7 +2517,7 @@
   "tryb": {
     "aktywny": true,
     "od": "2026-09-11",
-    "start": "2026-09-11T20:33:42+02:00"
+    "start": "2026-09-11T20:34:45+02:00"
   },
   "postep": {
     "waga": [],
@@ -2534,7 +2533,7 @@
         "opakowan": 2,
         "opak": 400,
         "jedn": "g",
-        "brakuje": 500.0,
+        "brakuje": 600.0,
         "dokupisz": 800,
         "cena": 36.0
       },
@@ -2570,7 +2569,7 @@
         "opakowan": 1,
         "opak": 200,
         "jedn": "g",
-        "brakuje": 30.0,
+        "brakuje": 5,
         "dokupisz": 200,
         "cena": 8.5
       },
@@ -2582,21 +2581,9 @@
         "opakowan": 1,
         "opak": 1000,
         "jedn": "ml",
-        "brakuje": 180.0,
+        "brakuje": 70,
         "dokupisz": 1000,
         "cena": 4.0
-      },
-      {
-        "klucz": "ser",
-        "nazwa": "Ser żółty starty",
-        "kat": "nabial",
-        "trw": "chlodnia",
-        "opakowan": 1,
-        "opak": 200,
-        "jedn": "g",
-        "brakuje": 70.0,
-        "dokupisz": 200,
-        "cena": 9.0
       },
       {
         "klucz": "ser_zolty",
@@ -2606,7 +2593,7 @@
         "opakowan": 1,
         "opak": 12,
         "jedn": "plaster",
-        "brakuje": 4,
+        "brakuje": 2,
         "dokupisz": 12,
         "cena": 10.0
       },
@@ -2615,12 +2602,12 @@
         "nazwa": "Skyr naturalny (kubek 150 g)",
         "kat": "nabial",
         "trw": "chlodnia",
-        "opakowan": 8,
+        "opakowan": 6,
         "opak": 1,
         "jedn": "kubek",
-        "brakuje": 8.0,
-        "dokupisz": 8,
-        "cena": 30.4
+        "brakuje": 6.0,
+        "dokupisz": 6,
+        "cena": 22.8
       },
       {
         "klucz": "twarog",
@@ -2630,7 +2617,7 @@
         "opakowan": 3,
         "opak": 250,
         "jedn": "g",
-        "brakuje": 505,
+        "brakuje": 705,
         "dokupisz": 750,
         "cena": 16.5
       },
@@ -2642,7 +2629,7 @@
         "opakowan": 1,
         "opak": 200,
         "jedn": "ml",
-        "brakuje": 16,
+        "brakuje": 20,
         "dokupisz": 200,
         "cena": 3.5
       },
@@ -2651,48 +2638,60 @@
         "nazwa": "Banan",
         "kat": "warzywa",
         "trw": "chlodnia",
-        "opakowan": 3,
+        "opakowan": 2,
         "opak": 1,
         "jedn": "szt",
-        "brakuje": 3,
-        "dokupisz": 3,
-        "cena": 3.6
+        "brakuje": 2,
+        "dokupisz": 2,
+        "cena": 2.4
       },
       {
         "klucz": "cebula",
         "nazwa": "Cebula",
         "kat": "warzywa",
         "trw": "trwale",
-        "opakowan": 2,
+        "opakowan": 3,
         "opak": 1,
         "jedn": "szt",
-        "brakuje": 2.0,
-        "dokupisz": 2,
-        "cena": 1.2
+        "brakuje": 3.0,
+        "dokupisz": 3,
+        "cena": 1.8
+      },
+      {
+        "klucz": "cukinia",
+        "nazwa": "Cukinia",
+        "kat": "warzywa",
+        "trw": "chlodnia",
+        "opakowan": 1,
+        "opak": 1,
+        "jedn": "szt",
+        "brakuje": 1.0,
+        "dokupisz": 1,
+        "cena": 4.0
+      },
+      {
+        "klucz": "czosnek",
+        "nazwa": "Czosnek",
+        "kat": "warzywa",
+        "trw": "trwale",
+        "opakowan": 1,
+        "opak": 10,
+        "jedn": "zabek",
+        "brakuje": 1,
+        "dokupisz": 10,
+        "cena": 3.0
       },
       {
         "klucz": "jablko",
         "nazwa": "Jabłko",
         "kat": "warzywa",
         "trw": "trwale",
-        "opakowan": 1,
-        "opak": 1,
-        "jedn": "szt",
-        "brakuje": 1,
-        "dokupisz": 1,
-        "cena": 1.2
-      },
-      {
-        "klucz": "marchew",
-        "nazwa": "Marchew",
-        "kat": "warzywa",
-        "trw": "trwale",
         "opakowan": 2,
         "opak": 1,
         "jedn": "szt",
-        "brakuje": 2.0,
+        "brakuje": 2,
         "dokupisz": 2,
-        "cena": 1.0
+        "cena": 2.4
       },
       {
         "klucz": "ogorek",
@@ -2702,7 +2701,7 @@
         "opakowan": 1,
         "opak": 1,
         "jedn": "szt",
-        "brakuje": 0.5,
+        "brakuje": 0.3,
         "dokupisz": 1,
         "cena": 2.5
       },
@@ -2719,16 +2718,28 @@
         "cena": 8.0
       },
       {
+        "klucz": "papryka",
+        "nazwa": "Papryka",
+        "kat": "warzywa",
+        "trw": "chlodnia",
+        "opakowan": 4,
+        "opak": 1,
+        "jedn": "szt",
+        "brakuje": 3.5,
+        "dokupisz": 4,
+        "cena": 16.0
+      },
+      {
         "klucz": "pomidor",
         "nazwa": "Pomidor",
         "kat": "warzywa",
         "trw": "swieze",
-        "opakowan": 2,
+        "opakowan": 1,
         "opak": 1,
         "jedn": "szt",
-        "brakuje": 2.0,
-        "dokupisz": 2,
-        "cena": 3.0
+        "brakuje": 1.0,
+        "dokupisz": 1,
+        "cena": 1.5
       },
       {
         "klucz": "szczypiorek",
@@ -2738,7 +2749,7 @@
         "opakowan": 1,
         "opak": 12,
         "jedn": "lyzka",
-        "brakuje": 3.0,
+        "brakuje": 3.5,
         "dokupisz": 12,
         "cena": 3.0
       },
@@ -2750,7 +2761,7 @@
         "opakowan": 1,
         "opak": 2000,
         "jedn": "g",
-        "brakuje": 900.0,
+        "brakuje": 750.0,
         "dokupisz": 2000,
         "cena": 7.0
       },
@@ -2774,7 +2785,7 @@
         "opakowan": 1,
         "opak": 19,
         "jedn": "lyzka",
-        "brakuje": 3,
+        "brakuje": 1.0,
         "dokupisz": 19,
         "cena": 9.0
       },
@@ -2786,20 +2797,8 @@
         "opakowan": 1,
         "opak": 200,
         "jedn": "g",
-        "brakuje": 60.0,
+        "brakuje": 40.0,
         "dokupisz": 200,
-        "cena": 4.0
-      },
-      {
-        "klucz": "bulion",
-        "nazwa": "Kostka bulionowa",
-        "kat": "spizarnia",
-        "trw": "trwale",
-        "opakowan": 1,
-        "opak": 6,
-        "jedn": "kostka",
-        "brakuje": 1.0,
-        "dokupisz": 6,
         "cena": 4.0
       },
       {
@@ -2822,7 +2821,7 @@
         "opakowan": 1,
         "opak": 22,
         "jedn": "lyzka",
-        "brakuje": 2,
+        "brakuje": 2.0,
         "dokupisz": 22,
         "cena": 15.0
       },
@@ -2858,7 +2857,7 @@
         "opakowan": 1,
         "opak": 1000,
         "jedn": "ml",
-        "brakuje": 12.0,
+        "brakuje": 26.0,
         "dokupisz": 1000,
         "cena": 9.0
       },
@@ -2870,9 +2869,21 @@
         "opakowan": 1,
         "opak": 200,
         "jedn": "g",
-        "brakuje": 20,
+        "brakuje": 30,
         "dokupisz": 200,
         "cena": 12.0
+      },
+      {
+        "klucz": "passata",
+        "nazwa": "Passata pomidorowa",
+        "kat": "spizarnia",
+        "trw": "trwale",
+        "opakowan": 2,
+        "opak": 500,
+        "jedn": "g",
+        "brakuje": 560.0,
+        "dokupisz": 1000,
+        "cena": 10.0
       },
       {
         "klucz": "przyprawy",
@@ -2888,7 +2899,7 @@
       }
     ],
     "mam": [],
-    "koszt": 266.4,
+    "koszt": 276.9,
     "zrobione": true
   },
   "repo": "jasio-cloud/trenerai",
@@ -2927,11 +2938,11 @@
   "alternatywy": {
     "sniadanie": [
       {
-        "id": "q_jajecznica",
-        "nazwa": "Jajecznica z pieczywem i pomidorem",
-        "kcal": 460,
-        "bialko": 26,
-        "czas": 8,
+        "id": "q_skyr",
+        "nazwa": "Skyr z bananem i masłem orzechowym",
+        "kcal": 397,
+        "bialko": 40,
+        "czas": 3,
         "bez_gotowania": false
       },
       {
@@ -2940,6 +2951,14 @@
         "kcal": 479,
         "bialko": 30,
         "czas": 12,
+        "bez_gotowania": false
+      },
+      {
+        "id": "q_omlet",
+        "nazwa": "Omlet z serem i pomidorem",
+        "kcal": 521,
+        "bialko": 34,
+        "czas": 10,
         "bez_gotowania": false
       },
       {
@@ -2949,38 +2968,14 @@
         "bialko": 30,
         "czas": 10,
         "bez_gotowania": false
-      },
-      {
-        "id": "q_shakshuka",
-        "nazwa": "Jajka w sosie pomidorowym (shakshuka)",
-        "kcal": 517,
-        "bialko": 28,
-        "czas": 12,
-        "bez_gotowania": false
       }
     ],
     "drugi": [
       {
-        "id": "q_jajka_kukurydza",
-        "nazwa": "Box: sałatka jajeczna z kukurydzą",
-        "kcal": 475,
-        "bialko": 35,
-        "czas": 12,
-        "bez_gotowania": false
-      },
-      {
-        "id": "q_kanapki_jajko",
-        "nazwa": "Kanapki z jajkiem na twardo i serem",
-        "kcal": 479,
-        "bialko": 30,
-        "czas": 12,
-        "bez_gotowania": false
-      },
-      {
-        "id": "q_twarog_banan",
-        "nazwa": "Twaróg z bananem i miodem",
-        "kcal": 495,
-        "bialko": 39,
+        "id": "d_twarog_kakao",
+        "nazwa": "Deser: twarożek kakaowy z masłem orzechowym",
+        "kcal": 476,
+        "bialko": 45,
         "czas": 4,
         "bez_gotowania": false
       },
@@ -2991,17 +2986,25 @@
         "bialko": 39,
         "czas": 4,
         "bez_gotowania": false
+      },
+      {
+        "id": "q_jogurt_orzechy",
+        "nazwa": "Jogurt grecki z orzechami i miodem",
+        "kcal": 461,
+        "bialko": 33,
+        "czas": 3,
+        "bez_gotowania": false
+      },
+      {
+        "id": "q_serek_box",
+        "nazwa": "Box: serek wiejski + jajka na twardo + ogórki",
+        "kcal": 524,
+        "bialko": 46,
+        "czas": 12,
+        "bez_gotowania": false
       }
     ],
     "obiad": [
-      {
-        "id": "b_leczo",
-        "nazwa": "Leczo z mieloną wołowiną + ziemniaki",
-        "kcal": 828,
-        "bialko": 48,
-        "czas": 40,
-        "bez_gotowania": false
-      },
       {
         "id": "o_slojek",
         "nazwa": "Gotowe danie ze słoika + pieczywo",
@@ -3009,6 +3012,14 @@
         "bialko": 50,
         "czas": 4,
         "bez_gotowania": true
+      },
+      {
+        "id": "b_shepherd",
+        "nazwa": "Zapiekanka pasterska (mielone pod puree)",
+        "kcal": 847,
+        "bialko": 46,
+        "czas": 65,
+        "bez_gotowania": false
       },
       {
         "id": "b_bolo",
@@ -3029,34 +3040,34 @@
     ],
     "kolacja": [
       {
+        "id": "q_kanapki_jajko",
+        "nazwa": "Kanapki z jajkiem na twardo i serem",
+        "kcal": 479,
+        "bialko": 30,
+        "czas": 12,
+        "bez_gotowania": false
+      },
+      {
+        "id": "q_omlet",
+        "nazwa": "Omlet z serem i pomidorem",
+        "kcal": 521,
+        "bialko": 34,
+        "czas": 10,
+        "bez_gotowania": false
+      },
+      {
+        "id": "q_grzanki",
+        "nazwa": "Grzanki z serem, jajkiem i pomidorem",
+        "kcal": 493,
+        "bialko": 30,
+        "czas": 10,
+        "bez_gotowania": false
+      },
+      {
         "id": "d_twarog_kakao",
         "nazwa": "Deser: twarożek kakaowy z masłem orzechowym",
         "kcal": 476,
         "bialko": 45,
-        "czas": 4,
-        "bez_gotowania": false
-      },
-      {
-        "id": "q_jajka_kukurydza",
-        "nazwa": "Box: sałatka jajeczna z kukurydzą",
-        "kcal": 475,
-        "bialko": 35,
-        "czas": 12,
-        "bez_gotowania": false
-      },
-      {
-        "id": "q_serek_box",
-        "nazwa": "Box: serek wiejski + jajka na twardo + ogórki",
-        "kcal": 524,
-        "bialko": 46,
-        "czas": 12,
-        "bez_gotowania": false
-      },
-      {
-        "id": "d_pudding",
-        "nazwa": "Deser: czekoladowy pudding ze skyru z bananem",
-        "kcal": 419,
-        "bialko": 39,
         "czas": 4,
         "bez_gotowania": false
       }
@@ -3401,12 +3412,12 @@
   },
   "historia": {
     "bazy": [
+      "b_leczo",
       "b_shepherd",
       "b_bolo",
       "b_kapusta",
       "b_zapiekanka",
-      "b_wolowina_cebula",
-      "b_gulasz"
+      "b_wolowina_cebula"
     ],
     "waga": [],
     "treningi": [],

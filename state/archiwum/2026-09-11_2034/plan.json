@@ -1,0 +1,51 @@
+{
+  "cykl": 27,
+  "od": "2026-09-11",
+  "do": "2026-09-13",
+  "baza": "b_shepherd",
+  "dni": [
+    {
+      "sniadanie": "q_kanapki_ser",
+      "drugi": "q_jogurt_orzechy",
+      "kolacja": "q_twarog",
+      "obiad": "b_shepherd",
+      "data": "2026-09-11",
+      "typ": 1,
+      "makra": {
+        "kcal": 2250,
+        "bialko": 144,
+        "tluszcz": 95,
+        "wegle": 188
+      }
+    },
+    {
+      "sniadanie": "q_skyr",
+      "drugi": "d_pudding",
+      "kolacja": "q_omlet",
+      "obiad": "b_shepherd",
+      "data": "2026-09-12",
+      "typ": 2,
+      "makra": {
+        "kcal": 2184,
+        "bialko": 159,
+        "tluszcz": 87,
+        "wegle": 174
+      }
+    },
+    {
+      "sniadanie": "q_twarog_banan",
+      "drugi": "q_jajka_kukurydza",
+      "kolacja": "d_twarog_kakao",
+      "obiad": "b_shepherd",
+      "data": "2026-09-13",
+      "typ": 0,
+      "makra": {
+        "kcal": 2293,
+        "bialko": 165,
+        "tluszcz": 98,
+        "wegle": 177
+      }
+    }
+  ],
+  "wygenerowano": "2026-09-11T20:33:44+02:00"
+}

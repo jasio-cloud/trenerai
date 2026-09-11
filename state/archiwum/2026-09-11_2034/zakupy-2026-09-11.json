@@ -8,7 +8,7 @@
       "opakowan": 2,
       "opak": 400,
       "jedn": "g",
-      "brakuje": 600.0,
+      "brakuje": 500.0,
       "dokupisz": 800,
       "cena": 36.0
     },
@@ -44,7 +44,7 @@
       "opakowan": 1,
       "opak": 200,
       "jedn": "g",
-      "brakuje": 5,
+      "brakuje": 30.0,
       "dokupisz": 200,
       "cena": 8.5
     },
@@ -56,9 +56,21 @@
       "opakowan": 1,
       "opak": 1000,
       "jedn": "ml",
-      "brakuje": 70,
+      "brakuje": 180.0,
       "dokupisz": 1000,
       "cena": 4.0
+    },
+    {
+      "klucz": "ser",
+      "nazwa": "Ser żółty starty",
+      "kat": "nabial",
+      "trw": "chlodnia",
+      "opakowan": 1,
+      "opak": 200,
+      "jedn": "g",
+      "brakuje": 70.0,
+      "dokupisz": 200,
+      "cena": 9.0
     },
     {
       "klucz": "ser_zolty",
@@ -68,7 +80,7 @@
       "opakowan": 1,
       "opak": 12,
       "jedn": "plaster",
-      "brakuje": 2,
+      "brakuje": 4,
       "dokupisz": 12,
       "cena": 10.0
     },
@@ -77,12 +89,12 @@
       "nazwa": "Skyr naturalny (kubek 150 g)",
       "kat": "nabial",
       "trw": "chlodnia",
-      "opakowan": 6,
+      "opakowan": 8,
       "opak": 1,
       "jedn": "kubek",
-      "brakuje": 6.0,
-      "dokupisz": 6,
-      "cena": 22.8
+      "brakuje": 8.0,
+      "dokupisz": 8,
+      "cena": 30.4
     },
     {
       "klucz": "twarog",
@@ -92,7 +104,7 @@
       "opakowan": 3,
       "opak": 250,
       "jedn": "g",
-      "brakuje": 705,
+      "brakuje": 505,
       "dokupisz": 750,
       "cena": 16.5
     },
@@ -104,7 +116,7 @@
       "opakowan": 1,
       "opak": 200,
       "jedn": "ml",
-      "brakuje": 20,
+      "brakuje": 16,
       "dokupisz": 200,
       "cena": 3.5
     },
@@ -113,60 +125,48 @@
       "nazwa": "Banan",
       "kat": "warzywa",
       "trw": "chlodnia",
-      "opakowan": 2,
+      "opakowan": 3,
       "opak": 1,
       "jedn": "szt",
-      "brakuje": 2,
-      "dokupisz": 2,
-      "cena": 2.4
+      "brakuje": 3,
+      "dokupisz": 3,
+      "cena": 3.6
     },
     {
       "klucz": "cebula",
       "nazwa": "Cebula",
       "kat": "warzywa",
       "trw": "trwale",
-      "opakowan": 3,
+      "opakowan": 2,
       "opak": 1,
       "jedn": "szt",
-      "brakuje": 3.0,
-      "dokupisz": 3,
-      "cena": 1.8
-    },
-    {
-      "klucz": "cukinia",
-      "nazwa": "Cukinia",
-      "kat": "warzywa",
-      "trw": "chlodnia",
-      "opakowan": 1,
-      "opak": 1,
-      "jedn": "szt",
-      "brakuje": 1.0,
-      "dokupisz": 1,
-      "cena": 4.0
-    },
-    {
-      "klucz": "czosnek",
-      "nazwa": "Czosnek",
-      "kat": "warzywa",
-      "trw": "trwale",
-      "opakowan": 1,
-      "opak": 10,
-      "jedn": "zabek",
-      "brakuje": 1,
-      "dokupisz": 10,
-      "cena": 3.0
+      "brakuje": 2.0,
+      "dokupisz": 2,
+      "cena": 1.2
     },
     {
       "klucz": "jablko",
       "nazwa": "Jabłko",
       "kat": "warzywa",
       "trw": "trwale",
+      "opakowan": 1,
+      "opak": 1,
+      "jedn": "szt",
+      "brakuje": 1,
+      "dokupisz": 1,
+      "cena": 1.2
+    },
+    {
+      "klucz": "marchew",
+      "nazwa": "Marchew",
+      "kat": "warzywa",
+      "trw": "trwale",
       "opakowan": 2,
       "opak": 1,
       "jedn": "szt",
-      "brakuje": 2,
+      "brakuje": 2.0,
       "dokupisz": 2,
-      "cena": 2.4
+      "cena": 1.0
     },
     {
       "klucz": "ogorek",
@@ -176,7 +176,7 @@
       "opakowan": 1,
       "opak": 1,
       "jedn": "szt",
-      "brakuje": 0.3,
+      "brakuje": 0.5,
       "dokupisz": 1,
       "cena": 2.5
     },
@@ -193,28 +193,16 @@
       "cena": 8.0
     },
     {
-      "klucz": "papryka",
-      "nazwa": "Papryka",
-      "kat": "warzywa",
-      "trw": "chlodnia",
-      "opakowan": 4,
-      "opak": 1,
-      "jedn": "szt",
-      "brakuje": 3.5,
-      "dokupisz": 4,
-      "cena": 16.0
-    },
-    {
       "klucz": "pomidor",
       "nazwa": "Pomidor",
       "kat": "warzywa",
       "trw": "swieze",
-      "opakowan": 1,
+      "opakowan": 2,
       "opak": 1,
       "jedn": "szt",
-      "brakuje": 1.0,
-      "dokupisz": 1,
-      "cena": 1.5
+      "brakuje": 2.0,
+      "dokupisz": 2,
+      "cena": 3.0
     },
     {
       "klucz": "szczypiorek",
@@ -224,7 +212,7 @@
       "opakowan": 1,
       "opak": 12,
       "jedn": "lyzka",
-      "brakuje": 3.5,
+      "brakuje": 3.0,
       "dokupisz": 12,
       "cena": 3.0
     },
@@ -236,7 +224,7 @@
       "opakowan": 1,
       "opak": 2000,
       "jedn": "g",
-      "brakuje": 750.0,
+      "brakuje": 900.0,
       "dokupisz": 2000,
       "cena": 7.0
     },
@@ -260,7 +248,7 @@
       "opakowan": 1,
       "opak": 19,
       "jedn": "lyzka",
-      "brakuje": 1.0,
+      "brakuje": 3,
       "dokupisz": 19,
       "cena": 9.0
     },
@@ -272,8 +260,20 @@
       "opakowan": 1,
       "opak": 200,
       "jedn": "g",
-      "brakuje": 40.0,
+      "brakuje": 60.0,
       "dokupisz": 200,
+      "cena": 4.0
+    },
+    {
+      "klucz": "bulion",
+      "nazwa": "Kostka bulionowa",
+      "kat": "spizarnia",
+      "trw": "trwale",
+      "opakowan": 1,
+      "opak": 6,
+      "jedn": "kostka",
+      "brakuje": 1.0,
+      "dokupisz": 6,
       "cena": 4.0
     },
     {
@@ -296,7 +296,7 @@
       "opakowan": 1,
       "opak": 22,
       "jedn": "lyzka",
-      "brakuje": 2.0,
+      "brakuje": 2,
       "dokupisz": 22,
       "cena": 15.0
     },
@@ -332,7 +332,7 @@
       "opakowan": 1,
       "opak": 1000,
       "jedn": "ml",
-      "brakuje": 26.0,
+      "brakuje": 12.0,
       "dokupisz": 1000,
       "cena": 9.0
     },
@@ -344,21 +344,9 @@
       "opakowan": 1,
       "opak": 200,
       "jedn": "g",
-      "brakuje": 30,
+      "brakuje": 20,
       "dokupisz": 200,
       "cena": 12.0
-    },
-    {
-      "klucz": "passata",
-      "nazwa": "Passata pomidorowa",
-      "kat": "spizarnia",
-      "trw": "trwale",
-      "opakowan": 2,
-      "opak": 500,
-      "jedn": "g",
-      "brakuje": 560.0,
-      "dokupisz": 1000,
-      "cena": 10.0
     },
     {
       "klucz": "przyprawy",
@@ -374,6 +362,6 @@
     }
   ],
   "mam": [],
-  "koszt": 276.9,
+  "koszt": 266.4,
   "zrobione": true
 }
