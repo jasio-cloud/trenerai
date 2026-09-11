@@ -398,12 +398,29 @@ def _blad_dnia(m):
             + abs(m["wegle"] - CEL["wegle"]) * 1.0)
 
 
-def generuj_plan(d=None, force=False):
-    """Układa cały 3-dniowy cykl: jedna baza na obiady + składanki na resztę."""
+PLANY_DIR = os.path.join(STATE, "plany")
+
+
+def _archiwizuj_plan(plan):
+    """Kazdy cykl zostaje na dysku — dzieki temu dni wstecz pokazuja to, co bylo
+    NAPRAWDE zaplanowane, a nie odtworzenie, ktore dzis wyszloby inaczej."""
+    os.makedirs(PLANY_DIR, exist_ok=True)
+    save(os.path.join(PLANY_DIR, "%s.json" % plan["od"]), plan)
+
+
+def generuj_plan(d=None, force=False, zapisz=True):
+    """Układa cały 3-dniowy cykl: jedna baza na obiady + składanki na resztę.
+
+    zapisz=False liczy plan bez zadnych skutkow ubocznych (prognoza przyszlych
+    cykli w panelu). Bez tego samo podejrzenie dnia za tydzien nadpisywalo
+    biezacy plan i przesuwalo rotacje dan.
+    """
     d = d or dzis()
     start = start_cyklu(d)
     stary = load(PLAN_PATH, {})
     if not force and stary.get("od") == start.isoformat():
+        if zapisz and not os.path.exists(os.path.join(PLANY_DIR, "%s.json" % stary["od"])):
+            _archiwizuj_plan(stary)
         return stary
 
     historia = load(HIST_PATH, {"bazy": [], "waga": [], "treningi": []})
@@ -483,7 +500,11 @@ def generuj_plan(d=None, force=False):
         "dni": dni,
         "wygenerowano": teraz().isoformat(timespec="seconds"),
     }
+    if not zapisz:
+        plan["prognoza"] = True
+        return plan
     save(PLAN_PATH, plan)
+    _archiwizuj_plan(plan)
 
     historia["bazy"] = ([baza["id"]] + historia.get("bazy", []))[:6]
     save(HIST_PATH, historia)
@@ -514,9 +535,34 @@ def _zastosuj_podmiany(dzien, d):
     return dzien
 
 
+_prognozy = {}
+
+
+def plan_cyklu(d):
+    """Plan cyklu dla dowolnego dnia — bez nadpisywania biezacego planu.
+
+    Biezacy cykl: normalnie (tu wolno zapisac). Wczesniejszy: z archiwum albo
+    None, jesli powstal przed archiwizacja. Pozniejszy: prognoza liczona w pamieci.
+    """
+    start = start_cyklu(d)
+    teraz_start = start_cyklu(dzis())
+    if start == teraz_start:
+        return generuj_plan(d)
+    arch = os.path.join(PLANY_DIR, "%s.json" % start.isoformat())
+    if os.path.exists(arch):
+        return load(arch)
+    if start > teraz_start:
+        if start not in _prognozy:
+            _prognozy[start] = generuj_plan(d, zapisz=False)
+        return _prognozy[start]
+    return None
+
+
 def plan_dnia(d=None):
     d = d or dzis()
-    plan = generuj_plan(d)
+    plan = plan_cyklu(d)
+    if plan is None:
+        return None, None
     for dzien in plan["dni"]:
         if dzien["data"] == d.isoformat():
             return plan, _zastosuj_podmiany(dzien, d)
@@ -1118,7 +1164,7 @@ def agenda(d=None):
     for e in zdarzenia:
         if e.get("akcja") == "budzik":
             e["budzik"] = budzik_dla(e["czas"], d)
-        if e.get("slot"):
+        if e.get("slot") and dzien:
             pid = dzien[e["slot"]]
             porcja = dzien.get("porcje", {}).get(e["slot"], 1.0)
             e["posilek"] = nazwa_posilku(pid)
@@ -1373,6 +1419,48 @@ def tekst_podsumowania(p):
 
 # ------------------------------------------------------------------ eksport
 
+OKNO_WSTECZ, OKNO_NAPRZOD = 7, 6
+
+
+def dni_panelu(d):
+    """Tydzien wstecz i prawie tydzien naprzod — do przewijania dni w panelu.
+
+    Dla dni minionych dokladamy to, co sie faktycznie wydarzylo: odhaczenia,
+    wage, kroki i serie. Dla przyszlych — plan albo prognoze.
+    """
+    h = load(HIST_PATH, {})
+    wagi = {w["data"]: w["kg"] for w in h.get("waga", [])}
+    kroki = {k["data"]: k for k in h.get("kroki", [])}
+    serie = {}
+    for z in dziennik.zdarzenia():
+        if z.get("typ") == "seria":
+            serie.setdefault(z["data"], []).append(z)
+    out = []
+    for i in range(-OKNO_WSTECZ, OKNO_NAPRZOD + 1):
+        dd = d + datetime.timedelta(days=i)
+        ds = dd.isoformat()
+        plan, dzien = plan_dnia(dd)
+        if dzien is None:
+            zrodlo = "brak"
+        elif i == 0:
+            zrodlo = "dzis"
+        elif plan.get("prognoza"):
+            zrodlo = "prognoza"
+        else:
+            zrodlo = "zapis" if i < 0 else "plan"
+        info = opis_typu(typ_dnia(dd))
+        out.append({
+            "data": ds, "przesuniecie": i, "typ": typ_dnia(dd), "zrodlo": zrodlo,
+            "nazwa_typu": info["nazwa"], "emoji": info["emoji"], "opis_typu": info["opis"],
+            "agenda": agenda(dd), "makra": dzien["makra"] if dzien else None,
+            "dobitka": dzien.get("dobitka", 0) if dzien else 0,
+            "odhaczone": dziennik.odhaczenia(dd), "waga": wagi.get(ds),
+            "kroki": kroki.get(ds), "serie": serie.get(ds, []),
+            "trening": trening_dnia(dd),
+        })
+    return out
+
+
 def eksport():
     """Zrzuca wszystko, czego potrzebuje panel WWW, do jednego pliku."""
     d = dzis()
@@ -1395,6 +1483,7 @@ def eksport():
         "posilki": {p["id"]: p for p in QUICK},
         "produkty": {k: v for k, v in PROD.items() if not k.startswith("_")},
         "panel_wersja": CFG.get("panel_wersja", 1),
+        "dni": dni_panelu(d),
         "tryb": tryb(),
         "postep": {
             "waga": load(HIST_PATH, {}).get("waga", [])[-60:],

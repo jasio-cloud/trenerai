@@ -127,6 +127,14 @@
   table.sklad td.liczby{text-align:right;white-space:nowrap;color:var(--slaby);font-variant-numeric:tabular-nums;padding-left:6px}
   table.sklad tr.dobitka td{color:var(--ok)}
   table.sklad tr.suma-sklad td{font-weight:650;color:var(--tekst)}
+  .nawigacja{display:flex;align-items:center;gap:8px;margin-top:10px}
+  .nawigacja button{background:var(--karta);border:1px solid var(--linia);color:var(--tekst);
+    font:600 15px/1 inherit;border-radius:10px;padding:9px 14px;cursor:pointer;min-width:44px}
+  .nawigacja button:disabled{opacity:.3}
+  .nawigacja #dz-dzis{font-size:12.5px;color:var(--akcent)}
+  .nawigacja .gdzie{color:var(--slaby);font-size:12.5px;margin-left:auto}
+  .zrodlo{border-left:3px solid var(--akcent);padding:8px 11px;margin-bottom:12px;
+    background:var(--karta);border-radius:0 10px 10px 0;font-size:13px;color:var(--slaby)}
   [hidden]{display:none !important}
 </style>
 </head>
@@ -139,6 +147,12 @@
       <span class="znacznik" id="typ"></span>
     </div>
     <div class="podtytul" id="opis-typu"></div>
+    <div class="nawigacja">
+      <button id="dz-wstecz" aria-label="Poprzedni dzień">‹</button>
+      <button id="dz-dzis">dziś</button>
+      <button id="dz-naprzod" aria-label="Następny dzień">›</button>
+      <span class="gdzie" id="dz-gdzie"></span>
+    </div>
   </header>
 
   <main id="widok"><div class="pusto">Wczytuję plan…</div></main>
@@ -162,7 +176,7 @@ const esc = s => String(s??"").replace(/[&<>"]/g, c => ({"&":"&amp;","<":"&lt;",
 /* Wersja panelu. iPhone dodany do ekranu głównego potrafi trzymać stary HTML
    w nieskończoność. dane.json leci zawsze świeży, więc porównujemy numery
    i przy różnicy przeładowujemy stronę z ?v=, co omija cache przeglądarki. */
-const WERSJA = 6;
+const WERSJA = 7;
 let D = null, widok = "dzis";
 
 /* ---- zapis z telefonu ------------------------------------------------------
@@ -286,7 +300,67 @@ function makra(m, cel){
   }).join("")}</div>`;
 }
 
+const OPIS_ZRODLA = {
+  zapis: "Dzień miniony: plan z tamtego cyklu (gramatury liczone obecną metodą) i to, co faktycznie się wydarzyło. Punkty możesz odhaczyć po fakcie.",
+  plan: "Plan z bieżącego cyklu. Może się jeszcze zmienić po podmianie posiłku.",
+  prognoza: "Prognoza następnego cyklu — konkretne dania ustalą się w dniu gotowania, więc mogą być inne.",
+  brak: "Dla tego dnia nie ma zapisanego planu — powstał, zanim system zaczął archiwizować cykle."
+};
+
+function tabelaSkladnikow(e){
+  if(!e.skladniki || !e.skladniki.length) return "";
+  return `<table class="sklad">
+    ${e.skladniki.map(x=>`<tr><td class="ile">${esc(x.ile)}</td><td>${esc(x.nazwa)}</td>
+      <td class="liczby">${x.kcal} kcal · B ${x.bialko}</td></tr>`).join("")}
+    ${e.dobitka ? `<tr class="dobitka"><td class="ile">+ ${esc(e.dobitka.ile)}</td>
+      <td>${esc(e.dobitka.nazwa)} <span class="kcal">— dobitka białka</span></td>
+      <td class="liczby">${e.dobitka.kcal} kcal · B ${e.dobitka.bialko}</td></tr>` : ""}
+    <tr class="suma-sklad"><td></td><td>razem</td>
+      <td class="liczby">${e.makra.kcal} kcal · B ${e.makra.bialko} · T ${e.makra.tluszcz} · W ${e.makra.wegle}</td></tr>
+  </table>`;
+}
+
+function widokInnegoDnia(x){
+  const przeszly = x.przesuniecie < 0;
+  const zapisane = zapamietane();
+  const lista = x.agenda.map(e => {
+    const klucz = e.czas + "|" + e.tytul;
+    const lok = x.data + "|" + klucz;
+    const on = (lok in zapisane) ? !!zapisane[lok] : !!(x.odhaczone || {})[klucz];
+    return `<li class="${on ? "odhaczone" : ""}">
+      <span class="godz">${e.czas}</span>
+      <div><label class="ptk-etykieta">
+          <input type="checkbox" class="ptk" data-punkt="${esc(klucz)}" data-dzien="${x.data}"
+            ${on ? "checked" : ""} ${przeszly && token() ? "" : "disabled"}>
+          <span class="tyt">${e.ikona || ""} ${esc(e.tytul)}</span></label>
+        ${e.posilek ? `<div class="posilek">${esc(e.posilek)}
+           <span class="kcal">· ${e.makra.kcal} kcal, ${e.makra.bialko} g B</span></div>` : ""}
+        ${tabelaSkladnikow(e)}
+        ${e.opis ? `<div class="op">${esc(e.opis)}</div>` : ""}
+      </div></li>`;
+  }).join("");
+
+  const fakty = przeszly ? `<div class="karta"><h2>Co się wydarzyło</h2>
+      <div class="poz"><span class="nazwa">Odhaczone punkty</span>
+        <span class="ile">${Object.values(x.odhaczone || {}).filter(Boolean).length} z ${x.agenda.filter(e => e.ping).length}</span></div>
+      <div class="poz"><span class="nazwa">Waga</span><span class="ile">${x.waga ? x.waga + " kg" : "—"}</span></div>
+      <div class="poz"><span class="nazwa">Kroki</span>
+        <span class="ile">${x.kroki ? x.kroki.kroki.toLocaleString("pl-PL") + " / " + x.kroki.cel.toLocaleString("pl-PL") : "—"}</span></div>
+      <div class="poz"><span class="nazwa">Trening</span>
+        <span class="ile">${x.serie.length ? x.serie.length + " ćw. zapisanych" : "—"}</span></div>
+      ${x.serie.map(z => `<div class="poz" style="padding-left:12px"><span class="nazwa kcal">${esc(z.cwiczenie)}</span>
+        <span class="ile">${z.ciezar} kg × ${(z.powt || []).join(",")}</span></div>`).join("")}
+    </div>` : "";
+
+  return `<div class="zrodlo">${OPIS_ZRODLA[x.zrodlo] || ""}</div>
+    ${x.makra ? `<div class="karta"><h2>Makra dnia</h2>${makra(x.makra, D.cel)}</div>` : ""}
+    ${fakty}
+    <div class="karta"><h2>Plan dnia</h2><ol class="os">${lista}</ol></div>`;
+}
+
 function widokDzis(){
+  const inny = wybranyDzien !== 0 ? sel() : null;
+  if(inny) return widokInnegoDnia(inny);
   const teraz = new Date(), tm = teraz.getHours()*60 + teraz.getMinutes();
   const dzis = D.plan.dni.find(d => d.data === D.dzis) || D.plan.dni[0];
   const nastepny = D.agenda.filter(e => minuty(e.czas) > tm)[0];
@@ -535,8 +609,9 @@ function kartaPostepu(){
 }
 
 function widokTrening(){
-  const t = D.trening.trening;
-  if(D.trening.rodzaj === "zmiana"){
+  const tr = (wybranyDzien !== 0 && sel()) ? sel().trening : D.trening;
+  const t = tr.trening;
+  if(tr.rodzaj === "zmiana"){
     return kartaPostepu() + `<div class="karta"><h2>${esc(t.nazwa)}</h2>
       <div class="op">${esc(t.zasada)}</div></div>
       <div class="karta"><h2>Mikro-rozruch co 2–3 h</h2>
@@ -638,6 +713,42 @@ function liczSen(polozenie){
   return wynik;
 }
 
+let wybranyDzien = 0;   // przesuniecie wzgledem dzisiaj: -7 ... +6
+const sel = () => (D.dni || []).find(x => x.przesuniecie === wybranyDzien) || null;
+const zakresDni = () => {
+  const p = (D.dni || []).map(x => x.przesuniecie);
+  return p.length ? [Math.min(...p), Math.max(...p)] : [0, 0];
+};
+
+function rysujNaglowek(){
+  const x = sel();
+  const data = x ? x.data : D.dzis;
+  const t = x ? {emoji: x.emoji, nazwa: x.nazwa_typu, opis: x.opis_typu} : D.typy[String(D.typ_dzis)];
+  $("#data").textContent = ladnaData(data);
+  $("#typ").textContent = t.emoji + " " + t.nazwa;
+  $("#opis-typu").textContent = t.opis;
+  const [min, max] = zakresDni();
+  $("#dz-wstecz").disabled = wybranyDzien <= min;
+  $("#dz-naprzod").disabled = wybranyDzien >= max;
+  $("#dz-dzis").hidden = wybranyDzien === 0;
+  $("#dz-gdzie").textContent = wybranyDzien === 0 ? "" :
+    wybranyDzien < 0 ? (wybranyDzien === -1 ? "wczoraj" : (-wybranyDzien) + " dni temu")
+                     : (wybranyDzien === 1 ? "jutro" : "za " + wybranyDzien + " dni");
+}
+
+function zmienDzien(krok){
+  const [min, max] = zakresDni();
+  const nowy = krok === 0 ? 0 : Math.max(min, Math.min(max, wybranyDzien + krok));
+  if(nowy === wybranyDzien) return;
+  wybranyDzien = nowy;
+  zamieniamSlot = null;
+  if(widok !== "dzis" && widok !== "trening"){
+    widok = "dzis";
+    for(const b of $("#zakladki").children) b.setAttribute("aria-selected", String(b.dataset.w === "dzis"));
+  }
+  rysuj(); scrollTo({top: 0});
+}
+
 let senOKtorej = null;   // null = bierz aktualną godzinę
 let zamieniamSlot = null;
 
@@ -689,6 +800,7 @@ function rysuj(){
   const widoki = {dzis:widokDzis, plan:widokPlan, zakupy:widokZakupy,
                   gotowanie:widokGotowanie, trening:widokTrening, sen:widokSen};
   $("#widok").innerHTML = widoki[widok]();
+  if(D) rysujNaglowek();
 }
 
 function start(dane){
@@ -702,13 +814,27 @@ function start(dane){
   }
   D = dane;
   sprzatajStare();
-  const t = D.typy[String(D.typ_dzis)];
-  $("#data").textContent = ladnaData(D.dzis);
-  $("#typ").textContent = t.emoji + " " + t.nazwa;
-  $("#opis-typu").textContent = t.opis;
   $("#stopka").textContent = "Dane odświeżone " + D.wygenerowano.replace("T"," ").slice(0,16);
   rysuj();
 }
+
+$("#dz-wstecz").addEventListener("click", () => zmienDzien(-1));
+$("#dz-naprzod").addEventListener("click", () => zmienDzien(1));
+$("#dz-dzis").addEventListener("click", () => zmienDzien(0));
+
+/* Przesuniecie palcem w bok zmienia dzien. Wymagamy wyraznie poziomego ruchu,
+   zeby zwykle przewijanie w dol nie przelaczalo dni przez przypadek. */
+let dotyk = null;
+$("#widok").addEventListener("touchstart", e => {
+  if(widok !== "dzis" && widok !== "trening") return;
+  const t = e.touches[0]; dotyk = {x: t.clientX, y: t.clientY};
+}, {passive: true});
+$("#widok").addEventListener("touchend", e => {
+  if(!dotyk) return;
+  const t = e.changedTouches[0], dx = t.clientX - dotyk.x, dy = t.clientY - dotyk.y;
+  dotyk = null;
+  if(Math.abs(dx) > 70 && Math.abs(dx) > Math.abs(dy) * 1.8) zmienDzien(dx < 0 ? 1 : -1);
+}, {passive: true});
 
 $("#zakladki").addEventListener("click", e => {
   const b = e.target.closest("button"); if(!b) return;
@@ -730,10 +856,12 @@ $("#widok").addEventListener("input", e => {
 $("#widok").addEventListener("change", async e => {
   const ptk = e.target.closest("input.ptk");
   if(ptk){
-    const on = ptk.checked;
-    lokalnie(ptk.dataset.punkt, on);
+    const on = ptk.checked, dzien = ptk.dataset.dzien;
+    lokalnie(dzien ? dzien + "|" + ptk.dataset.punkt : ptk.dataset.punkt, on);
     ptk.closest("li").classList.toggle("odhaczone", on);
-    if(token()) { try { await wyslijZdarzenie({typ:"punkt", punkt:ptk.dataset.punkt, zrobione:on}); }
+    const zd = {typ:"punkt", punkt:ptk.dataset.punkt, zrobione:on};
+    if(dzien) zd.data = dzien;   // odhaczenie po fakcie trafia do wlasciwego dnia
+    if(token()) { try { await wyslijZdarzenie(zd); }
                   catch(err){ console.warn("odhaczenie nie poszlo:", err.message); } }
     return;
   }

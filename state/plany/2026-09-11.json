@@ -1,0 +1,51 @@
+{
+  "cykl": 27,
+  "od": "2026-09-11",
+  "do": "2026-09-13",
+  "baza": "b_leczo",
+  "dni": [
+    {
+      "sniadanie": "q_twarog",
+      "drugi": "q_twarog_banan",
+      "kolacja": "q_jajka_kukurydza",
+      "obiad": "b_leczo",
+      "data": "2026-09-11",
+      "typ": 1,
+      "makra": {
+        "kcal": 2274,
+        "bialko": 165,
+        "tluszcz": 88,
+        "wegle": 190
+      }
+    },
+    {
+      "sniadanie": "q_shakshuka",
+      "drugi": "q_skyr",
+      "kolacja": "d_sernik",
+      "obiad": "b_leczo",
+      "data": "2026-09-12",
+      "typ": 2,
+      "makra": {
+        "kcal": 2314,
+        "bialko": 173,
+        "tluszcz": 87,
+        "wegle": 193
+      }
+    },
+    {
+      "sniadanie": "q_kanapki_ser",
+      "drugi": "q_jogurt_orzechy",
+      "kolacja": "d_twarog_kakao",
+      "obiad": "b_leczo",
+      "data": "2026-09-13",
+      "typ": 0,
+      "makra": {
+        "kcal": 2231,
+        "bialko": 148,
+        "tluszcz": 97,
+        "wegle": 179
+      }
+    }
+  ],
+  "wygenerowano": "2026-09-11T20:34:47+02:00"
+}
