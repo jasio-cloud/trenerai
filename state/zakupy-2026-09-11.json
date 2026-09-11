@@ -1,0 +1,334 @@
+{
+  "kup": [
+    {
+      "klucz": "mielone_wolowe",
+      "nazwa": "Mielona wołowina",
+      "kat": "mieso",
+      "trw": "swieze",
+      "opakowan": 2,
+      "opak": 400,
+      "jedn": "g",
+      "brakuje": 500.0,
+      "dokupisz": 800,
+      "cena": 36.0
+    },
+    {
+      "klucz": "jaja",
+      "nazwa": "Jaja",
+      "kat": "nabial",
+      "trw": "chlodnia",
+      "opakowan": 1,
+      "opak": 10,
+      "jedn": "szt",
+      "brakuje": 4,
+      "dokupisz": 10,
+      "cena": 12.0
+    },
+    {
+      "klucz": "jogurt_grecki",
+      "nazwa": "Jogurt grecki 2%",
+      "kat": "nabial",
+      "trw": "chlodnia",
+      "opakowan": 1,
+      "opak": 400,
+      "jedn": "g",
+      "brakuje": 340,
+      "dokupisz": 400,
+      "cena": 6.0
+    },
+    {
+      "klucz": "feta",
+      "nazwa": "Ser feta",
+      "kat": "nabial",
+      "trw": "chlodnia",
+      "opakowan": 1,
+      "opak": 200,
+      "jedn": "g",
+      "brakuje": 70,
+      "dokupisz": 200,
+      "cena": 8.0
+    },
+    {
+      "klucz": "ser_zolty",
+      "nazwa": "Ser żółty w plastrach",
+      "kat": "nabial",
+      "trw": "chlodnia",
+      "opakowan": 1,
+      "opak": 12,
+      "jedn": "plaster",
+      "brakuje": 4,
+      "dokupisz": 12,
+      "cena": 10.0
+    },
+    {
+      "klucz": "serek_wiejski",
+      "nazwa": "Serek wiejski",
+      "kat": "nabial",
+      "trw": "chlodnia",
+      "opakowan": 1,
+      "opak": 1,
+      "jedn": "opak",
+      "brakuje": 1,
+      "dokupisz": 1,
+      "cena": 3.5
+    },
+    {
+      "klucz": "skyr",
+      "nazwa": "Skyr naturalny",
+      "kat": "nabial",
+      "trw": "chlodnia",
+      "opakowan": 1,
+      "opak": 400,
+      "jedn": "g",
+      "brakuje": 100,
+      "dokupisz": 400,
+      "cena": 8.0
+    },
+    {
+      "klucz": "twarog",
+      "nazwa": "Twaróg półtłusty",
+      "kat": "nabial",
+      "trw": "chlodnia",
+      "opakowan": 1,
+      "opak": 250,
+      "jedn": "g",
+      "brakuje": 140,
+      "dokupisz": 250,
+      "cena": 5.5
+    },
+    {
+      "klucz": "banan",
+      "nazwa": "Banan",
+      "kat": "warzywa",
+      "trw": "chlodnia",
+      "opakowan": 2,
+      "opak": 1,
+      "jedn": "szt",
+      "brakuje": 2,
+      "dokupisz": 2,
+      "cena": 2.4
+    },
+    {
+      "klucz": "cebula",
+      "nazwa": "Cebula",
+      "kat": "warzywa",
+      "trw": "trwale",
+      "opakowan": 2,
+      "opak": 1,
+      "jedn": "szt",
+      "brakuje": 2.0,
+      "dokupisz": 2,
+      "cena": 1.2
+    },
+    {
+      "klucz": "jablko",
+      "nazwa": "Jabłko",
+      "kat": "warzywa",
+      "trw": "trwale",
+      "opakowan": 1,
+      "opak": 1,
+      "jedn": "szt",
+      "brakuje": 1,
+      "dokupisz": 1,
+      "cena": 1.2
+    },
+    {
+      "klucz": "marchew",
+      "nazwa": "Marchew",
+      "kat": "warzywa",
+      "trw": "trwale",
+      "opakowan": 2,
+      "opak": 1,
+      "jedn": "szt",
+      "brakuje": 2.0,
+      "dokupisz": 2,
+      "cena": 1.0
+    },
+    {
+      "klucz": "ogorek",
+      "nazwa": "Ogórek długi",
+      "kat": "warzywa",
+      "trw": "swieze",
+      "opakowan": 1,
+      "opak": 1,
+      "jedn": "szt",
+      "brakuje": 0.8,
+      "dokupisz": 1,
+      "cena": 2.5
+    },
+    {
+      "klucz": "pomidor",
+      "nazwa": "Pomidor",
+      "kat": "warzywa",
+      "trw": "swieze",
+      "opakowan": 3,
+      "opak": 1,
+      "jedn": "szt",
+      "brakuje": 3,
+      "dokupisz": 3,
+      "cena": 4.5
+    },
+    {
+      "klucz": "salata",
+      "nazwa": "Sałata / mix sałat",
+      "kat": "warzywa",
+      "trw": "swieze",
+      "opakowan": 1,
+      "opak": 150,
+      "jedn": "g",
+      "brakuje": 60,
+      "dokupisz": 150,
+      "cena": 5.0
+    },
+    {
+      "klucz": "szczypiorek",
+      "nazwa": "Szczypiorek",
+      "kat": "warzywa",
+      "trw": "swieze",
+      "opakowan": 1,
+      "opak": 12,
+      "jedn": "lyzka",
+      "brakuje": 4,
+      "dokupisz": 12,
+      "cena": 3.0
+    },
+    {
+      "klucz": "kukurydza",
+      "nazwa": "Kukurydza konserwowa",
+      "kat": "spizarnia",
+      "trw": "trwale",
+      "opakowan": 1,
+      "opak": 200,
+      "jedn": "g",
+      "brakuje": 100,
+      "dokupisz": 200,
+      "cena": 4.0
+    },
+    {
+      "klucz": "oliwa",
+      "nazwa": "Oliwa z oliwek",
+      "kat": "spizarnia",
+      "trw": "trwale",
+      "opakowan": 1,
+      "opak": 500,
+      "jedn": "ml",
+      "brakuje": 8,
+      "dokupisz": 500,
+      "cena": 20.0
+    },
+    {
+      "klucz": "passata",
+      "nazwa": "Passata pomidorowa",
+      "kat": "spizarnia",
+      "trw": "trwale",
+      "opakowan": 1,
+      "opak": 500,
+      "jedn": "g",
+      "brakuje": 400.0,
+      "dokupisz": 500,
+      "cena": 5.0
+    }
+  ],
+  "mam": [
+    {
+      "klucz": "chleb",
+      "nazwa": "Chleb żytni / pełnoziarnisty",
+      "potrzeba": 8,
+      "w_domu": 12,
+      "jedn": "kromka"
+    },
+    {
+      "klucz": "czosnek",
+      "nazwa": "Czosnek",
+      "potrzeba": 3.0,
+      "w_domu": 7.0,
+      "jedn": "zabek"
+    },
+    {
+      "klucz": "koncentrat",
+      "nazwa": "Koncentrat pomidorowy",
+      "potrzeba": 60.0,
+      "w_domu": 140.0,
+      "jedn": "g"
+    },
+    {
+      "klucz": "makaron",
+      "nazwa": "Makaron (świderki/penne)",
+      "potrzeba": 240.0,
+      "w_domu": 260.0,
+      "jedn": "g"
+    },
+    {
+      "klucz": "maslo",
+      "nazwa": "Masło",
+      "potrzeba": 6,
+      "w_domu": 162.0,
+      "jedn": "g"
+    },
+    {
+      "klucz": "maslo_orzechowe",
+      "nazwa": "Masło orzechowe 100%",
+      "potrzeba": 1,
+      "w_domu": 20,
+      "jedn": "lyzka"
+    },
+    {
+      "klucz": "miod",
+      "nazwa": "Miód",
+      "potrzeba": 2,
+      "w_domu": 16,
+      "jedn": "lyzka"
+    },
+    {
+      "klucz": "mleko",
+      "nazwa": "Mleko 2%",
+      "potrzeba": 50,
+      "w_domu": 800.0,
+      "jedn": "ml"
+    },
+    {
+      "klucz": "musztarda",
+      "nazwa": "Musztarda",
+      "potrzeba": 2,
+      "w_domu": 6,
+      "jedn": "lyzka"
+    },
+    {
+      "klucz": "ogorek_kiszony",
+      "nazwa": "Ogórek kiszony",
+      "potrzeba": 3,
+      "w_domu": 6,
+      "jedn": "szt"
+    },
+    {
+      "klucz": "olej",
+      "nazwa": "Olej rzepakowy",
+      "potrzeba": 15.0,
+      "w_domu": 973.0,
+      "jedn": "ml"
+    },
+    {
+      "klucz": "orzechy",
+      "nazwa": "Orzechy / migdały",
+      "potrzeba": 25,
+      "w_domu": 150,
+      "jedn": "g"
+    },
+    {
+      "klucz": "przyprawy",
+      "nazwa": "Przyprawy (sól, pieprz, papryka, oregano, majeranek)",
+      "potrzeba": 9.0,
+      "w_domu": 84.0,
+      "jedn": "porcja"
+    },
+    {
+      "klucz": "smietana",
+      "nazwa": "Śmietana 18%",
+      "potrzeba": 20,
+      "w_domu": 40.0,
+      "jedn": "ml"
+    }
+  ],
+  "koszt": 138.8,
+  "zrobione": true
+}
