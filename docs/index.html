@@ -162,7 +162,7 @@ const esc = s => String(s??"").replace(/[&<>"]/g, c => ({"&":"&amp;","<":"&lt;",
 /* Wersja panelu. iPhone dodany do ekranu głównego potrafi trzymać stary HTML
    w nieskończoność. dane.json leci zawsze świeży, więc porównujemy numery
    i przy różnicy przeładowujemy stronę z ?v=, co omija cache przeglądarki. */
-const WERSJA = 5;
+const WERSJA = 6;
 let D = null, widok = "dzis";
 
 /* ---- zapis z telefonu ------------------------------------------------------
@@ -220,6 +220,14 @@ async function wyslijZdarzenie(zdarzenie, proba = 0){
     if(proba === 0 && /^(409|422)/.test(e.message)) return wyslijZdarzenie(zdarzenie, 1);
     throw e;
   }
+  /* Budzimy chmure od razu. Bez tego zmiana czekalaby na kolejny przebieg crona,
+     a ten przychodzi srednio co ~3,5 h. Porazka budzenia nie psuje zapisu —
+     zdarzenie i tak lezy w logu i zostanie przetworzone przy najblizszym przebiegu. */
+  try {
+    await fetch(`https://api.github.com/repos/${D.repo}/dispatches`, {method: "POST",
+      headers: {"Authorization": "Bearer " + token(), "Accept": "application/vnd.github+json"},
+      body: JSON.stringify({event_type: "panel"})});
+  } catch {}
   return true;
 }
 
@@ -339,7 +347,16 @@ function widokDzis(){
       <button class="mini" id="anuluj-zamiane" style="margin-top:10px">anuluj</button>
     </div>` : "";
 
-  return kartaZamiany + `<div class="karta"><h2>Makra na dziś</h2>${makra(dzis.makra, D.cel)}</div>
+  const wstrzymany = D.tryb && D.tryb.aktywny === false;
+  const banerPauzy = wstrzymany ? `<div class="karta" style="border-color:var(--uwaga)">
+      <h2 style="color:var(--uwaga)">Plan wstrzymany od ${esc(D.tryb.od)}</h2>
+      <div class="op">Nie przychodzą pingi i nie księgują się zakupy. ${D.tryb.powod ? esc(D.tryb.powod) + "." : ""}
+        Jak będziesz gotowy, zacznij od zera — dostaniesz czystą lodówkę, nowy cykl
+        i obiady bez garnka aż do pierwszego dnia gotowania.</div>
+      <button class="mini duzy" id="start-od-zera" style="margin-top:10px">▶ zacznij od zera</button>
+    </div>` : "";
+
+  return banerPauzy + kartaZamiany + `<div class="karta"><h2>Makra na dziś</h2>${makra(dzis.makra, D.cel)}</div>
     ${kartaKrokow}
     <div class="karta"><h2>Plan dnia</h2><ol class="os">${lista}</ol></div>
 
@@ -369,7 +386,8 @@ function widokDzis(){
     <div class="karta"><h2>Zapis z telefonu</h2>
       ${token()
         ? `<div class="op">Token zapisany — odhaczanie, waga i ciężary lecą do systemu.
-             Zmiany widać w planie po najbliższym przebiegu, do 10 minut.</div>
+             Plan przelicza się w ciągu ok. minuty; pingi zaplanowane wcześniej
+             (do 8 h naprzód) mogą jeszcze przyjść w starej wersji.</div>
            <button class="mini" id="usun-token" style="margin-top:8px">usuń token</button>`
         : `<div class="op">Bez tokenu panel tylko pokazuje. Wklej token z GitHuba (ten sam,
              którego użyłeś w Skrócie od kroków), żeby móc zapisywać z telefonu.</div>
@@ -377,7 +395,18 @@ function widokDzis(){
              style="width:100%;margin-top:8px;background:var(--tlo);color:var(--tekst);
                     border:1px solid var(--linia);border-radius:10px;padding:10px;font:inherit">
            <button class="mini duzy" id="zapisz-token" style="margin-top:8px">zapisz token</button>`}
-    </div>`;
+    </div>
+
+    ${token() ? `<div class="karta"><h2>Przerwa i restart</h2>
+      <div class="op"><b>Wstrzymaj</b> — choroba, zabieg, wyjazd. Stają pingi i księgowanie zakupów,
+        nic się nie kasuje. Pingi zaplanowane już do 8 h naprzód jeszcze przyjdą —
+        ntfy nie pozwala ich cofnąć.</div>
+      <div class="op" style="margin-top:6px"><b>Zacznij od zera</b> — czysta lodówka, nowy cykl,
+        wyzerowane zaległości. Stary stan idzie do archiwum, a historia wagi i ciężarów zostaje.</div>
+      <div style="display:flex;gap:8px;margin-top:10px;flex-wrap:wrap">
+        ${wstrzymany ? "" : `<button class="mini duzy" id="pauza">⏸ wstrzymaj plan</button>`}
+        <button class="mini duzy" id="start-od-zera">↺ zacznij od zera</button>
+      </div></div>` : ""}`;
 }
 
 function widokPlan(){
@@ -396,8 +425,23 @@ function widokPlan(){
     }).join("")}`;
 }
 
+function kartaZaksiegowanych(){
+  const zz = D.zakupy_zamrozone;
+  if(!zz || !zz.kup || !zz.kup.length || !token()) return "";
+  return `<div class="karta"><h2>Zaksięgowane zakupy tego cyklu</h2>
+    <div class="op">System o ${esc(D.gotowanie_godzina || "15:30")} założył, że kupiłeś całą listę.
+      Jeśli czegoś nie było w sklepie albo nie wziąłeś — odznacz, żeby lodówka nie kłamała.</div>
+    ${zz.kup.map(p => `<div class="poz" style="${p.niekupione ? "opacity:.45" : ""}">
+      <span class="nazwa">${esc(p.nazwa)}<span class="kcal"> · ${p.opakowan} × ${p.opak} ${esc(p.jedn)}</span></span>
+      ${p.niekupione ? `<span class="ile">odznaczone</span>`
+                     : `<button class="mini" data-niekupione="${esc(p.klucz)}">nie kupiłem</button>`}
+    </div>`).join("")}</div>`;
+}
+
 function widokZakupy(){
   const z = D.zakupy, s = zapamietane();
+  if(!z.kup.length) return kartaZaksiegowanych() +
+    `<div class="karta"><div class="pusto">Nic nie musisz kupować — wszystko masz w lodówce.</div></div>`;
   if(!z.kup.length) return `<div class="karta"><div class="pusto">Nic nie musisz kupować — wszystko masz w lodówce.</div></div>`;
   const nazwyDzialow = {mieso:"Mięso", nabial:"Nabiał i jaja", warzywa:"Warzywa i owoce",
                         pieczywo:"Pieczywo i makarony", spizarnia:"Spiżarnia"};
@@ -425,7 +469,7 @@ function widokZakupy(){
       ✓ Ta lista jest już zaksięgowana — lodówka policzona. Odhaczaj przy półce,
       żeby wiedzieć, co masz w koszyku.</div>` : "";
 
-  return `<div class="karta"><h2>Zakupy na 3 dni</h2>${banner}${html}</div>${mam}${lod}`;
+  return kartaZaksiegowanych() + `<div class="karta"><h2>Zakupy na 3 dni</h2>${banner}${html}</div>${mam}${lod}`;
 }
 
 function widokGotowanie(){
@@ -447,10 +491,53 @@ function widokGotowanie(){
       <div class="cw"><div class="g"><b>Odgrzewanie</b></div><div class="w">${esc(b.odgrzewanie)}</div></div></div>`;
 }
 
+function wykresWagi(){
+  const w = (D.postep && D.postep.waga) || [];
+  if(w.length < 2) return `<div class="op">${w.length ? "Jest jeden pomiar (" + w[0].kg + " kg). " : ""}
+    Wykres pojawi się od drugiego ważenia. Waż się rano w dzień wolny, na czczo.</div>`;
+  const W = 320, H = 110, pad = 26;
+  const kg = w.map(p => p.kg), min = Math.min(...kg) - 0.5, max = Math.max(...kg) + 0.5;
+  const t0 = new Date(w[0].data).getTime(), t1 = new Date(w[w.length-1].data).getTime() || t0 + 1;
+  const x = d => pad + (new Date(d).getTime() - t0) / Math.max(1, t1 - t0) * (W - pad - 8);
+  const y = v => 8 + (max - v) / (max - min) * (H - 26);
+  const linia = w.map((p, i) => (i ? "L" : "M") + x(p.data).toFixed(1) + " " + y(p.kg).toFixed(1)).join(" ");
+  const zmiana = (kg[kg.length-1] - kg[0]);
+  return `<svg viewBox="0 0 ${W} ${H}" style="width:100%;height:auto;display:block" role="img"
+      aria-label="Waga od ${w[0].kg} do ${kg[kg.length-1]} kg">
+    <text x="0" y="${y(max-0.5)+4}" font-size="10" fill="var(--slaby)">${(max-0.5).toFixed(1)}</text>
+    <text x="0" y="${y(min+0.5)+4}" font-size="10" fill="var(--slaby)">${(min+0.5).toFixed(1)}</text>
+    <path d="${linia}" fill="none" stroke="var(--akcent)" stroke-width="2" stroke-linejoin="round"/>
+    ${w.map(p => `<circle cx="${x(p.data).toFixed(1)}" cy="${y(p.kg).toFixed(1)}" r="2.5" fill="var(--akcent)"/>`).join("")}
+  </svg>
+  <div class="op">${w[0].data} → ${w[w.length-1].data}: <b>${zmiana > 0 ? "+" : ""}${zmiana.toFixed(1)} kg</b>
+    ${D.kalorie && D.kalorie.trend ? ` · tempo ${D.kalorie.trend.kg_tydzien > 0 ? "+" : ""}${D.kalorie.trend.kg_tydzien} kg/tydz. (cel: −0,4 do −0,7)` : ""}</div>`;
+}
+
+function historiaCiezarow(){
+  const serie = (D.postep && D.postep.serie) || [];
+  if(!serie.length) return `<div class="op">Brak zapisanych serii. Po treningu wpisz ciężar i powtórzenia
+    przy ćwiczeniu — od następnej sesji dostaniesz podpowiedź ciężaru.</div>`;
+  const po = {};
+  for(const z of serie){ (po[z.cwiczenie] = po[z.cwiczenie] || []).push(z); }
+  return Object.entries(po).map(([cw, lista]) => {
+    const pierwsza = lista[0], ost = lista[lista.length-1];
+    const d = ost.ciezar - pierwsza.ciezar;
+    return `<div class="poz"><span class="nazwa">${esc(cw)}
+        <span class="kcal"> · ${lista.length} ${lista.length === 1 ? "sesja" : "sesji"}</span></span>
+      <span class="ile">${ost.ciezar} kg × ${(ost.powt||[]).join(",")}
+        ${lista.length > 1 ? ` <b style="color:${d >= 0 ? "var(--ok)" : "var(--uwaga)"}">${d >= 0 ? "+" : ""}${d} kg</b>` : ""}</span></div>`;
+  }).join("");
+}
+
+function kartaPostepu(){
+  return `<div class="karta"><h2>Postęp — waga</h2>${wykresWagi()}</div>
+    <div class="karta"><h2>Postęp — ciężary</h2>${historiaCiezarow()}</div>`;
+}
+
 function widokTrening(){
   const t = D.trening.trening;
   if(D.trening.rodzaj === "zmiana"){
-    return `<div class="karta"><h2>${esc(t.nazwa)}</h2>
+    return kartaPostepu() + `<div class="karta"><h2>${esc(t.nazwa)}</h2>
       <div class="op">${esc(t.zasada)}</div></div>
       <div class="karta"><h2>Mikro-rozruch co 2–3 h</h2>
       ${t.mikro.map(x=>`<div class="poz"><span class="nazwa">${esc(x)}</span></div>`).join("")}</div>`;
@@ -478,7 +565,7 @@ function widokTrening(){
                  placeholder="powt. np. 8 8 7" data-cw="${esc(c.nazwa)}">
           <button class="mini" data-serie="${esc(c.nazwa)}">zapisz</button>
         </div></div>`;}).join("")}</div>
-    <div class="karta"><h2>Na koniec</h2><div class="op">${esc(t.finisz)}</div></div>`;
+    <div class="karta"><h2>Na koniec</h2><div class="op">${esc(t.finisz)}</div></div>` + kartaPostepu();
 }
 
 /* ---- kalkulator snu -------------------------------------------------------
@@ -684,6 +771,24 @@ $("#widok").addEventListener("click", async e => {
     }
     if(b.id === "zapisz-token"){ ustawToken($("#token")?.value); rysuj(); return; }
     if(b.id === "usun-token"){ ustawToken(""); rysuj(); return; }
+    if(b.dataset.niekupione){
+      if(await zapisz({typ:"niekupione", klucz:b.dataset.niekupione}, b))
+        b.closest(".poz").style.opacity = ".45";
+      return;
+    }
+    if(b.id === "pauza"){
+      const powod = prompt("Wstrzymać plan? Stają pingi i księgowanie zakupów.\n\nPowód (opcjonalnie):", "");
+      if(powod === null) return;
+      if(await zapisz({typ:"tryb", akcja:"pauza", powod}, b))
+        alert("Wstrzymane. Pingi zaplanowane już do 8 h naprzód mogą jeszcze przyjść — ntfy nie pozwala ich cofnąć.");
+      return;
+    }
+    if(b.id === "start-od-zera"){
+      if(!confirm("Zacząć od zera?\n\nCzysta lodówka, nowy cykl, wyzerowane zaległości. Stary stan idzie do archiwum, historia wagi i ciężarów zostaje.")) return;
+      if(await zapisz({typ:"tryb", akcja:"start"}, b))
+        alert("Start zapisany. Za ok. minutę odśwież panel — zobaczysz nowy plan.");
+      return;
+    }
   }
   const li = e.target.closest("li[data-krok]"); if(!li) return;
   const on = !li.classList.contains("zrobione");

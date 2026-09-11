@@ -22,6 +22,11 @@ on:
     paths-ignore:
       - "state/**"
       - "docs/dane.json"
+  # Panel po kazdym zapisie (odhaczenie, podmiana, pauza, start od zera) budzi
+  # workflow od razu. Bez tego zmiana z telefonu czekalaby na kolejny przebieg
+  # crona, a ten przychodzi srednio co ~3,5 h.
+  repository_dispatch:
+    types: [panel]
   workflow_dispatch:
     inputs:
       test:

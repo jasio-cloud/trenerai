@@ -83,6 +83,58 @@ SLOTY = ("sniadanie", "drugi", "obiad", "kolacja")
 
 PLAN_PATH = os.path.join(STATE, "plan.json")
 PODMIANY_PATH = os.path.join(STATE, "podmiany.json")
+TRYB_PATH = os.path.join(STATE, "tryb.json")
+
+
+def tryb():
+    """Czy plan jest prowadzony. Wstrzymany = zero pingow i zero ksiegowania zakupow."""
+    return load(TRYB_PATH, {"aktywny": True})
+
+
+def wstrzymaj(powod=""):
+    t = {"aktywny": False, "od": dzis().isoformat(), "powod": powod}
+    save(TRYB_PATH, t)
+    return t
+
+
+# pliki, ktore opisuja BIEZACY cykl i przy starcie od zera maja zniknac
+_STAN_CYKLU = ("plan.json", "fridge.json", "podmiany.json", "zdarzenia.json",
+               "przetworzone.json", "zaplanowane.json", "kcal_korekta.json")
+
+
+def start_od_zera():
+    """Restart planu: czysty cykl, pusta lodowka, zero zaleglosci.
+
+    Wszystko trafia najpierw do state/archiwum/<data-godzina>/, wiec nic nie ginie.
+    Zostaje historia wagi, krokow i ciezarow — po przerwie trend i ostatnie ciezary
+    nadal sa przydatne, a przy wadze liczy sie wlasnie ciaglosc pomiarow.
+
+    Jesli start nie wypada w dniu gotowania, obiady do najblizszego gotowania
+    ustawiamy jako gotowce — garnka jeszcze nie ma, wiec nie ma z czego jesc.
+    """
+    import shutil, glob
+    znacznik = teraz().strftime("%Y-%m-%d_%H%M")
+    arch = os.path.join(STATE, "archiwum", znacznik)
+    os.makedirs(arch, exist_ok=True)
+    for sciezka in glob.glob(os.path.join(STATE, "*.json")):
+        shutil.copy2(sciezka, arch)
+    for nazwa in _STAN_CYKLU:
+        p = os.path.join(STATE, nazwa)
+        if os.path.exists(p):
+            os.remove(p)
+    for p in glob.glob(os.path.join(STATE, "wyslane-*.json")) + glob.glob(os.path.join(STATE, "zakupy-*.json")):
+        os.remove(p)
+    save(TRYB_PATH, {"aktywny": True, "od": dzis().isoformat(), "start": teraz().isoformat(timespec="seconds")})
+    global CEL
+    CEL = dict(CFG["makra"])
+    d = dzis()
+    bez_garnka = []
+    while typ_dnia(d) != DZIEN_GOTOWANIA:
+        w = bez_gotowania(d, loguj=False)
+        if w:
+            bez_garnka.append((d.isoformat(), w["na"]))
+        d += datetime.timedelta(days=1)
+    return {"archiwum": arch, "pierwsze_gotowanie": d.isoformat(), "bez_garnka": bez_garnka}
 FRIDGE_PATH = os.path.join(STATE, "fridge.json")
 HIST_PATH = os.path.join(STATE, "historia.json")
 
@@ -389,6 +441,10 @@ def generuj_plan(d=None, force=False):
         # premia za wspólne produkty — mniej pozycji na liście i mniej marnowania
         wynik -= 8 * (len(klucze_produktow) - len(set(klucze_produktow)))
         kary = 450 * (len(uzyte) - len(set(uzyte))) - 8 * (len(klucze_produktow) - len(set(klucze_produktow)))
+        # deser bialkowy najwyzej raz dziennie — to ma byc cos slodkiego w planie, nie trzy kremy dziennie
+        kary += 500 * sum(max(0, sum(1 for s_ in ("sniadanie", "drugi", "kolacja")
+                                     if QUICK_BY_ID[dz[s_]].get("deser")) - 1) for dz in kandydat)
+        wynik += kary - (450 * (len(uzyte) - len(set(uzyte))) - 8 * (len(klucze_produktow) - len(set(klucze_produktow))))
         wpis = (-wynik, nr, kandydat, kary)
         if len(czolowka) < 80:
             heapq.heappush(czolowka, wpis)
@@ -536,6 +592,19 @@ def przetworz_zdarzenia():
             data = parse_date(z["data"])
         except Exception:
             data = dzis()
+        if t == "tryb":
+            if z.get("akcja") == "pauza":
+                wstrzymaj(z.get("powod", "z panelu"))
+                zrobione.append("plan wstrzymany")
+            elif z.get("akcja") == "start":
+                w = start_od_zera()
+                zrobione.append("start od zera, pierwsze gotowanie %s" % w["pierwsze_gotowanie"])
+                # start czysci log zdarzen i wskaznik — reszte starego logu pomijamy celowo
+                return zrobione
+            continue
+        if t == "niekupione" and z.get("klucz"):
+            zrobione.append(oznacz_niekupione(z["klucz"]))
+            continue
         if t == "seria":
             w = dziennik.zapisz_serie(z["cwiczenie"], z["ciezar"], z["powt"],
                                       zakres_powt(z["cwiczenie"]), data, loguj=False)
@@ -729,6 +798,23 @@ def lista_zakupow(plan=None):
     return {"kup": kup, "mam": mam, "koszt": round(koszt, 2), "zrobione": False}
 
 
+def oznacz_niekupione(klucz):
+    """Z listy zakupow czegos nie kupiles — zdejmujemy to z lodowki.
+
+    Zakupy ksieguja sie same o 15:30 w zalozeniu, ze kupiles cala liste. Bez tej
+    poprawki lodowka 'miala' produkt, ktorego nie ma, a nastepna lista go pomijala.
+    """
+    plan = generuj_plan()
+    z = load(_sciezka_zakupow(plan), {})
+    poz = next((p for p in z.get("kup", []) if p["klucz"] == klucz), None)
+    if not poz or poz.get("niekupione"):
+        return "niekupione: %s — brak na liscie albo juz odznaczone" % klucz
+    zdejmij_z_lodowki(klucz, poz["dokupisz"])
+    poz["niekupione"] = True
+    save(_sciezka_zakupow(plan), z)
+    return "niekupione: %s (%s)" % (PROD[klucz]["nazwa"], fmt_ilosc(klucz, poz["dokupisz"]))
+
+
 def zaksieguj_cykl(force=False):
     """Rozliczenie całego cyklu jedną operacją, wykonywane w dniu zakupów.
 
@@ -764,6 +850,8 @@ def auto_rozlicz():
     Jeśli w sklepie coś poszło inaczej, poprawiasz ręcznie: py trener.py kupione --force
     """
     n = teraz()
+    if not tryb().get("aktywny", True):
+        return None
     if typ_dnia(n.date()) != DZIEN_GOTOWANIA:
         return None
     godzina_zakupow = CFG["gotowanie"]["godzina_zakupow"]
@@ -1113,6 +1201,16 @@ def tresc_pinga(e, d):
         czesci.insert(0, "Dziś gotujesz: %s — %d min, %s." % (b["nazwa"], b["czas_min"], b["naczynia"]))
     if e.get("akcja") == "podsumowanie":
         czesci.insert(0, tekst_podsumowania(podsumowanie_cyklu(d)))
+    if e.get("akcja") == "waga":
+        wagi = load(HIST_PATH, {}).get("waga", [])
+        if not wagi:
+            czesci.insert(0, "Jeszcze ani jednego wazenia w systemie. Bez 3 pomiarow korekta "
+                             "kalorii w ogole nie ruszy — dzis jest dobry dzien na pierwszy.")
+        else:
+            dni = (d - parse_date(wagi[-1]["data"])).days
+            if dni >= 6:
+                czesci.insert(0, "Ostatnie wazenie %d dni temu. Bez regularnych pomiarow system "
+                                 "nie wie, czy deficyt dziala — zwaz sie dzis." % dni)
     if e.get("akcja") == "suple":
         czesci.append("Suple na teraz: " + ", ".join("%s (%s)" % (x["nazwa"], x["ile"])
                                                      for x in SUPLE["lista"]))
@@ -1133,6 +1231,7 @@ def tresc_pinga(e, d):
 
 
 ZAPLANOWANE_PATH = os.path.join(STATE, "zaplanowane.json")
+HORYZONT_H = 8
 
 
 def _klucz_punktu(e):
@@ -1170,6 +1269,12 @@ def zaplanuj_pingi(dni_naprzod=1, sucho=False):
             # minutowy zapas: ntfy odrzuca terminy z przeszlosci
             if (termin - n).total_seconds() < 60:
                 continue
+            # Planujemy tylko 8 h naprzod. ntfy NIE umie anulowac zaplanowanej
+            # wiadomosci (sprawdzone: DELETE nie powstrzymuje dostarczenia), wiec im
+            # dalej planujemy, tym dluzej po pauzie albo podmianie przychodza nieaktualne
+            # pingi. 8 h pokrywa najdluzsza zmierzona przerwe crona (5 h 48 min).
+            if (termin - n).total_seconds() > HORYZONT_H * 3600:
+                continue
             tytul = "%s %s" % (e.get("ikona", "\u2022"), e["tytul"])
             if sucho:
                 print("[SUCHY BIEG] %s %s -> %s" % (ds, e["czas"], tytul))
@@ -1192,6 +1297,9 @@ def tick(okno_min=25, sucho=False):
     # Najwazniejsze dzieje sie tutaj: planujemy przyszle pingi z gory. Ponizsza
     # petla to juz tylko siatka bezpieczenstwa na punkty, ktore minely, zanim
     # cokolwiek zdazylo je zaplanowac (np. tuz po wdrozeniu zmiany w planie).
+    if not tryb().get("aktywny", True):
+        print("Plan wstrzymany od %s — nie planuje i nie wysylam pingow." % tryb().get("od"))
+        return []
     zaplanowane = zaplanuj_pingi(sucho=sucho)
     for x in zaplanowane:
         print("zaplanowano:", x)
@@ -1287,6 +1395,12 @@ def eksport():
         "posilki": {p["id"]: p for p in QUICK},
         "produkty": {k: v for k, v in PROD.items() if not k.startswith("_")},
         "panel_wersja": CFG.get("panel_wersja", 1),
+        "tryb": tryb(),
+        "postep": {
+            "waga": load(HIST_PATH, {}).get("waga", [])[-60:],
+            "serie": [z for z in dziennik.zdarzenia() if z.get("typ") == "seria"][-200:],
+        },
+        "zakupy_zamrozone": load(_sciezka_zakupow(plan), {}),
         "repo": CFG.get("repo", ""),
         "galaz": CFG.get("galaz", "main"),
         "suple": SUPLE,
@@ -1528,6 +1642,16 @@ def main():
         else:
             dziennik.odhacz(arg)
             print("Odhaczone: %s" % arg)
+    elif cmd == "pauza":
+        t_ = wstrzymaj(arg or "")
+        print("Plan wstrzymany od %s. Pingi i ksiegowanie zakupow stoja." % t_["od"])
+        print("Uwaga: pingi zaplanowane juz w ntfy (do %d h naprzod) i tak przyjda." % HORYZONT_H)
+    elif cmd == "start":
+        w = start_od_zera()
+        print("Start od zera. Archiwum: %s" % w["archiwum"])
+        print("Pierwsze gotowanie: %s" % w["pierwsze_gotowanie"])
+        for dd, nazwa in w["bez_garnka"]:
+            print("   %s obiad bez garnka: %s" % (dd, nazwa))
     elif cmd == "zaplanuj":
         nowe = zaplanuj_pingi(sucho=(arg == "sucho"))
         print("Zaplanowano %d pingow." % len(nowe) if nowe else "Wszystko juz zaplanowane.")

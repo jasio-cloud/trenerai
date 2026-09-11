@@ -1,5 +1,5 @@
 {
-  "_info": "SZYBKIE POSIŁKI — bez gotowania albo do 12 minut. sloty = gdzie pasuje (sniadanie / drugi / kolacja). box=true znaczy, że można to spakować i zjeść na zimno na 24h zmianie. czas_min liczony realnie, z wyjmowaniem rzeczy z lodówki.",
+  "_info": "SZYBKIE POSIŁKI — bez gotowania albo do 12 minut. sloty = gdzie pasuje (sniadanie / drugi / kolacja). box=true znaczy, że można to spakować i zjeść na zimno na 24h zmianie. czas_min liczony realnie, z wyjmowaniem rzeczy z lodówki. deser=true to deser białkowy — liczy się jak normalny posiłek, planer wstawia go najwyżej raz dziennie.",
   "posilki": [
     {
       "id": "q_jajecznica",
@@ -739,6 +739,117 @@
         "Jajka na twardo, 9 min od wrzenia, potem zimna woda.",
         "Twaróg rozgnieć ze śmietaną, wsyp szczypiorek, sól, pieprz.",
         "Jajka pokrój i wmieszaj. Chleb, ogórek, pomidor obok."
+      ]
+    },
+    {
+      "id": "d_pudding",
+      "nazwa": "Deser: czekoladowy pudding ze skyru z bananem",
+      "sloty": [
+        "drugi",
+        "kolacja"
+      ],
+      "box": true,
+      "czas_min": 4,
+      "deser": true,
+      "produkty": [
+        [
+          "skyr",
+          2
+        ],
+        [
+          "kakao",
+          2
+        ],
+        [
+          "miod",
+          1
+        ],
+        [
+          "banan",
+          1
+        ]
+      ],
+      "kroki": [
+        "Skyr do miski, wsyp 2 łyżki kakao i łyżkę miodu.",
+        "Mieszaj łyżką dobrą minutę, aż kakao całkiem się rozpuści i zrobi się jednolity krem — za krótko mieszane zostawia gorzkie grudki.",
+        "Banan w plasterki na wierzch. Smakuje jak budyń czekoladowy, a ma ok. 35 g białka."
+      ]
+    },
+    {
+      "id": "d_sernik",
+      "nazwa": "Deser: sernik na zimno w kubku (bez pieczenia)",
+      "sloty": [
+        "drugi",
+        "kolacja"
+      ],
+      "box": true,
+      "czas_min": 6,
+      "deser": true,
+      "produkty": [
+        [
+          "twarog",
+          200
+        ],
+        [
+          "skyr",
+          1
+        ],
+        [
+          "miod",
+          1
+        ],
+        [
+          "jablko",
+          1
+        ],
+        [
+          "orzechy",
+          10
+        ]
+      ],
+      "kroki": [
+        "Twaróg rozgnieć widelcem ze skyrem, aż masa będzie gładka — im dłużej ucierasz, tym bardziej przypomina sernik.",
+        "Dodaj łyżkę miodu i wymieszaj.",
+        "Jabłko zetrzyj na tarce na dno kubka albo pojemnika, na to masa serowa, na wierzch pokruszone orzechy.",
+        "Najlepszy po godzinie w lodówce — zrób go w dniu gotowania razem z garnkiem."
+      ]
+    },
+    {
+      "id": "d_twarog_kakao",
+      "nazwa": "Deser: twarożek kakaowy z masłem orzechowym",
+      "sloty": [
+        "drugi",
+        "kolacja"
+      ],
+      "box": true,
+      "czas_min": 4,
+      "deser": true,
+      "produkty": [
+        [
+          "twarog",
+          200
+        ],
+        [
+          "kakao",
+          1
+        ],
+        [
+          "miod",
+          1
+        ],
+        [
+          "maslo_orzechowe",
+          1
+        ],
+        [
+          "mleko",
+          40
+        ]
+      ],
+      "kroki": [
+        "Twaróg rozgnieć z mlekiem na gładki krem.",
+        "Wsyp łyżkę kakao i łyżkę miodu, mieszaj do jednolitego koloru.",
+        "Łyżka masła orzechowego na wierzch. Smakuje jak krem czekoladowo-orzechowy."
       ]
     }
   ]
