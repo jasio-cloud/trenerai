@@ -1681,7 +1681,9 @@ def main():
             else:
                 print("Brak zapisu kroków na dziś. Użycie: py trener.py kroki 6420")
         else:
-            o = zapisz_kroki(arg, ping=("--ping" in sys.argv))
+            # W pauzie kroki dalej sie zapisuja (historia jest przydatna), ale bez pinga —
+            # nikt po zabiegu nie potrzebuje wieczornego "za malo krokow".
+            o = zapisz_kroki(arg, ping=("--ping" in sys.argv) and tryb().get("aktywny", True))
             print("%d / %d kroków (%d%%)" % (o["kroki"], o["cel"], o["procent"]))
             print(o["komentarz"])
             print("→ " + o["sugestia"])
