@@ -543,6 +543,12 @@ def przetworz_zdarzenia():
         elif t == "waga":
             dziennik.zapisz_wage(z["kg"], data)
             zrobione.append("waga %.1f kg" % float(z["kg"]))
+        elif (t == "podmiana" and z.get("slot") == "obiad"
+              and QUICK_BY_ID.get(z.get("na"), {}).get("bez_gotowania")):
+            # "nie gotuje" z panelu idzie ta sama sciezka co z CLI — w dniu gotowania
+            # obejmuje caly cykl, bo garnka nie bedzie ani dzis, ani jutro
+            w = bez_gotowania(data, wybrany=z["na"], loguj=False)
+            zrobione.append("bez gotowania: %s (+%d dni)" % (nazwa_posilku(z["na"]), len(w["dalsze_dni"]) if w else 0))
         elif t == "podmiana" and z.get("na"):
             _zapisz_podmiane(z["slot"], z["na"], data, loguj=False)
             zrobione.append("podmiana %s -> %s" % (z["slot"], nazwa_posilku(z["na"])))
@@ -586,27 +592,45 @@ def zamien_posilek(slot, d=None):
             "makra_stare": cel, "makra_nowe": makra_posilku(wybrany)}
 
 
-def bez_gotowania(d=None):
-    """Dzis nie gotujesz - podmieniamy obiad na gotowca o tych samych makrach.
-
-    Sedno: nie chodzi o to, zeby zjesc cokolwiek, tylko zeby dzien nadal sie zgadzal.
-    Dlatego wybieramy pozycje najblizsza kaloriom i bialku porcji, ktora mialbys ugotowac.
-    """
-    d = d or dzis()
-    _, dzien = plan_dnia(d)
-    cel = makra_posilku(dzien["obiad"])
+def _najlepszy_gotowiec(d, cel):
     box_only = typ_dnia(d) == 0
     kandydaci = [q["id"] for q in QUICK if q.get("bez_gotowania") and (q["box"] if box_only else True)]
     if not kandydaci:
         return None
     kandydaci.sort(key=lambda pid: (abs(makra_posilku(pid)["kcal"] - cel["kcal"])
                                     + 8 * abs(makra_posilku(pid)["bialko"] - cel["bialko"])))
-    wybrany = kandydaci[0]
-    _zapisz_podmiane("obiad", wybrany, d)
+    return kandydaci[0]
+
+
+def bez_gotowania(d=None, wybrany=None, loguj=True):
+    """Dzis nie gotujesz - podmieniamy obiad na gotowca o tych samych makrach.
+
+    Sedno: nie chodzi o to, zeby zjesc cokolwiek, tylko zeby dzien nadal sie zgadzal.
+    Dlatego wybieramy pozycje najblizsza kaloriom i bialku porcji, ktora mialbys ugotowac.
+
+    W DNIU GOTOWANIA podmieniamy obiady na caly cykl, a nie tylko na dzis: garnek
+    mial wystarczyc na 3 dni, wiec jak go nie ugotujesz, jutro i pojutrze tez nie
+    bedzie z czego jesc. Wczesniej system dalej kazal jesc z nieistniejacego garnka.
+    """
+    d = d or dzis()
+    _, dzien = plan_dnia(d)
+    cel = makra_posilku(dzien["obiad"])
+    wybrany = wybrany or _najlepszy_gotowiec(d, cel)
+    if not wybrany:
+        return None
+    _zapisz_podmiane("obiad", wybrany, d, loguj=loguj)
+    dalsze = []
+    if typ_dnia(d) == DZIEN_GOTOWANIA:
+        for i in (1, 2):
+            dd = d + datetime.timedelta(days=i)
+            g = _najlepszy_gotowiec(dd, cel)
+            if g:
+                _zapisz_podmiane("obiad", g, dd, loguj=loguj)
+                dalsze.append((dd.isoformat(), nazwa_posilku(g)))
     m = makra_posilku(wybrany)
     return {"na": nazwa_posilku(wybrany), "id": wybrany, "makra": m, "zamiast": cel,
             "roznica_kcal": m["kcal"] - cel["kcal"], "roznica_b": m["bialko"] - cel["bialko"],
-            "czas": QUICK_BY_ID[wybrany]["czas_min"],
+            "czas": QUICK_BY_ID[wybrany]["czas_min"], "dalsze_dni": dalsze,
             "produkty": [(PROD[k]["nazwa"], q, PROD[k]["jedn"]) for k, q in QUICK_BY_ID[wybrany]["produkty"]]}
 
 
@@ -1176,12 +1200,16 @@ def tick(okno_min=25, sucho=False):
     d = n.date()
     wyslane_path = os.path.join(STATE, "wyslane-%s.json" % d.isoformat())
     wyslane = load(wyslane_path, [])
+    # Punkty zaplanowane juz w ntfy przyjda same o czasie. Bez tego sprawdzenia
+    # siatka bezpieczenstwa wysylala je drugi raz, gdy cron trafil w 25 minut po
+    # terminie — w 4 dni wyszlo 11 dubli, w tym drzemka o 02:20 w srodku nocy.
+    juz_zaplanowane = set(load(ZAPLANOWANE_PATH, {}).get(d.isoformat(), []))
     poszlo = []
     for e in agenda(d):
         if not e.get("ping"):
             continue
         klucz = e["czas"] + "|" + e["tytul"]
-        if klucz in wyslane:
+        if klucz in wyslane or klucz in juz_zaplanowane:
             continue
         hh, mm = e["czas"].split(":")
         moment = n.replace(hour=int(hh), minute=int(mm), second=0, microsecond=0)
@@ -1477,6 +1505,8 @@ def main():
         else:
             _kreska("DZIŚ BEZ GOTOWANIA")
             print("Zamiast obiadu: %s  (%d min roboty)" % (g["na"], g["czas"]))
+            for dd, nazwa in g.get("dalsze_dni", []):
+                print("  i %s: %s  — garnka nie bedzie, wiec podmieniam caly cykl" % (dd, nazwa))
             print("Makra: %d kcal, B %d  →  planowane było %d kcal, B %d  (różnica %+d kcal, %+d g białka)"
                   % (g["makra"]["kcal"], g["makra"]["bialko"], g["zamiast"]["kcal"],
                      g["zamiast"]["bialko"], g["roznica_kcal"], g["roznica_b"]))

@@ -21,6 +21,16 @@ CIEZARY_PATH = os.path.join(STATE, "ciezary.json")
 HIST_PATH = os.path.join(STATE, "historia.json")
 
 
+def _dzis():
+    """Data w Polsce, nie na serwerze. Runner GitHuba chodzi w UTC, wiec miedzy
+    polnoca a 2:00 date.today() zwracalo WCZORAJ i wpisy ladowaly w zlym dniu."""
+    try:
+        from zoneinfo import ZoneInfo
+        return datetime.datetime.now(ZoneInfo("Europe/Warsaw")).date()
+    except Exception:
+        return datetime.date.today()
+
+
 def _load(p, dom):
     try:
         with io.open(p, encoding="utf-8") as f:
@@ -44,7 +54,7 @@ def dodaj_zdarzenie(typ, data=None, **dane):
     """Dopisuje fakt. Log jest tylko dopisywany — nic się nie nadpisuje wstecz,
     dzięki czemu panel i cron mogą pisać do niego niezależnie."""
     z = zdarzenia()
-    wpis = {"data": (data or datetime.date.today()).isoformat(), "typ": typ}
+    wpis = {"data": (data or _dzis()).isoformat(), "typ": typ}
     wpis.update(dane)
     z.append(wpis)
     _save(ZDARZENIA_PATH, z[-500:])
@@ -134,7 +144,7 @@ def zapisz_serie(cwiczenie, ciezar, powtorzenia, powt_cel=None, data=None, loguj
 
     wszystkie[cwiczenie] = {"ciezar": ciezar, "powt": powtorzenia, "nastepny": nastepny,
                             "nieudane": nieudane,
-                            "data": (data or datetime.date.today()).isoformat()}
+                            "data": (data or _dzis()).isoformat()}
     _save(CIEZARY_PATH, wszystkie)
     # loguj=False gdy zdarzenie juz jest w logu (przyszlo z panelu) - inaczej
     # kazda seria zapisana z telefonu dublowalaby sie w historii
@@ -162,7 +172,7 @@ def trend_wagi(dni=21):
     wagi = sorted(h.get("waga", []), key=lambda w: w["data"])
     if len(wagi) < 3:
         return None
-    dzis = datetime.date.today()
+    dzis = _dzis()
     ost = [w for w in wagi
            if (dzis - datetime.date.fromisoformat(w["data"])).days <= dni]
     if len(ost) < 3:
@@ -225,7 +235,7 @@ def przelicz_kalorie(cel_bazowy, zastosuj=False):
 
     if zastosuj and zmiana:
         _save(os.path.join(STATE, "kcal_korekta.json"),
-              {"kcal": korekta + zmiana, "data": datetime.date.today().isoformat(),
+              {"kcal": korekta + zmiana, "data": _dzis().isoformat(),
                "powod": ocena})
         dodaj_zdarzenie("kalorie", kcal=nowe, zmiana=zmiana, tempo=tempo)
     return wynik
@@ -250,7 +260,7 @@ def oznacz_przetworzone(ile):
 
 def zapisz_wage(kg, data=None):
     h = _load(HIST_PATH, {})
-    ds = (data or datetime.date.today()).isoformat()
+    ds = (data or _dzis()).isoformat()
     h.setdefault("waga", [])
     h["waga"] = [w for w in h["waga"] if w["data"] != ds]
     h["waga"].append({"data": ds, "kg": float(kg)})
