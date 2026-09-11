@@ -1,7 +1,7 @@
 {
-  "wygenerowano": "2026-09-11T20:57:42+02:00",
-  "dzis": "2026-09-11",
-  "typ_dzis": 1,
+  "wygenerowano": "2026-09-12T01:14:05+02:00",
+  "dzis": "2026-09-12",
+  "typ_dzis": 2,
   "typy": {
     "0": {
       "nazwa": "ZMIANA 24h",
@@ -163,164 +163,128 @@
   },
   "agenda": [
     {
-      "czas": "00:40",
-      "tytul": "Drzemka 2 z 4 — do 02:00",
-      "ikona": "😴",
+      "czas": "08:00",
+      "tytul": "Pobudka + waga",
+      "ikona": "⚖️",
       "ping": true,
-      "nastepny_dzien": true,
-      "opis": "Między drzemkami łyk wody. Nie sięgaj po telefon — światło ekranu kosztuje Cię zaśnięcie przy kolejnej."
+      "akcja": "suple",
+      "opis": "Zważ się od razu po wstaniu, przed jedzeniem i piciem. Potem woda, suple, toaleta — i bez telefonu."
     },
     {
-      "czas": "02:20",
-      "tytul": "Drzemka 3 z 4 — do 03:40",
-      "ikona": "😴",
+      "czas": "08:30",
+      "tytul": "TRENING GŁÓWNY — pierwsza rzecz dnia",
+      "ikona": "🏋️",
       "ping": true,
-      "nastepny_dzien": true,
-      "opis": "To najcięższa pora doby. Jak nie zaśniesz w 15 minut, po prostu leż z zamkniętymi oczami — to też się liczy."
+      "akcja": "trening_glowny",
+      "opis": "Najlepsza sesja w cyklu: wyspany, po dniu normalnego jedzenia. Tu bijesz rekordy. Wchodzisz i robisz, zero telefonu przed."
     },
     {
-      "czas": "04:00",
-      "tytul": "Drzemka 4 z 4 — do 05:20",
-      "ikona": "😴",
-      "ping": true,
-      "nastepny_dzien": true,
-      "opis": "Ostatnia. Po niej zostaje już tylko zdanie służby."
-    },
-    {
-      "czas": "06:45",
-      "tytul": "Zdanie służby",
-      "ikona": "🏁",
-      "ping": true,
-      "nastepny_dzien": true,
-      "opis": "Za 15 minut kończysz. Nie kupuj nic po drodze — w domu masz jedzenie, a za chwilę i tak idziesz spać."
-    },
-    {
-      "czas": "07:35",
-      "tytul": "Jesteś w domu",
-      "ikona": "🚿",
-      "ping": true,
-      "opis": "Prysznic, zasłoń okna. NIE siadaj do telefonu — po dobie na nogach jedno przewijanie kosztuje Cię godzinę snu."
-    },
-    {
-      "czas": "07:50",
-      "tytul": "Mały posiłek przed snem",
-      "ikona": "🥛",
+      "czas": "09:45",
+      "tytul": "Śniadanie po treningu",
+      "ikona": "🍳",
       "ping": true,
       "slot": "sniadanie",
-      "opis": "Coś lekkiego i białkowego. Na pusty żołądek gorzej zaśniesz, na pełny obudzisz się rozbity.",
-      "posilek": "Twarożek ze szczypiorkiem + pieczywo",
-      "posilek_id": "q_twarog",
-      "porcja": 1.0,
+      "opis": "Pierwszy posiłek dnia, zaraz po sztandze.",
+      "posilek": "Jajka w sosie pomidorowym (shakshuka)",
+      "posilek_id": "q_shakshuka",
+      "porcja": 0.8,
       "makra": {
-        "kcal": 476,
-        "bialko": 43,
-        "tluszcz": 14,
-        "wegle": 40
+        "kcal": 409,
+        "bialko": 21,
+        "tluszcz": 17,
+        "wegle": 37
       },
       "skladniki": [
         {
-          "nazwa": "Twaróg półtłusty",
-          "ile": "200 g",
-          "g": 200,
-          "kcal": 266,
-          "bialko": 37.4,
-          "tluszcz": 9.4,
-          "wegle": 7.4
+          "nazwa": "Jaja",
+          "ile": "2 szt. (110 g)",
+          "g": 110,
+          "kcal": 157,
+          "bialko": 13.9,
+          "tluszcz": 10.5,
+          "wegle": 0.8
         },
         {
-          "nazwa": "Śmietana 18%",
-          "ile": "20 ml",
-          "g": 20,
-          "kcal": 37,
-          "bialko": 0.5,
-          "tluszcz": 3.6,
-          "wegle": 0.7
+          "nazwa": "Passata pomidorowa",
+          "ile": "160 g",
+          "g": 160,
+          "kcal": 50,
+          "bialko": 2.2,
+          "tluszcz": 0.3,
+          "wegle": 9.0
         },
         {
-          "nazwa": "Szczypiorek",
-          "ile": "2 łyżki (10 g)",
-          "g": 10,
-          "kcal": 3,
-          "bialko": 0.3,
+          "nazwa": "Cebula",
+          "ile": "1 szt. (100 g)",
+          "g": 100,
+          "kcal": 40,
+          "bialko": 1.1,
           "tluszcz": 0.1,
-          "wegle": 0.2
+          "wegle": 7.6
+        },
+        {
+          "nazwa": "Czosnek",
+          "ile": "1 ząbek (5 g)",
+          "g": 5,
+          "kcal": 7,
+          "bialko": 0.3,
+          "tluszcz": 0.0,
+          "wegle": 1.6
+        },
+        {
+          "nazwa": "Papryka",
+          "ile": "85 g",
+          "g": 85,
+          "kcal": 26,
+          "bialko": 0.8,
+          "tluszcz": 0.3,
+          "wegle": 3.9
         },
         {
           "nazwa": "Chleb żytni / pełnoziarnisty",
-          "ile": "2 kromki (70 g)",
-          "g": 70,
-          "kcal": 158,
-          "bialko": 4.5,
-          "tluszcz": 1.3,
-          "wegle": 29.4
+          "ile": "1 kromka (35 g)",
+          "g": 35,
+          "kcal": 79,
+          "bialko": 2.3,
+          "tluszcz": 0.6,
+          "wegle": 14.7
         },
         {
-          "nazwa": "Ogórek długi",
-          "ile": "90 g",
-          "g": 90,
-          "kcal": 13,
-          "bialko": 0.6,
-          "tluszcz": 0.1,
-          "wegle": 2.6
+          "nazwa": "Olej rzepakowy",
+          "ile": "6 ml",
+          "g": 6,
+          "kcal": 50,
+          "bialko": 0.0,
+          "tluszcz": 5.5,
+          "wegle": 0.0
         }
       ]
     },
     {
-      "czas": "08:15",
-      "tytul": "SEN — najważniejsza rzecz dziś",
-      "ikona": "😴",
-      "ping": true,
-      "akcja": "budzik",
-      "opis": "To Twój główny sen po dobie służby. Noc na czterech drzemkach go nie zastąpiła.",
-      "budzik": {
-        "godzina": "13:00",
-        "minut": 285,
-        "jutro": false,
-        "ile": "4 h 45 min",
-        "typ_docelowy": "PO ZMIANIE"
-      }
-    },
-    {
       "czas": "13:00",
-      "tytul": "Pobudka",
-      "ikona": "⏰",
-      "ping": true,
-      "opis": "Woda, suple, toaleta. Bez telefonu — dziś zaczynasz od sztangi, nie od ekranu.",
-      "akcja": "suple"
-    },
-    {
-      "czas": "13:30",
-      "tytul": "TRENING — pierwsza rzecz dnia",
-      "ikona": "🏋️",
-      "ping": true,
-      "akcja": "trening_krotki",
-      "opis": "35 minut, ciężary 80% normy. Zaczynasz dzień od zrobionej roboty, zanim cokolwiek zdąży w tym przeszkodzić."
-    },
-    {
-      "czas": "14:30",
-      "tytul": "Posiłek po treningu",
-      "ikona": "🍽️",
+      "tytul": "Drugi posiłek",
+      "ikona": "🥪",
       "ping": true,
       "slot": "drugi",
-      "opis": "Pierwszy porządny posiłek dnia. Trenowałeś na czczo, więc nie odkładaj go na później.",
-      "posilek": "Twaróg z bananem i miodem",
-      "posilek_id": "q_twarog_banan",
-      "porcja": 0.8,
+      "opis": "",
+      "posilek": "Skyr z bananem i masłem orzechowym",
+      "posilek_id": "q_skyr",
+      "porcja": 1.0,
       "makra": {
-        "kcal": 526,
-        "bialko": 48,
-        "tluszcz": 13,
-        "wegle": 55
+        "kcal": 397,
+        "bialko": 40,
+        "tluszcz": 9,
+        "wegle": 37
       },
       "skladniki": [
         {
-          "nazwa": "Twaróg półtłusty",
-          "ile": "145 g",
-          "g": 145,
-          "kcal": 193,
-          "bialko": 27.1,
-          "tluszcz": 6.8,
-          "wegle": 5.4
+          "nazwa": "Skyr naturalny (kubek 150 g)",
+          "ile": "2 kubki (300 g)",
+          "g": 300,
+          "kcal": 192,
+          "bialko": 34.5,
+          "tluszcz": 0.6,
+          "wegle": 11.4
         },
         {
           "nazwa": "Banan",
@@ -332,75 +296,23 @@
           "wegle": 24.2
         },
         {
-          "nazwa": "Miód",
-          "ile": "1 łyżka (20 g)",
-          "g": 20,
-          "kcal": 61,
-          "bialko": 0.1,
-          "tluszcz": 0.0,
-          "wegle": 16.4
-        },
-        {
-          "nazwa": "Orzechy / migdały",
-          "ile": "8 g",
-          "g": 8,
-          "kcal": 51,
-          "bialko": 1.5,
-          "tluszcz": 4.6,
-          "wegle": 0.8
-        },
-        {
-          "nazwa": "Mleko 2%",
-          "ile": "40 ml",
-          "g": 40,
-          "kcal": 20,
-          "bialko": 1.3,
-          "tluszcz": 0.8,
-          "wegle": 1.9
+          "nazwa": "Masło orzechowe 100%",
+          "ile": "1 łyżka (16 g)",
+          "g": 16,
+          "kcal": 99,
+          "bialko": 4.2,
+          "tluszcz": 8.2,
+          "wegle": 1.8
         }
-      ],
-      "dobitka": {
-        "nazwa": "Skyr naturalny (kubek 150 g)",
-        "ile": "1 kubek (150 g)",
-        "g": 150,
-        "n": 1,
-        "kcal": 96,
-        "bialko": 17.2,
-        "tluszcz": 0.3,
-        "wegle": 5.7
-      }
+      ]
     },
     {
-      "czas": "15:15",
-      "tytul": "Podsumowanie cyklu",
-      "ikona": "📊",
-      "ping": true,
-      "akcja": "podsumowanie",
-      "opis": "Trzy dni za Tobą. Zanim pójdziesz po zakupy, zobacz, co z nich wyszło."
-    },
-    {
-      "czas": "15:30",
-      "tytul": "ZAKUPY na 3 dni",
-      "ikona": "🛒",
-      "ping": true,
-      "akcja": "zakupy",
-      "opis": "Lista jest w panelu — kupujesz tylko to, czego nie ma w lodówce. Trzymaj się listy, nie chodź po sklepie głodny."
-    },
-    {
-      "czas": "16:30",
-      "tytul": "GOTOWANIE na 3 dni",
-      "ikona": "🍳",
-      "ping": true,
-      "akcja": "gotowanie",
-      "opis": "Jeden garnek, jedno podejście, 3 pojemniki. Przepis krok po kroku masz w panelu."
-    },
-    {
-      "czas": "18:15",
+      "czas": "16:00",
       "tytul": "Obiad",
-      "ikona": "🍲",
+      "ikona": "🍽️",
       "ping": true,
       "slot": "obiad",
-      "opis": "Prosto z garnka, świeży. Reszta ostudzona idzie do lodówki.",
+      "opis": "Box z lodówki, mikrofala, zero roboty.",
       "posilek": "Leczo z mieloną wołowiną + ziemniaki",
       "posilek_id": "b_leczo",
       "porcja": 1.0,
@@ -486,99 +398,105 @@
       ]
     },
     {
-      "czas": "20:30",
+      "czas": "18:00",
+      "tytul": "Spacer",
+      "ikona": "🚶",
+      "ping": true,
+      "opis": "20–30 minut. Nie kardio — chodzi o rozruszanie bioder i pleców oraz o kroki, których dziś nie zrobisz sam z siebie."
+    },
+    {
+      "czas": "19:30",
       "tytul": "Kolacja",
       "ikona": "🌙",
       "ping": true,
       "slot": "kolacja",
       "opis": "",
-      "posilek": "Box: sałatka jajeczna z kukurydzą",
-      "posilek_id": "q_jajka_kukurydza",
-      "porcja": 0.8,
+      "posilek": "Deser: sernik na zimno w kubku (bez pieczenia)",
+      "posilek_id": "d_sernik",
+      "porcja": 1.0,
       "makra": {
-        "kcal": 368,
-        "bialko": 26,
-        "tluszcz": 14,
-        "wegle": 29
+        "kcal": 572,
+        "bialko": 57,
+        "tluszcz": 16,
+        "wegle": 50
       },
       "skladniki": [
         {
-          "nazwa": "Jaja",
-          "ile": "2 szt. (110 g)",
-          "g": 110,
-          "kcal": 157,
-          "bialko": 13.9,
-          "tluszcz": 10.5,
-          "wegle": 0.8
+          "nazwa": "Twaróg półtłusty",
+          "ile": "200 g",
+          "g": 200,
+          "kcal": 266,
+          "bialko": 37.4,
+          "tluszcz": 9.4,
+          "wegle": 7.4
         },
         {
-          "nazwa": "Kukurydza konserwowa",
-          "ile": "80 g",
-          "g": 80,
-          "kcal": 66,
-          "bialko": 2.2,
-          "tluszcz": 1.0,
-          "wegle": 10.4
+          "nazwa": "Skyr naturalny (kubek 150 g)",
+          "ile": "1 kubek (150 g)",
+          "g": 150,
+          "kcal": 96,
+          "bialko": 17.2,
+          "tluszcz": 0.3,
+          "wegle": 5.7
         },
         {
-          "nazwa": "Jogurt grecki 2%",
-          "ile": "65 g",
-          "g": 65,
-          "kcal": 47,
-          "bialko": 6.4,
-          "tluszcz": 1.3,
-          "wegle": 2.0
+          "nazwa": "Miód",
+          "ile": "1 łyżka (20 g)",
+          "g": 20,
+          "kcal": 61,
+          "bialko": 0.1,
+          "tluszcz": 0.0,
+          "wegle": 16.4
         },
         {
-          "nazwa": "Musztarda",
-          "ile": "1 łyżka (15 g)",
-          "g": 15,
-          "kcal": 16,
-          "bialko": 0.8,
-          "tluszcz": 0.9,
-          "wegle": 1.2
+          "nazwa": "Jabłko",
+          "ile": "1 szt. (170 g)",
+          "g": 170,
+          "kcal": 85,
+          "bialko": 0.5,
+          "tluszcz": 0.3,
+          "wegle": 19.4
         },
         {
-          "nazwa": "Szczypiorek",
-          "ile": "8 g",
-          "g": 8,
-          "kcal": 2,
-          "bialko": 0.2,
-          "tluszcz": 0.1,
-          "wegle": 0.1
-        },
-        {
-          "nazwa": "Chleb żytni / pełnoziarnisty",
-          "ile": "1 kromka (35 g)",
-          "g": 35,
-          "kcal": 79,
-          "bialko": 2.3,
-          "tluszcz": 0.6,
-          "wegle": 14.7
+          "nazwa": "Orzechy / migdały",
+          "ile": "10 g",
+          "g": 10,
+          "kcal": 64,
+          "bialko": 1.9,
+          "tluszcz": 5.7,
+          "wegle": 1.0
         }
       ]
     },
     {
-      "czas": "22:00",
-      "tytul": "Odkładasz telefon",
-      "ikona": "📵",
+      "czas": "21:00",
+      "tytul": "PAKOWANIE BOXÓW na jutro",
+      "ikona": "📦",
       "ping": true,
-      "opis": "Ekran w dół. Za 30 minut śpisz i to Ci resetuje rytm po zmianie."
+      "akcja": "boxy",
+      "opis": "Najważniejsze 15 minut w całym cyklu. Bez tego jutro na zmianie jesz z automatu i cała robota z gotowaniem idzie w piach."
     },
     {
-      "czas": "22:30",
+      "czas": "21:30",
+      "tytul": "Telefon w dół + budzik",
+      "ikona": "📵",
+      "ping": true,
+      "akcja": "budzik",
+      "opis": "Jutro zmiana — to jest ten wieczór, którego nie można przespać po łebkach.",
+      "budzik": {
+        "godzina": "05:30",
+        "minut": 480,
+        "jutro": true,
+        "ile": "8 h 00 min",
+        "typ_docelowy": "ZMIANA 24h"
+      }
+    },
+    {
+      "czas": "22:00",
       "tytul": "Sen",
       "ikona": "😴",
       "ping": true,
-      "akcja": "budzik",
-      "opis": "Długa noc jednym ciągiem — po dobie na drzemkach jest Ci potrzebna.",
-      "budzik": {
-        "godzina": "08:00",
-        "minut": 570,
-        "jutro": true,
-        "ile": "9 h 30 min",
-        "typ_docelowy": "WOLNE"
-      }
+      "opis": "Krótka noc przed zmianą, ale jak położysz się teraz, wstaniesz w miarę ludzko."
     }
   ],
   "zakupy": {
@@ -1063,47 +981,61 @@
     }
   },
   "trening": {
-    "rodzaj": "krotki",
+    "rodzaj": "glowny",
     "trening": {
-      "id": "w_fbw_b",
-      "nazwa": "KRÓTKI B — Full body (dzień po zmianie)",
-      "czas_min": 35,
+      "id": "w_push",
+      "nazwa": "GŁÓWNY A — Klatka, barki, triceps",
+      "czas_min": 60,
       "rozgrzewka": [
-        "Po 24 h służby, ok. 4,5 h snu i na czczo. Rozgrzewka 8 min, bez pośpiechu.",
-        "30 przysiadów bez ciężaru, krążenia ramion i bioder, 15 pompek, martwy zwis 2×20 s.",
-        "Pierwszą serię roboczą poprzedź serią na 50% ciężaru."
+        "Trenujesz zaraz po wstaniu, na czczo — rozgrzewki NIE skracaj, to nie jest miejsce na oszczędzanie czasu.",
+        "8 min: 30 przysiadów bez ciężaru, krążenia ramion i bioder, 20 pompek.",
+        "Sztanga sama (20 kg) x15 na ławce, potem 50% ciężaru roboczego x8"
       ],
       "cwiczenia": [
         {
-          "nazwa": "Rumuński martwy ciąg",
+          "nazwa": "Wyciskanie sztangi leżąc",
+          "serie": 4,
+          "powt": "6-8",
+          "przerwa": "2-3 min",
+          "wskazowka": "Łopatki ściągnięte i wbite w ławkę przez cały ruch. Sztanga schodzi do dolnej części klatki, nie do szyi."
+        },
+        {
+          "nazwa": "Wyciskanie hantli nad głowę (siedząc)",
           "serie": 3,
-          "powt": "10",
+          "powt": "8-10",
           "przerwa": "2 min",
-          "wskazowka": "Umiarkowany ciężar. Po dobie stania plecy są zmęczone — technika ważniejsza niż kilogramy."
+          "wskazowka": "Nie odchylaj się do tyłu. Żebra ściągnięte w dół, pośladki napięte."
         },
         {
-          "nazwa": "Wyciskanie hantli nad głowę",
+          "nazwa": "Wyciskanie hantli na skos (ławka pod kątem)",
           "serie": 3,
-          "powt": "10",
+          "powt": "10-12",
           "przerwa": "90 s",
-          "wskazowka": "Siedząc, z oparciem — stabilniej gdy jesteś zmęczony."
+          "wskazowka": "Kąt ok. 30 stopni. Wyżej i robi się z tego ćwiczenie na barki."
         },
         {
-          "nazwa": "Podciąganie albo wiosłowanie hantlą",
+          "nazwa": "Rozpiętki z hantlami",
           "serie": 3,
-          "powt": "8-12",
-          "przerwa": "90 s",
-          "wskazowka": "Wybierz to, na co masz dziś siłę."
-        },
-        {
-          "nazwa": "Uginanie EZ + pompki (superseria)",
-          "serie": 2,
-          "powt": "12 + max",
+          "powt": "12-15",
           "przerwa": "75 s",
-          "wskazowka": "Jedno po drugim bez przerwy, potem odpoczynek."
+          "wskazowka": "Lekko ugięte łokcie, ruch szeroki. Ciężar mały — to ma rozciągać, nie dźwigać."
+        },
+        {
+          "nazwa": "Wyciskanie francuskie EZ",
+          "serie": 3,
+          "powt": "10-12",
+          "przerwa": "75 s",
+          "wskazowka": "Łokcie stoją w miejscu, rusza się tylko przedramię."
+        },
+        {
+          "nazwa": "Pompki do odmowy",
+          "serie": 2,
+          "powt": "max",
+          "przerwa": "60 s",
+          "wskazowka": "Na koniec, żeby dobić klatkę. Licz i zapisuj — to Twój wskaźnik postępu."
         }
       ],
-      "finisz": "Kręci Ci się w głowie albo ciężar leci — kończysz. Po nieprzespanej dobie to normalne i nie jest to porażka. Zaraz po treningu jesz pierwszy porządny posiłek dnia."
+      "finisz": "3 min rozciągania klatki i barków. Zapisz ciężary w panelu."
     }
   },
   "nawyki": [
@@ -2516,382 +2448,8 @@
   "panel_wersja": 8,
   "dni": [
     {
-      "data": "2026-09-04",
-      "przesuniecie": -7,
-      "typ": 0,
-      "zrodlo": "zapis",
-      "nazwa_typu": "ZMIANA 24h",
-      "emoji": "🛡️",
-      "opis_typu": "Służba 07:00–07:00. Jesz wyłącznie z boxów spakowanych wczoraj. W nocy 4 drzemki po 1 h 20.",
-      "agenda": [
-        {
-          "czas": "05:30",
-          "tytul": "Pobudka",
-          "ikona": "⏰",
-          "ping": true,
-          "opis": "Szklanka wody od razu po wstaniu. Boxy masz spakowane w lodówce od wczoraj — wyjmij je teraz, żeby nie zapomnieć.",
-          "akcja": "suple"
-        },
-        {
-          "czas": "05:45",
-          "tytul": "Śniadanie w domu",
-          "ikona": "🍳",
-          "ping": false,
-          "slot": "sniadanie",
-          "opis": "Zjedz na spokojnie w domu, nie w biegu.",
-          "posilek": "Kanapki z serem, musztardą i kiszonym ogórkiem",
-          "posilek_id": "q_kanapki_ser",
-          "porcja": 0.8,
-          "makra": {
-            "kcal": 385,
-            "bialko": 17,
-            "tluszcz": 18,
-            "wegle": 36
-          },
-          "skladniki": [
-            {
-              "nazwa": "Chleb żytni / pełnoziarnisty",
-              "ile": "2 kromki (70 g)",
-              "g": 70,
-              "kcal": 158,
-              "bialko": 4.5,
-              "tluszcz": 1.3,
-              "wegle": 29.4
-            },
-            {
-              "nazwa": "Ser żółty w plastrach",
-              "ile": "2 plastry (40 g)",
-              "g": 40,
-              "kcal": 140,
-              "bialko": 10.2,
-              "tluszcz": 10.8,
-              "wegle": 0.2
-            },
-            {
-              "nazwa": "Musztarda",
-              "ile": "1 łyżka (15 g)",
-              "g": 15,
-              "kcal": 16,
-              "bialko": 0.8,
-              "tluszcz": 0.9,
-              "wegle": 1.2
-            },
-            {
-              "nazwa": "Ogórek kiszony",
-              "ile": "100 g",
-              "g": 98,
-              "kcal": 12,
-              "bialko": 0.5,
-              "tluszcz": 0.2,
-              "wegle": 1.9
-            },
-            {
-              "nazwa": "Masło",
-              "ile": "5 g",
-              "g": 5,
-              "kcal": 37,
-              "bialko": 0.0,
-              "tluszcz": 4.1,
-              "wegle": 0.0
-            },
-            {
-              "nazwa": "Pomidor",
-              "ile": "1 szt. (120 g)",
-              "g": 120,
-              "kcal": 22,
-              "bialko": 1.1,
-              "tluszcz": 0.2,
-              "wegle": 3.2
-            }
-          ]
-        },
-        {
-          "czas": "06:20",
-          "tytul": "Wyjście z domu",
-          "ikona": "🚪",
-          "ping": true,
-          "opis": "Sprawdź: boxy, butelka wody 1,5 l, ładowarka."
-        },
-        {
-          "czas": "07:00",
-          "tytul": "Początek służby",
-          "ikona": "🛡️",
-          "ping": false,
-          "opis": "Dziś bez treningu — jedyny dzień w cyklu, kiedy nie dźwigasz. Zadanie na dobę: jeść regularnie, wypić 3 l wody i przespać swoje drzemki."
-        },
-        {
-          "czas": "09:30",
-          "tytul": "Drugi posiłek",
-          "ikona": "🥪",
-          "ping": true,
-          "slot": "drugi",
-          "opis": "Z boxa. Nie odkładaj — po czterech godzinach głodu zawsze dojadasz byle czym z automatu.",
-          "posilek": "Jogurt grecki z orzechami i miodem",
-          "posilek_id": "q_jogurt_orzechy",
-          "porcja": 0.8,
-          "makra": {
-            "kcal": 590,
-            "bialko": 61,
-            "tluszcz": 13,
-            "wegle": 55
-          },
-          "skladniki": [
-            {
-              "nazwa": "Jogurt grecki 2%",
-              "ile": "240 g",
-              "g": 240,
-              "kcal": 175,
-              "bialko": 23.8,
-              "tluszcz": 4.8,
-              "wegle": 7.4
-            },
-            {
-              "nazwa": "Orzechy / migdały",
-              "ile": "12 g",
-              "g": 12,
-              "kcal": 77,
-              "bialko": 2.3,
-              "tluszcz": 6.8,
-              "wegle": 1.2
-            },
-            {
-              "nazwa": "Miód",
-              "ile": "1 łyżka (20 g)",
-              "g": 20,
-              "kcal": 61,
-              "bialko": 0.1,
-              "tluszcz": 0.0,
-              "wegle": 16.4
-            },
-            {
-              "nazwa": "Jabłko",
-              "ile": "1 szt. (170 g)",
-              "g": 170,
-              "kcal": 85,
-              "bialko": 0.5,
-              "tluszcz": 0.3,
-              "wegle": 19.4
-            }
-          ],
-          "dobitka": {
-            "nazwa": "Skyr naturalny (kubek 150 g)",
-            "ile": "2 kubki (300 g)",
-            "g": 300,
-            "n": 2,
-            "kcal": 192,
-            "bialko": 34.5,
-            "tluszcz": 0.6,
-            "wegle": 11.4
-          }
-        },
-        {
-          "czas": "12:00",
-          "tytul": "Rozruszaj się",
-          "ikona": "🤸",
-          "ping": true,
-          "opis": "5 minut: 10 przysiadów, krążenia ramion, rozciągnięcie karku. Plecy po staniu Ci podziękują."
-        },
-        {
-          "czas": "13:30",
-          "tytul": "Obiad",
-          "ikona": "🍽️",
-          "ping": true,
-          "slot": "obiad",
-          "opis": "Główny box z lodówki — odgrzej w mikrofali.",
-          "posilek": "Leczo z mieloną wołowiną + ziemniaki",
-          "posilek_id": "b_leczo",
-          "porcja": 1.0,
-          "makra": {
-            "kcal": 828,
-            "bialko": 48,
-            "tluszcz": 38,
-            "wegle": 66
-          },
-          "skladniki": [
-            {
-              "nazwa": "Mielona wołowina",
-              "ile": "200 g",
-              "g": 200,
-              "kcal": 430,
-              "bialko": 37.2,
-              "tluszcz": 30.0,
-              "wegle": 0.0
-            },
-            {
-              "nazwa": "Papryka",
-              "ile": "1 szt. (170 g)",
-              "g": 170,
-              "kcal": 53,
-              "bialko": 1.7,
-              "tluszcz": 0.5,
-              "wegle": 7.8
-            },
-            {
-              "nazwa": "Cukinia",
-              "ile": "100 g",
-              "g": 100,
-              "kcal": 17,
-              "bialko": 1.2,
-              "tluszcz": 0.3,
-              "wegle": 2.1
-            },
-            {
-              "nazwa": "Cebula",
-              "ile": "65 g",
-              "g": 67,
-              "kcal": 27,
-              "bialko": 0.7,
-              "tluszcz": 0.1,
-              "wegle": 5.1
-            },
-            {
-              "nazwa": "Passata pomidorowa",
-              "ile": "135 g",
-              "g": 133,
-              "kcal": 41,
-              "bialko": 1.9,
-              "tluszcz": 0.3,
-              "wegle": 7.5
-            },
-            {
-              "nazwa": "Koncentrat pomidorowy",
-              "ile": "13 g",
-              "g": 13,
-              "kcal": 13,
-              "bialko": 0.6,
-              "tluszcz": 0.1,
-              "wegle": 2.3
-            },
-            {
-              "nazwa": "Ziemniaki",
-              "ile": "250 g",
-              "g": 250,
-              "kcal": 192,
-              "bialko": 5.0,
-              "tluszcz": 0.2,
-              "wegle": 41.2
-            },
-            {
-              "nazwa": "Olej rzepakowy",
-              "ile": "7 ml",
-              "g": 7,
-              "kcal": 55,
-              "bialko": 0.0,
-              "tluszcz": 6.1,
-              "wegle": 0.0
-            }
-          ]
-        },
-        {
-          "czas": "17:00",
-          "tytul": "Woda — kontrola",
-          "ikona": "💧",
-          "ping": true,
-          "opis": "Powinieneś mieć wypite ok. 2 l. Nadrabiaj teraz, nie w nocy — inaczej przedrzemiesz noc na chodzeniu do toalety."
-        },
-        {
-          "czas": "20:30",
-          "tytul": "Kolacja",
-          "ikona": "🌙",
-          "ping": true,
-          "slot": "kolacja",
-          "opis": "Ostatni posiłek na zmianie. Lekki, żeby nie leżeć z pełnym brzuchem przed pierwszą drzemką.",
-          "posilek": "Box: serek wiejski + jajka na twardo + ogórki",
-          "posilek_id": "q_serek_box",
-          "porcja": 0.8,
-          "makra": {
-            "kcal": 442,
-            "bialko": 39,
-            "tluszcz": 21,
-            "wegle": 21
-          },
-          "skladniki": [
-            {
-              "nazwa": "Serek wiejski",
-              "ile": "1 opak. (200 g)",
-              "g": 200,
-              "kcal": 194,
-              "bialko": 22.0,
-              "tluszcz": 10.0,
-              "wegle": 4.0
-            },
-            {
-              "nazwa": "Jaja",
-              "ile": "2 szt. (110 g)",
-              "g": 110,
-              "kcal": 157,
-              "bialko": 13.9,
-              "tluszcz": 10.5,
-              "wegle": 0.8
-            },
-            {
-              "nazwa": "Ogórek kiszony",
-              "ile": "100 g",
-              "g": 98,
-              "kcal": 12,
-              "bialko": 0.5,
-              "tluszcz": 0.2,
-              "wegle": 1.9
-            },
-            {
-              "nazwa": "Chleb żytni / pełnoziarnisty",
-              "ile": "1 kromka (35 g)",
-              "g": 35,
-              "kcal": 79,
-              "bialko": 2.3,
-              "tluszcz": 0.6,
-              "wegle": 14.7
-            }
-          ]
-        },
-        {
-          "czas": "22:40",
-          "tytul": "Przygotuj się do nocy",
-          "ikona": "🤸",
-          "ping": true,
-          "opis": "5 minut rozciągania bioder i karku. Ustaw cztery budziki na końce drzemek: 00:20, 02:00, 03:40, 05:20."
-        },
-        {
-          "czas": "23:00",
-          "tytul": "Drzemka 1 z 4 — do 00:20",
-          "ikona": "😴",
-          "ping": true,
-          "opis": "1 h 20 to prawie pełny cykl snu i dlatego wstajesz po niej mniej rozbity niż po czterdziestu minutach. Telefon ekranem w dół."
-        }
-      ],
-      "makra": {
-        "kcal": 2245,
-        "bialko": 165,
-        "tluszcz": 90,
-        "wegle": 178
-      },
-      "dobitka": 2,
-      "odhaczone": {},
-      "waga": null,
-      "kroki": {
-        "data": "2026-09-04",
-        "kroki": 1692,
-        "cel": 7000,
-        "status": "malo"
-      },
-      "serie": [],
-      "trening": {
-        "rodzaj": "zmiana",
-        "trening": {
-          "nazwa": "Dzień zmiany — bez treningu",
-          "zasada": "Na 24h służbie nie trenujesz. Zamiast tego: co 2-3 godziny wstań i przejdź się 5 minut, zrób 10 przysiadów i rozciągnij kark. To nie jest trening, to profilaktyka pleców przy staniu i siedzeniu.",
-          "mikro": [
-            "10 przysiadów bez ciężaru",
-            "10 krążeń ramion w tył",
-            "30 s rozciągania zginaczy bioder na każdą nogę",
-            "Odchylenie głowy w tył i na boki po 15 s"
-          ]
-        }
-      }
-    },
-    {
       "data": "2026-09-05",
-      "przesuniecie": -6,
+      "przesuniecie": -7,
       "typ": 1,
       "zrodlo": "zapis",
       "nazwa_typu": "PO ZMIANIE",
@@ -3357,7 +2915,7 @@
     },
     {
       "data": "2026-09-06",
-      "przesuniecie": -5,
+      "przesuniecie": -6,
       "typ": 2,
       "zrodlo": "zapis",
       "nazwa_typu": "WOLNE",
@@ -3765,7 +3323,7 @@
     },
     {
       "data": "2026-09-07",
-      "przesuniecie": -4,
+      "przesuniecie": -5,
       "typ": 0,
       "zrodlo": "zapis",
       "nazwa_typu": "ZMIANA 24h",
@@ -4124,7 +3682,7 @@
     },
     {
       "data": "2026-09-08",
-      "przesuniecie": -3,
+      "przesuniecie": -4,
       "typ": 1,
       "zrodlo": "zapis",
       "nazwa_typu": "PO ZMIANIE",
@@ -4581,7 +4139,7 @@
     },
     {
       "data": "2026-09-09",
-      "przesuniecie": -2,
+      "przesuniecie": -3,
       "typ": 2,
       "zrodlo": "zapis",
       "nazwa_typu": "WOLNE",
@@ -5007,7 +4565,7 @@
     },
     {
       "data": "2026-09-10",
-      "przesuniecie": -1,
+      "przesuniecie": -2,
       "typ": 0,
       "zrodlo": "zapis",
       "nazwa_typu": "ZMIANA 24h",
@@ -5358,9 +4916,9 @@
     },
     {
       "data": "2026-09-11",
-      "przesuniecie": 0,
+      "przesuniecie": -1,
       "typ": 1,
-      "zrodlo": "dzis",
+      "zrodlo": "zapis",
       "nazwa_typu": "PO ZMIANIE",
       "emoji": "😴",
       "opis_typu": "Wracasz 7:30, śpisz do 13:00. Po wstaniu od razu trening, potem zakupy i gotowanie na 3 dni.",
@@ -5842,9 +5400,9 @@
     },
     {
       "data": "2026-09-12",
-      "przesuniecie": 1,
+      "przesuniecie": 0,
       "typ": 2,
-      "zrodlo": "plan",
+      "zrodlo": "dzis",
       "nazwa_typu": "WOLNE",
       "emoji": "💪",
       "opis_typu": "Pełny dzień w domu. Trening na starcie dnia, wieczorem pakujesz boxy na jutrzejszą zmianę.",
@@ -6258,7 +5816,7 @@
     },
     {
       "data": "2026-09-13",
-      "przesuniecie": 2,
+      "przesuniecie": 1,
       "typ": 0,
       "zrodlo": "plan",
       "nazwa_typu": "ZMIANA 24h",
@@ -6636,7 +6194,7 @@
     },
     {
       "data": "2026-09-14",
-      "przesuniecie": 3,
+      "przesuniecie": 2,
       "typ": 1,
       "zrodlo": "prognoza",
       "nazwa_typu": "PO ZMIANIE",
@@ -7083,7 +6641,7 @@
     },
     {
       "data": "2026-09-15",
-      "przesuniecie": 4,
+      "przesuniecie": 3,
       "typ": 2,
       "zrodlo": "prognoza",
       "nazwa_typu": "WOLNE",
@@ -7509,7 +7067,7 @@
     },
     {
       "data": "2026-09-16",
-      "przesuniecie": 5,
+      "przesuniecie": 4,
       "typ": 0,
       "zrodlo": "prognoza",
       "nazwa_typu": "ZMIANA 24h",
@@ -7877,7 +7435,7 @@
     },
     {
       "data": "2026-09-17",
-      "przesuniecie": 6,
+      "przesuniecie": 5,
       "typ": 1,
       "zrodlo": "prognoza",
       "nazwa_typu": "PO ZMIANIE",
@@ -8340,6 +7898,404 @@
           "finisz": "Kręci Ci się w głowie albo ciężar leci — kończysz. Po nieprzespanej dobie to normalne i nie jest to porażka. Zaraz po treningu jesz pierwszy porządny posiłek dnia."
         }
       }
+    },
+    {
+      "data": "2026-09-18",
+      "przesuniecie": 6,
+      "typ": 2,
+      "zrodlo": "prognoza",
+      "nazwa_typu": "WOLNE",
+      "emoji": "💪",
+      "opis_typu": "Pełny dzień w domu. Trening na starcie dnia, wieczorem pakujesz boxy na jutrzejszą zmianę.",
+      "agenda": [
+        {
+          "czas": "08:00",
+          "tytul": "Pobudka + waga",
+          "ikona": "⚖️",
+          "ping": true,
+          "akcja": "suple",
+          "opis": "Zważ się od razu po wstaniu, przed jedzeniem i piciem. Potem woda, suple, toaleta — i bez telefonu."
+        },
+        {
+          "czas": "08:30",
+          "tytul": "TRENING GŁÓWNY — pierwsza rzecz dnia",
+          "ikona": "🏋️",
+          "ping": true,
+          "akcja": "trening_glowny",
+          "opis": "Najlepsza sesja w cyklu: wyspany, po dniu normalnego jedzenia. Tu bijesz rekordy. Wchodzisz i robisz, zero telefonu przed."
+        },
+        {
+          "czas": "09:45",
+          "tytul": "Śniadanie po treningu",
+          "ikona": "🍳",
+          "ping": true,
+          "slot": "sniadanie",
+          "opis": "Pierwszy posiłek dnia, zaraz po sztandze.",
+          "posilek": "Skyr z bananem i masłem orzechowym",
+          "posilek_id": "q_skyr",
+          "porcja": 1.0,
+          "makra": {
+            "kcal": 397,
+            "bialko": 40,
+            "tluszcz": 9,
+            "wegle": 37
+          },
+          "skladniki": [
+            {
+              "nazwa": "Skyr naturalny (kubek 150 g)",
+              "ile": "2 kubki (300 g)",
+              "g": 300,
+              "kcal": 192,
+              "bialko": 34.5,
+              "tluszcz": 0.6,
+              "wegle": 11.4
+            },
+            {
+              "nazwa": "Banan",
+              "ile": "1 szt. (120 g)",
+              "g": 120,
+              "kcal": 106,
+              "bialko": 1.3,
+              "tluszcz": 0.4,
+              "wegle": 24.2
+            },
+            {
+              "nazwa": "Masło orzechowe 100%",
+              "ile": "1 łyżka (16 g)",
+              "g": 16,
+              "kcal": 99,
+              "bialko": 4.2,
+              "tluszcz": 8.2,
+              "wegle": 1.8
+            }
+          ]
+        },
+        {
+          "czas": "13:00",
+          "tytul": "Drugi posiłek",
+          "ikona": "🥪",
+          "ping": true,
+          "slot": "drugi",
+          "opis": "",
+          "posilek": "Deser: sernik na zimno w kubku (bez pieczenia)",
+          "posilek_id": "d_sernik",
+          "porcja": 0.9,
+          "makra": {
+            "kcal": 539,
+            "bialko": 53,
+            "tluszcz": 14,
+            "wegle": 49
+          },
+          "skladniki": [
+            {
+              "nazwa": "Twaróg półtłusty",
+              "ile": "180 g",
+              "g": 180,
+              "kcal": 239,
+              "bialko": 33.7,
+              "tluszcz": 8.5,
+              "wegle": 6.7
+            },
+            {
+              "nazwa": "Skyr naturalny (kubek 150 g)",
+              "ile": "1 kubek (150 g)",
+              "g": 150,
+              "kcal": 96,
+              "bialko": 17.2,
+              "tluszcz": 0.3,
+              "wegle": 5.7
+            },
+            {
+              "nazwa": "Miód",
+              "ile": "1 łyżka (20 g)",
+              "g": 20,
+              "kcal": 61,
+              "bialko": 0.1,
+              "tluszcz": 0.0,
+              "wegle": 16.4
+            },
+            {
+              "nazwa": "Jabłko",
+              "ile": "1 szt. (170 g)",
+              "g": 170,
+              "kcal": 85,
+              "bialko": 0.5,
+              "tluszcz": 0.3,
+              "wegle": 19.4
+            },
+            {
+              "nazwa": "Orzechy / migdały",
+              "ile": "9 g",
+              "g": 9,
+              "kcal": 58,
+              "bialko": 1.7,
+              "tluszcz": 5.1,
+              "wegle": 0.9
+            }
+          ]
+        },
+        {
+          "czas": "16:00",
+          "tytul": "Obiad",
+          "ikona": "🍽️",
+          "ping": true,
+          "slot": "obiad",
+          "opis": "Box z lodówki, mikrofala, zero roboty.",
+          "posilek": "Leczo z mieloną wołowiną + ziemniaki",
+          "posilek_id": "b_leczo",
+          "porcja": 1.0,
+          "makra": {
+            "kcal": 828,
+            "bialko": 48,
+            "tluszcz": 38,
+            "wegle": 66
+          },
+          "skladniki": [
+            {
+              "nazwa": "Mielona wołowina",
+              "ile": "200 g",
+              "g": 200,
+              "kcal": 430,
+              "bialko": 37.2,
+              "tluszcz": 30.0,
+              "wegle": 0.0
+            },
+            {
+              "nazwa": "Papryka",
+              "ile": "1 szt. (170 g)",
+              "g": 170,
+              "kcal": 53,
+              "bialko": 1.7,
+              "tluszcz": 0.5,
+              "wegle": 7.8
+            },
+            {
+              "nazwa": "Cukinia",
+              "ile": "100 g",
+              "g": 100,
+              "kcal": 17,
+              "bialko": 1.2,
+              "tluszcz": 0.3,
+              "wegle": 2.1
+            },
+            {
+              "nazwa": "Cebula",
+              "ile": "65 g",
+              "g": 67,
+              "kcal": 27,
+              "bialko": 0.7,
+              "tluszcz": 0.1,
+              "wegle": 5.1
+            },
+            {
+              "nazwa": "Passata pomidorowa",
+              "ile": "135 g",
+              "g": 133,
+              "kcal": 41,
+              "bialko": 1.9,
+              "tluszcz": 0.3,
+              "wegle": 7.5
+            },
+            {
+              "nazwa": "Koncentrat pomidorowy",
+              "ile": "13 g",
+              "g": 13,
+              "kcal": 13,
+              "bialko": 0.6,
+              "tluszcz": 0.1,
+              "wegle": 2.3
+            },
+            {
+              "nazwa": "Ziemniaki",
+              "ile": "250 g",
+              "g": 250,
+              "kcal": 192,
+              "bialko": 5.0,
+              "tluszcz": 0.2,
+              "wegle": 41.2
+            },
+            {
+              "nazwa": "Olej rzepakowy",
+              "ile": "7 ml",
+              "g": 7,
+              "kcal": 55,
+              "bialko": 0.0,
+              "tluszcz": 6.1,
+              "wegle": 0.0
+            }
+          ]
+        },
+        {
+          "czas": "18:00",
+          "tytul": "Spacer",
+          "ikona": "🚶",
+          "ping": true,
+          "opis": "20–30 minut. Nie kardio — chodzi o rozruszanie bioder i pleców oraz o kroki, których dziś nie zrobisz sam z siebie."
+        },
+        {
+          "czas": "19:30",
+          "tytul": "Kolacja",
+          "ikona": "🌙",
+          "ping": true,
+          "slot": "kolacja",
+          "opis": "",
+          "posilek": "Omlet z serem i pomidorem",
+          "posilek_id": "q_omlet",
+          "porcja": 0.8,
+          "makra": {
+            "kcal": 435,
+            "bialko": 27,
+            "tluszcz": 26,
+            "wegle": 19
+          },
+          "skladniki": [
+            {
+              "nazwa": "Jaja",
+              "ile": "2 szt. (110 g)",
+              "g": 110,
+              "kcal": 157,
+              "bialko": 13.9,
+              "tluszcz": 10.5,
+              "wegle": 0.8
+            },
+            {
+              "nazwa": "Ser żółty w plastrach",
+              "ile": "2 plastry (40 g)",
+              "g": 40,
+              "kcal": 140,
+              "bialko": 10.2,
+              "tluszcz": 10.8,
+              "wegle": 0.2
+            },
+            {
+              "nazwa": "Pomidor",
+              "ile": "1 szt. (120 g)",
+              "g": 120,
+              "kcal": 22,
+              "bialko": 1.1,
+              "tluszcz": 0.2,
+              "wegle": 3.2
+            },
+            {
+              "nazwa": "Masło",
+              "ile": "5 g",
+              "g": 5,
+              "kcal": 37,
+              "bialko": 0.0,
+              "tluszcz": 4.1,
+              "wegle": 0.0
+            },
+            {
+              "nazwa": "Chleb żytni / pełnoziarnisty",
+              "ile": "1 kromka (35 g)",
+              "g": 35,
+              "kcal": 79,
+              "bialko": 2.3,
+              "tluszcz": 0.6,
+              "wegle": 14.7
+            }
+          ]
+        },
+        {
+          "czas": "21:00",
+          "tytul": "PAKOWANIE BOXÓW na jutro",
+          "ikona": "📦",
+          "ping": true,
+          "akcja": "boxy",
+          "opis": "Najważniejsze 15 minut w całym cyklu. Bez tego jutro na zmianie jesz z automatu i cała robota z gotowaniem idzie w piach."
+        },
+        {
+          "czas": "21:30",
+          "tytul": "Telefon w dół + budzik",
+          "ikona": "📵",
+          "ping": true,
+          "akcja": "budzik",
+          "opis": "Jutro zmiana — to jest ten wieczór, którego nie można przespać po łebkach.",
+          "budzik": {
+            "godzina": "05:30",
+            "minut": 480,
+            "jutro": true,
+            "ile": "8 h 00 min",
+            "typ_docelowy": "ZMIANA 24h"
+          }
+        },
+        {
+          "czas": "22:00",
+          "tytul": "Sen",
+          "ikona": "😴",
+          "ping": true,
+          "opis": "Krótka noc przed zmianą, ale jak położysz się teraz, wstaniesz w miarę ludzko."
+        }
+      ],
+      "makra": {
+        "kcal": 2199,
+        "bialko": 168,
+        "tluszcz": 87,
+        "wegle": 171
+      },
+      "dobitka": 0,
+      "odhaczone": {},
+      "waga": null,
+      "kroki": null,
+      "serie": [],
+      "trening": {
+        "rodzaj": "glowny",
+        "trening": {
+          "id": "w_nogi",
+          "nazwa": "GŁÓWNY C — Nogi i brzuch",
+          "czas_min": 55,
+          "rozgrzewka": [
+            "Trenujesz zaraz po wstaniu, na czczo — rozgrzewki NIE skracaj, to nie jest miejsce na oszczędzanie czasu.",
+            "8 min: 30 przysiadów bez ciężaru, krążenia ramion i bioder, 20 pompek.",
+            "Przysiad sama sztanga x15, potem 50% x8"
+          ],
+          "cwiczenia": [
+            {
+              "nazwa": "Przysiad ze sztangą (w racku, z bolcami)",
+              "serie": 4,
+              "powt": "6-8",
+              "przerwa": "3 min",
+              "wskazowka": "Bolce ustawione na wysokości dołu ruchu — trenujesz sam, to jest obowiązkowe."
+            },
+            {
+              "nazwa": "Rumuński martwy ciąg",
+              "serie": 3,
+              "powt": "8-10",
+              "przerwa": "2 min",
+              "wskazowka": "Kolana prawie proste, biodra jadą do tyłu. Poczujesz ciągnięcie z tyłu uda — o to chodzi."
+            },
+            {
+              "nazwa": "Wykroki chodzone z hantlami",
+              "serie": 3,
+              "powt": "10 na nogę",
+              "przerwa": "90 s",
+              "wskazowka": "Długi krok. Krótki krok robi z tego ćwiczenie na kolana."
+            },
+            {
+              "nazwa": "Wspięcia na palce z hantlami",
+              "serie": 3,
+              "powt": "15-20",
+              "przerwa": "60 s",
+              "wskazowka": "Pełny zakres, sekunda przytrzymania na górze."
+            },
+            {
+              "nazwa": "Plank",
+              "serie": 3,
+              "powt": "45-60 s",
+              "przerwa": "45 s",
+              "wskazowka": "Pośladki napięte, biodra nie lecą w dół ani w górę."
+            },
+            {
+              "nazwa": "Unoszenie nóg w zwisie albo leżąc",
+              "serie": 3,
+              "powt": "12-15",
+              "przerwa": "60 s",
+              "wskazowka": "Ruch z dołu brzucha, nie z bioder. Wolno w dół."
+            }
+          ],
+          "finisz": "5 min rozciągania nóg. Nogi po 24h stania na zmianie lubią to szczególnie."
+        }
+      }
     }
   ],
   "tryb": {
@@ -8766,19 +8722,11 @@
   "alternatywy": {
     "sniadanie": [
       {
-        "id": "q_skyr",
-        "nazwa": "Skyr z bananem i masłem orzechowym",
-        "kcal": 397,
-        "bialko": 40,
-        "czas": 3,
-        "bez_gotowania": false
-      },
-      {
-        "id": "q_kanapki_jajko",
-        "nazwa": "Kanapki z jajkiem na twardo i serem",
-        "kcal": 479,
+        "id": "q_grzanki",
+        "nazwa": "Grzanki z serem, jajkiem i pomidorem",
+        "kcal": 493,
         "bialko": 30,
-        "czas": 12,
+        "czas": 10,
         "bez_gotowania": false
       },
       {
@@ -8790,23 +8738,23 @@
         "bez_gotowania": false
       },
       {
-        "id": "q_grzanki",
-        "nazwa": "Grzanki z serem, jajkiem i pomidorem",
-        "kcal": 493,
+        "id": "q_kanapki_jajko",
+        "nazwa": "Kanapki z jajkiem na twardo i serem",
+        "kcal": 479,
         "bialko": 30,
-        "czas": 10,
+        "czas": 12,
+        "bez_gotowania": false
+      },
+      {
+        "id": "q_jajecznica",
+        "nazwa": "Jajecznica z pieczywem i pomidorem",
+        "kcal": 460,
+        "bialko": 26,
+        "czas": 8,
         "bez_gotowania": false
       }
     ],
     "drugi": [
-      {
-        "id": "d_twarog_kakao",
-        "nazwa": "Deser: twarożek kakaowy z masłem orzechowym",
-        "kcal": 476,
-        "bialko": 45,
-        "czas": 4,
-        "bez_gotowania": false
-      },
       {
         "id": "d_pudding",
         "nazwa": "Deser: czekoladowy pudding ze skyru z bananem",
@@ -8816,19 +8764,27 @@
         "bez_gotowania": false
       },
       {
-        "id": "q_jogurt_orzechy",
-        "nazwa": "Jogurt grecki z orzechami i miodem",
-        "kcal": 461,
-        "bialko": 33,
-        "czas": 3,
+        "id": "q_twarog_banan",
+        "nazwa": "Twaróg z bananem i miodem",
+        "kcal": 495,
+        "bialko": 39,
+        "czas": 4,
         "bez_gotowania": false
       },
       {
-        "id": "q_serek_box",
-        "nazwa": "Box: serek wiejski + jajka na twardo + ogórki",
-        "kcal": 524,
-        "bialko": 46,
+        "id": "q_jajka_kukurydza",
+        "nazwa": "Box: sałatka jajeczna z kukurydzą",
+        "kcal": 475,
+        "bialko": 35,
         "czas": 12,
+        "bez_gotowania": false
+      },
+      {
+        "id": "d_twarog_kakao",
+        "nazwa": "Deser: twarożek kakaowy z masłem orzechowym",
+        "kcal": 476,
+        "bialko": 45,
+        "czas": 4,
         "bez_gotowania": false
       }
     ],
@@ -8868,27 +8824,11 @@
     ],
     "kolacja": [
       {
-        "id": "q_kanapki_jajko",
-        "nazwa": "Kanapki z jajkiem na twardo i serem",
-        "kcal": 479,
-        "bialko": 30,
+        "id": "q_serek_box",
+        "nazwa": "Box: serek wiejski + jajka na twardo + ogórki",
+        "kcal": 524,
+        "bialko": 46,
         "czas": 12,
-        "bez_gotowania": false
-      },
-      {
-        "id": "q_omlet",
-        "nazwa": "Omlet z serem i pomidorem",
-        "kcal": 521,
-        "bialko": 34,
-        "czas": 10,
-        "bez_gotowania": false
-      },
-      {
-        "id": "q_grzanki",
-        "nazwa": "Grzanki z serem, jajkiem i pomidorem",
-        "kcal": 493,
-        "bialko": 30,
-        "czas": 10,
         "bez_gotowania": false
       },
       {
@@ -8897,6 +8837,22 @@
         "kcal": 476,
         "bialko": 45,
         "czas": 4,
+        "bez_gotowania": false
+      },
+      {
+        "id": "q_tortilla",
+        "nazwa": "Tortilla z jajecznicą, serem i sałatą",
+        "kcal": 585,
+        "bialko": 34,
+        "czas": 9,
+        "bez_gotowania": false
+      },
+      {
+        "id": "q_twarog",
+        "nazwa": "Twarożek ze szczypiorkiem + pieczywo",
+        "kcal": 476,
+        "bialko": 43,
+        "czas": 5,
         "bez_gotowania": false
       }
     ]
@@ -9260,7 +9216,7 @@
   },
   "kroki": null,
   "kroki_cel": {
-    "cel": 4000,
-    "komentarz": "Pół doby przesypiasz, a wieczorem masz trening. Niski cel jest tu zamierzony — nie nadrabiaj na siłę."
+    "cel": 10000,
+    "komentarz": "Jedyny pełny dzień w domu. Tu robisz większość tygodniowego chodzenia."
   }
 }
