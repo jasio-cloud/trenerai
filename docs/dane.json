@@ -1,5 +1,5 @@
 {
-  "wygenerowano": "2026-09-11T17:41:06+02:00",
+  "wygenerowano": "2026-09-11T18:20:34+02:00",
   "dzis": "2026-09-11",
   "typ_dzis": 1,
   "typy": {
@@ -211,22 +211,22 @@
       "opis": "Coś lekkiego i białkowego. Na pusty żołądek gorzej zaśniesz, na pełny obudzisz się rozbity.",
       "posilek": "Skyr z bananem i masłem orzechowym",
       "posilek_id": "q_skyr",
-      "porcja": 0.9,
+      "porcja": 1.0,
       "makra": {
-        "kcal": 378,
-        "bialko": 37,
+        "kcal": 397,
+        "bialko": 40,
         "tluszcz": 9,
-        "wegle": 36
+        "wegle": 37
       },
       "skladniki": [
         {
-          "nazwa": "Skyr naturalny",
-          "ile": "270 g",
-          "g": 270,
-          "kcal": 173,
-          "bialko": 31.1,
-          "tluszcz": 0.5,
-          "wegle": 10.3
+          "nazwa": "Skyr naturalny (kubek 150 g)",
+          "ile": "2 kubki (300 g)",
+          "g": 300,
+          "kcal": 192,
+          "bialko": 34.5,
+          "tluszcz": 0.6,
+          "wegle": 11.4
         },
         {
           "nazwa": "Banan",
@@ -290,10 +290,10 @@
       "posilek_id": "q_jajka_kukurydza",
       "porcja": 0.8,
       "makra": {
-        "kcal": 528,
-        "bialko": 55,
+        "kcal": 464,
+        "bialko": 43,
         "tluszcz": 14,
-        "wegle": 39
+        "wegle": 35
       },
       "skladniki": [
         {
@@ -352,13 +352,14 @@
         }
       ],
       "dobitka": {
-        "nazwa": "Skyr naturalny",
-        "ile": "250 g",
-        "g": 250,
-        "kcal": 160,
-        "bialko": 28.8,
-        "tluszcz": 0.5,
-        "wegle": 9.5
+        "nazwa": "Skyr naturalny (kubek 150 g)",
+        "ile": "1 kubek (150 g)",
+        "g": 150,
+        "n": 1,
+        "kcal": 96,
+        "bialko": 17.2,
+        "tluszcz": 0.3,
+        "wegle": 5.7
       }
     },
     {
@@ -485,22 +486,22 @@
       "opis": "",
       "posilek": "Sałatka z fetą, jajkiem i pomidorem + pieczywo",
       "posilek_id": "q_salatka_feta",
-      "porcja": 0.8,
+      "porcja": 0.9,
       "makra": {
-        "kcal": 492,
-        "bialko": 27,
-        "tluszcz": 29,
-        "wegle": 26
+        "kcal": 538,
+        "bialko": 29,
+        "tluszcz": 32,
+        "wegle": 28
       },
       "skladniki": [
         {
           "nazwa": "Ser feta",
-          "ile": "55 g",
-          "g": 55,
-          "kcal": 145,
-          "bialko": 7.8,
-          "tluszcz": 11.7,
-          "wegle": 0.6
+          "ile": "65 g",
+          "g": 65,
+          "kcal": 172,
+          "bialko": 9.2,
+          "tluszcz": 13.8,
+          "wegle": 0.7
         },
         {
           "nazwa": "Jaja",
@@ -513,12 +514,12 @@
         },
         {
           "nazwa": "Pomidor",
-          "ile": "180 g",
-          "g": 180,
-          "kcal": 32,
-          "bialko": 1.6,
-          "tluszcz": 0.4,
-          "wegle": 4.9
+          "ile": "2 szt. (240 g)",
+          "g": 240,
+          "kcal": 43,
+          "bialko": 2.2,
+          "tluszcz": 0.5,
+          "wegle": 6.5
         },
         {
           "nazwa": "Ogórek długi",
@@ -531,20 +532,20 @@
         },
         {
           "nazwa": "Sałata / mix sałat",
-          "ile": "50 g",
-          "g": 50,
+          "ile": "55 g",
+          "g": 55,
           "kcal": 8,
-          "bialko": 0.7,
+          "bialko": 0.8,
           "tluszcz": 0.1,
-          "wegle": 0.8
+          "wegle": 0.9
         },
         {
           "nazwa": "Oliwa z oliwek",
-          "ile": "6 ml",
-          "g": 6,
-          "kcal": 50,
+          "ile": "7 ml",
+          "g": 7,
+          "kcal": 58,
           "bialko": 0.0,
-          "tluszcz": 5.5,
+          "tluszcz": 6.4,
           "wegle": 0.0
         },
         {
@@ -917,39 +918,35 @@
   },
   "lodowka": {
     "jaja": {
-      "ilosc": 6,
+      "ilosc": 9,
       "do": "2026-09-17"
     },
     "jogurt_grecki": {
-      "ilosc": 60,
+      "ilosc": 135,
       "do": "2026-09-17"
     },
     "maslo": {
-      "ilosc": 156.0,
+      "ilosc": 157.0,
       "do": "2026-09-17"
     },
     "mleko": {
-      "ilosc": 750.0,
+      "ilosc": 760.0,
       "do": "2026-09-17"
     },
     "ser": {
       "ilosc": 30.0,
       "do": "2026-09-17"
     },
-    "skyr": {
-      "ilosc": 300,
-      "do": "2026-09-17"
-    },
     "twarog": {
-      "ilosc": 110,
+      "ilosc": 185,
       "do": "2026-09-17"
     },
     "smietana": {
-      "ilosc": 20.0,
+      "ilosc": 24.0,
       "do": "2026-09-17"
     },
     "ogorek_kiszony": {
-      "ilosc": 3,
+      "ilosc": 3.5,
       "do": "2027-03-24"
     },
     "ziemniaki": {
@@ -985,7 +982,7 @@
       "do": "2027-03-24"
     },
     "orzechy": {
-      "ilosc": 125,
+      "ilosc": 130,
       "do": "2027-03-24"
     },
     "przyprawy": {
@@ -1013,32 +1010,32 @@
       "do": "2026-09-15"
     },
     "feta": {
-      "ilosc": 130,
+      "ilosc": 145,
       "do": "2026-09-23"
     },
     "ser_zolty": {
       "ilosc": 8,
       "do": "2026-09-23"
     },
-    "ogorek": {
-      "ilosc": 0.2,
-      "do": "2026-09-15"
-    },
     "salata": {
-      "ilosc": 90,
+      "ilosc": 100,
       "do": "2026-09-15"
     },
     "szczypiorek": {
-      "ilosc": 8,
+      "ilosc": 9.0,
       "do": "2026-09-15"
     },
     "kukurydza": {
-      "ilosc": 100,
+      "ilosc": 120,
       "do": "2027-03-30"
     },
     "oliwa": {
-      "ilosc": 492,
+      "ilosc": 494,
       "do": "2027-03-30"
+    },
+    "pomidor": {
+      "ilosc": 0.5,
+      "do": "2026-09-15"
     }
   },
   "trening": {
@@ -1251,7 +1248,7 @@
       "produkty": [
         [
           "skyr",
-          300
+          2.0
         ],
         [
           "banan",
@@ -1881,13 +1878,13 @@
       "baza": "g"
     },
     "skyr": {
-      "nazwa": "Skyr naturalny",
-      "jedn": "g",
-      "opak": 400,
-      "cena": 8.0,
+      "nazwa": "Skyr naturalny (kubek 150 g)",
+      "jedn": "kubek",
+      "opak": 1,
+      "cena": 3.8,
       "kat": "nabial",
       "trw": "chlodnia",
-      "g": 1,
+      "g": 150,
       "baza": "g"
     },
     "jogurt_grecki": {
