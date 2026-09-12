@@ -143,6 +143,13 @@
   details.przepis[open] summary::before{transform:rotate(90deg)}
   details.przepis ol{margin:4px 0 2px;padding-left:20px;font-size:13px;color:var(--tekst)}
   details.przepis li{margin:5px 0;line-height:1.45}
+  .typy-dnia{display:grid;grid-template-columns:repeat(3,1fr);gap:6px;margin-top:10px}
+  .typy-dnia button{background:var(--tlo);border:1px solid var(--linia);color:var(--tekst);
+    border-radius:10px;padding:10px 4px;font:600 12px/1.25 inherit;cursor:pointer}
+  .typy-dnia button b{display:block;font-size:20px;font-weight:400;margin-bottom:3px}
+  .typy-dnia button.aktywny{border-color:var(--akcent);color:var(--akcent)}
+  .formularz{display:flex;gap:6px;margin-top:8px;flex-wrap:wrap}
+  .formularz input{flex:1;min-width:70px}
   [hidden]{display:none !important}
 </style>
 </head>
@@ -184,7 +191,7 @@ const esc = s => String(s??"").replace(/[&<>"]/g, c => ({"&":"&amp;","<":"&lt;",
 /* Wersja panelu. iPhone dodany do ekranu głównego potrafi trzymać stary HTML
    w nieskończoność. dane.json leci zawsze świeży, więc porównujemy numery
    i przy różnicy przeładowujemy stronę z ?v=, co omija cache przeglądarki. */
-const WERSJA = 10;
+const WERSJA = 11;
 let D = null, widok = "dzis";
 
 /* ---- zapis z telefonu ------------------------------------------------------
@@ -321,7 +328,7 @@ const OPIS_ZRODLA = {
 /* Instrukcja pod kazdym posilkiem. Zwiniete domyslnie, zeby plan dnia dalo sie
    przejrzec jednym rzutem oka, a przepis byl na jedno tapniecie. */
 function przygotowanie(e){
-  if(!e.kroki || !e.kroki.length) return "";
+  if(e.pominiety || !e.kroki || !e.kroki.length) return "";
   const tytul = e.jak === "gotowanie" ? "Gotujesz garnek na 3 dni"
               : e.jak === "odgrzewanie" ? "Z lodówki — tylko odgrzej" : "Jak przygotować";
   return `<details class="przepis"><summary>${tytul} · ${e.czas_min} min</summary>
@@ -379,7 +386,8 @@ function widokInnegoDnia(x){
   return `<div class="zrodlo">${nieaktualne
       ? "Dane są sprzed północy, więc pokazuję dzisiejszy dzień z planu. Pełny widok z wagą i podmianami wróci po najbliższym odświeżeniu danych — zwykle w ciągu kilku minut."
       : (OPIS_ZRODLA[x.zrodlo] || "")}</div>
-    ${x.makra ? `<div class="karta"><h2>Makra dnia</h2>${makra(x.makra, D.cel)}</div>` : ""}
+    ${x.makra ? `<div class="karta"><h2>Makra dnia${x.lzejszy ? " — dzień lżejszy" : ""}</h2>${makra(x.makra, x.cel || D.cel)}
+      ${(x.poza_planem || []).map(p => `<div class="op">+ spoza planu: ${esc(p.nazwa)} — ${p.kcal} kcal</div>`).join("")}</div>` : ""}
     ${fakty}
     <div class="karta"><h2>Plan dnia</h2><ol class="os">${lista}</ol></div>`;
 }
@@ -389,6 +397,8 @@ function widokDzis(){
   if(inny) return widokInnegoDnia(inny);
   const teraz = new Date(), tm = teraz.getHours()*60 + teraz.getMinutes();
   const dzis = D.plan.dni.find(d => d.data === D.dzis) || D.plan.dni[0];
+  // dzien po dopasowaniu porcji, podmianach i dodatkach — surowy plan tego nie zawiera
+  const dzisD = (D.dni || []).find(x => x.przesuniecie === 0) || {};
   const nastepny = D.agenda.filter(e => minuty(e.czas) > tm)[0];
 
   const zapisane = zapamietane();
@@ -461,9 +471,45 @@ function widokDzis(){
       <button class="mini duzy" id="start-od-zera" style="margin-top:10px">▶ zacznij od zera</button>
     </div>` : "";
 
-  return banerPauzy + kartaZamiany + `<div class="karta"><h2>Makra na dziś</h2>${makra(dzis.makra, D.cel)}</div>
+  return banerPauzy + kartaZamiany + `<div class="karta"><h2>Makra na dziś${dzisD.lzejszy ? " — dzień lżejszy" : ""}</h2>${makra(dzisD.makra || dzis.makra, dzisD.cel || D.cel)}
+      ${dzisD.nadwyzka ? `<div class="op" style="margin-top:8px;color:var(--uwaga)">Po tym, co zjadłeś spoza planu,
+        dzień wychodzi ${dzisD.nadwyzka} kcal ponad cel mimo zmniejszenia porcji. Nie nadrabiaj tego głodówką —
+        jutro jedziesz normalnie, jeden taki dzień nic nie psuje.</div>` : ""}</div>
     ${kartaKrokow}
     <div class="karta"><h2>Plan dnia</h2><ol class="os">${lista}</ol></div>
+
+    ${token() ? `<div class="karta"><h2>Mój dzień</h2>
+      <div class="op">Zamieniłeś dyżur albo grafik się przesunął? Kliknij, jaki jest dziś dzień —
+        reszta cyklu przeliczy się sama: po zmianie przychodzi powrót, potem wolne.</div>
+      <div class="typy-dnia">
+        ${[["🛡️","Jestem w pracy"],["😴","Wracam z pracy"],["💪","Mam wolne"]].map(([ik, txt], i) =>
+          `<button data-grafik="${i}" class="${D.typ_dzis === i ? "aktywny" : ""}"><b>${ik}</b>${txt}</button>`).join("")}
+      </div>
+      <div class="op" style="margin-top:12px"><b>Dzień lżejszy</b> — gorsze samopoczucie albo zmęczenie:
+        bez treningu i ok. 300 kcal więcej. Tylko na dziś.</div>
+      <button class="mini" id="lzejszy" data-wl="${dzisD.lzejszy ? 0 : 1}" style="margin-top:8px">
+        ${dzisD.lzejszy ? "↩ wróć do normalnego dnia" : "🛌 dziś dzień lżejszy"}</button>
+    </div>
+
+    <div class="karta"><h2>Zjadłem coś spoza planu</h2>
+      <div class="op">Wpisz, co i ile kalorii — reszta dnia sama się zmniejszy, żeby dalej trafić w cel.
+        Posiłki już odhaczone zostają bez zmian. Białko podaj, jeśli wiesz; bez niego resztę szacuję.</div>
+      ${(dzisD.poza_planem || []).map(x => `<div class="poz"><span class="nazwa">${esc(x.nazwa)}</span>
+        <span class="ile">${x.kcal} kcal · B ${x.bialko}${x.szacunek ? " (T/W szac.)" : ""}${x.zamiast ? " · zamiast " + ({sniadanie:"śniadania",drugi:"drugiego",obiad:"obiadu",kolacja:"kolacji"}[x.zamiast]) : ""}</span></div>`).join("")}
+      <div class="formularz">
+        <input class="pole" id="poza-nazwa" placeholder="co, np. kebab" style="flex:2">
+        <input class="pole" id="poza-kcal" type="number" inputmode="numeric" placeholder="kcal">
+        <input class="pole" id="poza-bialko" type="number" inputmode="numeric" placeholder="białko g">
+        <select class="pole" id="poza-zamiast" style="flex-basis:100%">
+          <option value="">dodatkowo do planu</option>
+          <option value="sniadanie">zamiast śniadania</option>
+          <option value="drugi">zamiast drugiego posiłku</option>
+          <option value="obiad">zamiast obiadu</option>
+          <option value="kolacja">zamiast kolacji</option>
+        </select>
+      </div>
+      <button class="mini duzy" id="poza-zapisz" style="margin-top:8px">dodaj</button>
+    </div>` : ""}
 
     <div class="karta"><h2>Dziś nie gotuję</h2>
       <div class="op">Podmienia obiad na coś bez garnka o tych samych makrach. Do wyboru:</div>
@@ -642,7 +688,7 @@ function kartaPostepu(){
 function widokTrening(){
   const tr = (wybranyDzien !== 0 && sel()) ? sel().trening : D.trening;
   const t = tr.trening;
-  if(tr.rodzaj === "zmiana"){
+  if(tr.rodzaj === "zmiana" || tr.rodzaj === "lzejszy"){
     return kartaPostepu() + `<div class="karta"><h2>${esc(t.nazwa)}</h2>
       <div class="op">${esc(t.zasada)}</div></div>
       <div class="karta"><h2>Mikro-rozruch co 2–3 h</h2>
@@ -946,6 +992,35 @@ $("#widok").addEventListener("click", async e => {
     }
     if(b.id === "zapisz-token"){ ustawToken($("#token")?.value); rysuj(); return; }
     if(b.id === "usun-token"){ ustawToken(""); rysuj(); return; }
+    if(b.dataset.grafik !== undefined){
+      const t = Number(b.dataset.grafik);
+      const nazwy = ["w pracy (zmiana 24 h)", "powrót z pracy", "wolne"];
+      if(t === D.typ_dzis){ alert("Dziś już jest ustawiony dzień: " + nazwy[t] + "."); return; }
+      if(!confirm("Ustawić, że dziś to: " + nazwy[t] + "?\n\nCały cykl przeliczy się od dziś. Dni wstecz zostają bez zmian. Pingi zaplanowane już do 8 h naprzód mogą jeszcze przyjść po staremu.")) return;
+      if(await zapisz({typ:"grafik", typ_dnia:t, data: lokalnaData()}, b))
+        alert("Zapisane. Za ok. minutę plan przeliczy się pod nowy grafik — odśwież panel.");
+      return;
+    }
+    if(b.id === "lzejszy"){
+      const wl = b.dataset.wl === "1";
+      if(await zapisz({typ:"lzejszy", wlaczony: wl, data: lokalnaData()}, b))
+        alert(wl ? "Dzień lżejszy zapisany — bez treningu, trochę więcej jedzenia. Plan przeliczy się w minutę."
+                 : "Wracasz do normalnego dnia.");
+      return;
+    }
+    if(b.id === "poza-zapisz"){
+      const nazwa = ($("#poza-nazwa")?.value || "").trim();
+      const kcal = Number($("#poza-kcal")?.value);
+      const bialko = Number($("#poza-bialko")?.value || 0);
+      if(!kcal || kcal <= 0){ alert("Podaj przynajmniej kalorie — bez nich nie ma czego odjąć od reszty dnia."); return; }
+      if(kcal > 3000 && !confirm(kcal + " kcal to bardzo dużo jak na jeden posiłek. Na pewno?")) return;
+      const zamiast = $("#poza-zamiast")?.value || null;
+      if(await zapisz({typ:"poza_planem", nazwa: nazwa || "spoza planu", kcal, bialko, zamiast, data: lokalnaData()}, b)){
+        $("#poza-nazwa").value = ""; $("#poza-kcal").value = ""; $("#poza-bialko").value = ""; $("#poza-zamiast").value = "";
+        alert("Dodane. Za ok. minutę pozostałe posiłki dnia przeliczą się pod nowe kalorie.");
+      }
+      return;
+    }
     if(b.dataset.niekupione){
       if(await zapisz({typ:"niekupione", klucz:b.dataset.niekupione}, b))
         b.closest(".poz").style.opacity = ".45";

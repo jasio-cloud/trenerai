@@ -163,11 +163,39 @@ def parse_date(s):
 
 # ------------------------------------------------------------------ grafik
 
+GRAFIK_PATH = os.path.join(STATE, "grafik.json")
+
+
+def _kotwice():
+    """Historia grafiku: [{od, kotwica}]. Kazda zamiana dyzuru dopisuje wpis od
+    danego dnia, wiec dni sprzed zamiany dalej licza sie po staremu — inaczej
+    przewijanie dni wstecz pokazywaloby nieprawdziwe typy dni."""
+    wpisy = load(GRAFIK_PATH, [])
+    return [{"od": "2000-01-01", "kotwica": CFG["grafik"]["kotwica"]}] + sorted(wpisy, key=lambda w: w["od"])
+
+
+def _kotwica(d):
+    k = CFG["grafik"]["kotwica"]
+    for w in _kotwice():
+        if w["od"] <= d.isoformat():
+            k = w["kotwica"]
+    return parse_date(k)
+
+
+def ustaw_typ_dnia(d, typ):
+    """'Dzis jestem w pracy' — reszta cyklu wynika z tego sama: po zmianie
+    przychodzi dzien powrotu, potem wolne. Wystarczy przestawic kotwice."""
+    typ = int(typ)
+    wpisy = [w for w in load(GRAFIK_PATH, []) if w["od"] != d.isoformat()]
+    wpisy.append({"od": d.isoformat(), "kotwica": (d - datetime.timedelta(days=typ)).isoformat(), "typ": typ})
+    save(GRAFIK_PATH, sorted(wpisy, key=lambda w: w["od"]))
+    _prognozy.clear()
+
+
 def typ_dnia(d=None):
     """0 = zmiana 24h, 1 = dzień po zmianie, 2 = dzień wolny."""
     d = d or dzis()
-    kotwica = parse_date(CFG["grafik"]["kotwica"])
-    return (d - kotwica).days % CFG["grafik"]["cykl_dni"]
+    return (d - _kotwica(d)).days % CFG["grafik"]["cykl_dni"]
 
 
 DZIEN_GOTOWANIA = 1  # typ dnia, w którym robisz zakupy i gotujesz
@@ -188,7 +216,8 @@ def start_cyklu(d=None):
 
 def nr_cyklu(d=None):
     """Kolejny numer gotowania, liczony od pierwszego dnia gotowania po kotwicy."""
-    kotwica = parse_date(CFG["grafik"]["kotwica"]) + datetime.timedelta(days=DZIEN_GOTOWANIA)
+    d = d or dzis()
+    kotwica = _kotwica(d) + datetime.timedelta(days=DZIEN_GOTOWANIA)
     return (start_cyklu(d) - kotwica).days // CFG["grafik"]["cykl_dni"]
 
 
@@ -290,6 +319,8 @@ def _zaokraglij(klucz, q):
 
 def produkty_posilku(pid, porcja=1.0):
     """Skladniki posilku. porcja != 1 skaluje posilek i zaokragla do odmierzalnych ilosci."""
+    if porcja == 0:
+        return []   # posilek pominiety — zastapiony czyms spoza planu
     if pid in QUICK_BY_ID:
         sklad = [(k, q) for k, q in QUICK_BY_ID[pid]["produkty"]]
         if abs(porcja - 1.0) < 1e-9:
@@ -320,7 +351,7 @@ def _makra_porcji(pid, porcja):
     return _cache_makr[klucz]
 
 
-def dopasuj_porcje(dzien):
+def dopasuj_porcje(dzien, cel=None, dodatkowe=None, zamrozone=None, porcje=PORCJE):
     """Dobiera wielkosc porcji posilkow, zeby CALY dzien trafial w cel makro.
 
     Sam wybor dan zbliza dzien do celu, ale zostawia np. 15 g bialka dziury.
@@ -328,16 +359,20 @@ def dopasuj_porcje(dzien):
     (216 kombinacji na dzien) i liczymy makro PO zaokragleniu gramatur — wiec
     to, co widzisz w przepisie, dokladnie odpowiada temu, co wychodzi w sumie.
     """
-    sloty = [s for s in SLOTY if dzien[s] in QUICK_BY_ID]
+    zamrozone = zamrozone or {}
+    sloty = [s for s in SLOTY if dzien[s] in QUICK_BY_ID and s not in zamrozone]
     stale = {"kcal": 0, "bialko": 0, "tluszcz": 0, "wegle": 0}
     for s in SLOTY:
         if s not in sloty:
-            for k, v in makra_posilku(dzien[s]).items():
+            for k, v in makra_posilku(dzien[s], zamrozone.get(s, 1.0)).items():
                 stale[k] += v
+    for x in (dodatkowe or []):
+        for k in stale:
+            stale[k] += x[k]
     najlepsze, najmniejszy, dobitka = {s: 1.0 for s in sloty}, None, 0
     import itertools
     makra_dobitek = {g: makra_produktow([(DOBITKA_PRODUKT, g)]) for g in DOBITKI}
-    for kombinacja in itertools.product(PORCJE, repeat=len(sloty)):
+    for kombinacja in itertools.product(porcje, repeat=len(sloty)):
         m0 = dict(stale)
         for s, p in zip(sloty, kombinacja):
             for k, v in _makra_porcji(dzien[s], p).items():
@@ -345,9 +380,10 @@ def dopasuj_porcje(dzien):
         for g in DOBITKI:
             m = {k: m0[k] + makra_dobitek[g][k] for k in m0}
             # lekkie kary: przy remisie wolimy przepis bez zmian i dzien bez dokladki
-            blad = _blad_dnia(m) + 15 * sum(abs(p - 1.0) for p in kombinacja) + 0.05 * gramy(DOBITKA_PRODUKT, g)
+            blad = _blad_dnia(m, cel) + 15 * sum(abs(p - 1.0) for p in kombinacja) + 0.05 * gramy(DOBITKA_PRODUKT, g)
             if najmniejszy is None or blad < najmniejszy:
                 najmniejszy, najlepsze, dobitka = blad, dict(zip(sloty, kombinacja)), g
+    najlepsze.update(zamrozone)
     najlepsze["_dobitka"] = dobitka
     return najlepsze
 
@@ -368,6 +404,9 @@ def makra_dnia(dzien):
     if dzien.get("dobitka"):
         for k, v in makra_produktow([(DOBITKA_PRODUKT, dzien["dobitka"])]).items():
             t[k] += v
+    for x in dzien.get("poza_planem", []):
+        for k in t:
+            t[k] += x[k]
     return t
 
 
@@ -391,11 +430,61 @@ def _wybierz_baze(historia):
     return random.choice(kandydaci)
 
 
-def _blad_dnia(m):
-    return (abs(m["kcal"] - CEL["kcal"]) * 1.0
-            + abs(m["bialko"] - CEL["bialko"]) * 6.0
-            + abs(m["tluszcz"] - CEL["tluszcz"]) * 3.0
-            + abs(m["wegle"] - CEL["wegle"]) * 1.0)
+def _blad_dnia(m, cel=None):
+    cel = cel or CEL
+    return (abs(m["kcal"] - cel["kcal"]) * 1.0
+            + abs(m["bialko"] - cel["bialko"]) * 6.0
+            + abs(m["tluszcz"] - cel["tluszcz"]) * 3.0
+            + abs(m["wegle"] - cel["wegle"]) * 1.0)
+
+
+SPECJALNE_PATH = os.path.join(STATE, "specjalne.json")
+LZEJSZY_KCAL = 300
+
+
+def lzejszy(d):
+    return bool(load(SPECJALNE_PATH, {}).get(d.isoformat(), {}).get("lzejszy"))
+
+
+def ustaw_lzejszy(d, wlaczony=True):
+    sp = load(SPECJALNE_PATH, {})
+    sp.setdefault(d.isoformat(), {})["lzejszy"] = bool(wlaczony)
+    granica = (d - datetime.timedelta(days=30)).isoformat()
+    save(SPECJALNE_PATH, {k: v for k, v in sp.items() if k >= granica})
+
+
+def cel_dnia(d):
+    """Cel na konkretny dzien. W dniu lzejszym (choroba, zmeczenie) deficyt jest
+    mniejszy o 300 kcal — przy gorszej formie organizm lepiej sie regeneruje,
+    a jeden taki dzien nie cofa redukcji."""
+    c = dict(CEL)
+    if lzejszy(d):
+        c["kcal"] += LZEJSZY_KCAL
+        c["wegle"] += LZEJSZY_KCAL // 4
+    return c
+
+
+def poza_planem(d):
+    """To, co zjadles spoza planu tego dnia. Jak podasz tylko kalorie i bialko,
+    reszte kalorii dzielimy szacunkowo 35% tluszcz / 65% weglowodany."""
+    ds = d.isoformat()
+    out = []
+    for z in dziennik.zdarzenia():
+        if z.get("typ") != "poza_planem" or z.get("data") != ds:
+            continue
+        kcal = float(z.get("kcal") or 0)
+        b = float(z.get("bialko") or 0)
+        reszta = max(0.0, kcal - 4 * b)
+        t = z.get("tluszcz")
+        w = z.get("wegle")
+        szac = t in (None, "") or w in (None, "")
+        t = float(t) if t not in (None, "") else reszta * 0.35 / 9
+        w = float(w) if w not in (None, "") else reszta * 0.65 / 4
+        out.append({"nazwa": z.get("nazwa") or "spoza planu", "kcal": int(round(kcal)),
+                    "bialko": int(round(b)), "tluszcz": int(round(t)), "wegle": int(round(w)),
+                    "szacunek": szac,
+                    "zamiast": z.get("zamiast") if z.get("zamiast") in SLOTY else None})
+    return out
 
 
 PLANY_DIR = os.path.join(STATE, "plany")
@@ -528,10 +617,29 @@ def _zastosuj_podmiany(dzien, d):
         dzien["podmienione"] = list(zmiany)
     # porcje liczone zawsze od nowa na ostatecznym zestawie dan: po podmianie
     # posilku reszta dnia sama sie dostraja, zeby suma dalej trafiala w cel
-    porcje = dopasuj_porcje(dzien)
+    cel = cel_dnia(d)
+    dodatkowe = poza_planem(d)
+    porcje = dopasuj_porcje(dzien, cel)
+    if dodatkowe:
+        # Posilki juz odhaczone zostaja takie, jakie byly — zjedzonego nie da sie odjac.
+        # Reszte dnia dopasowujemy szerzej (od 50% porcji), zeby zmiescic to, co wpadlo.
+        odh = dziennik.odhaczenia(d)
+        klucze = {e["slot"]: e["czas"] + "|" + e["tytul"]
+                  for e in DNI["plan"][str(typ_dnia(d))] if e.get("slot")}
+        zamrozone = {s: porcje[s] for s in porcje if s in klucze and odh.get(klucze[s])}
+        # "zamiast obiadu" — ten posilek wypada z dnia calkowicie. Zwykle tak to wyglada:
+        # kebab zastepuje posilek, a nie dochodzi do niego. Samo zmniejszanie reszty
+        # dnia (do 50%) pokrywalo tylko ~180 kcal z 900.
+        zamrozone.update({x["zamiast"]: 0.0 for x in dodatkowe if x.get("zamiast")})
+        porcje = dopasuj_porcje(dzien, cel, dodatkowe, zamrozone,
+                                porcje=(0.5, 0.6, 0.7, 0.8, 0.9, 1.0, 1.1, 1.2, 1.3))
+    dzien["poza_planem"] = dodatkowe
+    dzien["lzejszy"] = lzejszy(d)
+    dzien["cel"] = cel
     dzien["dobitka"] = porcje.pop("_dobitka", 0)
     dzien["porcje"] = porcje
     dzien["makra"] = makra_dnia(dzien)
+    dzien["nadwyzka"] = max(0, dzien["makra"]["kcal"] - cel["kcal"]) if dodatkowe else 0
     return dzien
 
 
@@ -647,6 +755,14 @@ def przetworz_zdarzenia():
                 zrobione.append("start od zera, pierwsze gotowanie %s" % w["pierwsze_gotowanie"])
                 # start czysci log zdarzen i wskaznik — reszte starego logu pomijamy celowo
                 return zrobione
+            continue
+        if t == "grafik" and z.get("typ_dnia") is not None:
+            ustaw_typ_dnia(data, z["typ_dnia"])
+            zrobione.append("grafik: %s to %s" % (data, opis_typu(int(z["typ_dnia"]))["nazwa"]))
+            continue
+        if t == "lzejszy":
+            ustaw_lzejszy(data, z.get("wlaczony", True))
+            zrobione.append("dzien lzejszy %s: %s" % (data, "tak" if z.get("wlaczony", True) else "nie"))
             continue
         if t == "niekupione" and z.get("klucz"):
             zrobione.append(oznacz_niekupione(z["klucz"]))
@@ -982,6 +1098,14 @@ def kroki_dzis(d=None):
 
 def trening_dnia(d=None):
     d = d or dzis()
+    if lzejszy(d):
+        return {"rodzaj": "lzejszy", "trening": {
+            "nazwa": "Dzień lżejszy — bez treningu",
+            "zasada": ("Dziś odpuszczasz trening i jesz ok. 300 kcal więcej niż zwykle. Przy gorszej "
+                       "formie organizm lepiej się regeneruje na mniejszym deficycie, a jeden dzień "
+                       "przerwy nie cofa formy."),
+            "mikro": ["Spokojny spacer 15–20 min, jeśli masz siłę", "Dużo wody",
+                      "Sen o zaplanowanej godzinie"]}}
     t = typ_dnia(d)
     c = nr_cyklu(d)
     if t == 0:
@@ -1160,6 +1284,11 @@ def agenda(d=None):
     zdarzenia = [dict(e) for e in DNI["plan"][str(t)] if not e.get("nastepny_dzien")]
     if t == 1:
         zdarzenia += [dict(e) for e in DNI["plan"]["0"] if e.get("nastepny_dzien")]
+    if lzejszy(d):
+        for e in zdarzenia:
+            if str(e.get("akcja") or "").startswith("trening"):
+                e.update({"tytul": "Bez treningu — dzień lżejszy", "ping": False, "akcja": None,
+                          "ikona": "🛌", "opis": "Dziś odpoczywasz. Jeśli masz siłę, zrób spokojny spacer."})
     _, dzien = plan_dnia(d)
     for e in zdarzenia:
         if e.get("akcja") == "budzik":
@@ -1172,6 +1301,11 @@ def agenda(d=None):
             e["porcja"] = porcja
             e["makra"] = makra_posilku(pid, porcja)
             e["skladniki"] = rozpiska(pid, porcja)
+            if porcja == 0:
+                zamiast = next((x["nazwa"] for x in dzien.get("poza_planem", [])
+                                if x.get("zamiast") == e["slot"]), "coś spoza planu")
+                e["posilek"] = "%s — pominięte, zamiast tego: %s" % (e["posilek"], zamiast)
+                e["pominiety"] = True
             # Kazdy posilek dostaje instrukcje, nie tylko garnek. Obiad z garnka
             # ma dwa rozne warianty: w dniu gotowania caly przepis, w pozostale dni
             # tylko odgrzanie — bo wtedy stoi juz gotowy w lodowce.
@@ -1471,6 +1605,9 @@ def dni_panelu(d):
             "nazwa_typu": info["nazwa"], "emoji": info["emoji"], "opis_typu": info["opis"],
             "agenda": agenda(dd), "makra": dzien["makra"] if dzien else None,
             "dobitka": dzien.get("dobitka", 0) if dzien else 0,
+            "poza_planem": dzien.get("poza_planem", []) if dzien else [],
+            "lzejszy": lzejszy(dd), "cel": cel_dnia(dd),
+            "nadwyzka": dzien.get("nadwyzka", 0) if dzien else 0,
             "odhaczone": dziennik.odhaczenia(dd), "waga": wagi.get(ds),
             "kroki": kroki.get(ds), "serie": serie.get(ds, []),
             "trening": trening_dnia(dd),
@@ -1500,6 +1637,7 @@ def eksport():
         "posilki": {p["id"]: p for p in QUICK},
         "produkty": {k: v for k, v in PROD.items() if not k.startswith("_")},
         "panel_wersja": CFG.get("panel_wersja", 1),
+        "grafik": _kotwice(),
         "dni": dni_panelu(d),
         "tryb": tryb(),
         "postep": {
@@ -1748,6 +1886,17 @@ def main():
         else:
             dziennik.odhacz(arg)
             print("Odhaczone: %s" % arg)
+    elif cmd == "grafik":
+        if arg not in ("0", "1", "2"):
+            print("Uzycie: py trener.py grafik 0|1|2   (0 = dzis zmiana, 1 = wracam z pracy, 2 = wolne)")
+        else:
+            ustaw_typ_dnia(dzis(), arg)
+            for i in range(4):
+                dd = dzis() + datetime.timedelta(days=i)
+                print("   %s  %s" % (dd, opis_typu(typ_dnia(dd))["nazwa"]))
+    elif cmd == "lzejszy":
+        ustaw_lzejszy(dzis(), arg != "nie")
+        print("Dzien lzejszy: %s" % ("tak" if arg != "nie" else "nie"))
     elif cmd == "pauza":
         t_ = wstrzymaj(arg or "")
         print("Plan wstrzymany od %s. Pingi i ksiegowanie zakupow stoja." % t_["od"])

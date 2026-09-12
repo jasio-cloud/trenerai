@@ -63,15 +63,15 @@ jobs:
           NTFY_TOPIC: ${{ secrets.NTFY_TOPIC }}
         run: python trener.py wdrozenie
 
+      - name: Zastosuj to, co przyszło z telefonu
+        if: ${{ !inputs.test }}
+        run: python trener.py przetworz
+
       - name: Zaplanuj pingi na dziś i jutro (plus nadrobienie zaległych)
         if: ${{ !inputs.test }}
         env:
           NTFY_TOPIC: ${{ secrets.NTFY_TOPIC }}
         run: python trener.py tick
-
-      - name: Zastosuj to, co przyszło z telefonu
-        if: ${{ !inputs.test }}
-        run: python trener.py przetworz
 
       - name: Zaksięguj zakupy i zużycie (w dniu gotowania, po 15:30)
         if: ${{ !inputs.test }}
