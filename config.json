@@ -61,8 +61,141 @@
     "cykle_minimum": 4,
     "komentarz": "Sen chodzi cyklami po ok. 90 min. Budzenie w srodku cyklu (zwlaszcza w fazie gebokiej) daje uczucie rozbicia, nawet gdy przespales duzo. Dlatego budzik ustawiamy na WIELOKROTNOSC cyklu liczona od momentu ZASNIECIA, nie polozenia sie. 90 min to srednia - indywidualnie bywa 80-110, wiec traktujemy to jako przyblizenie, a nie wyrocznie."
   },
-  "panel_wersja": 11,
+  "panel_wersja": 13,
   "panel_wersja_komentarz": "Numer wersji panelu. iPhone dodany do ekranu glownego trzyma stary HTML nawet po zmianie na serwerze. dane.json jest pobierany zawsze swiezy, wiec panel porownuje ten numer ze swoim wlasnym i gdy sie roznia, przeladowuje sie z parametrem ?v=, co omija cache. PODNIES O 1 PO KAZDEJ ZMIANIE W docs/index.html.",
   "repo": "jasio-cloud/trenerai",
-  "galaz": "main"
+  "galaz": "main",
+  "plan_roku": {
+    "_info": "Plan na rok: trenujemy tak, jakbyśmy startowali w Men's Physique, ale bez startu. Finałem jest sesja zdjęciowa. Forma docelowa 8–10% tłuszczu (poziom zdjęć), a nie sceniczne 5–7%, bo przy braku startu to koszt dla zdrowia i głowy bez nagrody. tempo_kg_tydz = widełki, w których system nie rusza kalorii; poza nimi koryguje o 150 kcal.",
+    "start": "2026-09-17",
+    "final": "2027-09-16",
+    "final_nazwa": "Sesja zdjęciowa",
+    "fazy": [
+      {
+        "id": "F0",
+        "nazwa": "Start",
+        "od_tyg": 1,
+        "do_tyg": 2,
+        "makra": {
+          "kcal": 2600,
+          "bialko": 150,
+          "tluszcz": 90,
+          "wegle": 297
+        },
+        "tempo_kg_tydz": [
+          -0.3,
+          0.3
+        ],
+        "porcje": [
+          0.8,
+          1.3
+        ],
+        "kroki": 6000,
+        "cel": "Nauka ruchu i pomiary. Bez deficytu — ciało dopiero co po zabiegu."
+      },
+      {
+        "id": "F1",
+        "nazwa": "Rekompozycja",
+        "od_tyg": 3,
+        "do_tyg": 16,
+        "makra": {
+          "kcal": 2200,
+          "bialko": 165,
+          "tluszcz": 80,
+          "wegle": 205
+        },
+        "tempo_kg_tydz": [
+          -0.7,
+          -0.3
+        ],
+        "porcje": [
+          0.8,
+          1.3
+        ],
+        "kroki": 8000,
+        "cel": "Tłuszcz w dół, siła w górę. Talia −5–7 cm."
+      },
+      {
+        "id": "F2",
+        "nazwa": "Budowa",
+        "od_tyg": 17,
+        "do_tyg": 30,
+        "makra": {
+          "kcal": 2850,
+          "bialko": 165,
+          "tluszcz": 100,
+          "wegle": 322
+        },
+        "tempo_kg_tydz": [
+          0.1,
+          0.3
+        ],
+        "porcje": [
+          1.0,
+          1.6
+        ],
+        "kroki": 7500,
+        "cel": "Lekka nadwyżka pod barki, plecy i klatkę górną. Waga rośnie powoli."
+      },
+      {
+        "id": "F3",
+        "nazwa": "Forma",
+        "od_tyg": 31,
+        "do_tyg": 50,
+        "makra": {
+          "kcal": 2450,
+          "bialko": 175,
+          "tluszcz": 78,
+          "wegle": 262
+        },
+        "tempo_kg_tydz": [
+          -0.8,
+          -0.4
+        ],
+        "porcje": [
+          0.7,
+          1.3
+        ],
+        "kroki": 11000,
+        "cel": "Odsłaniamy mięśnie do formy z okładki: 8–10% tłuszczu."
+      },
+      {
+        "id": "F4",
+        "nazwa": "Finał",
+        "od_tyg": 51,
+        "do_tyg": 52,
+        "makra": {
+          "kcal": 2400,
+          "bialko": 175,
+          "tluszcz": 80,
+          "wegle": 245
+        },
+        "tempo_kg_tydz": [
+          -0.3,
+          0.3
+        ],
+        "porcje": [
+          0.8,
+          1.3
+        ],
+        "kroki": 9000,
+        "cel": "Utrzymanie formy, pozowanie, sesja zdjęciowa 16 września."
+      }
+    ],
+    "przedstart": {
+      "makra": {
+        "kcal": 2600,
+        "bialko": 150,
+        "tluszcz": 90,
+        "wegle": 297
+      },
+      "cel": "Gojenie po zabiegu. Jemy normalnie, bez treningu."
+    }
+  },
+  "pomiary_cele": {
+    "_info": "Wskaźniki sylwetki mierzone taśmą — tanie, a mówią więcej niż waga.",
+    "talia_do_wzrostu": 0.45,
+    "barki_do_talii": 1.5,
+    "tluszcz_proc": 10
+  }
 }

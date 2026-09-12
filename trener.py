@@ -70,6 +70,9 @@ DNI = load(os.path.join(DATA, "dni.json"))
 TRENINGI = load(os.path.join(DATA, "workouts.json"))
 KROKI = load(os.path.join(DATA, "kroki.json"))
 SUPLE = load(os.path.join(DATA, "suple.json"))
+PROGRAM = load(os.path.join(DATA, "program.json"))
+SLOWA = load(os.path.join(DATA, "slowa.json"))
+PLAN_ROKU = CFG.get("plan_roku", {})
 import dziennik
 
 BAZA_BY_ID = {b["id"]: b for b in BAZY}
@@ -224,6 +227,72 @@ def nr_cyklu(d=None):
     return (start_cyklu(d) - kotwica).days // CFG["grafik"]["cykl_dni"]
 
 
+def _start_planu():
+    return parse_date(PLAN_ROKU["start"]) if PLAN_ROKU.get("start") else None
+
+
+def tydzien_planu(d=None):
+    """Tydzien planu 1..52 liczony od startu; 0 przed startem."""
+    d = d or dzis()
+    st = _start_planu()
+    if not st or d < st:
+        return 0
+    return (d - st).days // 7 + 1
+
+
+def dzien_planu(d=None):
+    d = d or dzis()
+    st = _start_planu()
+    return (d - st).days + 1 if st and d >= st else 0
+
+
+def faza_dnia(d=None):
+    """Faza roku dla danego dnia: makra, widelki tempa wagi, zakres porcji, kroki.
+
+    Kazda faza ma inny kierunek: na rekompozycji i formie waga spada, na budowie
+    rosnie. Dlatego i cel, i korekta kalorii biora sie z fazy, a nie z jednej
+    stalej liczby w configu."""
+    d = d or dzis()
+    if not PLAN_ROKU:
+        return {"id": "-", "nazwa": "Plan", "makra": CFG["makra"], "tempo_kg_tydz": [-0.7, -0.3],
+                "porcje": [0.8, 1.3], "kroki": 8000, "cel": ""}
+    t = tydzien_planu(d)
+    if t == 0:
+        f = {"id": "przedstart", "nazwa": "Przed startem", "tempo_kg_tydz": [-0.3, 0.3],
+             "porcje": [0.8, 1.3], "kroki": 6000, "od_tyg": 0, "do_tyg": 0}
+        f.update(PLAN_ROKU.get("przedstart", {}))
+        return f
+    for f in PLAN_ROKU["fazy"]:
+        if f["od_tyg"] <= t <= f["do_tyg"]:
+            return f
+    return PLAN_ROKU["fazy"][-1]
+
+
+def start_fazy(d=None):
+    f = faza_dnia(d)
+    st = _start_planu()
+    if not st or f["id"] == "przedstart":
+        return None
+    return st + datetime.timedelta(days=(f["od_tyg"] - 1) * 7)
+
+
+def _zakres_porcji(d):
+    lo, hi = faza_dnia(d).get("porcje", [0.8, 1.3])
+    out, p = [], lo
+    while p <= hi + 1e-9:
+        out.append(round(p, 1))
+        p += 0.1
+    return tuple(out)
+
+
+def kalorie_fazy(d=None, zastosuj=False):
+    """Trend wagi wzgledem widelek BIEZACEJ fazy — liczony tylko z pomiarow tej fazy."""
+    f = faza_dnia(d)
+    return dziennik.przelicz_kalorie(f["makra"]["kcal"], zastosuj=zastosuj,
+                                     tempo=f.get("tempo_kg_tydz", [-0.7, -0.3]),
+                                     faza=f["id"], od=start_fazy(d))
+
+
 def opis_typu(t):
     return DNI["typy"][str(t)]
 
@@ -344,6 +413,22 @@ DOBITKA_PRODUKT = "skyr"
 # w KUBKACH (1 kubek = 150 g): dobitka ma byc tym, co realnie wyjmujesz z lodowki,
 # a nie gramatura do odwazenia — inaczej wpis w Fitatu rozjezdza sie z panelem
 DOBITKI = (0, 1, 2)
+
+# Dodatek weglowy do pierwszego posilku. Biblioteka dan jest ulozona pod redukcje
+# (duzo bialka i tluszczu), wiec w fazach z wyzszymi kaloriami samo skalowanie
+# porcji dobijalo kalorie TLUSZCZEM: +40 g tluszczu i -120 g wegli wzgledem celu.
+# Banan i kromki z miodem to czyste weglowodany, ktore nie wymagaja gotowania
+# i mieszcza sie w boxie — optymalizator dobiera je tylko wtedy, gdy dzien ich potrzebuje.
+DODATKI_W = (
+    (),
+    (("banan", 1),),
+    (("chleb", 2), ("miod", 1)),
+    (("banan", 1), ("chleb", 2), ("miod", 1)),
+    (("banan", 2), ("chleb", 2), ("miod", 1)),
+    # na budowie (2 850 kcal) dwie kromki nie wystarczaja
+    (("chleb", 4), ("miod", 2)),
+    (("banan", 2), ("chleb", 4), ("miod", 2)),
+)
 _cache_makr = {}
 
 
@@ -372,22 +457,36 @@ def dopasuj_porcje(dzien, cel=None, dodatkowe=None, zamrozone=None, porcje=PORCJ
     for x in (dodatkowe or []):
         for k in stale:
             stale[k] += x[k]
-    najlepsze, najmniejszy, dobitka = {s: 1.0 for s in sloty}, None, 0
+    najlepsze, najmniejszy, dobitka, dodatek = {s: 1.0 for s in sloty}, None, 0, ()
     import itertools
-    makra_dobitek = {g: makra_produktow([(DOBITKA_PRODUKT, g)]) for g in DOBITKI}
+    c = cel or CEL
+    ck, cb, ct, cw = c["kcal"], c["bialko"], c["tluszcz"], c["wegle"]
+    # Skyr (bialko) x dodatek weglowy — wszystkie pary liczone z gory jako krotki.
+    # Petla leci kilkaset tysiecy razy na plan, wiec bez slownikow w srodku.
+    warianty = []
+    for g in DOBITKI:
+        for dod in DODATKI_W:
+            m = makra_produktow([(DOBITKA_PRODUKT, g)] + list(dod))
+            # lekkie kary: przy remisie wolimy dzien bez dokladek
+            kara = 0.05 * gramy(DOBITKA_PRODUKT, g) + 0.08 * sum(gramy(k, q) for k, q in dod)
+            warianty.append((g, dod, m["kcal"], m["bialko"], m["tluszcz"], m["wegle"], kara))
+    tab = {(s, p): _makra_porcji(dzien[s], p) for s in sloty for p in porcje}
     for kombinacja in itertools.product(porcje, repeat=len(sloty)):
-        m0 = dict(stale)
+        k0, b0, t0, w0 = stale["kcal"], stale["bialko"], stale["tluszcz"], stale["wegle"]
         for s, p in zip(sloty, kombinacja):
-            for k, v in _makra_porcji(dzien[s], p).items():
-                m0[k] += v
-        for g in DOBITKI:
-            m = {k: m0[k] + makra_dobitek[g][k] for k in m0}
-            # lekkie kary: przy remisie wolimy przepis bez zmian i dzien bez dokladki
-            blad = _blad_dnia(m, cel) + 15 * sum(abs(p - 1.0) for p in kombinacja) + 0.05 * gramy(DOBITKA_PRODUKT, g)
+            m = tab[(s, p)]
+            k0 += m["kcal"]; b0 += m["bialko"]; t0 += m["tluszcz"]; w0 += m["wegle"]
+        # przy remisie wolimy przepis bez zmian
+        kara_p = 15 * sum(abs(p - 1.0) for p in kombinacja)
+        for g, dod, dk, db, dt, dw, kara in warianty:
+            # te same wagi co _blad_dnia: kcal 1, bialko 6, tluszcz 3, wegle 1
+            blad = (abs(k0 + dk - ck) + 6.0 * abs(b0 + db - cb) + 3.0 * abs(t0 + dt - ct)
+                    + abs(w0 + dw - cw) + kara_p + kara)
             if najmniejszy is None or blad < najmniejszy:
-                najmniejszy, najlepsze, dobitka = blad, dict(zip(sloty, kombinacja)), g
+                najmniejszy, najlepsze, dobitka, dodatek = blad, dict(zip(sloty, kombinacja)), g, dod
     najlepsze.update(zamrozone)
     najlepsze["_dobitka"] = dobitka
+    najlepsze["_dodatek_w"] = [list(x) for x in dodatek]
     return najlepsze
 
 
@@ -406,6 +505,9 @@ def makra_dnia(dzien):
             t[k] += m[k]
     if dzien.get("dobitka"):
         for k, v in makra_produktow([(DOBITKA_PRODUKT, dzien["dobitka"])]).items():
+            t[k] += v
+    if dzien.get("dodatek_w"):
+        for k, v in makra_produktow([tuple(x) for x in dzien["dodatek_w"]]).items():
             t[k] += v
     for x in dzien.get("poza_planem", []):
         for k in t:
@@ -460,7 +562,9 @@ def cel_dnia(d):
     """Cel na konkretny dzien. W dniu lzejszym (choroba, zmeczenie) deficyt jest
     mniejszy o 300 kcal — przy gorszej formie organizm lepiej sie regeneruje,
     a jeden taki dzien nie cofa redukcji."""
-    c = dict(CEL)
+    f = faza_dnia(d)
+    c = dict(f.get("makra") or CFG["makra"])
+    c["kcal"] += dziennik.korekta_kcal(f["id"])
     if lzejszy(d):
         c["kcal"] += LZEJSZY_KCAL
         c["wegle"] += LZEJSZY_KCAL // 4
@@ -521,6 +625,7 @@ def generuj_plan(d=None, force=False, zapisz=True):
     makra_bazy = makra_posilku(baza["id"])
 
     daty = [start + datetime.timedelta(days=i) for i in range(3)]
+    cele = [cel_dnia(dd) for dd in daty]
     pule = [_pule(box_only=(typ_dnia(dd) == 0)) for dd in daty]
 
     import heapq
@@ -544,7 +649,7 @@ def generuj_plan(d=None, force=False, zapisz=True):
                     m[k] += mm[k]
                 uzyte.append(dzien[slot])
                 klucze_produktow += [k for k, _ in QUICK_BY_ID[dzien[slot]]["produkty"]]
-            wynik += _blad_dnia(m)
+            wynik += _blad_dnia(m, cele[i])
         # kara za powtarzanie tego samego posiłku w cyklu
         wynik += 450 * (len(uzyte) - len(set(uzyte)))
         # premia za wspólne produkty — mniej pozycji na liście i mniej marnowania
@@ -566,12 +671,13 @@ def generuj_plan(d=None, force=False, zapisz=True):
     najlepszy, najlepszy_wynik = None, float("inf")
     for _, _, kandydat, kary in czolowka:
         wynik = kary
-        for dzien in kandydat:
+        for i_, dzien in enumerate(kandydat):
             pelny = dict(dzien, obiad=baza["id"])
-            porcje = dopasuj_porcje(pelny)
+            porcje = dopasuj_porcje(pelny, cele[i_], porcje=_zakres_porcji(daty[i_]))
             pelny["dobitka"] = porcje.pop("_dobitka", 0)
+            pelny["dodatek_w"] = porcje.pop("_dodatek_w", [])
             pelny["porcje"] = porcje
-            wynik += _blad_dnia(makra_dnia(pelny))
+            wynik += _blad_dnia(makra_dnia(pelny), cele[i_])
         if wynik < najlepszy_wynik:
             najlepszy_wynik, najlepszy = wynik, kandydat
 
@@ -622,7 +728,7 @@ def _zastosuj_podmiany(dzien, d):
     # posilku reszta dnia sama sie dostraja, zeby suma dalej trafiala w cel
     cel = cel_dnia(d)
     dodatkowe = poza_planem(d)
-    porcje = dopasuj_porcje(dzien, cel)
+    porcje = dopasuj_porcje(dzien, cel, porcje=_zakres_porcji(d))
     if dodatkowe:
         # Posilki juz odhaczone zostaja takie, jakie byly — zjedzonego nie da sie odjac.
         # Reszte dnia dopasowujemy szerzej (od 50% porcji), zeby zmiescic to, co wpadlo.
@@ -640,6 +746,7 @@ def _zastosuj_podmiany(dzien, d):
     dzien["lzejszy"] = lzejszy(d)
     dzien["cel"] = cel
     dzien["dobitka"] = porcje.pop("_dobitka", 0)
+    dzien["dodatek_w"] = porcje.pop("_dodatek_w", [])
     dzien["porcje"] = porcje
     dzien["makra"] = makra_dnia(dzien)
     dzien["nadwyzka"] = max(0, dzien["makra"]["kcal"] - cel["kcal"]) if dodatkowe else 0
@@ -698,11 +805,10 @@ def _zapisz_podmiane(slot, pid, d=None, loguj=True):
 
 def zakres_powt(cwiczenie):
     """Zakres powtorzen dla cwiczenia, brany z sesji GLOWNEJ - to ona wyznacza postep."""
-    for grupa in ("glowne", "krotkie"):
-        for t in TRENINGI[grupa]:
-            for c in t["cwiczenia"]:
-                if c["nazwa"].lower() == cwiczenie.lower():
-                    return c["powt"]
+    for sesja in PROGRAM["sesje_glowne"] + [PROGRAM["sesja_krotka"]]:
+        for c in sesja["cwiczenia"]:
+            if c["nazwa"].lower() == cwiczenie.lower():
+                return c["powt"]
     return None
 
 
@@ -762,6 +868,14 @@ def przetworz_zdarzenia():
         if t == "grafik" and z.get("typ_dnia") is not None:
             ustaw_typ_dnia(data, z["typ_dnia"])
             zrobione.append("grafik: %s to %s" % (data, opis_typu(int(z["typ_dnia"]))["nazwa"]))
+            continue
+        if t == "pomiary":
+            w = dziennik.zapisz_pomiary(data, **{k: z.get(k) for k in dziennik.POMIARY_POLA})
+            zrobione.append("pomiary %s" % w)
+            continue
+        if t == "minimum":
+            ustaw_minimum(data, z.get("wlaczony", True))
+            zrobione.append("minimum dnia %s" % data)
             continue
         if t == "lzejszy":
             ustaw_lzejszy(data, z.get("wlaczony", True))
@@ -920,6 +1034,8 @@ def potrzebne_na_cykl(plan):
                 suma[k] = suma.get(k, 0) + q
         if dzien.get("dobitka"):
             suma[DOBITKA_PRODUKT] = suma.get(DOBITKA_PRODUKT, 0) + dzien["dobitka"]
+        for k, q in dzien.get("dodatek_w", []):
+            suma[k] = suma.get(k, 0) + q
     return {k: round(v, 2) for k, v in sorted(suma.items())}
 
 
@@ -1026,7 +1142,7 @@ def auto_rozlicz():
     # KOLEJNOSC MA ZNACZENIE. Najpierw korygujemy kalorie wedlug tego, co pokazala
     # waga, potem przeliczamy plan na nowy cel, a dopiero na koncu ksiegujemy zakupy.
     # Odwrotnie kupilbys jedzenie pod nieaktualne zapotrzebowanie.
-    k = dziennik.przelicz_kalorie(CFG["makra"]["kcal"], zastosuj=True)
+    k = kalorie_fazy(n.date(), zastosuj=True)
     if k.get("zmiana"):
         CEL["kcal"] = k["kcal_po"]
         generuj_plan(force=True)
@@ -1047,7 +1163,7 @@ def ocena_krokow(kroki, d=None, godzina=None):
     d = d or dzis()
     kroki = int(kroki)
     t = str(typ_dnia(d))
-    cel = KROKI["cele"][t]["cel"]
+    cel = cel_krokow(d)["cel"]
     brakuje = max(0, cel - kroki)
     godzina = godzina or teraz().strftime("%H:%M")
     pozno = godzina >= KROKI["godzina_pozno"]
@@ -1065,6 +1181,44 @@ def ocena_krokow(kroki, d=None, godzina=None):
     return {"kroki": kroki, "cel": cel, "brakuje": brakuje, "status": status,
             "sugestia": sugestia, "komentarz": KROKI["cele"][t]["komentarz"],
             "procent": min(100, int(round(kroki / cel * 100)))}
+
+
+def cel_krokow(d=None):
+    """Cel krokow na dzien. Proporcje miedzy typami dni zostaja z kroki.json
+    (dzien wolny najwiecej, po zmianie najmniej), a poziom ustawia faza roku:
+    faza podaje srednia na cykl, np. 6 000 przed startem i 11 000 w Formie."""
+    d = d or dzis()
+    baza = KROKI["cele"][str(typ_dnia(d))]
+    srednia = sum(c["cel"] for c in KROKI["cele"].values()) / float(len(KROKI["cele"]))
+    skala = faza_dnia(d).get("kroki", srednia) / srednia
+    return dict(baza, cel=int(round(baza["cel"] * skala / 500.0)) * 500)
+
+
+def _fmt_tempo(x):
+    return ("%+.1f" % x).replace(".", ",").replace("-", "\u2212")
+
+
+def nawyki_dnia(d=None):
+    """Nawyki z dni.json, ale z liczbami biezacej fazy — na budowie nie ma
+    "celu redukcji", a kroki w Formie to inna liczba niz na starcie."""
+    d = d or dzis()
+    f = faza_dnia(d)
+    lo, hi = f.get("tempo_kg_tydz", [-0.7, -0.3])
+    kroki = "{:,}".format(int(f.get("kroki", 8000))).replace(",", " ")
+    out = []
+    for n in DNI["nawyki"]:
+        n = dict(n)
+        if n["id"] == "kroki":
+            n["nazwa"] = "Średnio %s kroków dziennie" % kroki
+        elif n["id"] == "bialko":
+            n["nazwa"] = "Trafić w białko: %d g" % cel_dnia(d)["bialko"]
+            n["opis"] = ("Białko i kalorie to dwie liczby, które naprawdę decydują o sylwetce. "
+                         "Na redukcji chroni mięśnie, na budowie daje z czego je zrobić.")
+        elif n["id"] == "waga":
+            n["opis"] = ("Raz na cykl, rano, na czczo. Kierunek w fazie „%s”: %s do %s kg na tydzień."
+                         % (f.get("nazwa", ""), _fmt_tempo(lo), _fmt_tempo(hi)))
+        out.append(n)
+    return out
 
 
 def zapisz_kroki(ile, d=None, ping=False):
@@ -1099,8 +1253,49 @@ def kroki_dzis(d=None):
 
 # ----------------------------------------------------------------- trening
 
+SPECJALNE_MIN = "minimum"
+
+
+def minimum(d):
+    return bool(load(SPECJALNE_PATH, {}).get(d.isoformat(), {}).get(SPECJALNE_MIN))
+
+
+def ustaw_minimum(d, wlaczony=True):
+    sp = load(SPECJALNE_PATH, {})
+    sp.setdefault(d.isoformat(), {})[SPECJALNE_MIN] = bool(wlaczony)
+    save(SPECJALNE_PATH, sp)
+
+
+def blok_treningowy(d=None):
+    t = tydzien_planu(d)
+    for b in PROGRAM["bloki"]:
+        if b["od_tygodnia"] <= t <= b["do_tygodnia"]:
+            return b
+    return PROGRAM["bloki"][-1] if t > 0 else PROGRAM["bloki"][0]
+
+
+def _sesja(szablon, blok, ile):
+    """Sesja z szablonu: pierwsze `ile` cwiczen (ulozone od najwazniejszego),
+    liczba serii z bloku, a przy kazdym cwiczeniu propozycja ciezaru z dziennika."""
+    cw = []
+    for c in szablon["cwiczenia"][:ile]:
+        c = dict(c)
+        c.setdefault("serie", blok["serie"])
+        prop = dziennik.propozycja(c["nazwa"])
+        if prop:
+            c["propozycja"] = prop
+        cw.append(c)
+    czas = 8 + sum(int(c["serie"]) for c in cw) * 2
+    return {"id": szablon["id"], "nazwa": szablon["nazwa"], "czas_min": czas,
+            "blok": blok["nazwa"], "blok_opis": blok["opis"], "zapas": blok["zapas"],
+            "rozgrzewka": PROGRAM["rozgrzewka"], "cwiczenia": cw,
+            "finisz": "Każda seria kończy się z zapasem: %s. %s" % (blok["zapas"], blok["opis"])}
+
+
 def trening_dnia(d=None):
     d = d or dzis()
+    if _start_planu() and tydzien_planu(d) == 0:
+        return {"rodzaj": "przedstart", "trening": PROGRAM["przedstart"]}
     if lzejszy(d):
         return {"rodzaj": "lzejszy", "trening": {
             "nazwa": "Dzień lżejszy — bez treningu",
@@ -1110,12 +1305,17 @@ def trening_dnia(d=None):
             "mikro": ["Spokojny spacer 15–20 min, jeśli masz siłę", "Dużo wody",
                       "Sen o zaplanowanej godzinie"]}}
     t = typ_dnia(d)
-    c = nr_cyklu(d)
     if t == 0:
-        return {"rodzaj": "zmiana", "trening": TRENINGI["zmiana"]}
+        return {"rodzaj": "zmiana", "trening": PROGRAM["zmiana"]}
+    if minimum(d):
+        m = dict(PROGRAM["minimum"])
+        m.update({"rozgrzewka": [], "finisz": m["opis"]})
+        return {"rodzaj": "minimum", "trening": m}
+    blok = blok_treningowy(d)
     if t == 1:
-        return {"rodzaj": "krotki", "trening": TRENINGI["krotkie"][c % len(TRENINGI["krotkie"])]}
-    return {"rodzaj": "glowny", "trening": TRENINGI["glowne"][c % len(TRENINGI["glowne"])]}
+        return {"rodzaj": "krotki", "trening": _sesja(PROGRAM["sesja_krotka"], blok, blok["cwiczen_krotki"])}
+    sesje = PROGRAM["sesje_glowne"]
+    return {"rodzaj": "glowny", "trening": _sesja(sesje[nr_cyklu(d) % len(sesje)], blok, blok["cwiczen_glowny"])}
 
 
 # ------------------------------------------------------------------ budzik
@@ -1287,6 +1487,16 @@ def agenda(d=None):
     zdarzenia = [dict(e) for e in DNI["plan"][str(t)] if not e.get("nastepny_dzien")]
     if t == 1:
         zdarzenia += [dict(e) for e in DNI["plan"]["0"] if e.get("nastepny_dzien")]
+    if _start_planu() and tydzien_planu(d) == 0:
+        for e in zdarzenia:
+            if str(e.get("akcja") or "").startswith("trening"):
+                e.update({"tytul": "Przed startem — bez treningu", "ping": False, "akcja": None, "ikona": "🩹",
+                          "opis": "Plan treningowy rusza %s. Dziś tylko regeneracja." % PLAN_ROKU.get("start")})
+    elif minimum(d):
+        for e in zdarzenia:
+            if str(e.get("akcja") or "").startswith("trening"):
+                e.update({"tytul": "Minimum dnia — 10 minut", "ikona": "🔥",
+                          "opis": "Nigdy zero. Trzy ćwiczenia po dwie serie i masz dzień zaliczony."})
     if lzejszy(d):
         for e in zdarzenia:
             if str(e.get("akcja") or "").startswith("trening"):
@@ -1326,6 +1536,31 @@ def agenda(d=None):
                     e["kroki"] = ["Wyjmij jeden pojemnik z garnka ugotowanego w dniu gotowania.",
                                   "Odgrzej: %s." % b["odgrzewanie"],
                                   "Przechowywanie: %s." % b["przechowywanie"]]
+            if e["slot"] == "sniadanie" and dzien.get("dodatek_w") and porcja != 0:
+                # Dodatek weglowy idzie do pierwszego posilku — po treningu albo na start
+                # zmiany. Wiersze oznaczone, zeby w panelu bylo widac, co doszlo do przepisu.
+                for k, v in makra_produktow([tuple(x) for x in dzien["dodatek_w"]]).items():
+                    e["makra"][k] += v
+                opis = []
+                for k, q in dzien["dodatek_w"]:
+                    s_ = makra_skladnika(k, q)
+                    wiersz = next((x for x in e["skladniki"] if x["nazwa"] == PROD[k]["nazwa"]), None)
+                    if wiersz:
+                        razem = wiersz["g"] / float(PROD[k]["g"]) + q
+                        wiersz["ile"] = "%s, w tym +%s" % (fmt_ilosc(k, razem), fmt_ilosc(k, q).split(" (")[0])
+                        wiersz["g"] += round(s_["g"])
+                        for m_ in ("kcal", "bialko", "tluszcz", "wegle"):
+                            wiersz[m_] = round(wiersz[m_] + s_[m_], 1 if m_ != "kcal" else None)
+                        wiersz["dodatek"] = True
+                    else:
+                        e["skladniki"].append({"nazwa": PROD[k]["nazwa"], "ile": "+ " + fmt_ilosc(k, q),
+                                               "g": round(s_["g"]), "kcal": round(s_["kcal"]),
+                                               "bialko": round(s_["bialko"], 1), "tluszcz": round(s_["tluszcz"], 1),
+                                               "wegle": round(s_["wegle"], 1), "dodatek": True})
+                    opis.append("%s %s" % (PROD[k]["nazwa"].split(" (")[0].lower(), fmt_ilosc(k, q).split(" (")[0]))
+                e["kroki"] = list(e.get("kroki", [])) + [
+                    "Do tego dodatek węglowy: %s. Zjedz obok — to paliwo na trening i regenerację, "
+                    "bez niego dzień nie dobija węglowodanów." % ", ".join(opis)]
             if e["slot"] == "drugi" and dzien.get("dobitka"):
                 n = dzien["dobitka"]
                 s = makra_skladnika(DOBITKA_PRODUKT, n)
@@ -1387,8 +1622,156 @@ def wyslij_ping(tytul, tresc, tagi=None, priorytet=3, kiedy=None, klucz=None):
         return False
 
 
+def slowo_dnia(d=None):
+    """Codziennie inny tekst: pula = ogolne + typ dnia + faza, stala kolejnosc,
+    rotacja po dacie — ten sam tekst wraca dopiero po przejsciu calej puli."""
+    import hashlib
+    d = d or dzis()
+    klucz = lambda t: hashlib.md5(t.encode("utf-8")).hexdigest()
+    # Co trzeci dzien tekst pod typ dnia i faze, w pozostale — z puli ogolnej.
+    # Pule sa rozdzielone celowo: wspolna pula zmieniala sklad z typem dnia, wiec
+    # rotacja przeskakiwala i ten sam tekst wypadal dwa dni z rzedu.
+    n = d.toordinal()
+    kontekst = sorted(SLOWA["typ"].get(str(typ_dnia(d)), []) + SLOWA["faza"].get(faza_dnia(d)["id"], []), key=klucz)
+    if kontekst and n % 3 == 0:
+        return kontekst[(n // 3) % len(kontekst)]
+    ogolne = sorted(SLOWA["ogolne"], key=klucz)
+    return ogolne[(n - n // 3 - 1) % len(ogolne)]
+
+
+def tluszcz_z_obwodow(talia, szyja, wzrost):
+    """Szacunek tkanki tluszczowej metoda obwodow (wzor US Navy dla mezczyzn).
+    Blad rzedu 3-4 punktow procentowych, ale TREND z tej samej tasmy jest wiarygodny."""
+    import math
+    if not talia or not szyja or talia <= szyja:
+        return None
+    return round(495 / (1.0324 - 0.19077 * math.log10(talia - szyja) + 0.15456 * math.log10(wzrost)) - 450, 1)
+
+
+def pomiary_nalezne(d=None):
+    d = d or dzis()
+    pom = dziennik.pomiary()
+    return not pom or (d - parse_date(pom[-1]["data"])).days >= 13
+
+
+def analiza_postepu():
+    """Wszystkie wskazniki sylwetki w jednym miejscu — do panelu i podsumowan."""
+    wzrost = CFG["user"]["wzrost_cm"]
+    wiersze = []
+    for p in dziennik.pomiary():
+        w = dict(p)
+        w["tluszcz"] = tluszcz_z_obwodow(p.get("talia"), p.get("szyja"), wzrost)
+        w["talia_do_wzrostu"] = round(p["talia"] / wzrost, 3) if p.get("talia") else None
+        w["barki_do_talii"] = round(p["barki"] / p["talia"], 3) if p.get("barki") and p.get("talia") else None
+        wiersze.append(w)
+    sila = {}
+    for z in dziennik.zdarzenia():
+        if z.get("typ") != "seria" or not z.get("powt"):
+            continue
+        ciezar = float(z.get("ciezar") or 0)
+        # cwiczenia z masa ciala (pompki, podciaganie) — liczymy powtorzenia, nie kilogramy
+        wynik = round(ciezar * (1 + max(z["powt"]) / 30.0), 1) if ciezar > 0 else max(z["powt"])
+        miara = "kg (szac. max)" if ciezar > 0 else "powt."
+        x = sila.setdefault(z["cwiczenie"], {"pierwszy": wynik, "najlepszy": wynik, "ostatni": wynik,
+                                             "sesji": 0, "miara": miara, "od": z["data"]})
+        x["ostatni"] = wynik
+        x["najlepszy"] = max(x["najlepszy"], wynik)
+        x["sesji"] += 1
+    wagi = sorted(load(HIST_PATH, {}).get("waga", []), key=lambda w: w["data"])
+    ost7 = [w["kg"] for w in wagi if (dzis() - parse_date(w["data"])).days < 7]
+    return {"pomiary": wiersze, "sila": sila, "cele": CFG.get("pomiary_cele", {}),
+            "srednia_7d": round(sum(ost7) / len(ost7), 1) if ost7 else None,
+            "pomiary_nalezne": pomiary_nalezne(), "wzrost": wzrost}
+
+
+def dzien_zaliczony(d):
+    """Dzien zaliczony = odhaczone co najmniej 60% punktow z pingiem. Nie 100% —
+    ma sie dac zaliczyc zwykly, nieidealny dzien."""
+    punkty = [e for e in DNI["plan"][str(typ_dnia(d))] if e.get("ping") and not e.get("nastepny_dzien")]
+    if not punkty:
+        return False
+    odh = dziennik.odhaczenia(d)
+    zrobione = sum(1 for e in punkty if odh.get(e["czas"] + "|" + e["tytul"]))
+    return zrobione >= max(1, round(0.6 * len(punkty)))
+
+
+def seria_dni(d=None):
+    """Ile dni z rzedu zaliczonych. Dzisiejszy dzien liczy sie, jak juz jest zaliczony,
+    a jeszcze niezaliczony nie przerywa serii — dzien trwa."""
+    d = d or dzis()
+    st = _start_planu() or (d - datetime.timedelta(days=400))
+    dd = d if dzien_zaliczony(d) else d - datetime.timedelta(days=1)
+    n = 0
+    while dd >= st and dzien_zaliczony(dd):
+        n += 1
+        dd -= datetime.timedelta(days=1)
+    return n
+
+
+ODZNAKI_PATH = os.path.join(STATE, "odznaki.json")
+
+
+def _definicje_odznak():
+    a = analiza_postepu()
+    zd = dziennik.zdarzenia()
+    dni_treningu = len({z["data"] for z in zd if z.get("typ") == "seria"})
+    wagi = load(HIST_PATH, {}).get("waga", [])
+    pom = [p for p in a["pomiary"] if p.get("talia")]
+    talia_spadek = (pom[0]["talia"] - min(p["talia"] for p in pom)) if pom else 0
+    waga_spadek = (wagi[0]["kg"] - min(w["kg"] for w in wagi)) if wagi else 0
+
+    def max_powt(fragment):
+        return max([max(z["powt"]) for z in zd if z.get("typ") == "seria" and z.get("powt")
+                    and fragment in z["cwiczenie"].lower()] or [0])
+
+    seria = seria_dni()
+    dzien = dzien_planu()
+    return [
+        ("pierwszy_trening", "Pierwszy trening", "Zapisany pierwszy trening. Najtrudniejszy za tobą.", dni_treningu >= 1),
+        ("treningi_10", "10 treningów", "Dziesięć zapisanych sesji.", dni_treningu >= 10),
+        ("treningi_25", "25 treningów", "To już nawyk, nie zryw.", dni_treningu >= 25),
+        ("treningi_50", "50 treningów", "Pół setki. Mało kto dochodzi do tego miejsca.", dni_treningu >= 50),
+        ("treningi_100", "100 treningów", "Setka. Sylwetka to widzi.", dni_treningu >= 100),
+        ("wazenie_1", "Pierwsze ważenie", "System wie, od czego zaczynasz.", len(wagi) >= 1),
+        ("wazenie_10", "10 ważeń", "Z dziesięciu ważeń trend jest już wiarygodny.", len(wagi) >= 10),
+        ("pomiary_1", "Pierwsze pomiary", "Talia, barki, szyja — punkt zero zapisany.", len(pom) >= 1),
+        ("talia_2", "Talia −2 cm", "Pierwsze centymetry w dół.", talia_spadek >= 2),
+        ("talia_5", "Talia −5 cm", "To już widać w spodniach.", talia_spadek >= 5),
+        ("talia_8", "Talia −8 cm", "Zmiana, którą widzą inni.", talia_spadek >= 8),
+        ("waga_3", "−3 kg", "Trzy kilogramy mniej od startu.", waga_spadek >= 3),
+        ("waga_6", "−6 kg", "Sześć kilogramów mniej od startu.", waga_spadek >= 6),
+        ("podciaganie_1", "Pierwsze podciągnięcie", "Pełne, z martwego zwisu. Wielki dzień.", max_powt("podciąganie") >= 1),
+        ("podciaganie_5", "5 podciągnięć", "Plecy zaczynają robić szerokość.", max_powt("podciąganie") >= 5),
+        ("podciaganie_10", "10 podciągnięć", "Poziom, którego nie ma większość ludzi na siłowni.", max_powt("podciąganie") >= 10),
+        ("pompki_20", "20 pompek", "Dwadzieścia w jednej serii.", max_powt("pompki") >= 20),
+        ("seria_7", "Tydzień bez przerwy", "Siedem dni zaliczonych z rzędu.", seria >= 7),
+        ("seria_14", "Dwa tygodnie", "Czternaście dni z rzędu.", seria >= 14),
+        ("seria_30", "Miesiąc bez przerwy", "Trzydzieści dni z rzędu. To już twój styl życia.", seria >= 30),
+        ("dzien_30", "Miesiąc w planie", "30 dni od startu.", dzien >= 30),
+        ("dzien_100", "100 dni", "Sto dni od startu.", dzien >= 100),
+        ("dzien_182", "Pół roku", "Połowa drogi do sesji.", dzien >= 182),
+    ]
+
+
+def odznaki(zapisz=False):
+    """Lista odznak ze stanem. Zdobyta raz zostaje na zawsze — nawet gdy seria sie przerwie."""
+    zdobyte = load(ODZNAKI_PATH, {})
+    nowe = []
+    lista = []
+    for oid, nazwa, opis, warunek in _definicje_odznak():
+        if warunek and oid not in zdobyte:
+            zdobyte[oid] = dzis().isoformat()
+            nowe.append({"id": oid, "nazwa": nazwa, "opis": opis})
+        lista.append({"id": oid, "nazwa": nazwa, "opis": opis, "zdobyta": zdobyte.get(oid)})
+    if nowe and zapisz:
+        save(ODZNAKI_PATH, zdobyte)
+    return lista, nowe
+
+
 def tresc_pinga(e, d):
     czesci = []
+    if e["tytul"].startswith("Pobudka"):
+        czesci.append("💬 " + slowo_dnia(d))
     if e.get("posilek"):
         m = e["makra"]
         czesci.append("%s  (%d kcal, B %d, T %d, W %d)"
@@ -1406,6 +1789,9 @@ def tresc_pinga(e, d):
         czesci.insert(0, "Dziś gotujesz: %s — %d min, %s." % (b["nazwa"], b["czas_min"], b["naczynia"]))
     if e.get("akcja") == "podsumowanie":
         czesci.insert(0, tekst_podsumowania(podsumowanie_cyklu(d)))
+    if e.get("akcja") == "waga" and pomiary_nalezne(d):
+        czesci.append("📏 Dziś też pomiary taśmą: talia na wysokości pępka, szyja, barki w najszerszym "
+                      "miejscu, klatka, ramię, udo. Wpisz je w panelu w zakładce Trening.")
     if e.get("akcja") == "waga":
         wagi = load(HIST_PATH, {}).get("waga", [])
         if not wagi:
@@ -1508,6 +1894,11 @@ def tick(okno_min=25, sucho=False):
     zaplanowane = zaplanuj_pingi(sucho=sucho)
     for x in zaplanowane:
         print("zaplanowano:", x)
+    _, nowe_odznaki = odznaki(zapisz=not sucho)
+    for o in nowe_odznaki:
+        print("odznaka:", o["nazwa"])
+        if not sucho:
+            wyslij_ping("🏅 Nowa odznaka: " + o["nazwa"], o["opis"], priorytet=3, klucz="odznaka|" + o["id"])
 
     n = teraz()
     d = n.date()
@@ -1560,7 +1951,7 @@ def podsumowanie_cyklu(d=None):
         "treningi_plan": 2,
         "kroki_srednio": srednie_kroki,
         "waga": t,
-        "kalorie": dziennik.przelicz_kalorie(CFG["makra"]["kcal"]),
+        "kalorie": kalorie_fazy(),
         "odhaczone_dzis": zrobione,
     }
 
@@ -1614,8 +2005,10 @@ def dni_panelu(d):
             "nazwa_typu": info["nazwa"], "emoji": info["emoji"], "opis_typu": info["opis"],
             "agenda": agenda(dd), "makra": dzien["makra"] if dzien else None,
             "dobitka": dzien.get("dobitka", 0) if dzien else 0,
+            "dodatek_w": dzien.get("dodatek_w", []) if dzien else [],
             "poza_planem": dzien.get("poza_planem", []) if dzien else [],
-            "lzejszy": lzejszy(dd), "cel": cel_dnia(dd),
+            "lzejszy": lzejszy(dd), "cel": cel_dnia(dd), "slowo": slowo_dnia(dd),
+            "faza": faza_dnia(dd)["nazwa"], "tydzien": tydzien_planu(dd),
             "nadwyzka": dzien.get("nadwyzka", 0) if dzien else 0,
             "odhaczone": dziennik.odhaczenia(dd), "waga": wagi.get(ds),
             "kroki": kroki.get(ds), "serie": serie.get(ds, []),
@@ -1642,11 +2035,25 @@ def eksport():
         "zakupy": lista_zakupow(plan),
         "lodowka": wczytaj_lodowke()["stan"],
         "trening": trening_dnia(d),
-        "nawyki": DNI["nawyki"],
+        "nawyki": nawyki_dnia(d),
         "posilki": {p["id"]: p for p in QUICK},
         "produkty": {k: v for k, v in PROD.items() if not k.startswith("_")},
         "panel_wersja": CFG.get("panel_wersja", 1),
         "grafik": _kotwice(),
+        "plan_roku": {
+            "start": PLAN_ROKU.get("start"), "final": PLAN_ROKU.get("final"),
+            "final_nazwa": PLAN_ROKU.get("final_nazwa"),
+            "tydzien": tydzien_planu(d), "dzien": dzien_planu(d),
+            "dni_do_finalu": (parse_date(PLAN_ROKU["final"]) - d).days if PLAN_ROKU.get("final") else None,
+            "faza": {k: faza_dnia(d).get(k) for k in ("id", "nazwa", "cel", "kroki", "od_tyg", "do_tyg", "tempo_kg_tydz")},
+            "blok": blok_treningowy(d)["nazwa"] if tydzien_planu(d) else None,
+            "fazy": [{k: f.get(k) for k in ("id", "nazwa", "od_tyg", "do_tyg", "cel")} for f in PLAN_ROKU.get("fazy", [])],
+        },
+        "slowo": slowo_dnia(d),
+        "analiza": analiza_postepu(),
+        "seria": seria_dni(d),
+        "odznaki": odznaki()[0],
+        "minimum": minimum(d),
         "dni": dni_panelu(d),
         "tryb": tryb(),
         "postep": {
@@ -1665,8 +2072,8 @@ def eksport():
         "odhaczone": dziennik.odhaczenia(d),
         "podmiany": podmiany(d),
         "ciezary": dziennik.ciezary(),
-        "kalorie": dziennik.przelicz_kalorie(CFG["makra"]["kcal"]),
-        "cel_bazowy": CFG["makra"]["kcal"],
+        "kalorie": kalorie_fazy(),
+        "cel_bazowy": faza_dnia()["makra"]["kcal"],
         "sen": CFG["sen"],
         # skrot potrzebny kalkulatorowi snu w panelu: pobudka i godzina treningu per typ dnia
         "pobudki": {t: {"nazwa": DNI["typy"][t]["nazwa"], "pobudka": DNI["typy"][t]["pobudka"],
@@ -1674,7 +2081,7 @@ def eksport():
                     for t in ("0", "1", "2")},
         "historia": load(HIST_PATH, {"bazy": [], "waga": [], "treningi": [], "kroki": []}),
         "kroki": kroki_dzis(d),
-        "kroki_cel": KROKI["cele"][str(typ_dnia(d))],
+        "kroki_cel": cel_krokow(d),
     }
     for dzien in dane["plan"]["dni"]:
         dzien["nazwy"] = {s: nazwa_posilku(dzien[s]) for s in SLOTY}
@@ -1777,7 +2184,7 @@ def pokaz_gotowanie():
 
 def pokaz_trening(d=None):
     t = trening_dnia(d)
-    if t["rodzaj"] == "zmiana":
+    if t["rodzaj"] in ("zmiana", "przedstart", "lzejszy"):
         w = t["trening"]
         _kreska(w["nazwa"])
         print(w["zasada"])
@@ -1822,6 +2229,10 @@ def zapisz_wage(kg):
 
 
 # --------------------------------------------------------------------- CLI
+
+# cel na dzis: faza planu roku + korekta tej fazy (nadpisuje wstepna wartosc z configu)
+CEL = cel_dnia(dzis())
+
 
 def main():
     cmd = (sys.argv[1] if len(sys.argv) > 1 else "dzis").lower()
@@ -1895,6 +2306,17 @@ def main():
         else:
             dziennik.odhacz(arg)
             print("Odhaczone: %s" % arg)
+    elif cmd == "faza":
+        f = faza_dnia()
+        print("Tydzien %d planu, dzien %d — faza: %s (%s)" % (tydzien_planu(), dzien_planu(), f["nazwa"], f["id"]))
+        print("Cel: %s" % cel_dnia(dzis()))
+        print("Slowo na dzis: %s" % slowo_dnia())
+    elif cmd == "pomiary":
+        wartosci = dict(a.split("=", 1) for a in sys.argv[2:] if "=" in a)
+        print(dziennik.zapisz_pomiary(**wartosci))
+    elif cmd == "odznaki":
+        for o in odznaki()[0]:
+            print("  %s %s" % ("🏅" if o["zdobyta"] else "  ", o["nazwa"]))
     elif cmd == "grafik":
         if arg not in ("0", "1", "2"):
             print("Uzycie: py trener.py grafik 0|1|2   (0 = dzis zmiana, 1 = wracam z pracy, 2 = wolne)")
@@ -1931,7 +2353,7 @@ def main():
         _kreska("PODSUMOWANIE CYKLU")
         print(tekst_podsumowania(p))
     elif cmd == "kalorie":
-        w = dziennik.przelicz_kalorie(CFG["makra"]["kcal"], zastosuj=("--zastosuj" in sys.argv))
+        w = kalorie_fazy(zastosuj=("--zastosuj" in sys.argv))
         _kreska("KALORIE")
         print("Teraz: %d kcal (baza %d %+d)" % (w["kcal_teraz"], CFG["makra"]["kcal"], w["korekta_teraz"]))
         print(w["ocena"])

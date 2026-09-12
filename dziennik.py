@@ -162,7 +162,7 @@ def treningi_zrobione(od, do):
 
 # ------------------------------------------- korekta kalorii z trendu wagi
 
-def trend_wagi(dni=21):
+def trend_wagi(dni=21, od=None):
     """Kilogramy na tydzień, liczone regresją z ostatnich tygodni.
 
     Pojedynczy pomiar nic nie znaczy — waga potrafi skoczyć o kilogram po słonym posiłku
@@ -170,6 +170,9 @@ def trend_wagi(dni=21):
     """
     h = _load(HIST_PATH, {})
     wagi = sorted(h.get("waga", []), key=lambda w: w["data"])
+    if od:
+        # tylko pomiary z biezacej fazy — tempo z redukcji nie moze sterowac kaloriami na budowie
+        wagi = [w for w in wagi if w["data"] >= od.isoformat()]
     if len(wagi) < 3:
         return None
     dzis = _dzis()
@@ -193,20 +196,26 @@ def trend_wagi(dni=21):
             "waga_teraz": ys[-1]}
 
 
-def korekta_kcal():
-    """O ile skorygować kalorie względem wartości bazowej z config.json."""
-    return int(_load(os.path.join(STATE, "kcal_korekta.json"), {"kcal": 0})["kcal"])
+def korekta_kcal(faza=None):
+    """O ile skorygować kalorie względem wartości bazowej fazy.
+
+    Korekta nalezy do fazy, w ktorej powstala: po przejsciu z redukcji na budowe
+    startujemy od czystej wartosci fazy, a nie od kalorii scietych na redukcji."""
+    k = _load(os.path.join(STATE, "kcal_korekta.json"), {"kcal": 0})
+    if faza is not None and k.get("faza") not in (None, faza):
+        return 0
+    return int(k.get("kcal", 0))
 
 
-def przelicz_kalorie(cel_bazowy, zastosuj=False):
+def przelicz_kalorie(cel_bazowy, zastosuj=False, tempo=(-0.7, -0.3), faza=None, od=None):
     """Porównuje realne tempo chudnięcia z zamierzonym i proponuje korektę.
 
     Widełki -0,4 do -0,7 kg/tydz. to kompromis: wolniej znaczy, że deficytu praktycznie
     nie ma, szybciej — że tracisz razem z tłuszczem mięśnie, co przy Twoim celu jest
     stratą, a nie sukcesem.
     """
-    t = trend_wagi()
-    korekta = korekta_kcal()
+    t = trend_wagi(od=od)
+    korekta = korekta_kcal(faza)
     wynik = {"trend": t, "korekta_teraz": korekta,
              "kcal_teraz": cel_bazowy + korekta, "zmiana": 0}
     if not t:
@@ -214,18 +223,22 @@ def przelicz_kalorie(cel_bazowy, zastosuj=False):
                           "w ciągu trzech tygodni — ważysz się raz na cykl, więc to około tygodnia.")
         return wynik
 
-    tempo = t["kg_tydzien"]
-    if tempo > -0.3:
+    # Widelki zaleza od fazy: na redukcji waga ma spadac, na budowie rosnac. Stala
+    # logika "scinaj, gdy nie chudniesz" na budowie zabieralaby jedzenie na miesnie.
+    lo, hi = tempo
+    real = t["kg_tydzien"]
+    if real > hi:
         zmiana = -150
-        ocena = ("Chudniesz w tempie %.2f kg/tydz., czyli praktycznie stoisz. Ścinam %d kcal."
-                 % (tempo, abs(zmiana)))
-    elif tempo < -0.8:
+        ocena = ("Tempo %+.2f kg/tydz. jest powyżej widełek tej fazy (%+.1f do %+.1f). Ścinam 150 kcal."
+                 % (real, lo, hi))
+    elif real < lo:
         zmiana = 150
-        ocena = ("Lecisz %.2f kg/tydz. — za szybko. Przy takim tempie oddajesz mięśnie razem "
-                 "z tłuszczem, więc dokładam %d kcal." % (tempo, zmiana))
+        ocena = ("Tempo %+.2f kg/tydz. jest poniżej widełek tej fazy (%+.1f do %+.1f). Dokładam 150 kcal."
+                 % (real, lo, hi))
     else:
         zmiana = 0
-        ocena = "Tempo %.2f kg/tydz. mieści się w widełkach. Nic nie ruszam." % tempo
+        ocena = "Tempo %+.2f kg/tydz. mieści się w widełkach tej fazy. Nic nie ruszam." % real
+    tempo = real
 
     nowe = max(1800, cel_bazowy + korekta + zmiana)
     zmiana = nowe - (cel_bazowy + korekta)
@@ -235,7 +248,7 @@ def przelicz_kalorie(cel_bazowy, zastosuj=False):
 
     if zastosuj and zmiana:
         _save(os.path.join(STATE, "kcal_korekta.json"),
-              {"kcal": korekta + zmiana, "data": _dzis().isoformat(),
+              {"kcal": korekta + zmiana, "data": _dzis().isoformat(), "faza": faza,
                "powod": ocena})
         dodaj_zdarzenie("kalorie", kcal=nowe, zmiana=zmiana, tempo=tempo)
     return wynik
@@ -266,3 +279,28 @@ def zapisz_wage(kg, data=None):
     h["waga"].append({"data": ds, "kg": float(kg)})
     h["waga"].sort(key=lambda w: w["data"])
     _save(HIST_PATH, h)
+
+
+# ------------------------------------------------------------ pomiary tasma
+
+POMIARY_POLA = ("talia", "szyja", "barki", "klatka", "ramie", "udo")
+
+
+def zapisz_pomiary(data=None, **cm):
+    """Obwody w cm. Talia na wysokosci pepka, szyja pod krtania, barki w najszerzym
+    miejscu, ramie napiete, udo w polowie. Te liczby mowia o sylwetce wiecej niz waga."""
+    h = _load(HIST_PATH, {})
+    ds = (data or _dzis()).isoformat()
+    wpis = {"data": ds}
+    for k in POMIARY_POLA:
+        if cm.get(k) not in (None, "", 0):
+            wpis[k] = round(float(cm[k]), 1)
+    h.setdefault("pomiary", [])
+    h["pomiary"] = [p for p in h["pomiary"] if p["data"] != ds] + [wpis]
+    h["pomiary"].sort(key=lambda p: p["data"])
+    _save(HIST_PATH, h)
+    return wpis
+
+
+def pomiary():
+    return sorted(_load(HIST_PATH, {}).get("pomiary", []), key=lambda p: p["data"])

@@ -1,0 +1,132 @@
+{
+  "_info": "Program treningowy v2 — dla laika, dom (Marbo Kelton: rack z drążkiem, ławka, sztanga, EZ, hantle) + gumy oporowe. Priorytety pod sylwetkę w kształcie litery V: barki boczne, szerokość pleców, klatka górna, ramiona, wąska talia. Ćwiczenia w każdej sesji ułożone od najważniejszego — w pierwszych blokach robisz tylko kilka pierwszych. Każde ma łatwiejszą i trudniejszą wersję, żeby zawsze było od czego zacząć.",
+
+  "bloki": [
+    {"id": "nauka", "nazwa": "Blok 1 — Nauka ruchu", "od_tygodnia": 1, "do_tygodnia": 2,
+     "cwiczen_glowny": 4, "cwiczen_krotki": 3, "serie": 2, "zapas": "3 powtórzenia w zapasie",
+     "opis": "Uczysz się ruchu, nie dźwigasz. Ciężar tak lekki, że mógłbyś zrobić jeszcze 3 powtórzenia. Ma ci się chcieć przyjść na następny trening."},
+    {"id": "fundament", "nazwa": "Blok 2 — Fundament", "od_tygodnia": 3, "do_tygodnia": 8,
+     "cwiczen_glowny": 5, "cwiczen_krotki": 4, "serie": 3, "zapas": "2 powtórzenia w zapasie",
+     "opis": "Trzy serie i pierwsza progresja. Gdy zrobisz górę zakresu we wszystkich seriach, system podniesie ciężar."},
+    {"id": "nawyk", "nazwa": "Blok 3 — Budowa nawyku", "od_tygodnia": 9, "do_tygodnia": 16,
+     "cwiczen_glowny": 6, "cwiczen_krotki": 4, "serie": 3, "zapas": "1–2 powtórzenia w zapasie",
+     "opis": "Pełna sesja. Trening przestaje być wydarzeniem i staje się czymś, co po prostu robisz."},
+    {"id": "v", "nazwa": "Blok 4 — Sylwetka V", "od_tygodnia": 17, "do_tygodnia": 30,
+     "cwiczen_glowny": 7, "cwiczen_krotki": 5, "serie": 4, "zapas": "1 powtórzenie w zapasie",
+     "opis": "Faza budowy. Najwięcej pracy dla barków bocznych, pleców i klatki górnej — tego, co tworzy kształt litery V."},
+    {"id": "forma", "nazwa": "Blok 5 — Forma", "od_tygodnia": 31, "do_tygodnia": 52,
+     "cwiczen_glowny": 6, "cwiczen_krotki": 4, "serie": 3, "zapas": "1–2 powtórzenia w zapasie",
+     "opis": "Na diecie ciężary zostają wysokie, objętość trochę spada. Trening ma utrzymać mięśnie, a kroki i dieta robią resztę."}
+  ],
+
+  "rozgrzewka": [
+    "5 minut: krążenia ramion i bioder, 15 przysiadów bez ciężaru, 10 pompek (mogą być na kolanach).",
+    "Przed pierwszym ćwiczeniem seria na pustej sztandze albo lekkich hantlach — 12 powtórzeń."
+  ],
+
+  "sesje_glowne": [
+    {"id": "g_gora", "nazwa": "Góra — klatka i barki", "cwiczenia": [
+      {"nazwa": "Unoszenie hantli bokiem", "powt": "12-15", "przerwa": "60 s", "v": true,
+       "wskazowka": "Łokcie lekko ugięte, ruch prowadzą łokcie, nie dłonie. Unosisz do wysokości barków, nie wyżej. Mały ciężar — to ćwiczenie od techniki, nie od ego.",
+       "latwiej": "Jedną ręką, drugą trzymasz się racka.", "trudniej": "Na koniec dobij gumą, aż nie dasz rady."},
+      {"nazwa": "Wyciskanie hantli na ławce skośnej", "powt": "8-12", "przerwa": "2 min", "v": true,
+       "wskazowka": "Ławka pod kątem ok. 30 stopni — tak pracuje górna część klatki, która w sylwetce robi najwięcej. Łopatki ściągnięte przez cały ruch.",
+       "latwiej": "Pompki z rękami na ławce.", "trudniej": "Wolny opust: 3 sekundy w dół."},
+      {"nazwa": "Wyciskanie hantli nad głowę siedząc", "powt": "8-12", "przerwa": "2 min",
+       "wskazowka": "Oparcie ławki pionowo. Nie odchylaj się do tyłu — żebra w dół, brzuch napięty.",
+       "latwiej": "Stojąc, jedną ręką.", "trudniej": "Sztanga zamiast hantli."},
+      {"nazwa": "Pompki", "powt": "8-15", "przerwa": "90 s",
+       "wskazowka": "Ciało prosto jak deska, klatka dotyka prawie podłogi. Licz powtórzenia — to twój test siły co tydzień.",
+       "latwiej": "Z rękami na ławce albo na kolanach.", "trudniej": "Nogi na ławce."},
+      {"nazwa": "Prostowanie ramion z hantlem nad głową", "powt": "10-12", "przerwa": "75 s",
+       "wskazowka": "Łokcie blisko głowy i w miejscu, rusza się tylko przedramię. Triceps to dwie trzecie obwodu ramienia.",
+       "latwiej": "Jedną ręką, lżejszy hantel.", "trudniej": "Wyciskanie francuskie sztangą EZ leżąc."},
+      {"nazwa": "Rozpiętki z gumą", "powt": "12-15", "przerwa": "60 s",
+       "wskazowka": "Guma zaczepiona o rack za tobą. Ramiona szeroko, łuk jak przy obejmowaniu drzewa.",
+       "latwiej": "Lżejsza guma.", "trudniej": "Hantle na ławce skośnej."},
+      {"nazwa": "Unoszenie hantli bokiem — drugie podejście", "powt": "15-20", "przerwa": "45 s", "v": true,
+       "wskazowka": "Tak, drugi raz. Barki boczne regenerują się szybko i najlepiej rosną przy częstej pracy.",
+       "latwiej": "Guma zamiast hantli.", "trudniej": "Seria zrywana: po odmowie lżejszy ciężar i dalej."}
+    ]},
+    {"id": "g_plecy", "nazwa": "Plecy i ramiona", "cwiczenia": [
+      {"nazwa": "Podciąganie na drążku", "powt": "max (cel 8-10)", "przerwa": "2 min", "v": true,
+       "wskazowka": "Najważniejsze ćwiczenie na szerokość pleców. Chwyt trochę szerzej niż barki, ciągniesz łokcie do bioder. Zapisuj, ile razy — nawet jeśli to 0 i same negatywy.",
+       "latwiej": "Negatywy: wskakujesz na górę i schodzisz przez 4 sekundy. Albo z gumą pod stopami.", "trudniej": "Z hantlem między nogami."},
+      {"nazwa": "Wiosłowanie hantlem jednorącz", "powt": "8-12", "przerwa": "90 s", "v": true,
+       "wskazowka": "Kolano i ręka na ławce. Ciągniesz hantel do biodra, nie do barku — wtedy pracują plecy, a nie biceps.",
+       "latwiej": "Lżejszy hantel, 2 sekundy zatrzymania na górze.", "trudniej": "Wiosłowanie sztangą w opadzie."},
+      {"nazwa": "Ściąganie gumy do klatki", "powt": "12-15", "przerwa": "60 s", "v": true,
+       "wskazowka": "Guma zaczepiona wysoko o rack. Klęcząc, ściągasz ją do górnej części klatki — zamiennik wyciągu.",
+       "latwiej": "Lżejsza guma.", "trudniej": "Jednorącz, wolny powrót."},
+      {"nazwa": "Face pull z gumą", "powt": "15-20", "przerwa": "60 s",
+       "wskazowka": "Guma na wysokości twarzy, ciągniesz do czoła i rozkładasz ręce. Tył barków: bez nich barki wyglądają płasko z boku.",
+       "latwiej": "Odwrotne rozpiętki z lekkimi hantlami w opadzie.", "trudniej": "Mocniejsza guma, 2 sekundy zatrzymania."},
+      {"nazwa": "Uginanie ramion ze sztangą EZ", "powt": "10-12", "przerwa": "75 s",
+       "wskazowka": "Łokcie przy tułowiu, bez bujania. Opuszczasz wolniej, niż podnosisz.",
+       "latwiej": "Hantle naprzemiennie.", "trudniej": "Na ławce skośnej z hantlami."},
+      {"nazwa": "Unoszenie hantli bokiem", "powt": "12-15", "przerwa": "60 s", "v": true,
+       "wskazowka": "Barki boczne w każdej sesji — to one robią szerokość sylwetki.",
+       "latwiej": "Jedną ręką.", "trudniej": "Seria zrywana."},
+      {"nazwa": "Uginanie młotkowe", "powt": "10-12", "przerwa": "60 s",
+       "wskazowka": "Chwyt jak przy trzymaniu młotka. Buduje grubość ramienia widoczną z boku.",
+       "latwiej": "Jedną ręką na zmianę.", "trudniej": "Wolny opust 3 sekundy."}
+    ]},
+    {"id": "g_nogi", "nazwa": "Nogi, brzuch i barki", "cwiczenia": [
+      {"nazwa": "Przysiad goblet z hantlem", "powt": "10-12", "przerwa": "2 min",
+       "wskazowka": "Hantel przy klatce, schodzisz między kolana, plecy proste. Najbezpieczniejsza szkoła przysiadu dla początkującego.",
+       "latwiej": "Przysiad do ławki.", "trudniej": "Przysiad ze sztangą w racku, z ustawionymi bolcami."},
+      {"nazwa": "Rumuński martwy ciąg", "powt": "8-12", "przerwa": "2 min",
+       "wskazowka": "Kolana prawie proste, biodra jadą do tyłu, plecy proste jak deska. Czujesz ciągnięcie z tyłu uda — o to chodzi.",
+       "latwiej": "Z hantlami, mały zakres.", "trudniej": "Ze sztangą."},
+      {"nazwa": "Unoszenie kolan w zwisie", "powt": "10-15", "przerwa": "60 s",
+       "wskazowka": "Zwis na drążku, kolana do klatki bez bujania. Brzuch widoczny na zdjęciu to w połowie ten mięsień, w połowie dieta.",
+       "latwiej": "Leżąc na ławce.", "trudniej": "Proste nogi."},
+      {"nazwa": "Unoszenie hantli bokiem", "powt": "12-15", "przerwa": "60 s", "v": true,
+       "wskazowka": "Trzeci raz w cyklu. Tak ma być.",
+       "latwiej": "Guma.", "trudniej": "Seria zrywana."},
+      {"nazwa": "Wykroki z hantlami", "powt": "10 na nogę", "przerwa": "90 s",
+       "wskazowka": "Długi krok, kolano z tyłu prawie dotyka podłogi. Tułów prosto.",
+       "latwiej": "Wykroki w miejscu, bez hantli.", "trudniej": "Przysiad bułgarski z nogą na ławce."},
+      {"nazwa": "Deska", "powt": "30-60 s", "przerwa": "45 s",
+       "wskazowka": "Pośladki napięte, biodra w linii. Uczy trzymania brzucha — przydaje się w każdym innym ćwiczeniu.",
+       "latwiej": "Na kolanach.", "trudniej": "Z uniesioną jedną nogą."},
+      {"nazwa": "Wspięcia na palce", "powt": "15-20", "przerwa": "45 s",
+       "wskazowka": "Pełny zakres, sekunda zatrzymania na górze.",
+       "latwiej": "Bez ciężaru.", "trudniej": "Jedna noga, hantel w ręce."}
+    ]}
+  ],
+
+  "sesja_krotka": {"id": "k_ekspres", "nazwa": "Ekspres po zmianie", "cwiczenia": [
+    {"nazwa": "Pompki", "powt": "8-15", "przerwa": "60 s",
+     "wskazowka": "Po dobie na służbie bez ambicji na rekord. Czyste powtórzenia.",
+     "latwiej": "Na ławce.", "trudniej": "Nogi na ławce."},
+    {"nazwa": "Wiosłowanie hantlem jednorącz", "powt": "10-12", "przerwa": "60 s", "v": true,
+     "wskazowka": "Ciągniesz do biodra, spokojnie.",
+     "latwiej": "Lżejszy hantel.", "trudniej": "Zatrzymanie na górze."},
+    {"nazwa": "Unoszenie hantli bokiem", "powt": "12-15", "przerwa": "45 s", "v": true,
+     "wskazowka": "Barki boczne nawet w dzień po zmianie — mały ciężar, duży efekt.",
+     "latwiej": "Guma.", "trudniej": "Seria zrywana."},
+    {"nazwa": "Przysiad goblet z hantlem", "powt": "10-12", "przerwa": "60 s",
+     "wskazowka": "Rozrusza plecy i biodra po staniu na zmianie.",
+     "latwiej": "Do ławki.", "trudniej": "Wolny opust."},
+    {"nazwa": "Deska", "powt": "30-45 s", "przerwa": "45 s",
+     "wskazowka": "Na koniec i do jedzenia.",
+     "latwiej": "Na kolanach.", "trudniej": "Z uniesioną nogą."}
+  ]},
+
+  "minimum": {"id": "m_minimum", "nazwa": "Minimum dnia — 10 minut", "czas_min": 10,
+    "opis": "Nie masz dziś siły? Zrób tylko to. Nigdy zero — to jest cała zasada. Zwykle po tych 10 minutach chce się zrobić więcej, ale nie musisz.",
+    "cwiczenia": [
+      {"nazwa": "Pompki", "serie": 2, "powt": "ile dasz radę", "przerwa": "60 s", "wskazowka": "Mogą być na kolanach.", "latwiej": "Na ławce.", "trudniej": "—"},
+      {"nazwa": "Unoszenie hantli bokiem", "serie": 2, "powt": "15", "przerwa": "45 s", "wskazowka": "Lekki ciężar.", "latwiej": "Guma.", "trudniej": "—"},
+      {"nazwa": "Przysiad bez ciężaru", "serie": 2, "powt": "20", "przerwa": "45 s", "wskazowka": "Spokojnie.", "latwiej": "Do ławki.", "trudniej": "Goblet."}
+    ]},
+
+  "zmiana": {"nazwa": "Dzień zmiany — bez treningu",
+    "zasada": "Na 24 h służbie nie trenujesz. Co 2–3 godziny wstań i przejdź się 5 minut, zrób 10 przysiadów i rozciągnij kark — to profilaktyka pleców, a nie trening.",
+    "mikro": ["10 przysiadów bez ciężaru", "10 krążeń ramion w tył", "30 s rozciągania bioder na każdą nogę", "Kark: głowa w tył i na boki po 15 s"]},
+
+  "przedstart": {"nazwa": "Przed startem — gojenie",
+    "zasada": "Plan treningowy zaczyna się 17 września. Do tego czasu wracasz do zdrowia po zabiegu: bez treningu, bez deficytu, dużo snu.",
+    "mikro": ["Spokojny spacer, jeśli czujesz się dobrze", "Dużo płynów", "Zakup gum oporowych na start"]}
+}

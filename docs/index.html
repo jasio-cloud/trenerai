@@ -150,6 +150,26 @@
   .typy-dnia button.aktywny{border-color:var(--akcent);color:var(--akcent)}
   .formularz{display:flex;gap:6px;margin-top:8px;flex-wrap:wrap}
   .formularz input{flex:1;min-width:70px}
+  .plan-roku{display:flex;flex-wrap:wrap;gap:4px 12px;margin-top:8px;font-size:12.5px;color:var(--slaby)}
+  .plan-roku b{color:var(--tekst);font-variant-numeric:tabular-nums}
+  .slowo{border-left:3px solid var(--akcent);padding:6px 0 6px 14px;margin:2px 0 14px}
+  .slowo p{margin:0;font-size:16.5px;line-height:1.5;font-style:italic;text-wrap:pretty}
+  .slowo span{display:block;margin-top:4px;font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:var(--slaby);font-style:normal}
+  .seria{display:flex;align-items:baseline;gap:10px}
+  .seria b{font-size:34px;line-height:1;font-variant-numeric:tabular-nums}
+  .odznaki{display:flex;flex-wrap:wrap;gap:6px;margin-top:10px}
+  .odznaka{font-size:12px;padding:5px 9px;border-radius:999px;border:1px solid var(--linia);color:var(--slaby)}
+  .odznaka.ma{border-color:var(--ok);color:var(--tekst)}
+  .metryki{display:grid;grid-template-columns:repeat(auto-fit,minmax(130px,1fr));gap:8px}
+  .metryka{border:1px solid var(--linia);border-radius:10px;padding:10px 12px}
+  .metryka b{display:block;font-size:22px;font-variant-numeric:tabular-nums}
+  .metryka span{font-size:11.5px;color:var(--slaby)}
+  .metryka.ok b{color:var(--ok)}
+  .pola-pomiarow{display:grid;grid-template-columns:repeat(3,1fr);gap:6px;margin-top:8px}
+  .pola-pomiarow label{font-size:11.5px;color:var(--slaby);display:grid;gap:3px}
+  .v-znak{font-size:10.5px;font-weight:700;letter-spacing:.06em;color:var(--akcent);border:1px solid var(--akcent);
+    border-radius:4px;padding:1px 5px;margin-left:6px;vertical-align:2px}
+  .wariant{font-size:12.5px;color:var(--slaby);margin-top:3px}
   [hidden]{display:none !important}
 </style>
 </head>
@@ -162,6 +182,7 @@
       <span class="znacznik" id="typ"></span>
     </div>
     <div class="podtytul" id="opis-typu"></div>
+    <div class="plan-roku" id="plan-roku"></div>
     <div class="nawigacja">
       <button id="dz-wstecz" aria-label="Poprzedni dzień">‹</button>
       <button id="dz-dzis">dziś</button>
@@ -191,7 +212,7 @@ const esc = s => String(s??"").replace(/[&<>"]/g, c => ({"&":"&amp;","<":"&lt;",
 /* Wersja panelu. iPhone dodany do ekranu głównego potrafi trzymać stary HTML
    w nieskończoność. dane.json leci zawsze świeży, więc porównujemy numery
    i przy różnicy przeładowujemy stronę z ?v=, co omija cache przeglądarki. */
-const WERSJA = 11;
+const WERSJA = 13;
 let D = null, widok = "dzis";
 
 /* ---- zapis z telefonu ------------------------------------------------------
@@ -338,7 +359,7 @@ function przygotowanie(e){
 function tabelaSkladnikow(e){
   if(!e.skladniki || !e.skladniki.length) return "";
   return `<table class="sklad">
-    ${e.skladniki.map(x=>`<tr><td class="ile">${esc(x.ile)}</td><td>${esc(x.nazwa)}</td>
+    ${e.skladniki.map(x=>`<tr${x.dodatek ? ' class="dobitka"' : ""}><td class="ile">${esc(x.ile)}</td><td>${esc(x.nazwa)}${x.dodatek ? ' <span class="kcal">— dodatek węglowy</span>' : ""}</td>
       <td class="liczby">${x.kcal} kcal · B ${x.bialko}</td></tr>`).join("")}
     ${e.dobitka ? `<tr class="dobitka"><td class="ile">+ ${esc(e.dobitka.ile)}</td>
       <td>${esc(e.dobitka.nazwa)} <span class="kcal">— dobitka białka</span></td>
@@ -383,13 +404,31 @@ function widokInnegoDnia(x){
     </div>` : "";
 
   const nieaktualne = x.przesuniecie === dzisOffset && dzisOffset > 0;
-  return `<div class="zrodlo">${nieaktualne
+  return `${kartaSlowa(x.slowo)}<div class="zrodlo">${nieaktualne
       ? "Dane są sprzed północy, więc pokazuję dzisiejszy dzień z planu. Pełny widok z wagą i podmianami wróci po najbliższym odświeżeniu danych — zwykle w ciągu kilku minut."
       : (OPIS_ZRODLA[x.zrodlo] || "")}</div>
     ${x.makra ? `<div class="karta"><h2>Makra dnia${x.lzejszy ? " — dzień lżejszy" : ""}</h2>${makra(x.makra, x.cel || D.cel)}
       ${(x.poza_planem || []).map(p => `<div class="op">+ spoza planu: ${esc(p.nazwa)} — ${p.kcal} kcal</div>`).join("")}</div>` : ""}
     ${fakty}
     <div class="karta"><h2>Plan dnia</h2><ol class="os">${lista}</ol></div>`;
+}
+
+function kartaSlowa(tekst){
+  return tekst ? `<div class="slowo"><p>${esc(tekst)}</p><span>Słowo na dziś</span></div>` : "";
+}
+
+function kartaSerii(){
+  const lista = D.odznaki || [];
+  const zdobyte = lista.filter(o => o.zdobyta);
+  const kolejne = lista.filter(o => !o.zdobyta).slice(0, 3);
+  if(!lista.length) return "";
+  return `<div class="karta"><h2>Seria i odznaki</h2>
+    <div class="seria"><b>${D.seria || 0}</b><span class="op">${D.seria === 1 ? "dzień" : "dni"} z rzędu w planie
+      — dzień liczy się od 60% odhaczonych punktów, nie musi być idealny.</span></div>
+    <div class="odznaki">${zdobyte.map(o => `<span class="odznaka ma" title="${esc(o.opis)}">🏅 ${esc(o.nazwa)}</span>`).join("")}
+      ${kolejne.map(o => `<span class="odznaka" title="${esc(o.opis)}">${esc(o.nazwa)}</span>`).join("")}</div>
+    <div class="op" style="margin-top:6px">${zdobyte.length} z ${lista.length} zdobytych. Szare to najbliższe do zdobycia.</div>
+  </div>`;
 }
 
 function widokDzis(){
@@ -423,7 +462,7 @@ function widokDzis(){
            <span class="kcal">· ${e.makra.kcal} kcal, ${e.makra.bialko} g B</span>
            ${e.slot ? `<button class="mini" data-zamien="${e.slot}">zamień</button>` : ""}</div>` : ""}
         ${(e.skladniki && e.skladniki.length) ? `<table class="sklad">
-            ${e.skladniki.map(x=>`<tr><td class="ile">${esc(x.ile)}</td><td>${esc(x.nazwa)}</td>
+            ${e.skladniki.map(x=>`<tr${x.dodatek ? ' class="dobitka"' : ""}><td class="ile">${esc(x.ile)}</td><td>${esc(x.nazwa)}${x.dodatek ? ' <span class="kcal">— dodatek węglowy</span>' : ""}</td>
               <td class="liczby">${x.kcal} kcal · B ${x.bialko}</td></tr>`).join("")}
             ${e.dobitka ? `<tr class="dobitka"><td class="ile">+ ${esc(e.dobitka.ile)}</td>
               <td>${esc(e.dobitka.nazwa)} <span class="kcal">— dobitka białka</span></td>
@@ -471,7 +510,7 @@ function widokDzis(){
       <button class="mini duzy" id="start-od-zera" style="margin-top:10px">▶ zacznij od zera</button>
     </div>` : "";
 
-  return banerPauzy + kartaZamiany + `<div class="karta"><h2>Makra na dziś${dzisD.lzejszy ? " — dzień lżejszy" : ""}</h2>${makra(dzisD.makra || dzis.makra, dzisD.cel || D.cel)}
+  return banerPauzy + kartaZamiany + kartaSlowa(D.slowo) + kartaSerii() + `<div class="karta"><h2>Makra na dziś${dzisD.lzejszy ? " — dzień lżejszy" : ""}</h2>${makra(dzisD.makra || dzis.makra, dzisD.cel || D.cel)}
       ${dzisD.nadwyzka ? `<div class="op" style="margin-top:8px;color:var(--uwaga)">Po tym, co zjadłeś spoza planu,
         dzień wychodzi ${dzisD.nadwyzka} kcal ponad cel mimo zmniejszenia porcji. Nie nadrabiaj tego głodówką —
         jutro jedziesz normalnie, jeden taki dzień nic nie psuje.</div>` : ""}</div>
@@ -489,6 +528,10 @@ function widokDzis(){
         bez treningu i ok. 300 kcal więcej. Tylko na dziś.</div>
       <button class="mini" id="lzejszy" data-wl="${dzisD.lzejszy ? 0 : 1}" style="margin-top:8px">
         ${dzisD.lzejszy ? "↩ wróć do normalnego dnia" : "🛌 dziś dzień lżejszy"}</button>
+      ${D.typ_dzis !== 0 && (D.plan_roku || {}).tydzien ? `<div class="op" style="margin-top:12px"><b>Nie masz dziś siły?</b>
+        Zamiast treningu zrób minimum: 10 minut, trzy ćwiczenia. Nigdy zero — dzień dalej się liczy.</div>
+      <button class="mini" id="minimum" data-wl="${D.minimum ? 0 : 1}" style="margin-top:8px">
+        ${D.minimum ? "↩ wracam do pełnego treningu" : "🔥 dziś tylko minimum"}</button>` : ""}
     </div>
 
     <div class="karta"><h2>Zjadłem coś spoza planu</h2>
@@ -642,6 +685,13 @@ function widokGotowanie(){
       <div class="cw"><div class="g"><b>Odgrzewanie</b></div><div class="w">${esc(b.odgrzewanie)}</div></div></div>`;
 }
 
+function tempoFazy(){
+  const f = D.plan_roku && D.plan_roku.faza;
+  if(!f || !f.tempo_kg_tydz) return "";
+  const t = x => (x > 0 ? "+" : "") + String(x).replace(".", ",").replace("-", "−");
+  return ` (cel fazy: ${t(f.tempo_kg_tydz[0])} do ${t(f.tempo_kg_tydz[1])})`;
+}
+
 function wykresWagi(){
   const w = (D.postep && D.postep.waga) || [];
   if(w.length < 2) return `<div class="op">${w.length ? "Jest jeden pomiar (" + w[0].kg + " kg). " : ""}
@@ -661,7 +711,7 @@ function wykresWagi(){
     ${w.map(p => `<circle cx="${x(p.data).toFixed(1)}" cy="${y(p.kg).toFixed(1)}" r="2.5" fill="var(--akcent)"/>`).join("")}
   </svg>
   <div class="op">${w[0].data} → ${w[w.length-1].data}: <b>${zmiana > 0 ? "+" : ""}${zmiana.toFixed(1)} kg</b>
-    ${D.kalorie && D.kalorie.trend ? ` · tempo ${D.kalorie.trend.kg_tydzien > 0 ? "+" : ""}${D.kalorie.trend.kg_tydzien} kg/tydz. (cel: −0,4 do −0,7)` : ""}</div>`;
+    ${D.kalorie && D.kalorie.trend ? ` · tempo ${D.kalorie.trend.kg_tydzien > 0 ? "+" : ""}${D.kalorie.trend.kg_tydzien} kg/tydz.${tempoFazy()}` : ""}</div>`;
 }
 
 function historiaCiezarow(){
@@ -680,21 +730,68 @@ function historiaCiezarow(){
   }).join("");
 }
 
+function wykresLinii(punkty, jednostka){
+  if(punkty.length < 2) return `<div class="op">Wykres pojawi się od drugiego pomiaru.</div>`;
+  const W = 320, H = 96, pad = 30;
+  const v = punkty.map(p => p.v), min = Math.min(...v), max = Math.max(...v), zakres = (max - min) || 1;
+  const t0 = new Date(punkty[0].data).getTime(), t1 = new Date(punkty[punkty.length-1].data).getTime();
+  const x = d => pad + (new Date(d).getTime() - t0) / Math.max(1, t1 - t0) * (W - pad - 10);
+  const y = val => 10 + (max - val) / zakres * (H - 28);
+  const linia = punkty.map((p, i) => (i ? "L" : "M") + x(p.data).toFixed(1) + " " + y(p.v).toFixed(1)).join(" ");
+  return `<svg viewBox="0 0 ${W} ${H}" style="width:100%;height:auto;display:block" role="img"
+      aria-label="Od ${punkty[0].v} do ${v[v.length-1]} ${jednostka}">
+    <text x="0" y="${y(max)+4}" font-size="10" fill="var(--slaby)">${max}</text>
+    <text x="0" y="${y(min)+4}" font-size="10" fill="var(--slaby)">${min}</text>
+    <path d="${linia}" fill="none" stroke="var(--akcent)" stroke-width="2" stroke-linejoin="round"/>
+    ${punkty.map(p => `<circle cx="${x(p.data).toFixed(1)}" cy="${y(p.v).toFixed(1)}" r="2.5" fill="var(--akcent)"/>`).join("")}
+  </svg>`;
+}
+
+function kartaPomiarow(){
+  const a = D.analiza || {}, pom = a.pomiary || [], cele = a.cele || {};
+  const ost = pom[pom.length - 1], pierw = pom[0];
+  const zmiana = (k) => ost && pierw && ost[k] != null && pierw[k] != null && pom.length > 1
+    ? ` <span class="kcal">(${(ost[k] - pierw[k] > 0 ? "+" : "")}${(ost[k] - pierw[k]).toFixed(1)})</span>` : "";
+  const metryki = ost ? `<div class="metryki">
+      <div class="metryka"><span>Talia</span><b>${ost.talia ?? "—"} cm${zmiana("talia")}</b></div>
+      <div class="metryka ${ost.tluszcz != null && ost.tluszcz <= (cele.tluszcz_proc || 10) ? "ok" : ""}">
+        <span>Tłuszcz z obwodów · cel ${cele.tluszcz_proc || 10}%</span><b>${ost.tluszcz ?? "—"}%${zmiana("tluszcz")}</b></div>
+      <div class="metryka ${ost.talia_do_wzrostu != null && ost.talia_do_wzrostu <= (cele.talia_do_wzrostu || .45) ? "ok" : ""}">
+        <span>Talia ÷ wzrost · cel ≤ ${cele.talia_do_wzrostu || 0.45}</span><b>${ost.talia_do_wzrostu ?? "—"}</b></div>
+      <div class="metryka ${ost.barki_do_talii != null && ost.barki_do_talii >= (cele.barki_do_talii || 1.5) ? "ok" : ""}">
+        <span>Barki ÷ talia · cel ≥ ${cele.barki_do_talii || 1.5}</span><b>${ost.barki_do_talii ?? "—"}</b></div>
+    </div>
+    <div class="op" style="margin-top:8px">Barki ÷ talia to liczba, która mówi, ile masz kształtu litery V.
+      Rośnie na dwa sposoby: szersze barki i węższa talia — dlatego w każdej sesji są unoszenia bokiem.</div>` :
+    `<div class="op">Pierwsze pomiary robisz na starcie, potem co 2 tygodnie rano, przed jedzeniem.
+      Z talii i szyi system liczy tłuszcz, a z barków i talii kształt sylwetki.</div>`;
+  const wykresy = pom.length > 1 ? `
+    <div class="op" style="margin-top:12px"><b>Talia (cm)</b></div>${wykresLinii(pom.filter(p => p.talia).map(p => ({data: p.data, v: p.talia})), "cm")}
+    <div class="op" style="margin-top:8px"><b>Tłuszcz z obwodów (%)</b></div>${wykresLinii(pom.filter(p => p.tluszcz != null).map(p => ({data: p.data, v: p.tluszcz})), "%")}` : "";
+  const pola = [["talia","na wys. pępka"],["szyja","pod krtanią"],["barki","najszerzej"],["klatka","pod pachami"],["ramie","napięte"],["udo","w połowie"]];
+  const formularz = token() ? `<div class="pola-pomiarow">
+      ${pola.map(([k, opis]) => `<label>${k === "ramie" ? "ramię" : k} · ${opis}<input class="pole" id="pom-${k}" type="number" step="0.5" inputmode="decimal" placeholder="cm"></label>`).join("")}
+    </div><button class="mini duzy" id="pomiary-zapisz" style="margin-top:8px">zapisz pomiary</button>` : "";
+  return `<div class="karta" ${a.pomiary_nalezne ? 'style="border-color:var(--akcent)"' : ""}>
+    <h2>Pomiary sylwetki${a.pomiary_nalezne ? " — czas na nowe" : ""}</h2>${metryki}${wykresy}${formularz}</div>`;
+}
+
 function kartaPostepu(){
-  return `<div class="karta"><h2>Postęp — waga</h2>${wykresWagi()}</div>
+  return kartaPomiarow() + `<div class="karta"><h2>Postęp — waga</h2>${wykresWagi()}</div>
     <div class="karta"><h2>Postęp — ciężary</h2>${historiaCiezarow()}</div>`;
 }
 
 function widokTrening(){
   const tr = (wybranyDzien !== 0 && sel()) ? sel().trening : D.trening;
   const t = tr.trening;
-  if(tr.rodzaj === "zmiana" || tr.rodzaj === "lzejszy"){
+  if(tr.rodzaj === "zmiana" || tr.rodzaj === "lzejszy" || tr.rodzaj === "przedstart"){
     return kartaPostepu() + `<div class="karta"><h2>${esc(t.nazwa)}</h2>
       <div class="op">${esc(t.zasada)}</div></div>
       <div class="karta"><h2>Mikro-rozruch co 2–3 h</h2>
       ${t.mikro.map(x=>`<div class="poz"><span class="nazwa">${esc(x)}</span></div>`).join("")}</div>`;
   }
   return `<div class="karta"><h2>${esc(t.nazwa)} · ${t.czas_min} min</h2>
+      ${t.blok ? `<div class="op"><b>${esc(t.blok)}</b> — ${esc(t.blok_opis)}</div>` : ""}
       ${t.rozgrzewka.map(r=>`<div class="op">▸ ${esc(r)}</div>`).join("")}</div>
     <div class="karta"><h2>Ćwiczenia</h2>
       ${t.cwiczenia.map(c=>{
@@ -706,8 +803,10 @@ function widokTrening(){
              : sugestia < h.ciezar ? ` → zejdź do <b>${sugestia} kg</b>` : ` → zostań przy <b>${sugestia} kg</b>`)
           : "pierwszy raz — zapisz, ile dałeś, a od następnego razu podpowiem ciężar";
         return `<div class="cw">
-        <div class="g"><b>${esc(c.nazwa)}</b><span class="serie">${c.serie} × ${esc(c.powt)}</span></div>
+        <div class="g"><b>${esc(c.nazwa)}${c.v ? '<span class="v-znak" title="Buduje kształt litery V">V</span>' : ""}</b><span class="serie">${c.serie} × ${esc(c.powt)}</span></div>
         <div class="w">${esc(c.wskazowka)}</div>
+        ${c.latwiej ? `<div class="wariant">Za trudne? ${esc(c.latwiej)}</div>` : ""}
+        ${c.trudniej && c.trudniej !== "—" ? `<div class="wariant">Za łatwe? ${esc(c.trudniej)}</div>` : ""}
         <div class="w">przerwa ${esc(c.przerwa)}</div>
         <div class="w" style="color:var(--akcent)">${historia}</div>
         <div style="display:flex;gap:6px;margin-top:7px">
@@ -811,6 +910,13 @@ function rysujNaglowek(){
   $("#data").textContent = ladnaData(data);
   $("#typ").textContent = t.emoji + " " + t.nazwa;
   $("#opis-typu").textContent = t.opis;
+  const pr = D.plan_roku || {};
+  const tydz = x && x.tydzien !== undefined ? x.tydzien : pr.tydzien;
+  const faza = x && x.faza ? x.faza : (pr.faza || {}).nazwa;
+  $("#plan-roku").innerHTML = !pr.start ? "" : (tydz
+    ? `<span>Tydzień <b>${tydz}</b> z 52</span><span>Faza: <b>${esc(faza || "")}</b></span>` +
+      (pr.dni_do_finalu !== null ? `<span>${esc(pr.final_nazwa || "Finał")} za <b>${pr.dni_do_finalu}</b> dni</span>` : "")
+    : `<span>Start planu: <b>${ladnaData(pr.start)}</b></span><span>${esc(faza || "")}</span>`);
   const [min, max] = zakresDni();
   $("#dz-wstecz").disabled = wybranyDzien <= min;
   $("#dz-naprzod").disabled = wybranyDzien >= max;
@@ -999,6 +1105,21 @@ $("#widok").addEventListener("click", async e => {
       if(!confirm("Ustawić, że dziś to: " + nazwy[t] + "?\n\nCały cykl przeliczy się od dziś. Dni wstecz zostają bez zmian. Pingi zaplanowane już do 8 h naprzód mogą jeszcze przyjść po staremu.")) return;
       if(await zapisz({typ:"grafik", typ_dnia:t, data: lokalnaData()}, b))
         alert("Zapisane. Za ok. minutę plan przeliczy się pod nowy grafik — odśwież panel.");
+      return;
+    }
+    if(b.id === "minimum"){
+      const wl = b.dataset.wl === "1";
+      if(await zapisz({typ:"minimum", wlaczony: wl, data: lokalnaData()}, b))
+        alert(wl ? "Minimum zapisane: 10 minut, trzy ćwiczenia. Dzień dalej się liczy — za minutę zobaczysz je w zakładce Trening."
+                 : "Wracasz do pełnego treningu.");
+      return;
+    }
+    if(b.id === "pomiary-zapisz"){
+      const pola = ["talia","szyja","barki","klatka","ramie","udo"], wpis = {typ:"pomiary", data: lokalnaData()};
+      for(const k of pola){ const v = Number($("#pom-" + k)?.value); if(v > 0) wpis[k] = v; }
+      if(!wpis.talia){ alert("Podaj przynajmniej talię — to najważniejszy pomiar."); return; }
+      if(!wpis.szyja && !confirm("Bez szyi nie policzę tłuszczu z obwodów. Zapisać mimo to?")) return;
+      if(await zapisz(wpis, b)) alert("Pomiary zapisane. Za minutę zobaczysz je na wykresach.");
       return;
     }
     if(b.id === "lzejszy"){
