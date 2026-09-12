@@ -1,5 +1,5 @@
 {
-  "wygenerowano": "2026-09-12T20:00:16+02:00",
+  "wygenerowano": "2026-09-12T20:30:14+02:00",
   "dzis": "2026-09-12",
   "typ_dzis": 2,
   "typy": {
@@ -23,10 +23,10 @@
     }
   },
   "cel": {
-    "kcal": 2200,
-    "bialko": 165,
-    "tluszcz": 80,
-    "wegle": 205
+    "kcal": 2600,
+    "bialko": 150,
+    "tluszcz": 90,
+    "wegle": 297
   },
   "user": {
     "imie": "Krystian",
@@ -172,11 +172,11 @@
     },
     {
       "czas": "08:30",
-      "tytul": "TRENING GŁÓWNY — pierwsza rzecz dnia",
-      "ikona": "🏋️",
-      "ping": true,
-      "akcja": "trening_glowny",
-      "opis": "Najlepsza sesja w cyklu: wyspany, po dniu normalnego jedzenia. Tu bijesz rekordy. Wchodzisz i robisz, zero telefonu przed."
+      "tytul": "Przed startem — bez treningu",
+      "ikona": "🩹",
+      "ping": false,
+      "akcja": null,
+      "opis": "Plan treningowy rusza 2026-09-17. Dziś tylko regeneracja."
     },
     {
       "czas": "09:45",
@@ -189,10 +189,10 @@
       "posilek_id": "q_shakshuka",
       "porcja": 0.8,
       "makra": {
-        "kcal": 418,
-        "bialko": 21,
-        "tluszcz": 18,
-        "wegle": 39
+        "kcal": 865,
+        "bialko": 29,
+        "tluszcz": 21,
+        "wegle": 137
       },
       "skladniki": [
         {
@@ -242,12 +242,13 @@
         },
         {
           "nazwa": "Chleb pszenny (zwykły biały)",
-          "ile": "1 kromka (35 g)",
-          "g": 35,
-          "kcal": 88,
-          "bialko": 2.8,
-          "tluszcz": 1.0,
-          "wegle": 16.4
+          "ile": "3 kromki (105 g), w tym +2 kromki",
+          "g": 105,
+          "kcal": 263,
+          "bialko": 8.4,
+          "tluszcz": 3.1,
+          "wegle": 49.3,
+          "dodatek": true
         },
         {
           "nazwa": "Olej rzepakowy",
@@ -257,6 +258,26 @@
           "bialko": 0.0,
           "tluszcz": 5.5,
           "wegle": 0.0
+        },
+        {
+          "nazwa": "Banan",
+          "ile": "+ 2 szt. (240 g)",
+          "g": 240,
+          "kcal": 211,
+          "bialko": 2.6,
+          "tluszcz": 0.7,
+          "wegle": 48.5,
+          "dodatek": true
+        },
+        {
+          "nazwa": "Miód",
+          "ile": "+ 1 łyżka (20 g)",
+          "g": 20,
+          "kcal": 61,
+          "bialko": 0.1,
+          "tluszcz": 0.0,
+          "wegle": 16.4,
+          "dodatek": true
         }
       ],
       "jak": "przepis",
@@ -266,7 +287,8 @@
         "Dodaj czosnek, passatę, sól, pieprz, szczyptę słodkiej papryki. Gotuj 3 min.",
         "Zrób łyżką wgłębienie na każde jajko i wbij je.",
         "Przykryj i trzymaj 5 min na małym ogniu — białka mają się ściąć, żółtka zostać płynne. Maczasz chlebem prosto z patelni, zero talerzy.",
-        "Ilości każdego składnika masz w rozpisce — porcja jest dopasowana do Twojego celu na ten dzień."
+        "Ilości każdego składnika masz w rozpisce — porcja jest dopasowana do Twojego celu na ten dzień.",
+        "Do tego dodatek węglowy: banan 2 szt., chleb pszenny 2 kromki, miód 1 łyżka. Zjedz obok — to paliwo na trening i regenerację, bez niego dzień nie dobija węglowodanów."
       ]
     },
     {
@@ -437,22 +459,22 @@
       "opis": "",
       "posilek": "Deser: sernik na zimno w kubku (bez pieczenia)",
       "posilek_id": "d_sernik",
-      "porcja": 1.0,
+      "porcja": 0.8,
       "makra": {
-        "kcal": 572,
-        "bialko": 57,
-        "tluszcz": 16,
-        "wegle": 50
+        "kcal": 506,
+        "bialko": 49,
+        "tluszcz": 13,
+        "wegle": 48
       },
       "skladniki": [
         {
           "nazwa": "Twaróg półtłusty",
-          "ile": "200 g",
-          "g": 200,
-          "kcal": 266,
-          "bialko": 37.4,
-          "tluszcz": 9.4,
-          "wegle": 7.4
+          "ile": "160 g",
+          "g": 160,
+          "kcal": 213,
+          "bialko": 29.9,
+          "tluszcz": 7.5,
+          "wegle": 5.9
         },
         {
           "nazwa": "Skyr naturalny (kubek 150 g)",
@@ -483,12 +505,12 @@
         },
         {
           "nazwa": "Orzechy / migdały",
-          "ile": "10 g",
-          "g": 10,
-          "kcal": 64,
-          "bialko": 1.9,
-          "tluszcz": 5.7,
-          "wegle": 1.0
+          "ile": "8 g",
+          "g": 8,
+          "kcal": 51,
+          "bialko": 1.5,
+          "tluszcz": 4.6,
+          "wegle": 0.8
         }
       ],
       "jak": "przepis",
@@ -1014,61 +1036,15 @@
     }
   },
   "trening": {
-    "rodzaj": "glowny",
+    "rodzaj": "przedstart",
     "trening": {
-      "id": "w_push",
-      "nazwa": "GŁÓWNY A — Klatka, barki, triceps",
-      "czas_min": 60,
-      "rozgrzewka": [
-        "Trenujesz zaraz po wstaniu, na czczo — rozgrzewki NIE skracaj, to nie jest miejsce na oszczędzanie czasu.",
-        "8 min: 30 przysiadów bez ciężaru, krążenia ramion i bioder, 20 pompek.",
-        "Sztanga sama (20 kg) x15 na ławce, potem 50% ciężaru roboczego x8"
-      ],
-      "cwiczenia": [
-        {
-          "nazwa": "Wyciskanie sztangi leżąc",
-          "serie": 4,
-          "powt": "6-8",
-          "przerwa": "2-3 min",
-          "wskazowka": "Łopatki ściągnięte i wbite w ławkę przez cały ruch. Sztanga schodzi do dolnej części klatki, nie do szyi."
-        },
-        {
-          "nazwa": "Wyciskanie hantli nad głowę (siedząc)",
-          "serie": 3,
-          "powt": "8-10",
-          "przerwa": "2 min",
-          "wskazowka": "Nie odchylaj się do tyłu. Żebra ściągnięte w dół, pośladki napięte."
-        },
-        {
-          "nazwa": "Wyciskanie hantli na skos (ławka pod kątem)",
-          "serie": 3,
-          "powt": "10-12",
-          "przerwa": "90 s",
-          "wskazowka": "Kąt ok. 30 stopni. Wyżej i robi się z tego ćwiczenie na barki."
-        },
-        {
-          "nazwa": "Rozpiętki z hantlami",
-          "serie": 3,
-          "powt": "12-15",
-          "przerwa": "75 s",
-          "wskazowka": "Lekko ugięte łokcie, ruch szeroki. Ciężar mały — to ma rozciągać, nie dźwigać."
-        },
-        {
-          "nazwa": "Wyciskanie francuskie EZ",
-          "serie": 3,
-          "powt": "10-12",
-          "przerwa": "75 s",
-          "wskazowka": "Łokcie stoją w miejscu, rusza się tylko przedramię."
-        },
-        {
-          "nazwa": "Pompki do odmowy",
-          "serie": 2,
-          "powt": "max",
-          "przerwa": "60 s",
-          "wskazowka": "Na koniec, żeby dobić klatkę. Licz i zapisuj — to Twój wskaźnik postępu."
-        }
-      ],
-      "finisz": "3 min rozciągania klatki i barków. Zapisz ciężary w panelu."
+      "nazwa": "Przed startem — gojenie",
+      "zasada": "Plan treningowy zaczyna się 17 września. Do tego czasu wracasz do zdrowia po zabiegu: bez treningu, bez deficytu, dużo snu.",
+      "mikro": [
+        "Spokojny spacer, jeśli czujesz się dobrze",
+        "Dużo płynów",
+        "Zakup gum oporowych na start"
+      ]
     }
   },
   "nawyki": [
@@ -1079,12 +1055,12 @@
     },
     {
       "id": "bialko",
-      "nazwa": "Trafić w białko",
-      "opis": "Na redukcji białko jest ważniejsze niż same kalorie. Trzyma mięśnie i najedzenie."
+      "nazwa": "Trafić w białko: 150 g",
+      "opis": "Białko i kalorie to dwie liczby, które naprawdę decydują o sylwetce. Na redukcji chroni mięśnie, na budowie daje z czego je zrobić."
     },
     {
       "id": "kroki",
-      "nazwa": "8 000 kroków",
+      "nazwa": "Średnio 6 000 kroków dziennie",
       "opis": "Na zmianie zbierasz je sam z siebie. W dni wolne trzeba wyjść na spacer."
     },
     {
@@ -1095,7 +1071,7 @@
     {
       "id": "waga",
       "nazwa": "Waga w dzień wolny",
-      "opis": "Raz na cykl, rano, na czczo. Cel redukcji: -0,4 do -0,7 kg na tydzień."
+      "opis": "Raz na cykl, rano, na czczo. Kierunek w fazie „Przed startem”: −0,3 do +0,3 kg na tydzień."
     },
     {
       "id": "telefon",
@@ -2478,13 +2454,227 @@
       "trw": "trwale"
     }
   },
-  "panel_wersja": 11,
+  "panel_wersja": 13,
   "grafik": [
     {
       "od": "2000-01-01",
       "kotwica": "2026-06-21"
     }
   ],
+  "plan_roku": {
+    "start": "2026-09-17",
+    "final": "2027-09-16",
+    "final_nazwa": "Sesja zdjęciowa",
+    "tydzien": 0,
+    "dzien": 0,
+    "dni_do_finalu": 369,
+    "faza": {
+      "id": "przedstart",
+      "nazwa": "Przed startem",
+      "cel": "Gojenie po zabiegu. Jemy normalnie, bez treningu.",
+      "kroki": 6000,
+      "od_tyg": 0,
+      "do_tyg": 0,
+      "tempo_kg_tydz": [
+        -0.3,
+        0.3
+      ]
+    },
+    "blok": null,
+    "fazy": [
+      {
+        "id": "F0",
+        "nazwa": "Start",
+        "od_tyg": 1,
+        "do_tyg": 2,
+        "cel": "Nauka ruchu i pomiary. Bez deficytu — ciało dopiero co po zabiegu."
+      },
+      {
+        "id": "F1",
+        "nazwa": "Rekompozycja",
+        "od_tyg": 3,
+        "do_tyg": 16,
+        "cel": "Tłuszcz w dół, siła w górę. Talia −5–7 cm."
+      },
+      {
+        "id": "F2",
+        "nazwa": "Budowa",
+        "od_tyg": 17,
+        "do_tyg": 30,
+        "cel": "Lekka nadwyżka pod barki, plecy i klatkę górną. Waga rośnie powoli."
+      },
+      {
+        "id": "F3",
+        "nazwa": "Forma",
+        "od_tyg": 31,
+        "do_tyg": 50,
+        "cel": "Odsłaniamy mięśnie do formy z okładki: 8–10% tłuszczu."
+      },
+      {
+        "id": "F4",
+        "nazwa": "Finał",
+        "od_tyg": 51,
+        "do_tyg": 52,
+        "cel": "Utrzymanie formy, pozowanie, sesja zdjęciowa 16 września."
+      }
+    ]
+  },
+  "slowo": "Twoja przewaga nad resztą: masz plan na każdą godzinę. Oni mają tylko chęci.",
+  "analiza": {
+    "pomiary": [],
+    "sila": {},
+    "cele": {
+      "_info": "Wskaźniki sylwetki mierzone taśmą — tanie, a mówią więcej niż waga.",
+      "talia_do_wzrostu": 0.45,
+      "barki_do_talii": 1.5,
+      "tluszcz_proc": 10
+    },
+    "srednia_7d": null,
+    "pomiary_nalezne": true,
+    "wzrost": 182
+  },
+  "seria": 0,
+  "odznaki": [
+    {
+      "id": "pierwszy_trening",
+      "nazwa": "Pierwszy trening",
+      "opis": "Zapisany pierwszy trening. Najtrudniejszy za tobą.",
+      "zdobyta": null
+    },
+    {
+      "id": "treningi_10",
+      "nazwa": "10 treningów",
+      "opis": "Dziesięć zapisanych sesji.",
+      "zdobyta": null
+    },
+    {
+      "id": "treningi_25",
+      "nazwa": "25 treningów",
+      "opis": "To już nawyk, nie zryw.",
+      "zdobyta": null
+    },
+    {
+      "id": "treningi_50",
+      "nazwa": "50 treningów",
+      "opis": "Pół setki. Mało kto dochodzi do tego miejsca.",
+      "zdobyta": null
+    },
+    {
+      "id": "treningi_100",
+      "nazwa": "100 treningów",
+      "opis": "Setka. Sylwetka to widzi.",
+      "zdobyta": null
+    },
+    {
+      "id": "wazenie_1",
+      "nazwa": "Pierwsze ważenie",
+      "opis": "System wie, od czego zaczynasz.",
+      "zdobyta": null
+    },
+    {
+      "id": "wazenie_10",
+      "nazwa": "10 ważeń",
+      "opis": "Z dziesięciu ważeń trend jest już wiarygodny.",
+      "zdobyta": null
+    },
+    {
+      "id": "pomiary_1",
+      "nazwa": "Pierwsze pomiary",
+      "opis": "Talia, barki, szyja — punkt zero zapisany.",
+      "zdobyta": null
+    },
+    {
+      "id": "talia_2",
+      "nazwa": "Talia −2 cm",
+      "opis": "Pierwsze centymetry w dół.",
+      "zdobyta": null
+    },
+    {
+      "id": "talia_5",
+      "nazwa": "Talia −5 cm",
+      "opis": "To już widać w spodniach.",
+      "zdobyta": null
+    },
+    {
+      "id": "talia_8",
+      "nazwa": "Talia −8 cm",
+      "opis": "Zmiana, którą widzą inni.",
+      "zdobyta": null
+    },
+    {
+      "id": "waga_3",
+      "nazwa": "−3 kg",
+      "opis": "Trzy kilogramy mniej od startu.",
+      "zdobyta": null
+    },
+    {
+      "id": "waga_6",
+      "nazwa": "−6 kg",
+      "opis": "Sześć kilogramów mniej od startu.",
+      "zdobyta": null
+    },
+    {
+      "id": "podciaganie_1",
+      "nazwa": "Pierwsze podciągnięcie",
+      "opis": "Pełne, z martwego zwisu. Wielki dzień.",
+      "zdobyta": null
+    },
+    {
+      "id": "podciaganie_5",
+      "nazwa": "5 podciągnięć",
+      "opis": "Plecy zaczynają robić szerokość.",
+      "zdobyta": null
+    },
+    {
+      "id": "podciaganie_10",
+      "nazwa": "10 podciągnięć",
+      "opis": "Poziom, którego nie ma większość ludzi na siłowni.",
+      "zdobyta": null
+    },
+    {
+      "id": "pompki_20",
+      "nazwa": "20 pompek",
+      "opis": "Dwadzieścia w jednej serii.",
+      "zdobyta": null
+    },
+    {
+      "id": "seria_7",
+      "nazwa": "Tydzień bez przerwy",
+      "opis": "Siedem dni zaliczonych z rzędu.",
+      "zdobyta": null
+    },
+    {
+      "id": "seria_14",
+      "nazwa": "Dwa tygodnie",
+      "opis": "Czternaście dni z rzędu.",
+      "zdobyta": null
+    },
+    {
+      "id": "seria_30",
+      "nazwa": "Miesiąc bez przerwy",
+      "opis": "Trzydzieści dni z rzędu. To już twój styl życia.",
+      "zdobyta": null
+    },
+    {
+      "id": "dzien_30",
+      "nazwa": "Miesiąc w planie",
+      "opis": "30 dni od startu.",
+      "zdobyta": null
+    },
+    {
+      "id": "dzien_100",
+      "nazwa": "100 dni",
+      "opis": "Sto dni od startu.",
+      "zdobyta": null
+    },
+    {
+      "id": "dzien_182",
+      "nazwa": "Pół roku",
+      "opis": "Połowa drogi do sesji.",
+      "zdobyta": null
+    }
+  ],
+  "minimum": false,
   "dni": [
     {
       "data": "2026-09-05",
@@ -2545,10 +2735,10 @@
           "posilek_id": "q_twarog",
           "porcja": 0.8,
           "makra": {
-            "kcal": 440,
-            "bialko": 37,
-            "tluszcz": 13,
-            "wegle": 44
+            "kcal": 781,
+            "bialko": 44,
+            "tluszcz": 15,
+            "wegle": 118
           },
           "skladniki": [
             {
@@ -2580,12 +2770,13 @@
             },
             {
               "nazwa": "Chleb pszenny (zwykły biały)",
-              "ile": "2 kromki (70 g)",
-              "g": 70,
-              "kcal": 175,
-              "bialko": 5.6,
-              "tluszcz": 2.1,
-              "wegle": 32.9
+              "ile": "4 kromki (140 g), w tym +2 kromki",
+              "g": 140,
+              "kcal": 350,
+              "bialko": 11.2,
+              "tluszcz": 4.2,
+              "wegle": 65.8,
+              "dodatek": true
             },
             {
               "nazwa": "Ogórek długi",
@@ -2595,6 +2786,26 @@
               "bialko": 1.0,
               "tluszcz": 0.2,
               "wegle": 4.3
+            },
+            {
+              "nazwa": "Banan",
+              "ile": "+ 1 szt. (120 g)",
+              "g": 120,
+              "kcal": 106,
+              "bialko": 1.3,
+              "tluszcz": 0.4,
+              "wegle": 24.2,
+              "dodatek": true
+            },
+            {
+              "nazwa": "Miód",
+              "ile": "+ 1 łyżka (20 g)",
+              "g": 20,
+              "kcal": 61,
+              "bialko": 0.1,
+              "tluszcz": 0.0,
+              "wegle": 16.4,
+              "dodatek": true
             }
           ],
           "jak": "przepis",
@@ -2603,7 +2814,8 @@
             "Twaróg rozgnieć widelcem w miseczce ze śmietaną — będzie kremowy, a nie suchy.",
             "Wsyp posiekany szczypiorek, sól, pieprz, wymieszaj.",
             "Ogórek w plastry. Jeść z chlebem. Do boxa: twarożek do zakręcanego pojemnika, chleb osobno.",
-            "Ilości każdego składnika masz w rozpisce — porcja jest dopasowana do Twojego celu na ten dzień."
+            "Ilości każdego składnika masz w rozpisce — porcja jest dopasowana do Twojego celu na ten dzień.",
+            "Do tego dodatek węglowy: banan 1 szt., chleb pszenny 2 kromki, miód 1 łyżka. Zjedz obok — to paliwo na trening i regenerację, bez niego dzień nie dobija węglowodanów."
           ]
         },
         {
@@ -2631,11 +2843,11 @@
         },
         {
           "czas": "13:30",
-          "tytul": "TRENING — pierwsza rzecz dnia",
-          "ikona": "🏋️",
-          "ping": true,
-          "akcja": "trening_krotki",
-          "opis": "35 minut, ciężary 80% normy. Zaczynasz dzień od zrobionej roboty, zanim cokolwiek zdąży w tym przeszkodzić."
+          "tytul": "Przed startem — bez treningu",
+          "ikona": "🩹",
+          "ping": false,
+          "akcja": null,
+          "opis": "Plan treningowy rusza 2026-09-17. Dziś tylko regeneracja."
         },
         {
           "czas": "14:30",
@@ -2646,31 +2858,31 @@
           "opis": "Pierwszy porządny posiłek dnia. Trenowałeś na czczo, więc nie odkładaj go na później.",
           "posilek": "Jogurt grecki z orzechami i miodem",
           "posilek_id": "q_jogurt_orzechy",
-          "porcja": 0.8,
+          "porcja": 0.9,
           "makra": {
-            "kcal": 494,
-            "bialko": 44,
-            "tluszcz": 12,
-            "wegle": 50
+            "kcal": 433,
+            "bialko": 30,
+            "tluszcz": 14,
+            "wegle": 46
           },
           "skladniki": [
             {
               "nazwa": "Jogurt grecki 2%",
-              "ile": "240 g",
-              "g": 240,
-              "kcal": 175,
-              "bialko": 23.8,
-              "tluszcz": 4.8,
-              "wegle": 7.4
+              "ile": "270 g",
+              "g": 270,
+              "kcal": 197,
+              "bialko": 26.7,
+              "tluszcz": 5.4,
+              "wegle": 8.4
             },
             {
               "nazwa": "Orzechy / migdały",
-              "ile": "12 g",
-              "g": 12,
-              "kcal": 77,
-              "bialko": 2.3,
-              "tluszcz": 6.8,
-              "wegle": 1.2
+              "ile": "14 g",
+              "g": 14,
+              "kcal": 90,
+              "bialko": 2.7,
+              "tluszcz": 8.0,
+              "wegle": 1.4
             },
             {
               "nazwa": "Miód",
@@ -2697,17 +2909,7 @@
             "Jogurt do pojemnika, wsyp orzechy, polej łyżką miodu.",
             "Jabłko w kostkę na wierzch. Gotowe.",
             "Ilości każdego składnika masz w rozpisce — porcja jest dopasowana do Twojego celu na ten dzień."
-          ],
-          "dobitka": {
-            "nazwa": "Skyr naturalny (kubek 150 g)",
-            "ile": "1 kubek (150 g)",
-            "g": 150,
-            "n": 1,
-            "kcal": 96,
-            "bialko": 17.2,
-            "tluszcz": 0.3,
-            "wegle": 5.7
-          }
+          ]
         },
         {
           "czas": "15:15",
@@ -2933,67 +3135,52 @@
         }
       ],
       "makra": {
-        "kcal": 2327,
-        "bialko": 162,
-        "tluszcz": 99,
-        "wegle": 188
+        "kcal": 2607,
+        "bialko": 155,
+        "tluszcz": 103,
+        "wegle": 258
       },
-      "dobitka": 1,
+      "dobitka": 0,
+      "dodatek_w": [
+        [
+          "banan",
+          1
+        ],
+        [
+          "chleb",
+          2
+        ],
+        [
+          "miod",
+          1
+        ]
+      ],
       "poza_planem": [],
       "lzejszy": false,
       "cel": {
-        "kcal": 2200,
-        "bialko": 165,
-        "tluszcz": 80,
-        "wegle": 205
+        "kcal": 2600,
+        "bialko": 150,
+        "tluszcz": 90,
+        "wegle": 297
       },
+      "slowo": "Nie musisz tego kochać. Musisz to zrobić.",
+      "faza": "Przed startem",
+      "tydzien": 0,
       "nadwyzka": 0,
       "odhaczone": {},
       "waga": null,
       "kroki": null,
       "serie": [],
       "trening": {
-        "rodzaj": "krotki",
+        "rodzaj": "przedstart",
         "trening": {
-          "id": "w_fbw_b",
-          "nazwa": "KRÓTKI B — Full body (dzień po zmianie)",
-          "czas_min": 35,
-          "rozgrzewka": [
-            "Po 24 h służby, ok. 4,5 h snu i na czczo. Rozgrzewka 8 min, bez pośpiechu.",
-            "30 przysiadów bez ciężaru, krążenia ramion i bioder, 15 pompek, martwy zwis 2×20 s.",
-            "Pierwszą serię roboczą poprzedź serią na 50% ciężaru."
-          ],
-          "cwiczenia": [
-            {
-              "nazwa": "Rumuński martwy ciąg",
-              "serie": 3,
-              "powt": "10",
-              "przerwa": "2 min",
-              "wskazowka": "Umiarkowany ciężar. Po dobie stania plecy są zmęczone — technika ważniejsza niż kilogramy."
-            },
-            {
-              "nazwa": "Wyciskanie hantli nad głowę",
-              "serie": 3,
-              "powt": "10",
-              "przerwa": "90 s",
-              "wskazowka": "Siedząc, z oparciem — stabilniej gdy jesteś zmęczony."
-            },
-            {
-              "nazwa": "Podciąganie albo wiosłowanie hantlą",
-              "serie": 3,
-              "powt": "8-12",
-              "przerwa": "90 s",
-              "wskazowka": "Wybierz to, na co masz dziś siłę."
-            },
-            {
-              "nazwa": "Uginanie EZ + pompki (superseria)",
-              "serie": 2,
-              "powt": "12 + max",
-              "przerwa": "75 s",
-              "wskazowka": "Jedno po drugim bez przerwy, potem odpoczynek."
-            }
-          ],
-          "finisz": "Kręci Ci się w głowie albo ciężar leci — kończysz. Po nieprzespanej dobie to normalne i nie jest to porażka. Zaraz po treningu jesz pierwszy porządny posiłek dnia."
+          "nazwa": "Przed startem — gojenie",
+          "zasada": "Plan treningowy zaczyna się 17 września. Do tego czasu wracasz do zdrowia po zabiegu: bez treningu, bez deficytu, dużo snu.",
+          "mikro": [
+            "Spokojny spacer, jeśli czujesz się dobrze",
+            "Dużo płynów",
+            "Zakup gum oporowych na start"
+          ]
         }
       }
     },
@@ -3016,11 +3203,11 @@
         },
         {
           "czas": "08:30",
-          "tytul": "TRENING GŁÓWNY — pierwsza rzecz dnia",
-          "ikona": "🏋️",
-          "ping": true,
-          "akcja": "trening_glowny",
-          "opis": "Najlepsza sesja w cyklu: wyspany, po dniu normalnego jedzenia. Tu bijesz rekordy. Wchodzisz i robisz, zero telefonu przed."
+          "tytul": "Przed startem — bez treningu",
+          "ikona": "🩹",
+          "ping": false,
+          "akcja": null,
+          "opis": "Plan treningowy rusza 2026-09-17. Dziś tylko regeneracja."
         },
         {
           "czas": "09:45",
@@ -3031,58 +3218,70 @@
           "opis": "Pierwszy posiłek dnia, zaraz po sztandze.",
           "posilek": "Twaróg z bananem i miodem",
           "posilek_id": "q_twarog_banan",
-          "porcja": 0.8,
+          "porcja": 0.9,
           "makra": {
-            "kcal": 430,
-            "bialko": 31,
-            "tluszcz": 13,
-            "wegle": 49
+            "kcal": 800,
+            "bialko": 41,
+            "tluszcz": 16,
+            "wegle": 124
           },
           "skladniki": [
             {
               "nazwa": "Twaróg półtłusty",
-              "ile": "145 g",
-              "g": 145,
-              "kcal": 193,
-              "bialko": 27.1,
-              "tluszcz": 6.8,
-              "wegle": 5.4
+              "ile": "160 g",
+              "g": 160,
+              "kcal": 213,
+              "bialko": 29.9,
+              "tluszcz": 7.5,
+              "wegle": 5.9
             },
             {
               "nazwa": "Banan",
-              "ile": "1 szt. (120 g)",
-              "g": 120,
-              "kcal": 106,
-              "bialko": 1.3,
-              "tluszcz": 0.4,
-              "wegle": 24.2
+              "ile": "2 szt. (240 g), w tym +1 szt.",
+              "g": 240,
+              "kcal": 212,
+              "bialko": 2.6,
+              "tluszcz": 0.8,
+              "wegle": 48.4,
+              "dodatek": true
             },
             {
               "nazwa": "Miód",
-              "ile": "1 łyżka (20 g)",
-              "g": 20,
-              "kcal": 61,
-              "bialko": 0.1,
+              "ile": "2 łyżki (40 g), w tym +1 łyżka",
+              "g": 40,
+              "kcal": 122,
+              "bialko": 0.2,
               "tluszcz": 0.0,
-              "wegle": 16.4
+              "wegle": 32.8,
+              "dodatek": true
             },
             {
               "nazwa": "Orzechy / migdały",
-              "ile": "8 g",
-              "g": 8,
-              "kcal": 51,
-              "bialko": 1.5,
-              "tluszcz": 4.6,
-              "wegle": 0.8
+              "ile": "9 g",
+              "g": 9,
+              "kcal": 58,
+              "bialko": 1.7,
+              "tluszcz": 5.1,
+              "wegle": 0.9
             },
             {
               "nazwa": "Mleko 2%",
-              "ile": "40 ml",
-              "g": 40,
-              "kcal": 20,
-              "bialko": 1.3,
-              "tluszcz": 0.8,
-              "wegle": 1.9
+              "ile": "45 ml",
+              "g": 45,
+              "kcal": 22,
+              "bialko": 1.5,
+              "tluszcz": 0.9,
+              "wegle": 2.2
+            },
+            {
+              "nazwa": "Chleb pszenny (zwykły biały)",
+              "ile": "+ 2 kromki (70 g)",
+              "g": 70,
+              "kcal": 175,
+              "bialko": 5.6,
+              "tluszcz": 2.1,
+              "wegle": 32.9,
+              "dodatek": true
             }
           ],
           "jak": "przepis",
@@ -3091,7 +3290,8 @@
             "Twaróg rozgnieć widelcem z mlekiem — zrobi się kremowy.",
             "Banan w plastry, miód, orzechy na wierzch.",
             "Wersja na zmianę: wszystko do zakręcanego pojemnika.",
-            "Ilości każdego składnika masz w rozpisce — porcja jest dopasowana do Twojego celu na ten dzień."
+            "Ilości każdego składnika masz w rozpisce — porcja jest dopasowana do Twojego celu na ten dzień.",
+            "Do tego dodatek węglowy: banan 1 szt., chleb pszenny 2 kromki, miód 1 łyżka. Zjedz obok — to paliwo na trening i regenerację, bez niego dzień nie dobija węglowodanów."
           ]
         },
         {
@@ -3105,10 +3305,10 @@
           "posilek_id": "q_serek_box",
           "porcja": 0.8,
           "makra": {
-            "kcal": 546,
-            "bialko": 56,
+            "kcal": 450,
+            "bialko": 39,
             "tluszcz": 22,
-            "wegle": 29
+            "wegle": 23
           },
           "skladniki": [
             {
@@ -3156,17 +3356,7 @@
             "Posól i popieprz jajka od razu, żeby nie nosić soli. Chleb do osobnej torebki.",
             "To najprostszy box na zmianę — nic nie trzeba odgrzewać.",
             "Ilości każdego składnika masz w rozpisce — porcja jest dopasowana do Twojego celu na ten dzień."
-          ],
-          "dobitka": {
-            "nazwa": "Skyr naturalny (kubek 150 g)",
-            "ile": "1 kubek (150 g)",
-            "g": 150,
-            "n": 1,
-            "kcal": 96,
-            "bialko": 17.2,
-            "tluszcz": 0.3,
-            "wegle": 5.7
-          }
+          ]
         },
         {
           "czas": "16:00",
@@ -3369,81 +3559,52 @@
         }
       ],
       "makra": {
-        "kcal": 2316,
-        "bialko": 161,
-        "tluszcz": 99,
-        "wegle": 188
+        "kcal": 2590,
+        "bialko": 154,
+        "tluszcz": 102,
+        "wegle": 257
       },
-      "dobitka": 1,
+      "dobitka": 0,
+      "dodatek_w": [
+        [
+          "banan",
+          1
+        ],
+        [
+          "chleb",
+          2
+        ],
+        [
+          "miod",
+          1
+        ]
+      ],
       "poza_planem": [],
       "lzejszy": false,
       "cel": {
-        "kcal": 2200,
-        "bialko": 165,
-        "tluszcz": 80,
-        "wegle": 205
+        "kcal": 2600,
+        "bialko": 150,
+        "tluszcz": 90,
+        "wegle": 297
       },
+      "slowo": "Sylwetka to dowód na to, że dotrzymujesz słowa samemu sobie.",
+      "faza": "Przed startem",
+      "tydzien": 0,
       "nadwyzka": 0,
       "odhaczone": {},
       "waga": null,
       "kroki": null,
       "serie": [],
       "trening": {
-        "rodzaj": "glowny",
+        "rodzaj": "przedstart",
         "trening": {
-          "id": "w_pull",
-          "nazwa": "GŁÓWNY B — Plecy i biceps",
-          "czas_min": 60,
-          "rozgrzewka": [
-            "Trenujesz zaraz po wstaniu, na czczo — rozgrzewki NIE skracaj, to nie jest miejsce na oszczędzanie czasu.",
-            "8 min: 30 przysiadów bez ciężaru, krążenia ramion i bioder, 20 pompek.",
-            "Wiosłowanie samą sztangą x15"
-          ],
-          "cwiczenia": [
-            {
-              "nazwa": "Martwy ciąg",
-              "serie": 4,
-              "powt": "5-6",
-              "przerwa": "3 min",
-              "wskazowka": "Plecy proste jak deska. Jak zaczynają się garbić — koniec serii, nawet jeśli miałeś zrobić więcej."
-            },
-            {
-              "nazwa": "Wiosłowanie sztangą w opadzie",
-              "serie": 4,
-              "powt": "8-10",
-              "przerwa": "2 min",
-              "wskazowka": "Tułów prawie równolegle do podłogi. Ciągniesz do brzucha, nie do klatki."
-            },
-            {
-              "nazwa": "Podciąganie na drążku racka",
-              "serie": 3,
-              "powt": "max (cel 8)",
-              "przerwa": "2 min",
-              "wskazowka": "Jak nie wyrabiasz — negatywy: wskakujesz na górę i schodzisz 4 sekundy."
-            },
-            {
-              "nazwa": "Wiosłowanie jednorącz hantlą",
-              "serie": 3,
-              "powt": "10-12",
-              "przerwa": "90 s",
-              "wskazowka": "Kolano i ręka na ławce. Nie skręcaj tułowia, żeby dociągnąć — to oszukiwanie."
-            },
-            {
-              "nazwa": "Uginanie ramion EZ",
-              "serie": 3,
-              "powt": "10-12",
-              "przerwa": "75 s",
-              "wskazowka": "Łokcie przy tułowiu. Bez bujania biodrami."
-            },
-            {
-              "nazwa": "Uginanie młotkowe hantlami",
-              "serie": 2,
-              "powt": "12-15",
-              "przerwa": "60 s",
-              "wskazowka": "Chwyt neutralny, buduje grubość ramienia."
-            }
-          ],
-          "finisz": "3 min rozciągania pleców i bicepsów. Zapisz ciężary."
+          "nazwa": "Przed startem — gojenie",
+          "zasada": "Plan treningowy zaczyna się 17 września. Do tego czasu wracasz do zdrowia po zabiegu: bez treningu, bez deficytu, dużo snu.",
+          "mikro": [
+            "Spokojny spacer, jeśli czujesz się dobrze",
+            "Dużo płynów",
+            "Zakup gum oporowych na start"
+          ]
         }
       }
     },
@@ -3475,10 +3636,10 @@
           "posilek_id": "q_kanapki_jajko",
           "porcja": 1.0,
           "makra": {
-            "kcal": 497,
-            "bialko": 31,
-            "tluszcz": 24,
-            "wegle": 36
+            "kcal": 838,
+            "bialko": 38,
+            "tluszcz": 26,
+            "wegle": 110
           },
           "skladniki": [
             {
@@ -3492,12 +3653,13 @@
             },
             {
               "nazwa": "Chleb pszenny (zwykły biały)",
-              "ile": "2 kromki (70 g)",
-              "g": 70,
-              "kcal": 175,
-              "bialko": 5.6,
-              "tluszcz": 2.1,
-              "wegle": 32.9
+              "ile": "4 kromki (140 g), w tym +2 kromki",
+              "g": 140,
+              "kcal": 350,
+              "bialko": 11.2,
+              "tluszcz": 4.2,
+              "wegle": 65.8,
+              "dodatek": true
             },
             {
               "nazwa": "Ser żółty w plastrach",
@@ -3525,6 +3687,26 @@
               "bialko": 0.3,
               "tluszcz": 0.1,
               "wegle": 1.3
+            },
+            {
+              "nazwa": "Banan",
+              "ile": "+ 1 szt. (120 g)",
+              "g": 120,
+              "kcal": 106,
+              "bialko": 1.3,
+              "tluszcz": 0.4,
+              "wegle": 24.2,
+              "dodatek": true
+            },
+            {
+              "nazwa": "Miód",
+              "ile": "+ 1 łyżka (20 g)",
+              "g": 20,
+              "kcal": 61,
+              "bialko": 0.1,
+              "tluszcz": 0.0,
+              "wegle": 16.4,
+              "dodatek": true
             }
           ],
           "jak": "przepis",
@@ -3533,7 +3715,8 @@
             "Jajka wrzuć do wrzącej wody i gotuj 9 min, potem zalej zimną wodą — same się obiorą.",
             "Chleb posmaruj cienko musztardą, połóż ser, na to plastry jajka.",
             "Posól, popieprz, ogórek kiszony w plastrach na wierzch. Do boxa zawijasz w folię.",
-            "Ilości każdego składnika masz w rozpisce — porcja jest dopasowana do Twojego celu na ten dzień."
+            "Ilości każdego składnika masz w rozpisce — porcja jest dopasowana do Twojego celu na ten dzień.",
+            "Do tego dodatek węglowy: banan 1 szt., chleb pszenny 2 kromki, miód 1 łyżka. Zjedz obok — to paliwo na trening i regenerację, bez niego dzień nie dobija węglowodanów."
           ]
         },
         {
@@ -3814,35 +3997,51 @@
         }
       ],
       "makra": {
-        "kcal": 2220,
-        "bialko": 150,
-        "tluszcz": 95,
-        "wegle": 177
+        "kcal": 2561,
+        "bialko": 157,
+        "tluszcz": 97,
+        "wegle": 251
       },
       "dobitka": 0,
+      "dodatek_w": [
+        [
+          "banan",
+          1
+        ],
+        [
+          "chleb",
+          2
+        ],
+        [
+          "miod",
+          1
+        ]
+      ],
       "poza_planem": [],
       "lzejszy": false,
       "cel": {
-        "kcal": 2200,
-        "bialko": 165,
-        "tluszcz": 80,
-        "wegle": 205
+        "kcal": 2600,
+        "bialko": 150,
+        "tluszcz": 90,
+        "wegle": 297
       },
+      "slowo": "Dzień zmiany. Nie trenujesz — twoim treningiem jest jedzenie z boxów o czasie.",
+      "faza": "Przed startem",
+      "tydzien": 0,
       "nadwyzka": 0,
       "odhaczone": {},
       "waga": null,
       "kroki": null,
       "serie": [],
       "trening": {
-        "rodzaj": "zmiana",
+        "rodzaj": "przedstart",
         "trening": {
-          "nazwa": "Dzień zmiany — bez treningu",
-          "zasada": "Na 24h służbie nie trenujesz. Zamiast tego: co 2-3 godziny wstań i przejdź się 5 minut, zrób 10 przysiadów i rozciągnij kark. To nie jest trening, to profilaktyka pleców przy staniu i siedzeniu.",
+          "nazwa": "Przed startem — gojenie",
+          "zasada": "Plan treningowy zaczyna się 17 września. Do tego czasu wracasz do zdrowia po zabiegu: bez treningu, bez deficytu, dużo snu.",
           "mikro": [
-            "10 przysiadów bez ciężaru",
-            "10 krążeń ramion w tył",
-            "30 s rozciągania zginaczy bioder na każdą nogę",
-            "Odchylenie głowy w tył i na boki po 15 s"
+            "Spokojny spacer, jeśli czujesz się dobrze",
+            "Dużo płynów",
+            "Zakup gum oporowych na start"
           ]
         }
       }
@@ -3906,10 +4105,10 @@
           "posilek_id": "q_skyr",
           "porcja": 1.0,
           "makra": {
-            "kcal": 397,
-            "bialko": 40,
-            "tluszcz": 9,
-            "wegle": 37
+            "kcal": 844,
+            "bialko": 48,
+            "tluszcz": 12,
+            "wegle": 135
           },
           "skladniki": [
             {
@@ -3923,12 +4122,13 @@
             },
             {
               "nazwa": "Banan",
-              "ile": "1 szt. (120 g)",
-              "g": 120,
-              "kcal": 106,
-              "bialko": 1.3,
-              "tluszcz": 0.4,
-              "wegle": 24.2
+              "ile": "3 szt. (360 g), w tym +2 szt.",
+              "g": 360,
+              "kcal": 317,
+              "bialko": 3.9,
+              "tluszcz": 1.1,
+              "wegle": 72.7,
+              "dodatek": true
             },
             {
               "nazwa": "Masło orzechowe 100%",
@@ -3938,6 +4138,26 @@
               "bialko": 4.2,
               "tluszcz": 8.2,
               "wegle": 1.8
+            },
+            {
+              "nazwa": "Chleb pszenny (zwykły biały)",
+              "ile": "+ 2 kromki (70 g)",
+              "g": 70,
+              "kcal": 175,
+              "bialko": 5.6,
+              "tluszcz": 2.1,
+              "wegle": 32.9,
+              "dodatek": true
+            },
+            {
+              "nazwa": "Miód",
+              "ile": "+ 1 łyżka (20 g)",
+              "g": 20,
+              "kcal": 61,
+              "bialko": 0.1,
+              "tluszcz": 0.0,
+              "wegle": 16.4,
+              "dodatek": true
             }
           ],
           "jak": "przepis",
@@ -3946,7 +4166,8 @@
             "Skyr do miski lub pojemnika.",
             "Banan w plastry, łyżka masła orzechowego na wierzch. Wymieszaj albo zostaw warstwami.",
             "Na zmianę: wszystko do zakręcanego pojemnika, banan dorzucasz na miejscu żeby nie sczerniał.",
-            "Ilości każdego składnika masz w rozpisce — porcja jest dopasowana do Twojego celu na ten dzień."
+            "Ilości każdego składnika masz w rozpisce — porcja jest dopasowana do Twojego celu na ten dzień.",
+            "Do tego dodatek węglowy: banan 2 szt., chleb pszenny 2 kromki, miód 1 łyżka. Zjedz obok — to paliwo na trening i regenerację, bez niego dzień nie dobija węglowodanów."
           ]
         },
         {
@@ -3974,11 +4195,11 @@
         },
         {
           "czas": "13:30",
-          "tytul": "TRENING — pierwsza rzecz dnia",
-          "ikona": "🏋️",
-          "ping": true,
-          "akcja": "trening_krotki",
-          "opis": "35 minut, ciężary 80% normy. Zaczynasz dzień od zrobionej roboty, zanim cokolwiek zdąży w tym przeszkodzić."
+          "tytul": "Przed startem — bez treningu",
+          "ikona": "🩹",
+          "ping": false,
+          "akcja": null,
+          "opis": "Plan treningowy rusza 2026-09-17. Dziś tylko regeneracja."
         },
         {
           "czas": "14:30",
@@ -3991,10 +4212,10 @@
           "posilek_id": "q_tortilla",
           "porcja": 0.8,
           "makra": {
-            "kcal": 576,
-            "bialko": 43,
+            "kcal": 480,
+            "bialko": 26,
             "tluszcz": 25,
-            "wegle": 42
+            "wegle": 36
           },
           "skladniki": [
             {
@@ -4060,17 +4281,7 @@
             "Na każdą wyłóż jajecznicę, posyp serem, dorzuć sałatę i plastry pomidora.",
             "Zawiń boki do środka i zroluj. Na suchej patelni podsmaż 1 min z każdej strony — wtedy trzyma się kupy.",
             "Ilości każdego składnika masz w rozpisce — porcja jest dopasowana do Twojego celu na ten dzień."
-          ],
-          "dobitka": {
-            "nazwa": "Skyr naturalny (kubek 150 g)",
-            "ile": "1 kubek (150 g)",
-            "g": 150,
-            "n": 1,
-            "kcal": 96,
-            "bialko": 17.2,
-            "tluszcz": 0.3,
-            "wegle": 5.7
-          }
+          ]
         },
         {
           "czas": "15:15",
@@ -4284,67 +4495,52 @@
         }
       ],
       "makra": {
-        "kcal": 2233,
-        "bialko": 160,
-        "tluszcz": 95,
-        "wegle": 169
+        "kcal": 2584,
+        "bialko": 151,
+        "tluszcz": 98,
+        "wegle": 261
       },
-      "dobitka": 1,
+      "dobitka": 0,
+      "dodatek_w": [
+        [
+          "banan",
+          2
+        ],
+        [
+          "chleb",
+          2
+        ],
+        [
+          "miod",
+          1
+        ]
+      ],
       "poza_planem": [],
       "lzejszy": false,
       "cel": {
-        "kcal": 2200,
-        "bialko": 165,
-        "tluszcz": 80,
-        "wegle": 205
+        "kcal": 2600,
+        "bialko": 150,
+        "tluszcz": 90,
+        "wegle": 297
       },
+      "slowo": "Nie musisz dziś wygrać roku. Wygraj godzinę.",
+      "faza": "Przed startem",
+      "tydzien": 0,
       "nadwyzka": 0,
       "odhaczone": {},
       "waga": null,
       "kroki": null,
       "serie": [],
       "trening": {
-        "rodzaj": "krotki",
+        "rodzaj": "przedstart",
         "trening": {
-          "id": "w_fbw_a",
-          "nazwa": "KRÓTKI A — Full body (dzień po zmianie)",
-          "czas_min": 35,
-          "rozgrzewka": [
-            "Po 24 h służby, ok. 4,5 h snu i na czczo. Rozgrzewka 8 min, bez pośpiechu.",
-            "30 przysiadów bez ciężaru, krążenia ramion i bioder, 15 pompek, martwy zwis 2×20 s.",
-            "Pierwszą serię roboczą poprzedź serią na 50% ciężaru."
-          ],
-          "cwiczenia": [
-            {
-              "nazwa": "Przysiad ze sztangą",
-              "serie": 3,
-              "powt": "8",
-              "przerwa": "2 min",
-              "wskazowka": "Ciężar 80% tego, co dajesz w dniu wolnym. Dziś chodzi o utrzymanie, nie o rekord."
-            },
-            {
-              "nazwa": "Wyciskanie sztangi leżąc",
-              "serie": 3,
-              "powt": "8",
-              "przerwa": "2 min",
-              "wskazowka": "To samo — 80% i zostaw 2 powtórzenia w zapasie."
-            },
-            {
-              "nazwa": "Wiosłowanie sztangą",
-              "serie": 3,
-              "powt": "10",
-              "przerwa": "90 s",
-              "wskazowka": "Kontrolowany opust, bez szarpania."
-            },
-            {
-              "nazwa": "Plank",
-              "serie": 2,
-              "powt": "45 s",
-              "przerwa": "45 s",
-              "wskazowka": "Domykasz i idziesz jeść."
-            }
-          ],
-          "finisz": "Kręci Ci się w głowie albo ciężar leci — kończysz. Po nieprzespanej dobie to normalne i nie jest to porażka. Zaraz po treningu jesz pierwszy porządny posiłek dnia."
+          "nazwa": "Przed startem — gojenie",
+          "zasada": "Plan treningowy zaczyna się 17 września. Do tego czasu wracasz do zdrowia po zabiegu: bez treningu, bez deficytu, dużo snu.",
+          "mikro": [
+            "Spokojny spacer, jeśli czujesz się dobrze",
+            "Dużo płynów",
+            "Zakup gum oporowych na start"
+          ]
         }
       }
     },
@@ -4367,11 +4563,11 @@
         },
         {
           "czas": "08:30",
-          "tytul": "TRENING GŁÓWNY — pierwsza rzecz dnia",
-          "ikona": "🏋️",
-          "ping": true,
-          "akcja": "trening_glowny",
-          "opis": "Najlepsza sesja w cyklu: wyspany, po dniu normalnego jedzenia. Tu bijesz rekordy. Wchodzisz i robisz, zero telefonu przed."
+          "tytul": "Przed startem — bez treningu",
+          "ikona": "🩹",
+          "ping": false,
+          "akcja": null,
+          "opis": "Plan treningowy rusza 2026-09-17. Dziś tylko regeneracja."
         },
         {
           "czas": "09:45",
@@ -4382,49 +4578,50 @@
           "opis": "Pierwszy posiłek dnia, zaraz po sztandze.",
           "posilek": "Twarożek ze szczypiorkiem + pieczywo",
           "posilek_id": "q_twarog",
-          "porcja": 1.1,
+          "porcja": 0.8,
           "makra": {
-            "kcal": 528,
-            "bialko": 49,
-            "tluszcz": 16,
-            "wegle": 46
+            "kcal": 912,
+            "bialko": 48,
+            "tluszcz": 17,
+            "wegle": 143
           },
           "skladniki": [
             {
               "nazwa": "Twaróg półtłusty",
-              "ile": "220 g",
-              "g": 220,
-              "kcal": 293,
-              "bialko": 41.1,
-              "tluszcz": 10.3,
-              "wegle": 8.1
+              "ile": "160 g",
+              "g": 160,
+              "kcal": 213,
+              "bialko": 29.9,
+              "tluszcz": 7.5,
+              "wegle": 5.9
             },
             {
               "nazwa": "Śmietana 18%",
-              "ile": "20 ml",
-              "g": 20,
-              "kcal": 37,
-              "bialko": 0.5,
-              "tluszcz": 3.6,
-              "wegle": 0.7
+              "ile": "16 ml",
+              "g": 16,
+              "kcal": 29,
+              "bialko": 0.4,
+              "tluszcz": 2.9,
+              "wegle": 0.5
             },
             {
               "nazwa": "Szczypiorek",
-              "ile": "2 łyżki (10 g)",
-              "g": 10,
-              "kcal": 3,
-              "bialko": 0.3,
+              "ile": "8 g",
+              "g": 8,
+              "kcal": 2,
+              "bialko": 0.2,
               "tluszcz": 0.1,
-              "wegle": 0.2
+              "wegle": 0.1
             },
             {
               "nazwa": "Chleb pszenny (zwykły biały)",
-              "ile": "2 kromki (70 g)",
-              "g": 70,
-              "kcal": 175,
-              "bialko": 5.6,
-              "tluszcz": 2.1,
-              "wegle": 32.9
+              "ile": "6 kromek (210 g), w tym +4 kromki",
+              "g": 210,
+              "kcal": 525,
+              "bialko": 16.8,
+              "tluszcz": 6.3,
+              "wegle": 98.7,
+              "dodatek": true
             },
             {
               "nazwa": "Ogórek długi",
@@ -4434,6 +4631,16 @@
               "bialko": 1.0,
               "tluszcz": 0.2,
               "wegle": 4.3
+            },
+            {
+              "nazwa": "Miód",
+              "ile": "+ 2 łyżki (40 g)",
+              "g": 40,
+              "kcal": 122,
+              "bialko": 0.1,
+              "tluszcz": 0.0,
+              "wegle": 32.8,
+              "dodatek": true
             }
           ],
           "jak": "przepis",
@@ -4442,7 +4649,8 @@
             "Twaróg rozgnieć widelcem w miseczce ze śmietaną — będzie kremowy, a nie suchy.",
             "Wsyp posiekany szczypiorek, sól, pieprz, wymieszaj.",
             "Ogórek w plastry. Jeść z chlebem. Do boxa: twarożek do zakręcanego pojemnika, chleb osobno.",
-            "Ilości każdego składnika masz w rozpisce — porcja jest dopasowana do Twojego celu na ten dzień."
+            "Ilości każdego składnika masz w rozpisce — porcja jest dopasowana do Twojego celu na ten dzień.",
+            "Do tego dodatek węglowy: chleb pszenny 4 kromki, miód 2 łyżki. Zjedz obok — to paliwo na trening i regenerację, bez niego dzień nie dobija węglowodanów."
           ]
         },
         {
@@ -4454,40 +4662,40 @@
           "opis": "",
           "posilek": "Box: sałatka jajeczna z kukurydzą",
           "posilek_id": "q_jajka_kukurydza",
-          "porcja": 0.8,
+          "porcja": 1.0,
           "makra": {
-            "kcal": 473,
-            "bialko": 43,
-            "tluszcz": 15,
-            "wegle": 37
+            "kcal": 483,
+            "bialko": 35,
+            "tluszcz": 21,
+            "wegle": 34
           },
           "skladniki": [
             {
               "nazwa": "Jaja",
-              "ile": "2 szt. (110 g)",
-              "g": 110,
-              "kcal": 157,
-              "bialko": 13.9,
-              "tluszcz": 10.5,
-              "wegle": 0.8
+              "ile": "3 szt. (165 g)",
+              "g": 165,
+              "kcal": 236,
+              "bialko": 20.8,
+              "tluszcz": 15.7,
+              "wegle": 1.2
             },
             {
               "nazwa": "Kukurydza konserwowa",
-              "ile": "80 g",
-              "g": 80,
-              "kcal": 66,
-              "bialko": 2.2,
-              "tluszcz": 1.0,
-              "wegle": 10.4
+              "ile": "100 g",
+              "g": 100,
+              "kcal": 82,
+              "bialko": 2.7,
+              "tluszcz": 1.3,
+              "wegle": 13.0
             },
             {
               "nazwa": "Jogurt grecki 2%",
-              "ile": "65 g",
-              "g": 65,
-              "kcal": 47,
-              "bialko": 6.4,
-              "tluszcz": 1.3,
-              "wegle": 2.0
+              "ile": "80 g",
+              "g": 80,
+              "kcal": 58,
+              "bialko": 7.9,
+              "tluszcz": 1.6,
+              "wegle": 2.5
             },
             {
               "nazwa": "Musztarda",
@@ -4500,12 +4708,12 @@
             },
             {
               "nazwa": "Szczypiorek",
-              "ile": "8 g",
-              "g": 8,
-              "kcal": 2,
-              "bialko": 0.2,
+              "ile": "2 łyżki (10 g)",
+              "g": 10,
+              "kcal": 3,
+              "bialko": 0.3,
               "tluszcz": 0.1,
-              "wegle": 0.1
+              "wegle": 0.2
             },
             {
               "nazwa": "Chleb pszenny (zwykły biały)",
@@ -4525,17 +4733,7 @@
             "Szczypiorek, sól, pieprz. Do pojemnika, chleb osobno.",
             "Trzyma się w lodówce 2 dni — możesz zrobić podwójną porcję w dniu gotowania.",
             "Ilości każdego składnika masz w rozpisce — porcja jest dopasowana do Twojego celu na ten dzień."
-          ],
-          "dobitka": {
-            "nazwa": "Skyr naturalny (kubek 150 g)",
-            "ile": "1 kubek (150 g)",
-            "g": 150,
-            "n": 1,
-            "kcal": 96,
-            "bialko": 17.2,
-            "tluszcz": 0.3,
-            "wegle": 5.7
-          }
+          ]
         },
         {
           "czas": "16:00",
@@ -4738,81 +4936,48 @@
         }
       ],
       "makra": {
-        "kcal": 2208,
-        "bialko": 166,
-        "tluszcz": 95,
-        "wegle": 158
+        "kcal": 2602,
+        "bialko": 157,
+        "tluszcz": 102,
+        "wegle": 252
       },
-      "dobitka": 1,
+      "dobitka": 0,
+      "dodatek_w": [
+        [
+          "chleb",
+          4
+        ],
+        [
+          "miod",
+          2
+        ]
+      ],
       "poza_planem": [],
       "lzejszy": false,
       "cel": {
-        "kcal": 2200,
-        "bialko": 165,
-        "tluszcz": 80,
-        "wegle": 205
+        "kcal": 2600,
+        "bialko": 150,
+        "tluszcz": 90,
+        "wegle": 297
       },
+      "slowo": "Zero to jedyny wynik, którego nie wolno ci dziś zrobić. Wszystko powyżej zera się liczy.",
+      "faza": "Przed startem",
+      "tydzien": 0,
       "nadwyzka": 0,
       "odhaczone": {},
       "waga": null,
       "kroki": null,
       "serie": [],
       "trening": {
-        "rodzaj": "glowny",
+        "rodzaj": "przedstart",
         "trening": {
-          "id": "w_nogi",
-          "nazwa": "GŁÓWNY C — Nogi i brzuch",
-          "czas_min": 55,
-          "rozgrzewka": [
-            "Trenujesz zaraz po wstaniu, na czczo — rozgrzewki NIE skracaj, to nie jest miejsce na oszczędzanie czasu.",
-            "8 min: 30 przysiadów bez ciężaru, krążenia ramion i bioder, 20 pompek.",
-            "Przysiad sama sztanga x15, potem 50% x8"
-          ],
-          "cwiczenia": [
-            {
-              "nazwa": "Przysiad ze sztangą (w racku, z bolcami)",
-              "serie": 4,
-              "powt": "6-8",
-              "przerwa": "3 min",
-              "wskazowka": "Bolce ustawione na wysokości dołu ruchu — trenujesz sam, to jest obowiązkowe."
-            },
-            {
-              "nazwa": "Rumuński martwy ciąg",
-              "serie": 3,
-              "powt": "8-10",
-              "przerwa": "2 min",
-              "wskazowka": "Kolana prawie proste, biodra jadą do tyłu. Poczujesz ciągnięcie z tyłu uda — o to chodzi."
-            },
-            {
-              "nazwa": "Wykroki chodzone z hantlami",
-              "serie": 3,
-              "powt": "10 na nogę",
-              "przerwa": "90 s",
-              "wskazowka": "Długi krok. Krótki krok robi z tego ćwiczenie na kolana."
-            },
-            {
-              "nazwa": "Wspięcia na palce z hantlami",
-              "serie": 3,
-              "powt": "15-20",
-              "przerwa": "60 s",
-              "wskazowka": "Pełny zakres, sekunda przytrzymania na górze."
-            },
-            {
-              "nazwa": "Plank",
-              "serie": 3,
-              "powt": "45-60 s",
-              "przerwa": "45 s",
-              "wskazowka": "Pośladki napięte, biodra nie lecą w dół ani w górę."
-            },
-            {
-              "nazwa": "Unoszenie nóg w zwisie albo leżąc",
-              "serie": 3,
-              "powt": "12-15",
-              "przerwa": "60 s",
-              "wskazowka": "Ruch z dołu brzucha, nie z bioder. Wolno w dół."
-            }
-          ],
-          "finisz": "5 min rozciągania nóg. Nogi po 24h stania na zmianie lubią to szczególnie."
+          "nazwa": "Przed startem — gojenie",
+          "zasada": "Plan treningowy zaczyna się 17 września. Do tego czasu wracasz do zdrowia po zabiegu: bez treningu, bez deficytu, dużo snu.",
+          "mikro": [
+            "Spokojny spacer, jeśli czujesz się dobrze",
+            "Dużo płynów",
+            "Zakup gum oporowych na start"
+          ]
         }
       }
     },
@@ -4844,10 +5009,10 @@
           "posilek_id": "q_twarog_banan",
           "porcja": 0.8,
           "makra": {
-            "kcal": 430,
-            "bialko": 31,
-            "tluszcz": 13,
-            "wegle": 49
+            "kcal": 902,
+            "bialko": 42,
+            "tluszcz": 17,
+            "wegle": 148
           },
           "skladniki": [
             {
@@ -4870,12 +5035,13 @@
             },
             {
               "nazwa": "Miód",
-              "ile": "1 łyżka (20 g)",
-              "g": 20,
-              "kcal": 61,
-              "bialko": 0.1,
+              "ile": "3 łyżki (60 g), w tym +2 łyżki",
+              "g": 60,
+              "kcal": 183,
+              "bialko": 0.2,
               "tluszcz": 0.0,
-              "wegle": 16.4
+              "wegle": 49.2,
+              "dodatek": true
             },
             {
               "nazwa": "Orzechy / migdały",
@@ -4894,6 +5060,16 @@
               "bialko": 1.3,
               "tluszcz": 0.8,
               "wegle": 1.9
+            },
+            {
+              "nazwa": "Chleb pszenny (zwykły biały)",
+              "ile": "+ 4 kromki (140 g)",
+              "g": 140,
+              "kcal": 350,
+              "bialko": 11.2,
+              "tluszcz": 4.2,
+              "wegle": 65.8,
+              "dodatek": true
             }
           ],
           "jak": "przepis",
@@ -4902,7 +5078,8 @@
             "Twaróg rozgnieć widelcem z mlekiem — zrobi się kremowy.",
             "Banan w plastry, miód, orzechy na wierzch.",
             "Wersja na zmianę: wszystko do zakręcanego pojemnika.",
-            "Ilości każdego składnika masz w rozpisce — porcja jest dopasowana do Twojego celu na ten dzień."
+            "Ilości każdego składnika masz w rozpisce — porcja jest dopasowana do Twojego celu na ten dzień.",
+            "Do tego dodatek węglowy: chleb pszenny 4 kromki, miód 2 łyżki. Zjedz obok — to paliwo na trening i regenerację, bez niego dzień nie dobija węglowodanów."
           ]
         },
         {
@@ -4928,31 +5105,31 @@
           "opis": "Z boxa. Nie odkładaj — po czterech godzinach głodu zawsze dojadasz byle czym z automatu.",
           "posilek": "Jogurt grecki z orzechami i miodem",
           "posilek_id": "q_jogurt_orzechy",
-          "porcja": 1.0,
+          "porcja": 0.8,
           "makra": {
-            "kcal": 557,
-            "bialko": 50,
-            "tluszcz": 15,
-            "wegle": 53
+            "kcal": 398,
+            "bialko": 27,
+            "tluszcz": 12,
+            "wegle": 44
           },
           "skladniki": [
             {
               "nazwa": "Jogurt grecki 2%",
-              "ile": "300 g",
-              "g": 300,
-              "kcal": 219,
-              "bialko": 29.7,
-              "tluszcz": 6.0,
-              "wegle": 9.3
+              "ile": "240 g",
+              "g": 240,
+              "kcal": 175,
+              "bialko": 23.8,
+              "tluszcz": 4.8,
+              "wegle": 7.4
             },
             {
               "nazwa": "Orzechy / migdały",
-              "ile": "15 g",
-              "g": 15,
-              "kcal": 96,
-              "bialko": 2.9,
-              "tluszcz": 8.5,
-              "wegle": 1.5
+              "ile": "12 g",
+              "g": 12,
+              "kcal": 77,
+              "bialko": 2.3,
+              "tluszcz": 6.8,
+              "wegle": 1.2
             },
             {
               "nazwa": "Miód",
@@ -4979,17 +5156,7 @@
             "Jogurt do pojemnika, wsyp orzechy, polej łyżką miodu.",
             "Jabłko w kostkę na wierzch. Gotowe.",
             "Ilości każdego składnika masz w rozpisce — porcja jest dopasowana do Twojego celu na ten dzień."
-          ],
-          "dobitka": {
-            "nazwa": "Skyr naturalny (kubek 150 g)",
-            "ile": "1 kubek (150 g)",
-            "g": 150,
-            "n": 1,
-            "kcal": 96,
-            "bialko": 17.2,
-            "tluszcz": 0.3,
-            "wegle": 5.7
-          }
+          ]
         },
         {
           "czas": "12:00",
@@ -5103,12 +5270,12 @@
           "opis": "Ostatni posiłek na zmianie. Lekki, żeby nie leżeć z pełnym brzuchem przed pierwszą drzemką.",
           "posilek": "Box: serek wiejski + jajka na twardo + ogórki",
           "posilek_id": "q_serek_box",
-          "porcja": 0.8,
+          "porcja": 1.0,
           "makra": {
-            "kcal": 450,
-            "bialko": 39,
-            "tluszcz": 22,
-            "wegle": 23
+            "kcal": 533,
+            "bialko": 46,
+            "tluszcz": 27,
+            "wegle": 24
           },
           "skladniki": [
             {
@@ -5122,21 +5289,21 @@
             },
             {
               "nazwa": "Jaja",
-              "ile": "2 szt. (110 g)",
-              "g": 110,
-              "kcal": 157,
-              "bialko": 13.9,
-              "tluszcz": 10.5,
-              "wegle": 0.8
+              "ile": "3 szt. (165 g)",
+              "g": 165,
+              "kcal": 236,
+              "bialko": 20.8,
+              "tluszcz": 15.7,
+              "wegle": 1.2
             },
             {
               "nazwa": "Ogórek kiszony",
-              "ile": "100 g",
-              "g": 98,
-              "kcal": 12,
-              "bialko": 0.5,
-              "tluszcz": 0.2,
-              "wegle": 1.9
+              "ile": "2 szt. (130 g)",
+              "g": 130,
+              "kcal": 16,
+              "bialko": 0.7,
+              "tluszcz": 0.3,
+              "wegle": 2.6
             },
             {
               "nazwa": "Chleb pszenny (zwykły biały)",
@@ -5174,35 +5341,47 @@
         }
       ],
       "makra": {
-        "kcal": 2200,
-        "bialko": 166,
-        "tluszcz": 87,
-        "wegle": 179
+        "kcal": 2596,
+        "bialko": 161,
+        "tluszcz": 93,
+        "wegle": 270
       },
-      "dobitka": 1,
+      "dobitka": 0,
+      "dodatek_w": [
+        [
+          "chleb",
+          4
+        ],
+        [
+          "miod",
+          2
+        ]
+      ],
       "poza_planem": [],
       "lzejszy": false,
       "cel": {
-        "kcal": 2200,
-        "bialko": 165,
-        "tluszcz": 80,
-        "wegle": 205
+        "kcal": 2600,
+        "bialko": 150,
+        "tluszcz": 90,
+        "wegle": 297
       },
+      "slowo": "Służba to test cierpliwości. Forma też. Jesteś w tym dobry.",
+      "faza": "Przed startem",
+      "tydzien": 0,
       "nadwyzka": 0,
       "odhaczone": {},
       "waga": null,
       "kroki": null,
       "serie": [],
       "trening": {
-        "rodzaj": "zmiana",
+        "rodzaj": "przedstart",
         "trening": {
-          "nazwa": "Dzień zmiany — bez treningu",
-          "zasada": "Na 24h służbie nie trenujesz. Zamiast tego: co 2-3 godziny wstań i przejdź się 5 minut, zrób 10 przysiadów i rozciągnij kark. To nie jest trening, to profilaktyka pleców przy staniu i siedzeniu.",
+          "nazwa": "Przed startem — gojenie",
+          "zasada": "Plan treningowy zaczyna się 17 września. Do tego czasu wracasz do zdrowia po zabiegu: bez treningu, bez deficytu, dużo snu.",
           "mikro": [
-            "10 przysiadów bez ciężaru",
-            "10 krążeń ramion w tył",
-            "30 s rozciągania zginaczy bioder na każdą nogę",
-            "Odchylenie głowy w tył i na boki po 15 s"
+            "Spokojny spacer, jeśli czujesz się dobrze",
+            "Dużo płynów",
+            "Zakup gum oporowych na start"
           ]
         }
       }
@@ -5264,31 +5443,31 @@
           "opis": "Coś lekkiego i białkowego. Na pusty żołądek gorzej zaśniesz, na pełny obudzisz się rozbity.",
           "posilek": "Twarożek ze szczypiorkiem + pieczywo",
           "posilek_id": "q_twarog",
-          "porcja": 0.9,
+          "porcja": 1.0,
           "makra": {
-            "kcal": 472,
-            "bialko": 41,
-            "tluszcz": 14,
-            "wegle": 45
+            "kcal": 965,
+            "bialko": 55,
+            "tluszcz": 19,
+            "wegle": 143
           },
           "skladniki": [
             {
               "nazwa": "Twaróg półtłusty",
-              "ile": "180 g",
-              "g": 180,
-              "kcal": 239,
-              "bialko": 33.7,
-              "tluszcz": 8.5,
-              "wegle": 6.7
+              "ile": "200 g",
+              "g": 200,
+              "kcal": 266,
+              "bialko": 37.4,
+              "tluszcz": 9.4,
+              "wegle": 7.4
             },
             {
               "nazwa": "Śmietana 18%",
-              "ile": "18 ml",
-              "g": 18,
-              "kcal": 33,
+              "ile": "20 ml",
+              "g": 20,
+              "kcal": 37,
               "bialko": 0.5,
-              "tluszcz": 3.2,
-              "wegle": 0.6
+              "tluszcz": 3.6,
+              "wegle": 0.7
             },
             {
               "nazwa": "Szczypiorek",
@@ -5301,21 +5480,32 @@
             },
             {
               "nazwa": "Chleb pszenny (zwykły biały)",
-              "ile": "2 kromki (70 g)",
-              "g": 70,
-              "kcal": 175,
-              "bialko": 5.6,
-              "tluszcz": 2.1,
-              "wegle": 32.9
+              "ile": "6 kromek (210 g), w tym +4 kromki",
+              "g": 210,
+              "kcal": 525,
+              "bialko": 16.8,
+              "tluszcz": 6.3,
+              "wegle": 98.7,
+              "dodatek": true
             },
             {
               "nazwa": "Ogórek długi",
-              "ile": "150 g",
-              "g": 150,
-              "kcal": 21,
-              "bialko": 1.0,
-              "tluszcz": 0.2,
-              "wegle": 4.3
+              "ile": "90 g",
+              "g": 90,
+              "kcal": 13,
+              "bialko": 0.6,
+              "tluszcz": 0.1,
+              "wegle": 2.6
+            },
+            {
+              "nazwa": "Miód",
+              "ile": "+ 2 łyżki (40 g)",
+              "g": 40,
+              "kcal": 122,
+              "bialko": 0.1,
+              "tluszcz": 0.0,
+              "wegle": 32.8,
+              "dodatek": true
             }
           ],
           "jak": "przepis",
@@ -5324,7 +5514,8 @@
             "Twaróg rozgnieć widelcem w miseczce ze śmietaną — będzie kremowy, a nie suchy.",
             "Wsyp posiekany szczypiorek, sól, pieprz, wymieszaj.",
             "Ogórek w plastry. Jeść z chlebem. Do boxa: twarożek do zakręcanego pojemnika, chleb osobno.",
-            "Ilości każdego składnika masz w rozpisce — porcja jest dopasowana do Twojego celu na ten dzień."
+            "Ilości każdego składnika masz w rozpisce — porcja jest dopasowana do Twojego celu na ten dzień.",
+            "Do tego dodatek węglowy: chleb pszenny 4 kromki, miód 2 łyżki. Zjedz obok — to paliwo na trening i regenerację, bez niego dzień nie dobija węglowodanów."
           ]
         },
         {
@@ -5352,11 +5543,11 @@
         },
         {
           "czas": "13:30",
-          "tytul": "TRENING — pierwsza rzecz dnia",
-          "ikona": "🏋️",
-          "ping": true,
-          "akcja": "trening_krotki",
-          "opis": "35 minut, ciężary 80% normy. Zaczynasz dzień od zrobionej roboty, zanim cokolwiek zdąży w tym przeszkodzić."
+          "tytul": "Przed startem — bez treningu",
+          "ikona": "🩹",
+          "ping": false,
+          "akcja": null,
+          "opis": "Plan treningowy rusza 2026-09-17. Dziś tylko regeneracja."
         },
         {
           "czas": "14:30",
@@ -5369,10 +5560,10 @@
           "posilek_id": "q_twarog_banan",
           "porcja": 0.8,
           "makra": {
-            "kcal": 526,
-            "bialko": 48,
+            "kcal": 430,
+            "bialko": 31,
             "tluszcz": 13,
-            "wegle": 55
+            "wegle": 49
           },
           "skladniki": [
             {
@@ -5428,17 +5619,7 @@
             "Banan w plastry, miód, orzechy na wierzch.",
             "Wersja na zmianę: wszystko do zakręcanego pojemnika.",
             "Ilości każdego składnika masz w rozpisce — porcja jest dopasowana do Twojego celu na ten dzień."
-          ],
-          "dobitka": {
-            "nazwa": "Skyr naturalny (kubek 150 g)",
-            "ile": "1 kubek (150 g)",
-            "g": 150,
-            "n": 1,
-            "kcal": 96,
-            "bialko": 17.2,
-            "tluszcz": 0.3,
-            "wegle": 5.7
-          }
+          ]
         },
         {
           "czas": "15:15",
@@ -5672,67 +5853,48 @@
         }
       ],
       "makra": {
-        "kcal": 2203,
-        "bialko": 163,
-        "tluszcz": 80,
-        "wegle": 197
+        "kcal": 2600,
+        "bialko": 160,
+        "tluszcz": 85,
+        "wegle": 289
       },
-      "dobitka": 1,
+      "dobitka": 0,
+      "dodatek_w": [
+        [
+          "chleb",
+          4
+        ],
+        [
+          "miod",
+          2
+        ]
+      ],
       "poza_planem": [],
       "lzejszy": false,
       "cel": {
-        "kcal": 2200,
-        "bialko": 165,
-        "tluszcz": 80,
-        "wegle": 205
+        "kcal": 2600,
+        "bialko": 150,
+        "tluszcz": 90,
+        "wegle": 297
       },
+      "slowo": "Kiedy nie wiesz, co zrobić — zrób następny punkt w planie.",
+      "faza": "Przed startem",
+      "tydzien": 0,
       "nadwyzka": 0,
       "odhaczone": {},
       "waga": null,
       "kroki": null,
       "serie": [],
       "trening": {
-        "rodzaj": "krotki",
+        "rodzaj": "przedstart",
         "trening": {
-          "id": "w_fbw_b",
-          "nazwa": "KRÓTKI B — Full body (dzień po zmianie)",
-          "czas_min": 35,
-          "rozgrzewka": [
-            "Po 24 h służby, ok. 4,5 h snu i na czczo. Rozgrzewka 8 min, bez pośpiechu.",
-            "30 przysiadów bez ciężaru, krążenia ramion i bioder, 15 pompek, martwy zwis 2×20 s.",
-            "Pierwszą serię roboczą poprzedź serią na 50% ciężaru."
-          ],
-          "cwiczenia": [
-            {
-              "nazwa": "Rumuński martwy ciąg",
-              "serie": 3,
-              "powt": "10",
-              "przerwa": "2 min",
-              "wskazowka": "Umiarkowany ciężar. Po dobie stania plecy są zmęczone — technika ważniejsza niż kilogramy."
-            },
-            {
-              "nazwa": "Wyciskanie hantli nad głowę",
-              "serie": 3,
-              "powt": "10",
-              "przerwa": "90 s",
-              "wskazowka": "Siedząc, z oparciem — stabilniej gdy jesteś zmęczony."
-            },
-            {
-              "nazwa": "Podciąganie albo wiosłowanie hantlą",
-              "serie": 3,
-              "powt": "8-12",
-              "przerwa": "90 s",
-              "wskazowka": "Wybierz to, na co masz dziś siłę."
-            },
-            {
-              "nazwa": "Uginanie EZ + pompki (superseria)",
-              "serie": 2,
-              "powt": "12 + max",
-              "przerwa": "75 s",
-              "wskazowka": "Jedno po drugim bez przerwy, potem odpoczynek."
-            }
-          ],
-          "finisz": "Kręci Ci się w głowie albo ciężar leci — kończysz. Po nieprzespanej dobie to normalne i nie jest to porażka. Zaraz po treningu jesz pierwszy porządny posiłek dnia."
+          "nazwa": "Przed startem — gojenie",
+          "zasada": "Plan treningowy zaczyna się 17 września. Do tego czasu wracasz do zdrowia po zabiegu: bez treningu, bez deficytu, dużo snu.",
+          "mikro": [
+            "Spokojny spacer, jeśli czujesz się dobrze",
+            "Dużo płynów",
+            "Zakup gum oporowych na start"
+          ]
         }
       }
     },
@@ -5755,11 +5917,11 @@
         },
         {
           "czas": "08:30",
-          "tytul": "TRENING GŁÓWNY — pierwsza rzecz dnia",
-          "ikona": "🏋️",
-          "ping": true,
-          "akcja": "trening_glowny",
-          "opis": "Najlepsza sesja w cyklu: wyspany, po dniu normalnego jedzenia. Tu bijesz rekordy. Wchodzisz i robisz, zero telefonu przed."
+          "tytul": "Przed startem — bez treningu",
+          "ikona": "🩹",
+          "ping": false,
+          "akcja": null,
+          "opis": "Plan treningowy rusza 2026-09-17. Dziś tylko regeneracja."
         },
         {
           "czas": "09:45",
@@ -5772,10 +5934,10 @@
           "posilek_id": "q_shakshuka",
           "porcja": 0.8,
           "makra": {
-            "kcal": 418,
-            "bialko": 21,
-            "tluszcz": 18,
-            "wegle": 39
+            "kcal": 865,
+            "bialko": 29,
+            "tluszcz": 21,
+            "wegle": 137
           },
           "skladniki": [
             {
@@ -5825,12 +5987,13 @@
             },
             {
               "nazwa": "Chleb pszenny (zwykły biały)",
-              "ile": "1 kromka (35 g)",
-              "g": 35,
-              "kcal": 88,
-              "bialko": 2.8,
-              "tluszcz": 1.0,
-              "wegle": 16.4
+              "ile": "3 kromki (105 g), w tym +2 kromki",
+              "g": 105,
+              "kcal": 263,
+              "bialko": 8.4,
+              "tluszcz": 3.1,
+              "wegle": 49.3,
+              "dodatek": true
             },
             {
               "nazwa": "Olej rzepakowy",
@@ -5840,6 +6003,26 @@
               "bialko": 0.0,
               "tluszcz": 5.5,
               "wegle": 0.0
+            },
+            {
+              "nazwa": "Banan",
+              "ile": "+ 2 szt. (240 g)",
+              "g": 240,
+              "kcal": 211,
+              "bialko": 2.6,
+              "tluszcz": 0.7,
+              "wegle": 48.5,
+              "dodatek": true
+            },
+            {
+              "nazwa": "Miód",
+              "ile": "+ 1 łyżka (20 g)",
+              "g": 20,
+              "kcal": 61,
+              "bialko": 0.1,
+              "tluszcz": 0.0,
+              "wegle": 16.4,
+              "dodatek": true
             }
           ],
           "jak": "przepis",
@@ -5849,7 +6032,8 @@
             "Dodaj czosnek, passatę, sól, pieprz, szczyptę słodkiej papryki. Gotuj 3 min.",
             "Zrób łyżką wgłębienie na każde jajko i wbij je.",
             "Przykryj i trzymaj 5 min na małym ogniu — białka mają się ściąć, żółtka zostać płynne. Maczasz chlebem prosto z patelni, zero talerzy.",
-            "Ilości każdego składnika masz w rozpisce — porcja jest dopasowana do Twojego celu na ten dzień."
+            "Ilości każdego składnika masz w rozpisce — porcja jest dopasowana do Twojego celu na ten dzień.",
+            "Do tego dodatek węglowy: banan 2 szt., chleb pszenny 2 kromki, miód 1 łyżka. Zjedz obok — to paliwo na trening i regenerację, bez niego dzień nie dobija węglowodanów."
           ]
         },
         {
@@ -6020,22 +6204,22 @@
           "opis": "",
           "posilek": "Deser: sernik na zimno w kubku (bez pieczenia)",
           "posilek_id": "d_sernik",
-          "porcja": 1.0,
+          "porcja": 0.8,
           "makra": {
-            "kcal": 572,
-            "bialko": 57,
-            "tluszcz": 16,
-            "wegle": 50
+            "kcal": 506,
+            "bialko": 49,
+            "tluszcz": 13,
+            "wegle": 48
           },
           "skladniki": [
             {
               "nazwa": "Twaróg półtłusty",
-              "ile": "200 g",
-              "g": 200,
-              "kcal": 266,
-              "bialko": 37.4,
-              "tluszcz": 9.4,
-              "wegle": 7.4
+              "ile": "160 g",
+              "g": 160,
+              "kcal": 213,
+              "bialko": 29.9,
+              "tluszcz": 7.5,
+              "wegle": 5.9
             },
             {
               "nazwa": "Skyr naturalny (kubek 150 g)",
@@ -6066,12 +6250,12 @@
             },
             {
               "nazwa": "Orzechy / migdały",
-              "ile": "10 g",
-              "g": 10,
-              "kcal": 64,
-              "bialko": 1.9,
-              "tluszcz": 5.7,
-              "wegle": 1.0
+              "ile": "8 g",
+              "g": 8,
+              "kcal": 51,
+              "bialko": 1.5,
+              "tluszcz": 4.6,
+              "wegle": 0.8
             }
           ],
           "jak": "przepis",
@@ -6116,20 +6300,37 @@
         }
       ],
       "makra": {
-        "kcal": 2215,
+        "kcal": 2596,
         "bialko": 166,
         "tluszcz": 81,
-        "wegle": 192
+        "wegle": 288
       },
       "dobitka": 0,
+      "dodatek_w": [
+        [
+          "banan",
+          2
+        ],
+        [
+          "chleb",
+          2
+        ],
+        [
+          "miod",
+          1
+        ]
+      ],
       "poza_planem": [],
       "lzejszy": false,
       "cel": {
-        "kcal": 2200,
-        "bialko": 165,
-        "tluszcz": 80,
-        "wegle": 205
+        "kcal": 2600,
+        "bialko": 150,
+        "tluszcz": 90,
+        "wegle": 297
       },
+      "slowo": "Twoja przewaga nad resztą: masz plan na każdą godzinę. Oni mają tylko chęci.",
+      "faza": "Przed startem",
+      "tydzien": 0,
       "nadwyzka": 0,
       "odhaczone": {},
       "waga": null,
@@ -6141,61 +6342,15 @@
       },
       "serie": [],
       "trening": {
-        "rodzaj": "glowny",
+        "rodzaj": "przedstart",
         "trening": {
-          "id": "w_push",
-          "nazwa": "GŁÓWNY A — Klatka, barki, triceps",
-          "czas_min": 60,
-          "rozgrzewka": [
-            "Trenujesz zaraz po wstaniu, na czczo — rozgrzewki NIE skracaj, to nie jest miejsce na oszczędzanie czasu.",
-            "8 min: 30 przysiadów bez ciężaru, krążenia ramion i bioder, 20 pompek.",
-            "Sztanga sama (20 kg) x15 na ławce, potem 50% ciężaru roboczego x8"
-          ],
-          "cwiczenia": [
-            {
-              "nazwa": "Wyciskanie sztangi leżąc",
-              "serie": 4,
-              "powt": "6-8",
-              "przerwa": "2-3 min",
-              "wskazowka": "Łopatki ściągnięte i wbite w ławkę przez cały ruch. Sztanga schodzi do dolnej części klatki, nie do szyi."
-            },
-            {
-              "nazwa": "Wyciskanie hantli nad głowę (siedząc)",
-              "serie": 3,
-              "powt": "8-10",
-              "przerwa": "2 min",
-              "wskazowka": "Nie odchylaj się do tyłu. Żebra ściągnięte w dół, pośladki napięte."
-            },
-            {
-              "nazwa": "Wyciskanie hantli na skos (ławka pod kątem)",
-              "serie": 3,
-              "powt": "10-12",
-              "przerwa": "90 s",
-              "wskazowka": "Kąt ok. 30 stopni. Wyżej i robi się z tego ćwiczenie na barki."
-            },
-            {
-              "nazwa": "Rozpiętki z hantlami",
-              "serie": 3,
-              "powt": "12-15",
-              "przerwa": "75 s",
-              "wskazowka": "Lekko ugięte łokcie, ruch szeroki. Ciężar mały — to ma rozciągać, nie dźwigać."
-            },
-            {
-              "nazwa": "Wyciskanie francuskie EZ",
-              "serie": 3,
-              "powt": "10-12",
-              "przerwa": "75 s",
-              "wskazowka": "Łokcie stoją w miejscu, rusza się tylko przedramię."
-            },
-            {
-              "nazwa": "Pompki do odmowy",
-              "serie": 2,
-              "powt": "max",
-              "przerwa": "60 s",
-              "wskazowka": "Na koniec, żeby dobić klatkę. Licz i zapisuj — to Twój wskaźnik postępu."
-            }
-          ],
-          "finisz": "3 min rozciągania klatki i barków. Zapisz ciężary w panelu."
+          "nazwa": "Przed startem — gojenie",
+          "zasada": "Plan treningowy zaczyna się 17 września. Do tego czasu wracasz do zdrowia po zabiegu: bez treningu, bez deficytu, dużo snu.",
+          "mikro": [
+            "Spokojny spacer, jeśli czujesz się dobrze",
+            "Dużo płynów",
+            "Zakup gum oporowych na start"
+          ]
         }
       }
     },
@@ -6227,20 +6382,21 @@
           "posilek_id": "q_kanapki_ser",
           "porcja": 0.8,
           "makra": {
-            "kcal": 402,
-            "bialko": 18,
-            "tluszcz": 18,
-            "wegle": 40
+            "kcal": 874,
+            "bialko": 29,
+            "tluszcz": 22,
+            "wegle": 139
           },
           "skladniki": [
             {
               "nazwa": "Chleb pszenny (zwykły biały)",
-              "ile": "2 kromki (70 g)",
-              "g": 70,
-              "kcal": 175,
-              "bialko": 5.6,
-              "tluszcz": 2.1,
-              "wegle": 32.9
+              "ile": "6 kromek (210 g), w tym +4 kromki",
+              "g": 210,
+              "kcal": 525,
+              "bialko": 16.8,
+              "tluszcz": 6.3,
+              "wegle": 98.7,
+              "dodatek": true
             },
             {
               "nazwa": "Ser żółty w plastrach",
@@ -6286,6 +6442,16 @@
               "bialko": 1.1,
               "tluszcz": 0.2,
               "wegle": 3.2
+            },
+            {
+              "nazwa": "Miód",
+              "ile": "+ 2 łyżki (40 g)",
+              "g": 40,
+              "kcal": 122,
+              "bialko": 0.1,
+              "tluszcz": 0.0,
+              "wegle": 32.8,
+              "dodatek": true
             }
           ],
           "jak": "przepis",
@@ -6294,7 +6460,8 @@
             "Chleb cienko masłem, potem musztardą.",
             "Po plastrze sera na kromkę, na to plastry ogórka kiszonego i pomidora.",
             "Najszybszy posiłek w bazie — 4 minuty roboty.",
-            "Ilości każdego składnika masz w rozpisce — porcja jest dopasowana do Twojego celu na ten dzień."
+            "Ilości każdego składnika masz w rozpisce — porcja jest dopasowana do Twojego celu na ten dzień.",
+            "Do tego dodatek węglowy: chleb pszenny 4 kromki, miód 2 łyżki. Zjedz obok — to paliwo na trening i regenerację, bez niego dzień nie dobija węglowodanów."
           ]
         },
         {
@@ -6320,31 +6487,31 @@
           "opis": "Z boxa. Nie odkładaj — po czterech godzinach głodu zawsze dojadasz byle czym z automatu.",
           "posilek": "Jogurt grecki z orzechami i miodem",
           "posilek_id": "q_jogurt_orzechy",
-          "porcja": 0.8,
+          "porcja": 1.1,
           "makra": {
-            "kcal": 590,
-            "bialko": 61,
-            "tluszcz": 13,
-            "wegle": 55
+            "kcal": 489,
+            "bialko": 36,
+            "tluszcz": 16,
+            "wegle": 48
           },
           "skladniki": [
             {
               "nazwa": "Jogurt grecki 2%",
-              "ile": "240 g",
-              "g": 240,
-              "kcal": 175,
-              "bialko": 23.8,
-              "tluszcz": 4.8,
-              "wegle": 7.4
+              "ile": "330 g",
+              "g": 330,
+              "kcal": 241,
+              "bialko": 32.7,
+              "tluszcz": 6.6,
+              "wegle": 10.2
             },
             {
               "nazwa": "Orzechy / migdały",
-              "ile": "12 g",
-              "g": 12,
-              "kcal": 77,
-              "bialko": 2.3,
-              "tluszcz": 6.8,
-              "wegle": 1.2
+              "ile": "16 g",
+              "g": 16,
+              "kcal": 102,
+              "bialko": 3.0,
+              "tluszcz": 9.1,
+              "wegle": 1.6
             },
             {
               "nazwa": "Miód",
@@ -6371,17 +6538,7 @@
             "Jogurt do pojemnika, wsyp orzechy, polej łyżką miodu.",
             "Jabłko w kostkę na wierzch. Gotowe.",
             "Ilości każdego składnika masz w rozpisce — porcja jest dopasowana do Twojego celu na ten dzień."
-          ],
-          "dobitka": {
-            "nazwa": "Skyr naturalny (kubek 150 g)",
-            "ile": "2 kubki (300 g)",
-            "g": 300,
-            "n": 2,
-            "kcal": 192,
-            "bialko": 34.5,
-            "tluszcz": 0.6,
-            "wegle": 11.4
-          }
+          ]
         },
         {
           "czas": "12:00",
@@ -6583,35 +6740,47 @@
         }
       ],
       "makra": {
-        "kcal": 2238,
-        "bialko": 164,
-        "tluszcz": 87,
-        "wegle": 188
+        "kcal": 2609,
+        "bialko": 150,
+        "tluszcz": 94,
+        "wegle": 280
       },
-      "dobitka": 2,
+      "dobitka": 0,
+      "dodatek_w": [
+        [
+          "chleb",
+          4
+        ],
+        [
+          "miod",
+          2
+        ]
+      ],
       "poza_planem": [],
       "lzejszy": false,
       "cel": {
-        "kcal": 2200,
-        "bialko": 165,
-        "tluszcz": 80,
-        "wegle": 205
+        "kcal": 2600,
+        "bialko": 150,
+        "tluszcz": 90,
+        "wegle": 297
       },
+      "slowo": "Na zmianie wygrywa ten, kto spakował jedzenie wczoraj. Ty spakowałeś.",
+      "faza": "Przed startem",
+      "tydzien": 0,
       "nadwyzka": 0,
       "odhaczone": {},
       "waga": null,
       "kroki": null,
       "serie": [],
       "trening": {
-        "rodzaj": "zmiana",
+        "rodzaj": "przedstart",
         "trening": {
-          "nazwa": "Dzień zmiany — bez treningu",
-          "zasada": "Na 24h służbie nie trenujesz. Zamiast tego: co 2-3 godziny wstań i przejdź się 5 minut, zrób 10 przysiadów i rozciągnij kark. To nie jest trening, to profilaktyka pleców przy staniu i siedzeniu.",
+          "nazwa": "Przed startem — gojenie",
+          "zasada": "Plan treningowy zaczyna się 17 września. Do tego czasu wracasz do zdrowia po zabiegu: bez treningu, bez deficytu, dużo snu.",
           "mikro": [
-            "10 przysiadów bez ciężaru",
-            "10 krążeń ramion w tył",
-            "30 s rozciągania zginaczy bioder na każdą nogę",
-            "Odchylenie głowy w tył i na boki po 15 s"
+            "Spokojny spacer, jeśli czujesz się dobrze",
+            "Dużo płynów",
+            "Zakup gum oporowych na start"
           ]
         }
       }
@@ -6671,78 +6840,110 @@
           "ping": true,
           "slot": "sniadanie",
           "opis": "Coś lekkiego i białkowego. Na pusty żołądek gorzej zaśniesz, na pełny obudzisz się rozbity.",
-          "posilek": "Kanapki z serem, musztardą i kiszonym ogórkiem",
-          "posilek_id": "q_kanapki_ser",
+          "posilek": "Jajka w sosie pomidorowym (shakshuka)",
+          "posilek_id": "q_shakshuka",
           "porcja": 0.8,
           "makra": {
-            "kcal": 402,
-            "bialko": 18,
-            "tluszcz": 18,
-            "wegle": 40
+            "kcal": 865,
+            "bialko": 29,
+            "tluszcz": 21,
+            "wegle": 137
           },
           "skladniki": [
             {
-              "nazwa": "Chleb pszenny (zwykły biały)",
-              "ile": "2 kromki (70 g)",
-              "g": 70,
-              "kcal": 175,
-              "bialko": 5.6,
-              "tluszcz": 2.1,
-              "wegle": 32.9
+              "nazwa": "Jaja",
+              "ile": "2 szt. (110 g)",
+              "g": 110,
+              "kcal": 157,
+              "bialko": 13.9,
+              "tluszcz": 10.5,
+              "wegle": 0.8
             },
             {
-              "nazwa": "Ser żółty w plastrach",
-              "ile": "2 plastry (40 g)",
-              "g": 40,
-              "kcal": 140,
-              "bialko": 10.2,
-              "tluszcz": 10.8,
-              "wegle": 0.2
+              "nazwa": "Passata pomidorowa",
+              "ile": "160 g",
+              "g": 160,
+              "kcal": 50,
+              "bialko": 2.2,
+              "tluszcz": 0.3,
+              "wegle": 9.0
             },
             {
-              "nazwa": "Musztarda",
-              "ile": "1 łyżka (15 g)",
-              "g": 15,
-              "kcal": 16,
-              "bialko": 0.8,
-              "tluszcz": 0.9,
-              "wegle": 1.2
+              "nazwa": "Cebula",
+              "ile": "1 szt. (100 g)",
+              "g": 100,
+              "kcal": 40,
+              "bialko": 1.1,
+              "tluszcz": 0.1,
+              "wegle": 7.6
             },
             {
-              "nazwa": "Ogórek kiszony",
-              "ile": "100 g",
-              "g": 98,
-              "kcal": 12,
-              "bialko": 0.5,
-              "tluszcz": 0.2,
-              "wegle": 1.9
-            },
-            {
-              "nazwa": "Masło",
-              "ile": "5 g",
+              "nazwa": "Czosnek",
+              "ile": "1 ząbek (5 g)",
               "g": 5,
-              "kcal": 37,
+              "kcal": 7,
+              "bialko": 0.3,
+              "tluszcz": 0.0,
+              "wegle": 1.6
+            },
+            {
+              "nazwa": "Papryka",
+              "ile": "85 g",
+              "g": 85,
+              "kcal": 26,
+              "bialko": 0.8,
+              "tluszcz": 0.3,
+              "wegle": 3.9
+            },
+            {
+              "nazwa": "Chleb pszenny (zwykły biały)",
+              "ile": "3 kromki (105 g), w tym +2 kromki",
+              "g": 105,
+              "kcal": 263,
+              "bialko": 8.4,
+              "tluszcz": 3.1,
+              "wegle": 49.3,
+              "dodatek": true
+            },
+            {
+              "nazwa": "Olej rzepakowy",
+              "ile": "6 ml",
+              "g": 6,
+              "kcal": 50,
               "bialko": 0.0,
-              "tluszcz": 4.1,
+              "tluszcz": 5.5,
               "wegle": 0.0
             },
             {
-              "nazwa": "Pomidor",
-              "ile": "1 szt. (120 g)",
-              "g": 120,
-              "kcal": 22,
-              "bialko": 1.1,
-              "tluszcz": 0.2,
-              "wegle": 3.2
+              "nazwa": "Banan",
+              "ile": "+ 2 szt. (240 g)",
+              "g": 240,
+              "kcal": 211,
+              "bialko": 2.6,
+              "tluszcz": 0.7,
+              "wegle": 48.5,
+              "dodatek": true
+            },
+            {
+              "nazwa": "Miód",
+              "ile": "+ 1 łyżka (20 g)",
+              "g": 20,
+              "kcal": 61,
+              "bialko": 0.1,
+              "tluszcz": 0.0,
+              "wegle": 16.4,
+              "dodatek": true
             }
           ],
           "jak": "przepis",
-          "czas_min": 4,
+          "czas_min": 12,
           "kroki": [
-            "Chleb cienko masłem, potem musztardą.",
-            "Po plastrze sera na kromkę, na to plastry ogórka kiszonego i pomidora.",
-            "Najszybszy posiłek w bazie — 4 minuty roboty.",
-            "Ilości każdego składnika masz w rozpisce — porcja jest dopasowana do Twojego celu na ten dzień."
+            "Na patelni na oleju smaż posiekaną cebulę i paprykę 5 min.",
+            "Dodaj czosnek, passatę, sól, pieprz, szczyptę słodkiej papryki. Gotuj 3 min.",
+            "Zrób łyżką wgłębienie na każde jajko i wbij je.",
+            "Przykryj i trzymaj 5 min na małym ogniu — białka mają się ściąć, żółtka zostać płynne. Maczasz chlebem prosto z patelni, zero talerzy.",
+            "Ilości każdego składnika masz w rozpisce — porcja jest dopasowana do Twojego celu na ten dzień.",
+            "Do tego dodatek węglowy: banan 2 szt., chleb pszenny 2 kromki, miód 1 łyżka. Zjedz obok — to paliwo na trening i regenerację, bez niego dzień nie dobija węglowodanów."
           ]
         },
         {
@@ -6770,11 +6971,11 @@
         },
         {
           "czas": "13:30",
-          "tytul": "TRENING — pierwsza rzecz dnia",
-          "ikona": "🏋️",
-          "ping": true,
-          "akcja": "trening_krotki",
-          "opis": "35 minut, ciężary 80% normy. Zaczynasz dzień od zrobionej roboty, zanim cokolwiek zdąży w tym przeszkodzić."
+          "tytul": "Przed startem — bez treningu",
+          "ikona": "🩹",
+          "ping": false,
+          "akcja": null,
+          "opis": "Plan treningowy rusza 2026-09-17. Dziś tylko regeneracja."
         },
         {
           "czas": "14:30",
@@ -6783,33 +6984,33 @@
           "ping": true,
           "slot": "drugi",
           "opis": "Pierwszy porządny posiłek dnia. Trenowałeś na czczo, więc nie odkładaj go na później.",
-          "posilek": "Twaróg z bananem i miodem",
-          "posilek_id": "q_twarog_banan",
-          "porcja": 1.0,
+          "posilek": "Deser: czekoladowy pudding ze skyru z bananem",
+          "posilek_id": "d_pudding",
+          "porcja": 1.2,
           "makra": {
-            "kcal": 591,
-            "bialko": 56,
-            "tluszcz": 16,
-            "wegle": 57
+            "kcal": 434,
+            "bialko": 40,
+            "tluszcz": 5,
+            "wegle": 55
           },
           "skladniki": [
             {
-              "nazwa": "Twaróg półtłusty",
-              "ile": "180 g",
-              "g": 180,
-              "kcal": 239,
-              "bialko": 33.7,
-              "tluszcz": 8.5,
-              "wegle": 6.7
+              "nazwa": "Skyr naturalny (kubek 150 g)",
+              "ile": "2 kubki (300 g)",
+              "g": 300,
+              "kcal": 192,
+              "bialko": 34.5,
+              "tluszcz": 0.6,
+              "wegle": 11.4
             },
             {
-              "nazwa": "Banan",
-              "ile": "1 szt. (120 g)",
-              "g": 120,
-              "kcal": 106,
-              "bialko": 1.3,
-              "tluszcz": 0.4,
-              "wegle": 24.2
+              "nazwa": "Kakao naturalne (bez cukru)",
+              "ile": "20 g",
+              "g": 20,
+              "kcal": 76,
+              "bialko": 4.4,
+              "tluszcz": 4.0,
+              "wegle": 2.6
             },
             {
               "nazwa": "Miód",
@@ -6821,42 +7022,23 @@
               "wegle": 16.4
             },
             {
-              "nazwa": "Orzechy / migdały",
-              "ile": "10 g",
-              "g": 10,
-              "kcal": 64,
-              "bialko": 1.9,
-              "tluszcz": 5.7,
-              "wegle": 1.0
-            },
-            {
-              "nazwa": "Mleko 2%",
-              "ile": "50 ml",
-              "g": 50,
-              "kcal": 25,
-              "bialko": 1.6,
-              "tluszcz": 1.0,
-              "wegle": 2.4
+              "nazwa": "Banan",
+              "ile": "1 szt. (120 g)",
+              "g": 120,
+              "kcal": 106,
+              "bialko": 1.3,
+              "tluszcz": 0.4,
+              "wegle": 24.2
             }
           ],
           "jak": "przepis",
           "czas_min": 4,
           "kroki": [
-            "Twaróg rozgnieć widelcem z mlekiem — zrobi się kremowy.",
-            "Banan w plastry, miód, orzechy na wierzch.",
-            "Wersja na zmianę: wszystko do zakręcanego pojemnika.",
+            "Skyr do miski, wsyp kakao i miód w ilościach z rozpiski.",
+            "Mieszaj łyżką dobrą minutę, aż kakao całkiem się rozpuści i zrobi się jednolity krem — za krótko mieszane zostawia gorzkie grudki.",
+            "Banan w plasterki na wierzch. Smakuje jak budyń czekoladowy.",
             "Ilości każdego składnika masz w rozpisce — porcja jest dopasowana do Twojego celu na ten dzień."
-          ],
-          "dobitka": {
-            "nazwa": "Skyr naturalny (kubek 150 g)",
-            "ile": "1 kubek (150 g)",
-            "g": 150,
-            "n": 1,
-            "kcal": 96,
-            "bialko": 17.2,
-            "tluszcz": 0.3,
-            "wegle": 5.7
-          }
+          ]
         },
         {
           "czas": "15:15",
@@ -6992,68 +7174,88 @@
           "ping": true,
           "slot": "kolacja",
           "opis": "",
-          "posilek": "Deser: twarożek kakaowy z masłem orzechowym",
-          "posilek_id": "d_twarog_kakao",
+          "posilek": "Sałatka z fetą, jajkiem i pomidorem + pieczywo",
+          "posilek_id": "q_salatka_feta",
           "porcja": 0.9,
           "makra": {
-            "kcal": 447,
-            "bialko": 41,
-            "tluszcz": 19,
-            "wegle": 28
+            "kcal": 547,
+            "bialko": 30,
+            "tluszcz": 33,
+            "wegle": 30
           },
           "skladniki": [
             {
-              "nazwa": "Twaróg półtłusty",
-              "ile": "180 g",
-              "g": 180,
-              "kcal": 239,
-              "bialko": 33.7,
-              "tluszcz": 8.5,
-              "wegle": 6.7
+              "nazwa": "Ser feta",
+              "ile": "65 g",
+              "g": 65,
+              "kcal": 172,
+              "bialko": 9.2,
+              "tluszcz": 13.8,
+              "wegle": 0.7
             },
             {
-              "nazwa": "Kakao naturalne (bez cukru)",
-              "ile": "1 łyżka (8 g)",
-              "g": 8,
-              "kcal": 30,
-              "bialko": 1.8,
-              "tluszcz": 1.6,
-              "wegle": 1.0
+              "nazwa": "Jaja",
+              "ile": "2 szt. (110 g)",
+              "g": 110,
+              "kcal": 157,
+              "bialko": 13.9,
+              "tluszcz": 10.5,
+              "wegle": 0.8
             },
             {
-              "nazwa": "Miód",
-              "ile": "1 łyżka (20 g)",
-              "g": 20,
-              "kcal": 61,
-              "bialko": 0.1,
-              "tluszcz": 0.0,
-              "wegle": 16.4
+              "nazwa": "Pomidor",
+              "ile": "2 szt. (240 g)",
+              "g": 240,
+              "kcal": 43,
+              "bialko": 2.2,
+              "tluszcz": 0.5,
+              "wegle": 6.5
             },
             {
-              "nazwa": "Masło orzechowe 100%",
-              "ile": "1 łyżka (16 g)",
-              "g": 16,
-              "kcal": 99,
-              "bialko": 4.2,
-              "tluszcz": 8.2,
-              "wegle": 1.8
+              "nazwa": "Ogórek długi",
+              "ile": "150 g",
+              "g": 150,
+              "kcal": 21,
+              "bialko": 1.0,
+              "tluszcz": 0.2,
+              "wegle": 4.3
             },
             {
-              "nazwa": "Mleko 2%",
-              "ile": "35 ml",
+              "nazwa": "Sałata / mix sałat",
+              "ile": "55 g",
+              "g": 55,
+              "kcal": 8,
+              "bialko": 0.8,
+              "tluszcz": 0.1,
+              "wegle": 0.9
+            },
+            {
+              "nazwa": "Oliwa z oliwek",
+              "ile": "7 ml",
+              "g": 7,
+              "kcal": 58,
+              "bialko": 0.0,
+              "tluszcz": 6.4,
+              "wegle": 0.0
+            },
+            {
+              "nazwa": "Chleb pszenny (zwykły biały)",
+              "ile": "1 kromka (35 g)",
               "g": 35,
-              "kcal": 18,
-              "bialko": 1.2,
-              "tluszcz": 0.7,
-              "wegle": 1.7
+              "kcal": 88,
+              "bialko": 2.8,
+              "tluszcz": 1.0,
+              "wegle": 16.4
             }
           ],
           "jak": "przepis",
-          "czas_min": 4,
+          "czas_min": 7,
           "kroki": [
-            "Twaróg rozgnieć z mlekiem na gładki krem.",
-            "Wsyp łyżkę kakao i łyżkę miodu, mieszaj do jednolitego koloru.",
-            "Łyżka masła orzechowego na wierzch. Smakuje jak krem czekoladowo-orzechowy.",
+            "Ugotuj jajka na twardo (9 min od wrzenia), zalej zimną wodą, obierz.",
+            "Pomidory i ogórka pokrój w grubą kostkę, wrzuć do miski na sałatę, dołóż jajka w ćwiartkach.",
+            "Fetę pokrusz palcami na wierzch.",
+            "Polej oliwą, posól, popieprz, wsyp oregano. Nie mieszaj mocno, żeby feta się nie rozpadła.",
+            "Do boxa: oliwę wlewasz dopiero na miejscu, inaczej sałata zwiotczeje.",
             "Ilości każdego składnika masz w rozpisce — porcja jest dopasowana do Twojego celu na ten dzień."
           ]
         },
@@ -7081,67 +7283,52 @@
         }
       ],
       "makra": {
-        "kcal": 2196,
-        "bialko": 166,
-        "tluszcz": 80,
-        "wegle": 199
+        "kcal": 2602,
+        "bialko": 150,
+        "tluszcz": 86,
+        "wegle": 296
       },
-      "dobitka": 1,
+      "dobitka": 0,
+      "dodatek_w": [
+        [
+          "banan",
+          2
+        ],
+        [
+          "chleb",
+          2
+        ],
+        [
+          "miod",
+          1
+        ]
+      ],
       "poza_planem": [],
       "lzejszy": false,
       "cel": {
-        "kcal": 2200,
-        "bialko": 165,
-        "tluszcz": 80,
-        "wegle": 205
+        "kcal": 2600,
+        "bialko": 150,
+        "tluszcz": 90,
+        "wegle": 297
       },
+      "slowo": "Nie ważysz się, żeby się ocenić. Ważysz się, żeby system wiedział, jak ci pomóc.",
+      "faza": "Przed startem",
+      "tydzien": 0,
       "nadwyzka": 0,
       "odhaczone": {},
       "waga": null,
       "kroki": null,
       "serie": [],
       "trening": {
-        "rodzaj": "krotki",
+        "rodzaj": "przedstart",
         "trening": {
-          "id": "w_fbw_a",
-          "nazwa": "KRÓTKI A — Full body (dzień po zmianie)",
-          "czas_min": 35,
-          "rozgrzewka": [
-            "Po 24 h służby, ok. 4,5 h snu i na czczo. Rozgrzewka 8 min, bez pośpiechu.",
-            "30 przysiadów bez ciężaru, krążenia ramion i bioder, 15 pompek, martwy zwis 2×20 s.",
-            "Pierwszą serię roboczą poprzedź serią na 50% ciężaru."
-          ],
-          "cwiczenia": [
-            {
-              "nazwa": "Przysiad ze sztangą",
-              "serie": 3,
-              "powt": "8",
-              "przerwa": "2 min",
-              "wskazowka": "Ciężar 80% tego, co dajesz w dniu wolnym. Dziś chodzi o utrzymanie, nie o rekord."
-            },
-            {
-              "nazwa": "Wyciskanie sztangi leżąc",
-              "serie": 3,
-              "powt": "8",
-              "przerwa": "2 min",
-              "wskazowka": "To samo — 80% i zostaw 2 powtórzenia w zapasie."
-            },
-            {
-              "nazwa": "Wiosłowanie sztangą",
-              "serie": 3,
-              "powt": "10",
-              "przerwa": "90 s",
-              "wskazowka": "Kontrolowany opust, bez szarpania."
-            },
-            {
-              "nazwa": "Plank",
-              "serie": 2,
-              "powt": "45 s",
-              "przerwa": "45 s",
-              "wskazowka": "Domykasz i idziesz jeść."
-            }
-          ],
-          "finisz": "Kręci Ci się w głowie albo ciężar leci — kończysz. Po nieprzespanej dobie to normalne i nie jest to porażka. Zaraz po treningu jesz pierwszy porządny posiłek dnia."
+          "nazwa": "Przed startem — gojenie",
+          "zasada": "Plan treningowy zaczyna się 17 września. Do tego czasu wracasz do zdrowia po zabiegu: bez treningu, bez deficytu, dużo snu.",
+          "mikro": [
+            "Spokojny spacer, jeśli czujesz się dobrze",
+            "Dużo płynów",
+            "Zakup gum oporowych na start"
+          ]
         }
       }
     },
@@ -7164,11 +7351,11 @@
         },
         {
           "czas": "08:30",
-          "tytul": "TRENING GŁÓWNY — pierwsza rzecz dnia",
-          "ikona": "🏋️",
-          "ping": true,
-          "akcja": "trening_glowny",
-          "opis": "Najlepsza sesja w cyklu: wyspany, po dniu normalnego jedzenia. Tu bijesz rekordy. Wchodzisz i robisz, zero telefonu przed."
+          "tytul": "Przed startem — bez treningu",
+          "ikona": "🩹",
+          "ping": false,
+          "akcja": null,
+          "opis": "Plan treningowy rusza 2026-09-17. Dziś tylko regeneracja."
         },
         {
           "czas": "09:45",
@@ -7177,88 +7364,81 @@
           "ping": true,
           "slot": "sniadanie",
           "opis": "Pierwszy posiłek dnia, zaraz po sztandze.",
-          "posilek": "Jajka w sosie pomidorowym (shakshuka)",
-          "posilek_id": "q_shakshuka",
+          "posilek": "Kanapki z jajkiem na twardo i serem",
+          "posilek_id": "q_kanapki_jajko",
           "porcja": 1.0,
           "makra": {
-            "kcal": 525,
-            "bialko": 29,
-            "tluszcz": 25,
-            "wegle": 42
+            "kcal": 969,
+            "bialko": 42,
+            "tluszcz": 28,
+            "wegle": 135
           },
           "skladniki": [
             {
               "nazwa": "Jaja",
-              "ile": "3 szt. (165 g)",
-              "g": 165,
-              "kcal": 236,
-              "bialko": 20.8,
-              "tluszcz": 15.7,
-              "wegle": 1.2
-            },
-            {
-              "nazwa": "Passata pomidorowa",
-              "ile": "200 g",
-              "g": 200,
-              "kcal": 62,
-              "bialko": 2.8,
-              "tluszcz": 0.4,
-              "wegle": 11.2
-            },
-            {
-              "nazwa": "Cebula",
-              "ile": "1 szt. (100 g)",
-              "g": 100,
-              "kcal": 40,
-              "bialko": 1.1,
-              "tluszcz": 0.1,
-              "wegle": 7.6
-            },
-            {
-              "nazwa": "Czosnek",
-              "ile": "1 ząbek (5 g)",
-              "g": 5,
-              "kcal": 7,
-              "bialko": 0.3,
-              "tluszcz": 0.0,
-              "wegle": 1.6
-            },
-            {
-              "nazwa": "Papryka",
-              "ile": "85 g",
-              "g": 85,
-              "kcal": 26,
-              "bialko": 0.8,
-              "tluszcz": 0.3,
-              "wegle": 3.9
+              "ile": "2 szt. (110 g)",
+              "g": 110,
+              "kcal": 157,
+              "bialko": 13.9,
+              "tluszcz": 10.5,
+              "wegle": 0.8
             },
             {
               "nazwa": "Chleb pszenny (zwykły biały)",
-              "ile": "1 kromka (35 g)",
-              "g": 35,
-              "kcal": 88,
-              "bialko": 2.8,
-              "tluszcz": 1.0,
-              "wegle": 16.4
+              "ile": "6 kromek (210 g), w tym +4 kromki",
+              "g": 210,
+              "kcal": 525,
+              "bialko": 16.8,
+              "tluszcz": 6.3,
+              "wegle": 98.7,
+              "dodatek": true
             },
             {
-              "nazwa": "Olej rzepakowy",
-              "ile": "8 ml",
-              "g": 8,
-              "kcal": 66,
-              "bialko": 0.0,
-              "tluszcz": 7.4,
-              "wegle": 0.0
+              "nazwa": "Ser żółty w plastrach",
+              "ile": "2 plastry (40 g)",
+              "g": 40,
+              "kcal": 140,
+              "bialko": 10.2,
+              "tluszcz": 10.8,
+              "wegle": 0.2
+            },
+            {
+              "nazwa": "Musztarda",
+              "ile": "1 łyżka (15 g)",
+              "g": 15,
+              "kcal": 16,
+              "bialko": 0.8,
+              "tluszcz": 0.9,
+              "wegle": 1.2
+            },
+            {
+              "nazwa": "Ogórek kiszony",
+              "ile": "1 szt. (65 g)",
+              "g": 65,
+              "kcal": 8,
+              "bialko": 0.3,
+              "tluszcz": 0.1,
+              "wegle": 1.3
+            },
+            {
+              "nazwa": "Miód",
+              "ile": "+ 2 łyżki (40 g)",
+              "g": 40,
+              "kcal": 122,
+              "bialko": 0.1,
+              "tluszcz": 0.0,
+              "wegle": 32.8,
+              "dodatek": true
             }
           ],
           "jak": "przepis",
           "czas_min": 12,
           "kroki": [
-            "Na patelni na oleju smaż posiekaną cebulę i paprykę 5 min.",
-            "Dodaj czosnek, passatę, sól, pieprz, szczyptę słodkiej papryki. Gotuj 3 min.",
-            "Zrób łyżką wgłębienie na każde jajko i wbij je.",
-            "Przykryj i trzymaj 5 min na małym ogniu — białka mają się ściąć, żółtka zostać płynne. Maczasz chlebem prosto z patelni, zero talerzy.",
-            "Ilości każdego składnika masz w rozpisce — porcja jest dopasowana do Twojego celu na ten dzień."
+            "Jajka wrzuć do wrzącej wody i gotuj 9 min, potem zalej zimną wodą — same się obiorą.",
+            "Chleb posmaruj cienko musztardą, połóż ser, na to plastry jajka.",
+            "Posól, popieprz, ogórek kiszony w plastrach na wierzch. Do boxa zawijasz w folię.",
+            "Ilości każdego składnika masz w rozpisce — porcja jest dopasowana do Twojego celu na ten dzień.",
+            "Do tego dodatek węglowy: chleb pszenny 4 kromki, miód 2 łyżki. Zjedz obok — to paliwo na trening i regenerację, bez niego dzień nie dobija węglowodanów."
           ]
         },
         {
@@ -7268,50 +7448,58 @@
           "ping": true,
           "slot": "drugi",
           "opis": "",
-          "posilek": "Skyr z bananem i masłem orzechowym",
-          "posilek_id": "q_skyr",
-          "porcja": 1.3,
+          "posilek": "Jogurt grecki z orzechami i miodem",
+          "posilek_id": "q_jogurt_orzechy",
+          "porcja": 1.1,
           "makra": {
-            "kcal": 542,
-            "bialko": 59,
-            "tluszcz": 14,
-            "wegle": 44
+            "kcal": 489,
+            "bialko": 36,
+            "tluszcz": 16,
+            "wegle": 48
           },
           "skladniki": [
             {
-              "nazwa": "Skyr naturalny (kubek 150 g)",
-              "ile": "3 kubki (450 g)",
-              "g": 450,
-              "kcal": 288,
-              "bialko": 51.8,
-              "tluszcz": 0.9,
-              "wegle": 17.1
+              "nazwa": "Jogurt grecki 2%",
+              "ile": "330 g",
+              "g": 330,
+              "kcal": 241,
+              "bialko": 32.7,
+              "tluszcz": 6.6,
+              "wegle": 10.2
             },
             {
-              "nazwa": "Banan",
-              "ile": "1 szt. (120 g)",
-              "g": 120,
-              "kcal": 106,
-              "bialko": 1.3,
-              "tluszcz": 0.4,
-              "wegle": 24.2
+              "nazwa": "Orzechy / migdały",
+              "ile": "16 g",
+              "g": 16,
+              "kcal": 102,
+              "bialko": 3.0,
+              "tluszcz": 9.1,
+              "wegle": 1.6
             },
             {
-              "nazwa": "Masło orzechowe 100%",
-              "ile": "24 g",
-              "g": 24,
-              "kcal": 149,
-              "bialko": 6.2,
-              "tluszcz": 12.2,
-              "wegle": 2.6
+              "nazwa": "Miód",
+              "ile": "1 łyżka (20 g)",
+              "g": 20,
+              "kcal": 61,
+              "bialko": 0.1,
+              "tluszcz": 0.0,
+              "wegle": 16.4
+            },
+            {
+              "nazwa": "Jabłko",
+              "ile": "1 szt. (170 g)",
+              "g": 170,
+              "kcal": 85,
+              "bialko": 0.5,
+              "tluszcz": 0.3,
+              "wegle": 19.4
             }
           ],
           "jak": "przepis",
           "czas_min": 3,
           "kroki": [
-            "Skyr do miski lub pojemnika.",
-            "Banan w plastry, łyżka masła orzechowego na wierzch. Wymieszaj albo zostaw warstwami.",
-            "Na zmianę: wszystko do zakręcanego pojemnika, banan dorzucasz na miejscu żeby nie sczerniał.",
+            "Jogurt do pojemnika, wsyp orzechy, polej łyżką miodu.",
+            "Jabłko w kostkę na wierzch. Gotowe.",
             "Ilości każdego składnika masz w rozpisce — porcja jest dopasowana do Twojego celu na ten dzień."
           ]
         },
@@ -7427,14 +7615,14 @@
           "ping": true,
           "slot": "kolacja",
           "opis": "",
-          "posilek": "Box: sałatka jajeczna z kukurydzą",
-          "posilek_id": "q_jajka_kukurydza",
+          "posilek": "Jajecznica z pieczywem i pomidorem",
+          "posilek_id": "q_jajecznica",
           "porcja": 0.8,
           "makra": {
-            "kcal": 377,
-            "bialko": 26,
-            "tluszcz": 15,
-            "wegle": 31
+            "kcal": 391,
+            "bialko": 21,
+            "tluszcz": 17,
+            "wegle": 37
           },
           "skladniki": [
             {
@@ -7447,58 +7635,40 @@
               "wegle": 0.8
             },
             {
-              "nazwa": "Kukurydza konserwowa",
-              "ile": "80 g",
-              "g": 80,
-              "kcal": 66,
-              "bialko": 2.2,
-              "tluszcz": 1.0,
-              "wegle": 10.4
-            },
-            {
-              "nazwa": "Jogurt grecki 2%",
-              "ile": "65 g",
-              "g": 65,
-              "kcal": 47,
-              "bialko": 6.4,
-              "tluszcz": 1.3,
-              "wegle": 2.0
-            },
-            {
-              "nazwa": "Musztarda",
-              "ile": "1 łyżka (15 g)",
-              "g": 15,
-              "kcal": 16,
-              "bialko": 0.8,
-              "tluszcz": 0.9,
-              "wegle": 1.2
-            },
-            {
-              "nazwa": "Szczypiorek",
-              "ile": "8 g",
-              "g": 8,
-              "kcal": 2,
-              "bialko": 0.2,
-              "tluszcz": 0.1,
-              "wegle": 0.1
-            },
-            {
               "nazwa": "Chleb pszenny (zwykły biały)",
-              "ile": "1 kromka (35 g)",
-              "g": 35,
-              "kcal": 88,
-              "bialko": 2.8,
-              "tluszcz": 1.0,
-              "wegle": 16.4
+              "ile": "2 kromki (70 g)",
+              "g": 70,
+              "kcal": 175,
+              "bialko": 5.6,
+              "tluszcz": 2.1,
+              "wegle": 32.9
+            },
+            {
+              "nazwa": "Pomidor",
+              "ile": "1 szt. (120 g)",
+              "g": 120,
+              "kcal": 22,
+              "bialko": 1.1,
+              "tluszcz": 0.2,
+              "wegle": 3.2
+            },
+            {
+              "nazwa": "Masło",
+              "ile": "5 g",
+              "g": 5,
+              "kcal": 37,
+              "bialko": 0.0,
+              "tluszcz": 4.1,
+              "wegle": 0.0
             }
           ],
           "jak": "przepis",
-          "czas_min": 12,
+          "czas_min": 8,
           "kroki": [
-            "Jajka na twardo (9 min od wrzenia), zalej zimną wodą, obierz i pokrój w kostkę.",
-            "Wymieszaj z odsączoną kukurydzą, jogurtem greckim i łyżką musztardy.",
-            "Szczypiorek, sól, pieprz. Do pojemnika, chleb osobno.",
-            "Trzyma się w lodówce 2 dni — możesz zrobić podwójną porcję w dniu gotowania.",
+            "Rozgrzej patelnię na średnim ogniu i rozpuść na niej kawałek masła.",
+            "Wbij jaja do kubka (ile — patrz rozpiska), posól, popieprz, rozbełtaj widelcem.",
+            "Wlej na patelnię, odczekaj 20 sekund, potem zgarniaj łopatką co kilka sekund.",
+            "Zdejmij z ognia, gdy jaja są ścięte, ale jeszcze błyszczące — dojdą na talerzu. Pomidor w plastry obok.",
             "Ilości każdego składnika masz w rozpisce — porcja jest dopasowana do Twojego celu na ten dzień."
           ]
         },
@@ -7534,81 +7704,48 @@
         }
       ],
       "makra": {
-        "kcal": 2200,
-        "bialko": 165,
-        "tluszcz": 81,
-        "wegle": 191
+        "kcal": 2605,
+        "bialko": 150,
+        "tluszcz": 88,
+        "wegle": 294
       },
       "dobitka": 0,
+      "dodatek_w": [
+        [
+          "chleb",
+          4
+        ],
+        [
+          "miod",
+          2
+        ]
+      ],
       "poza_planem": [],
       "lzejszy": false,
       "cel": {
-        "kcal": 2200,
-        "bialko": 165,
-        "tluszcz": 80,
-        "wegle": 205
+        "kcal": 2600,
+        "bialko": 150,
+        "tluszcz": 90,
+        "wegle": 297
       },
+      "slowo": "Najlepsza pora na trening była rano. Druga najlepsza jest teraz.",
+      "faza": "Przed startem",
+      "tydzien": 0,
       "nadwyzka": 0,
       "odhaczone": {},
       "waga": null,
       "kroki": null,
       "serie": [],
       "trening": {
-        "rodzaj": "glowny",
+        "rodzaj": "przedstart",
         "trening": {
-          "id": "w_pull",
-          "nazwa": "GŁÓWNY B — Plecy i biceps",
-          "czas_min": 60,
-          "rozgrzewka": [
-            "Trenujesz zaraz po wstaniu, na czczo — rozgrzewki NIE skracaj, to nie jest miejsce na oszczędzanie czasu.",
-            "8 min: 30 przysiadów bez ciężaru, krążenia ramion i bioder, 20 pompek.",
-            "Wiosłowanie samą sztangą x15"
-          ],
-          "cwiczenia": [
-            {
-              "nazwa": "Martwy ciąg",
-              "serie": 4,
-              "powt": "5-6",
-              "przerwa": "3 min",
-              "wskazowka": "Plecy proste jak deska. Jak zaczynają się garbić — koniec serii, nawet jeśli miałeś zrobić więcej."
-            },
-            {
-              "nazwa": "Wiosłowanie sztangą w opadzie",
-              "serie": 4,
-              "powt": "8-10",
-              "przerwa": "2 min",
-              "wskazowka": "Tułów prawie równolegle do podłogi. Ciągniesz do brzucha, nie do klatki."
-            },
-            {
-              "nazwa": "Podciąganie na drążku racka",
-              "serie": 3,
-              "powt": "max (cel 8)",
-              "przerwa": "2 min",
-              "wskazowka": "Jak nie wyrabiasz — negatywy: wskakujesz na górę i schodzisz 4 sekundy."
-            },
-            {
-              "nazwa": "Wiosłowanie jednorącz hantlą",
-              "serie": 3,
-              "powt": "10-12",
-              "przerwa": "90 s",
-              "wskazowka": "Kolano i ręka na ławce. Nie skręcaj tułowia, żeby dociągnąć — to oszukiwanie."
-            },
-            {
-              "nazwa": "Uginanie ramion EZ",
-              "serie": 3,
-              "powt": "10-12",
-              "przerwa": "75 s",
-              "wskazowka": "Łokcie przy tułowiu. Bez bujania biodrami."
-            },
-            {
-              "nazwa": "Uginanie młotkowe hantlami",
-              "serie": 2,
-              "powt": "12-15",
-              "przerwa": "60 s",
-              "wskazowka": "Chwyt neutralny, buduje grubość ramienia."
-            }
-          ],
-          "finisz": "3 min rozciągania pleców i bicepsów. Zapisz ciężary."
+          "nazwa": "Przed startem — gojenie",
+          "zasada": "Plan treningowy zaczyna się 17 września. Do tego czasu wracasz do zdrowia po zabiegu: bez treningu, bez deficytu, dużo snu.",
+          "mikro": [
+            "Spokojny spacer, jeśli czujesz się dobrze",
+            "Dużo płynów",
+            "Zakup gum oporowych na start"
+          ]
         }
       }
     },
@@ -7636,69 +7773,81 @@
           "ping": false,
           "slot": "sniadanie",
           "opis": "Zjedz na spokojnie w domu, nie w biegu.",
-          "posilek": "Twarożek ze szczypiorkiem + pieczywo",
-          "posilek_id": "q_twarog",
-          "porcja": 1.0,
+          "posilek": "Twaróg z bananem i miodem",
+          "posilek_id": "q_twarog_banan",
+          "porcja": 0.8,
           "makra": {
-            "kcal": 493,
-            "bialko": 44,
-            "tluszcz": 15,
-            "wegle": 44
+            "kcal": 902,
+            "bialko": 42,
+            "tluszcz": 17,
+            "wegle": 148
           },
           "skladniki": [
             {
               "nazwa": "Twaróg półtłusty",
-              "ile": "200 g",
-              "g": 200,
-              "kcal": 266,
-              "bialko": 37.4,
-              "tluszcz": 9.4,
-              "wegle": 7.4
+              "ile": "145 g",
+              "g": 145,
+              "kcal": 193,
+              "bialko": 27.1,
+              "tluszcz": 6.8,
+              "wegle": 5.4
             },
             {
-              "nazwa": "Śmietana 18%",
-              "ile": "20 ml",
-              "g": 20,
-              "kcal": 37,
-              "bialko": 0.5,
-              "tluszcz": 3.6,
-              "wegle": 0.7
+              "nazwa": "Banan",
+              "ile": "1 szt. (120 g)",
+              "g": 120,
+              "kcal": 106,
+              "bialko": 1.3,
+              "tluszcz": 0.4,
+              "wegle": 24.2
             },
             {
-              "nazwa": "Szczypiorek",
-              "ile": "2 łyżki (10 g)",
-              "g": 10,
-              "kcal": 3,
-              "bialko": 0.3,
-              "tluszcz": 0.1,
-              "wegle": 0.2
+              "nazwa": "Miód",
+              "ile": "3 łyżki (60 g), w tym +2 łyżki",
+              "g": 60,
+              "kcal": 183,
+              "bialko": 0.2,
+              "tluszcz": 0.0,
+              "wegle": 49.2,
+              "dodatek": true
+            },
+            {
+              "nazwa": "Orzechy / migdały",
+              "ile": "8 g",
+              "g": 8,
+              "kcal": 51,
+              "bialko": 1.5,
+              "tluszcz": 4.6,
+              "wegle": 0.8
+            },
+            {
+              "nazwa": "Mleko 2%",
+              "ile": "40 ml",
+              "g": 40,
+              "kcal": 20,
+              "bialko": 1.3,
+              "tluszcz": 0.8,
+              "wegle": 1.9
             },
             {
               "nazwa": "Chleb pszenny (zwykły biały)",
-              "ile": "2 kromki (70 g)",
-              "g": 70,
-              "kcal": 175,
-              "bialko": 5.6,
-              "tluszcz": 2.1,
-              "wegle": 32.9
-            },
-            {
-              "nazwa": "Ogórek długi",
-              "ile": "90 g",
-              "g": 90,
-              "kcal": 13,
-              "bialko": 0.6,
-              "tluszcz": 0.1,
-              "wegle": 2.6
+              "ile": "+ 4 kromki (140 g)",
+              "g": 140,
+              "kcal": 350,
+              "bialko": 11.2,
+              "tluszcz": 4.2,
+              "wegle": 65.8,
+              "dodatek": true
             }
           ],
           "jak": "przepis",
-          "czas_min": 5,
+          "czas_min": 4,
           "kroki": [
-            "Twaróg rozgnieć widelcem w miseczce ze śmietaną — będzie kremowy, a nie suchy.",
-            "Wsyp posiekany szczypiorek, sól, pieprz, wymieszaj.",
-            "Ogórek w plastry. Jeść z chlebem. Do boxa: twarożek do zakręcanego pojemnika, chleb osobno.",
-            "Ilości każdego składnika masz w rozpisce — porcja jest dopasowana do Twojego celu na ten dzień."
+            "Twaróg rozgnieć widelcem z mlekiem — zrobi się kremowy.",
+            "Banan w plastry, miód, orzechy na wierzch.",
+            "Wersja na zmianę: wszystko do zakręcanego pojemnika.",
+            "Ilości każdego składnika masz w rozpisce — porcja jest dopasowana do Twojego celu na ten dzień.",
+            "Do tego dodatek węglowy: chleb pszenny 4 kromki, miód 2 łyżki. Zjedz obok — to paliwo na trening i regenerację, bez niego dzień nie dobija węglowodanów."
           ]
         },
         {
@@ -7722,88 +7871,77 @@
           "ping": true,
           "slot": "drugi",
           "opis": "Z boxa. Nie odkładaj — po czterech godzinach głodu zawsze dojadasz byle czym z automatu.",
-          "posilek": "Sałatka z fetą, jajkiem i pomidorem + pieczywo",
-          "posilek_id": "q_salatka_feta",
+          "posilek": "Kanapki z serem, musztardą i kiszonym ogórkiem",
+          "posilek_id": "q_kanapki_ser",
           "porcja": 0.9,
           "makra": {
-            "kcal": 547,
-            "bialko": 30,
-            "tluszcz": 33,
-            "wegle": 30
+            "kcal": 476,
+            "bialko": 23,
+            "tluszcz": 24,
+            "wegle": 40
           },
           "skladniki": [
             {
-              "nazwa": "Ser feta",
-              "ile": "65 g",
-              "g": 65,
-              "kcal": 172,
-              "bialko": 9.2,
-              "tluszcz": 13.8,
-              "wegle": 0.7
+              "nazwa": "Chleb pszenny (zwykły biały)",
+              "ile": "2 kromki (70 g)",
+              "g": 70,
+              "kcal": 175,
+              "bialko": 5.6,
+              "tluszcz": 2.1,
+              "wegle": 32.9
             },
             {
-              "nazwa": "Jaja",
-              "ile": "2 szt. (110 g)",
-              "g": 110,
-              "kcal": 157,
-              "bialko": 13.9,
-              "tluszcz": 10.5,
-              "wegle": 0.8
+              "nazwa": "Ser żółty w plastrach",
+              "ile": "3 plastry (60 g)",
+              "g": 60,
+              "kcal": 210,
+              "bialko": 15.3,
+              "tluszcz": 16.2,
+              "wegle": 0.3
             },
             {
-              "nazwa": "Pomidor",
-              "ile": "2 szt. (240 g)",
-              "g": 240,
-              "kcal": 43,
-              "bialko": 2.2,
-              "tluszcz": 0.5,
-              "wegle": 6.5
-            },
-            {
-              "nazwa": "Ogórek długi",
-              "ile": "150 g",
-              "g": 150,
-              "kcal": 21,
-              "bialko": 1.0,
-              "tluszcz": 0.2,
-              "wegle": 4.3
-            },
-            {
-              "nazwa": "Sałata / mix sałat",
-              "ile": "55 g",
-              "g": 55,
-              "kcal": 8,
+              "nazwa": "Musztarda",
+              "ile": "1 łyżka (15 g)",
+              "g": 15,
+              "kcal": 16,
               "bialko": 0.8,
-              "tluszcz": 0.1,
-              "wegle": 0.9
+              "tluszcz": 0.9,
+              "wegle": 1.2
             },
             {
-              "nazwa": "Oliwa z oliwek",
-              "ile": "7 ml",
-              "g": 7,
-              "kcal": 58,
+              "nazwa": "Ogórek kiszony",
+              "ile": "2 szt. (130 g)",
+              "g": 130,
+              "kcal": 16,
+              "bialko": 0.7,
+              "tluszcz": 0.3,
+              "wegle": 2.6
+            },
+            {
+              "nazwa": "Masło",
+              "ile": "5 g",
+              "g": 5,
+              "kcal": 37,
               "bialko": 0.0,
-              "tluszcz": 6.4,
+              "tluszcz": 4.1,
               "wegle": 0.0
             },
             {
-              "nazwa": "Chleb pszenny (zwykły biały)",
-              "ile": "1 kromka (35 g)",
-              "g": 35,
-              "kcal": 88,
-              "bialko": 2.8,
-              "tluszcz": 1.0,
-              "wegle": 16.4
+              "nazwa": "Pomidor",
+              "ile": "1 szt. (120 g)",
+              "g": 120,
+              "kcal": 22,
+              "bialko": 1.1,
+              "tluszcz": 0.2,
+              "wegle": 3.2
             }
           ],
           "jak": "przepis",
-          "czas_min": 7,
+          "czas_min": 4,
           "kroki": [
-            "Ugotuj jajka na twardo (9 min od wrzenia), zalej zimną wodą, obierz.",
-            "Pomidory i ogórka pokrój w grubą kostkę, wrzuć do miski na sałatę, dołóż jajka w ćwiartkach.",
-            "Fetę pokrusz palcami na wierzch.",
-            "Polej oliwą, posól, popieprz, wsyp oregano. Nie mieszaj mocno, żeby feta się nie rozpadła.",
-            "Do boxa: oliwę wlewasz dopiero na miejscu, inaczej sałata zwiotczeje.",
+            "Chleb cienko masłem, potem musztardą.",
+            "Po plastrze sera na kromkę, na to plastry ogórka kiszonego i pomidora.",
+            "Najszybszy posiłek w bazie — 4 minuty roboty.",
             "Ilości każdego składnika masz w rozpisce — porcja jest dopasowana do Twojego celu na ten dzień."
           ]
         },
@@ -7926,59 +8064,78 @@
           "ping": true,
           "slot": "kolacja",
           "opis": "Ostatni posiłek na zmianie. Lekki, żeby nie leżeć z pełnym brzuchem przed pierwszą drzemką.",
-          "posilek": "Deser: czekoladowy pudding ze skyru z bananem",
-          "posilek_id": "d_pudding",
-          "porcja": 0.8,
+          "posilek": "Box: sałatka jajeczna z kukurydzą",
+          "posilek_id": "q_jajka_kukurydza",
+          "porcja": 0.9,
           "makra": {
-            "kcal": 404,
-            "bialko": 39,
-            "tluszcz": 3,
-            "wegle": 54
+            "kcal": 468,
+            "bialko": 34,
+            "tluszcz": 20,
+            "wegle": 33
           },
           "skladniki": [
             {
-              "nazwa": "Skyr naturalny (kubek 150 g)",
-              "ile": "2 kubki (300 g)",
-              "g": 300,
-              "kcal": 192,
-              "bialko": 34.5,
-              "tluszcz": 0.6,
-              "wegle": 11.4
+              "nazwa": "Jaja",
+              "ile": "3 szt. (165 g)",
+              "g": 165,
+              "kcal": 236,
+              "bialko": 20.8,
+              "tluszcz": 15.7,
+              "wegle": 1.2
             },
             {
-              "nazwa": "Kakao naturalne (bez cukru)",
-              "ile": "12 g",
-              "g": 12,
-              "kcal": 46,
-              "bialko": 2.6,
-              "tluszcz": 2.4,
-              "wegle": 1.6
+              "nazwa": "Kukurydza konserwowa",
+              "ile": "90 g",
+              "g": 90,
+              "kcal": 74,
+              "bialko": 2.4,
+              "tluszcz": 1.2,
+              "wegle": 11.7
             },
             {
-              "nazwa": "Miód",
-              "ile": "1 łyżka (20 g)",
-              "g": 20,
-              "kcal": 61,
-              "bialko": 0.1,
-              "tluszcz": 0.0,
+              "nazwa": "Jogurt grecki 2%",
+              "ile": "70 g",
+              "g": 70,
+              "kcal": 51,
+              "bialko": 6.9,
+              "tluszcz": 1.4,
+              "wegle": 2.2
+            },
+            {
+              "nazwa": "Musztarda",
+              "ile": "1 łyżka (15 g)",
+              "g": 15,
+              "kcal": 16,
+              "bialko": 0.8,
+              "tluszcz": 0.9,
+              "wegle": 1.2
+            },
+            {
+              "nazwa": "Szczypiorek",
+              "ile": "2 łyżki (10 g)",
+              "g": 10,
+              "kcal": 3,
+              "bialko": 0.3,
+              "tluszcz": 0.1,
+              "wegle": 0.2
+            },
+            {
+              "nazwa": "Chleb pszenny (zwykły biały)",
+              "ile": "1 kromka (35 g)",
+              "g": 35,
+              "kcal": 88,
+              "bialko": 2.8,
+              "tluszcz": 1.0,
               "wegle": 16.4
-            },
-            {
-              "nazwa": "Banan",
-              "ile": "1 szt. (120 g)",
-              "g": 120,
-              "kcal": 106,
-              "bialko": 1.3,
-              "tluszcz": 0.4,
-              "wegle": 24.2
             }
           ],
           "jak": "przepis",
-          "czas_min": 4,
+          "czas_min": 12,
           "kroki": [
-            "Skyr do miski, wsyp kakao i miód w ilościach z rozpiski.",
-            "Mieszaj łyżką dobrą minutę, aż kakao całkiem się rozpuści i zrobi się jednolity krem — za krótko mieszane zostawia gorzkie grudki.",
-            "Banan w plasterki na wierzch. Smakuje jak budyń czekoladowy.",
+            "Jajka na twardo (9 min od wrzenia), zalej zimną wodą, obierz i pokrój w kostkę.",
+            "Wymieszaj z odsączoną kukurydzą, jogurtem greckim i łyżką musztardy.",
+            "Szczypiorek, sól, pieprz. Do pojemnika, chleb osobno.",
+            "Trzyma się w lodówce 2 dni — możesz zrobić podwójną porcję w dniu gotowania.",
             "Ilości każdego składnika masz w rozpisce — porcja jest dopasowana do Twojego celu na ten dzień."
           ]
         },
@@ -7998,35 +8155,47 @@
         }
       ],
       "makra": {
-        "kcal": 2200,
-        "bialko": 164,
-        "tluszcz": 78,
-        "wegle": 202
+        "kcal": 2602,
+        "bialko": 150,
+        "tluszcz": 88,
+        "wegle": 295
       },
       "dobitka": 0,
+      "dodatek_w": [
+        [
+          "chleb",
+          4
+        ],
+        [
+          "miod",
+          2
+        ]
+      ],
       "poza_planem": [],
       "lzejszy": false,
       "cel": {
-        "kcal": 2200,
-        "bialko": 165,
-        "tluszcz": 80,
-        "wegle": 205
+        "kcal": 2600,
+        "bialko": 150,
+        "tluszcz": 90,
+        "wegle": 297
       },
+      "slowo": "Jeszcze nie zaczęliśmy. Dziś tylko wracasz do zdrowia i przyzwyczajasz się do planu dnia.",
+      "faza": "Przed startem",
+      "tydzien": 0,
       "nadwyzka": 0,
       "odhaczone": {},
       "waga": null,
       "kroki": null,
       "serie": [],
       "trening": {
-        "rodzaj": "zmiana",
+        "rodzaj": "przedstart",
         "trening": {
-          "nazwa": "Dzień zmiany — bez treningu",
-          "zasada": "Na 24h służbie nie trenujesz. Zamiast tego: co 2-3 godziny wstań i przejdź się 5 minut, zrób 10 przysiadów i rozciągnij kark. To nie jest trening, to profilaktyka pleców przy staniu i siedzeniu.",
+          "nazwa": "Przed startem — gojenie",
+          "zasada": "Plan treningowy zaczyna się 17 września. Do tego czasu wracasz do zdrowia po zabiegu: bez treningu, bez deficytu, dużo snu.",
           "mikro": [
-            "10 przysiadów bez ciężaru",
-            "10 krążeń ramion w tył",
-            "30 s rozciągania zginaczy bioder na każdą nogę",
-            "Odchylenie głowy w tył i na boki po 15 s"
+            "Spokojny spacer, jeśli czujesz się dobrze",
+            "Dużo płynów",
+            "Zakup gum oporowych na start"
           ]
         }
       }
@@ -8086,33 +8255,61 @@
           "ping": true,
           "slot": "sniadanie",
           "opis": "Coś lekkiego i białkowego. Na pusty żołądek gorzej zaśniesz, na pełny obudzisz się rozbity.",
-          "posilek": "Jajecznica z pieczywem i pomidorem",
-          "posilek_id": "q_jajecznica",
+          "posilek": "Kanapki z serem, musztardą i kiszonym ogórkiem",
+          "posilek_id": "q_kanapki_ser",
           "porcja": 0.8,
           "makra": {
-            "kcal": 391,
-            "bialko": 21,
-            "tluszcz": 17,
-            "wegle": 37
+            "kcal": 874,
+            "bialko": 29,
+            "tluszcz": 22,
+            "wegle": 139
           },
           "skladniki": [
             {
-              "nazwa": "Jaja",
-              "ile": "2 szt. (110 g)",
-              "g": 110,
-              "kcal": 157,
-              "bialko": 13.9,
-              "tluszcz": 10.5,
-              "wegle": 0.8
+              "nazwa": "Chleb pszenny (zwykły biały)",
+              "ile": "6 kromek (210 g), w tym +4 kromki",
+              "g": 210,
+              "kcal": 525,
+              "bialko": 16.8,
+              "tluszcz": 6.3,
+              "wegle": 98.7,
+              "dodatek": true
             },
             {
-              "nazwa": "Chleb pszenny (zwykły biały)",
-              "ile": "2 kromki (70 g)",
-              "g": 70,
-              "kcal": 175,
-              "bialko": 5.6,
-              "tluszcz": 2.1,
-              "wegle": 32.9
+              "nazwa": "Ser żółty w plastrach",
+              "ile": "2 plastry (40 g)",
+              "g": 40,
+              "kcal": 140,
+              "bialko": 10.2,
+              "tluszcz": 10.8,
+              "wegle": 0.2
+            },
+            {
+              "nazwa": "Musztarda",
+              "ile": "1 łyżka (15 g)",
+              "g": 15,
+              "kcal": 16,
+              "bialko": 0.8,
+              "tluszcz": 0.9,
+              "wegle": 1.2
+            },
+            {
+              "nazwa": "Ogórek kiszony",
+              "ile": "100 g",
+              "g": 98,
+              "kcal": 12,
+              "bialko": 0.5,
+              "tluszcz": 0.2,
+              "wegle": 1.9
+            },
+            {
+              "nazwa": "Masło",
+              "ile": "5 g",
+              "g": 5,
+              "kcal": 37,
+              "bialko": 0.0,
+              "tluszcz": 4.1,
+              "wegle": 0.0
             },
             {
               "nazwa": "Pomidor",
@@ -8124,23 +8321,24 @@
               "wegle": 3.2
             },
             {
-              "nazwa": "Masło",
-              "ile": "5 g",
-              "g": 5,
-              "kcal": 37,
-              "bialko": 0.0,
-              "tluszcz": 4.1,
-              "wegle": 0.0
+              "nazwa": "Miód",
+              "ile": "+ 2 łyżki (40 g)",
+              "g": 40,
+              "kcal": 122,
+              "bialko": 0.1,
+              "tluszcz": 0.0,
+              "wegle": 32.8,
+              "dodatek": true
             }
           ],
           "jak": "przepis",
-          "czas_min": 8,
+          "czas_min": 4,
           "kroki": [
-            "Rozgrzej patelnię na średnim ogniu i rozpuść na niej kawałek masła.",
-            "Wbij jaja do kubka (ile — patrz rozpiska), posól, popieprz, rozbełtaj widelcem.",
-            "Wlej na patelnię, odczekaj 20 sekund, potem zgarniaj łopatką co kilka sekund.",
-            "Zdejmij z ognia, gdy jaja są ścięte, ale jeszcze błyszczące — dojdą na talerzu. Pomidor w plastry obok.",
-            "Ilości każdego składnika masz w rozpisce — porcja jest dopasowana do Twojego celu na ten dzień."
+            "Chleb cienko masłem, potem musztardą.",
+            "Po plastrze sera na kromkę, na to plastry ogórka kiszonego i pomidora.",
+            "Najszybszy posiłek w bazie — 4 minuty roboty.",
+            "Ilości każdego składnika masz w rozpisce — porcja jest dopasowana do Twojego celu na ten dzień.",
+            "Do tego dodatek węglowy: chleb pszenny 4 kromki, miód 2 łyżki. Zjedz obok — to paliwo na trening i regenerację, bez niego dzień nie dobija węglowodanów."
           ]
         },
         {
@@ -8181,33 +8379,33 @@
           "ping": true,
           "slot": "drugi",
           "opis": "Pierwszy porządny posiłek dnia. Trenowałeś na czczo, więc nie odkładaj go na później.",
-          "posilek": "Deser: twarożek kakaowy z masłem orzechowym",
-          "posilek_id": "d_twarog_kakao",
-          "porcja": 0.9,
+          "posilek": "Deser: czekoladowy pudding ze skyru z bananem",
+          "posilek_id": "d_pudding",
+          "porcja": 0.8,
           "makra": {
-            "kcal": 543,
-            "bialko": 58,
-            "tluszcz": 19,
-            "wegle": 34
+            "kcal": 404,
+            "bialko": 39,
+            "tluszcz": 3,
+            "wegle": 54
           },
           "skladniki": [
             {
-              "nazwa": "Twaróg półtłusty",
-              "ile": "180 g",
-              "g": 180,
-              "kcal": 239,
-              "bialko": 33.7,
-              "tluszcz": 8.5,
-              "wegle": 6.7
+              "nazwa": "Skyr naturalny (kubek 150 g)",
+              "ile": "2 kubki (300 g)",
+              "g": 300,
+              "kcal": 192,
+              "bialko": 34.5,
+              "tluszcz": 0.6,
+              "wegle": 11.4
             },
             {
               "nazwa": "Kakao naturalne (bez cukru)",
-              "ile": "1 łyżka (8 g)",
-              "g": 8,
-              "kcal": 30,
-              "bialko": 1.8,
-              "tluszcz": 1.6,
-              "wegle": 1.0
+              "ile": "12 g",
+              "g": 12,
+              "kcal": 46,
+              "bialko": 2.6,
+              "tluszcz": 2.4,
+              "wegle": 1.6
             },
             {
               "nazwa": "Miód",
@@ -8219,42 +8417,23 @@
               "wegle": 16.4
             },
             {
-              "nazwa": "Masło orzechowe 100%",
-              "ile": "1 łyżka (16 g)",
-              "g": 16,
-              "kcal": 99,
-              "bialko": 4.2,
-              "tluszcz": 8.2,
-              "wegle": 1.8
-            },
-            {
-              "nazwa": "Mleko 2%",
-              "ile": "35 ml",
-              "g": 35,
-              "kcal": 18,
-              "bialko": 1.2,
-              "tluszcz": 0.7,
-              "wegle": 1.7
+              "nazwa": "Banan",
+              "ile": "1 szt. (120 g)",
+              "g": 120,
+              "kcal": 106,
+              "bialko": 1.3,
+              "tluszcz": 0.4,
+              "wegle": 24.2
             }
           ],
           "jak": "przepis",
           "czas_min": 4,
           "kroki": [
-            "Twaróg rozgnieć z mlekiem na gładki krem.",
-            "Wsyp łyżkę kakao i łyżkę miodu, mieszaj do jednolitego koloru.",
-            "Łyżka masła orzechowego na wierzch. Smakuje jak krem czekoladowo-orzechowy.",
+            "Skyr do miski, wsyp kakao i miód w ilościach z rozpiski.",
+            "Mieszaj łyżką dobrą minutę, aż kakao całkiem się rozpuści i zrobi się jednolity krem — za krótko mieszane zostawia gorzkie grudki.",
+            "Banan w plasterki na wierzch. Smakuje jak budyń czekoladowy.",
             "Ilości każdego składnika masz w rozpisce — porcja jest dopasowana do Twojego celu na ten dzień."
-          ],
-          "dobitka": {
-            "nazwa": "Skyr naturalny (kubek 150 g)",
-            "ile": "1 kubek (150 g)",
-            "g": 150,
-            "n": 1,
-            "kcal": 96,
-            "bialko": 17.2,
-            "tluszcz": 0.3,
-            "wegle": 5.7
-          }
+          ]
         },
         {
           "czas": "15:15",
@@ -8389,51 +8568,42 @@
           "ping": true,
           "slot": "kolacja",
           "opis": "",
-          "posilek": "Twarożek ze szczypiorkiem + pieczywo",
-          "posilek_id": "q_twarog",
+          "posilek": "Sałatka z fetą, jajkiem i pomidorem + pieczywo",
+          "posilek_id": "q_salatka_feta",
           "porcja": 0.8,
           "makra": {
-            "kcal": 440,
-            "bialko": 37,
-            "tluszcz": 13,
-            "wegle": 44
+            "kcal": 501,
+            "bialko": 28,
+            "tluszcz": 29,
+            "wegle": 28
           },
           "skladniki": [
             {
-              "nazwa": "Twaróg półtłusty",
-              "ile": "160 g",
-              "g": 160,
-              "kcal": 213,
-              "bialko": 29.9,
-              "tluszcz": 7.5,
-              "wegle": 5.9
+              "nazwa": "Ser feta",
+              "ile": "55 g",
+              "g": 55,
+              "kcal": 145,
+              "bialko": 7.8,
+              "tluszcz": 11.7,
+              "wegle": 0.6
             },
             {
-              "nazwa": "Śmietana 18%",
-              "ile": "16 ml",
-              "g": 16,
-              "kcal": 29,
-              "bialko": 0.4,
-              "tluszcz": 2.9,
-              "wegle": 0.5
+              "nazwa": "Jaja",
+              "ile": "2 szt. (110 g)",
+              "g": 110,
+              "kcal": 157,
+              "bialko": 13.9,
+              "tluszcz": 10.5,
+              "wegle": 0.8
             },
             {
-              "nazwa": "Szczypiorek",
-              "ile": "8 g",
-              "g": 8,
-              "kcal": 2,
-              "bialko": 0.2,
-              "tluszcz": 0.1,
-              "wegle": 0.1
-            },
-            {
-              "nazwa": "Chleb pszenny (zwykły biały)",
-              "ile": "2 kromki (70 g)",
-              "g": 70,
-              "kcal": 175,
-              "bialko": 5.6,
-              "tluszcz": 2.1,
-              "wegle": 32.9
+              "nazwa": "Pomidor",
+              "ile": "180 g",
+              "g": 180,
+              "kcal": 32,
+              "bialko": 1.6,
+              "tluszcz": 0.4,
+              "wegle": 4.9
             },
             {
               "nazwa": "Ogórek długi",
@@ -8443,14 +8613,43 @@
               "bialko": 1.0,
               "tluszcz": 0.2,
               "wegle": 4.3
+            },
+            {
+              "nazwa": "Sałata / mix sałat",
+              "ile": "50 g",
+              "g": 50,
+              "kcal": 8,
+              "bialko": 0.7,
+              "tluszcz": 0.1,
+              "wegle": 0.8
+            },
+            {
+              "nazwa": "Oliwa z oliwek",
+              "ile": "6 ml",
+              "g": 6,
+              "kcal": 50,
+              "bialko": 0.0,
+              "tluszcz": 5.5,
+              "wegle": 0.0
+            },
+            {
+              "nazwa": "Chleb pszenny (zwykły biały)",
+              "ile": "1 kromka (35 g)",
+              "g": 35,
+              "kcal": 88,
+              "bialko": 2.8,
+              "tluszcz": 1.0,
+              "wegle": 16.4
             }
           ],
           "jak": "przepis",
-          "czas_min": 5,
+          "czas_min": 7,
           "kroki": [
-            "Twaróg rozgnieć widelcem w miseczce ze śmietaną — będzie kremowy, a nie suchy.",
-            "Wsyp posiekany szczypiorek, sól, pieprz, wymieszaj.",
-            "Ogórek w plastry. Jeść z chlebem. Do boxa: twarożek do zakręcanego pojemnika, chleb osobno.",
+            "Ugotuj jajka na twardo (9 min od wrzenia), zalej zimną wodą, obierz.",
+            "Pomidory i ogórka pokrój w grubą kostkę, wrzuć do miski na sałatę, dołóż jajka w ćwiartkach.",
+            "Fetę pokrusz palcami na wierzch.",
+            "Polej oliwą, posól, popieprz, wsyp oregano. Nie mieszaj mocno, żeby feta się nie rozpadła.",
+            "Do boxa: oliwę wlewasz dopiero na miejscu, inaczej sałata zwiotczeje.",
             "Ilości każdego składnika masz w rozpisce — porcja jest dopasowana do Twojego celu na ten dzień."
           ]
         },
@@ -8478,20 +8677,33 @@
         }
       ],
       "makra": {
-        "kcal": 2202,
-        "bialko": 164,
-        "tluszcz": 87,
-        "wegle": 181
+        "kcal": 2607,
+        "bialko": 144,
+        "tluszcz": 92,
+        "wegle": 287
       },
-      "dobitka": 1,
+      "dobitka": 0,
+      "dodatek_w": [
+        [
+          "chleb",
+          4
+        ],
+        [
+          "miod",
+          2
+        ]
+      ],
       "poza_planem": [],
       "lzejszy": false,
       "cel": {
-        "kcal": 2200,
-        "bialko": 165,
-        "tluszcz": 80,
-        "wegle": 205
+        "kcal": 2600,
+        "bialko": 150,
+        "tluszcz": 90,
+        "wegle": 297
       },
+      "slowo": "Zapisuj ciężary. Za pół roku to będzie najlepsza lektura, jaką masz.",
+      "faza": "Start",
+      "tydzien": 1,
       "nadwyzka": 0,
       "odhaczone": {},
       "waga": null,
@@ -8500,45 +8712,48 @@
       "trening": {
         "rodzaj": "krotki",
         "trening": {
-          "id": "w_fbw_b",
-          "nazwa": "KRÓTKI B — Full body (dzień po zmianie)",
-          "czas_min": 35,
+          "id": "k_ekspres",
+          "nazwa": "Ekspres po zmianie",
+          "czas_min": 20,
+          "blok": "Blok 1 — Nauka ruchu",
+          "blok_opis": "Uczysz się ruchu, nie dźwigasz. Ciężar tak lekki, że mógłbyś zrobić jeszcze 3 powtórzenia. Ma ci się chcieć przyjść na następny trening.",
+          "zapas": "3 powtórzenia w zapasie",
           "rozgrzewka": [
-            "Po 24 h służby, ok. 4,5 h snu i na czczo. Rozgrzewka 8 min, bez pośpiechu.",
-            "30 przysiadów bez ciężaru, krążenia ramion i bioder, 15 pompek, martwy zwis 2×20 s.",
-            "Pierwszą serię roboczą poprzedź serią na 50% ciężaru."
+            "5 minut: krążenia ramion i bioder, 15 przysiadów bez ciężaru, 10 pompek (mogą być na kolanach).",
+            "Przed pierwszym ćwiczeniem seria na pustej sztandze albo lekkich hantlach — 12 powtórzeń."
           ],
           "cwiczenia": [
             {
-              "nazwa": "Rumuński martwy ciąg",
-              "serie": 3,
-              "powt": "10",
-              "przerwa": "2 min",
-              "wskazowka": "Umiarkowany ciężar. Po dobie stania plecy są zmęczone — technika ważniejsza niż kilogramy."
+              "nazwa": "Pompki",
+              "powt": "8-15",
+              "przerwa": "60 s",
+              "wskazowka": "Po dobie na służbie bez ambicji na rekord. Czyste powtórzenia.",
+              "latwiej": "Na ławce.",
+              "trudniej": "Nogi na ławce.",
+              "serie": 2
             },
             {
-              "nazwa": "Wyciskanie hantli nad głowę",
-              "serie": 3,
-              "powt": "10",
-              "przerwa": "90 s",
-              "wskazowka": "Siedząc, z oparciem — stabilniej gdy jesteś zmęczony."
+              "nazwa": "Wiosłowanie hantlem jednorącz",
+              "powt": "10-12",
+              "przerwa": "60 s",
+              "v": true,
+              "wskazowka": "Ciągniesz do biodra, spokojnie.",
+              "latwiej": "Lżejszy hantel.",
+              "trudniej": "Zatrzymanie na górze.",
+              "serie": 2
             },
             {
-              "nazwa": "Podciąganie albo wiosłowanie hantlą",
-              "serie": 3,
-              "powt": "8-12",
-              "przerwa": "90 s",
-              "wskazowka": "Wybierz to, na co masz dziś siłę."
-            },
-            {
-              "nazwa": "Uginanie EZ + pompki (superseria)",
-              "serie": 2,
-              "powt": "12 + max",
-              "przerwa": "75 s",
-              "wskazowka": "Jedno po drugim bez przerwy, potem odpoczynek."
+              "nazwa": "Unoszenie hantli bokiem",
+              "powt": "12-15",
+              "przerwa": "45 s",
+              "v": true,
+              "wskazowka": "Barki boczne nawet w dzień po zmianie — mały ciężar, duży efekt.",
+              "latwiej": "Guma.",
+              "trudniej": "Seria zrywana.",
+              "serie": 2
             }
           ],
-          "finisz": "Kręci Ci się w głowie albo ciężar leci — kończysz. Po nieprzespanej dobie to normalne i nie jest to porażka. Zaraz po treningu jesz pierwszy porządny posiłek dnia."
+          "finisz": "Każda seria kończy się z zapasem: 3 powtórzenia w zapasie. Uczysz się ruchu, nie dźwigasz. Ciężar tak lekki, że mógłbyś zrobić jeszcze 3 powtórzenia. Ma ci się chcieć przyjść na następny trening."
         }
       }
     },
@@ -8574,24 +8789,137 @@
           "ping": true,
           "slot": "sniadanie",
           "opis": "Pierwszy posiłek dnia, zaraz po sztandze.",
-          "posilek": "Skyr z bananem i masłem orzechowym",
-          "posilek_id": "q_skyr",
-          "porcja": 1.0,
+          "posilek": "Tortilla z jajecznicą, serem i sałatą",
+          "posilek_id": "q_tortilla",
+          "porcja": 0.8,
           "makra": {
-            "kcal": 397,
-            "bialko": 40,
-            "tluszcz": 9,
-            "wegle": 37
+            "kcal": 821,
+            "bialko": 33,
+            "tluszcz": 27,
+            "wegle": 110
           },
           "skladniki": [
             {
-              "nazwa": "Skyr naturalny (kubek 150 g)",
-              "ile": "2 kubki (300 g)",
-              "g": 300,
-              "kcal": 192,
-              "bialko": 34.5,
-              "tluszcz": 0.6,
-              "wegle": 11.4
+              "nazwa": "Tortilla pszenna",
+              "ile": "1 szt. (60 g)",
+              "g": 62,
+              "kcal": 189,
+              "bialko": 5.2,
+              "tluszcz": 4.5,
+              "wegle": 31.6
+            },
+            {
+              "nazwa": "Jaja",
+              "ile": "2 szt. (110 g)",
+              "g": 110,
+              "kcal": 157,
+              "bialko": 13.9,
+              "tluszcz": 10.5,
+              "wegle": 0.8
+            },
+            {
+              "nazwa": "Ser żółty starty",
+              "ile": "20 g",
+              "g": 20,
+              "kcal": 70,
+              "bialko": 5.1,
+              "tluszcz": 5.4,
+              "wegle": 0.1
+            },
+            {
+              "nazwa": "Sałata / mix sałat",
+              "ile": "30 g",
+              "g": 30,
+              "kcal": 4,
+              "bialko": 0.4,
+              "tluszcz": 0.1,
+              "wegle": 0.5
+            },
+            {
+              "nazwa": "Pomidor",
+              "ile": "1 szt. (120 g)",
+              "g": 120,
+              "kcal": 22,
+              "bialko": 1.1,
+              "tluszcz": 0.2,
+              "wegle": 3.2
+            },
+            {
+              "nazwa": "Masło",
+              "ile": "5 g",
+              "g": 5,
+              "kcal": 37,
+              "bialko": 0.0,
+              "tluszcz": 4.1,
+              "wegle": 0.0
+            },
+            {
+              "nazwa": "Banan",
+              "ile": "+ 1 szt. (120 g)",
+              "g": 120,
+              "kcal": 106,
+              "bialko": 1.3,
+              "tluszcz": 0.4,
+              "wegle": 24.2,
+              "dodatek": true
+            },
+            {
+              "nazwa": "Chleb pszenny (zwykły biały)",
+              "ile": "+ 2 kromki (70 g)",
+              "g": 70,
+              "kcal": 175,
+              "bialko": 5.6,
+              "tluszcz": 2.1,
+              "wegle": 32.9,
+              "dodatek": true
+            },
+            {
+              "nazwa": "Miód",
+              "ile": "+ 1 łyżka (20 g)",
+              "g": 20,
+              "kcal": 61,
+              "bialko": 0.1,
+              "tluszcz": 0.0,
+              "wegle": 16.4,
+              "dodatek": true
+            }
+          ],
+          "jak": "przepis",
+          "czas_min": 9,
+          "kroki": [
+            "Zrób gęstą jajecznicę z jajek z rozpiski, na maśle — trochę bardziej ściętą niż zwykle, żeby nie ciekła z tortilli.",
+            "Tortille podgrzej 20 sekund na suchej patelni, żeby się nie łamały przy zwijaniu.",
+            "Na każdą wyłóż jajecznicę, posyp serem, dorzuć sałatę i plastry pomidora.",
+            "Zawiń boki do środka i zroluj. Na suchej patelni podsmaż 1 min z każdej strony — wtedy trzyma się kupy.",
+            "Ilości każdego składnika masz w rozpisce — porcja jest dopasowana do Twojego celu na ten dzień.",
+            "Do tego dodatek węglowy: banan 1 szt., chleb pszenny 2 kromki, miód 1 łyżka. Zjedz obok — to paliwo na trening i regenerację, bez niego dzień nie dobija węglowodanów."
+          ]
+        },
+        {
+          "czas": "13:00",
+          "tytul": "Drugi posiłek",
+          "ikona": "🥪",
+          "ping": true,
+          "slot": "drugi",
+          "opis": "",
+          "posilek": "Twaróg z bananem i miodem",
+          "posilek_id": "q_twarog_banan",
+          "porcja": 1.2,
+          "makra": {
+            "kcal": 559,
+            "bialko": 46,
+            "tluszcz": 19,
+            "wegle": 53
+          },
+          "skladniki": [
+            {
+              "nazwa": "Twaróg półtłusty",
+              "ile": "215 g",
+              "g": 215,
+              "kcal": 286,
+              "bialko": 40.2,
+              "tluszcz": 10.1,
+              "wegle": 8.0
             },
             {
               "nazwa": "Banan",
@@ -8603,60 +8931,6 @@
               "wegle": 24.2
             },
             {
-              "nazwa": "Masło orzechowe 100%",
-              "ile": "1 łyżka (16 g)",
-              "g": 16,
-              "kcal": 99,
-              "bialko": 4.2,
-              "tluszcz": 8.2,
-              "wegle": 1.8
-            }
-          ],
-          "jak": "przepis",
-          "czas_min": 3,
-          "kroki": [
-            "Skyr do miski lub pojemnika.",
-            "Banan w plastry, łyżka masła orzechowego na wierzch. Wymieszaj albo zostaw warstwami.",
-            "Na zmianę: wszystko do zakręcanego pojemnika, banan dorzucasz na miejscu żeby nie sczerniał.",
-            "Ilości każdego składnika masz w rozpisce — porcja jest dopasowana do Twojego celu na ten dzień."
-          ]
-        },
-        {
-          "czas": "13:00",
-          "tytul": "Drugi posiłek",
-          "ikona": "🥪",
-          "ping": true,
-          "slot": "drugi",
-          "opis": "",
-          "posilek": "Deser: sernik na zimno w kubku (bez pieczenia)",
-          "posilek_id": "d_sernik",
-          "porcja": 0.8,
-          "makra": {
-            "kcal": 506,
-            "bialko": 49,
-            "tluszcz": 13,
-            "wegle": 48
-          },
-          "skladniki": [
-            {
-              "nazwa": "Twaróg półtłusty",
-              "ile": "160 g",
-              "g": 160,
-              "kcal": 213,
-              "bialko": 29.9,
-              "tluszcz": 7.5,
-              "wegle": 5.9
-            },
-            {
-              "nazwa": "Skyr naturalny (kubek 150 g)",
-              "ile": "1 kubek (150 g)",
-              "g": 150,
-              "kcal": 96,
-              "bialko": 17.2,
-              "tluszcz": 0.3,
-              "wegle": 5.7
-            },
-            {
               "nazwa": "Miód",
               "ile": "1 łyżka (20 g)",
               "g": 20,
@@ -8666,31 +8940,30 @@
               "wegle": 16.4
             },
             {
-              "nazwa": "Jabłko",
-              "ile": "1 szt. (170 g)",
-              "g": 170,
-              "kcal": 85,
-              "bialko": 0.5,
-              "tluszcz": 0.3,
-              "wegle": 19.4
+              "nazwa": "Orzechy / migdały",
+              "ile": "12 g",
+              "g": 12,
+              "kcal": 77,
+              "bialko": 2.3,
+              "tluszcz": 6.8,
+              "wegle": 1.2
             },
             {
-              "nazwa": "Orzechy / migdały",
-              "ile": "8 g",
-              "g": 8,
-              "kcal": 51,
-              "bialko": 1.5,
-              "tluszcz": 4.6,
-              "wegle": 0.8
+              "nazwa": "Mleko 2%",
+              "ile": "60 ml",
+              "g": 60,
+              "kcal": 30,
+              "bialko": 2.0,
+              "tluszcz": 1.2,
+              "wegle": 2.9
             }
           ],
           "jak": "przepis",
-          "czas_min": 6,
+          "czas_min": 4,
           "kroki": [
-            "Twaróg rozgnieć widelcem ze skyrem, aż masa będzie gładka — im dłużej ucierasz, tym bardziej przypomina sernik.",
-            "Dodaj łyżkę miodu i wymieszaj.",
-            "Jabłko zetrzyj na tarce na dno kubka albo pojemnika, na to masa serowa, na wierzch pokruszone orzechy.",
-            "Najlepszy po godzinie w lodówce — zrób go w dniu gotowania razem z garnkiem.",
+            "Twaróg rozgnieć widelcem z mlekiem — zrobi się kremowy.",
+            "Banan w plastry, miód, orzechy na wierzch.",
+            "Wersja na zmianę: wszystko do zakręcanego pojemnika.",
             "Ilości każdego składnika masz w rozpisce — porcja jest dopasowana do Twojego celu na ten dzień."
           ]
         },
@@ -8806,14 +9079,14 @@
           "ping": true,
           "slot": "kolacja",
           "opis": "",
-          "posilek": "Omlet z serem i pomidorem",
-          "posilek_id": "q_omlet",
+          "posilek": "Jajecznica z pieczywem i pomidorem",
+          "posilek_id": "q_jajecznica",
           "porcja": 0.8,
           "makra": {
-            "kcal": 444,
-            "bialko": 28,
-            "tluszcz": 27,
-            "wegle": 21
+            "kcal": 391,
+            "bialko": 21,
+            "tluszcz": 17,
+            "wegle": 37
           },
           "skladniki": [
             {
@@ -8826,13 +9099,13 @@
               "wegle": 0.8
             },
             {
-              "nazwa": "Ser żółty w plastrach",
-              "ile": "2 plastry (40 g)",
-              "g": 40,
-              "kcal": 140,
-              "bialko": 10.2,
-              "tluszcz": 10.8,
-              "wegle": 0.2
+              "nazwa": "Chleb pszenny (zwykły biały)",
+              "ile": "2 kromki (70 g)",
+              "g": 70,
+              "kcal": 175,
+              "bialko": 5.6,
+              "tluszcz": 2.1,
+              "wegle": 32.9
             },
             {
               "nazwa": "Pomidor",
@@ -8851,24 +9124,15 @@
               "bialko": 0.0,
               "tluszcz": 4.1,
               "wegle": 0.0
-            },
-            {
-              "nazwa": "Chleb pszenny (zwykły biały)",
-              "ile": "1 kromka (35 g)",
-              "g": 35,
-              "kcal": 88,
-              "bialko": 2.8,
-              "tluszcz": 1.0,
-              "wegle": 16.4
             }
           ],
           "jak": "przepis",
-          "czas_min": 10,
+          "czas_min": 8,
           "kroki": [
-            "Rozbełtaj jaja (ile — patrz rozpiska) z solą i pieprzem.",
-            "Na patelni rozpuść masło, wlej jaja i NIE mieszaj. Smaż 3 min na małym ogniu pod przykryciem.",
-            "Gdy wierzch jest już prawie ścięty, połóż na połowie plastry sera i pomidora.",
-            "Złóż omlet na pół łopatką, smaż jeszcze 1 min. Zjedz z kromką chleba.",
+            "Rozgrzej patelnię na średnim ogniu i rozpuść na niej kawałek masła.",
+            "Wbij jaja do kubka (ile — patrz rozpiska), posól, popieprz, rozbełtaj widelcem.",
+            "Wlej na patelnię, odczekaj 20 sekund, potem zgarniaj łopatką co kilka sekund.",
+            "Zdejmij z ognia, gdy jaja są ścięte, ale jeszcze błyszczące — dojdą na talerzu. Pomidor w plastry obok.",
             "Ilości każdego składnika masz w rozpisce — porcja jest dopasowana do Twojego celu na ten dzień."
           ]
         },
@@ -8904,20 +9168,37 @@
         }
       ],
       "makra": {
-        "kcal": 2175,
-        "bialko": 165,
-        "tluszcz": 87,
-        "wegle": 172
+        "kcal": 2599,
+        "bialko": 148,
+        "tluszcz": 101,
+        "wegle": 266
       },
       "dobitka": 0,
+      "dodatek_w": [
+        [
+          "banan",
+          1
+        ],
+        [
+          "chleb",
+          2
+        ],
+        [
+          "miod",
+          1
+        ]
+      ],
       "poza_planem": [],
       "lzejszy": false,
       "cel": {
-        "kcal": 2200,
-        "bialko": 165,
-        "tluszcz": 80,
-        "wegle": 205
+        "kcal": 2600,
+        "bialko": 150,
+        "tluszcz": 90,
+        "wegle": 297
       },
+      "slowo": "Silniejszy za rok zaczyna się od tego, że dziś podniesiesz ciężar o jeden raz więcej.",
+      "faza": "Start",
+      "tydzien": 1,
       "nadwyzka": 0,
       "odhaczone": {},
       "waga": null,
@@ -8926,59 +9207,56 @@
       "trening": {
         "rodzaj": "glowny",
         "trening": {
-          "id": "w_nogi",
-          "nazwa": "GŁÓWNY C — Nogi i brzuch",
-          "czas_min": 55,
+          "id": "g_nogi",
+          "nazwa": "Nogi, brzuch i barki",
+          "czas_min": 24,
+          "blok": "Blok 1 — Nauka ruchu",
+          "blok_opis": "Uczysz się ruchu, nie dźwigasz. Ciężar tak lekki, że mógłbyś zrobić jeszcze 3 powtórzenia. Ma ci się chcieć przyjść na następny trening.",
+          "zapas": "3 powtórzenia w zapasie",
           "rozgrzewka": [
-            "Trenujesz zaraz po wstaniu, na czczo — rozgrzewki NIE skracaj, to nie jest miejsce na oszczędzanie czasu.",
-            "8 min: 30 przysiadów bez ciężaru, krążenia ramion i bioder, 20 pompek.",
-            "Przysiad sama sztanga x15, potem 50% x8"
+            "5 minut: krążenia ramion i bioder, 15 przysiadów bez ciężaru, 10 pompek (mogą być na kolanach).",
+            "Przed pierwszym ćwiczeniem seria na pustej sztandze albo lekkich hantlach — 12 powtórzeń."
           ],
           "cwiczenia": [
             {
-              "nazwa": "Przysiad ze sztangą (w racku, z bolcami)",
-              "serie": 4,
-              "powt": "6-8",
-              "przerwa": "3 min",
-              "wskazowka": "Bolce ustawione na wysokości dołu ruchu — trenujesz sam, to jest obowiązkowe."
+              "nazwa": "Przysiad goblet z hantlem",
+              "powt": "10-12",
+              "przerwa": "2 min",
+              "wskazowka": "Hantel przy klatce, schodzisz między kolana, plecy proste. Najbezpieczniejsza szkoła przysiadu dla początkującego.",
+              "latwiej": "Przysiad do ławki.",
+              "trudniej": "Przysiad ze sztangą w racku, z ustawionymi bolcami.",
+              "serie": 2
             },
             {
               "nazwa": "Rumuński martwy ciąg",
-              "serie": 3,
-              "powt": "8-10",
+              "powt": "8-12",
               "przerwa": "2 min",
-              "wskazowka": "Kolana prawie proste, biodra jadą do tyłu. Poczujesz ciągnięcie z tyłu uda — o to chodzi."
+              "wskazowka": "Kolana prawie proste, biodra jadą do tyłu, plecy proste jak deska. Czujesz ciągnięcie z tyłu uda — o to chodzi.",
+              "latwiej": "Z hantlami, mały zakres.",
+              "trudniej": "Ze sztangą.",
+              "serie": 2
             },
             {
-              "nazwa": "Wykroki chodzone z hantlami",
-              "serie": 3,
-              "powt": "10 na nogę",
-              "przerwa": "90 s",
-              "wskazowka": "Długi krok. Krótki krok robi z tego ćwiczenie na kolana."
-            },
-            {
-              "nazwa": "Wspięcia na palce z hantlami",
-              "serie": 3,
-              "powt": "15-20",
+              "nazwa": "Unoszenie kolan w zwisie",
+              "powt": "10-15",
               "przerwa": "60 s",
-              "wskazowka": "Pełny zakres, sekunda przytrzymania na górze."
+              "wskazowka": "Zwis na drążku, kolana do klatki bez bujania. Brzuch widoczny na zdjęciu to w połowie ten mięsień, w połowie dieta.",
+              "latwiej": "Leżąc na ławce.",
+              "trudniej": "Proste nogi.",
+              "serie": 2
             },
             {
-              "nazwa": "Plank",
-              "serie": 3,
-              "powt": "45-60 s",
-              "przerwa": "45 s",
-              "wskazowka": "Pośladki napięte, biodra nie lecą w dół ani w górę."
-            },
-            {
-              "nazwa": "Unoszenie nóg w zwisie albo leżąc",
-              "serie": 3,
+              "nazwa": "Unoszenie hantli bokiem",
               "powt": "12-15",
               "przerwa": "60 s",
-              "wskazowka": "Ruch z dołu brzucha, nie z bioder. Wolno w dół."
+              "v": true,
+              "wskazowka": "Trzeci raz w cyklu. Tak ma być.",
+              "latwiej": "Guma.",
+              "trudniej": "Seria zrywana.",
+              "serie": 2
             }
           ],
-          "finisz": "5 min rozciągania nóg. Nogi po 24h stania na zmianie lubią to szczególnie."
+          "finisz": "Każda seria kończy się z zapasem: 3 powtórzenia w zapasie. Uczysz się ruchu, nie dźwigasz. Ciężar tak lekki, że mógłbyś zrobić jeszcze 3 powtórzenia. Ma ci się chcieć przyjść na następny trening."
         }
       }
     }
@@ -9846,11 +10124,11 @@
   "kalorie": {
     "trend": null,
     "korekta_teraz": 0,
-    "kcal_teraz": 2200,
+    "kcal_teraz": 2600,
     "zmiana": 0,
     "ocena": "Za mało pomiarów, żeby cokolwiek liczyć. Potrzebuję trzech ważeń w ciągu trzech tygodni — ważysz się raz na cykl, więc to około tygodnia."
   },
-  "cel_bazowy": 2200,
+  "cel_bazowy": 2600,
   "sen": {
     "cykl_min": 90,
     "zasypianie_min": 15,
@@ -9907,15 +10185,15 @@
   },
   "kroki": {
     "kroki": 5334,
-    "cel": 10000,
-    "brakuje": 4666,
+    "cel": 8500,
+    "brakuje": 3166,
     "status": "malo",
-    "sugestia": "Brakuje sporo. Zrób dłuższy spacer i wróć piechotą zamiast jechać — najprościej wyjść z domu i iść 25 minut w jedną stronę, wtedy powrót zrobi resztę.",
+    "sugestia": "35 minut spaceru. Wyjdź teraz, zanim usiądziesz na kanapie — po usiądnięciu już nie wyjdziesz.",
     "komentarz": "Jedyny pełny dzień w domu. Tu robisz większość tygodniowego chodzenia.",
-    "procent": 53
+    "procent": 63
   },
   "kroki_cel": {
-    "cel": 10000,
+    "cel": 8500,
     "komentarz": "Jedyny pełny dzień w domu. Tu robisz większość tygodniowego chodzenia."
   }
 }
