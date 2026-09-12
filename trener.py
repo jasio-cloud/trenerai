@@ -1172,6 +1172,23 @@ def agenda(d=None):
             e["porcja"] = porcja
             e["makra"] = makra_posilku(pid, porcja)
             e["skladniki"] = rozpiska(pid, porcja)
+            # Kazdy posilek dostaje instrukcje, nie tylko garnek. Obiad z garnka
+            # ma dwa rozne warianty: w dniu gotowania caly przepis, w pozostale dni
+            # tylko odgrzanie — bo wtedy stoi juz gotowy w lodowce.
+            if pid in QUICK_BY_ID:
+                q = QUICK_BY_ID[pid]
+                e["jak"], e["czas_min"] = "przepis", q["czas_min"]
+                e["kroki"] = list(q["kroki"]) + ["Ilości każdego składnika masz w rozpisce — porcja jest dopasowana do Twojego celu na ten dzień."]
+            else:
+                b = BAZA_BY_ID[pid]
+                if typ_dnia(d) == DZIEN_GOTOWANIA:
+                    e["jak"], e["czas_min"] = "gotowanie", b["czas_min"]
+                    e["kroki"] = ["To przepis na cały garnek — %d porcje, obiady na 3 dni. Gramatury na garnek masz w zakładce Gotuję." % b["porcje"]] + list(b["kroki"])
+                else:
+                    e["jak"], e["czas_min"] = "odgrzewanie", 4
+                    e["kroki"] = ["Wyjmij jeden pojemnik z garnka ugotowanego w dniu gotowania.",
+                                  "Odgrzej: %s." % b["odgrzewanie"],
+                                  "Przechowywanie: %s." % b["przechowywanie"]]
             if e["slot"] == "drugi" and dzien.get("dobitka"):
                 n = dzien["dobitka"]
                 s = makra_skladnika(DOBITKA_PRODUKT, n)

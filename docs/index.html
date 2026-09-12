@@ -135,6 +135,14 @@
   .nawigacja .gdzie{color:var(--slaby);font-size:12.5px;margin-left:auto}
   .zrodlo{border-left:3px solid var(--akcent);padding:8px 11px;margin-bottom:12px;
     background:var(--karta);border-radius:0 10px 10px 0;font-size:13px;color:var(--slaby)}
+  details.przepis{margin-top:8px}
+  details.przepis summary{cursor:pointer;color:var(--akcent);font-weight:600;font-size:13px;
+    list-style:none;padding:4px 0;-webkit-tap-highlight-color:transparent}
+  details.przepis summary::-webkit-details-marker{display:none}
+  details.przepis summary::before{content:"▸ ";display:inline-block;transition:transform .15s}
+  details.przepis[open] summary::before{transform:rotate(90deg)}
+  details.przepis ol{margin:4px 0 2px;padding-left:20px;font-size:13px;color:var(--tekst)}
+  details.przepis li{margin:5px 0;line-height:1.45}
   [hidden]{display:none !important}
 </style>
 </head>
@@ -176,7 +184,7 @@ const esc = s => String(s??"").replace(/[&<>"]/g, c => ({"&":"&amp;","<":"&lt;",
 /* Wersja panelu. iPhone dodany do ekranu głównego potrafi trzymać stary HTML
    w nieskończoność. dane.json leci zawsze świeży, więc porównujemy numery
    i przy różnicy przeładowujemy stronę z ?v=, co omija cache przeglądarki. */
-const WERSJA = 8;
+const WERSJA = 9;
 let D = null, widok = "dzis";
 
 /* ---- zapis z telefonu ------------------------------------------------------
@@ -307,6 +315,16 @@ const OPIS_ZRODLA = {
   brak: "Dla tego dnia nie ma zapisanego planu — powstał, zanim system zaczął archiwizować cykle."
 };
 
+/* Instrukcja pod kazdym posilkiem. Zwiniete domyslnie, zeby plan dnia dalo sie
+   przejrzec jednym rzutem oka, a przepis byl na jedno tapniecie. */
+function przygotowanie(e){
+  if(!e.kroki || !e.kroki.length) return "";
+  const tytul = e.jak === "gotowanie" ? "Gotujesz garnek na 3 dni"
+              : e.jak === "odgrzewanie" ? "Z lodówki — tylko odgrzej" : "Jak przygotować";
+  return `<details class="przepis"><summary>${tytul} · ${e.czas_min} min</summary>
+    <ol>${e.kroki.map(k => `<li>${esc(k)}</li>`).join("")}</ol></details>`;
+}
+
 function tabelaSkladnikow(e){
   if(!e.skladniki || !e.skladniki.length) return "";
   return `<table class="sklad">
@@ -336,6 +354,7 @@ function widokInnegoDnia(x){
         ${e.posilek ? `<div class="posilek">${esc(e.posilek)}
            <span class="kcal">· ${e.makra.kcal} kcal, ${e.makra.bialko} g B</span></div>` : ""}
         ${tabelaSkladnikow(e)}
+        ${przygotowanie(e)}
         ${e.opis ? `<div class="op">${esc(e.opis)}</div>` : ""}
       </div></li>`;
   }).join("");
@@ -391,6 +410,7 @@ function widokDzis(){
             <tr class="suma-sklad"><td></td><td>razem</td>
               <td class="liczby">${e.makra.kcal} kcal · B ${e.makra.bialko} · T ${e.makra.tluszcz} · W ${e.makra.wegle}</td></tr>
           </table>` : ""}
+        ${przygotowanie(e)}
         ${e.opis ? `<div class="op">${esc(e.opis)}</div>` : ""}
       </div></li>`;
   }).join("");
