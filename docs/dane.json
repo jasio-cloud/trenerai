@@ -1,5 +1,5 @@
 {
-  "wygenerowano": "2026-09-12T10:54:47+02:00",
+  "wygenerowano": "2026-09-12T20:00:16+02:00",
   "dzis": "2026-09-12",
   "typ_dzis": 2,
   "typy": {
@@ -6133,7 +6133,12 @@
       "nadwyzka": 0,
       "odhaczone": {},
       "waga": null,
-      "kroki": null,
+      "kroki": {
+        "data": "2026-09-12",
+        "kroki": 5334,
+        "cel": 10000,
+        "status": "malo"
+      },
       "serie": [],
       "trening": {
         "rodzaj": "glowny",
@@ -9891,10 +9896,24 @@
         "kroki": 1692,
         "cel": 7000,
         "status": "malo"
+      },
+      {
+        "data": "2026-09-12",
+        "kroki": 5334,
+        "cel": 10000,
+        "status": "malo"
       }
     ]
   },
-  "kroki": null,
+  "kroki": {
+    "kroki": 5334,
+    "cel": 10000,
+    "brakuje": 4666,
+    "status": "malo",
+    "sugestia": "Brakuje sporo. Zrób dłuższy spacer i wróć piechotą zamiast jechać — najprościej wyjść z domu i iść 25 minut w jedną stronę, wtedy powrót zrobi resztę.",
+    "komentarz": "Jedyny pełny dzień w domu. Tu robisz większość tygodniowego chodzenia.",
+    "procent": 53
+  },
   "kroki_cel": {
     "cel": 10000,
     "komentarz": "Jedyny pełny dzień w domu. Tu robisz większość tygodniowego chodzenia."
