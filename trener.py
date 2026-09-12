@@ -98,8 +98,11 @@ def wstrzymaj(powod=""):
 
 
 # pliki, ktore opisuja BIEZACY cykl i przy starcie od zera maja zniknac
+# zaplanowane.json CELOWO tu nie ma: to jedyny zapis pingow, ktore juz czekaja w ntfy,
+# a ntfy nie pozwala ich cofnac. Restart kasowal ten zapis, system zapominal o kolejce
+# i planowal te same pingi drugi raz — po restarcie 11.09 caly dzien 12.09 przyszedl podwojnie.
 _STAN_CYKLU = ("plan.json", "fridge.json", "podmiany.json", "zdarzenia.json",
-               "przetworzone.json", "zaplanowane.json", "kcal_korekta.json")
+               "przetworzone.json", "kcal_korekta.json")
 
 
 def start_od_zera():
@@ -1349,7 +1352,7 @@ def agenda(d=None):
 
 # --------------------------------------------------------------- pingi ntfy
 
-def wyslij_ping(tytul, tresc, tagi=None, priorytet=3, kiedy=None):
+def wyslij_ping(tytul, tresc, tagi=None, priorytet=3, kiedy=None, klucz=None):
     topic = os.environ.get(CFG["ntfy"]["topic_env"], "").strip()
     if not topic:
         print("[ntfy] brak NTFY_TOPIC — pomijam wysyłkę")
@@ -1366,6 +1369,11 @@ def wyslij_ping(tytul, tresc, tagi=None, priorytet=3, kiedy=None):
     if kiedy is not None:
         # ntfy przyjmuje wiadomosc teraz i dostarcza ja o podanej sekundzie
         payload["delay"] = str(int(kiedy))
+    if klucz:
+        # Staly identyfikator pingu: gdyby ten sam punkt planu mimo wszystko poszedl
+        # dwa razy, druga wiadomosc ZASTAPI pierwsza na telefonie zamiast dojsc obok.
+        import hashlib
+        payload["sequence_id"] = "p" + hashlib.md5(klucz.encode("utf-8")).hexdigest()[:24]
     req = urllib.request.Request(
         CFG["ntfy"]["server"],
         data=json.dumps(payload).encode("utf-8"),
@@ -1476,7 +1484,7 @@ def zaplanuj_pingi(dni_naprzod=1, sucho=False):
             if sucho:
                 print("[SUCHY BIEG] %s %s -> %s" % (ds, e["czas"], tytul))
             elif not wyslij_ping(tytul, tresc_pinga(e, d), priorytet=4 if e.get("akcja") else 3,
-                                 kiedy=termin.timestamp()):
+                                 kiedy=termin.timestamp(), klucz=ds + "|" + klucz):
                 continue
             zapl.setdefault(ds, []).append(klucz)
             nowe.append("%s %s %s" % (ds, e["czas"], e["tytul"]))
@@ -1525,7 +1533,8 @@ def tick(okno_min=25, sucho=False):
             if sucho:
                 print("[SUCHY BIEG]", tytul, "|", tresc.replace("\n", " / "))
                 poszlo.append(klucz)
-            elif wyslij_ping(tytul, tresc, tagi=[], priorytet=4 if e.get("akcja") else 3):
+            elif wyslij_ping(tytul, tresc, tagi=[], priorytet=4 if e.get("akcja") else 3,
+                             klucz=d.isoformat() + "|" + klucz):
                 wyslane.append(klucz)
                 poszlo.append(klucz)
     if poszlo and not sucho:

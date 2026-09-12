@@ -45,7 +45,12 @@ jobs:
   ping:
     runs-on: ubuntu-latest
     steps:
+      # ref: main, a NIE domyslny sha z chwili zlecenia przebiegu. Przebiegi stoja
+      # w kolejce (concurrency), a GitHub dawal im stan repo sprzed zapisow poprzednika:
+      # taki przebieg nie widzial zaplanowanych pingow i planowal je drugi raz.
       - uses: actions/checkout@v4
+        with:
+          ref: main
 
       - uses: actions/setup-python@v5
         with:
@@ -57,11 +62,6 @@ jobs:
           NTFY_TOPIC: ${{ secrets.NTFY_TOPIC }}
         run: python trener.py test
 
-      - name: Potwierdź wdrożenie (tylko po pushu)
-        if: github.event_name == 'push'
-        env:
-          NTFY_TOPIC: ${{ secrets.NTFY_TOPIC }}
-        run: python trener.py wdrozenie
 
       - name: Zastosuj to, co przyszło z telefonu
         if: ${{ !inputs.test }}
