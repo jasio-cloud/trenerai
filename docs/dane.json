@@ -1,5 +1,5 @@
 {
-  "wygenerowano": "2026-09-12T01:14:05+02:00",
+  "wygenerowano": "2026-09-12T09:06:12+02:00",
   "dzis": "2026-09-12",
   "typ_dzis": 2,
   "typy": {
@@ -258,6 +258,15 @@
           "tluszcz": 5.5,
           "wegle": 0.0
         }
+      ],
+      "jak": "przepis",
+      "czas_min": 12,
+      "kroki": [
+        "Na patelni na oleju smaż posiekaną cebulę i paprykę 5 min.",
+        "Dodaj czosnek, passatę, sól, pieprz, szczyptę słodkiej papryki. Gotuj 3 min.",
+        "Zrób łyżką wgłębienie na każde jajko i wbij je.",
+        "Przykryj i trzymaj 5 min na małym ogniu — białka mają się ściąć, żółtka zostać płynne. Maczasz chlebem prosto z patelni, zero talerzy.",
+        "Ilości każdego składnika masz w rozpisce — porcja jest dopasowana do Twojego celu na ten dzień."
       ]
     },
     {
@@ -304,6 +313,14 @@
           "tluszcz": 8.2,
           "wegle": 1.8
         }
+      ],
+      "jak": "przepis",
+      "czas_min": 3,
+      "kroki": [
+        "Skyr do miski lub pojemnika.",
+        "Banan w plastry, łyżka masła orzechowego na wierzch. Wymieszaj albo zostaw warstwami.",
+        "Na zmianę: wszystko do zakręcanego pojemnika, banan dorzucasz na miejscu żeby nie sczerniał.",
+        "Ilości każdego składnika masz w rozpisce — porcja jest dopasowana do Twojego celu na ten dzień."
       ]
     },
     {
@@ -395,6 +412,13 @@
           "tluszcz": 6.1,
           "wegle": 0.0
         }
+      ],
+      "jak": "odgrzewanie",
+      "czas_min": 4,
+      "kroki": [
+        "Wyjmij jeden pojemnik z garnka ugotowanego w dniu gotowania.",
+        "Odgrzej: mikrofala 3 min.",
+        "Przechowywanie: lodówka, 3 dni."
       ]
     },
     {
@@ -466,6 +490,15 @@
           "tluszcz": 5.7,
           "wegle": 1.0
         }
+      ],
+      "jak": "przepis",
+      "czas_min": 6,
+      "kroki": [
+        "Twaróg rozgnieć widelcem ze skyrem, aż masa będzie gładka — im dłużej ucierasz, tym bardziej przypomina sernik.",
+        "Dodaj łyżkę miodu i wymieszaj.",
+        "Jabłko zetrzyj na tarce na dno kubka albo pojemnika, na to masa serowa, na wierzch pokruszone orzechy.",
+        "Najlepszy po godzinie w lodówce — zrób go w dniu gotowania razem z garnkiem.",
+        "Ilości każdego składnika masz w rozpisce — porcja jest dopasowana do Twojego celu na ten dzień."
       ]
     },
     {
@@ -1392,7 +1425,7 @@
         ]
       ],
       "kroki": [
-        "Zrób gęstą jajecznicę z 4 jaj na maśle — trochę bardziej ściętą niż zwykle, żeby nie ciekła z tortilli.",
+        "Zrób gęstą jajecznicę z jajek z rozpiski, na maśle — trochę bardziej ściętą niż zwykle, żeby nie ciekła z tortilli.",
         "Tortille podgrzej 20 sekund na suchej patelni, żeby się nie łamały przy zwijaniu.",
         "Na każdą wyłóż jajecznicę, posyp serem, dorzuć sałatę i plastry pomidora.",
         "Zawiń boki do środka i zroluj. Na suchej patelni podsmaż 1 min z każdej strony — wtedy trzyma się kupy."
@@ -1468,7 +1501,7 @@
         "Nastaw piekarnik na grill/250°C albo użyj opiekacza.",
         "Na kromki połóż plaster sera i plastry pomidora, posól.",
         "Piecz 6 min aż ser się rozpuści i zacznie brązowieć.",
-        "Równolegle usmaż 2 jajka sadzone i połóż na grzankach. Kropka ketchupu."
+        "Równolegle usmaż jajka sadzone (ile — patrz rozpiska) i połóż na grzankach. Kropka ketchupu."
       ]
     },
     "q_salatka_feta": {
@@ -1515,7 +1548,7 @@
         ]
       ],
       "kroki": [
-        "Ugotuj 2 jajka na twardo (9 min od wrzenia), zalej zimną wodą, obierz.",
+        "Ugotuj jajka na twardo (9 min od wrzenia), zalej zimną wodą, obierz.",
         "Pomidory i ogórka pokrój w grubą kostkę, wrzuć do miski na sałatę, dołóż jajka w ćwiartkach.",
         "Fetę pokrusz palcami na wierzch.",
         "Polej oliwą, posól, popieprz, wsyp oregano. Nie mieszaj mocno, żeby feta się nie rozpadła.",
@@ -1598,7 +1631,7 @@
       "kroki": [
         "Chleb cienko masłem, potem musztardą.",
         "Po plastrze sera na kromkę, na to plastry ogórka kiszonego i pomidora.",
-        "Najszybszy posiłek w bazie — 4 minuty i masz 30 g białka."
+        "Najszybszy posiłek w bazie — 4 minuty roboty."
       ]
     },
     "q_jajka_kukurydza": {
@@ -1840,9 +1873,9 @@
         ]
       ],
       "kroki": [
-        "Skyr do miski, wsyp 2 łyżki kakao i łyżkę miodu.",
+        "Skyr do miski, wsyp kakao i miód w ilościach z rozpiski.",
         "Mieszaj łyżką dobrą minutę, aż kakao całkiem się rozpuści i zrobi się jednolity krem — za krótko mieszane zostawia gorzkie grudki.",
-        "Banan w plasterki na wierzch. Smakuje jak budyń czekoladowy, a ma ok. 35 g białka."
+        "Banan w plasterki na wierzch. Smakuje jak budyń czekoladowy."
       ]
     },
     "d_sernik": {
@@ -2445,7 +2478,7 @@
       "trw": "trwale"
     }
   },
-  "panel_wersja": 8,
+  "panel_wersja": 9,
   "dni": [
     {
       "data": "2026-09-05",
@@ -2557,6 +2590,14 @@
               "tluszcz": 0.2,
               "wegle": 4.3
             }
+          ],
+          "jak": "przepis",
+          "czas_min": 5,
+          "kroki": [
+            "Twaróg rozgnieć widelcem w miseczce ze śmietaną — będzie kremowy, a nie suchy.",
+            "Wsyp posiekany szczypiorek, sól, pieprz, wymieszaj.",
+            "Ogórek w plastry. Jeść z chlebem. Do boxa: twarożek do zakręcanego pojemnika, chleb osobno.",
+            "Ilości każdego składnika masz w rozpisce — porcja jest dopasowana do Twojego celu na ten dzień."
           ]
         },
         {
@@ -2643,6 +2684,13 @@
               "tluszcz": 0.3,
               "wegle": 19.4
             }
+          ],
+          "jak": "przepis",
+          "czas_min": 3,
+          "kroki": [
+            "Jogurt do pojemnika, wsyp orzechy, polej łyżką miodu.",
+            "Jabłko w kostkę na wierzch. Gotowe.",
+            "Ilości każdego składnika masz w rozpisce — porcja jest dopasowana do Twojego celu na ten dzień."
           ],
           "dobitka": {
             "nazwa": "Skyr naturalny (kubek 150 g)",
@@ -2768,6 +2816,18 @@
               "tluszcz": 4.6,
               "wegle": 0.0
             }
+          ],
+          "jak": "gotowanie",
+          "czas_min": 55,
+          "kroki": [
+            "To przepis na cały garnek — 3 porcje, obiady na 3 dni. Gramatury na garnek masz w zakładce Gotuję.",
+            "Nastaw piekarnik na 200°C. Ugotuj makaron 2 minuty KRÓCEJ niż pisze na opakowaniu — dojdzie w piekarniku.",
+            "Na patelni na oleju zeszklij posiekaną cebulę (4 min), dodaj mielone i smaż 8 min rozbijając łopatką.",
+            "Dodaj czosnek, passatę, sól, pieprz i oregano. Duś 10 min.",
+            "Wymieszaj odcedzony makaron z sosem i śmietaną prosto w formie do zapiekania — jedno naczynie mniej do mycia.",
+            "Posyp całość startym serem.",
+            "Piecz 20 min aż ser się zarumieni. Wyjmij i odstaw na 10 min, inaczej rozpadnie się przy krojeniu.",
+            "Potnij na 3 równe części, każdą do pojemnika, ostudź i do lodówki."
           ]
         },
         {
@@ -2832,6 +2892,15 @@
               "tluszcz": 0.6,
               "wegle": 14.7
             }
+          ],
+          "jak": "przepis",
+          "czas_min": 10,
+          "kroki": [
+            "Rozbełtaj jaja (ile — patrz rozpiska) z solą i pieprzem.",
+            "Na patelni rozpuść masło, wlej jaja i NIE mieszaj. Smaż 3 min na małym ogniu pod przykryciem.",
+            "Gdy wierzch jest już prawie ścięty, połóż na połowie plastry sera i pomidora.",
+            "Złóż omlet na pół łopatką, smaż jeszcze 1 min. Zjedz z kromką chleba.",
+            "Ilości każdego składnika masz w rozpisce — porcja jest dopasowana do Twojego celu na ten dzień."
           ]
         },
         {
@@ -3000,6 +3069,14 @@
               "tluszcz": 0.8,
               "wegle": 1.9
             }
+          ],
+          "jak": "przepis",
+          "czas_min": 4,
+          "kroki": [
+            "Twaróg rozgnieć widelcem z mlekiem — zrobi się kremowy.",
+            "Banan w plastry, miód, orzechy na wierzch.",
+            "Wersja na zmianę: wszystko do zakręcanego pojemnika.",
+            "Ilości każdego składnika masz w rozpisce — porcja jest dopasowana do Twojego celu na ten dzień."
           ]
         },
         {
@@ -3055,6 +3132,15 @@
               "tluszcz": 0.6,
               "wegle": 14.7
             }
+          ],
+          "jak": "przepis",
+          "czas_min": 12,
+          "kroki": [
+            "Ugotuj jajka na twardo (9 min od wrzenia), zalej zimną wodą, obierz.",
+            "Do pojemnika: serek wiejski, obok pokrojone jajka, obok ogórki kiszone.",
+            "Posól i popieprz jajka od razu, żeby nie nosić soli. Chleb do osobnej torebki.",
+            "To najprostszy box na zmianę — nic nie trzeba odgrzewać.",
+            "Ilości każdego składnika masz w rozpisce — porcja jest dopasowana do Twojego celu na ten dzień."
           ],
           "dobitka": {
             "nazwa": "Skyr naturalny (kubek 150 g)",
@@ -3156,6 +3242,13 @@
               "tluszcz": 4.6,
               "wegle": 0.0
             }
+          ],
+          "jak": "odgrzewanie",
+          "czas_min": 4,
+          "kroki": [
+            "Wyjmij jeden pojemnik z garnka ugotowanego w dniu gotowania.",
+            "Odgrzej: mikrofala 3 min albo piekarnik 10 min.",
+            "Przechowywanie: lodówka, 3 dni — kroisz na kwadraty i pakujesz."
           ]
         },
         {
@@ -3218,6 +3311,15 @@
               "tluszcz": 4.1,
               "wegle": 0.0
             }
+          ],
+          "jak": "przepis",
+          "czas_min": 8,
+          "kroki": [
+            "Rozgrzej patelnię na średnim ogniu i rozpuść na niej kawałek masła.",
+            "Wbij jaja do kubka (ile — patrz rozpiska), posól, popieprz, rozbełtaj widelcem.",
+            "Wlej na patelnię, odczekaj 20 sekund, potem zgarniaj łopatką co kilka sekund.",
+            "Zdejmij z ognia, gdy jaja są ścięte, ale jeszcze błyszczące — dojdą na talerzu. Pomidor w plastry obok.",
+            "Ilości każdego składnika masz w rozpisce — porcja jest dopasowana do Twojego celu na ten dzień."
           ]
         },
         {
@@ -3400,6 +3502,14 @@
               "tluszcz": 0.1,
               "wegle": 1.3
             }
+          ],
+          "jak": "przepis",
+          "czas_min": 12,
+          "kroki": [
+            "Jajka wrzuć do wrzącej wody i gotuj 9 min, potem zalej zimną wodą — same się obiorą.",
+            "Chleb posmaruj cienko musztardą, połóż ser, na to plastry jajka.",
+            "Posól, popieprz, ogórek kiszony w plastrach na wierzch. Do boxa zawijasz w folię.",
+            "Ilości każdego składnika masz w rozpisce — porcja jest dopasowana do Twojego celu na ten dzień."
           ]
         },
         {
@@ -3460,6 +3570,14 @@
               "tluszcz": 8.2,
               "wegle": 1.8
             }
+          ],
+          "jak": "przepis",
+          "czas_min": 3,
+          "kroki": [
+            "Skyr do miski lub pojemnika.",
+            "Banan w plastry, łyżka masła orzechowego na wierzch. Wymieszaj albo zostaw warstwami.",
+            "Na zmianę: wszystko do zakręcanego pojemnika, banan dorzucasz na miejscu żeby nie sczerniał.",
+            "Ilości każdego składnika masz w rozpisce — porcja jest dopasowana do Twojego celu na ten dzień."
           ]
         },
         {
@@ -3558,6 +3676,13 @@
               "tluszcz": 4.6,
               "wegle": 0.0
             }
+          ],
+          "jak": "odgrzewanie",
+          "czas_min": 4,
+          "kroki": [
+            "Wyjmij jeden pojemnik z garnka ugotowanego w dniu gotowania.",
+            "Odgrzej: mikrofala 3 min albo piekarnik 10 min.",
+            "Przechowywanie: lodówka, 3 dni — kroisz na kwadraty i pakujesz."
           ]
         },
         {
@@ -3638,6 +3763,15 @@
               "tluszcz": 0.6,
               "wegle": 14.7
             }
+          ],
+          "jak": "przepis",
+          "czas_min": 12,
+          "kroki": [
+            "Jajka na twardo (9 min od wrzenia), zalej zimną wodą, obierz i pokrój w kostkę.",
+            "Wymieszaj z odsączoną kukurydzą, jogurtem greckim i łyżką musztardy.",
+            "Szczypiorek, sól, pieprz. Do pojemnika, chleb osobno.",
+            "Trzyma się w lodówce 2 dni — możesz zrobić podwójną porcję w dniu gotowania.",
+            "Ilości każdego składnika masz w rozpisce — porcja jest dopasowana do Twojego celu na ten dzień."
           ]
         },
         {
@@ -3772,6 +3906,14 @@
               "tluszcz": 8.2,
               "wegle": 1.8
             }
+          ],
+          "jak": "przepis",
+          "czas_min": 3,
+          "kroki": [
+            "Skyr do miski lub pojemnika.",
+            "Banan w plastry, łyżka masła orzechowego na wierzch. Wymieszaj albo zostaw warstwami.",
+            "Na zmianę: wszystko do zakręcanego pojemnika, banan dorzucasz na miejscu żeby nie sczerniał.",
+            "Ilości każdego składnika masz w rozpisce — porcja jest dopasowana do Twojego celu na ten dzień."
           ]
         },
         {
@@ -3876,6 +4018,15 @@
               "tluszcz": 4.1,
               "wegle": 0.0
             }
+          ],
+          "jak": "przepis",
+          "czas_min": 9,
+          "kroki": [
+            "Zrób gęstą jajecznicę z jajek z rozpiski, na maśle — trochę bardziej ściętą niż zwykle, żeby nie ciekła z tortilli.",
+            "Tortille podgrzej 20 sekund na suchej patelni, żeby się nie łamały przy zwijaniu.",
+            "Na każdą wyłóż jajecznicę, posyp serem, dorzuć sałatę i plastry pomidora.",
+            "Zawiń boki do środka i zroluj. Na suchej patelni podsmaż 1 min z każdej strony — wtedy trzyma się kupy.",
+            "Ilości każdego składnika masz w rozpisce — porcja jest dopasowana do Twojego celu na ten dzień."
           ],
           "dobitka": {
             "nazwa": "Skyr naturalny (kubek 150 g)",
@@ -3992,6 +4143,16 @@
               "tluszcz": 6.1,
               "wegle": 0.0
             }
+          ],
+          "jak": "gotowanie",
+          "czas_min": 45,
+          "kroki": [
+            "To przepis na cały garnek — 3 porcje, obiady na 3 dni. Gramatury na garnek masz w zakładce Gotuję.",
+            "Kapustę odciśnij z soku i posiekaj krócej, żeby się dobrze jadła. Cebulę w kostkę.",
+            "W garnku na oleju smaż cebulę 4 min, dodaj mielone i smaż 8 min.",
+            "Dodaj koncentrat, kostkę bulionową, pieprz i łyżeczkę majeranku — smaż 1 min.",
+            "Wrzuć kapustę, wlej 300 ml wody, przykryj i duś 25 min. Spróbuj — jeśli za kwaśne, dodaj łyżeczkę miodu.",
+            "Ugotuj ziemniaki. Rozłóż do 3 pojemników, ostudź, do lodówki."
           ]
         },
         {
@@ -4056,6 +4217,14 @@
               "tluszcz": 0.1,
               "wegle": 1.3
             }
+          ],
+          "jak": "przepis",
+          "czas_min": 12,
+          "kroki": [
+            "Jajka wrzuć do wrzącej wody i gotuj 9 min, potem zalej zimną wodą — same się obiorą.",
+            "Chleb posmaruj cienko musztardą, połóż ser, na to plastry jajka.",
+            "Posól, popieprz, ogórek kiszony w plastrach na wierzch. Do boxa zawijasz w folię.",
+            "Ilości każdego składnika masz w rozpisce — porcja jest dopasowana do Twojego celu na ten dzień."
           ]
         },
         {
@@ -4224,6 +4393,14 @@
               "tluszcz": 0.2,
               "wegle": 4.3
             }
+          ],
+          "jak": "przepis",
+          "czas_min": 5,
+          "kroki": [
+            "Twaróg rozgnieć widelcem w miseczce ze śmietaną — będzie kremowy, a nie suchy.",
+            "Wsyp posiekany szczypiorek, sól, pieprz, wymieszaj.",
+            "Ogórek w plastry. Jeść z chlebem. Do boxa: twarożek do zakręcanego pojemnika, chleb osobno.",
+            "Ilości każdego składnika masz w rozpisce — porcja jest dopasowana do Twojego celu na ten dzień."
           ]
         },
         {
@@ -4297,6 +4474,15 @@
               "tluszcz": 0.6,
               "wegle": 14.7
             }
+          ],
+          "jak": "przepis",
+          "czas_min": 12,
+          "kroki": [
+            "Jajka na twardo (9 min od wrzenia), zalej zimną wodą, obierz i pokrój w kostkę.",
+            "Wymieszaj z odsączoną kukurydzą, jogurtem greckim i łyżką musztardy.",
+            "Szczypiorek, sól, pieprz. Do pojemnika, chleb osobno.",
+            "Trzyma się w lodówce 2 dni — możesz zrobić podwójną porcję w dniu gotowania.",
+            "Ilości każdego składnika masz w rozpisce — porcja jest dopasowana do Twojego celu na ten dzień."
           ],
           "dobitka": {
             "nazwa": "Skyr naturalny (kubek 150 g)",
@@ -4389,6 +4575,13 @@
               "tluszcz": 6.1,
               "wegle": 0.0
             }
+          ],
+          "jak": "odgrzewanie",
+          "czas_min": 4,
+          "kroki": [
+            "Wyjmij jeden pojemnik z garnka ugotowanego w dniu gotowania.",
+            "Odgrzej: mikrofala 3 min.",
+            "Przechowywanie: lodówka, 3 dni (im dłużej stoi, tym lepsze)."
           ]
         },
         {
@@ -4460,6 +4653,15 @@
               "tluszcz": 0.6,
               "wegle": 14.7
             }
+          ],
+          "jak": "przepis",
+          "czas_min": 10,
+          "kroki": [
+            "Rozbełtaj jaja (ile — patrz rozpiska) z solą i pieprzem.",
+            "Na patelni rozpuść masło, wlej jaja i NIE mieszaj. Smaż 3 min na małym ogniu pod przykryciem.",
+            "Gdy wierzch jest już prawie ścięty, połóż na połowie plastry sera i pomidora.",
+            "Złóż omlet na pół łopatką, smaż jeszcze 1 min. Zjedz z kromką chleba.",
+            "Ilości każdego składnika masz w rozpisce — porcja jest dopasowana do Twojego celu na ten dzień."
           ]
         },
         {
@@ -4642,6 +4844,14 @@
               "tluszcz": 0.9,
               "wegle": 2.2
             }
+          ],
+          "jak": "przepis",
+          "czas_min": 4,
+          "kroki": [
+            "Twaróg rozgnieć widelcem z mlekiem — zrobi się kremowy.",
+            "Banan w plastry, miód, orzechy na wierzch.",
+            "Wersja na zmianę: wszystko do zakręcanego pojemnika.",
+            "Ilości każdego składnika masz w rozpisce — porcja jest dopasowana do Twojego celu na ten dzień."
           ]
         },
         {
@@ -4711,6 +4921,13 @@
               "tluszcz": 0.3,
               "wegle": 19.4
             }
+          ],
+          "jak": "przepis",
+          "czas_min": 3,
+          "kroki": [
+            "Jogurt do pojemnika, wsyp orzechy, polej łyżką miodu.",
+            "Jabłko w kostkę na wierzch. Gotowe.",
+            "Ilości każdego składnika masz w rozpisce — porcja jest dopasowana do Twojego celu na ten dzień."
           ],
           "dobitka": {
             "nazwa": "Skyr naturalny (kubek 150 g)",
@@ -4810,6 +5027,13 @@
               "tluszcz": 6.1,
               "wegle": 0.0
             }
+          ],
+          "jak": "odgrzewanie",
+          "czas_min": 4,
+          "kroki": [
+            "Wyjmij jeden pojemnik z garnka ugotowanego w dniu gotowania.",
+            "Odgrzej: mikrofala 3 min.",
+            "Przechowywanie: lodówka, 3 dni (im dłużej stoi, tym lepsze)."
           ]
         },
         {
@@ -4872,6 +5096,15 @@
               "tluszcz": 0.6,
               "wegle": 14.7
             }
+          ],
+          "jak": "przepis",
+          "czas_min": 12,
+          "kroki": [
+            "Ugotuj jajka na twardo (9 min od wrzenia), zalej zimną wodą, obierz.",
+            "Do pojemnika: serek wiejski, obok pokrojone jajka, obok ogórki kiszone.",
+            "Posól i popieprz jajka od razu, żeby nie nosić soli. Chleb do osobnej torebki.",
+            "To najprostszy box na zmianę — nic nie trzeba odgrzewać.",
+            "Ilości każdego składnika masz w rozpisce — porcja jest dopasowana do Twojego celu na ten dzień."
           ]
         },
         {
@@ -5024,6 +5257,14 @@
               "tluszcz": 0.1,
               "wegle": 2.6
             }
+          ],
+          "jak": "przepis",
+          "czas_min": 5,
+          "kroki": [
+            "Twaróg rozgnieć widelcem w miseczce ze śmietaną — będzie kremowy, a nie suchy.",
+            "Wsyp posiekany szczypiorek, sól, pieprz, wymieszaj.",
+            "Ogórek w plastry. Jeść z chlebem. Do boxa: twarożek do zakręcanego pojemnika, chleb osobno.",
+            "Ilości każdego składnika masz w rozpisce — porcja jest dopasowana do Twojego celu na ten dzień."
           ]
         },
         {
@@ -5119,6 +5360,14 @@
               "tluszcz": 0.8,
               "wegle": 1.9
             }
+          ],
+          "jak": "przepis",
+          "czas_min": 4,
+          "kroki": [
+            "Twaróg rozgnieć widelcem z mlekiem — zrobi się kremowy.",
+            "Banan w plastry, miód, orzechy na wierzch.",
+            "Wersja na zmianę: wszystko do zakręcanego pojemnika.",
+            "Ilości każdego składnika masz w rozpisce — porcja jest dopasowana do Twojego celu na ten dzień."
           ],
           "dobitka": {
             "nazwa": "Skyr naturalny (kubek 150 g)",
@@ -5244,6 +5493,17 @@
               "tluszcz": 6.1,
               "wegle": 0.0
             }
+          ],
+          "jak": "gotowanie",
+          "czas_min": 40,
+          "kroki": [
+            "To przepis na cały garnek — 3 porcje, obiady na 3 dni. Gramatury na garnek masz w zakładce Gotuję.",
+            "Cebulę w piórka, paprykę w paski, cukinię w półplasterki. Nie musi być równo.",
+            "W garnku na oleju smaż cebulę 4 min, dodaj mielone i smaż 8 min rozbijając łopatką.",
+            "Dodaj koncentrat, łyżkę słodkiej papryki, sól i pieprz — smaż 1 min.",
+            "Wrzuć paprykę i cukinię, wlej passatę. Duś 20 min pod przykryciem, zamieszaj raz w połowie.",
+            "W tym czasie ugotuj ziemniaki — 20 min w osolonej wodzie.",
+            "Rozłóż leczo i ziemniaki do 3 pojemników, ostudź, do lodówki."
           ]
         },
         {
@@ -5317,6 +5577,15 @@
               "tluszcz": 0.6,
               "wegle": 14.7
             }
+          ],
+          "jak": "przepis",
+          "czas_min": 12,
+          "kroki": [
+            "Jajka na twardo (9 min od wrzenia), zalej zimną wodą, obierz i pokrój w kostkę.",
+            "Wymieszaj z odsączoną kukurydzą, jogurtem greckim i łyżką musztardy.",
+            "Szczypiorek, sól, pieprz. Do pojemnika, chleb osobno.",
+            "Trzyma się w lodówce 2 dni — możesz zrobić podwójną porcję w dniu gotowania.",
+            "Ilości każdego składnika masz w rozpisce — porcja jest dopasowana do Twojego celu na ten dzień."
           ]
         },
         {
@@ -5503,6 +5772,15 @@
               "tluszcz": 5.5,
               "wegle": 0.0
             }
+          ],
+          "jak": "przepis",
+          "czas_min": 12,
+          "kroki": [
+            "Na patelni na oleju smaż posiekaną cebulę i paprykę 5 min.",
+            "Dodaj czosnek, passatę, sól, pieprz, szczyptę słodkiej papryki. Gotuj 3 min.",
+            "Zrób łyżką wgłębienie na każde jajko i wbij je.",
+            "Przykryj i trzymaj 5 min na małym ogniu — białka mają się ściąć, żółtka zostać płynne. Maczasz chlebem prosto z patelni, zero talerzy.",
+            "Ilości każdego składnika masz w rozpisce — porcja jest dopasowana do Twojego celu na ten dzień."
           ]
         },
         {
@@ -5549,6 +5827,14 @@
               "tluszcz": 8.2,
               "wegle": 1.8
             }
+          ],
+          "jak": "przepis",
+          "czas_min": 3,
+          "kroki": [
+            "Skyr do miski lub pojemnika.",
+            "Banan w plastry, łyżka masła orzechowego na wierzch. Wymieszaj albo zostaw warstwami.",
+            "Na zmianę: wszystko do zakręcanego pojemnika, banan dorzucasz na miejscu żeby nie sczerniał.",
+            "Ilości każdego składnika masz w rozpisce — porcja jest dopasowana do Twojego celu na ten dzień."
           ]
         },
         {
@@ -5640,6 +5926,13 @@
               "tluszcz": 6.1,
               "wegle": 0.0
             }
+          ],
+          "jak": "odgrzewanie",
+          "czas_min": 4,
+          "kroki": [
+            "Wyjmij jeden pojemnik z garnka ugotowanego w dniu gotowania.",
+            "Odgrzej: mikrofala 3 min.",
+            "Przechowywanie: lodówka, 3 dni."
           ]
         },
         {
@@ -5711,6 +6004,15 @@
               "tluszcz": 5.7,
               "wegle": 1.0
             }
+          ],
+          "jak": "przepis",
+          "czas_min": 6,
+          "kroki": [
+            "Twaróg rozgnieć widelcem ze skyrem, aż masa będzie gładka — im dłużej ucierasz, tym bardziej przypomina sernik.",
+            "Dodaj łyżkę miodu i wymieszaj.",
+            "Jabłko zetrzyj na tarce na dno kubka albo pojemnika, na to masa serowa, na wierzch pokruszone orzechy.",
+            "Najlepszy po godzinie w lodówce — zrób go w dniu gotowania razem z garnkiem.",
+            "Ilości każdego składnika masz w rozpisce — porcja jest dopasowana do Twojego celu na ten dzień."
           ]
         },
         {
@@ -5902,6 +6204,14 @@
               "tluszcz": 0.2,
               "wegle": 3.2
             }
+          ],
+          "jak": "przepis",
+          "czas_min": 4,
+          "kroki": [
+            "Chleb cienko masłem, potem musztardą.",
+            "Po plastrze sera na kromkę, na to plastry ogórka kiszonego i pomidora.",
+            "Najszybszy posiłek w bazie — 4 minuty roboty.",
+            "Ilości każdego składnika masz w rozpisce — porcja jest dopasowana do Twojego celu na ten dzień."
           ]
         },
         {
@@ -5971,6 +6281,13 @@
               "tluszcz": 0.3,
               "wegle": 19.4
             }
+          ],
+          "jak": "przepis",
+          "czas_min": 3,
+          "kroki": [
+            "Jogurt do pojemnika, wsyp orzechy, polej łyżką miodu.",
+            "Jabłko w kostkę na wierzch. Gotowe.",
+            "Ilości każdego składnika masz w rozpisce — porcja jest dopasowana do Twojego celu na ten dzień."
           ],
           "dobitka": {
             "nazwa": "Skyr naturalny (kubek 150 g)",
@@ -6079,6 +6396,13 @@
               "tluszcz": 6.1,
               "wegle": 0.0
             }
+          ],
+          "jak": "odgrzewanie",
+          "czas_min": 4,
+          "kroki": [
+            "Wyjmij jeden pojemnik z garnka ugotowanego w dniu gotowania.",
+            "Odgrzej: mikrofala 3 min.",
+            "Przechowywanie: lodówka, 3 dni."
           ]
         },
         {
@@ -6150,6 +6474,14 @@
               "tluszcz": 0.6,
               "wegle": 1.4
             }
+          ],
+          "jak": "przepis",
+          "czas_min": 4,
+          "kroki": [
+            "Twaróg rozgnieć z mlekiem na gładki krem.",
+            "Wsyp łyżkę kakao i łyżkę miodu, mieszaj do jednolitego koloru.",
+            "Łyżka masła orzechowego na wierzch. Smakuje jak krem czekoladowo-orzechowy.",
+            "Ilości każdego składnika masz w rozpisce — porcja jest dopasowana do Twojego celu na ten dzień."
           ]
         },
         {
@@ -6302,6 +6634,15 @@
               "tluszcz": 0.0,
               "wegle": 4.1
             }
+          ],
+          "jak": "przepis",
+          "czas_min": 10,
+          "kroki": [
+            "Nastaw piekarnik na grill/250°C albo użyj opiekacza.",
+            "Na kromki połóż plaster sera i plastry pomidora, posól.",
+            "Piecz 6 min aż ser się rozpuści i zacznie brązowieć.",
+            "Równolegle usmaż jajka sadzone (ile — patrz rozpiska) i połóż na grzankach. Kropka ketchupu.",
+            "Ilości każdego składnika masz w rozpisce — porcja jest dopasowana do Twojego celu na ten dzień."
           ]
         },
         {
@@ -6388,6 +6729,14 @@
               "tluszcz": 0.4,
               "wegle": 24.2
             }
+          ],
+          "jak": "przepis",
+          "czas_min": 4,
+          "kroki": [
+            "Skyr do miski, wsyp kakao i miód w ilościach z rozpiski.",
+            "Mieszaj łyżką dobrą minutę, aż kakao całkiem się rozpuści i zrobi się jednolity krem — za krótko mieszane zostawia gorzkie grudki.",
+            "Banan w plasterki na wierzch. Smakuje jak budyń czekoladowy.",
+            "Ilości każdego składnika masz w rozpisce — porcja jest dopasowana do Twojego celu na ten dzień."
           ]
         },
         {
@@ -6503,6 +6852,18 @@
               "tluszcz": 6.1,
               "wegle": 0.0
             }
+          ],
+          "jak": "gotowanie",
+          "czas_min": 95,
+          "kroki": [
+            "To przepis na cały garnek — 3 porcje, obiady na 3 dni. Gramatury na garnek masz w zakładce Gotuję.",
+            "Wołowinę pokrój w kostkę ok. 2 cm, cebulę w piórka, paprykę w paski.",
+            "Rozgrzej garnek mocno, wlej olej i wrzuć mięso jednym rzutem. Smaż 6 min, przez pierwsze 3 min nie mieszaj — ma się przyrumienić, nie zagotować.",
+            "Dodaj cebulę, smaż 4 min. Wsyp łyżkę słodkiej papryki, sól i pieprz, wymieszaj.",
+            "Wlej passatę, 400 ml wody i 2 kostki bulionowe. Zagotuj, przykryj i duś na małym ogniu 60 min. To czas dla Ciebie — zrób w tym czasie coś innego.",
+            "Po 60 min dorzuć paprykę i duś jeszcze 15 min.",
+            "Mąkę rozmieszaj w pół szklanki ZIMNEJ wody, wlej do gulaszu, gotuj 3 min aż zgęstnieje.",
+            "Ziemniaki obierz i ugotuj w osolonej wodzie 20 min. Rozłóż gulasz i ziemniaki do 3 pojemników, ostudź, do lodówki."
           ]
         },
         {
@@ -6558,6 +6919,15 @@
               "tluszcz": 0.6,
               "wegle": 14.7
             }
+          ],
+          "jak": "przepis",
+          "czas_min": 12,
+          "kroki": [
+            "Ugotuj jajka na twardo (9 min od wrzenia), zalej zimną wodą, obierz.",
+            "Do pojemnika: serek wiejski, obok pokrojone jajka, obok ogórki kiszone.",
+            "Posól i popieprz jajka od razu, żeby nie nosić soli. Chleb do osobnej torebki.",
+            "To najprostszy box na zmianę — nic nie trzeba odgrzewać.",
+            "Ilości każdego składnika masz w rozpisce — porcja jest dopasowana do Twojego celu na ten dzień."
           ]
         },
         {
@@ -6717,6 +7087,15 @@
               "tluszcz": 4.1,
               "wegle": 0.0
             }
+          ],
+          "jak": "przepis",
+          "czas_min": 8,
+          "kroki": [
+            "Rozgrzej patelnię na średnim ogniu i rozpuść na niej kawałek masła.",
+            "Wbij jaja do kubka (ile — patrz rozpiska), posól, popieprz, rozbełtaj widelcem.",
+            "Wlej na patelnię, odczekaj 20 sekund, potem zgarniaj łopatką co kilka sekund.",
+            "Zdejmij z ognia, gdy jaja są ścięte, ale jeszcze błyszczące — dojdą na talerzu. Pomidor w plastry obok.",
+            "Ilości każdego składnika masz w rozpisce — porcja jest dopasowana do Twojego celu na ten dzień."
           ]
         },
         {
@@ -6790,6 +7169,14 @@
               "tluszcz": 0.2,
               "wegle": 3.2
             }
+          ],
+          "jak": "przepis",
+          "czas_min": 4,
+          "kroki": [
+            "Chleb cienko masłem, potem musztardą.",
+            "Po plastrze sera na kromkę, na to plastry ogórka kiszonego i pomidora.",
+            "Najszybszy posiłek w bazie — 4 minuty roboty.",
+            "Ilości każdego składnika masz w rozpisce — porcja jest dopasowana do Twojego celu na ten dzień."
           ],
           "dobitka": {
             "nazwa": "Skyr naturalny (kubek 150 g)",
@@ -6891,6 +7278,13 @@
               "tluszcz": 6.1,
               "wegle": 0.0
             }
+          ],
+          "jak": "odgrzewanie",
+          "czas_min": 4,
+          "kroki": [
+            "Wyjmij jeden pojemnik z garnka ugotowanego w dniu gotowania.",
+            "Odgrzej: mikrofala 3 min.",
+            "Przechowywanie: lodówka, 3 dni (drugiego dnia jest lepszy)."
           ]
         },
         {
@@ -6962,6 +7356,14 @@
               "tluszcz": 0.6,
               "wegle": 1.4
             }
+          ],
+          "jak": "przepis",
+          "czas_min": 4,
+          "kroki": [
+            "Twaróg rozgnieć z mlekiem na gładki krem.",
+            "Wsyp łyżkę kakao i łyżkę miodu, mieszaj do jednolitego koloru.",
+            "Łyżka masła orzechowego na wierzch. Smakuje jak krem czekoladowo-orzechowy.",
+            "Ilości każdego składnika masz w rozpisce — porcja jest dopasowana do Twojego celu na ten dzień."
           ]
         },
         {
@@ -7144,6 +7546,14 @@
               "tluszcz": 0.9,
               "wegle": 2.2
             }
+          ],
+          "jak": "przepis",
+          "czas_min": 4,
+          "kroki": [
+            "Twaróg rozgnieć widelcem z mlekiem — zrobi się kremowy.",
+            "Banan w plastry, miód, orzechy na wierzch.",
+            "Wersja na zmianę: wszystko do zakręcanego pojemnika.",
+            "Ilości każdego składnika masz w rozpisce — porcja jest dopasowana do Twojego celu na ten dzień."
           ]
         },
         {
@@ -7222,6 +7632,14 @@
               "tluszcz": 0.1,
               "wegle": 1.3
             }
+          ],
+          "jak": "przepis",
+          "czas_min": 12,
+          "kroki": [
+            "Jajka wrzuć do wrzącej wody i gotuj 9 min, potem zalej zimną wodą — same się obiorą.",
+            "Chleb posmaruj cienko musztardą, połóż ser, na to plastry jajka.",
+            "Posól, popieprz, ogórek kiszony w plastrach na wierzch. Do boxa zawijasz w folię.",
+            "Ilości każdego składnika masz w rozpisce — porcja jest dopasowana do Twojego celu na ten dzień."
           ]
         },
         {
@@ -7320,6 +7738,13 @@
               "tluszcz": 6.1,
               "wegle": 0.0
             }
+          ],
+          "jak": "odgrzewanie",
+          "czas_min": 4,
+          "kroki": [
+            "Wyjmij jeden pojemnik z garnka ugotowanego w dniu gotowania.",
+            "Odgrzej: mikrofala 3 min.",
+            "Przechowywanie: lodówka, 3 dni (drugiego dnia jest lepszy)."
           ]
         },
         {
@@ -7391,6 +7816,14 @@
               "tluszcz": 0.2,
               "wegle": 4.3
             }
+          ],
+          "jak": "przepis",
+          "czas_min": 5,
+          "kroki": [
+            "Twaróg rozgnieć widelcem w miseczce ze śmietaną — będzie kremowy, a nie suchy.",
+            "Wsyp posiekany szczypiorek, sól, pieprz, wymieszaj.",
+            "Ogórek w plastry. Jeść z chlebem. Do boxa: twarożek do zakręcanego pojemnika, chleb osobno.",
+            "Ilości każdego składnika masz w rozpisce — porcja jest dopasowana do Twojego celu na ten dzień."
           ]
         },
         {
@@ -7534,6 +7967,15 @@
               "tluszcz": 4.1,
               "wegle": 0.0
             }
+          ],
+          "jak": "przepis",
+          "czas_min": 8,
+          "kroki": [
+            "Rozgrzej patelnię na średnim ogniu i rozpuść na niej kawałek masła.",
+            "Wbij jaja do kubka (ile — patrz rozpiska), posól, popieprz, rozbełtaj widelcem.",
+            "Wlej na patelnię, odczekaj 20 sekund, potem zgarniaj łopatką co kilka sekund.",
+            "Zdejmij z ognia, gdy jaja są ścięte, ale jeszcze błyszczące — dojdą na talerzu. Pomidor w plastry obok.",
+            "Ilości każdego składnika masz w rozpisce — porcja jest dopasowana do Twojego celu na ten dzień."
           ]
         },
         {
@@ -7629,6 +8071,14 @@
               "tluszcz": 0.7,
               "wegle": 1.7
             }
+          ],
+          "jak": "przepis",
+          "czas_min": 4,
+          "kroki": [
+            "Twaróg rozgnieć z mlekiem na gładki krem.",
+            "Wsyp łyżkę kakao i łyżkę miodu, mieszaj do jednolitego koloru.",
+            "Łyżka masła orzechowego na wierzch. Smakuje jak krem czekoladowo-orzechowy.",
+            "Ilości każdego składnika masz w rozpisce — porcja jest dopasowana do Twojego celu na ten dzień."
           ],
           "dobitka": {
             "nazwa": "Skyr naturalny (kubek 150 g)",
@@ -7754,6 +8204,17 @@
               "tluszcz": 6.1,
               "wegle": 0.0
             }
+          ],
+          "jak": "gotowanie",
+          "czas_min": 40,
+          "kroki": [
+            "To przepis na cały garnek — 3 porcje, obiady na 3 dni. Gramatury na garnek masz w zakładce Gotuję.",
+            "Cebulę w piórka, paprykę w paski, cukinię w półplasterki. Nie musi być równo.",
+            "W garnku na oleju smaż cebulę 4 min, dodaj mielone i smaż 8 min rozbijając łopatką.",
+            "Dodaj koncentrat, łyżkę słodkiej papryki, sól i pieprz — smaż 1 min.",
+            "Wrzuć paprykę i cukinię, wlej passatę. Duś 20 min pod przykryciem, zamieszaj raz w połowie.",
+            "W tym czasie ugotuj ziemniaki — 20 min w osolonej wodzie.",
+            "Rozłóż leczo i ziemniaki do 3 pojemników, ostudź, do lodówki."
           ]
         },
         {
@@ -7818,6 +8279,14 @@
               "tluszcz": 0.2,
               "wegle": 4.3
             }
+          ],
+          "jak": "przepis",
+          "czas_min": 5,
+          "kroki": [
+            "Twaróg rozgnieć widelcem w miseczce ze śmietaną — będzie kremowy, a nie suchy.",
+            "Wsyp posiekany szczypiorek, sól, pieprz, wymieszaj.",
+            "Ogórek w plastry. Jeść z chlebem. Do boxa: twarożek do zakręcanego pojemnika, chleb osobno.",
+            "Ilości każdego składnika masz w rozpisce — porcja jest dopasowana do Twojego celu na ten dzień."
           ]
         },
         {
@@ -7968,6 +8437,14 @@
               "tluszcz": 8.2,
               "wegle": 1.8
             }
+          ],
+          "jak": "przepis",
+          "czas_min": 3,
+          "kroki": [
+            "Skyr do miski lub pojemnika.",
+            "Banan w plastry, łyżka masła orzechowego na wierzch. Wymieszaj albo zostaw warstwami.",
+            "Na zmianę: wszystko do zakręcanego pojemnika, banan dorzucasz na miejscu żeby nie sczerniał.",
+            "Ilości każdego składnika masz w rozpisce — porcja jest dopasowana do Twojego celu na ten dzień."
           ]
         },
         {
@@ -8032,6 +8509,15 @@
               "tluszcz": 5.1,
               "wegle": 0.9
             }
+          ],
+          "jak": "przepis",
+          "czas_min": 6,
+          "kroki": [
+            "Twaróg rozgnieć widelcem ze skyrem, aż masa będzie gładka — im dłużej ucierasz, tym bardziej przypomina sernik.",
+            "Dodaj łyżkę miodu i wymieszaj.",
+            "Jabłko zetrzyj na tarce na dno kubka albo pojemnika, na to masa serowa, na wierzch pokruszone orzechy.",
+            "Najlepszy po godzinie w lodówce — zrób go w dniu gotowania razem z garnkiem.",
+            "Ilości każdego składnika masz w rozpisce — porcja jest dopasowana do Twojego celu na ten dzień."
           ]
         },
         {
@@ -8123,6 +8609,13 @@
               "tluszcz": 6.1,
               "wegle": 0.0
             }
+          ],
+          "jak": "odgrzewanie",
+          "czas_min": 4,
+          "kroki": [
+            "Wyjmij jeden pojemnik z garnka ugotowanego w dniu gotowania.",
+            "Odgrzej: mikrofala 3 min.",
+            "Przechowywanie: lodówka, 3 dni."
           ]
         },
         {
@@ -8194,6 +8687,15 @@
               "tluszcz": 0.6,
               "wegle": 14.7
             }
+          ],
+          "jak": "przepis",
+          "czas_min": 10,
+          "kroki": [
+            "Rozbełtaj jaja (ile — patrz rozpiska) z solą i pieprzem.",
+            "Na patelni rozpuść masło, wlej jaja i NIE mieszaj. Smaż 3 min na małym ogniu pod przykryciem.",
+            "Gdy wierzch jest już prawie ścięty, połóż na połowie plastry sera i pomidora.",
+            "Złóż omlet na pół łopatką, smaż jeszcze 1 min. Zjedz z kromką chleba.",
+            "Ilości każdego składnika masz w rozpisce — porcja jest dopasowana do Twojego celu na ten dzień."
           ]
         },
         {
