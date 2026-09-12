@@ -184,7 +184,7 @@ const esc = s => String(s??"").replace(/[&<>"]/g, c => ({"&":"&amp;","<":"&lt;",
 /* Wersja panelu. iPhone dodany do ekranu głównego potrafi trzymać stary HTML
    w nieskończoność. dane.json leci zawsze świeży, więc porównujemy numery
    i przy różnicy przeładowujemy stronę z ?v=, co omija cache przeglądarki. */
-const WERSJA = 9;
+const WERSJA = 10;
 let D = null, widok = "dzis";
 
 /* ---- zapis z telefonu ------------------------------------------------------
@@ -232,7 +232,7 @@ async function wyslijZdarzenie(zdarzenie, proba = 0){
     if(!Array.isArray(lista)) lista = [];
   } catch(e){ if(!String(e.message).startsWith("404")) throw e; }
 
-  lista.push({data: D.dzis, ...zdarzenie});
+  lista.push({data: lokalnaData(), ...zdarzenie});
   try {
     await gh(API("state/zdarzenia.json"), {method:"PUT",
       body: JSON.stringify({message: "panel: " + zdarzenie.typ,
@@ -285,7 +285,10 @@ function przelacz(id, on){
 }
 function sprzatajStare(){
   try{ for(let i=localStorage.length-1;i>=0;i--){ const k=localStorage.key(i);
-       if(k?.startsWith("trener:") && k!==kluczCyklu()) localStorage.removeItem(k); } }catch{}
+       // Tylko odhaczenia starych cykli (klucz "trener:RRRR-MM-DD"). Wczesniej warunek
+       // startsWith("trener:") kasowal tez TOKEN i inne ustawienia przy kazdym otwarciu
+       // panelu — dlatego zapis z telefonu dzialal tylko do pierwszego przeladowania.
+       if(/^trener:\d{4}-\d{2}-\d{2}$/.test(k || "") && k!==kluczCyklu()) localStorage.removeItem(k); } }catch{}
 }
 
 const DNI_PL = ["niedziela","poniedziałek","wtorek","środa","czwartek","piątek","sobota"];
@@ -340,6 +343,7 @@ function tabelaSkladnikow(e){
 
 function widokInnegoDnia(x){
   const przeszly = x.przesuniecie < 0;
+  const moznaOdhaczac = x.przesuniecie <= dzisOffset;
   const zapisane = zapamietane();
   const lista = x.agenda.map(e => {
     const klucz = e.czas + "|" + e.tytul;
@@ -349,7 +353,7 @@ function widokInnegoDnia(x){
       <span class="godz">${e.czas}</span>
       <div><label class="ptk-etykieta">
           <input type="checkbox" class="ptk" data-punkt="${esc(klucz)}" data-dzien="${x.data}"
-            ${on ? "checked" : ""} ${przeszly && token() ? "" : "disabled"}>
+            ${on ? "checked" : ""} ${moznaOdhaczac && token() ? "" : "disabled"}>
           <span class="tyt">${e.ikona || ""} ${esc(e.tytul)}</span></label>
         ${e.posilek ? `<div class="posilek">${esc(e.posilek)}
            <span class="kcal">· ${e.makra.kcal} kcal, ${e.makra.bialko} g B</span></div>` : ""}
@@ -371,7 +375,10 @@ function widokInnegoDnia(x){
         <span class="ile">${z.ciezar} kg × ${(z.powt || []).join(",")}</span></div>`).join("")}
     </div>` : "";
 
-  return `<div class="zrodlo">${OPIS_ZRODLA[x.zrodlo] || ""}</div>
+  const nieaktualne = x.przesuniecie === dzisOffset && dzisOffset > 0;
+  return `<div class="zrodlo">${nieaktualne
+      ? "Dane są sprzed północy, więc pokazuję dzisiejszy dzień z planu. Pełny widok z wagą i podmianami wróci po najbliższym odświeżeniu danych — zwykle w ciągu kilku minut."
+      : (OPIS_ZRODLA[x.zrodlo] || "")}</div>
     ${x.makra ? `<div class="karta"><h2>Makra dnia</h2>${makra(x.makra, D.cel)}</div>` : ""}
     ${fakty}
     <div class="karta"><h2>Plan dnia</h2><ol class="os">${lista}</ol></div>`;
@@ -385,8 +392,12 @@ function widokDzis(){
   const nastepny = D.agenda.filter(e => minuty(e.czas) > tm)[0];
 
   const zapisane = zapamietane();
-  const czyZrobione = klucz =>
-    (klucz in zapisane) ? !!zapisane[klucz] : !!(D.odhaczone || {})[klucz];
+  // klucz lokalny z data: ten sam punkt (np. 20:30 Kolacja) wystepuje w dwoch dniach
+  // jednego cyklu i bez daty odhaczenie z jednego dnia pokazywalo sie w drugim
+  const czyZrobione = klucz => {
+    const lok = D.dzis + "|" + klucz;
+    return (lok in zapisane) ? !!zapisane[lok] : !!(D.odhaczone || {})[klucz];
+  };
 
   const lista = D.agenda.map(e => {
     const minelo = minuty(e.czas) <= tm;
@@ -396,7 +407,7 @@ function widokDzis(){
     return `<li class="${minelo?"minelo":""} ${teraz_?"teraz":""} ${on?"odhaczone":""}">
       <span class="godz">${e.czas}</span>
       <div><label class="ptk-etykieta">
-          <input type="checkbox" class="ptk" data-punkt="${esc(klucz)}" ${on?"checked":""}>
+          <input type="checkbox" class="ptk" data-punkt="${esc(klucz)}" data-dzien="${D.dzis}" ${on?"checked":""}>
           <span class="tyt">${e.ikona||""} ${esc(e.tytul)}</span></label>
         ${e.posilek ? `<div class="posilek">${esc(e.posilek)}
            <span class="kcal">· ${e.makra.kcal} kcal, ${e.makra.bialko} g B</span>
@@ -733,7 +744,14 @@ function liczSen(polozenie){
   return wynik;
 }
 
-let wybranyDzien = 0;   // przesuniecie wzgledem dzisiaj: -7 ... +6
+let wybranyDzien = 0;   // przesuniecie wzgledem dnia z danych: -7 ... +6
+
+/* Dane liczy cron, a ten potrafi milczec do ~6 h. Po polnocy "dzis" w danych
+   to jeszcze wczoraj — wtedy panel sam przeskakuje na prawdziwy dzien telefonu,
+   a odhaczenia dostaja prawdziwa date, a nie date z nieaktualnych danych. */
+const lokalnaData = () => new Date().toLocaleDateString("sv-SE");   // RRRR-MM-DD w strefie telefonu
+const roznicaDni = (a, b) => Math.round((new Date(a + "T12:00:00") - new Date(b + "T12:00:00")) / 864e5);
+let dzisOffset = 0;     // o ile dni prawdziwe "dzis" wyprzedza dzien z danych
 const sel = () => (D.dni || []).find(x => x.przesuniecie === wybranyDzien) || null;
 const zakresDni = () => {
   const p = (D.dni || []).map(x => x.przesuniecie);
@@ -750,7 +768,7 @@ function rysujNaglowek(){
   const [min, max] = zakresDni();
   $("#dz-wstecz").disabled = wybranyDzien <= min;
   $("#dz-naprzod").disabled = wybranyDzien >= max;
-  $("#dz-dzis").hidden = wybranyDzien === 0;
+  $("#dz-dzis").hidden = wybranyDzien === dzisOffset;
   $("#dz-gdzie").textContent = wybranyDzien === 0 ? "" :
     wybranyDzien < 0 ? (wybranyDzien === -1 ? "wczoraj" : (-wybranyDzien) + " dni temu")
                      : (wybranyDzien === 1 ? "jutro" : "za " + wybranyDzien + " dni");
@@ -758,7 +776,7 @@ function rysujNaglowek(){
 
 function zmienDzien(krok){
   const [min, max] = zakresDni();
-  const nowy = krok === 0 ? 0 : Math.max(min, Math.min(max, wybranyDzien + krok));
+  const nowy = krok === 0 ? dzisOffset : Math.max(min, Math.min(max, wybranyDzien + krok));
   if(nowy === wybranyDzien) return;
   wybranyDzien = nowy;
   zamieniamSlot = null;
@@ -834,6 +852,15 @@ function start(dane){
   }
   D = dane;
   sprzatajStare();
+  const przed = dzisOffset;
+  dzisOffset = Math.max(0, roznicaDni(lokalnaData(), D.dzis));
+  if(dzisOffset !== przed) wybranyDzien = dzisOffset;
+  if(dzisOffset > 0 && token()){
+    // dane z wczoraj: budzimy workflow, zeby nie czekac na cron
+    fetch(`https://api.github.com/repos/${D.repo}/dispatches`, {method: "POST",
+      headers: {"Authorization": "Bearer " + token(), "Accept": "application/vnd.github+json"},
+      body: JSON.stringify({event_type: "panel"})}).catch(() => {});
+  }
   $("#stopka").textContent = "Dane odświeżone " + D.wygenerowano.replace("T"," ").slice(0,16);
   rysuj();
 }
@@ -924,17 +951,31 @@ $("#widok").addEventListener("click", async e => {
         b.closest(".poz").style.opacity = ".45";
       return;
     }
+    const KLUCZ_TRYBU = "trener:tryb-wyslany";
+    const ostatniTryb = () => { try { return JSON.parse(localStorage.getItem(KLUCZ_TRYBU) || "null"); } catch { return null; } };
+    const swiezy = t => t && Date.now() - t.kiedy < 3 * 60 * 1000;
+    if((b.id === "pauza" || b.id === "start-od-zera") && swiezy(ostatniTryb())){
+      const t = ostatniTryb();
+      alert(`${t.akcja === "start" ? "Restart został wysłany" : "Pauza została wysłana"} o ${new Date(t.kiedy).toLocaleTimeString("pl-PL", {hour:"2-digit", minute:"2-digit"})}. ` +
+            "Chmura przetwarza ją ok. minutę — potem panel sam się odświeży.");
+      return;
+    }
+    const zapamietajTryb = akcja => { try { localStorage.setItem(KLUCZ_TRYBU, JSON.stringify({akcja, kiedy: Date.now()})); } catch {} };
     if(b.id === "pauza"){
       const powod = prompt("Wstrzymać plan? Stają pingi i księgowanie zakupów.\n\nPowód (opcjonalnie):", "");
       if(powod === null) return;
-      if(await zapisz({typ:"tryb", akcja:"pauza", powod}, b))
+      if(await zapisz({typ:"tryb", akcja:"pauza", powod}, b)){
+        zapamietajTryb("pauza");
         alert("Wstrzymane. Pingi zaplanowane już do 8 h naprzód mogą jeszcze przyjść — ntfy nie pozwala ich cofnąć.");
+      }
       return;
     }
     if(b.id === "start-od-zera"){
       if(!confirm("Zacząć od zera?\n\nCzysta lodówka, nowy cykl, wyzerowane zaległości. Stary stan idzie do archiwum, historia wagi i ciężarów zostaje.")) return;
-      if(await zapisz({typ:"tryb", akcja:"start"}, b))
-        alert("Start zapisany. Za ok. minutę odśwież panel — zobaczysz nowy plan.");
+      if(await zapisz({typ:"tryb", akcja:"start"}, b)){
+        zapamietajTryb("start");
+        alert("Start zapisany. Za ok. minutę panel sam pokaże nowy plan — nie klikaj drugi raz.");
+      }
       return;
     }
   }
