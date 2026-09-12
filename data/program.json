@@ -1,5 +1,5 @@
 {
-  "_info": "Program treningowy v2 — dla laika, dom (Marbo Kelton: rack z drążkiem, ławka, sztanga, EZ, hantle) + gumy oporowe. Priorytety pod sylwetkę w kształcie litery V: barki boczne, szerokość pleców, klatka górna, ramiona, wąska talia. Ćwiczenia w każdej sesji ułożone od najważniejszego — w pierwszych blokach robisz tylko kilka pierwszych. Każde ma łatwiejszą i trudniejszą wersję, żeby zawsze było od czego zacząć.",
+  "_info": "Program treningowy v2 — dla laika, dom (Marbo Kelton: rack z drążkiem, ławka, sztanga, EZ, hantle). Bez wyciągu i bez gum — wszystko na hantlach, sztandze i drążku. Priorytety pod sylwetkę w kształcie litery V: barki boczne, szerokość pleców, klatka górna, ramiona, wąska talia. Ćwiczenia w każdej sesji ułożone od najważniejszego — w pierwszych blokach robisz tylko kilka pierwszych. Każde ma łatwiejszą i trudniejszą wersję, żeby zawsze było od czego zacząć.",
 
   "bloki": [
     {"id": "nauka", "nazwa": "Blok 1 — Nauka ruchu", "od_tygodnia": 1, "do_tygodnia": 2,
@@ -28,7 +28,7 @@
     {"id": "g_gora", "nazwa": "Góra — klatka i barki", "cwiczenia": [
       {"nazwa": "Unoszenie hantli bokiem", "powt": "12-15", "przerwa": "60 s", "v": true,
        "wskazowka": "Łokcie lekko ugięte, ruch prowadzą łokcie, nie dłonie. Unosisz do wysokości barków, nie wyżej. Mały ciężar — to ćwiczenie od techniki, nie od ego.",
-       "latwiej": "Jedną ręką, drugą trzymasz się racka.", "trudniej": "Na koniec dobij gumą, aż nie dasz rady."},
+       "latwiej": "Jedną ręką, drugą trzymasz się racka.", "trudniej": "Seria zrywana: po odmowie lżejszy hantel i dalej."},
       {"nazwa": "Wyciskanie hantli na ławce skośnej", "powt": "8-12", "przerwa": "2 min", "v": true,
        "wskazowka": "Ławka pod kątem ok. 30 stopni — tak pracuje górna część klatki, która w sylwetce robi najwięcej. Łopatki ściągnięte przez cały ruch.",
        "latwiej": "Pompki z rękami na ławce.", "trudniej": "Wolny opust: 3 sekundy w dół."},
@@ -41,26 +41,26 @@
       {"nazwa": "Prostowanie ramion z hantlem nad głową", "powt": "10-12", "przerwa": "75 s",
        "wskazowka": "Łokcie blisko głowy i w miejscu, rusza się tylko przedramię. Triceps to dwie trzecie obwodu ramienia.",
        "latwiej": "Jedną ręką, lżejszy hantel.", "trudniej": "Wyciskanie francuskie sztangą EZ leżąc."},
-      {"nazwa": "Rozpiętki z gumą", "powt": "12-15", "przerwa": "60 s",
-       "wskazowka": "Guma zaczepiona o rack za tobą. Ramiona szeroko, łuk jak przy obejmowaniu drzewa.",
-       "latwiej": "Lżejsza guma.", "trudniej": "Hantle na ławce skośnej."},
+      {"nazwa": "Rozpiętki z hantlami na ławce skośnej", "powt": "12-15", "przerwa": "60 s",
+       "wskazowka": "Ławka ok. 30 stopni, lekkie hantle. Ręce lekko ugięte, ruch jak przy obejmowaniu drzewa. Opuszczasz do poziomu barków, nie niżej — na dole czujesz rozciąganie klatki.",
+       "latwiej": "Na płaskiej ławce, lżejsze hantle.", "trudniej": "Wolny opust: 3 sekundy w dół."},
       {"nazwa": "Unoszenie hantli bokiem — drugie podejście", "powt": "15-20", "przerwa": "45 s", "v": true,
        "wskazowka": "Tak, drugi raz. Barki boczne regenerują się szybko i najlepiej rosną przy częstej pracy.",
-       "latwiej": "Guma zamiast hantli.", "trudniej": "Seria zrywana: po odmowie lżejszy ciężar i dalej."}
+       "latwiej": "Lżejsze hantle, więcej powtórzeń.", "trudniej": "Seria zrywana: po odmowie lżejszy ciężar i dalej."}
     ]},
     {"id": "g_plecy", "nazwa": "Plecy i ramiona", "cwiczenia": [
       {"nazwa": "Podciąganie na drążku", "powt": "max (cel 8-10)", "przerwa": "2 min", "v": true,
        "wskazowka": "Najważniejsze ćwiczenie na szerokość pleców. Chwyt trochę szerzej niż barki, ciągniesz łokcie do bioder. Zapisuj, ile razy — nawet jeśli to 0 i same negatywy.",
-       "latwiej": "Negatywy: wskakujesz na górę i schodzisz przez 4 sekundy. Albo z gumą pod stopami.", "trudniej": "Z hantlem między nogami."},
+       "latwiej": "Negatywy: wchodzisz na górę z ławki i schodzisz przez 4 sekundy. Albo ławka pod drążkiem i pomagasz sobie jedną nogą.", "trudniej": "Z hantlem między nogami."},
       {"nazwa": "Wiosłowanie hantlem jednorącz", "powt": "8-12", "przerwa": "90 s", "v": true,
        "wskazowka": "Kolano i ręka na ławce. Ciągniesz hantel do biodra, nie do barku — wtedy pracują plecy, a nie biceps.",
        "latwiej": "Lżejszy hantel, 2 sekundy zatrzymania na górze.", "trudniej": "Wiosłowanie sztangą w opadzie."},
-      {"nazwa": "Ściąganie gumy do klatki", "powt": "12-15", "przerwa": "60 s", "v": true,
-       "wskazowka": "Guma zaczepiona wysoko o rack. Klęcząc, ściągasz ją do górnej części klatki — zamiennik wyciągu.",
-       "latwiej": "Lżejsza guma.", "trudniej": "Jednorącz, wolny powrót."},
-      {"nazwa": "Face pull z gumą", "powt": "15-20", "przerwa": "60 s",
-       "wskazowka": "Guma na wysokości twarzy, ciągniesz do czoła i rozkładasz ręce. Tył barków: bez nich barki wyglądają płasko z boku.",
-       "latwiej": "Odwrotne rozpiętki z lekkimi hantlami w opadzie.", "trudniej": "Mocniejsza guma, 2 sekundy zatrzymania."},
+      {"nazwa": "Pullover z hantlem", "powt": "10-15", "przerwa": "75 s", "v": true,
+       "wskazowka": "Leżysz w poprzek albo wzdłuż ławki, jeden hantel trzymany oburącz nad klatką. Na prawie prostych rękach opuszczasz go za głowę, aż poczujesz rozciąganie pod pachami, i wracasz. Pracują najszersze — mięśnie od szerokości pleców.",
+       "latwiej": "Lżejszy hantel, mniejszy zakres.", "trudniej": "Wolny opust 3 sekundy i pauza na dole."},
+      {"nazwa": "Odwrotne rozpiętki w opadzie", "powt": "15-20", "przerwa": "60 s",
+       "wskazowka": "Pochylony, klatka prawie równolegle do podłogi. Lekkie hantle, rozkładasz ręce na boki jak skrzydła, łokcie lekko ugięte. Tył barków: bez niego barki wyglądają płasko z boku.",
+       "latwiej": "Leżąc przodem na ławce skośnej — plecy nie muszą trzymać pozycji.", "trudniej": "2 sekundy zatrzymania na górze."},
       {"nazwa": "Uginanie ramion ze sztangą EZ", "powt": "10-12", "przerwa": "75 s",
        "wskazowka": "Łokcie przy tułowiu, bez bujania. Opuszczasz wolniej, niż podnosisz.",
        "latwiej": "Hantle naprzemiennie.", "trudniej": "Na ławce skośnej z hantlami."},
@@ -83,7 +83,7 @@
        "latwiej": "Leżąc na ławce.", "trudniej": "Proste nogi."},
       {"nazwa": "Unoszenie hantli bokiem", "powt": "12-15", "przerwa": "60 s", "v": true,
        "wskazowka": "Trzeci raz w cyklu. Tak ma być.",
-       "latwiej": "Guma.", "trudniej": "Seria zrywana."},
+       "latwiej": "Jedną ręką, drugą trzymasz się racka.", "trudniej": "Seria zrywana."},
       {"nazwa": "Wykroki z hantlami", "powt": "10 na nogę", "przerwa": "90 s",
        "wskazowka": "Długi krok, kolano z tyłu prawie dotyka podłogi. Tułów prosto.",
        "latwiej": "Wykroki w miejscu, bez hantli.", "trudniej": "Przysiad bułgarski z nogą na ławce."},
@@ -105,7 +105,7 @@
      "latwiej": "Lżejszy hantel.", "trudniej": "Zatrzymanie na górze."},
     {"nazwa": "Unoszenie hantli bokiem", "powt": "12-15", "przerwa": "45 s", "v": true,
      "wskazowka": "Barki boczne nawet w dzień po zmianie — mały ciężar, duży efekt.",
-     "latwiej": "Guma.", "trudniej": "Seria zrywana."},
+     "latwiej": "Jedną ręką, drugą trzymasz się racka.", "trudniej": "Seria zrywana."},
     {"nazwa": "Przysiad goblet z hantlem", "powt": "10-12", "przerwa": "60 s",
      "wskazowka": "Rozrusza plecy i biodra po staniu na zmianie.",
      "latwiej": "Do ławki.", "trudniej": "Wolny opust."},
@@ -118,7 +118,7 @@
     "opis": "Nie masz dziś siły? Zrób tylko to. Nigdy zero — to jest cała zasada. Zwykle po tych 10 minutach chce się zrobić więcej, ale nie musisz.",
     "cwiczenia": [
       {"nazwa": "Pompki", "serie": 2, "powt": "ile dasz radę", "przerwa": "60 s", "wskazowka": "Mogą być na kolanach.", "latwiej": "Na ławce.", "trudniej": "—"},
-      {"nazwa": "Unoszenie hantli bokiem", "serie": 2, "powt": "15", "przerwa": "45 s", "wskazowka": "Lekki ciężar.", "latwiej": "Guma.", "trudniej": "—"},
+      {"nazwa": "Unoszenie hantli bokiem", "serie": 2, "powt": "15", "przerwa": "45 s", "wskazowka": "Lekki ciężar.", "latwiej": "Butelki z wodą zamiast hantli.", "trudniej": "—"},
       {"nazwa": "Przysiad bez ciężaru", "serie": 2, "powt": "20", "przerwa": "45 s", "wskazowka": "Spokojnie.", "latwiej": "Do ławki.", "trudniej": "Goblet."}
     ]},
 
@@ -128,5 +128,5 @@
 
   "przedstart": {"nazwa": "Przed startem — gojenie",
     "zasada": "Plan treningowy zaczyna się 17 września. Do tego czasu wracasz do zdrowia po zabiegu: bez treningu, bez deficytu, dużo snu.",
-    "mikro": ["Spokojny spacer, jeśli czujesz się dobrze", "Dużo płynów", "Zakup gum oporowych na start"]}
+    "mikro": ["Spokojny spacer, jeśli czujesz się dobrze", "Dużo płynów", "Zakup taśmy krawieckiej do pomiarów"]}
 }
