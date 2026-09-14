@@ -1,5 +1,5 @@
 {
-  "wygenerowano": "2026-09-14T00:58:52+02:00",
+  "wygenerowano": "2026-09-14T20:00:23+02:00",
   "dzis": "2026-09-14",
   "typ_dzis": 1,
   "typy": {
@@ -6420,7 +6420,12 @@
       "nadwyzka": 0,
       "odhaczone": {},
       "waga": null,
-      "kroki": null,
+      "kroki": {
+        "data": "2026-09-14",
+        "kroki": 4468,
+        "cel": 3500,
+        "status": "ok"
+      },
       "serie": [],
       "trening": {
         "rodzaj": "przedstart",
@@ -9874,10 +9879,24 @@
         "kroki": 5334,
         "cel": 10000,
         "status": "malo"
+      },
+      {
+        "data": "2026-09-14",
+        "kroki": 4468,
+        "cel": 3500,
+        "status": "ok"
       }
     ]
   },
-  "kroki": null,
+  "kroki": {
+    "kroki": 4468,
+    "cel": 3500,
+    "brakuje": 0,
+    "status": "ok",
+    "sugestia": "Cel zrobiony. Nic nie musisz dorabiać.",
+    "komentarz": "Pół doby przesypiasz, a wieczorem masz trening. Niski cel jest tu zamierzony — nie nadrabiaj na siłę.",
+    "procent": 100
+  },
   "kroki_cel": {
     "cel": 3500,
     "komentarz": "Pół doby przesypiasz, a wieczorem masz trening. Niski cel jest tu zamierzony — nie nadrabiaj na siłę."
