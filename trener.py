@@ -330,7 +330,7 @@ def makra_produktow(produkty, dzielnik=1.0):
 
 
 _ODMIANA = {  # jednostka: (1, 2-4, 5+)
-    "szt": ("szt.", "szt.", "szt."), "kromka": ("kromka", "kromki", "kromek"),
+    "szt": ("szt.", "szt.", "szt."), "butelka": ("butelka", "butelki", "butelek"), "kromka": ("kromka", "kromki", "kromek"),
     "plaster": ("plaster", "plastry", "plastrów"), "lyzka": ("łyżka", "łyżki", "łyżek"),
     "zabek": ("ząbek", "ząbki", "ząbków"), "kostka": ("kostka", "kostki", "kostek"),
     "opak": ("opak.", "opak.", "opak."), "kubek": ("kubek", "kubki", "kubków"), "porcja": ("porcja", "porcje", "porcji"),
@@ -470,17 +470,26 @@ def dopasuj_porcje(dzien, cel=None, dodatkowe=None, zamrozone=None, porcje=PORCJ
             # lekkie kary: przy remisie wolimy dzien bez dokladek
             kara = 0.05 * gramy(DOBITKA_PRODUKT, g) + 0.08 * sum(gramy(k, q) for k, q in dod)
             warianty.append((g, dod, m["kcal"], m["bialko"], m["tluszcz"], m["wegle"], kara))
-    tab = {(s, p): _makra_porcji(dzien[s], p) for s in sloty for p in porcje}
-    for kombinacja in itertools.product(porcje, repeat=len(sloty)):
+    # Ulubione sniadania sa duze (omlet ~1080 kcal). Na redukcji przy 2200 kcal
+    # nawet 80% porcji rozsadzalo dzien o 300-400 kcal, wiec one moga zejsc do polowy.
+    ul = set(_ulubione())
+    siatka = {s: tuple(sorted(set(porcje) | {0.5, 0.6, 0.7})) if dzien[s] in ul else tuple(porcje)
+              for s in sloty}
+    # ...ale tylko gdy dzien naprawde tego wymaga: zmniejszanie ulubionego kosztuje
+    # prawie 3x wiecej niz reszty, zeby nie dostawac pol omleta przy 2600 kcal
+    wagi_p = [120 if dzien[s] in ul else 15 for s in sloty]
+    tab = {(s, p): _makra_porcji(dzien[s], p) for s in sloty for p in siatka[s]}
+    for kombinacja in itertools.product(*(siatka[s] for s in sloty)):
         k0, b0, t0, w0 = stale["kcal"], stale["bialko"], stale["tluszcz"], stale["wegle"]
         for s, p in zip(sloty, kombinacja):
             m = tab[(s, p)]
             k0 += m["kcal"]; b0 += m["bialko"]; t0 += m["tluszcz"]; w0 += m["wegle"]
         # przy remisie wolimy przepis bez zmian
-        kara_p = 15 * sum(abs(p - 1.0) for p in kombinacja)
+        kara_p = sum(w * abs(p - 1.0) for w, p in zip(wagi_p, kombinacja))
         for g, dod, dk, db, dt, dw, kara in warianty:
             # te same wagi co _blad_dnia: kcal 1, bialko 6, tluszcz 3, wegle 1
-            blad = (abs(k0 + dk - ck) + 6.0 * abs(b0 + db - cb) + 3.0 * abs(t0 + dt - ct)
+            bb = b0 + db
+            blad = (abs(k0 + dk - ck) + (6.0 * (cb - bb) if bb < cb else 1.0 * (bb - cb)) + 3.0 * abs(t0 + dt - ct)
                     + abs(w0 + dw - cw) + kara_p + kara)
             if najmniejszy is None or blad < najmniejszy:
                 najmniejszy, najlepsze, dobitka, dodatek = blad, dict(zip(sloty, kombinacja)), g, dod
@@ -517,6 +526,45 @@ def makra_dnia(dzien):
 
 # ------------------------------------------------------------------ planer
 
+# Koszt wchodzi do oceny planu: 1 zl = 20 punktow bledu, czyli tyle co 20 kcal
+# albo ~3 g bialka obok celu. Planer nie poswieci makr dla grosza, ale z dwoch
+# podobnych zestawow wybierze tanszy.
+KOSZT_WAGA = 20
+_koszty = {}
+
+
+def _koszt_posilku(pid):
+    """Ile zlotych kosztuje zuzycie na jedna porcje (czesc opakowania, nie cale)."""
+    if pid not in _koszty:
+        _koszty[pid] = sum(q / PROD[k]["opak"] * PROD[k]["cena"]
+                           for k, q in produkty_posilku(pid) if k != "przyprawy")
+    return _koszty[pid]
+
+
+def _ulubione():
+    return [q["id"] for q in QUICK if q.get("ulubione")]
+
+
+def dzien_ulubionego(d):
+    """Ulubione sniadanie 3 dni na 4. Co czwarty dzien odmiana — dla urozmaicenia
+    i zeby sie nie przejadlo; liczone po dacie, wiec rytm nie zalezy od cykli."""
+    return d.toordinal() % 4 != 3
+
+
+def ulubione_na(d):
+    """Ktore z ulubionych danego dnia. Kolejne dni z ulubionym przeskakuja miedzy
+    nimi (omlet, tortilla, omlet...), a dzien odmiany nie psuje naprzemiennosci."""
+    ul = _ulubione()
+    n = d.toordinal()
+    return ul[(n - n // 4) % len(ul)]
+
+
+def slot_ulubionego(d):
+    """W dniu po zmianie 'sniadanie' to maly posilek przed snem po nocce —
+    pierwszym prawdziwym posilkiem jest posilek po treningu i tam idzie ulubione."""
+    return "drugi" if typ_dnia(d) == 1 else "sniadanie"
+
+
 def _pule(box_only):
     """Kandydaci na każdy slot; na dniu zmiany tylko to, co da się zjeść na zimno z boxa."""
     out = {}
@@ -532,13 +580,21 @@ def _wybierz_baze(historia):
     def klucz(b):
         return ostatnie.index(b["id"]) if b["id"] in ostatnie else -1
     kandydaci = sorted(BAZY, key=klucz)[:4]
+    # z czterech najdawniej jedzonych — jedno z dwoch najtanszych
+    kandydaci = sorted(kandydaci, key=lambda b: _koszt_posilku(b["id"]))[:2]
     return random.choice(kandydaci)
+
+
+def _kara_bialka(b, cel_b):
+    return 6.0 * (cel_b - b) if b < cel_b else 1.0 * (b - cel_b)
 
 
 def _blad_dnia(m, cel=None):
     cel = cel or CEL
     return (abs(m["kcal"] - cel["kcal"]) * 1.0
-            + abs(m["bialko"] - cel["bialko"]) * 6.0
+            # brak bialka boli 3x bardziej niz nadwyzka: 20 g ponad cel nic nie psuje,
+            # 20 g ponizej to slabsza regeneracja — a ulubione sniadania maja go duzo
+            + _kara_bialka(m["bialko"], cel["bialko"])
             + abs(m["tluszcz"] - cel["tluszcz"]) * 3.0
             + abs(m["wegle"] - cel["wegle"]) * 1.0)
 
@@ -627,6 +683,14 @@ def generuj_plan(d=None, force=False, zapisz=True):
     daty = [start + datetime.timedelta(days=i) for i in range(3)]
     cele = [cel_dnia(dd) for dd in daty]
     pule = [_pule(box_only=(typ_dnia(dd) == 0)) for dd in daty]
+    # Ulubione tylko tam, gdzie wypada ich dzien — i wtedy bez konkurencji. Box nie
+    # ma znaczenia: sniadanie w dniu zmiany jesz w domu, przed wyjsciem.
+    ul = _ulubione()
+    for i, dd in enumerate(daty):
+        for s_ in pule[i]:
+            pule[i][s_] = [p for p in pule[i][s_] if p not in ul]
+        if ul and dzien_ulubionego(dd):
+            pule[i][slot_ulubionego(dd)] = [ulubione_na(dd)]
 
     import heapq
     czolowka = []   # najlepsi kandydaci PRZED dopasowaniem porcji
@@ -640,6 +704,7 @@ def generuj_plan(d=None, force=False, zapisz=True):
             })
         wynik = 0.0
         uzyte = []
+        ul_uzyte = []
         klucze_produktow = []
         for i, dzien in enumerate(kandydat):
             m = dict(makra_bazy)
@@ -647,7 +712,10 @@ def generuj_plan(d=None, force=False, zapisz=True):
                 mm = makra_posilku(dzien[slot])
                 for k in m:
                     m[k] += mm[k]
-                uzyte.append(dzien[slot])
+                if dzien[slot] in ul:
+                    ul_uzyte.append(dzien[slot])
+                else:
+                    uzyte.append(dzien[slot])
                 klucze_produktow += [k for k, _ in QUICK_BY_ID[dzien[slot]]["produkty"]]
             wynik += _blad_dnia(m, cele[i])
         # kara za powtarzanie tego samego posiłku w cyklu
@@ -655,6 +723,11 @@ def generuj_plan(d=None, force=False, zapisz=True):
         # premia za wspólne produkty — mniej pozycji na liście i mniej marnowania
         wynik -= 8 * (len(klucze_produktow) - len(set(klucze_produktow)))
         kary = 450 * (len(uzyte) - len(set(uzyte))) - 8 * (len(klucze_produktow) - len(set(klucze_produktow)))
+        # ulubione na zmiane: to samo dwa razy w cyklu tylko, gdy makra naprawde tego chca
+        kary += 150 * (len(ul_uzyte) - len(set(ul_uzyte)))
+        # ulubione sa wybrane przez Ciebie — koszt ich nie wypycha, liczy sie dla reszty
+        kary += KOSZT_WAGA * sum(_koszt_posilku(dz[s_]) for dz in kandydat
+                                 for s_ in ("sniadanie", "drugi", "kolacja") if dz[s_] not in ul)
         # deser bialkowy najwyzej raz dziennie — to ma byc cos slodkiego w planie, nie trzy kremy dziennie
         kary += 500 * sum(max(0, sum(1 for s_ in ("sniadanie", "drugi", "kolacja")
                                      if QUICK_BY_ID[dz[s_]].get("deser")) - 1) for dz in kandydat)

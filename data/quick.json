@@ -1,5 +1,5 @@
 {
-  "_info": "SZYBKIE POSIŁKI — bez gotowania albo do 12 minut. sloty = gdzie pasuje (sniadanie / drugi / kolacja). box=true znaczy, że można to spakować i zjeść na zimno na 24h zmianie. czas_min liczony realnie, z wyjmowaniem rzeczy z lodówki. deser=true to deser białkowy — liczy się jak normalny posiłek, planer wstawia go najwyżej raz dziennie.",
+  "_info": "SZYBKIE POSIŁKI — bez gotowania albo do 12 minut. sloty = gdzie pasuje (sniadanie / drugi / kolacja). box=true znaczy, że można to spakować i zjeść na zimno na 24h zmianie. czas_min liczony realnie, z wyjmowaniem rzeczy z lodówki. deser=true to deser białkowy — liczy się jak normalny posiłek, planer wstawia go najwyżej raz dziennie. ulubione=true to Twoje sprawdzone śniadania: planer daje je 3 dni na 4, co czwarty dzień jest odmiana.",
   "posilki": [
     {
       "id": "q_jajecznica",
@@ -850,6 +850,107 @@
         "Twaróg rozgnieć z mlekiem na gładki krem.",
         "Wsyp łyżkę kakao i łyżkę miodu, mieszaj do jednolitego koloru.",
         "Łyżka masła orzechowego na wierzch. Smakuje jak krem czekoladowo-orzechowy."
+      ]
+    },
+    {
+      "id": "q_omlet_marchewkowy",
+      "nazwa": "Omlet marchewkowy z dżemem i bananem + napój proteinowy",
+      "sloty": [
+        "sniadanie"
+      ],
+      "box": false,
+      "ulubione": true,
+      "czas_min": 15,
+      "produkty": [
+        [
+          "skyr_waniliowy",
+          1
+        ],
+        [
+          "jaja",
+          1
+        ],
+        [
+          "maka",
+          50
+        ],
+        [
+          "odzywka_wpc",
+          30
+        ],
+        [
+          "marchew",
+          0.65
+        ],
+        [
+          "proszek_do_pieczenia",
+          3
+        ],
+        [
+          "cynamon",
+          5
+        ],
+        [
+          "dzem_niskoslodzony",
+          140
+        ],
+        [
+          "banan",
+          1
+        ],
+        [
+          "napoj_proteinowy",
+          1
+        ]
+      ],
+      "kroki": [
+        "Marchewkę zetrzyj na drobnych oczkach.",
+        "W misce wymieszaj skyr, jajko, mąkę, odżywkę, proszek do pieczenia i przyprawę. Dodaj marchewkę — ciasto ma być gęste.",
+        "Wylej na rozgrzaną patelnię z powłoką, przykryj pokrywką i smaż na małym ogniu 5–6 minut.",
+        "Przewróć (najłatwiej zsunąć na talerz i nakryć patelnią) i smaż jeszcze 3–4 minuty.",
+        "Na wierzch dżem i pokrojony banan. Napój proteinowy do popicia."
+      ]
+    },
+    {
+      "id": "q_tortilla_jajecznica",
+      "nazwa": "Tortilla z jajecznicą, polędwicą i majonezem sriracha + skyr pitny",
+      "sloty": [
+        "sniadanie"
+      ],
+      "box": false,
+      "ulubione": true,
+      "czas_min": 10,
+      "produkty": [
+        [
+          "tortilla",
+          1
+        ],
+        [
+          "jaja",
+          4
+        ],
+        [
+          "poledwica",
+          25
+        ],
+        [
+          "majonez_sriracha",
+          20
+        ],
+        [
+          "skyr_pitny",
+          1
+        ],
+        [
+          "przyprawy",
+          1
+        ]
+      ],
+      "kroki": [
+        "Jajka rozbełtaj z solą i pieprzem i usmaż jajecznicę na patelni z powłoką — bez dodatkowego tłuszczu.",
+        "Tortillę podgrzej 20–30 sekund na suchej patelni, żeby się nie łamała.",
+        "Posmaruj majonezem sriracha, wyłóż jajecznicę i polędwicę, zwiń.",
+        "Skyr pitny do popicia."
       ]
     }
   ]

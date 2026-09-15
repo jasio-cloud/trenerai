@@ -519,5 +519,95 @@
     "cena": 9.0,
     "kat": "spizarnia",
     "trw": "trwale"
+  },
+  "skyr_waniliowy": {
+    "nazwa": "Skyr waniliowy (kubek 150 g)",
+    "jedn": "kubek",
+    "opak": 1,
+    "cena": 3.5,
+    "kat": "nabial",
+    "trw": "chlodnia",
+    "g": 150,
+    "baza": "g"
+  },
+  "proszek_do_pieczenia": {
+    "nazwa": "Proszek do pieczenia",
+    "jedn": "g",
+    "opak": 30,
+    "cena": 0.8,
+    "kat": "spizarnia",
+    "trw": "trwale",
+    "g": 1,
+    "baza": "g"
+  },
+  "cynamon": {
+    "nazwa": "Przyprawa do cynamonek / cynamon",
+    "jedn": "g",
+    "opak": 20,
+    "cena": 3.0,
+    "kat": "spizarnia",
+    "trw": "trwale",
+    "g": 1,
+    "baza": "g"
+  },
+  "odzywka_wpc": {
+    "nazwa": "Odżywka białkowa WPC 80 (czekoladowa)",
+    "jedn": "g",
+    "opak": 700,
+    "cena": 75.0,
+    "kat": "spizarnia",
+    "trw": "trwale",
+    "g": 1,
+    "baza": "g"
+  },
+  "dzem_niskoslodzony": {
+    "nazwa": "Dżem niskosłodzony (truskawkowy)",
+    "jedn": "g",
+    "opak": 280,
+    "cena": 7.0,
+    "kat": "spizarnia",
+    "trw": "trwale",
+    "g": 1,
+    "baza": "g"
+  },
+  "napoj_proteinowy": {
+    "nazwa": "Napój proteinowy Müllermilch Protein (400 ml)",
+    "jedn": "butelka",
+    "opak": 1,
+    "cena": 6.5,
+    "kat": "nabial",
+    "trw": "chlodnia",
+    "g": 400,
+    "baza": "ml"
+  },
+  "skyr_pitny": {
+    "nazwa": "Skyr pitny (butelka 330 ml)",
+    "jedn": "butelka",
+    "opak": 1,
+    "cena": 4.5,
+    "kat": "nabial",
+    "trw": "chlodnia",
+    "g": 330,
+    "baza": "ml"
+  },
+  "poledwica": {
+    "nazwa": "Polędwica sopocka (wędlina)",
+    "jedn": "g",
+    "opak": 100,
+    "cena": 6.5,
+    "kat": "mieso",
+    "trw": "chlodnia",
+    "g": 1,
+    "baza": "g"
+  },
+  "majonez_sriracha": {
+    "nazwa": "Majonez sriracha",
+    "jedn": "ml",
+    "opak": 250,
+    "cena": 9.0,
+    "kat": "spizarnia",
+    "trw": "trwale",
+    "g": 1,
+    "baza": "ml"
   }
 }
