@@ -1,9 +1,5 @@
 {
   "stan": {
-    "mielone_wolowe": {
-      "ilosc": 200.0,
-      "do": "2026-09-15"
-    },
     "jaja": {
       "ilosc": 6,
       "do": "2026-09-23"
@@ -36,10 +32,6 @@
       "ilosc": 9,
       "do": "2027-03-30"
     },
-    "ogorek": {
-      "ilosc": 0.7,
-      "do": "2026-09-15"
-    },
     "ogorek_kiszony": {
       "ilosc": 6.5,
       "do": "2027-03-30"
@@ -47,10 +39,6 @@
     "papryka": {
       "ilosc": 0.5,
       "do": "2026-09-23"
-    },
-    "szczypiorek": {
-      "ilosc": 8.5,
-      "do": "2026-09-15"
     },
     "ziemniaki": {
       "ilosc": 1250.0,
@@ -107,6 +95,24 @@
       "co": "cykl:2026-09-11",
       "pozycji": 31,
       "koszt": 276.9
+    },
+    {
+      "data": "2026-09-16",
+      "co": "wyrzucone",
+      "produkt": "mielone_wolowe",
+      "ilosc": 200.0
+    },
+    {
+      "data": "2026-09-16",
+      "co": "wyrzucone",
+      "produkt": "ogorek",
+      "ilosc": 0.7
+    },
+    {
+      "data": "2026-09-16",
+      "co": "wyrzucone",
+      "produkt": "szczypiorek",
+      "ilosc": 8.5
     }
   ]
 }
