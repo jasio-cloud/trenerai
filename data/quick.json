@@ -83,39 +83,35 @@
     },
     {
       "id": "q_twarog",
-      "nazwa": "Twarożek z ogórkiem + pieczywo",
+      "nazwa": "Twarożek na słodko z dżemem + pieczywo",
       "sloty": [
         "sniadanie",
         "kolacja"
       ],
       "box": true,
-      "czas_min": 5,
+      "czas_min": 4,
       "produkty": [
         [
           "twarog",
           200
         ],
         [
-          "smietana",
+          "mleko",
           20
+        ],
+        [
+          "dzem_niskoslodzony",
+          40
         ],
         [
           "chleb",
           2
-        ],
-        [
-          "ogorek",
-          0.3
-        ],
-        [
-          "przyprawy",
-          1
         ]
       ],
       "kroki": [
-        "Twaróg rozgnieć widelcem w miseczce ze śmietaną — będzie kremowy, a nie suchy.",
-        "Ogórek pokrój w drobną kostkę i wmieszaj. Sól, pieprz.",
-        "Jeść z chlebem. Do boxa: twarożek do zakręcanego pojemnika, chleb osobno."
+        "Twaróg rozgnieć widelcem z odrobiną mleka — będzie kremowy, a nie suchy.",
+        "Wmieszaj połowę dżemu, resztę daj na wierzch.",
+        "Jedz z chlebem albo posmaruj kromki. Do boxa: twarożek w zakręcanym pojemniku, chleb osobno."
       ]
     },
     {
@@ -690,12 +686,12 @@
     },
     {
       "id": "o_twarog_xl",
-      "nazwa": "Miska twarogu z jajkami i pieczywem",
+      "nazwa": "Duża miska twarogu na słodko z dżemem, bananem i pieczywem",
       "sloty": [
         "obiad"
       ],
       "box": true,
-      "czas_min": 10,
+      "czas_min": 5,
       "bez_gotowania": true,
       "produkty": [
         [
@@ -703,30 +699,30 @@
           250
         ],
         [
-          "jaja",
-          3
+          "skyr",
+          1
         ],
         [
-          "smietana",
+          "mleko",
           30
         ],
         [
-          "chleb",
-          3
+          "dzem_niskoslodzony",
+          60
         ],
         [
-          "ogorek_kiszony",
-          2
-        ],
-        [
-          "pomidor",
+          "banan",
           1
+        ],
+        [
+          "chleb",
+          2
         ]
       ],
       "kroki": [
-        "Jajka na twardo, 9 min od wrzenia, potem zimna woda.",
-        "Twaróg rozgnieć ze śmietaną, dopraw solą i pieprzem.",
-        "Jajka pokrój i wmieszaj. Chleb, ogórek, pomidor obok."
+        "Twaróg rozgnieć widelcem ze skyrem i odrobiną mleka na gładki krem.",
+        "Wmieszaj dżem, na wierzch pokrojony banan.",
+        "Chleb obok — albo posmaruj nim kromki. Do boxa: krem w pojemniku, banan i chleb osobno."
       ]
     },
     {
