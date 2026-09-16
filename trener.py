@@ -1635,7 +1635,7 @@ def _dodaj_kosciol(d, zdarzenia):
                 e["opis"] = "Po mszy, prosto z garnka. Reszta ostudzona idzie do lodówki."
             elif e.get("slot") == "kolacja":
                 e["czas"] = "21:00"
-    elif d.weekday() == 5 and typ_dnia(d + datetime.timedelta(days=1)) == 0:
+    elif k.get("sobota_wigilijna") and d.weekday() == 5 and typ_dnia(d + datetime.timedelta(days=1)) == 0:
         godz = k["sobota_wigilijna"]
         opis = ("Jutro niedziela na służbie, więc idziesz dziś — msza w sobotę wieczorem "
                 "liczy się jako niedzielna. ")
