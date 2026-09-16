@@ -1,5 +1,5 @@
 {
-  "wygenerowano": "2026-09-16T12:19:01+02:00",
+  "wygenerowano": "2026-09-16T12:28:37+02:00",
   "dzis": "2026-09-16",
   "typ_dzis": 0,
   "typy": {
@@ -4423,11 +4423,11 @@
           ]
         },
         {
-          "czas": "18:00",
-          "tytul": "Spacer",
-          "ikona": "🚶",
+          "czas": "17:30",
+          "tytul": "Msza święta o 18:00",
+          "ikona": "⛪",
           "ping": true,
-          "opis": "20–30 minut. Nie kardio — chodzi o rozruszanie bioder i pleców oraz o kroki, których dziś nie zrobisz sam z siebie."
+          "opis": "Jutro niedziela na służbie, więc idziesz dziś — msza w sobotę wieczorem liczy się jako niedzielna. Za 30 minut msza — czas się zbierać. Telefon wycisz już teraz."
         },
         {
           "czas": "19:30",
@@ -8237,20 +8237,27 @@
           "opis": "Trzy dni za Tobą. Zanim staniesz do garów, zobacz, co z nich wyszło."
         },
         {
-          "czas": "16:30",
+          "czas": "15:30",
           "tytul": "GOTOWANIE na 3 dni",
           "ikona": "🍳",
           "ping": true,
           "akcja": "gotowanie",
-          "opis": "Jeden garnek, jedno podejście, 3 pojemniki. Przepis krok po kroku masz w panelu."
+          "opis": "Jeden garnek, jedno podejście, 3 pojemniki. Przepis krok po kroku masz w panelu. Dziś godzinę wcześniej — o 18:00 msza."
         },
         {
-          "czas": "18:15",
+          "czas": "17:30",
+          "tytul": "Msza święta o 18:00",
+          "ikona": "⛪",
+          "ping": true,
+          "opis": "Za 30 minut msza — czas się zbierać. Telefon wycisz już teraz."
+        },
+        {
+          "czas": "19:15",
           "tytul": "Obiad",
           "ikona": "🍲",
           "ping": true,
           "slot": "obiad",
-          "opis": "Prosto z garnka, świeży. Reszta ostudzona idzie do lodówki.",
+          "opis": "Po mszy, prosto z garnka. Reszta ostudzona idzie do lodówki.",
           "posilek": "Wołowina duszona w cebuli + ziemniaki",
           "posilek_id": "b_wolowina_cebula",
           "porcja": 1.0,
@@ -8338,7 +8345,7 @@
           ]
         },
         {
-          "czas": "20:30",
+          "czas": "21:00",
           "tytul": "Kolacja",
           "ikona": "🌙",
           "ping": true,
