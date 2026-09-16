@@ -1,5 +1,5 @@
 {
-  "wygenerowano": "2026-09-16T00:03:50+02:00",
+  "wygenerowano": "2026-09-16T12:04:58+02:00",
   "dzis": "2026-09-16",
   "typ_dzis": 0,
   "typy": {
@@ -168,8 +168,16 @@
       "tytul": "Pobudka",
       "ikona": "⏰",
       "ping": true,
-      "opis": "Szklanka wody od razu po wstaniu. Boxy masz spakowane w lodówce od wczoraj — wyjmij je teraz, żeby nie zapomnieć.",
+      "opis": "Najpierw toaleta — za 5 minut ping do ważenia, więc jeszcze nic nie pij. Boxy masz spakowane w lodówce od wczoraj — wyjmij je teraz, żeby nie zapomnieć.",
       "akcja": "suple"
+    },
+    {
+      "czas": "05:35",
+      "tytul": "Waga",
+      "ikona": "⚖️",
+      "ping": true,
+      "akcja": "waga",
+      "opis": "Po toalecie, przed jedzeniem i piciem, w samej bieliźnie. Wpisz wynik w panelu — liczy się średnia z 7 dni, nie pojedynczy wynik."
     },
     {
       "czas": "05:45",
@@ -375,7 +383,7 @@
       },
       "skladniki": [
         {
-          "nazwa": "Wołowina na gulasz (łopatka)",
+          "nazwa": "Wołowina z łopatki (w Biedronce: stek wołowy z łopatki)",
           "ile": "200 g",
           "g": 200,
           "kcal": 320,
@@ -473,7 +481,7 @@
       "posilek_id": "q_jajka_kukurydza",
       "porcja": 0.9,
       "makra": {
-        "kcal": 468,
+        "kcal": 465,
         "bialko": 34,
         "tluszcz": 20,
         "wegle": 33
@@ -516,15 +524,6 @@
           "wegle": 1.2
         },
         {
-          "nazwa": "Szczypiorek",
-          "ile": "2 łyżki (10 g)",
-          "g": 10,
-          "kcal": 3,
-          "bialko": 0.3,
-          "tluszcz": 0.1,
-          "wegle": 0.2
-        },
-        {
           "nazwa": "Chleb pszenny (zwykły biały)",
           "ile": "1 kromka (35 g)",
           "g": 35,
@@ -539,31 +538,31 @@
       "kroki": [
         "Jajka na twardo (9 min od wrzenia), zalej zimną wodą, obierz i pokrój w kostkę.",
         "Wymieszaj z odsączoną kukurydzą, jogurtem greckim i łyżką musztardy.",
-        "Szczypiorek, sól, pieprz. Do pojemnika, chleb osobno.",
+        "Sól, pieprz, szczypta papryki. Do pojemnika, chleb osobno.",
         "Trzyma się w lodówce 2 dni — możesz zrobić podwójną porcję w dniu gotowania.",
         "Ilości każdego składnika masz w rozpisce — porcja jest dopasowana do Twojego celu na ten dzień."
       ]
     },
     {
-      "czas": "22:40",
+      "czas": "22:15",
       "tytul": "Przygotuj się do nocy",
       "ikona": "🤸",
       "ping": true,
-      "opis": "5 minut rozciągania bioder i karku. Ustaw cztery budziki na końce drzemek: 00:20, 02:00, 03:40, 05:20."
+      "opis": "5 minut rozciągania bioder i karku. Ustaw cztery budziki na końce drzemek: 23:59, 01:30, 03:00, 04:30."
     },
     {
-      "czas": "23:00",
-      "tytul": "Drzemka 1 z 4 — do 00:20",
+      "czas": "22:30",
+      "tytul": "Drzemka 1 z 4 — do 23:59",
       "ikona": "😴",
       "ping": true,
-      "opis": "1 h 20 to prawie pełny cykl snu i dlatego wstajesz po niej mniej rozbity niż po czterdziestu minutach. Telefon ekranem w dół."
+      "opis": "Półtorej godziny to pełny cykl snu, dlatego po tej drzemce wstaniesz najmniej rozbity. Telefon ekranem w dół."
     }
   ],
   "zakupy": {
     "kup": [
       {
         "klucz": "wolowina_gulasz",
-        "nazwa": "Wołowina na gulasz (łopatka)",
+        "nazwa": "Wołowina z łopatki (w Biedronce: stek wołowy z łopatki)",
         "kat": "mieso",
         "trw": "swieze",
         "opakowan": 2,
@@ -571,7 +570,7 @@
         "jedn": "g",
         "brakuje": 600.0,
         "dokupisz": 1000,
-        "cena": 50.0
+        "cena": 60.0
       },
       {
         "klucz": "jaja",
@@ -716,18 +715,6 @@
         "brakuje": 55,
         "dokupisz": 150,
         "cena": 5.0
-      },
-      {
-        "klucz": "szczypiorek",
-        "nazwa": "Szczypiorek",
-        "kat": "warzywa",
-        "trw": "swieze",
-        "opakowan": 1,
-        "opak": 12,
-        "jedn": "lyzka",
-        "brakuje": 2.0,
-        "dokupisz": 12,
-        "cena": 3.0
       },
       {
         "klucz": "chleb",
@@ -883,7 +870,7 @@
         "jedn": "g"
       }
     ],
-    "koszt": 160.0,
+    "koszt": 167.0,
     "zrobione": false
   },
   "lodowka": {
@@ -1011,8 +998,8 @@
     },
     {
       "id": "waga",
-      "nazwa": "Waga w dzień wolny",
-      "opis": "Raz na cykl, rano, na czczo. Kierunek w fazie „Przed startem”: −0,3 do +0,3 kg na tydzień."
+      "nazwa": "Waga codziennie rano",
+      "opis": "Codziennie 5 minut po pobudce: po toalecie, przed jedzeniem i piciem. Liczy się średnia z 7 dni. Kierunek w fazie „Przed startem”: −0,3 do +0,3 kg na tydzień."
     },
     {
       "id": "telefon",
@@ -1103,7 +1090,7 @@
     },
     "q_twarog": {
       "id": "q_twarog",
-      "nazwa": "Twarożek ze szczypiorkiem + pieczywo",
+      "nazwa": "Twarożek z ogórkiem + pieczywo",
       "sloty": [
         "sniadanie",
         "kolacja"
@@ -1120,10 +1107,6 @@
           20
         ],
         [
-          "szczypiorek",
-          2
-        ],
-        [
           "chleb",
           2
         ],
@@ -1138,8 +1121,8 @@
       ],
       "kroki": [
         "Twaróg rozgnieć widelcem w miseczce ze śmietaną — będzie kremowy, a nie suchy.",
-        "Wsyp posiekany szczypiorek, sól, pieprz, wymieszaj.",
-        "Ogórek w plastry. Jeść z chlebem. Do boxa: twarożek do zakręcanego pojemnika, chleb osobno."
+        "Ogórek pokrój w drobną kostkę i wmieszaj. Sól, pieprz.",
+        "Jeść z chlebem. Do boxa: twarożek do zakręcanego pojemnika, chleb osobno."
       ]
     },
     "q_skyr": {
@@ -1578,10 +1561,6 @@
           1
         ],
         [
-          "szczypiorek",
-          2
-        ],
-        [
           "chleb",
           1
         ],
@@ -1593,7 +1572,7 @@
       "kroki": [
         "Jajka na twardo (9 min od wrzenia), zalej zimną wodą, obierz i pokrój w kostkę.",
         "Wymieszaj z odsączoną kukurydzą, jogurtem greckim i łyżką musztardy.",
-        "Szczypiorek, sól, pieprz. Do pojemnika, chleb osobno.",
+        "Sól, pieprz, szczypta papryki. Do pojemnika, chleb osobno.",
         "Trzyma się w lodówce 2 dni — możesz zrobić podwójną porcję w dniu gotowania."
       ]
     },
@@ -1739,10 +1718,6 @@
           30
         ],
         [
-          "szczypiorek",
-          2
-        ],
-        [
           "chleb",
           3
         ],
@@ -1757,7 +1732,7 @@
       ],
       "kroki": [
         "Jajka na twardo, 9 min od wrzenia, potem zimna woda.",
-        "Twaróg rozgnieć ze śmietaną, wsyp szczypiorek, sól, pieprz.",
+        "Twaróg rozgnieć ze śmietaną, dopraw solą i pieprzem.",
         "Jajka pokrój i wmieszaj. Chleb, ogórek, pomidor obok."
       ]
     },
@@ -2106,10 +2081,10 @@
       "baza": "g"
     },
     "wolowina_gulasz": {
-      "nazwa": "Wołowina na gulasz (łopatka)",
+      "nazwa": "Wołowina z łopatki (w Biedronce: stek wołowy z łopatki)",
       "jedn": "g",
       "opak": 500,
-      "cena": 25.0,
+      "cena": 30.0,
       "kat": "mieso",
       "trw": "swieze",
       "g": 1,
@@ -2463,7 +2438,8 @@
       "kat": "mieso",
       "trw": "chlodnia",
       "g": 40,
-      "baza": "g"
+      "baza": "g",
+      "biedronka": false
     },
     "kabanosy": {
       "nazwa": "Kabanosy wołowe",
@@ -2483,7 +2459,8 @@
       "kat": "mieso",
       "trw": "chlodnia",
       "g": 1,
-      "baza": "g"
+      "baza": "g",
+      "biedronka": false
     },
     "kakao": {
       "nazwa": "Kakao naturalne (bez cukru)",
@@ -2526,14 +2503,15 @@
       "baza": "g"
     },
     "odzywka_wpc": {
-      "nazwa": "Odżywka białkowa WPC 80 (czekoladowa)",
+      "nazwa": "Odżywka białkowa WPC 80 (czekoladowa) — zapas, nie z Biedronki",
       "jedn": "g",
       "opak": 700,
       "cena": 75.0,
       "kat": "spizarnia",
       "trw": "trwale",
       "g": 1,
-      "baza": "g"
+      "baza": "g",
+      "biedronka": false
     },
     "dzem_niskoslodzony": {
       "nazwa": "Dżem niskosłodzony (truskawkowy)",
@@ -2556,7 +2534,7 @@
       "baza": "ml"
     },
     "skyr_pitny": {
-      "nazwa": "Skyr pitny (butelka 330 ml)",
+      "nazwa": "Skyr pitny (butelka, np. Fruvita albo Piątnica)",
       "jedn": "butelka",
       "opak": 1,
       "cena": 4.5,
@@ -2586,7 +2564,7 @@
       "baza": "ml"
     }
   },
-  "panel_wersja": 13,
+  "panel_wersja": 14,
   "grafik": [
     {
       "od": "2000-01-01",
@@ -2819,11 +2797,19 @@
       "agenda": [
         {
           "czas": "08:00",
-          "tytul": "Pobudka + waga",
-          "ikona": "⚖️",
+          "tytul": "Pobudka",
+          "ikona": "⏰",
           "ping": true,
           "akcja": "suple",
-          "opis": "Zważ się od razu po wstaniu, przed jedzeniem i piciem. Potem woda, suple, toaleta — i bez telefonu."
+          "opis": "Toaleta, za 5 minut waga. Potem woda i suple — i bez telefonu."
+        },
+        {
+          "czas": "08:05",
+          "tytul": "Waga",
+          "ikona": "⚖️",
+          "ping": true,
+          "akcja": "waga",
+          "opis": "Po toalecie, przed jedzeniem i piciem, w samej bieliźnie. Wpisz wynik w panelu — liczy się średnia z 7 dni, nie pojedynczy wynik."
         },
         {
           "czas": "08:30",
@@ -2840,11 +2826,11 @@
           "ping": true,
           "slot": "sniadanie",
           "opis": "Pierwszy posiłek dnia, zaraz po sztandze.",
-          "posilek": "Twarożek ze szczypiorkiem + pieczywo",
+          "posilek": "Twarożek z ogórkiem + pieczywo",
           "posilek_id": "q_twarog",
           "porcja": 0.8,
           "makra": {
-            "kcal": 912,
+            "kcal": 910,
             "bialko": 48,
             "tluszcz": 17,
             "wegle": 143
@@ -2867,15 +2853,6 @@
               "bialko": 0.4,
               "tluszcz": 2.9,
               "wegle": 0.5
-            },
-            {
-              "nazwa": "Szczypiorek",
-              "ile": "8 g",
-              "g": 8,
-              "kcal": 2,
-              "bialko": 0.2,
-              "tluszcz": 0.1,
-              "wegle": 0.1
             },
             {
               "nazwa": "Chleb pszenny (zwykły biały)",
@@ -2911,8 +2888,8 @@
           "czas_min": 5,
           "kroki": [
             "Twaróg rozgnieć widelcem w miseczce ze śmietaną — będzie kremowy, a nie suchy.",
-            "Wsyp posiekany szczypiorek, sól, pieprz, wymieszaj.",
-            "Ogórek w plastry. Jeść z chlebem. Do boxa: twarożek do zakręcanego pojemnika, chleb osobno.",
+            "Ogórek pokrój w drobną kostkę i wmieszaj. Sól, pieprz.",
+            "Jeść z chlebem. Do boxa: twarożek do zakręcanego pojemnika, chleb osobno.",
             "Ilości każdego składnika masz w rozpisce — porcja jest dopasowana do Twojego celu na ten dzień.",
             "Do tego dodatek węglowy: chleb pszenny 4 kromki, miód 2 łyżki. Zjedz obok — to paliwo na trening i regenerację, bez niego dzień nie dobija węglowodanów."
           ]
@@ -2928,7 +2905,7 @@
           "posilek_id": "q_jajka_kukurydza",
           "porcja": 1.0,
           "makra": {
-            "kcal": 483,
+            "kcal": 480,
             "bialko": 35,
             "tluszcz": 21,
             "wegle": 34
@@ -2971,15 +2948,6 @@
               "wegle": 1.2
             },
             {
-              "nazwa": "Szczypiorek",
-              "ile": "2 łyżki (10 g)",
-              "g": 10,
-              "kcal": 3,
-              "bialko": 0.3,
-              "tluszcz": 0.1,
-              "wegle": 0.2
-            },
-            {
               "nazwa": "Chleb pszenny (zwykły biały)",
               "ile": "1 kromka (35 g)",
               "g": 35,
@@ -2994,7 +2962,7 @@
           "kroki": [
             "Jajka na twardo (9 min od wrzenia), zalej zimną wodą, obierz i pokrój w kostkę.",
             "Wymieszaj z odsączoną kukurydzą, jogurtem greckim i łyżką musztardy.",
-            "Szczypiorek, sól, pieprz. Do pojemnika, chleb osobno.",
+            "Sól, pieprz, szczypta papryki. Do pojemnika, chleb osobno.",
             "Trzyma się w lodówce 2 dni — możesz zrobić podwójną porcję w dniu gotowania.",
             "Ilości każdego składnika masz w rozpisce — porcja jest dopasowana do Twojego celu na ten dzień."
           ]
@@ -3200,7 +3168,7 @@
         }
       ],
       "makra": {
-        "kcal": 2602,
+        "kcal": 2597,
         "bialko": 157,
         "tluszcz": 102,
         "wegle": 252
@@ -3259,8 +3227,16 @@
           "tytul": "Pobudka",
           "ikona": "⏰",
           "ping": true,
-          "opis": "Szklanka wody od razu po wstaniu. Boxy masz spakowane w lodówce od wczoraj — wyjmij je teraz, żeby nie zapomnieć.",
+          "opis": "Najpierw toaleta — za 5 minut ping do ważenia, więc jeszcze nic nie pij. Boxy masz spakowane w lodówce od wczoraj — wyjmij je teraz, żeby nie zapomnieć.",
           "akcja": "suple"
+        },
+        {
+          "czas": "05:35",
+          "tytul": "Waga",
+          "ikona": "⚖️",
+          "ping": true,
+          "akcja": "waga",
+          "opis": "Po toalecie, przed jedzeniem i piciem, w samej bieliźnie. Wpisz wynik w panelu — liczy się średnia z 7 dni, nie pojedynczy wynik."
         },
         {
           "czas": "05:45",
@@ -3590,18 +3566,18 @@
           ]
         },
         {
-          "czas": "22:40",
+          "czas": "22:15",
           "tytul": "Przygotuj się do nocy",
           "ikona": "🤸",
           "ping": true,
-          "opis": "5 minut rozciągania bioder i karku. Ustaw cztery budziki na końce drzemek: 00:20, 02:00, 03:40, 05:20."
+          "opis": "5 minut rozciągania bioder i karku. Ustaw cztery budziki na końce drzemek: 23:59, 01:30, 03:00, 04:30."
         },
         {
-          "czas": "23:00",
-          "tytul": "Drzemka 1 z 4 — do 00:20",
+          "czas": "22:30",
+          "tytul": "Drzemka 1 z 4 — do 23:59",
           "ikona": "😴",
           "ping": true,
-          "opis": "1 h 20 to prawie pełny cykl snu i dlatego wstajesz po niej mniej rozbity niż po czterdziestu minutach. Telefon ekranem w dół."
+          "opis": "Półtorej godziny to pełny cykl snu, dlatego po tej drzemce wstaniesz najmniej rozbity. Telefon ekranem w dół."
         }
       ],
       "makra": {
@@ -3660,28 +3636,28 @@
       "opis_typu": "Wracasz 7:30, śpisz do 13:00. Po wstaniu od razu trening, potem zakupy i gotowanie na 3 dni.",
       "agenda": [
         {
-          "czas": "00:40",
-          "tytul": "Drzemka 2 z 4 — do 02:00",
+          "czas": "00:10",
+          "tytul": "Drzemka 2 z 4 — do 01:30",
           "ikona": "😴",
           "ping": true,
           "nastepny_dzien": true,
           "opis": "Między drzemkami łyk wody. Nie sięgaj po telefon — światło ekranu kosztuje Cię zaśnięcie przy kolejnej."
         },
         {
-          "czas": "02:20",
-          "tytul": "Drzemka 3 z 4 — do 03:40",
+          "czas": "01:40",
+          "tytul": "Drzemka 3 z 4 — do 03:00",
           "ikona": "😴",
           "ping": true,
           "nastepny_dzien": true,
           "opis": "To najcięższa pora doby. Jak nie zaśniesz w 15 minut, po prostu leż z zamkniętymi oczami — to też się liczy."
         },
         {
-          "czas": "04:00",
-          "tytul": "Drzemka 4 z 4 — do 05:20",
+          "czas": "03:10",
+          "tytul": "Drzemka 4 z 4 — do 04:30",
           "ikona": "😴",
           "ping": true,
           "nastepny_dzien": true,
-          "opis": "Ostatnia. Po niej zostaje już tylko zdanie służby."
+          "opis": "Ostatnia. Po niej już nie śpisz: woda, rozrusz się i spokojnie do końca służby."
         },
         {
           "czas": "06:45",
@@ -3689,58 +3665,57 @@
           "ikona": "🏁",
           "ping": true,
           "nastepny_dzien": true,
-          "opis": "Za 15 minut kończysz. Nie kupuj nic po drodze — w domu masz jedzenie, a za chwilę i tak idziesz spać."
+          "opis": "Za 15 minut kończysz. Lista zakupów czeka w panelu — prosto z pracy do Biedronki."
         },
         {
-          "czas": "07:35",
+          "czas": "07:10",
+          "tytul": "ZAKUPY w Biedronce",
+          "ikona": "🛒",
+          "ping": true,
+          "akcja": "zakupy",
+          "opis": "Prosto ze zmiany, zanim pójdziesz spać. Kupujesz tylko to, co jest na liście w panelu — resztę masz w lodówce. Po dobie na nogach łatwo wrzucić do koszyka coś słodkiego, więc trzymaj się listy."
+        },
+        {
+          "czas": "08:00",
           "tytul": "Jesteś w domu",
           "ikona": "🚿",
           "ping": true,
-          "opis": "Prysznic, zasłoń okna. NIE siadaj do telefonu — po dobie na nogach jedno przewijanie kosztuje Cię godzinę snu."
+          "opis": "Zakupy do lodówki, prysznic, zasłoń okna. NIE siadaj do telefonu — po dobie na nogach jedno przewijanie kosztuje Cię godzinę snu."
         },
         {
-          "czas": "07:50",
+          "czas": "08:15",
           "tytul": "Mały posiłek przed snem",
           "ikona": "🥛",
           "ping": true,
           "slot": "sniadanie",
           "opis": "Coś lekkiego i białkowego. Na pusty żołądek gorzej zaśniesz, na pełny obudzisz się rozbity.",
-          "posilek": "Twarożek ze szczypiorkiem + pieczywo",
+          "posilek": "Twarożek z ogórkiem + pieczywo",
           "posilek_id": "q_twarog",
-          "porcja": 1.0,
+          "porcja": 0.9,
           "makra": {
-            "kcal": 965,
-            "bialko": 55,
-            "tluszcz": 19,
-            "wegle": 143
+            "kcal": 941,
+            "bialko": 52,
+            "tluszcz": 18,
+            "wegle": 144
           },
           "skladniki": [
             {
               "nazwa": "Twaróg półtłusty",
-              "ile": "200 g",
-              "g": 200,
-              "kcal": 266,
-              "bialko": 37.4,
-              "tluszcz": 9.4,
-              "wegle": 7.4
+              "ile": "180 g",
+              "g": 180,
+              "kcal": 239,
+              "bialko": 33.7,
+              "tluszcz": 8.5,
+              "wegle": 6.7
             },
             {
               "nazwa": "Śmietana 18%",
-              "ile": "20 ml",
-              "g": 20,
-              "kcal": 37,
+              "ile": "18 ml",
+              "g": 18,
+              "kcal": 33,
               "bialko": 0.5,
-              "tluszcz": 3.6,
-              "wegle": 0.7
-            },
-            {
-              "nazwa": "Szczypiorek",
-              "ile": "2 łyżki (10 g)",
-              "g": 10,
-              "kcal": 3,
-              "bialko": 0.3,
-              "tluszcz": 0.1,
-              "wegle": 0.2
+              "tluszcz": 3.2,
+              "wegle": 0.6
             },
             {
               "nazwa": "Chleb pszenny (zwykły biały)",
@@ -3754,12 +3729,12 @@
             },
             {
               "nazwa": "Ogórek długi",
-              "ile": "90 g",
-              "g": 90,
-              "kcal": 13,
-              "bialko": 0.6,
-              "tluszcz": 0.1,
-              "wegle": 2.6
+              "ile": "150 g",
+              "g": 150,
+              "kcal": 21,
+              "bialko": 1.0,
+              "tluszcz": 0.2,
+              "wegle": 4.3
             },
             {
               "nazwa": "Miód",
@@ -3776,14 +3751,14 @@
           "czas_min": 5,
           "kroki": [
             "Twaróg rozgnieć widelcem w miseczce ze śmietaną — będzie kremowy, a nie suchy.",
-            "Wsyp posiekany szczypiorek, sól, pieprz, wymieszaj.",
-            "Ogórek w plastry. Jeść z chlebem. Do boxa: twarożek do zakręcanego pojemnika, chleb osobno.",
+            "Ogórek pokrój w drobną kostkę i wmieszaj. Sól, pieprz.",
+            "Jeść z chlebem. Do boxa: twarożek do zakręcanego pojemnika, chleb osobno.",
             "Ilości każdego składnika masz w rozpisce — porcja jest dopasowana do Twojego celu na ten dzień.",
             "Do tego dodatek węglowy: chleb pszenny 4 kromki, miód 2 łyżki. Zjedz obok — to paliwo na trening i regenerację, bez niego dzień nie dobija węglowodanów."
           ]
         },
         {
-          "czas": "08:15",
+          "czas": "08:30",
           "tytul": "SEN — najważniejsza rzecz dziś",
           "ikona": "😴",
           "ping": true,
@@ -3791,9 +3766,9 @@
           "opis": "To Twój główny sen po dobie służby. Noc na czterech drzemkach go nie zastąpiła.",
           "budzik": {
             "godzina": "13:00",
-            "minut": 285,
+            "minut": 270,
             "jutro": false,
-            "ile": "4 h 45 min",
+            "ile": "4 h 30 min",
             "typ_docelowy": "PO ZMIANIE"
           }
         },
@@ -3802,8 +3777,16 @@
           "tytul": "Pobudka",
           "ikona": "⏰",
           "ping": true,
-          "opis": "Woda, suple, toaleta. Bez telefonu — dziś zaczynasz od sztangi, nie od ekranu.",
+          "opis": "Toaleta, za 5 minut waga. Potem woda i suple. Bez telefonu — dziś zaczynasz od sztangi, nie od ekranu.",
           "akcja": "suple"
+        },
+        {
+          "czas": "13:05",
+          "tytul": "Waga",
+          "ikona": "⚖️",
+          "ping": true,
+          "akcja": "waga",
+          "opis": "Po toalecie, przed jedzeniem i piciem, w samej bieliźnie. Wpisz wynik w panelu — liczy się średnia z 7 dni, nie pojedynczy wynik."
         },
         {
           "czas": "13:30",
@@ -3822,22 +3805,22 @@
           "opis": "Pierwszy porządny posiłek dnia. Trenowałeś na czczo, więc nie odkładaj go na później.",
           "posilek": "Twaróg z bananem i miodem",
           "posilek_id": "q_twarog_banan",
-          "porcja": 0.8,
+          "porcja": 0.9,
           "makra": {
-            "kcal": 430,
-            "bialko": 31,
-            "tluszcz": 13,
-            "wegle": 49
+            "kcal": 459,
+            "bialko": 34,
+            "tluszcz": 14,
+            "wegle": 50
           },
           "skladniki": [
             {
               "nazwa": "Twaróg półtłusty",
-              "ile": "145 g",
-              "g": 145,
-              "kcal": 193,
-              "bialko": 27.1,
-              "tluszcz": 6.8,
-              "wegle": 5.4
+              "ile": "160 g",
+              "g": 160,
+              "kcal": 213,
+              "bialko": 29.9,
+              "tluszcz": 7.5,
+              "wegle": 5.9
             },
             {
               "nazwa": "Banan",
@@ -3859,21 +3842,21 @@
             },
             {
               "nazwa": "Orzechy / migdały",
-              "ile": "8 g",
-              "g": 8,
-              "kcal": 51,
-              "bialko": 1.5,
-              "tluszcz": 4.6,
-              "wegle": 0.8
+              "ile": "9 g",
+              "g": 9,
+              "kcal": 58,
+              "bialko": 1.7,
+              "tluszcz": 5.1,
+              "wegle": 0.9
             },
             {
               "nazwa": "Mleko 2%",
-              "ile": "40 ml",
-              "g": 40,
-              "kcal": 20,
-              "bialko": 1.3,
-              "tluszcz": 0.8,
-              "wegle": 1.9
+              "ile": "45 ml",
+              "g": 45,
+              "kcal": 22,
+              "bialko": 1.5,
+              "tluszcz": 0.9,
+              "wegle": 2.2
             }
           ],
           "jak": "przepis",
@@ -3891,15 +3874,7 @@
           "ikona": "📊",
           "ping": true,
           "akcja": "podsumowanie",
-          "opis": "Trzy dni za Tobą. Zanim pójdziesz po zakupy, zobacz, co z nich wyszło."
-        },
-        {
-          "czas": "15:30",
-          "tytul": "ZAKUPY na 3 dni",
-          "ikona": "🛒",
-          "ping": true,
-          "akcja": "zakupy",
-          "opis": "Lista jest w panelu — kupujesz tylko to, czego nie ma w lodówce. Trzymaj się listy, nie chodź po sklepie głodny."
+          "opis": "Trzy dni za Tobą. Zanim staniesz do garów, zobacz, co z nich wyszło."
         },
         {
           "czas": "16:30",
@@ -4022,7 +3997,7 @@
           "posilek_id": "q_jajka_kukurydza",
           "porcja": 0.8,
           "makra": {
-            "kcal": 377,
+            "kcal": 374,
             "bialko": 26,
             "tluszcz": 15,
             "wegle": 31
@@ -4065,15 +4040,6 @@
               "wegle": 1.2
             },
             {
-              "nazwa": "Szczypiorek",
-              "ile": "8 g",
-              "g": 8,
-              "kcal": 2,
-              "bialko": 0.2,
-              "tluszcz": 0.1,
-              "wegle": 0.1
-            },
-            {
               "nazwa": "Chleb pszenny (zwykły biały)",
               "ile": "1 kromka (35 g)",
               "g": 35,
@@ -4088,7 +4054,7 @@
           "kroki": [
             "Jajka na twardo (9 min od wrzenia), zalej zimną wodą, obierz i pokrój w kostkę.",
             "Wymieszaj z odsączoną kukurydzą, jogurtem greckim i łyżką musztardy.",
-            "Szczypiorek, sól, pieprz. Do pojemnika, chleb osobno.",
+            "Sól, pieprz, szczypta papryki. Do pojemnika, chleb osobno.",
             "Trzyma się w lodówce 2 dni — możesz zrobić podwójną porcję w dniu gotowania.",
             "Ilości każdego składnika masz w rozpisce — porcja jest dopasowana do Twojego celu na ten dzień."
           ]
@@ -4117,10 +4083,10 @@
         }
       ],
       "makra": {
-        "kcal": 2600,
+        "kcal": 2602,
         "bialko": 160,
         "tluszcz": 85,
-        "wegle": 289
+        "wegle": 291
       },
       "dobitka": 0,
       "dodatek_w": [
@@ -4173,11 +4139,19 @@
       "agenda": [
         {
           "czas": "08:00",
-          "tytul": "Pobudka + waga",
-          "ikona": "⚖️",
+          "tytul": "Pobudka",
+          "ikona": "⏰",
           "ping": true,
           "akcja": "suple",
-          "opis": "Zważ się od razu po wstaniu, przed jedzeniem i piciem. Potem woda, suple, toaleta — i bez telefonu."
+          "opis": "Toaleta, za 5 minut waga. Potem woda i suple — i bez telefonu."
+        },
+        {
+          "czas": "08:05",
+          "tytul": "Waga",
+          "ikona": "⚖️",
+          "ping": true,
+          "akcja": "waga",
+          "opis": "Po toalecie, przed jedzeniem i piciem, w samej bieliźnie. Wpisz wynik w panelu — liczy się średnia z 7 dni, nie pojedynczy wynik."
         },
         {
           "czas": "08:30",
@@ -4632,8 +4606,16 @@
           "tytul": "Pobudka",
           "ikona": "⏰",
           "ping": true,
-          "opis": "Szklanka wody od razu po wstaniu. Boxy masz spakowane w lodówce od wczoraj — wyjmij je teraz, żeby nie zapomnieć.",
+          "opis": "Najpierw toaleta — za 5 minut ping do ważenia, więc jeszcze nic nie pij. Boxy masz spakowane w lodówce od wczoraj — wyjmij je teraz, żeby nie zapomnieć.",
           "akcja": "suple"
+        },
+        {
+          "czas": "05:35",
+          "tytul": "Waga",
+          "ikona": "⚖️",
+          "ping": true,
+          "akcja": "waga",
+          "opis": "Po toalecie, przed jedzeniem i piciem, w samej bieliźnie. Wpisz wynik w panelu — liczy się średnia z 7 dni, nie pojedynczy wynik."
         },
         {
           "czas": "05:45",
@@ -4989,18 +4971,18 @@
           ]
         },
         {
-          "czas": "22:40",
+          "czas": "22:15",
           "tytul": "Przygotuj się do nocy",
           "ikona": "🤸",
           "ping": true,
-          "opis": "5 minut rozciągania bioder i karku. Ustaw cztery budziki na końce drzemek: 00:20, 02:00, 03:40, 05:20."
+          "opis": "5 minut rozciągania bioder i karku. Ustaw cztery budziki na końce drzemek: 23:59, 01:30, 03:00, 04:30."
         },
         {
-          "czas": "23:00",
-          "tytul": "Drzemka 1 z 4 — do 00:20",
+          "czas": "22:30",
+          "tytul": "Drzemka 1 z 4 — do 23:59",
           "ikona": "😴",
           "ping": true,
-          "opis": "1 h 20 to prawie pełny cykl snu i dlatego wstajesz po niej mniej rozbity niż po czterdziestu minutach. Telefon ekranem w dół."
+          "opis": "Półtorej godziny to pełny cykl snu, dlatego po tej drzemce wstaniesz najmniej rozbity. Telefon ekranem w dół."
         }
       ],
       "makra": {
@@ -5059,28 +5041,28 @@
       "opis_typu": "Wracasz 7:30, śpisz do 13:00. Po wstaniu od razu trening, potem zakupy i gotowanie na 3 dni.",
       "agenda": [
         {
-          "czas": "00:40",
-          "tytul": "Drzemka 2 z 4 — do 02:00",
+          "czas": "00:10",
+          "tytul": "Drzemka 2 z 4 — do 01:30",
           "ikona": "😴",
           "ping": true,
           "nastepny_dzien": true,
           "opis": "Między drzemkami łyk wody. Nie sięgaj po telefon — światło ekranu kosztuje Cię zaśnięcie przy kolejnej."
         },
         {
-          "czas": "02:20",
-          "tytul": "Drzemka 3 z 4 — do 03:40",
+          "czas": "01:40",
+          "tytul": "Drzemka 3 z 4 — do 03:00",
           "ikona": "😴",
           "ping": true,
           "nastepny_dzien": true,
           "opis": "To najcięższa pora doby. Jak nie zaśniesz w 15 minut, po prostu leż z zamkniętymi oczami — to też się liczy."
         },
         {
-          "czas": "04:00",
-          "tytul": "Drzemka 4 z 4 — do 05:20",
+          "czas": "03:10",
+          "tytul": "Drzemka 4 z 4 — do 04:30",
           "ikona": "😴",
           "ping": true,
           "nastepny_dzien": true,
-          "opis": "Ostatnia. Po niej zostaje już tylko zdanie służby."
+          "opis": "Ostatnia. Po niej już nie śpisz: woda, rozrusz się i spokojnie do końca służby."
         },
         {
           "czas": "06:45",
@@ -5088,17 +5070,25 @@
           "ikona": "🏁",
           "ping": true,
           "nastepny_dzien": true,
-          "opis": "Za 15 minut kończysz. Nie kupuj nic po drodze — w domu masz jedzenie, a za chwilę i tak idziesz spać."
+          "opis": "Za 15 minut kończysz. Lista zakupów czeka w panelu — prosto z pracy do Biedronki."
         },
         {
-          "czas": "07:35",
+          "czas": "07:10",
+          "tytul": "ZAKUPY w Biedronce",
+          "ikona": "🛒",
+          "ping": true,
+          "akcja": "zakupy",
+          "opis": "Prosto ze zmiany, zanim pójdziesz spać. Kupujesz tylko to, co jest na liście w panelu — resztę masz w lodówce. Po dobie na nogach łatwo wrzucić do koszyka coś słodkiego, więc trzymaj się listy."
+        },
+        {
+          "czas": "08:00",
           "tytul": "Jesteś w domu",
           "ikona": "🚿",
           "ping": true,
-          "opis": "Prysznic, zasłoń okna. NIE siadaj do telefonu — po dobie na nogach jedno przewijanie kosztuje Cię godzinę snu."
+          "opis": "Zakupy do lodówki, prysznic, zasłoń okna. NIE siadaj do telefonu — po dobie na nogach jedno przewijanie kosztuje Cię godzinę snu."
         },
         {
-          "czas": "07:50",
+          "czas": "08:15",
           "tytul": "Mały posiłek przed snem",
           "ikona": "🥛",
           "ping": true,
@@ -5201,7 +5191,7 @@
           ]
         },
         {
-          "czas": "08:15",
+          "czas": "08:30",
           "tytul": "SEN — najważniejsza rzecz dziś",
           "ikona": "😴",
           "ping": true,
@@ -5209,9 +5199,9 @@
           "opis": "To Twój główny sen po dobie służby. Noc na czterech drzemkach go nie zastąpiła.",
           "budzik": {
             "godzina": "13:00",
-            "minut": 285,
+            "minut": 270,
             "jutro": false,
-            "ile": "4 h 45 min",
+            "ile": "4 h 30 min",
             "typ_docelowy": "PO ZMIANIE"
           }
         },
@@ -5220,8 +5210,16 @@
           "tytul": "Pobudka",
           "ikona": "⏰",
           "ping": true,
-          "opis": "Woda, suple, toaleta. Bez telefonu — dziś zaczynasz od sztangi, nie od ekranu.",
+          "opis": "Toaleta, za 5 minut waga. Potem woda i suple. Bez telefonu — dziś zaczynasz od sztangi, nie od ekranu.",
           "akcja": "suple"
+        },
+        {
+          "czas": "13:05",
+          "tytul": "Waga",
+          "ikona": "⚖️",
+          "ping": true,
+          "akcja": "waga",
+          "opis": "Po toalecie, przed jedzeniem i piciem, w samej bieliźnie. Wpisz wynik w panelu — liczy się średnia z 7 dni, nie pojedynczy wynik."
         },
         {
           "czas": "13:30",
@@ -5300,15 +5298,7 @@
           "ikona": "📊",
           "ping": true,
           "akcja": "podsumowanie",
-          "opis": "Trzy dni za Tobą. Zanim pójdziesz po zakupy, zobacz, co z nich wyszło."
-        },
-        {
-          "czas": "15:30",
-          "tytul": "ZAKUPY na 3 dni",
-          "ikona": "🛒",
-          "ping": true,
-          "akcja": "zakupy",
-          "opis": "Lista jest w panelu — kupujesz tylko to, czego nie ma w lodówce. Trzymaj się listy, nie chodź po sklepie głodny."
+          "opis": "Trzy dni za Tobą. Zanim staniesz do garów, zobacz, co z nich wyszło."
         },
         {
           "czas": "16:30",
@@ -5336,7 +5326,7 @@
           },
           "skladniki": [
             {
-              "nazwa": "Wołowina na gulasz (łopatka)",
+              "nazwa": "Wołowina z łopatki (w Biedronce: stek wołowy z łopatki)",
               "ile": "200 g",
               "g": 200,
               "kcal": 320,
@@ -5598,11 +5588,19 @@
       "agenda": [
         {
           "czas": "08:00",
-          "tytul": "Pobudka + waga",
-          "ikona": "⚖️",
+          "tytul": "Pobudka",
+          "ikona": "⏰",
           "ping": true,
           "akcja": "suple",
-          "opis": "Zważ się od razu po wstaniu, przed jedzeniem i piciem. Potem woda, suple, toaleta — i bez telefonu."
+          "opis": "Toaleta, za 5 minut waga. Potem woda i suple — i bez telefonu."
+        },
+        {
+          "czas": "08:05",
+          "tytul": "Waga",
+          "ikona": "⚖️",
+          "ping": true,
+          "akcja": "waga",
+          "opis": "Po toalecie, przed jedzeniem i piciem, w samej bieliźnie. Wpisz wynik w panelu — liczy się średnia z 7 dni, nie pojedynczy wynik."
         },
         {
           "czas": "08:30",
@@ -5776,7 +5774,7 @@
           },
           "skladniki": [
             {
-              "nazwa": "Wołowina na gulasz (łopatka)",
+              "nazwa": "Wołowina z łopatki (w Biedronce: stek wołowy z łopatki)",
               "ile": "200 g",
               "g": 200,
               "kcal": 320,
@@ -6018,8 +6016,16 @@
           "tytul": "Pobudka",
           "ikona": "⏰",
           "ping": true,
-          "opis": "Szklanka wody od razu po wstaniu. Boxy masz spakowane w lodówce od wczoraj — wyjmij je teraz, żeby nie zapomnieć.",
+          "opis": "Najpierw toaleta — za 5 minut ping do ważenia, więc jeszcze nic nie pij. Boxy masz spakowane w lodówce od wczoraj — wyjmij je teraz, żeby nie zapomnieć.",
           "akcja": "suple"
+        },
+        {
+          "czas": "05:35",
+          "tytul": "Waga",
+          "ikona": "⚖️",
+          "ping": true,
+          "akcja": "waga",
+          "opis": "Po toalecie, przed jedzeniem i piciem, w samej bieliźnie. Wpisz wynik w panelu — liczy się średnia z 7 dni, nie pojedynczy wynik."
         },
         {
           "czas": "05:45",
@@ -6225,7 +6231,7 @@
           },
           "skladniki": [
             {
-              "nazwa": "Wołowina na gulasz (łopatka)",
+              "nazwa": "Wołowina z łopatki (w Biedronce: stek wołowy z łopatki)",
               "ile": "200 g",
               "g": 200,
               "kcal": 320,
@@ -6323,7 +6329,7 @@
           "posilek_id": "q_jajka_kukurydza",
           "porcja": 0.9,
           "makra": {
-            "kcal": 468,
+            "kcal": 465,
             "bialko": 34,
             "tluszcz": 20,
             "wegle": 33
@@ -6366,15 +6372,6 @@
               "wegle": 1.2
             },
             {
-              "nazwa": "Szczypiorek",
-              "ile": "2 łyżki (10 g)",
-              "g": 10,
-              "kcal": 3,
-              "bialko": 0.3,
-              "tluszcz": 0.1,
-              "wegle": 0.2
-            },
-            {
               "nazwa": "Chleb pszenny (zwykły biały)",
               "ile": "1 kromka (35 g)",
               "g": 35,
@@ -6389,28 +6386,28 @@
           "kroki": [
             "Jajka na twardo (9 min od wrzenia), zalej zimną wodą, obierz i pokrój w kostkę.",
             "Wymieszaj z odsączoną kukurydzą, jogurtem greckim i łyżką musztardy.",
-            "Szczypiorek, sól, pieprz. Do pojemnika, chleb osobno.",
+            "Sól, pieprz, szczypta papryki. Do pojemnika, chleb osobno.",
             "Trzyma się w lodówce 2 dni — możesz zrobić podwójną porcję w dniu gotowania.",
             "Ilości każdego składnika masz w rozpisce — porcja jest dopasowana do Twojego celu na ten dzień."
           ]
         },
         {
-          "czas": "22:40",
+          "czas": "22:15",
           "tytul": "Przygotuj się do nocy",
           "ikona": "🤸",
           "ping": true,
-          "opis": "5 minut rozciągania bioder i karku. Ustaw cztery budziki na końce drzemek: 00:20, 02:00, 03:40, 05:20."
+          "opis": "5 minut rozciągania bioder i karku. Ustaw cztery budziki na końce drzemek: 23:59, 01:30, 03:00, 04:30."
         },
         {
-          "czas": "23:00",
-          "tytul": "Drzemka 1 z 4 — do 00:20",
+          "czas": "22:30",
+          "tytul": "Drzemka 1 z 4 — do 23:59",
           "ikona": "😴",
           "ping": true,
-          "opis": "1 h 20 to prawie pełny cykl snu i dlatego wstajesz po niej mniej rozbity niż po czterdziestu minutach. Telefon ekranem w dół."
+          "opis": "Półtorej godziny to pełny cykl snu, dlatego po tej drzemce wstaniesz najmniej rozbity. Telefon ekranem w dół."
         }
       ],
       "makra": {
-        "kcal": 2602,
+        "kcal": 2599,
         "bialko": 150,
         "tluszcz": 88,
         "wegle": 295
@@ -6465,28 +6462,28 @@
       "opis_typu": "Wracasz 7:30, śpisz do 13:00. Po wstaniu od razu trening, potem zakupy i gotowanie na 3 dni.",
       "agenda": [
         {
-          "czas": "00:40",
-          "tytul": "Drzemka 2 z 4 — do 02:00",
+          "czas": "00:10",
+          "tytul": "Drzemka 2 z 4 — do 01:30",
           "ikona": "😴",
           "ping": true,
           "nastepny_dzien": true,
           "opis": "Między drzemkami łyk wody. Nie sięgaj po telefon — światło ekranu kosztuje Cię zaśnięcie przy kolejnej."
         },
         {
-          "czas": "02:20",
-          "tytul": "Drzemka 3 z 4 — do 03:40",
+          "czas": "01:40",
+          "tytul": "Drzemka 3 z 4 — do 03:00",
           "ikona": "😴",
           "ping": true,
           "nastepny_dzien": true,
           "opis": "To najcięższa pora doby. Jak nie zaśniesz w 15 minut, po prostu leż z zamkniętymi oczami — to też się liczy."
         },
         {
-          "czas": "04:00",
-          "tytul": "Drzemka 4 z 4 — do 05:20",
+          "czas": "03:10",
+          "tytul": "Drzemka 4 z 4 — do 04:30",
           "ikona": "😴",
           "ping": true,
           "nastepny_dzien": true,
-          "opis": "Ostatnia. Po niej zostaje już tylko zdanie służby."
+          "opis": "Ostatnia. Po niej już nie śpisz: woda, rozrusz się i spokojnie do końca służby."
         },
         {
           "czas": "06:45",
@@ -6494,27 +6491,35 @@
           "ikona": "🏁",
           "ping": true,
           "nastepny_dzien": true,
-          "opis": "Za 15 minut kończysz. Nie kupuj nic po drodze — w domu masz jedzenie, a za chwilę i tak idziesz spać."
+          "opis": "Za 15 minut kończysz. Lista zakupów czeka w panelu — prosto z pracy do Biedronki."
         },
         {
-          "czas": "07:35",
+          "czas": "07:10",
+          "tytul": "ZAKUPY w Biedronce",
+          "ikona": "🛒",
+          "ping": true,
+          "akcja": "zakupy",
+          "opis": "Prosto ze zmiany, zanim pójdziesz spać. Kupujesz tylko to, co jest na liście w panelu — resztę masz w lodówce. Po dobie na nogach łatwo wrzucić do koszyka coś słodkiego, więc trzymaj się listy."
+        },
+        {
+          "czas": "08:00",
           "tytul": "Jesteś w domu",
           "ikona": "🚿",
           "ping": true,
-          "opis": "Prysznic, zasłoń okna. NIE siadaj do telefonu — po dobie na nogach jedno przewijanie kosztuje Cię godzinę snu."
+          "opis": "Zakupy do lodówki, prysznic, zasłoń okna. NIE siadaj do telefonu — po dobie na nogach jedno przewijanie kosztuje Cię godzinę snu."
         },
         {
-          "czas": "07:50",
+          "czas": "08:15",
           "tytul": "Mały posiłek przed snem",
           "ikona": "🥛",
           "ping": true,
           "slot": "sniadanie",
           "opis": "Coś lekkiego i białkowego. Na pusty żołądek gorzej zaśniesz, na pełny obudzisz się rozbity.",
-          "posilek": "Twarożek ze szczypiorkiem + pieczywo",
+          "posilek": "Twarożek z ogórkiem + pieczywo",
           "posilek_id": "q_twarog",
           "porcja": 0.9,
           "makra": {
-            "kcal": 944,
+            "kcal": 941,
             "bialko": 52,
             "tluszcz": 18,
             "wegle": 144
@@ -6537,15 +6542,6 @@
               "bialko": 0.5,
               "tluszcz": 3.2,
               "wegle": 0.6
-            },
-            {
-              "nazwa": "Szczypiorek",
-              "ile": "2 łyżki (10 g)",
-              "g": 10,
-              "kcal": 3,
-              "bialko": 0.3,
-              "tluszcz": 0.1,
-              "wegle": 0.2
             },
             {
               "nazwa": "Chleb pszenny (zwykły biały)",
@@ -6581,14 +6577,14 @@
           "czas_min": 5,
           "kroki": [
             "Twaróg rozgnieć widelcem w miseczce ze śmietaną — będzie kremowy, a nie suchy.",
-            "Wsyp posiekany szczypiorek, sól, pieprz, wymieszaj.",
-            "Ogórek w plastry. Jeść z chlebem. Do boxa: twarożek do zakręcanego pojemnika, chleb osobno.",
+            "Ogórek pokrój w drobną kostkę i wmieszaj. Sól, pieprz.",
+            "Jeść z chlebem. Do boxa: twarożek do zakręcanego pojemnika, chleb osobno.",
             "Ilości każdego składnika masz w rozpisce — porcja jest dopasowana do Twojego celu na ten dzień.",
             "Do tego dodatek węglowy: chleb pszenny 4 kromki, miód 2 łyżki. Zjedz obok — to paliwo na trening i regenerację, bez niego dzień nie dobija węglowodanów."
           ]
         },
         {
-          "czas": "08:15",
+          "czas": "08:30",
           "tytul": "SEN — najważniejsza rzecz dziś",
           "ikona": "😴",
           "ping": true,
@@ -6596,9 +6592,9 @@
           "opis": "To Twój główny sen po dobie służby. Noc na czterech drzemkach go nie zastąpiła.",
           "budzik": {
             "godzina": "13:00",
-            "minut": 285,
+            "minut": 270,
             "jutro": false,
-            "ile": "4 h 45 min",
+            "ile": "4 h 30 min",
             "typ_docelowy": "PO ZMIANIE"
           }
         },
@@ -6607,8 +6603,16 @@
           "tytul": "Pobudka",
           "ikona": "⏰",
           "ping": true,
-          "opis": "Woda, suple, toaleta. Bez telefonu — dziś zaczynasz od sztangi, nie od ekranu.",
+          "opis": "Toaleta, za 5 minut waga. Potem woda i suple. Bez telefonu — dziś zaczynasz od sztangi, nie od ekranu.",
           "akcja": "suple"
+        },
+        {
+          "czas": "13:05",
+          "tytul": "Waga",
+          "ikona": "⚖️",
+          "ping": true,
+          "akcja": "waga",
+          "opis": "Po toalecie, przed jedzeniem i piciem, w samej bieliźnie. Wpisz wynik w panelu — liczy się średnia z 7 dni, nie pojedynczy wynik."
         },
         {
           "czas": "13:30",
@@ -6672,7 +6676,7 @@
               "wegle": 1.1
             },
             {
-              "nazwa": "Skyr pitny (butelka 330 ml)",
+              "nazwa": "Skyr pitny (butelka, np. Fruvita albo Piątnica)",
               "ile": "165 ml",
               "g": 165,
               "kcal": 132,
@@ -6697,15 +6701,7 @@
           "ikona": "📊",
           "ping": true,
           "akcja": "podsumowanie",
-          "opis": "Trzy dni za Tobą. Zanim pójdziesz po zakupy, zobacz, co z nich wyszło."
-        },
-        {
-          "czas": "15:30",
-          "tytul": "ZAKUPY na 3 dni",
-          "ikona": "🛒",
-          "ping": true,
-          "akcja": "zakupy",
-          "opis": "Lista jest w panelu — kupujesz tylko to, czego nie ma w lodówce. Trzymaj się listy, nie chodź po sklepie głodny."
+          "opis": "Trzy dni za Tobą. Zanim staniesz do garów, zobacz, co z nich wyszło."
         },
         {
           "czas": "16:30",
@@ -6733,7 +6729,7 @@
           },
           "skladniki": [
             {
-              "nazwa": "Wołowina na gulasz (łopatka)",
+              "nazwa": "Wołowina z łopatki (w Biedronce: stek wołowy z łopatki)",
               "ile": "200 g",
               "g": 200,
               "kcal": 320,
@@ -6896,7 +6892,7 @@
         }
       ],
       "makra": {
-        "kcal": 2600,
+        "kcal": 2597,
         "bialko": 155,
         "tluszcz": 86,
         "wegle": 297
@@ -6987,11 +6983,19 @@
       "agenda": [
         {
           "czas": "08:00",
-          "tytul": "Pobudka + waga",
-          "ikona": "⚖️",
+          "tytul": "Pobudka",
+          "ikona": "⏰",
           "ping": true,
           "akcja": "suple",
-          "opis": "Zważ się od razu po wstaniu, przed jedzeniem i piciem. Potem woda, suple, toaleta — i bez telefonu."
+          "opis": "Toaleta, za 5 minut waga. Potem woda i suple — i bez telefonu."
+        },
+        {
+          "czas": "08:05",
+          "tytul": "Waga",
+          "ikona": "⚖️",
+          "ping": true,
+          "akcja": "waga",
+          "opis": "Po toalecie, przed jedzeniem i piciem, w samej bieliźnie. Wpisz wynik w panelu — liczy się średnia z 7 dni, nie pojedynczy wynik."
         },
         {
           "czas": "08:30",
@@ -7046,7 +7050,7 @@
               "wegle": 24.8
             },
             {
-              "nazwa": "Odżywka białkowa WPC 80 (czekoladowa)",
+              "nazwa": "Odżywka białkowa WPC 80 (czekoladowa) — zapas, nie z Biedronki",
               "ile": "20 g",
               "g": 20,
               "kcal": 75,
@@ -7152,7 +7156,7 @@
           "posilek_id": "q_jajka_kukurydza",
           "porcja": 0.8,
           "makra": {
-            "kcal": 377,
+            "kcal": 374,
             "bialko": 26,
             "tluszcz": 15,
             "wegle": 31
@@ -7195,15 +7199,6 @@
               "wegle": 1.2
             },
             {
-              "nazwa": "Szczypiorek",
-              "ile": "8 g",
-              "g": 8,
-              "kcal": 2,
-              "bialko": 0.2,
-              "tluszcz": 0.1,
-              "wegle": 0.1
-            },
-            {
               "nazwa": "Chleb pszenny (zwykły biały)",
               "ile": "1 kromka (35 g)",
               "g": 35,
@@ -7218,7 +7213,7 @@
           "kroki": [
             "Jajka na twardo (9 min od wrzenia), zalej zimną wodą, obierz i pokrój w kostkę.",
             "Wymieszaj z odsączoną kukurydzą, jogurtem greckim i łyżką musztardy.",
-            "Szczypiorek, sól, pieprz. Do pojemnika, chleb osobno.",
+            "Sól, pieprz, szczypta papryki. Do pojemnika, chleb osobno.",
             "Trzyma się w lodówce 2 dni — możesz zrobić podwójną porcję w dniu gotowania.",
             "Ilości każdego składnika masz w rozpisce — porcja jest dopasowana do Twojego celu na ten dzień."
           ]
@@ -7241,7 +7236,7 @@
           },
           "skladniki": [
             {
-              "nazwa": "Wołowina na gulasz (łopatka)",
+              "nazwa": "Wołowina z łopatki (w Biedronce: stek wołowy z łopatki)",
               "ile": "200 g",
               "g": 200,
               "kcal": 320,
@@ -7424,7 +7419,7 @@
         }
       ],
       "makra": {
-        "kcal": 2599,
+        "kcal": 2596,
         "bialko": 166,
         "tluszcz": 89,
         "wegle": 275
@@ -7526,8 +7521,16 @@
           "tytul": "Pobudka",
           "ikona": "⏰",
           "ping": true,
-          "opis": "Szklanka wody od razu po wstaniu. Boxy masz spakowane w lodówce od wczoraj — wyjmij je teraz, żeby nie zapomnieć.",
+          "opis": "Najpierw toaleta — za 5 minut ping do ważenia, więc jeszcze nic nie pij. Boxy masz spakowane w lodówce od wczoraj — wyjmij je teraz, żeby nie zapomnieć.",
           "akcja": "suple"
+        },
+        {
+          "czas": "05:35",
+          "tytul": "Waga",
+          "ikona": "⚖️",
+          "ping": true,
+          "akcja": "waga",
+          "opis": "Po toalecie, przed jedzeniem i piciem, w samej bieliźnie. Wpisz wynik w panelu — liczy się średnia z 7 dni, nie pojedynczy wynik."
         },
         {
           "czas": "05:45",
@@ -7583,7 +7586,7 @@
               "wegle": 1.1
             },
             {
-              "nazwa": "Skyr pitny (butelka 330 ml)",
+              "nazwa": "Skyr pitny (butelka, np. Fruvita albo Piątnica)",
               "ile": "165 ml",
               "g": 165,
               "kcal": 132,
@@ -7744,7 +7747,7 @@
           },
           "skladniki": [
             {
-              "nazwa": "Wołowina na gulasz (łopatka)",
+              "nazwa": "Wołowina z łopatki (w Biedronce: stek wołowy z łopatki)",
               "ile": "200 g",
               "g": 200,
               "kcal": 320,
@@ -7895,18 +7898,18 @@
           ]
         },
         {
-          "czas": "22:40",
+          "czas": "22:15",
           "tytul": "Przygotuj się do nocy",
           "ikona": "🤸",
           "ping": true,
-          "opis": "5 minut rozciągania bioder i karku. Ustaw cztery budziki na końce drzemek: 00:20, 02:00, 03:40, 05:20."
+          "opis": "5 minut rozciągania bioder i karku. Ustaw cztery budziki na końce drzemek: 23:59, 01:30, 03:00, 04:30."
         },
         {
-          "czas": "23:00",
-          "tytul": "Drzemka 1 z 4 — do 00:20",
+          "czas": "22:30",
+          "tytul": "Drzemka 1 z 4 — do 23:59",
           "ikona": "😴",
           "ping": true,
-          "opis": "1 h 20 to prawie pełny cykl snu i dlatego wstajesz po niej mniej rozbity niż po czterdziestu minutach. Telefon ekranem w dół."
+          "opis": "Półtorej godziny to pełny cykl snu, dlatego po tej drzemce wstaniesz najmniej rozbity. Telefon ekranem w dół."
         }
       ],
       "makra": {
@@ -7970,28 +7973,28 @@
       "opis_typu": "Wracasz 7:30, śpisz do 13:00. Po wstaniu od razu trening, potem zakupy i gotowanie na 3 dni.",
       "agenda": [
         {
-          "czas": "00:40",
-          "tytul": "Drzemka 2 z 4 — do 02:00",
+          "czas": "00:10",
+          "tytul": "Drzemka 2 z 4 — do 01:30",
           "ikona": "😴",
           "ping": true,
           "nastepny_dzien": true,
           "opis": "Między drzemkami łyk wody. Nie sięgaj po telefon — światło ekranu kosztuje Cię zaśnięcie przy kolejnej."
         },
         {
-          "czas": "02:20",
-          "tytul": "Drzemka 3 z 4 — do 03:40",
+          "czas": "01:40",
+          "tytul": "Drzemka 3 z 4 — do 03:00",
           "ikona": "😴",
           "ping": true,
           "nastepny_dzien": true,
           "opis": "To najcięższa pora doby. Jak nie zaśniesz w 15 minut, po prostu leż z zamkniętymi oczami — to też się liczy."
         },
         {
-          "czas": "04:00",
-          "tytul": "Drzemka 4 z 4 — do 05:20",
+          "czas": "03:10",
+          "tytul": "Drzemka 4 z 4 — do 04:30",
           "ikona": "😴",
           "ping": true,
           "nastepny_dzien": true,
-          "opis": "Ostatnia. Po niej zostaje już tylko zdanie służby."
+          "opis": "Ostatnia. Po niej już nie śpisz: woda, rozrusz się i spokojnie do końca służby."
         },
         {
           "czas": "06:45",
@@ -7999,17 +8002,25 @@
           "ikona": "🏁",
           "ping": true,
           "nastepny_dzien": true,
-          "opis": "Za 15 minut kończysz. Nie kupuj nic po drodze — w domu masz jedzenie, a za chwilę i tak idziesz spać."
+          "opis": "Za 15 minut kończysz. Lista zakupów czeka w panelu — prosto z pracy do Biedronki."
         },
         {
-          "czas": "07:35",
+          "czas": "07:10",
+          "tytul": "ZAKUPY w Biedronce",
+          "ikona": "🛒",
+          "ping": true,
+          "akcja": "zakupy",
+          "opis": "Prosto ze zmiany, zanim pójdziesz spać. Kupujesz tylko to, co jest na liście w panelu — resztę masz w lodówce. Po dobie na nogach łatwo wrzucić do koszyka coś słodkiego, więc trzymaj się listy."
+        },
+        {
+          "czas": "08:00",
           "tytul": "Jesteś w domu",
           "ikona": "🚿",
           "ping": true,
-          "opis": "Prysznic, zasłoń okna. NIE siadaj do telefonu — po dobie na nogach jedno przewijanie kosztuje Cię godzinę snu."
+          "opis": "Zakupy do lodówki, prysznic, zasłoń okna. NIE siadaj do telefonu — po dobie na nogach jedno przewijanie kosztuje Cię godzinę snu."
         },
         {
-          "czas": "07:50",
+          "czas": "08:15",
           "tytul": "Mały posiłek przed snem",
           "ikona": "🥛",
           "ping": true,
@@ -8095,7 +8106,7 @@
           ]
         },
         {
-          "czas": "08:15",
+          "czas": "08:30",
           "tytul": "SEN — najważniejsza rzecz dziś",
           "ikona": "😴",
           "ping": true,
@@ -8103,9 +8114,9 @@
           "opis": "To Twój główny sen po dobie służby. Noc na czterech drzemkach go nie zastąpiła.",
           "budzik": {
             "godzina": "13:00",
-            "minut": 285,
+            "minut": 270,
             "jutro": false,
-            "ile": "4 h 45 min",
+            "ile": "4 h 30 min",
             "typ_docelowy": "PO ZMIANIE"
           }
         },
@@ -8114,8 +8125,16 @@
           "tytul": "Pobudka",
           "ikona": "⏰",
           "ping": true,
-          "opis": "Woda, suple, toaleta. Bez telefonu — dziś zaczynasz od sztangi, nie od ekranu.",
+          "opis": "Toaleta, za 5 minut waga. Potem woda i suple. Bez telefonu — dziś zaczynasz od sztangi, nie od ekranu.",
           "akcja": "suple"
+        },
+        {
+          "czas": "13:05",
+          "tytul": "Waga",
+          "ikona": "⚖️",
+          "ping": true,
+          "akcja": "waga",
+          "opis": "Po toalecie, przed jedzeniem i piciem, w samej bieliźnie. Wpisz wynik w panelu — liczy się średnia z 7 dni, nie pojedynczy wynik."
         },
         {
           "czas": "13:30",
@@ -8213,15 +8232,7 @@
           "ikona": "📊",
           "ping": true,
           "akcja": "podsumowanie",
-          "opis": "Trzy dni za Tobą. Zanim pójdziesz po zakupy, zobacz, co z nich wyszło."
-        },
-        {
-          "czas": "15:30",
-          "tytul": "ZAKUPY na 3 dni",
-          "ikona": "🛒",
-          "ping": true,
-          "akcja": "zakupy",
-          "opis": "Lista jest w panelu — kupujesz tylko to, czego nie ma w lodówce. Trzymaj się listy, nie chodź po sklepie głodny."
+          "opis": "Trzy dni za Tobą. Zanim staniesz do garów, zobacz, co z nich wyszło."
         },
         {
           "czas": "16:30",
@@ -8249,7 +8260,7 @@
           },
           "skladniki": [
             {
-              "nazwa": "Wołowina na gulasz (łopatka)",
+              "nazwa": "Wołowina z łopatki (w Biedronce: stek wołowy z łopatki)",
               "ile": "200 g",
               "g": 200,
               "kcal": 320,
@@ -8525,11 +8536,19 @@
       "agenda": [
         {
           "czas": "08:00",
-          "tytul": "Pobudka + waga",
-          "ikona": "⚖️",
+          "tytul": "Pobudka",
+          "ikona": "⏰",
           "ping": true,
           "akcja": "suple",
-          "opis": "Zważ się od razu po wstaniu, przed jedzeniem i piciem. Potem woda, suple, toaleta — i bez telefonu."
+          "opis": "Toaleta, za 5 minut waga. Potem woda i suple — i bez telefonu."
+        },
+        {
+          "czas": "08:05",
+          "tytul": "Waga",
+          "ikona": "⚖️",
+          "ping": true,
+          "akcja": "waga",
+          "opis": "Po toalecie, przed jedzeniem i piciem, w samej bieliźnie. Wpisz wynik w panelu — liczy się średnia z 7 dni, nie pojedynczy wynik."
         },
         {
           "czas": "08:30",
@@ -8584,7 +8603,7 @@
               "wegle": 24.8
             },
             {
-              "nazwa": "Odżywka białkowa WPC 80 (czekoladowa)",
+              "nazwa": "Odżywka białkowa WPC 80 (czekoladowa) — zapas, nie z Biedronki",
               "ile": "20 g",
               "g": 20,
               "kcal": 75,
@@ -8778,7 +8797,7 @@
           },
           "skladniki": [
             {
-              "nazwa": "Wołowina na gulasz (łopatka)",
+              "nazwa": "Wołowina z łopatki (w Biedronce: stek wołowy z łopatki)",
               "ile": "200 g",
               "g": 200,
               "kcal": 320,
@@ -9064,8 +9083,16 @@
           "tytul": "Pobudka",
           "ikona": "⏰",
           "ping": true,
-          "opis": "Szklanka wody od razu po wstaniu. Boxy masz spakowane w lodówce od wczoraj — wyjmij je teraz, żeby nie zapomnieć.",
+          "opis": "Najpierw toaleta — za 5 minut ping do ważenia, więc jeszcze nic nie pij. Boxy masz spakowane w lodówce od wczoraj — wyjmij je teraz, żeby nie zapomnieć.",
           "akcja": "suple"
+        },
+        {
+          "czas": "05:35",
+          "tytul": "Waga",
+          "ikona": "⚖️",
+          "ping": true,
+          "akcja": "waga",
+          "opis": "Po toalecie, przed jedzeniem i piciem, w samej bieliźnie. Wpisz wynik w panelu — liczy się średnia z 7 dni, nie pojedynczy wynik."
         },
         {
           "czas": "05:45",
@@ -9121,7 +9148,7 @@
               "wegle": 1.3
             },
             {
-              "nazwa": "Skyr pitny (butelka 330 ml)",
+              "nazwa": "Skyr pitny (butelka, np. Fruvita albo Piątnica)",
               "ile": "165 ml",
               "g": 165,
               "kcal": 132,
@@ -9282,7 +9309,7 @@
           },
           "skladniki": [
             {
-              "nazwa": "Wołowina na gulasz (łopatka)",
+              "nazwa": "Wołowina z łopatki (w Biedronce: stek wołowy z łopatki)",
               "ile": "200 g",
               "g": 200,
               "kcal": 320,
@@ -9371,7 +9398,7 @@
           "posilek_id": "q_jajka_kukurydza",
           "porcja": 0.8,
           "makra": {
-            "kcal": 377,
+            "kcal": 374,
             "bialko": 26,
             "tluszcz": 15,
             "wegle": 31
@@ -9414,15 +9441,6 @@
               "wegle": 1.2
             },
             {
-              "nazwa": "Szczypiorek",
-              "ile": "8 g",
-              "g": 8,
-              "kcal": 2,
-              "bialko": 0.2,
-              "tluszcz": 0.1,
-              "wegle": 0.1
-            },
-            {
               "nazwa": "Chleb pszenny (zwykły biały)",
               "ile": "1 kromka (35 g)",
               "g": 35,
@@ -9437,28 +9455,28 @@
           "kroki": [
             "Jajka na twardo (9 min od wrzenia), zalej zimną wodą, obierz i pokrój w kostkę.",
             "Wymieszaj z odsączoną kukurydzą, jogurtem greckim i łyżką musztardy.",
-            "Szczypiorek, sól, pieprz. Do pojemnika, chleb osobno.",
+            "Sól, pieprz, szczypta papryki. Do pojemnika, chleb osobno.",
             "Trzyma się w lodówce 2 dni — możesz zrobić podwójną porcję w dniu gotowania.",
             "Ilości każdego składnika masz w rozpisce — porcja jest dopasowana do Twojego celu na ten dzień."
           ]
         },
         {
-          "czas": "22:40",
+          "czas": "22:15",
           "tytul": "Przygotuj się do nocy",
           "ikona": "🤸",
           "ping": true,
-          "opis": "5 minut rozciągania bioder i karku. Ustaw cztery budziki na końce drzemek: 00:20, 02:00, 03:40, 05:20."
+          "opis": "5 minut rozciągania bioder i karku. Ustaw cztery budziki na końce drzemek: 23:59, 01:30, 03:00, 04:30."
         },
         {
-          "czas": "23:00",
-          "tytul": "Drzemka 1 z 4 — do 00:20",
+          "czas": "22:30",
+          "tytul": "Drzemka 1 z 4 — do 23:59",
           "ikona": "😴",
           "ping": true,
-          "opis": "1 h 20 to prawie pełny cykl snu i dlatego wstajesz po niej mniej rozbity niż po czterdziestu minutach. Telefon ekranem w dół."
+          "opis": "Półtorej godziny to pełny cykl snu, dlatego po tej drzemce wstaniesz najmniej rozbity. Telefon ekranem w dół."
         }
       ],
       "makra": {
-        "kcal": 2611,
+        "kcal": 2608,
         "bialko": 154,
         "tluszcz": 88,
         "wegle": 295
@@ -9556,8 +9574,8 @@
     "sniadanie": [
       {
         "id": "q_twarog",
-        "nazwa": "Twarożek ze szczypiorkiem + pieczywo",
-        "kcal": 493,
+        "nazwa": "Twarożek z ogórkiem + pieczywo",
+        "kcal": 490,
         "bialko": 44,
         "czas": 5,
         "bez_gotowania": false
@@ -9658,8 +9676,8 @@
       },
       {
         "id": "q_twarog",
-        "nazwa": "Twarożek ze szczypiorkiem + pieczywo",
-        "kcal": 493,
+        "nazwa": "Twarożek z ogórkiem + pieczywo",
+        "kcal": 490,
         "bialko": 44,
         "czas": 5,
         "bez_gotowania": false
@@ -9702,8 +9720,8 @@
     {
       "id": "o_twarog_xl",
       "nazwa": "Miska twarogu z jajkami i pieczywem",
-      "kcal": 926,
-      "bialko": 79,
+      "kcal": 923,
+      "bialko": 78,
       "czas": 10,
       "bez_gotowania": true
     }
@@ -9975,6 +9993,108 @@
   "odhaczone": {},
   "podmiany": {},
   "ciezary": {},
+  "ciezary_start": {
+    "Unoszenie hantli bokiem": {
+      "kg": 5,
+      "jedn": "na hantel",
+      "krok": 2.5
+    },
+    "Unoszenie hantli bokiem — drugie podejście": {
+      "kg": 5,
+      "jedn": "na hantel",
+      "krok": 2.5
+    },
+    "Wyciskanie hantli na ławce skośnej": {
+      "kg": 10,
+      "jedn": "na hantel",
+      "krok": 2.5
+    },
+    "Wyciskanie hantli nad głowę siedząc": {
+      "kg": 7.5,
+      "jedn": "na hantel",
+      "krok": 2.5
+    },
+    "Pompki": {
+      "kg": 0,
+      "jedn": "masa ciała",
+      "krok": 0
+    },
+    "Prostowanie ramion z hantlem nad głową": {
+      "kg": 10,
+      "jedn": "jeden hantel oburącz",
+      "krok": 2.5
+    },
+    "Rozpiętki z hantlami na ławce skośnej": {
+      "kg": 5,
+      "jedn": "na hantel",
+      "krok": 2.5
+    },
+    "Podciąganie na drążku": {
+      "kg": 0,
+      "jedn": "masa ciała",
+      "krok": 0
+    },
+    "Wiosłowanie hantlem jednorącz": {
+      "kg": 15,
+      "jedn": "na hantel",
+      "krok": 2.5
+    },
+    "Pullover z hantlem": {
+      "kg": 10,
+      "jedn": "jeden hantel oburącz",
+      "krok": 2.5
+    },
+    "Odwrotne rozpiętki w opadzie": {
+      "kg": 5,
+      "jedn": "na hantel",
+      "krok": 2.5
+    },
+    "Uginanie ramion ze sztangą EZ": {
+      "kg": 20,
+      "jedn": "razem z gryfem",
+      "krok": 2.5
+    },
+    "Uginanie młotkowe": {
+      "kg": 7.5,
+      "jedn": "na hantel",
+      "krok": 2.5
+    },
+    "Przysiad goblet z hantlem": {
+      "kg": 15,
+      "jedn": "jeden hantel",
+      "krok": 5
+    },
+    "Rumuński martwy ciąg": {
+      "kg": 12.5,
+      "jedn": "na hantel",
+      "krok": 2.5
+    },
+    "Unoszenie kolan w zwisie": {
+      "kg": 0,
+      "jedn": "masa ciała",
+      "krok": 0
+    },
+    "Wykroki z hantlami": {
+      "kg": 7.5,
+      "jedn": "na hantel",
+      "krok": 2.5
+    },
+    "Deska": {
+      "kg": 0,
+      "jedn": "masa ciała",
+      "krok": 0
+    },
+    "Wspięcia na palce": {
+      "kg": 10,
+      "jedn": "na hantel",
+      "krok": 2.5
+    },
+    "Przysiad bez ciężaru": {
+      "kg": 0,
+      "jedn": "masa ciała",
+      "krok": 0
+    }
+  },
   "kalorie": {
     "trend": null,
     "korekta_teraz": 0,
