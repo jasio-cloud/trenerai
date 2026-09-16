@@ -1610,6 +1610,47 @@ def kalkulator_snu(o_ktorej=None, d=None):
 
 # ------------------------------------------------------------------ agenda
 
+def _dodaj_kosciol(d, zdarzenia):
+    """Msza w kazda niedziele. Wolne: 12:00. Po zmianie: 18:00 — gotowanie idzie
+    godzine wczesniej, a obiad i kolacja po powrocie. Gdy niedziela wypada na
+    sluzbie, msza w sobote wieczorem (liczy sie jako niedzielna)."""
+    k = CFG.get("kosciol")
+    if not k:
+        return zdarzenia
+    t = typ_dnia(d)
+    godz, opis = None, ""
+    if d.weekday() == 6 and t == 2:
+        godz = k["niedziela_wolne"]
+        for e in zdarzenia:
+            if e.get("slot") == "drugi":
+                e["czas"] = "13:15"
+    elif d.weekday() == 6 and t == 1:
+        godz = k["niedziela_po_zmianie"]
+        for e in zdarzenia:
+            if e.get("akcja") == "gotowanie":
+                e["czas"] = "15:30"
+                e["opis"] = (e.get("opis") or "") + " Dziś godzinę wcześniej — o 18:00 msza."
+            elif e.get("slot") == "obiad":
+                e["czas"] = "19:15"
+                e["opis"] = "Po mszy, prosto z garnka. Reszta ostudzona idzie do lodówki."
+            elif e.get("slot") == "kolacja":
+                e["czas"] = "21:00"
+    elif d.weekday() == 5 and typ_dnia(d + datetime.timedelta(days=1)) == 0:
+        godz = k["sobota_wigilijna"]
+        opis = ("Jutro niedziela na służbie, więc idziesz dziś — msza w sobotę wieczorem "
+                "liczy się jako niedzielna. ")
+        # droga do kosciola i z powrotem zastepuje wieczorny spacer
+        zdarzenia = [e for e in zdarzenia if e["tytul"] != "Spacer"]
+    if not godz:
+        return zdarzenia
+    ile = int(k.get("wyjscie_min", 30))
+    hh, mm = (int(x) for x in godz.split(":"))
+    wyjscie = (datetime.datetime(2000, 1, 1, hh, mm) - datetime.timedelta(minutes=ile)).strftime("%H:%M")
+    zdarzenia.append({"czas": wyjscie, "tytul": "Msza święta o %s" % godz, "ikona": "⛪", "ping": True,
+                      "opis": opis + "Za %d minut msza — czas się zbierać. Telefon wycisz już teraz." % ile})
+    return zdarzenia
+
+
 def agenda(d=None):
     """Plan dnia A-Z. Doklejamy nocne punkty ze zmiany, która trwa jeszcze nad ranem."""
     d = d or dzis()
@@ -1632,6 +1673,7 @@ def agenda(d=None):
             if str(e.get("akcja") or "").startswith("trening"):
                 e.update({"tytul": "Bez treningu — dzień lżejszy", "ping": False, "akcja": None,
                           "ikona": "🛌", "opis": "Dziś odpoczywasz. Jeśli masz siłę, zrób spokojny spacer."})
+    zdarzenia = _dodaj_kosciol(d, zdarzenia)
     _, dzien = plan_dnia(d)
     for e in zdarzenia:
         if e.get("akcja") == "budzik":

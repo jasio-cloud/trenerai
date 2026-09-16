@@ -201,5 +201,12 @@
   "sklep": "Biedronka",
   "nie_lubi": [
     "szczypiorek"
-  ]
+  ],
+  "kosciol": {
+    "niedziela_wolne": "12:00",
+    "niedziela_po_zmianie": "18:00",
+    "sobota_wigilijna": "18:00",
+    "wyjscie_min": 30,
+    "komentarz": "Msza w każdą niedzielę. Gdy niedziela wypada na służbie — sobota wieczorem (msza wigilijna). Ping przychodzi wyjscie_min przed mszą."
+  }
 }
