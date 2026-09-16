@@ -94,9 +94,26 @@ PODMIANY_PATH = os.path.join(STATE, "podmiany.json")
 TRYB_PATH = os.path.join(STATE, "tryb.json")
 
 
+_STARTUJE = False
+
+
 def tryb():
-    """Czy plan jest prowadzony. Wstrzymany = zero pingow i zero ksiegowania zakupow."""
-    return load(TRYB_PATH, {"aktywny": True})
+    """Czy plan jest prowadzony. Wstrzymany = zero pingow i zero ksiegowania zakupow.
+
+    Pauza moze miec termin powrotu (wznow_o, "RRRR-MM-DDTGG:MM"). Pierwsze wywolanie
+    po tym terminie — cron, eksport, cokolwiek — samo robi start od zera."""
+    global _STARTUJE
+    t = load(TRYB_PATH, {"aktywny": True})
+    w = t.get("wznow_o")
+    if not t.get("aktywny", True) and w and not _STARTUJE and teraz().strftime("%Y-%m-%dT%H:%M") >= w:
+        _STARTUJE = True
+        try:
+            wynik = start_od_zera()
+            print("Zaplanowany start planu (%s): %s" % (w, wynik))
+        finally:
+            _STARTUJE = False
+        t = load(TRYB_PATH, {"aktywny": True})
+    return t
 
 
 def wstrzymaj(powod=""):
@@ -1700,7 +1717,7 @@ def agenda(d=None):
 
 # --------------------------------------------------------------- pingi ntfy
 
-def wyslij_ping(tytul, tresc, tagi=None, priorytet=3, kiedy=None, klucz=None):
+def wyslij_ping(tytul, tresc, tagi=None, priorytet=3, kiedy=None, klucz=None, akcje=None, klik=None):
     topic = os.environ.get(CFG["ntfy"]["topic_env"], "").strip()
     if not topic:
         print("[ntfy] brak NTFY_TOPIC — pomijam wysyłkę")
@@ -1712,8 +1729,10 @@ def wyslij_ping(tytul, tresc, tagi=None, priorytet=3, kiedy=None, klucz=None):
         "priority": priorytet,
         "tags": tagi or [],
     }
-    if CFG.get("panel_url"):
-        payload["click"] = CFG["panel_url"]
+    if klik or CFG.get("panel_url"):
+        payload["click"] = klik or CFG["panel_url"]
+    if akcje:
+        payload["actions"] = akcje
     if kiedy is not None:
         # ntfy przyjmuje wiadomosc teraz i dostarcza ja o podanej sekundzie
         payload["delay"] = str(int(kiedy))
@@ -1733,6 +1752,15 @@ def wyslij_ping(tytul, tresc, tagi=None, priorytet=3, kiedy=None, klucz=None):
     except urllib.error.URLError as e:
         print("[ntfy] błąd wysyłki:", e)
         return False
+
+
+def _akcje_pinga(e):
+    """Przycisk pod powiadomieniem. Waga otwiera panel od razu na polu wagi —
+    im mniej stukania, tym wieksza szansa, ze wynik w ogole trafi do systemu."""
+    if e.get("akcja") == "waga" and CFG.get("panel_url"):
+        url = CFG["panel_url"] + "#waga"
+        return {"akcje": [{"action": "view", "label": "⚖️ Wpisz wagę", "url": url, "clear": True}], "klik": url}
+    return {}
 
 
 def slowo_dnia(d=None):
@@ -1862,7 +1890,7 @@ def _definicje_odznak():
         ("seria_30", "Miesiąc bez przerwy", "Trzydzieści dni z rzędu. To już twój styl życia.", seria >= 30),
         ("dzien_30", "Miesiąc w planie", "30 dni od startu.", dzien >= 30),
         ("dzien_100", "100 dni", "Sto dni od startu.", dzien >= 100),
-        ("dzien_182", "Pół roku", "Połowa drogi do sesji.", dzien >= 182),
+        ("dzien_polowa", "Połowa drogi", "Połowa drogi do wakacji.", dzien >= 141),
     ]
 
 
@@ -1902,6 +1930,15 @@ def tresc_pinga(e, d):
         czesci.insert(0, "Dziś gotujesz: %s — %d min, %s." % (b["nazwa"], b["czas_min"], b["naczynia"]))
     if e.get("akcja") == "podsumowanie":
         czesci.insert(0, tekst_podsumowania(podsumowanie_cyklu(d)))
+    if e.get("akcja") == "waga" and PLAN_ROKU.get("final"):
+        final = parse_date(PLAN_ROKU["final"])
+        if d == _start_planu():
+            czesci.insert(0, "📸 Dziś zdjęcie startowe: przód, bok i tył, w samych spodenkach, w tym samym "
+                             "miejscu i świetle. Schowaj je w osobnym albumie — porównasz je %s."
+                             % final.strftime("%d.%m.%Y"))
+        elif d == final:
+            czesci.insert(0, "📸 Dzień porównania! Zrób zdjęcia dokładnie tak jak na starcie i połóż je "
+                             "obok tych z %s. To jest Twój zaliczony rok." % _start_planu().strftime("%d.%m.%Y"))
     if e.get("akcja") == "waga" and pomiary_nalezne(d):
         czesci.append("📏 Dziś też pomiary taśmą: talia na wysokości pępka, szyja, barki w najszerszym "
                       "miejscu, klatka, ramię, udo. Wpisz je w panelu w zakładce Trening.")
@@ -1949,7 +1986,7 @@ def _klucz_punktu(e):
     return e["czas"] + "|" + e["tytul"]
 
 
-def zaplanuj_pingi(dni_naprzod=1, sucho=False):
+def zaplanuj_pingi(dni_naprzod=1, sucho=False, od=None):
     """Wysyla pingi Z GORY, z terminem dostarczenia zamiast sprawdzania 'co teraz'.
 
     Powod: cron GitHuba na darmowym planie nie chodzi co 10 minut, tylko realnie
@@ -1980,6 +2017,8 @@ def zaplanuj_pingi(dni_naprzod=1, sucho=False):
             # minutowy zapas: ntfy odrzuca terminy z przeszlosci
             if (termin - n).total_seconds() < 60:
                 continue
+            if od is not None and termin < od:
+                continue
             # Planujemy tylko 8 h naprzod. ntfy NIE umie anulowac zaplanowanej
             # wiadomosci (sprawdzone: DELETE nie powstrzymuje dostarczenia), wiec im
             # dalej planujemy, tym dluzej po pauzie albo podmianie przychodza nieaktualne
@@ -1990,7 +2029,8 @@ def zaplanuj_pingi(dni_naprzod=1, sucho=False):
             if sucho:
                 print("[SUCHY BIEG] %s %s -> %s" % (ds, e["czas"], tytul))
             elif not wyslij_ping(tytul, tresc_pinga(e, d), priorytet=4 if e.get("akcja") else 3,
-                                 kiedy=termin.timestamp(), klucz=ds + "|" + klucz):
+                                 kiedy=termin.timestamp(), klucz=ds + "|" + klucz,
+                                 **_akcje_pinga(e)):
                 continue
             zapl.setdefault(ds, []).append(klucz)
             nowe.append("%s %s %s" % (ds, e["czas"], e["tytul"]))
@@ -2008,8 +2048,15 @@ def tick(okno_min=25, sucho=False):
     # Najwazniejsze dzieje sie tutaj: planujemy przyszle pingi z gory. Ponizsza
     # petla to juz tylko siatka bezpieczenstwa na punkty, ktore minely, zanim
     # cokolwiek zdazylo je zaplanowac (np. tuz po wdrozeniu zmiany w planie).
-    if not tryb().get("aktywny", True):
-        print("Plan wstrzymany od %s — nie planuje i nie wysylam pingow." % tryb().get("od"))
+    t = tryb()
+    if not t.get("aktywny", True):
+        if t.get("wznow_o"):
+            # Pauza z terminem powrotu: pingi po starcie planujemy juz teraz. Cron chodzi
+            # co kilka godzin i moglby nie trafic w okno miedzy startem a pierwszym pingiem.
+            od = datetime.datetime.strptime(t["wznow_o"], "%Y-%m-%dT%H:%M").replace(tzinfo=teraz().tzinfo)
+            for x in zaplanuj_pingi(sucho=sucho, od=od):
+                print("zaplanowano (po starcie):", x)
+        print("Plan wstrzymany od %s — pingi tylko po zaplanowanym starcie." % t.get("od"))
         return []
     zaplanowane = zaplanuj_pingi(sucho=sucho)
     for x in zaplanowane:
@@ -2045,7 +2092,7 @@ def tick(okno_min=25, sucho=False):
                 print("[SUCHY BIEG]", tytul, "|", tresc.replace("\n", " / "))
                 poszlo.append(klucz)
             elif wyslij_ping(tytul, tresc, tagi=[], priorytet=4 if e.get("akcja") else 3,
-                             klucz=d.isoformat() + "|" + klucz):
+                             klucz=d.isoformat() + "|" + klucz, **_akcje_pinga(e)):
                 wyslane.append(klucz)
                 poszlo.append(klucz)
     if poszlo and not sucho:

@@ -213,7 +213,7 @@ const esc = s => String(s??"").replace(/[&<>"]/g, c => ({"&":"&amp;","<":"&lt;",
 /* Wersja panelu. iPhone dodany do ekranu głównego potrafi trzymać stary HTML
    w nieskończoność. dane.json leci zawsze świeży, więc porównujemy numery
    i przy różnicy przeładowujemy stronę z ?v=, co omija cache przeglądarki. */
-const WERSJA = 14;
+const WERSJA = 15;
 let D = null, widok = "dzis";
 
 /* ---- zapis z telefonu ------------------------------------------------------
@@ -505,6 +505,7 @@ function widokDzis(){
   const wstrzymany = D.tryb && D.tryb.aktywny === false;
   const banerPauzy = wstrzymany ? `<div class="karta" style="border-color:var(--uwaga)">
       <h2 style="color:var(--uwaga)">Plan wstrzymany od ${esc(D.tryb.od)}</h2>
+      ${D.tryb.wznow_o ? `<div class="op"><b>Plan wystartuje sam ${esc(D.tryb.wznow_o.replace("T", " o "))}</b> — nic nie musisz klikać.</div>` : ""}
       <div class="op">Nie przychodzą pingi i nie księgują się zakupy. ${D.tryb.powod ? esc(D.tryb.powod) + "." : ""}
         Jak będziesz gotowy, zacznij od zera — dostaniesz czystą lodówkę, nowy cykl
         i obiady bez garnka aż do pierwszego dnia gotowania.</div>
@@ -1007,6 +1008,14 @@ function rysuj(){
                   gotowanie:widokGotowanie, trening:widokTrening, sen:widokSen};
   $("#widok").innerHTML = widoki[widok]();
   if(D) rysujNaglowek();
+  // link z pingu "Waga": od razu pole wagi, bez szukania
+  if(D && location.hash === "#waga" && widok === "dzis"){
+    const pole = document.getElementById("waga");
+    if(pole){
+      history.replaceState(null, "", location.pathname + location.search);
+      setTimeout(() => { pole.scrollIntoView({block: "center"}); pole.focus(); }, 60);
+    }
+  }
 }
 
 function start(dane){
