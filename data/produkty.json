@@ -1,5 +1,5 @@
 {
-  "_info": "Cennik PLN (dyskont 2026). jedn = jednostka w przepisie, g = ile gramow (dla plynow ml) wazy JEDNA taka jednostka, baza = w czym liczymy makro (g albo ml). opak = ile jednostek w opakowaniu, cena = za cale opakowanie, trw = swieze/chlodnia/trwale, kat = dzial sklepu. biedronka=false: w Biedronce zwykle tego nie ma (sprawdzone w sklepie internetowym 16.09.2026) — planer omija dania z takimi produktami.",
+  "_info": "Cennik PLN (dyskont 2026). jedn = jednostka w przepisie, g = ile gramow (dla plynow ml) wazy JEDNA taka jednostka, baza = w czym liczymy makro (g albo ml). opak = ile jednostek w opakowaniu, cena = za cale opakowanie, trw = swieze/chlodnia/trwale, kat = dzial sklepu. biedronka=false: w Biedronce zwykle tego nie ma (sprawdzone w sklepie internetowym 16.09.2026) — planer omija dania z takimi produktami. zapas=true: masz to w domu i kupujesz poza Biedronką — nigdy nie trafia na listę zakupów.",
   "jaja": {
     "nazwa": "Jaja",
     "jedn": "szt",
@@ -561,7 +561,8 @@
     "trw": "trwale",
     "g": 1,
     "baza": "g",
-    "biedronka": false
+    "biedronka": false,
+    "zapas": true
   },
   "dzem_niskoslodzony": {
     "nazwa": "Dżem niskosłodzony (truskawkowy)",

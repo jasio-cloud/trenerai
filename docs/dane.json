@@ -1,5 +1,5 @@
 {
-  "wygenerowano": "2026-09-16T12:30:40+02:00",
+  "wygenerowano": "2026-09-16T13:00:23",
   "dzis": "2026-09-16",
   "typ_dzis": 0,
   "typy": {
@@ -577,12 +577,12 @@
         "nazwa": "Jaja",
         "kat": "nabial",
         "trw": "chlodnia",
-        "opakowan": 1,
+        "opakowan": 2,
         "opak": 10,
         "jedn": "szt",
-        "brakuje": 5,
-        "dokupisz": 10,
-        "cena": 12.0
+        "brakuje": 11,
+        "dokupisz": 20,
+        "cena": 24.0
       },
       {
         "klucz": "jogurt_grecki",
@@ -592,9 +592,33 @@
         "opakowan": 1,
         "opak": 400,
         "jedn": "g",
-        "brakuje": 305,
+        "brakuje": 400,
         "dokupisz": 400,
         "cena": 6.0
+      },
+      {
+        "klucz": "maslo",
+        "nazwa": "Masło",
+        "kat": "nabial",
+        "trw": "chlodnia",
+        "opakowan": 1,
+        "opak": 200,
+        "jedn": "g",
+        "brakuje": 10,
+        "dokupisz": 200,
+        "cena": 8.5
+      },
+      {
+        "klucz": "mleko",
+        "nazwa": "Mleko 2%",
+        "kat": "nabial",
+        "trw": "chlodnia",
+        "opakowan": 1,
+        "opak": 1000,
+        "jedn": "ml",
+        "brakuje": 40,
+        "dokupisz": 1000,
+        "cena": 4.0
       },
       {
         "klucz": "feta",
@@ -607,6 +631,18 @@
         "brakuje": 65,
         "dokupisz": 200,
         "cena": 8.0
+      },
+      {
+        "klucz": "ser_zolty",
+        "nazwa": "Ser żółty w plastrach",
+        "kat": "nabial",
+        "trw": "chlodnia",
+        "opakowan": 1,
+        "opak": 12,
+        "jedn": "plaster",
+        "brakuje": 5,
+        "dokupisz": 12,
+        "cena": 10.0
       },
       {
         "klucz": "skyr",
@@ -628,7 +664,7 @@
         "opakowan": 1,
         "opak": 250,
         "jedn": "g",
-        "brakuje": 100,
+        "brakuje": 145,
         "dokupisz": 250,
         "cena": 5.5
       },
@@ -657,6 +693,18 @@
         "cena": 1.8
       },
       {
+        "klucz": "czosnek",
+        "nazwa": "Czosnek",
+        "kat": "warzywa",
+        "trw": "trwale",
+        "opakowan": 1,
+        "opak": 10,
+        "jedn": "zabek",
+        "brakuje": 1,
+        "dokupisz": 10,
+        "cena": 3.0
+      },
+      {
         "klucz": "jablko",
         "nazwa": "Jabłko",
         "kat": "warzywa",
@@ -681,16 +729,28 @@
         "cena": 2.5
       },
       {
+        "klucz": "ogorek_kiszony",
+        "nazwa": "Ogórek kiszony",
+        "kat": "warzywa",
+        "trw": "trwale",
+        "opakowan": 1,
+        "opak": 8,
+        "jedn": "szt",
+        "brakuje": 3.0,
+        "dokupisz": 8,
+        "cena": 8.0
+      },
+      {
         "klucz": "papryka",
         "nazwa": "Papryka",
         "kat": "warzywa",
         "trw": "chlodnia",
-        "opakowan": 3,
+        "opakowan": 4,
         "opak": 1,
         "jedn": "szt",
-        "brakuje": 3.0,
-        "dokupisz": 3,
-        "cena": 12.0
+        "brakuje": 3.5,
+        "dokupisz": 4,
+        "cena": 16.0
       },
       {
         "klucz": "pomidor",
@@ -717,16 +777,40 @@
         "cena": 5.0
       },
       {
+        "klucz": "ziemniaki",
+        "nazwa": "Ziemniaki",
+        "kat": "warzywa",
+        "trw": "trwale",
+        "opakowan": 1,
+        "opak": 2000,
+        "jedn": "g",
+        "brakuje": 900.0,
+        "dokupisz": 2000,
+        "cena": 7.0
+      },
+      {
         "klucz": "chleb",
         "nazwa": "Chleb pszenny (zwykły biały)",
         "kat": "pieczywo",
         "trw": "chlodnia",
-        "opakowan": 1,
+        "opakowan": 2,
         "opak": 16,
         "jedn": "kromka",
-        "brakuje": 11,
-        "dokupisz": 16,
-        "cena": 4.5
+        "brakuje": 21,
+        "dokupisz": 32,
+        "cena": 9.0
+      },
+      {
+        "klucz": "kakao",
+        "nazwa": "Kakao naturalne (bez cukru)",
+        "kat": "spizarnia",
+        "trw": "trwale",
+        "opakowan": 1,
+        "opak": 19,
+        "jedn": "lyzka",
+        "brakuje": 1.5,
+        "dokupisz": 19,
+        "cena": 9.0
       },
       {
         "klucz": "bulion",
@@ -738,6 +822,42 @@
         "jedn": "kostka",
         "brakuje": 2.0,
         "dokupisz": 6,
+        "cena": 4.0
+      },
+      {
+        "klucz": "kukurydza",
+        "nazwa": "Kukurydza konserwowa",
+        "kat": "spizarnia",
+        "trw": "trwale",
+        "opakowan": 1,
+        "opak": 200,
+        "jedn": "g",
+        "brakuje": 90,
+        "dokupisz": 200,
+        "cena": 4.0
+      },
+      {
+        "klucz": "miod",
+        "nazwa": "Miód",
+        "kat": "spizarnia",
+        "trw": "trwale",
+        "opakowan": 1,
+        "opak": 20,
+        "jedn": "lyzka",
+        "brakuje": 9.0,
+        "dokupisz": 20,
+        "cena": 18.0
+      },
+      {
+        "klucz": "musztarda",
+        "nazwa": "Musztarda",
+        "kat": "spizarnia",
+        "trw": "trwale",
+        "opakowan": 1,
+        "opak": 12,
+        "jedn": "lyzka",
+        "brakuje": 3.0,
+        "dokupisz": 12,
         "cena": 4.0
       },
       {
@@ -753,6 +873,18 @@
         "cena": 3.5
       },
       {
+        "klucz": "olej",
+        "nazwa": "Olej rzepakowy",
+        "kat": "spizarnia",
+        "trw": "trwale",
+        "opakowan": 1,
+        "opak": 1000,
+        "jedn": "ml",
+        "brakuje": 26.0,
+        "dokupisz": 1000,
+        "cena": 9.0
+      },
+      {
         "klucz": "oliwa",
         "nazwa": "Oliwa z oliwek",
         "kat": "spizarnia",
@@ -765,6 +897,18 @@
         "cena": 20.0
       },
       {
+        "klucz": "orzechy",
+        "nazwa": "Orzechy / migdały",
+        "kat": "spizarnia",
+        "trw": "trwale",
+        "opakowan": 1,
+        "opak": 200,
+        "jedn": "g",
+        "brakuje": 24,
+        "dokupisz": 200,
+        "cena": 12.0
+      },
+      {
         "klucz": "passata",
         "nazwa": "Passata pomidorowa",
         "kat": "spizarnia",
@@ -772,197 +916,28 @@
         "opakowan": 1,
         "opak": 500,
         "jedn": "g",
-        "brakuje": 20.0,
+        "brakuje": 460.0,
         "dokupisz": 500,
         "cena": 5.0
-      }
-    ],
-    "mam": [
-      {
-        "klucz": "czosnek",
-        "nazwa": "Czosnek",
-        "potrzeba": 1,
-        "w_domu": 9,
-        "jedn": "zabek"
-      },
-      {
-        "klucz": "kakao",
-        "nazwa": "Kakao naturalne (bez cukru)",
-        "potrzeba": 1.5,
-        "w_domu": 18.0,
-        "jedn": "lyzka"
-      },
-      {
-        "klucz": "kukurydza",
-        "nazwa": "Kukurydza konserwowa",
-        "potrzeba": 90,
-        "w_domu": 120,
-        "jedn": "g"
-      },
-      {
-        "klucz": "maslo",
-        "nazwa": "Masło",
-        "potrzeba": 10,
-        "w_domu": 195,
-        "jedn": "g"
-      },
-      {
-        "klucz": "miod",
-        "nazwa": "Miód",
-        "potrzeba": 9.0,
-        "w_domu": 16.0,
-        "jedn": "lyzka"
-      },
-      {
-        "klucz": "mleko",
-        "nazwa": "Mleko 2%",
-        "potrzeba": 40,
-        "w_domu": 930,
-        "jedn": "ml"
-      },
-      {
-        "klucz": "musztarda",
-        "nazwa": "Musztarda",
-        "potrzeba": 3.0,
-        "w_domu": 10.0,
-        "jedn": "lyzka"
-      },
-      {
-        "klucz": "ogorek_kiszony",
-        "nazwa": "Ogórek kiszony",
-        "potrzeba": 3.0,
-        "w_domu": 6.5,
-        "jedn": "szt"
-      },
-      {
-        "klucz": "olej",
-        "nazwa": "Olej rzepakowy",
-        "potrzeba": 26.0,
-        "w_domu": 974.0,
-        "jedn": "ml"
-      },
-      {
-        "klucz": "orzechy",
-        "nazwa": "Orzechy / migdały",
-        "potrzeba": 24,
-        "w_domu": 170,
-        "jedn": "g"
       },
       {
         "klucz": "przyprawy",
         "nazwa": "Przyprawy (sól, pieprz, papryka, oregano, majeranek)",
-        "potrzeba": 8.0,
-        "w_domu": 94.0,
-        "jedn": "porcja"
-      },
-      {
-        "klucz": "ser_zolty",
-        "nazwa": "Ser żółty w plastrach",
-        "potrzeba": 5,
-        "w_domu": 10,
-        "jedn": "plaster"
-      },
-      {
-        "klucz": "ziemniaki",
-        "nazwa": "Ziemniaki",
-        "potrzeba": 900.0,
-        "w_domu": 1250.0,
-        "jedn": "g"
+        "kat": "spizarnia",
+        "trw": "trwale",
+        "opakowan": 1,
+        "opak": 100,
+        "jedn": "porcja",
+        "brakuje": 8.0,
+        "dokupisz": 100,
+        "cena": 15.0
       }
     ],
-    "koszt": 167.0,
+    "mam": [],
+    "koszt": 299.0,
     "zrobione": false
   },
-  "lodowka": {
-    "jaja": {
-      "ilosc": 6,
-      "do": "2026-09-23"
-    },
-    "jogurt_grecki": {
-      "ilosc": 95,
-      "do": "2026-09-23"
-    },
-    "maslo": {
-      "ilosc": 195,
-      "do": "2026-09-23"
-    },
-    "mleko": {
-      "ilosc": 930,
-      "do": "2026-09-23"
-    },
-    "ser_zolty": {
-      "ilosc": 10,
-      "do": "2026-09-23"
-    },
-    "twarog": {
-      "ilosc": 45,
-      "do": "2026-09-23"
-    },
-    "smietana": {
-      "ilosc": 180,
-      "do": "2026-09-23"
-    },
-    "czosnek": {
-      "ilosc": 9,
-      "do": "2027-03-30"
-    },
-    "ogorek_kiszony": {
-      "ilosc": 6.5,
-      "do": "2027-03-30"
-    },
-    "papryka": {
-      "ilosc": 0.5,
-      "do": "2026-09-23"
-    },
-    "ziemniaki": {
-      "ilosc": 1250.0,
-      "do": "2027-03-30"
-    },
-    "chleb": {
-      "ilosc": 10,
-      "do": "2026-09-23"
-    },
-    "kakao": {
-      "ilosc": 18.0,
-      "do": "2027-03-30"
-    },
-    "koncentrat": {
-      "ilosc": 160.0,
-      "do": "2027-03-30"
-    },
-    "kukurydza": {
-      "ilosc": 120,
-      "do": "2027-03-30"
-    },
-    "maslo_orzechowe": {
-      "ilosc": 20.0,
-      "do": "2027-03-30"
-    },
-    "miod": {
-      "ilosc": 16.0,
-      "do": "2027-03-30"
-    },
-    "musztarda": {
-      "ilosc": 10.0,
-      "do": "2027-03-30"
-    },
-    "olej": {
-      "ilosc": 974.0,
-      "do": "2027-03-30"
-    },
-    "orzechy": {
-      "ilosc": 170,
-      "do": "2027-03-30"
-    },
-    "passata": {
-      "ilosc": 440.0,
-      "do": "2027-03-30"
-    },
-    "przyprawy": {
-      "ilosc": 94.0,
-      "do": "2027-03-30"
-    }
-  },
+  "lodowka": {},
   "trening": {
     "rodzaj": "przedstart",
     "trening": {
@@ -2507,7 +2482,8 @@
       "trw": "trwale",
       "g": 1,
       "baza": "g",
-      "biedronka": false
+      "biedronka": false,
+      "zapas": true
     },
     "dzem_niskoslodzony": {
       "nazwa": "Dżem niskosłodzony (truskawkowy)",

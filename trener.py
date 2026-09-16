@@ -1159,6 +1159,9 @@ def lista_zakupow(plan=None):
     for klucz, ile in potrzeba.items():
         p = PROD[klucz]
         w_domu = stan.get(klucz, {}).get("ilosc", 0)
+        if p.get("zapas"):
+            # trzymasz to w domu i kupujesz gdzie indziej (np. odzywka) — nie na liste do Biedronki
+            w_domu = max(w_domu, ile)
         brakuje = max(0.0, ile - w_domu)
         if brakuje <= 0.001:
             mam.append({"klucz": klucz, "nazwa": p["nazwa"], "potrzeba": ile,
