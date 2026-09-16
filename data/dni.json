@@ -27,8 +27,16 @@
         "tytul": "Pobudka",
         "ikona": "⏰",
         "ping": true,
-        "opis": "Szklanka wody od razu po wstaniu. Boxy masz spakowane w lodówce od wczoraj — wyjmij je teraz, żeby nie zapomnieć.",
+        "opis": "Najpierw toaleta — za 5 minut ping do ważenia, więc jeszcze nic nie pij. Boxy masz spakowane w lodówce od wczoraj — wyjmij je teraz, żeby nie zapomnieć.",
         "akcja": "suple"
+      },
+      {
+        "czas": "05:35",
+        "tytul": "Waga",
+        "ikona": "⚖️",
+        "ping": true,
+        "akcja": "waga",
+        "opis": "Po toalecie, przed jedzeniem i piciem, w samej bieliźnie. Wpisz wynik w panelu — liczy się średnia z 7 dni, nie pojedynczy wynik."
       },
       {
         "czas": "05:45",
@@ -91,42 +99,42 @@
         "opis": "Ostatni posiłek na zmianie. Lekki, żeby nie leżeć z pełnym brzuchem przed pierwszą drzemką."
       },
       {
-        "czas": "22:40",
+        "czas": "22:15",
         "tytul": "Przygotuj się do nocy",
         "ikona": "🤸",
         "ping": true,
-        "opis": "5 minut rozciągania bioder i karku. Ustaw cztery budziki na końce drzemek: 00:20, 02:00, 03:40, 05:20."
+        "opis": "5 minut rozciągania bioder i karku. Ustaw cztery budziki na końce drzemek: 23:59, 01:30, 03:00, 04:30."
       },
       {
-        "czas": "23:00",
-        "tytul": "Drzemka 1 z 4 — do 00:20",
+        "czas": "22:30",
+        "tytul": "Drzemka 1 z 4 — do 23:59",
         "ikona": "😴",
         "ping": true,
-        "opis": "1 h 20 to prawie pełny cykl snu i dlatego wstajesz po niej mniej rozbity niż po czterdziestu minutach. Telefon ekranem w dół."
+        "opis": "Półtorej godziny to pełny cykl snu, dlatego po tej drzemce wstaniesz najmniej rozbity. Telefon ekranem w dół."
       },
       {
-        "czas": "00:40",
-        "tytul": "Drzemka 2 z 4 — do 02:00",
+        "czas": "00:10",
+        "tytul": "Drzemka 2 z 4 — do 01:30",
         "ikona": "😴",
         "ping": true,
         "nastepny_dzien": true,
         "opis": "Między drzemkami łyk wody. Nie sięgaj po telefon — światło ekranu kosztuje Cię zaśnięcie przy kolejnej."
       },
       {
-        "czas": "02:20",
-        "tytul": "Drzemka 3 z 4 — do 03:40",
+        "czas": "01:40",
+        "tytul": "Drzemka 3 z 4 — do 03:00",
         "ikona": "😴",
         "ping": true,
         "nastepny_dzien": true,
         "opis": "To najcięższa pora doby. Jak nie zaśniesz w 15 minut, po prostu leż z zamkniętymi oczami — to też się liczy."
       },
       {
-        "czas": "04:00",
-        "tytul": "Drzemka 4 z 4 — do 05:20",
+        "czas": "03:10",
+        "tytul": "Drzemka 4 z 4 — do 04:30",
         "ikona": "😴",
         "ping": true,
         "nastepny_dzien": true,
-        "opis": "Ostatnia. Po niej zostaje już tylko zdanie służby."
+        "opis": "Ostatnia. Po niej już nie śpisz: woda, rozrusz się i spokojnie do końca służby."
       },
       {
         "czas": "06:45",
@@ -134,19 +142,27 @@
         "ikona": "🏁",
         "ping": true,
         "nastepny_dzien": true,
-        "opis": "Za 15 minut kończysz. Nie kupuj nic po drodze — w domu masz jedzenie, a za chwilę i tak idziesz spać."
+        "opis": "Za 15 minut kończysz. Lista zakupów czeka w panelu — prosto z pracy do Biedronki."
       }
     ],
     "1": [
       {
-        "czas": "07:35",
+        "czas": "07:10",
+        "tytul": "ZAKUPY w Biedronce",
+        "ikona": "🛒",
+        "ping": true,
+        "akcja": "zakupy",
+        "opis": "Prosto ze zmiany, zanim pójdziesz spać. Kupujesz tylko to, co jest na liście w panelu — resztę masz w lodówce. Po dobie na nogach łatwo wrzucić do koszyka coś słodkiego, więc trzymaj się listy."
+      },
+      {
+        "czas": "08:00",
         "tytul": "Jesteś w domu",
         "ikona": "🚿",
         "ping": true,
-        "opis": "Prysznic, zasłoń okna. NIE siadaj do telefonu — po dobie na nogach jedno przewijanie kosztuje Cię godzinę snu."
+        "opis": "Zakupy do lodówki, prysznic, zasłoń okna. NIE siadaj do telefonu — po dobie na nogach jedno przewijanie kosztuje Cię godzinę snu."
       },
       {
-        "czas": "07:50",
+        "czas": "08:15",
         "tytul": "Mały posiłek przed snem",
         "ikona": "🥛",
         "ping": true,
@@ -154,7 +170,7 @@
         "opis": "Coś lekkiego i białkowego. Na pusty żołądek gorzej zaśniesz, na pełny obudzisz się rozbity."
       },
       {
-        "czas": "08:15",
+        "czas": "08:30",
         "tytul": "SEN — najważniejsza rzecz dziś",
         "ikona": "😴",
         "ping": true,
@@ -166,8 +182,16 @@
         "tytul": "Pobudka",
         "ikona": "⏰",
         "ping": true,
-        "opis": "Woda, suple, toaleta. Bez telefonu — dziś zaczynasz od sztangi, nie od ekranu.",
+        "opis": "Toaleta, za 5 minut waga. Potem woda i suple. Bez telefonu — dziś zaczynasz od sztangi, nie od ekranu.",
         "akcja": "suple"
+      },
+      {
+        "czas": "13:05",
+        "tytul": "Waga",
+        "ikona": "⚖️",
+        "ping": true,
+        "akcja": "waga",
+        "opis": "Po toalecie, przed jedzeniem i piciem, w samej bieliźnie. Wpisz wynik w panelu — liczy się średnia z 7 dni, nie pojedynczy wynik."
       },
       {
         "czas": "13:30",
@@ -191,15 +215,7 @@
         "ikona": "📊",
         "ping": true,
         "akcja": "podsumowanie",
-        "opis": "Trzy dni za Tobą. Zanim pójdziesz po zakupy, zobacz, co z nich wyszło."
-      },
-      {
-        "czas": "15:30",
-        "tytul": "ZAKUPY na 3 dni",
-        "ikona": "🛒",
-        "ping": true,
-        "akcja": "zakupy",
-        "opis": "Lista jest w panelu — kupujesz tylko to, czego nie ma w lodówce. Trzymaj się listy, nie chodź po sklepie głodny."
+        "opis": "Trzy dni za Tobą. Zanim staniesz do garów, zobacz, co z nich wyszło."
       },
       {
         "czas": "16:30",
@@ -244,11 +260,19 @@
     "2": [
       {
         "czas": "08:00",
-        "tytul": "Pobudka + waga",
-        "ikona": "⚖️",
+        "tytul": "Pobudka",
+        "ikona": "⏰",
         "ping": true,
         "akcja": "suple",
-        "opis": "Zważ się od razu po wstaniu, przed jedzeniem i piciem. Potem woda, suple, toaleta — i bez telefonu."
+        "opis": "Toaleta, za 5 minut waga. Potem woda i suple — i bez telefonu."
+      },
+      {
+        "czas": "08:05",
+        "tytul": "Waga",
+        "ikona": "⚖️",
+        "ping": true,
+        "akcja": "waga",
+        "opis": "Po toalecie, przed jedzeniem i piciem, w samej bieliźnie. Wpisz wynik w panelu — liczy się średnia z 7 dni, nie pojedynczy wynik."
       },
       {
         "czas": "08:30",
@@ -345,7 +369,7 @@
     },
     {
       "id": "waga",
-      "nazwa": "Waga w dzień wolny",
+      "nazwa": "Waga codziennie rano",
       "opis": "Raz na cykl, rano, na czczo. Cel redukcji: -0,4 do -0,7 kg na tydzień."
     },
     {

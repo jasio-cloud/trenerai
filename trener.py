@@ -66,12 +66,17 @@ PROD = load(os.path.join(DATA, "produkty.json"))
 MAKRO = load(os.path.join(DATA, "makro.json"))
 BAZY = load(os.path.join(DATA, "bases.json"))["bazy"]
 QUICK = load(os.path.join(DATA, "quick.json"))["posilki"]
+# Produkty, ktorych nie jesz (config.nie_lubi) — dania z nimi w ogole nie wchodza do planu
+_NIE_LUBI = set(CFG.get("nie_lubi", []))
+BAZY = [b for b in BAZY if not _NIE_LUBI & {k for k, _ in b["produkty"]}]
+QUICK = [q for q in QUICK if not _NIE_LUBI & {k for k, _ in q["produkty"]}]
 DNI = load(os.path.join(DATA, "dni.json"))
 TRENINGI = load(os.path.join(DATA, "workouts.json"))
 KROKI = load(os.path.join(DATA, "kroki.json"))
 SUPLE = load(os.path.join(DATA, "suple.json"))
 PROGRAM = load(os.path.join(DATA, "program.json"))
 SLOWA = load(os.path.join(DATA, "slowa.json"))
+CIEZARY_START = load(os.path.join(DATA, "ciezary_start.json"))
 PLAN_ROKU = CFG.get("plan_roku", {})
 import dziennik
 
@@ -536,8 +541,11 @@ _koszty = {}
 def _koszt_posilku(pid):
     """Ile zlotych kosztuje zuzycie na jedna porcje (czesc opakowania, nie cale)."""
     if pid not in _koszty:
-        _koszty[pid] = sum(q / PROD[k]["opak"] * PROD[k]["cena"]
-                           for k, q in produkty_posilku(pid) if k != "przyprawy")
+        # produkt spoza Biedronki liczy sie jak 15 zl drozej — planer go omija,
+        # chyba ze danie naprawde nie ma zamiennika
+        _koszty[pid] = (sum(q / PROD[k]["opak"] * PROD[k]["cena"]
+                            for k, q in produkty_posilku(pid) if k != "przyprawy")
+                        + 15 * sum(1 for k, _ in produkty_posilku(pid) if PROD[k].get("biedronka") is False))
     return _koszty[pid]
 
 
@@ -959,7 +967,8 @@ def przetworz_zdarzenia():
             continue
         if t == "seria":
             w = dziennik.zapisz_serie(z["cwiczenie"], z["ciezar"], z["powt"],
-                                      zakres_powt(z["cwiczenie"]), data, loguj=False)
+                                      zakres_powt(z["cwiczenie"]), data, loguj=False,
+                                      krok=krok_cwiczenia(z["cwiczenie"]))
             zrobione.append("seria %s %.1f kg -> %.1f kg" % (z["cwiczenie"], float(z["ciezar"]), w["nastepny"]))
         elif t == "waga":
             dziennik.zapisz_wage(z["kg"], data)
@@ -1155,7 +1164,7 @@ def lista_zakupow(plan=None):
 def oznacz_niekupione(klucz):
     """Z listy zakupow czegos nie kupiles — zdejmujemy to z lodowki.
 
-    Zakupy ksieguja sie same o 15:30 w zalozeniu, ze kupiles cala liste. Bez tej
+    Zakupy ksieguja sie same rano w dniu zakupow w zalozeniu, ze kupiles cala liste. Bez tej
     poprawki lodowka 'miala' produkt, ktorego nie ma, a nastepna lista go pomijala.
     """
     plan = generuj_plan()
@@ -1288,7 +1297,8 @@ def nawyki_dnia(d=None):
             n["opis"] = ("Białko i kalorie to dwie liczby, które naprawdę decydują o sylwetce. "
                          "Na redukcji chroni mięśnie, na budowie daje z czego je zrobić.")
         elif n["id"] == "waga":
-            n["opis"] = ("Raz na cykl, rano, na czczo. Kierunek w fazie „%s”: %s do %s kg na tydzień."
+            n["opis"] = ("Codziennie 5 minut po pobudce: po toalecie, przed jedzeniem i piciem. Liczy się "
+                         "średnia z 7 dni. Kierunek w fazie „%s”: %s do %s kg na tydzień."
                          % (f.get("nazwa", ""), _fmt_tempo(lo), _fmt_tempo(hi)))
         out.append(n)
     return out
@@ -1363,6 +1373,36 @@ def _sesja(szablon, blok, ile):
             "blok": blok["nazwa"], "blok_opis": blok["opis"], "zapas": blok["zapas"],
             "rozgrzewka": PROGRAM["rozgrzewka"], "cwiczenia": cw,
             "finisz": "Każda seria kończy się z zapasem: %s. %s" % (blok["zapas"], blok["opis"])}
+
+
+def start_cwiczenia(nazwa):
+    return CIEZARY_START.get(nazwa)
+
+
+def krok_cwiczenia(nazwa):
+    st = start_cwiczenia(nazwa)
+    return st.get("krok") if st else None
+
+
+def _kg(x):
+    return ("%g" % float(x)).replace(".", ",")
+
+
+def podpowiedz_ciezaru(nazwa):
+    """Ile brac dzis: z dziennika (ostatni raz + progres), a przy pierwszym razie
+    ciezar startowy. Przy cwiczeniach z masa ciala liczymy powtorzenia."""
+    p, st = dziennik.propozycja(nazwa), start_cwiczenia(nazwa)
+    if st and st.get("jedn") == "masa ciała":
+        if p and p.get("powt"):
+            return "masa ciała (ostatnio %s powt. — dziś o jedno więcej)" % ", ".join(str(x) for x in p["powt"])
+        return "masa ciała"
+    jedn = (" " + st["jedn"]) if st else ""
+    if p:
+        return "%s kg%s (ostatnio %s kg × %s)" % (_kg(p["ciezar"]), jedn, _kg(p["poprzedni"]),
+                                                 ", ".join(str(x) for x in p["powt"]))
+    if st:
+        return "%s kg%s — na start" % (_kg(st["kg"]), jedn)
+    return "ciężar dobierz sam i zapisz w panelu"
 
 
 def trening_dnia(d=None):
@@ -1872,15 +1912,17 @@ def tresc_pinga(e, d):
                              "kalorii w ogole nie ruszy — dzis jest dobry dzien na pierwszy.")
         else:
             dni = (d - parse_date(wagi[-1]["data"])).days
-            if dni >= 6:
+            if dni >= 3:
                 czesci.insert(0, "Ostatnie wazenie %d dni temu. Bez regularnych pomiarow system "
                                  "nie wie, czy deficyt dziala — zwaz sie dzis." % dni)
     if e.get("akcja") == "suple":
         czesci.append("Suple na teraz: " + ", ".join("%s (%s)" % (x["nazwa"], x["ile"])
                                                      for x in SUPLE["lista"]))
     if e.get("akcja") == "zakupy":
-        z = lista_zakupow()
-        czesci.insert(0, "%d pozycji, ok. %.2f zł. %d rzeczy już masz w lodówce."
+        # ping planowany jest z wyprzedzeniem (jeszcze w dniu zmiany), wiec lista
+        # musi byc dla cyklu z dnia zakupow, a nie dla biezacego
+        z = lista_zakupow(plan_cyklu(d) or generuj_plan())
+        czesci.insert(0, "Biedronka: %d pozycji, ok. %.2f zł. %d rzeczy już masz w lodówce."
                       % (len(z["kup"]), z["koszt"], len(z["mam"])))
     if e.get("akcja") == "budzik":
         b = budzik_dla(e["czas"], d)
@@ -1891,6 +1933,11 @@ def tresc_pinga(e, d):
     if e.get("akcja") in ("trening_krotki", "trening_glowny"):
         t = trening_dnia(d)["trening"]
         czesci.insert(0, "%s — %d min." % (t["nazwa"], t["czas_min"]))
+        # ciezary od razu w powiadomieniu — przy sztandze nie otwierasz panelu
+        linie = ["%s: %s · %s×%s" % (c["nazwa"], podpowiedz_ciezaru(c["nazwa"]), c.get("serie", ""), c["powt"])
+                 for c in t.get("cwiczenia", [])]
+        if linie:
+            czesci.insert(1, "\n".join("• " + x for x in linie))
     return "\n".join(czesci)
 
 
@@ -2145,6 +2192,7 @@ def eksport():
         "odhaczone": dziennik.odhaczenia(d),
         "podmiany": podmiany(d),
         "ciezary": dziennik.ciezary(),
+        "ciezary_start": {k: v for k, v in CIEZARY_START.items() if not k.startswith("_")},
         "kalorie": kalorie_fazy(),
         "cel_bazowy": faza_dnia()["makra"]["kcal"],
         "sen": CFG["sen"],
@@ -2370,7 +2418,7 @@ def main():
             print('Użycie: py trener.py serie "Wyciskanie sztangi leżąc" 60 8 8 7')
         else:
             cw, ciezar, powt = sys.argv[2], sys.argv[3], sys.argv[4:]
-            w = dziennik.zapisz_serie(cw, ciezar, powt, zakres_powt(cw))
+            w = dziennik.zapisz_serie(cw, ciezar, powt, zakres_powt(cw), krok=krok_cwiczenia(cw))
             print("%s: %s kg × %s" % (cw, ciezar, ", ".join(powt)))
             print(w["komentarz"])
     elif cmd == "zrobione":

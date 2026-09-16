@@ -1,5 +1,5 @@
 {
-  "_info": "Cennik PLN (dyskont 2026). jedn = jednostka w przepisie, g = ile gramow (dla plynow ml) wazy JEDNA taka jednostka, baza = w czym liczymy makro (g albo ml). opak = ile jednostek w opakowaniu, cena = za cale opakowanie, trw = swieze/chlodnia/trwale, kat = dzial sklepu.",
+  "_info": "Cennik PLN (dyskont 2026). jedn = jednostka w przepisie, g = ile gramow (dla plynow ml) wazy JEDNA taka jednostka, baza = w czym liczymy makro (g albo ml). opak = ile jednostek w opakowaniu, cena = za cale opakowanie, trw = swieze/chlodnia/trwale, kat = dzial sklepu. biedronka=false: w Biedronce zwykle tego nie ma (sprawdzone w sklepie internetowym 16.09.2026) — planer omija dania z takimi produktami.",
   "jaja": {
     "nazwa": "Jaja",
     "jedn": "szt",
@@ -131,10 +131,10 @@
     "baza": "g"
   },
   "wolowina_gulasz": {
-    "nazwa": "Wołowina na gulasz (łopatka)",
+    "nazwa": "Wołowina z łopatki (w Biedronce: stek wołowy z łopatki)",
     "jedn": "g",
     "opak": 500,
-    "cena": 25.0,
+    "cena": 30.0,
     "kat": "mieso",
     "trw": "swieze",
     "g": 1,
@@ -488,7 +488,8 @@
     "kat": "mieso",
     "trw": "chlodnia",
     "g": 40,
-    "baza": "g"
+    "baza": "g",
+    "biedronka": false
   },
   "kabanosy": {
     "nazwa": "Kabanosy wołowe",
@@ -508,7 +509,8 @@
     "kat": "mieso",
     "trw": "chlodnia",
     "g": 1,
-    "baza": "g"
+    "baza": "g",
+    "biedronka": false
   },
   "kakao": {
     "nazwa": "Kakao naturalne (bez cukru)",
@@ -551,14 +553,15 @@
     "baza": "g"
   },
   "odzywka_wpc": {
-    "nazwa": "Odżywka białkowa WPC 80 (czekoladowa)",
+    "nazwa": "Odżywka białkowa WPC 80 (czekoladowa) — zapas, nie z Biedronki",
     "jedn": "g",
     "opak": 700,
     "cena": 75.0,
     "kat": "spizarnia",
     "trw": "trwale",
     "g": 1,
-    "baza": "g"
+    "baza": "g",
+    "biedronka": false
   },
   "dzem_niskoslodzony": {
     "nazwa": "Dżem niskosłodzony (truskawkowy)",
@@ -581,7 +584,7 @@
     "baza": "ml"
   },
   "skyr_pitny": {
-    "nazwa": "Skyr pitny (butelka 330 ml)",
+    "nazwa": "Skyr pitny (butelka, np. Fruvita albo Piątnica)",
     "jedn": "butelka",
     "opak": 1,
     "cena": 4.5,

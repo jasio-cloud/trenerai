@@ -169,6 +169,7 @@
   .pola-pomiarow label{font-size:11.5px;color:var(--slaby);display:grid;gap:3px}
   .v-znak{font-size:10.5px;font-weight:700;letter-spacing:.06em;color:var(--akcent);border:1px solid var(--akcent);
     border-radius:4px;padding:1px 5px;margin-left:6px;vertical-align:2px}
+  .yt{display:inline-block;margin-top:6px;font-size:13px;font-weight:600;color:var(--akcent);text-decoration:none}
   .wariant{font-size:12.5px;color:var(--slaby);margin-top:3px}
   [hidden]{display:none !important}
 </style>
@@ -212,7 +213,7 @@ const esc = s => String(s??"").replace(/[&<>"]/g, c => ({"&":"&amp;","<":"&lt;",
 /* Wersja panelu. iPhone dodany do ekranu głównego potrafi trzymać stary HTML
    w nieskończoność. dane.json leci zawsze świeży, więc porównujemy numery
    i przy różnicy przeładowujemy stronę z ?v=, co omija cache przeglądarki. */
-const WERSJA = 13;
+const WERSJA = 14;
 let D = null, widok = "dzis";
 
 /* ---- zapis z telefonu ------------------------------------------------------
@@ -570,7 +571,7 @@ function widokDzis(){
         <button class="mini duzy" id="zapisz-wage">zapisz</button>
       </div>
       <div class="op" style="margin-top:8px">${D.kalorie && D.kalorie.ocena ? esc(D.kalorie.ocena) : ""}</div>
-      <div class="op">Cel: ${D.cel.kcal} kcal${D.kalorie && D.kalorie.korekta_teraz ? ` (baza ${D.cel_bazowy} ${D.kalorie.korekta_teraz > 0 ? "+" : ""}${D.kalorie.korekta_teraz})` : ""}. Ważenie rano, na czczo, raz na cykl.</div>
+      <div class="op">Cel: ${D.cel.kcal} kcal${D.kalorie && D.kalorie.korekta_teraz ? ` (baza ${D.cel_bazowy} ${D.kalorie.korekta_teraz > 0 ? "+" : ""}${D.kalorie.korekta_teraz})` : ""}. Ważenie codziennie 5 minut po pobudce, na czczo — liczy się średnia z 7 dni.</div>
     </div>
 
     <div class="karta"><h2>Nawyki</h2>
@@ -685,6 +686,12 @@ function widokGotowanie(){
       <div class="cw"><div class="g"><b>Odgrzewanie</b></div><div class="w">${esc(b.odgrzewanie)}</div></div></div>`;
 }
 
+function ytLink(nazwa){
+  // wyszukiwanie zamiast jednego filmu: zawsze dziala i pokazuje kilka ujec techniki
+  const q = nazwa.split(" — ")[0] + " technika wykonania";
+  return "https://www.youtube.com/results?search_query=" + encodeURIComponent(q);
+}
+
 function tempoFazy(){
   const f = D.plan_roku && D.plan_roku.faza;
   if(!f || !f.tempo_kg_tydz) return "";
@@ -796,22 +803,31 @@ function widokTrening(){
     <div class="karta"><h2>Ćwiczenia</h2>
       ${t.cwiczenia.map(c=>{
         const h = (D.ciezary||{})[c.nazwa];
-        const sugestia = h ? (h.nastepny ?? h.ciezar) : null;
-        const historia = h
+        const st = (D.ciezary_start||{})[c.nazwa] || null;
+        const mc = !!(st && st.jedn === "masa ciała");
+        const jd = st && !mc ? " " + esc(st.jedn) : "";
+        const sugestia = h ? (h.nastepny ?? h.ciezar) : (st && !mc ? st.kg : null);
+        const historia = mc
+          ? (h ? `ostatnio ${(h.powt||[]).join(", ")} powt. — dziś spróbuj o jedno więcej`
+               : "masa ciała — zapisz same powtórzenia (kg zostaw 0)")
+          : h
           ? `ostatnio ${h.ciezar} kg × ${(h.powt||[]).join(", ")}` +
-            (sugestia > h.ciezar ? ` → dziś <b>${sugestia} kg</b>`
-             : sugestia < h.ciezar ? ` → zejdź do <b>${sugestia} kg</b>` : ` → zostań przy <b>${sugestia} kg</b>`)
+            (sugestia > h.ciezar ? ` → dziś <b>${sugestia} kg${jd}</b>`
+             : sugestia < h.ciezar ? ` → zejdź do <b>${sugestia} kg${jd}</b>` : ` → zostań przy <b>${sugestia} kg${jd}</b>`)
+          : st
+          ? `pierwszy raz — zacznij od <b>${sugestia} kg${jd}</b>. Za lekko? Zapisz, ile dałeś, następnym razem podpowiem więcej`
           : "pierwszy raz — zapisz, ile dałeś, a od następnego razu podpowiem ciężar";
         return `<div class="cw">
         <div class="g"><b>${esc(c.nazwa)}${c.v ? '<span class="v-znak" title="Buduje kształt litery V">V</span>' : ""}</b><span class="serie">${c.serie} × ${esc(c.powt)}</span></div>
         <div class="w">${esc(c.wskazowka)}</div>
+        <a class="yt" href="${ytLink(c.nazwa)}" target="_blank" rel="noopener">▶ Jak to zrobić — filmy na YouTube</a>
         ${c.latwiej ? `<div class="wariant">Za trudne? ${esc(c.latwiej)}</div>` : ""}
         ${c.trudniej && c.trudniej !== "—" ? `<div class="wariant">Za łatwe? ${esc(c.trudniej)}</div>` : ""}
         <div class="w">przerwa ${esc(c.przerwa)}</div>
         <div class="w" style="color:var(--akcent)">${historia}</div>
         <div style="display:flex;gap:6px;margin-top:7px">
           <input class="pole cw-kg"   type="number" step="2.5" inputmode="decimal"
-                 placeholder="kg" value="${sugestia ?? ""}" data-cw="${esc(c.nazwa)}">
+                 placeholder="kg" value="${mc ? 0 : (sugestia ?? "")}" data-cw="${esc(c.nazwa)}">
           <input class="pole cw-powt" type="text" inputmode="numeric"
                  placeholder="powt. np. 8 8 7" data-cw="${esc(c.nazwa)}">
           <button class="mini" data-serie="${esc(c.nazwa)}">zapisz</button>

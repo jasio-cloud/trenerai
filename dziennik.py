@@ -105,7 +105,7 @@ def propozycja(cwiczenie):
             "podwyzka": c.get("nastepny", c["ciezar"]) - c["ciezar"]}
 
 
-def zapisz_serie(cwiczenie, ciezar, powtorzenia, powt_cel=None, data=None, loguj=True):
+def zapisz_serie(cwiczenie, ciezar, powtorzenia, powt_cel=None, data=None, loguj=True, krok=None):
     """Zapisuje przerobioną serię i od razu decyduje, co robić następnym razem.
 
     Progresja liniowa: jeśli KAŻDA seria trafiła w górny koniec zakresu, ciężar rośnie
@@ -119,7 +119,9 @@ def zapisz_serie(cwiczenie, ciezar, powtorzenia, powt_cel=None, data=None, loguj
     stare = wszystkie.get(cwiczenie, {})
     zakres = _zakres(powt_cel) if powt_cel else None
 
-    krok = 5.0 if _dolna_partia(cwiczenie) else 2.5
+    if krok is None:
+        krok = 5.0 if _dolna_partia(cwiczenie) else 2.5
+    krok = float(krok)
     nastepny, komentarz, nieudane = ciezar, "Zapisane.", stare.get("nieudane", 0)
 
     if zakres:
@@ -127,8 +129,13 @@ def zapisz_serie(cwiczenie, ciezar, powtorzenia, powt_cel=None, data=None, loguj
         if powtorzenia and min(powtorzenia) >= gora:
             nastepny = ciezar + krok
             nieudane = 0
-            komentarz = ("Wszystkie serie na górnym końcu zakresu — następnym razem %.1f kg."
-                         % nastepny)
+            if krok:
+                komentarz = ("Wszystkie serie na górnym końcu zakresu — następnym razem %.1f kg."
+                             % nastepny)
+            else:
+                # masa ciala: nie dokladamy kilogramow, tylko przechodzimy na trudniejsza wersje
+                komentarz = ("Wszystkie serie na górnym końcu zakresu. Następnym razem weź "
+                             "trudniejszą wersję ćwiczenia.")
         elif powtorzenia and min(powtorzenia) < dol:
             nieudane += 1
             if nieudane >= 2:

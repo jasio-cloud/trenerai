@@ -23,10 +23,10 @@
   },
   "gotowanie": {
     "dzien_typ": 1,
-    "godzina_zakupow": "15:30",
+    "godzina_zakupow": "06:00",
     "godzina_gotowania": "16:30",
     "porcje_bazy": 3,
-    "komentarz": "Gotowanie ZAWSZE w dzień po zmianie, po odespaniu. Jedna baza = obiady na całe 3 dni."
+    "komentarz": "Zakupy rano po zmianie w Biedronce (ok. 7:10), w domu ok. 8:00, potem sen. Gotowanie po odespaniu. Cykl księguje się o 6:00 — po korekcie kalorii, przed wyjściem do sklepu."
   },
   "wykluczenia": [
     "ryż",
@@ -61,7 +61,7 @@
     "cykle_minimum": 4,
     "komentarz": "Sen chodzi cyklami po ok. 90 min. Budzenie w srodku cyklu (zwlaszcza w fazie gebokiej) daje uczucie rozbicia, nawet gdy przespales duzo. Dlatego budzik ustawiamy na WIELOKROTNOSC cyklu liczona od momentu ZASNIECIA, nie polozenia sie. 90 min to srednia - indywidualnie bywa 80-110, wiec traktujemy to jako przyblizenie, a nie wyrocznie."
   },
-  "panel_wersja": 13,
+  "panel_wersja": 14,
   "panel_wersja_komentarz": "Numer wersji panelu. iPhone dodany do ekranu glownego trzyma stary HTML nawet po zmianie na serwerze. dane.json jest pobierany zawsze swiezy, wiec panel porownuje ten numer ze swoim wlasnym i gdy sie roznia, przeladowuje sie z parametrem ?v=, co omija cache. PODNIES O 1 PO KAZDEJ ZMIANIE W docs/index.html.",
   "repo": "jasio-cloud/trenerai",
   "galaz": "main",
@@ -197,5 +197,9 @@
     "talia_do_wzrostu": 0.45,
     "barki_do_talii": 1.5,
     "tluszcz_proc": 10
-  }
+  },
+  "sklep": "Biedronka",
+  "nie_lubi": [
+    "szczypiorek"
+  ]
 }
