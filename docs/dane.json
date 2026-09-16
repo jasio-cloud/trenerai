@@ -1,5 +1,5 @@
 {
-  "wygenerowano": "2026-09-16T12:08:37+02:00",
+  "wygenerowano": "2026-09-16T12:19:01+02:00",
   "dzis": "2026-09-16",
   "typ_dzis": 0,
   "typy": {
@@ -2560,7 +2560,7 @@
       "baza": "ml"
     }
   },
-  "panel_wersja": 14,
+  "panel_wersja": 15,
   "grafik": [
     {
       "od": "2000-01-01",
@@ -2569,11 +2569,11 @@
   ],
   "plan_roku": {
     "start": "2026-09-17",
-    "final": "2027-09-16",
-    "final_nazwa": "Sesja zdjęciowa",
+    "final": "2027-06-26",
+    "final_nazwa": "Początek wakacji",
     "tydzien": 0,
     "dzien": 0,
-    "dni_do_finalu": 365,
+    "dni_do_finalu": 283,
     "faza": {
       "id": "przedstart",
       "nazwa": "Przed startem",
@@ -2599,29 +2599,29 @@
         "id": "F1",
         "nazwa": "Rekompozycja",
         "od_tyg": 3,
-        "do_tyg": 16,
-        "cel": "Tłuszcz w dół, siła w górę. Talia −5–7 cm."
+        "do_tyg": 14,
+        "cel": "Tłuszcz w dół, siła w górę. Talia −4–6 cm do świąt."
       },
       {
         "id": "F2",
         "nazwa": "Budowa",
-        "od_tyg": 17,
-        "do_tyg": 30,
-        "cel": "Lekka nadwyżka pod barki, plecy i klatkę górną. Waga rośnie powoli."
+        "od_tyg": 15,
+        "do_tyg": 24,
+        "cel": "Lekka nadwyżka pod barki, plecy i klatkę górną — także na święta. Waga rośnie powoli."
       },
       {
         "id": "F3",
         "nazwa": "Forma",
-        "od_tyg": 31,
-        "do_tyg": 50,
-        "cel": "Odsłaniamy mięśnie do formy z okładki: 8–10% tłuszczu."
+        "od_tyg": 25,
+        "do_tyg": 39,
+        "cel": "Odsłaniamy mięśnie na wakacje: 8–10% tłuszczu."
       },
       {
         "id": "F4",
         "nazwa": "Finał",
-        "od_tyg": 51,
-        "do_tyg": 52,
-        "cel": "Utrzymanie formy, pozowanie, sesja zdjęciowa 16 września."
+        "od_tyg": 40,
+        "do_tyg": 41,
+        "cel": "Utrzymanie formy i zdjęcie porównawcze 26 czerwca — zaliczony pierwszy rok."
       }
     ]
   },
@@ -2774,9 +2774,9 @@
       "zdobyta": null
     },
     {
-      "id": "dzien_182",
-      "nazwa": "Pół roku",
-      "opis": "Połowa drogi do sesji.",
+      "id": "dzien_polowa",
+      "nazwa": "Połowa drogi",
+      "opis": "Połowa drogi do wakacji.",
       "zdobyta": null
     }
   ],
@@ -9477,7 +9477,8 @@
   "tryb": {
     "aktywny": false,
     "od": "2026-09-12",
-    "powod": ""
+    "powod": "Gojenie po zabiegu",
+    "wznow_o": "2026-09-17T05:00"
   },
   "postep": {
     "waga": [],
