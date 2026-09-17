@@ -14,11 +14,12 @@
     "nazwa": "Twaróg półtłusty",
     "jedn": "g",
     "opak": 250,
-    "cena": 5.5,
+    "cena": 3.39,
     "kat": "nabial",
     "trw": "chlodnia",
     "g": 1,
-    "baza": "g"
+    "baza": "g",
+    "cena_zrodlo": "Dino 17.09.2026"
   },
   "skyr": {
     "nazwa": "Skyr naturalny (kubek 150 g)",
@@ -34,11 +35,12 @@
     "nazwa": "Jogurt grecki 2%",
     "jedn": "g",
     "opak": 400,
-    "cena": 6.0,
+    "cena": 3.99,
     "kat": "nabial",
     "trw": "chlodnia",
     "g": 1,
-    "baza": "g"
+    "baza": "g",
+    "cena_zrodlo": "Dino 17.09.2026"
   },
   "serek_wiejski": {
     "nazwa": "Serek wiejski",
@@ -53,12 +55,13 @@
   "ser_zolty": {
     "nazwa": "Ser żółty w plastrach",
     "jedn": "plaster",
-    "opak": 12,
-    "cena": 10.0,
+    "opak": 7,
+    "cena": 6.99,
     "kat": "nabial",
     "trw": "chlodnia",
     "g": 20,
-    "baza": "g"
+    "baza": "g",
+    "cena_zrodlo": "Dino 17.09.2026"
   },
   "ser": {
     "nazwa": "Ser żółty starty",
@@ -94,11 +97,12 @@
     "nazwa": "Mleko 2%",
     "jedn": "ml",
     "opak": 1000,
-    "cena": 4.0,
+    "cena": 4.25,
     "kat": "nabial",
     "trw": "chlodnia",
     "g": 1,
-    "baza": "ml"
+    "baza": "ml",
+    "cena_zrodlo": "Dino 17.09.2026"
   },
   "maslo": {
     "nazwa": "Masło",
@@ -143,32 +147,35 @@
   "chleb": {
     "nazwa": "Chleb pszenny (zwykły biały)",
     "jedn": "kromka",
-    "opak": 16,
-    "cena": 4.5,
+    "opak": 14,
+    "cena": 4.79,
     "kat": "pieczywo",
     "trw": "chlodnia",
     "g": 35,
-    "baza": "g"
+    "baza": "g",
+    "cena_zrodlo": "Dino 17.09.2026"
   },
   "tortilla": {
     "nazwa": "Tortilla pszenna",
     "jedn": "szt",
-    "opak": 8,
-    "cena": 8.0,
+    "opak": 6,
+    "cena": 4.69,
     "kat": "pieczywo",
     "trw": "trwale",
     "g": 62,
-    "baza": "g"
+    "baza": "g",
+    "cena_zrodlo": "Dino 17.09.2026"
   },
   "makaron": {
     "nazwa": "Makaron (świderki/penne)",
     "jedn": "g",
     "opak": 500,
-    "cena": 4.5,
+    "cena": 4.99,
     "kat": "pieczywo",
     "trw": "trwale",
     "g": 1,
-    "baza": "g"
+    "baza": "g",
+    "cena_zrodlo": "Dino 17.09.2026"
   },
   "ziemniaki": {
     "nazwa": "Ziemniaki",
@@ -184,11 +191,12 @@
     "nazwa": "Pomidor",
     "jedn": "szt",
     "opak": 1,
-    "cena": 1.5,
+    "cena": 0.6,
     "kat": "warzywa",
     "trw": "swieze",
     "g": 120,
-    "baza": "g"
+    "baza": "g",
+    "cena_zrodlo": "Dino 17.09.2026"
   },
   "ogorek": {
     "nazwa": "Ogórek długi",
@@ -234,11 +242,12 @@
     "nazwa": "Marchew",
     "jedn": "szt",
     "opak": 1,
-    "cena": 0.5,
+    "cena": 0.16,
     "kat": "warzywa",
     "trw": "trwale",
     "g": 80,
-    "baza": "g"
+    "baza": "g",
+    "cena_zrodlo": "Dino 17.09.2026"
   },
   "pieczarki": {
     "nazwa": "Pieczarki",
@@ -303,12 +312,13 @@
   "kukurydza": {
     "nazwa": "Kukurydza konserwowa",
     "jedn": "g",
-    "opak": 200,
-    "cena": 4.0,
+    "opak": 400,
+    "cena": 4.29,
     "kat": "spizarnia",
     "trw": "trwale",
     "g": 1,
-    "baza": "g"
+    "baza": "g",
+    "cena_zrodlo": "Dino 17.09.2026"
   },
   "fasolka": {
     "nazwa": "Fasolka szparagowa mrożona",
@@ -334,21 +344,23 @@
     "nazwa": "Banan",
     "jedn": "szt",
     "opak": 1,
-    "cena": 1.2,
+    "cena": 0.42,
     "kat": "warzywa",
     "trw": "chlodnia",
     "g": 120,
-    "baza": "g"
+    "baza": "g",
+    "cena_zrodlo": "Dino 17.09.2026"
   },
   "jablko": {
     "nazwa": "Jabłko",
     "jedn": "szt",
     "opak": 1,
-    "cena": 1.2,
+    "cena": 0.68,
     "kat": "warzywa",
     "trw": "trwale",
     "g": 170,
-    "baza": "g"
+    "baza": "g",
+    "cena_zrodlo": "Dino 17.09.2026"
   },
   "passata": {
     "nazwa": "Passata pomidorowa",
@@ -404,41 +416,45 @@
     "nazwa": "Musztarda",
     "jedn": "lyzka",
     "opak": 12,
-    "cena": 4.0,
+    "cena": 3.69,
     "kat": "spizarnia",
     "trw": "trwale",
     "g": 15,
-    "baza": "g"
+    "baza": "g",
+    "cena_zrodlo": "Dino 17.09.2026"
   },
   "ketchup": {
     "nazwa": "Ketchup",
     "jedn": "lyzka",
-    "opak": 30,
-    "cena": 6.0,
+    "opak": 17,
+    "cena": 5.99,
     "kat": "spizarnia",
     "trw": "trwale",
     "g": 17,
-    "baza": "g"
+    "baza": "g",
+    "cena_zrodlo": "Dino 17.09.2026"
   },
   "miod": {
     "nazwa": "Miód",
     "jedn": "lyzka",
     "opak": 20,
-    "cena": 18.0,
+    "cena": 9.99,
     "kat": "spizarnia",
     "trw": "trwale",
     "g": 20,
-    "baza": "g"
+    "baza": "g",
+    "cena_zrodlo": "Dino 17.09.2026"
   },
   "orzechy": {
     "nazwa": "Orzechy / migdały",
     "jedn": "g",
     "opak": 200,
-    "cena": 12.0,
+    "cena": 11.49,
     "kat": "spizarnia",
     "trw": "trwale",
     "g": 1,
-    "baza": "g"
+    "baza": "g",
+    "cena_zrodlo": "Dino 17.09.2026"
   },
   "maslo_orzechowe": {
     "nazwa": "Masło orzechowe 100%",
@@ -453,22 +469,24 @@
   "maka": {
     "nazwa": "Mąka pszenna",
     "jedn": "g",
-    "opak": 1000,
-    "cena": 3.5,
+    "opak": 1100,
+    "cena": 1.85,
     "kat": "spizarnia",
     "trw": "trwale",
     "g": 1,
-    "baza": "g"
+    "baza": "g",
+    "cena_zrodlo": "Dino 17.09.2026"
   },
   "przyprawy": {
     "nazwa": "Przyprawy (sól, pieprz, papryka, oregano, majeranek)",
     "jedn": "porcja",
     "opak": 100,
-    "cena": 15.0,
+    "cena": 7.06,
     "kat": "spizarnia",
     "trw": "trwale",
     "g": 2,
-    "baza": "g"
+    "baza": "g",
+    "cena_zrodlo": "Dino 17.09.2026"
   },
   "danie_gotowe": {
     "nazwa": "Gotowe danie mięsne (słoik/tacka)",
@@ -530,31 +548,34 @@
     "nazwa": "Skyr waniliowy (kubek 150 g)",
     "jedn": "kubek",
     "opak": 1,
-    "cena": 3.5,
+    "cena": 3.69,
     "kat": "nabial",
     "trw": "chlodnia",
     "g": 150,
-    "baza": "g"
+    "baza": "g",
+    "cena_zrodlo": "Dino 17.09.2026"
   },
   "proszek_do_pieczenia": {
     "nazwa": "Proszek do pieczenia",
     "jedn": "g",
     "opak": 30,
-    "cena": 0.8,
+    "cena": 0.89,
     "kat": "spizarnia",
     "trw": "trwale",
     "g": 1,
-    "baza": "g"
+    "baza": "g",
+    "cena_zrodlo": "Dino 17.09.2026"
   },
   "cynamon": {
     "nazwa": "Przyprawa do cynamonek / cynamon",
     "jedn": "g",
-    "opak": 20,
-    "cena": 3.0,
+    "opak": 15,
+    "cena": 1.59,
     "kat": "spizarnia",
     "trw": "trwale",
     "g": 1,
-    "baza": "g"
+    "baza": "g",
+    "cena_zrodlo": "Dino 17.09.2026"
   },
   "odzywka_wpc": {
     "nazwa": "Odżywka białkowa WPC 80 (czekoladowa) — zapas, kupujesz osobno",
@@ -572,34 +593,37 @@
     }
   },
   "dzem_niskoslodzony": {
-    "nazwa": "Dżem niskosłodzony (truskawkowy)",
+    "nazwa": "Dżem (np. malinowy, słoik 200 g)",
     "jedn": "g",
-    "opak": 280,
-    "cena": 7.0,
+    "opak": 200,
+    "cena": 5.49,
     "kat": "spizarnia",
     "trw": "trwale",
     "g": 1,
-    "baza": "g"
+    "baza": "g",
+    "cena_zrodlo": "Dino 17.09.2026"
   },
   "napoj_proteinowy": {
     "nazwa": "Napój proteinowy Müllermilch Protein (400 ml)",
     "jedn": "butelka",
     "opak": 1,
-    "cena": 6.5,
+    "cena": 5.29,
     "kat": "nabial",
     "trw": "chlodnia",
     "g": 400,
-    "baza": "ml"
+    "baza": "ml",
+    "cena_zrodlo": "Dino 17.09.2026"
   },
   "skyr_pitny": {
     "nazwa": "Skyr pitny (butelka 330 ml)",
     "jedn": "butelka",
     "opak": 1,
-    "cena": 4.5,
+    "cena": 5.49,
     "kat": "nabial",
     "trw": "chlodnia",
     "g": 330,
-    "baza": "ml"
+    "baza": "ml",
+    "cena_zrodlo": "Dino 17.09.2026"
   },
   "poledwica": {
     "nazwa": "Polędwica sopocka (wędlina)",

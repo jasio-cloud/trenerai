@@ -1,4 +1,193 @@
 {
   "_info": "Paragony ze sklepu (Dino) przysłane w czacie. Każda pozycja przypisana do klucza z produkty.json; ceny z paragonów nadpisują szacunki w produkty.json (pole cena_zrodlo).",
-  "paragony": []
+  "paragony": [
+    {
+      "data": "2026-09-17",
+      "godzina": "15:20",
+      "sklep": "Dino",
+      "suma": 126.63,
+      "pozycje": [
+        {
+          "tekst": "SER TWAROGOWY 250G",
+          "klucz": "twarog",
+          "ilosc": 1,
+          "kwota": 3.39
+        },
+        {
+          "tekst": "JOG SKY PIAT 330ML",
+          "klucz": "skyr_pitny",
+          "ilosc": 1,
+          "kwota": 5.49
+        },
+        {
+          "tekst": "REKLAMÓWKA 35L",
+          "klucz": null,
+          "ilosc": 2,
+          "kwota": 1.3
+        },
+        {
+          "tekst": "MIGDAŁY PRAŻ 200G",
+          "klucz": "orzechy",
+          "ilosc": 1,
+          "kwota": 11.49
+        },
+        {
+          "tekst": "SER GOUDA PLA 135G",
+          "klucz": "ser_zolty",
+          "ilosc": 2,
+          "kwota": 13.98
+        },
+        {
+          "tekst": "JOG WAN PIAT 150G",
+          "klucz": "skyr_waniliowy",
+          "ilosc": 2,
+          "kwota": 7.38
+        },
+        {
+          "tekst": "MLEKO MUL PRO 400G",
+          "klucz": "napoj_proteinowy",
+          "ilosc": 2,
+          "kwota": 10.58
+        },
+        {
+          "tekst": "JOGURT 180G+20G",
+          "klucz": "jogurt_grecki",
+          "ilosc": 1,
+          "kwota": 2.19
+        },
+        {
+          "tekst": "JOGURT NA 370+30G",
+          "klucz": "jogurt_grecki",
+          "ilosc": 1,
+          "kwota": 3.99
+        },
+        {
+          "tekst": "MLEKO SPOŻ 3,2% 1L",
+          "klucz": "mleko",
+          "ilosc": 1,
+          "kwota": 4.25
+        },
+        {
+          "tekst": "MĄKA TORT 1,1KG",
+          "klucz": "maka",
+          "ilosc": 1,
+          "kwota": 1.85
+        },
+        {
+          "tekst": "CYNAMON MIELONY 15",
+          "klucz": "cynamon",
+          "ilosc": 1,
+          "kwota": 1.59
+        },
+        {
+          "tekst": "ŚNIADANIOWE KAN 20",
+          "klucz": null,
+          "ilosc": 1,
+          "kwota": 2.19
+        },
+        {
+          "tekst": "PIEPRZ CZAR MIEL",
+          "klucz": "przyprawy",
+          "ilosc": 1,
+          "kwota": 1.39
+        },
+        {
+          "tekst": "OREGANO 8G",
+          "klucz": "przyprawy",
+          "ilosc": 1,
+          "kwota": 1.59
+        },
+        {
+          "tekst": "MIÓD WIELOKWIAT 400",
+          "klucz": "miod",
+          "ilosc": 1,
+          "kwota": 9.99
+        },
+        {
+          "tekst": "MAJERANEK PRYMAT",
+          "klucz": "przyprawy",
+          "ilosc": 1,
+          "kwota": 2.49
+        },
+        {
+          "tekst": "PAPRYKA SŁODKA 20G",
+          "klucz": "przyprawy",
+          "ilosc": 1,
+          "kwota": 1.59
+        },
+        {
+          "tekst": "KUKURYDZA KONSERWOWA",
+          "klucz": "kukurydza",
+          "ilosc": 1,
+          "kwota": 4.29
+        },
+        {
+          "tekst": "POMIDOR 0,348 kg",
+          "klucz": "pomidor",
+          "ilosc": 3,
+          "kwota": 1.74
+        },
+        {
+          "tekst": "JABŁKO DESER 0,258 kg",
+          "klucz": "jablko",
+          "ilosc": 1,
+          "kwota": 1.03
+        },
+        {
+          "tekst": "MUSZTARDA SAREPSKA",
+          "klucz": "musztarda",
+          "ilosc": 1,
+          "kwota": 3.69
+        },
+        {
+          "tekst": "DŻEM MALINOWY 200G",
+          "klucz": "dzem_niskoslodzony",
+          "ilosc": 1,
+          "kwota": 5.49
+        },
+        {
+          "tekst": "PROSZEK D/PIEC 30G",
+          "klucz": "proszek_do_pieczenia",
+          "ilosc": 1,
+          "kwota": 0.89
+        },
+        {
+          "tekst": "SOS KETCHUP 300G",
+          "klucz": "ketchup",
+          "ilosc": 1,
+          "kwota": 5.99
+        },
+        {
+          "tekst": "TORTILLA 360G",
+          "klucz": "tortilla",
+          "ilosc": 1,
+          "kwota": 4.69
+        },
+        {
+          "tekst": "MAKARON KOKARD 500",
+          "klucz": "makaron",
+          "ilosc": 1,
+          "kwota": 4.99
+        },
+        {
+          "tekst": "BANAN 0,536 kg",
+          "klucz": "banan",
+          "ilosc": 4,
+          "kwota": 1.87
+        },
+        {
+          "tekst": "CHLEB BAŁTONOWSKI 500",
+          "klucz": "chleb",
+          "ilosc": 1,
+          "kwota": 4.79
+        },
+        {
+          "tekst": "MARCHEW 0,226 kg",
+          "klucz": "marchew",
+          "ilosc": 3,
+          "kwota": 0.45
+        }
+      ]
+    }
+  ]
 }
