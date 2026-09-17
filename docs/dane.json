@@ -1,5 +1,5 @@
 {
-  "wygenerowano": "2026-09-17T16:25:36",
+  "wygenerowano": "2026-09-17T16:29:13+02:00",
   "dzis": "2026-09-17",
   "typ_dzis": 1,
   "typy": {
@@ -1142,6 +1142,7 @@
             "ciezar": 0.0,
             "poprzedni": 0.0,
             "powt": [
+              15,
               15
             ],
             "data": "2026-09-17",
@@ -3022,7 +3023,7 @@
         "pierwszy": 15,
         "najlepszy": 15,
         "ostatni": 15,
-        "sesji": 1,
+        "sesji": 2,
         "miara": "powt.",
         "od": "2026-09-17"
       }
@@ -7115,6 +7116,16 @@
           "powt": [
             15
           ]
+        },
+        {
+          "data": "2026-09-17",
+          "typ": "seria",
+          "cwiczenie": "Pompki",
+          "ciezar": 0,
+          "powt": [
+            15,
+            15
+          ]
         }
       ],
       "trening": {
@@ -7143,6 +7154,7 @@
                 "ciezar": 0.0,
                 "poprzedni": 0.0,
                 "powt": [
+                  15,
                   15
                 ],
                 "data": "2026-09-17",
@@ -8795,6 +8807,7 @@
                 "ciezar": 0.0,
                 "poprzedni": 0.0,
                 "powt": [
+                  15,
                   15
                 ],
                 "data": "2026-09-17",
@@ -9424,6 +9437,7 @@
                 "ciezar": 0.0,
                 "poprzedni": 0.0,
                 "powt": [
+                  15,
                   15
                 ],
                 "data": "2026-09-17",
@@ -10527,6 +10541,7 @@
                 "ciezar": 0.0,
                 "poprzedni": 0.0,
                 "powt": [
+                  15,
                   15
                 ],
                 "data": "2026-09-17",
@@ -10578,6 +10593,16 @@
         "cwiczenie": "Pompki",
         "ciezar": 0,
         "powt": [
+          15
+        ]
+      },
+      {
+        "data": "2026-09-17",
+        "typ": "seria",
+        "cwiczenie": "Pompki",
+        "ciezar": 0,
+        "powt": [
+          15,
           15
         ]
       }
@@ -11464,6 +11489,7 @@
     "Pompki": {
       "ciezar": 0.0,
       "powt": [
+        15,
         15
       ],
       "nastepny": 0.0,
