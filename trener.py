@@ -1527,6 +1527,13 @@ def _sesja(szablon, blok, ile):
         if prop:
             c["propozycja"] = prop
         cw.append(c)
+    # brzuch na koniec kazdej sesji: 2 cwiczenia, ktorych jeszcze nie bylo
+    for c in PROGRAM.get("brzuch", {}).get("cwiczenia", []):
+        if sum(1 for x in cw if x.get("brzuch")) >= 2:
+            break
+        if any(x["nazwa"] == c["nazwa"] for x in cw):
+            continue
+        cw.append(dict(c, serie=2, brzuch=True))
     czas = 8 + sum(int(c["serie"]) for c in cw) * 2
     return {"id": szablon["id"], "nazwa": szablon["nazwa"], "czas_min": czas,
             "blok": blok["nazwa"], "blok_opis": blok["opis"], "zapas": blok["zapas"],

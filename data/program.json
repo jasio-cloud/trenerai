@@ -128,5 +128,18 @@
 
   "przedstart": {"nazwa": "Przed startem — gojenie",
     "zasada": "Plan treningowy zaczyna się 17 września. Do tego czasu wracasz do zdrowia po zabiegu: bez treningu, bez deficytu, dużo snu.",
-    "mikro": ["Spokojny spacer, jeśli czujesz się dobrze", "Dużo płynów", "Zakup taśmy krawieckiej do pomiarów"]}
+    "mikro": ["Spokojny spacer, jeśli czujesz się dobrze", "Dużo płynów", "Zakup taśmy krawieckiej do pomiarów"]},
+
+  "brzuch": {"opis": "Brzuch na koniec każdego treningu, ok. 5 minut. Nie spala tłuszczu z brzucha — to robi dieta — ale wzmacnia mięśnie, które trzymają brzuch płasko i poprawiają postawę.",
+    "cwiczenia": [
+      {"nazwa": "Dead bug (martwy robak)", "powt": "8-10", "przerwa": "45 s",
+       "wskazowka": "Leżysz na plecach, ręce prosto w górę, nogi zgięte pod kątem prostym. Powoli opuszczasz jednocześnie przeciwną rękę i nogę nad podłogę i wracasz. Dolna część pleców cały czas dociśnięta do podłogi. Powtórzenia liczysz na jedną stronę.",
+       "latwiej": "Opuszczasz tylko nogi, ręce zostają w górze.", "trudniej": "Z lekkim hantlem trzymanym oburącz nad klatką."},
+      {"nazwa": "Deska", "powt": "30-60 s", "przerwa": "45 s",
+       "wskazowka": "Przedramiona pod barkami, ciało w jednej linii od głowy do pięt. Pośladki i brzuch napięte, jakbyś miał dostać cios w brzuch. Wpisujesz liczbę sekund.",
+       "latwiej": "Na kolanach.", "trudniej": "Z uniesioną jedną nogą."},
+      {"nazwa": "Unoszenie kolan w zwisie", "powt": "10-15", "przerwa": "60 s",
+       "wskazowka": "Zwis na drążku, kolana do klatki bez bujania, powoli w dół.",
+       "latwiej": "Leżąc na ławce.", "trudniej": "Proste nogi."}
+    ]}
 }

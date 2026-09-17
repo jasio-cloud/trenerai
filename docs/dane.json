@@ -1,5 +1,5 @@
 {
-  "wygenerowano": "2026-09-17T17:48:01",
+  "wygenerowano": "2026-09-17T17:49:18",
   "dzis": "2026-09-17",
   "typ_dzis": 1,
   "typy": {
@@ -1133,7 +1133,7 @@
     "trening": {
       "id": "k_ekspres",
       "nazwa": "Ekspres po zmianie",
-      "czas_min": 20,
+      "czas_min": 28,
       "blok": "Blok 1 — Nauka ruchu",
       "blok_opis": "Uczysz się ruchu, nie dźwigasz. Ciężar tak lekki, że mógłbyś zrobić jeszcze 3 powtórzenia. Ma ci się chcieć przyjść na następny trening.",
       "zapas": "3 powtórzenia w zapasie",
@@ -1200,6 +1200,26 @@
             "data": "2026-09-17",
             "podwyzka": 0.0
           }
+        },
+        {
+          "nazwa": "Dead bug (martwy robak)",
+          "powt": "8-10",
+          "przerwa": "45 s",
+          "wskazowka": "Leżysz na plecach, ręce prosto w górę, nogi zgięte pod kątem prostym. Powoli opuszczasz jednocześnie przeciwną rękę i nogę nad podłogę i wracasz. Dolna część pleców cały czas dociśnięta do podłogi. Powtórzenia liczysz na jedną stronę.",
+          "latwiej": "Opuszczasz tylko nogi, ręce zostają w górze.",
+          "trudniej": "Z lekkim hantlem trzymanym oburącz nad klatką.",
+          "serie": 2,
+          "brzuch": true
+        },
+        {
+          "nazwa": "Deska",
+          "powt": "30-60 s",
+          "przerwa": "45 s",
+          "wskazowka": "Przedramiona pod barkami, ciało w jednej linii od głowy do pięt. Pośladki i brzuch napięte, jakbyś miał dostać cios w brzuch. Wpisujesz liczbę sekund.",
+          "latwiej": "Na kolanach.",
+          "trudniej": "Z uniesioną jedną nogą.",
+          "serie": 2,
+          "brzuch": true
         }
       ],
       "finisz": "Każda seria kończy się z zapasem: 3 powtórzenia w zapasie. Uczysz się ruchu, nie dźwigasz. Ciężar tak lekki, że mógłbyś zrobić jeszcze 3 powtórzenia. Ma ci się chcieć przyjść na następny trening."
@@ -7236,7 +7256,7 @@
         "trening": {
           "id": "k_ekspres",
           "nazwa": "Ekspres po zmianie",
-          "czas_min": 20,
+          "czas_min": 28,
           "blok": "Blok 1 — Nauka ruchu",
           "blok_opis": "Uczysz się ruchu, nie dźwigasz. Ciężar tak lekki, że mógłbyś zrobić jeszcze 3 powtórzenia. Ma ci się chcieć przyjść na następny trening.",
           "zapas": "3 powtórzenia w zapasie",
@@ -7303,6 +7323,26 @@
                 "data": "2026-09-17",
                 "podwyzka": 0.0
               }
+            },
+            {
+              "nazwa": "Dead bug (martwy robak)",
+              "powt": "8-10",
+              "przerwa": "45 s",
+              "wskazowka": "Leżysz na plecach, ręce prosto w górę, nogi zgięte pod kątem prostym. Powoli opuszczasz jednocześnie przeciwną rękę i nogę nad podłogę i wracasz. Dolna część pleców cały czas dociśnięta do podłogi. Powtórzenia liczysz na jedną stronę.",
+              "latwiej": "Opuszczasz tylko nogi, ręce zostają w górze.",
+              "trudniej": "Z lekkim hantlem trzymanym oburącz nad klatką.",
+              "serie": 2,
+              "brzuch": true
+            },
+            {
+              "nazwa": "Deska",
+              "powt": "30-60 s",
+              "przerwa": "45 s",
+              "wskazowka": "Przedramiona pod barkami, ciało w jednej linii od głowy do pięt. Pośladki i brzuch napięte, jakbyś miał dostać cios w brzuch. Wpisujesz liczbę sekund.",
+              "latwiej": "Na kolanach.",
+              "trudniej": "Z uniesioną jedną nogą.",
+              "serie": 2,
+              "brzuch": true
             }
           ],
           "finisz": "Każda seria kończy się z zapasem: 3 powtórzenia w zapasie. Uczysz się ruchu, nie dźwigasz. Ciężar tak lekki, że mógłbyś zrobić jeszcze 3 powtórzenia. Ma ci się chcieć przyjść na następny trening."
@@ -7833,7 +7873,7 @@
         "trening": {
           "id": "g_nogi",
           "nazwa": "Nogi, brzuch i barki",
-          "czas_min": 24,
+          "czas_min": 32,
           "blok": "Blok 1 — Nauka ruchu",
           "blok_opis": "Uczysz się ruchu, nie dźwigasz. Ciężar tak lekki, że mógłbyś zrobić jeszcze 3 powtórzenia. Ma ci się chcieć przyjść na następny trening.",
           "zapas": "3 powtórzenia w zapasie",
@@ -7888,6 +7928,26 @@
                 "data": "2026-09-17",
                 "podwyzka": 0.0
               }
+            },
+            {
+              "nazwa": "Dead bug (martwy robak)",
+              "powt": "8-10",
+              "przerwa": "45 s",
+              "wskazowka": "Leżysz na plecach, ręce prosto w górę, nogi zgięte pod kątem prostym. Powoli opuszczasz jednocześnie przeciwną rękę i nogę nad podłogę i wracasz. Dolna część pleców cały czas dociśnięta do podłogi. Powtórzenia liczysz na jedną stronę.",
+              "latwiej": "Opuszczasz tylko nogi, ręce zostają w górze.",
+              "trudniej": "Z lekkim hantlem trzymanym oburącz nad klatką.",
+              "serie": 2,
+              "brzuch": true
+            },
+            {
+              "nazwa": "Deska",
+              "powt": "30-60 s",
+              "przerwa": "45 s",
+              "wskazowka": "Przedramiona pod barkami, ciało w jednej linii od głowy do pięt. Pośladki i brzuch napięte, jakbyś miał dostać cios w brzuch. Wpisujesz liczbę sekund.",
+              "latwiej": "Na kolanach.",
+              "trudniej": "Z uniesioną jedną nogą.",
+              "serie": 2,
+              "brzuch": true
             }
           ],
           "finisz": "Każda seria kończy się z zapasem: 3 powtórzenia w zapasie. Uczysz się ruchu, nie dźwigasz. Ciężar tak lekki, że mógłbyś zrobić jeszcze 3 powtórzenia. Ma ci się chcieć przyjść na następny trening."
@@ -8911,7 +8971,7 @@
         "trening": {
           "id": "k_ekspres",
           "nazwa": "Ekspres po zmianie",
-          "czas_min": 20,
+          "czas_min": 28,
           "blok": "Blok 1 — Nauka ruchu",
           "blok_opis": "Uczysz się ruchu, nie dźwigasz. Ciężar tak lekki, że mógłbyś zrobić jeszcze 3 powtórzenia. Ma ci się chcieć przyjść na następny trening.",
           "zapas": "3 powtórzenia w zapasie",
@@ -8978,6 +9038,26 @@
                 "data": "2026-09-17",
                 "podwyzka": 0.0
               }
+            },
+            {
+              "nazwa": "Dead bug (martwy robak)",
+              "powt": "8-10",
+              "przerwa": "45 s",
+              "wskazowka": "Leżysz na plecach, ręce prosto w górę, nogi zgięte pod kątem prostym. Powoli opuszczasz jednocześnie przeciwną rękę i nogę nad podłogę i wracasz. Dolna część pleców cały czas dociśnięta do podłogi. Powtórzenia liczysz na jedną stronę.",
+              "latwiej": "Opuszczasz tylko nogi, ręce zostają w górze.",
+              "trudniej": "Z lekkim hantlem trzymanym oburącz nad klatką.",
+              "serie": 2,
+              "brzuch": true
+            },
+            {
+              "nazwa": "Deska",
+              "powt": "30-60 s",
+              "przerwa": "45 s",
+              "wskazowka": "Przedramiona pod barkami, ciało w jednej linii od głowy do pięt. Pośladki i brzuch napięte, jakbyś miał dostać cios w brzuch. Wpisujesz liczbę sekund.",
+              "latwiej": "Na kolanach.",
+              "trudniej": "Z uniesioną jedną nogą.",
+              "serie": 2,
+              "brzuch": true
             }
           ],
           "finisz": "Każda seria kończy się z zapasem: 3 powtórzenia w zapasie. Uczysz się ruchu, nie dźwigasz. Ciężar tak lekki, że mógłbyś zrobić jeszcze 3 powtórzenia. Ma ci się chcieć przyjść na następny trening."
@@ -9500,7 +9580,7 @@
         "trening": {
           "id": "g_gora",
           "nazwa": "Góra — klatka i barki",
-          "czas_min": 24,
+          "czas_min": 32,
           "blok": "Blok 1 — Nauka ruchu",
           "blok_opis": "Uczysz się ruchu, nie dźwigasz. Ciężar tak lekki, że mógłbyś zrobić jeszcze 3 powtórzenia. Ma ci się chcieć przyjść na następny trening.",
           "zapas": "3 powtórzenia w zapasie",
@@ -9566,6 +9646,26 @@
                 "data": "2026-09-17",
                 "podwyzka": 0.0
               }
+            },
+            {
+              "nazwa": "Dead bug (martwy robak)",
+              "powt": "8-10",
+              "przerwa": "45 s",
+              "wskazowka": "Leżysz na plecach, ręce prosto w górę, nogi zgięte pod kątem prostym. Powoli opuszczasz jednocześnie przeciwną rękę i nogę nad podłogę i wracasz. Dolna część pleców cały czas dociśnięta do podłogi. Powtórzenia liczysz na jedną stronę.",
+              "latwiej": "Opuszczasz tylko nogi, ręce zostają w górze.",
+              "trudniej": "Z lekkim hantlem trzymanym oburącz nad klatką.",
+              "serie": 2,
+              "brzuch": true
+            },
+            {
+              "nazwa": "Deska",
+              "powt": "30-60 s",
+              "przerwa": "45 s",
+              "wskazowka": "Przedramiona pod barkami, ciało w jednej linii od głowy do pięt. Pośladki i brzuch napięte, jakbyś miał dostać cios w brzuch. Wpisujesz liczbę sekund.",
+              "latwiej": "Na kolanach.",
+              "trudniej": "Z uniesioną jedną nogą.",
+              "serie": 2,
+              "brzuch": true
             }
           ],
           "finisz": "Każda seria kończy się z zapasem: 3 powtórzenia w zapasie. Uczysz się ruchu, nie dźwigasz. Ciężar tak lekki, że mógłbyś zrobić jeszcze 3 powtórzenia. Ma ci się chcieć przyjść na następny trening."
@@ -10613,7 +10713,7 @@
         "trening": {
           "id": "k_ekspres",
           "nazwa": "Ekspres po zmianie",
-          "czas_min": 20,
+          "czas_min": 28,
           "blok": "Blok 1 — Nauka ruchu",
           "blok_opis": "Uczysz się ruchu, nie dźwigasz. Ciężar tak lekki, że mógłbyś zrobić jeszcze 3 powtórzenia. Ma ci się chcieć przyjść na następny trening.",
           "zapas": "3 powtórzenia w zapasie",
@@ -10680,6 +10780,26 @@
                 "data": "2026-09-17",
                 "podwyzka": 0.0
               }
+            },
+            {
+              "nazwa": "Dead bug (martwy robak)",
+              "powt": "8-10",
+              "przerwa": "45 s",
+              "wskazowka": "Leżysz na plecach, ręce prosto w górę, nogi zgięte pod kątem prostym. Powoli opuszczasz jednocześnie przeciwną rękę i nogę nad podłogę i wracasz. Dolna część pleców cały czas dociśnięta do podłogi. Powtórzenia liczysz na jedną stronę.",
+              "latwiej": "Opuszczasz tylko nogi, ręce zostają w górze.",
+              "trudniej": "Z lekkim hantlem trzymanym oburącz nad klatką.",
+              "serie": 2,
+              "brzuch": true
+            },
+            {
+              "nazwa": "Deska",
+              "powt": "30-60 s",
+              "przerwa": "45 s",
+              "wskazowka": "Przedramiona pod barkami, ciało w jednej linii od głowy do pięt. Pośladki i brzuch napięte, jakbyś miał dostać cios w brzuch. Wpisujesz liczbę sekund.",
+              "latwiej": "Na kolanach.",
+              "trudniej": "Z uniesioną jedną nogą.",
+              "serie": 2,
+              "brzuch": true
             }
           ],
           "finisz": "Każda seria kończy się z zapasem: 3 powtórzenia w zapasie. Uczysz się ruchu, nie dźwigasz. Ciężar tak lekki, że mógłbyś zrobić jeszcze 3 powtórzenia. Ma ci się chcieć przyjść na następny trening."
@@ -11758,6 +11878,11 @@
       "krok": 2.5
     },
     "Przysiad bez ciężaru": {
+      "kg": 0,
+      "jedn": "masa ciała",
+      "krok": 0
+    },
+    "Dead bug (martwy robak)": {
       "kg": 0,
       "jedn": "masa ciała",
       "krok": 0
