@@ -1,5 +1,5 @@
 {
-  "_info": "SZYBKIE POSIŁKI — bez gotowania albo do 12 minut. sloty = gdzie pasuje (sniadanie / drugi / kolacja). box=true znaczy, że można to spakować i zjeść na zimno na 24h zmianie. czas_min liczony realnie, z wyjmowaniem rzeczy z lodówki. deser=true to deser białkowy — liczy się jak normalny posiłek, planer wstawia go najwyżej raz dziennie. ulubione=true to Twoje sprawdzone śniadania: planer daje je 3 dni na 4, co czwarty dzień jest odmiana.",
+  "_info": "SZYBKIE POSIŁKI — bez gotowania albo do 12 minut. sloty = gdzie pasuje (sniadanie / drugi / kolacja). box=true znaczy, że można to spakować i zjeść na zimno na 24h zmianie. czas_min liczony realnie, z wyjmowaniem rzeczy z lodówki. deser=true to deser białkowy — liczy się jak normalny posiłek, planer wstawia go najwyżej raz dziennie. ulubione=true to Twoje sprawdzone śniadania: planer daje je 3 dni na 4, co czwarty dzień jest odmiana. W krokach {klucz} zamienia się na ilość przeliczoną na Twoją porcję.",
   "posilki": [
     {
       "id": "q_jajecznica",
@@ -33,10 +33,11 @@
         ]
       ],
       "kroki": [
-        "Rozgrzej patelnię na średnim ogniu i rozpuść na niej kawałek masła.",
-        "Wbij jaja do kubka (ile — patrz rozpiska), posól, popieprz, rozbełtaj widelcem.",
-        "Wlej na patelnię, odczekaj 20 sekund, potem zgarniaj łopatką co kilka sekund.",
-        "Zdejmij z ognia, gdy jaja są ścięte, ale jeszcze błyszczące — dojdą na talerzu. Pomidor w plastry obok."
+        "Wbij jajka ({jaja}) do kubka lub miski: stuknij jajkiem o brzeg i rozchyl skorupkę kciukami. Dodaj szczyptę soli i pieprzu i roztrzep widelcem przez ok. 30 sekund.",
+        "Patelnię postaw na średnim ogniu, włóż masło ({maslo}) i poczekaj ok. minuty, aż się rozpuści i lekko spieni.",
+        "Wlej jajka. Odczekaj 20 sekund, potem łopatką zgarniaj ścięte jajka od brzegów do środka co kilka sekund.",
+        "Po 2–3 minutach, gdy jajka są ścięte, ale jeszcze lekko błyszczące, zdejmij patelnię z ognia i przełóż jajecznicę na talerz.",
+        "Pomidora ({pomidor}) umyj i pokrój w plastry. Zjedz z chlebem ({chleb})."
       ]
     },
     {
@@ -75,10 +76,12 @@
         ]
       ],
       "kroki": [
-        "Rozbełtaj jaja (ile — patrz rozpiska) z solą i pieprzem.",
-        "Na patelni rozpuść masło, wlej jaja i NIE mieszaj. Smaż 3 min na małym ogniu pod przykryciem.",
-        "Gdy wierzch jest już prawie ścięty, połóż na połowie plastry sera i pomidora.",
-        "Złóż omlet na pół łopatką, smaż jeszcze 1 min. Zjedz z kromką chleba."
+        "Wbij jajka ({jaja}) do miski, dodaj szczyptę soli i pieprzu i roztrzep widelcem przez 30 sekund.",
+        "Pomidora ({pomidor}) pokrój w plastry. Przygotuj ser ({ser_zolty}).",
+        "Patelnię postaw na małym ogniu (1/3 skali), rozpuść masło ({maslo}) i rozprowadź je po całym dnie.",
+        "Wlej jajka i nie mieszaj. Przykryj pokrywką i smaż 3 minuty, aż wierzch będzie prawie ścięty.",
+        "Na jedną połowę połóż ser i pomidor. Łopatką złóż drugą połowę na wierzch i smaż jeszcze 1 minutę.",
+        "Zsuń omlet na talerz. Zjedz z chlebem ({chleb})."
       ]
     },
     {
@@ -109,9 +112,10 @@
         ]
       ],
       "kroki": [
-        "Twaróg rozgnieć widelcem z odrobiną mleka — będzie kremowy, a nie suchy.",
-        "Wmieszaj połowę dżemu, resztę daj na wierzch.",
-        "Jedz z chlebem albo posmaruj kromki. Do boxa: twarożek w zakręcanym pojemniku, chleb osobno."
+        "Twaróg ({twarog}) włóż do miski i dolej mleko ({mleko}).",
+        "Rozgniataj widelcem ok. minuty, aż twaróg będzie gładki i kremowy.",
+        "Dżem ({dzem_niskoslodzony}): połowę wmieszaj w twaróg, resztę połóż na wierzch.",
+        "Zjedz z chlebem ({chleb}) albo posmaruj nim kromki. Do boxa: twarożek w zakręcanym pojemniku, chleb w osobnej torebce."
       ]
     },
     {
@@ -138,9 +142,10 @@
         ]
       ],
       "kroki": [
-        "Skyr do miski lub pojemnika.",
-        "Banan w plastry, łyżka masła orzechowego na wierzch. Wymieszaj albo zostaw warstwami.",
-        "Na zmianę: wszystko do zakręcanego pojemnika, banan dorzucasz na miejscu żeby nie sczerniał."
+        "Skyr ({skyr}) przełóż do miski lub zakręcanego pojemnika.",
+        "Banana ({banan}) obierz i pokrój w plasterki na wierzch.",
+        "Masło orzechowe ({maslo_orzechowe}) nabierz łyżką, zsuń drugą łyżką na skyr i ewentualnie wymieszaj.",
+        "Na zmianę: skyr z masłem orzechowym w pojemniku, a banana weź w całości i pokrój dopiero przy jedzeniu — pokrojony ściemnieje."
       ]
     },
     {
@@ -180,9 +185,10 @@
         ]
       ],
       "kroki": [
-        "Jajka wrzuć do wrzącej wody i gotuj 9 min, potem zalej zimną wodą — same się obiorą.",
-        "Chleb posmaruj cienko musztardą, połóż ser, na to plastry jajka.",
-        "Posól, popieprz, ogórek kiszony w plastrach na wierzch. Do boxa zawijasz w folię."
+        "Jajka na twardo: w małym garnku zagotuj tyle wody, żeby przykryła jajka ({jaja}). Łyżką ostrożnie włóż jajka do wrzątku i gotuj 9 minut na średnim ogniu. Odlej wrzątek, zalej zimną wodą na 3 minuty i obierz ze skorupki.",
+        "Jajka pokrój w plastry.",
+        "Chleb ({chleb}) posmaruj cienko musztardą ({musztarda}), połóż ser ({ser_zolty}), na to plastry jajka. Posól i popieprz szczyptą.",
+        "Ogórka kiszonego ({ogorek_kiszony}) pokrój w plasterki i ułóż na wierzchu. Do boxa zawiń każdą kanapkę w folię."
       ]
     },
     {
@@ -217,10 +223,10 @@
         ]
       ],
       "kroki": [
-        "Ugotuj jajka na twardo (9 min od wrzenia), zalej zimną wodą, obierz.",
-        "Do pojemnika: serek wiejski, obok pokrojone jajka, obok ogórki kiszone.",
-        "Posól i popieprz jajka od razu, żeby nie nosić soli. Chleb do osobnej torebki.",
-        "To najprostszy box na zmianę — nic nie trzeba odgrzewać."
+        "Jajka na twardo: w małym garnku zagotuj tyle wody, żeby przykryła jajka ({jaja}). Łyżką ostrożnie włóż jajka do wrzątku i gotuj 9 minut na średnim ogniu. Odlej wrzątek, zalej zimną wodą na 3 minuty i obierz ze skorupki.",
+        "Do pojemnika przełóż serek wiejski ({serek_wiejski}). Obok ułóż jajka przekrojone na pół i posyp je szczyptą soli i pieprzu.",
+        "Dołóż ogórki kiszone ({ogorek_kiszony}) — w całości albo pokrojone.",
+        "Chleb ({chleb}) zapakuj do osobnej torebki. Nic nie trzeba odgrzewać."
       ]
     },
     {
@@ -267,10 +273,12 @@
         ]
       ],
       "kroki": [
-        "Na patelni na oleju smaż posiekaną cebulę i paprykę 5 min.",
-        "Dodaj czosnek, passatę, sól, pieprz, szczyptę słodkiej papryki. Gotuj 3 min.",
-        "Zrób łyżką wgłębienie na każde jajko i wbij je.",
-        "Przykryj i trzymaj 5 min na małym ogniu — białka mają się ściąć, żółtka zostać płynne. Maczasz chlebem prosto z patelni, zero talerzy."
+        "Obierz cebulę ({cebula}) i pokrój w drobną kostkę. Paprykę ({papryka}) oczyść z pestek i pokrój w kostkę. Obierz czosnek ({czosnek}) i posiekaj.",
+        "Patelnię postaw na średnim ogniu, wlej olej ({olej}), po minucie wrzuć cebulę i paprykę. Smaż 5 minut, mieszając.",
+        "Dodaj czosnek, passatę ({passata}), szczyptę soli i pieprzu oraz pół łyżeczki słodkiej papryki w proszku. Gotuj 3 minuty, mieszając.",
+        "Łyżką zrób w sosie tyle dołków, ile masz jajek ({jaja}), i wbij do każdego po jednym.",
+        "Przykryj pokrywką i gotuj 5 minut na małym ogniu, aż białka będą białe i ścięte, a żółtka jeszcze miękkie.",
+        "Jedz prosto z patelni, maczając chleb ({chleb})."
       ]
     },
     {
@@ -314,10 +322,12 @@
         ]
       ],
       "kroki": [
-        "Zrób gęstą jajecznicę z jajek z rozpiski, na maśle — trochę bardziej ściętą niż zwykle, żeby nie ciekła z tortilli.",
-        "Tortille podgrzej 20 sekund na suchej patelni, żeby się nie łamały przy zwijaniu.",
-        "Na każdą wyłóż jajecznicę, posyp serem, dorzuć sałatę i plastry pomidora.",
-        "Zawiń boki do środka i zroluj. Na suchej patelni podsmaż 1 min z każdej strony — wtedy trzyma się kupy."
+        "Wbij jajka ({jaja}) do miski, dodaj szczyptę soli i pieprzu i roztrzep widelcem.",
+        "Patelnię postaw na średnim ogniu, rozpuść masło ({maslo}), wlej jajka i mieszaj łopatką 3 minuty, aż jajecznica będzie całkiem ścięta — ma nie ciec.",
+        "Przełóż jajecznicę na talerz i wytrzyj patelnię ręcznikiem papierowym.",
+        "Tortillę ({tortilla}) połóż na suchej patelni na 20 sekund, żeby zmiękła.",
+        "Na środek tortilli wyłóż jajecznicę, posyp serem ({ser}), dołóż sałatę ({salata}) i pomidora ({pomidor}) pokrojonego w plastry.",
+        "Złóż boki do środka i zwiń od dołu w rulon. Połóż na patelni zamknięciem w dół i podsmaż po 1 minucie z każdej strony."
       ]
     },
     {
@@ -347,8 +357,9 @@
         ]
       ],
       "kroki": [
-        "Jogurt do pojemnika, wsyp orzechy, polej łyżką miodu.",
-        "Jabłko w kostkę na wierzch. Gotowe."
+        "Jogurt ({jogurt_grecki}) przełóż do miski lub pojemnika.",
+        "Jabłko ({jablko}) umyj, wytnij gniazdo z pestkami i pokrój w kostkę na wierzch.",
+        "Posyp orzechami ({orzechy}) i polej miodem ({miod})."
       ]
     },
     {
@@ -387,10 +398,11 @@
         ]
       ],
       "kroki": [
-        "Nastaw piekarnik na grill/250°C albo użyj opiekacza.",
-        "Na kromki połóż plaster sera i plastry pomidora, posól.",
-        "Piecz 6 min aż ser się rozpuści i zacznie brązowieć.",
-        "Równolegle usmaż jajka sadzone (ile — patrz rozpiska) i połóż na grzankach. Kropka ketchupu."
+        "Włącz piekarnik na 220°C z opcją grill (albo nagrzej opiekacz). Blachę wyłóż papierem do pieczenia.",
+        "Na kromki chleba ({chleb}) połóż ser ({ser_zolty}), na to pomidora ({pomidor}) pokrojonego w plastry i posól szczyptą.",
+        "Połóż kromki na blasze i piecz 6 minut na środkowej półce, aż ser się roztopi.",
+        "W tym czasie postaw patelnię z powłoką na średnim ogniu, bez tłuszczu. Wbij jajka ({jaja}) obok siebie i smaż 3–4 minuty, aż białko będzie całe białe.",
+        "Połóż jajka na grzankach i dodaj ketchup ({ketchup})."
       ]
     },
     {
@@ -437,11 +449,12 @@
         ]
       ],
       "kroki": [
-        "Ugotuj jajka na twardo (9 min od wrzenia), zalej zimną wodą, obierz.",
-        "Pomidory i ogórka pokrój w grubą kostkę, wrzuć do miski na sałatę, dołóż jajka w ćwiartkach.",
-        "Fetę pokrusz palcami na wierzch.",
-        "Polej oliwą, posól, popieprz, wsyp oregano. Nie mieszaj mocno, żeby feta się nie rozpadła.",
-        "Do boxa: oliwę wlewasz dopiero na miejscu, inaczej sałata zwiotczeje."
+        "Jajka na twardo: w małym garnku zagotuj tyle wody, żeby przykryła jajka ({jaja}). Łyżką ostrożnie włóż jajka do wrzątku i gotuj 9 minut na średnim ogniu. Odlej wrzątek, zalej zimną wodą na 3 minuty i obierz ze skorupki.",
+        "Jajka pokrój na ćwiartki. Pomidory ({pomidor}) i ogórka ({ogorek}) umyj i pokrój w kostkę ok. 2 cm.",
+        "Sałatę ({salata}) przełóż do miski lub pojemnika, na to pomidory, ogórka i jajka.",
+        "Fetę ({feta}) pokrusz palcami na wierzch.",
+        "Polej oliwą ({oliwa}), posyp szczyptą soli, pieprzu i oregano i wymieszaj delikatnie.",
+        "Do boxa: oliwę weź w małym słoiczku i polej dopiero przed jedzeniem. Chleb ({chleb}) zapakuj osobno."
       ]
     },
     {
@@ -476,9 +489,10 @@
         ]
       ],
       "kroki": [
-        "Twaróg rozgnieć widelcem z mlekiem — zrobi się kremowy.",
-        "Banan w plastry, miód, orzechy na wierzch.",
-        "Wersja na zmianę: wszystko do zakręcanego pojemnika."
+        "Twaróg ({twarog}) włóż do miski, dolej mleko ({mleko}) i rozgniataj widelcem ok. minuty na krem.",
+        "Banana ({banan}) obierz i pokrój w plasterki na wierzch.",
+        "Polej miodem ({miod}) i posyp orzechami ({orzechy}).",
+        "Na zmianę: wszystko do zakręcanego pojemnika, banana weź w całości i pokrój przy jedzeniu."
       ]
     },
     {
@@ -518,9 +532,10 @@
         ]
       ],
       "kroki": [
-        "Chleb cienko masłem, potem musztardą.",
-        "Po plastrze sera na kromkę, na to plastry ogórka kiszonego i pomidora.",
-        "Najszybszy posiłek w bazie — 4 minuty roboty."
+        "Kromki chleba ({chleb}) posmaruj cienko masłem ({maslo}), potem musztardą ({musztarda}).",
+        "Ser ({ser_zolty}) rozłóż po równo na kromkach.",
+        "Ogórki kiszone ({ogorek_kiszony}) i pomidora ({pomidor}) pokrój w plasterki i ułóż na serze.",
+        "Do boxa zawiń kanapki w folię."
       ]
     },
     {
@@ -559,10 +574,10 @@
         ]
       ],
       "kroki": [
-        "Jajka na twardo (9 min od wrzenia), zalej zimną wodą, obierz i pokrój w kostkę.",
-        "Wymieszaj z odsączoną kukurydzą, jogurtem greckim i łyżką musztardy.",
-        "Sól, pieprz, szczypta papryki. Do pojemnika, chleb osobno.",
-        "Trzyma się w lodówce 2 dni — możesz zrobić podwójną porcję w dniu gotowania."
+        "Jajka na twardo: w małym garnku zagotuj tyle wody, żeby przykryła jajka ({jaja}). Łyżką ostrożnie włóż jajka do wrzątku i gotuj 9 minut na średnim ogniu. Odlej wrzątek, zalej zimną wodą na 3 minuty i obierz ze skorupki.",
+        "Jajka pokrój w kostkę ok. 1 cm. Kukurydzę ({kukurydza}) odsącz z zalewy na sitku.",
+        "W misce wymieszaj jajka, kukurydzę, jogurt ({jogurt_grecki}) i musztardę ({musztarda}). Dopraw szczyptą soli, pieprzu i słodkiej papryki.",
+        "Przełóż do pojemnika, chleb ({chleb}) zapakuj osobno. W lodówce wytrzyma 2 dni."
       ]
     },
     {
@@ -593,9 +608,9 @@
         ]
       ],
       "kroki": [
-        "Podgrzej słoik w mikrofali 3 min albo zjedz na zimno — obie wersje działają.",
-        "Chleb i ser obok, ogórek kiszony żeby to nie było mdłe.",
-        "To nie jest gorsze jedzenie, tylko szybsze. Makra się zgadzają i o to chodzi."
+        "Danie ze słoika ({danie_gotowe}) przełóż do miski, która nadaje się do mikrofali — nie podgrzewaj w słoiku z zakrętką.",
+        "Przykryj talerzykiem i podgrzej 3 minuty na pełnej mocy, w połowie zamieszaj. Sprawdź łyżką, czy w środku jest gorące.",
+        "Zjedz z chlebem ({chleb}), serem ({ser_zolty}) i ogórkami kiszonymi ({ogorek_kiszony})."
       ]
     },
     {
@@ -634,9 +649,9 @@
         ]
       ],
       "kroki": [
-        "Parówki wrzuć do wrzątku na 3 min albo podsmaż na patelni razem z jajkami.",
-        "Jajka sadzone na maśle obok.",
-        "Chleb, pomidor, kropka ketchupu. Osiem minut i masz obiad."
+        "W garnku zagotuj wodę, włóż parówki ({parowki_wolowe}), zmniejsz ogień i trzymaj je 3–4 minuty w gorącej, ale nie mocno bulgoczącej wodzie.",
+        "W tym czasie postaw patelnię na średnim ogniu, rozpuść masło ({maslo}), wbij jajka ({jaja}) i smaż 3–4 minuty, aż białko będzie całe białe.",
+        "Podaj z chlebem ({chleb}), pomidorem ({pomidor}) w plastrach i ketchupem ({ketchup})."
       ]
     },
     {
@@ -679,9 +694,10 @@
         ]
       ],
       "kroki": [
-        "Cztery kromki, cienko masłem, potem musztardą.",
-        "Szynka, ser, plastry ogórka i pomidora.",
-        "Zero garnków. Do boxa zawijasz w folię i jedziesz."
+        "Kromki chleba ({chleb}) posmaruj cienko masłem ({maslo}), potem musztardą ({musztarda}).",
+        "Rozłóż na kromkach szynkę ({szynka}) i ser ({ser_zolty}).",
+        "Ogórka ({ogorek}) i pomidora ({pomidor}) umyj, pokrój w plastry i ułóż na wierzchu.",
+        "Złóż kromki po dwie. Do boxa zawiń w folię."
       ]
     },
     {
@@ -720,9 +736,10 @@
         ]
       ],
       "kroki": [
-        "Twaróg rozgnieć widelcem ze skyrem i odrobiną mleka na gładki krem.",
-        "Wmieszaj dżem, na wierzch pokrojony banan.",
-        "Chleb obok — albo posmaruj nim kromki. Do boxa: krem w pojemniku, banan i chleb osobno."
+        "Twaróg ({twarog}) i skyr ({skyr}) przełóż do miski i dolej mleko ({mleko}).",
+        "Rozgniataj widelcem 1–2 minuty na gładki krem.",
+        "Wmieszaj dżem ({dzem_niskoslodzony}), na wierzch połóż banana ({banan}) pokrojonego w plasterki.",
+        "Zjedz z chlebem ({chleb}). Do boxa: krem w pojemniku, banan w całości i chleb osobno."
       ]
     },
     {
@@ -754,9 +771,9 @@
         ]
       ],
       "kroki": [
-        "Skyr do miski, wsyp kakao i miód w ilościach z rozpiski.",
-        "Mieszaj łyżką dobrą minutę, aż kakao całkiem się rozpuści i zrobi się jednolity krem — za krótko mieszane zostawia gorzkie grudki.",
-        "Banan w plasterki na wierzch. Smakuje jak budyń czekoladowy."
+        "Skyr ({skyr}) przełóż do miski. Dodaj kakao ({kakao}) i miód ({miod}).",
+        "Mieszaj łyżką przez pełną minutę, aż nie będzie grudek kakao i krem będzie jednolicie brązowy.",
+        "Banana ({banan}) obierz i pokrój w plasterki na wierzch."
       ]
     },
     {
@@ -792,10 +809,11 @@
         ]
       ],
       "kroki": [
-        "Twaróg rozgnieć widelcem ze skyrem, aż masa będzie gładka — im dłużej ucierasz, tym bardziej przypomina sernik.",
-        "Dodaj łyżkę miodu i wymieszaj.",
-        "Jabłko zetrzyj na tarce na dno kubka albo pojemnika, na to masa serowa, na wierzch pokruszone orzechy.",
-        "Najlepszy po godzinie w lodówce — zrób go w dniu gotowania razem z garnkiem."
+        "Twaróg ({twarog}) i skyr ({skyr}) przełóż do miski i rozgniataj widelcem ok. 2 minuty, aż masa będzie gładka.",
+        "Dodaj miód ({miod}) i wymieszaj.",
+        "Jabłko ({jablko}) umyj i zetrzyj na tarce na grubych oczkach (bez gniazda z pestkami) na dno kubka lub pojemnika.",
+        "Na jabłko nałóż masę serową i posyp pokruszonymi orzechami ({orzechy}).",
+        "Wstaw na co najmniej godzinę do lodówki."
       ]
     },
     {
@@ -831,9 +849,9 @@
         ]
       ],
       "kroki": [
-        "Twaróg rozgnieć z mlekiem na gładki krem.",
-        "Wsyp łyżkę kakao i łyżkę miodu, mieszaj do jednolitego koloru.",
-        "Łyżka masła orzechowego na wierzch. Smakuje jak krem czekoladowo-orzechowy."
+        "Twaróg ({twarog}) włóż do miski, dolej mleko ({mleko}) i rozgniataj widelcem ok. minuty na krem.",
+        "Dodaj kakao ({kakao}) i miód ({miod}) i mieszaj, aż kolor będzie jednolity.",
+        "Na wierzch nałóż masło orzechowe ({maslo_orzechowe})."
       ]
     },
     {
@@ -888,11 +906,13 @@
         ]
       ],
       "kroki": [
-        "Marchewkę zetrzyj na drobnych oczkach.",
-        "W misce wymieszaj skyr, jajko, mąkę, odżywkę, proszek do pieczenia i przyprawę. Dodaj marchewkę — ciasto ma być gęste.",
-        "Wylej na rozgrzaną patelnię z powłoką, przykryj pokrywką i smaż na małym ogniu 5–6 minut.",
-        "Przewróć (najłatwiej zsunąć na talerz i nakryć patelnią) i smaż jeszcze 3–4 minuty.",
-        "Na wierzch dżem i pokrojony banan. Napój proteinowy do popicia."
+        "Marchew ({marchew}) obierz i zetrzyj na tarce na drobnych oczkach.",
+        "Do miski wbij jajko ({jaja}), dodaj skyr ({skyr_waniliowy}), mąkę ({maka}), odżywkę ({odzywka_wpc}), proszek do pieczenia ({proszek_do_pieczenia}) i przyprawę ({cynamon}). Mieszaj łyżką ok. minuty, aż nie będzie grudek.",
+        "Wmieszaj marchewkę. Ciasto ma być gęste, jak na placki.",
+        "Patelnię z powłoką postaw na małym ogniu (1/3 skali) na minutę. Wylej ciasto i rozprowadź łyżką na grubość ok. 1 cm.",
+        "Przykryj pokrywką i smaż 5–6 minut, aż spód będzie brązowy, a wierzch przestanie być płynny.",
+        "Przewróć: zsuń omlet na talerz, przykryj go patelnią i odwróć razem z talerzem. Smaż jeszcze 3–4 minuty pod przykryciem.",
+        "Przełóż na talerz, posmaruj dżemem ({dzem_niskoslodzony}) i ułóż banana ({banan}) pokrojonego w plasterki. Do popicia napój proteinowy ({napoj_proteinowy})."
       ]
     },
     {
@@ -931,10 +951,11 @@
         ]
       ],
       "kroki": [
-        "Jajka rozbełtaj z solą i pieprzem i usmaż jajecznicę na patelni z powłoką — bez dodatkowego tłuszczu.",
-        "Tortillę podgrzej 20–30 sekund na suchej patelni, żeby się nie łamała.",
-        "Posmaruj majonezem sriracha, wyłóż jajecznicę i polędwicę, zwiń.",
-        "Skyr pitny do popicia."
+        "Wbij jajka ({jaja}) do miski, dodaj szczyptę soli i pieprzu i roztrzep widelcem.",
+        "Patelnię z powłoką postaw na średnim ogniu, bez tłuszczu. Wlej jajka i mieszaj łopatką 3 minuty, aż jajecznica będzie ścięta. Przełóż na talerz.",
+        "Tortillę ({tortilla}) połóż na suchej patelni na 20–30 sekund, żeby zmiękła.",
+        "Posmaruj tortillę majonezem ({majonez_sriracha}), wyłóż jajecznicę i polędwicę ({poledwica}).",
+        "Złóż boki do środka i zwiń od dołu w rulon. Do popicia skyr pitny ({skyr_pitny})."
       ]
     },
     {
@@ -966,9 +987,11 @@
         ]
       ],
       "kroki": [
-        "Na 3 tosty: na kromkę plaster sera, szynka, drugi plaster sera, druga kromka.",
-        "Opiekacz albo sucha patelnia na średnim ogniu: 3–4 minuty z każdej strony, aż ser się roztopi.",
-        "Ketchup do maczania. Tosty są dobre tylko na świeżo — nie pakuj ich na zapas."
+        "Chleb tostowy ({chleb_tostowy}), szynkę ({szynka}) i ser ({ser_zolty}) podziel na 3 tosty — po 2 kromki na tost.",
+        "Na kromkę połóż połowę sera przeznaczonego na tost, na to szynkę, na to resztę sera i przykryj drugą kromką.",
+        "Z opiekaczem: nagrzej go (zwykle do zapalenia zielonej lampki), włóż tosty, zamknij i piecz 3–4 minuty.",
+        "Bez opiekacza: patelnia na średnim ogniu bez tłuszczu, połóż tosty, przyciśnij łopatką i smaż po 3 minuty z każdej strony, aż ser się roztopi.",
+        "Podawaj z ketchupem ({ketchup}). Tosty są dobre tylko na świeżo — nie pakuj ich na zapas."
       ]
     },
     {
@@ -1007,10 +1030,13 @@
         ]
       ],
       "kroki": [
-        "Piekarnik nagrzej na 200°C (góra-dół).",
-        "Pieczarki pokrój w plasterki i podsmaż 4–5 minut na łyżeczce oleju, posól.",
-        "Bagietkę przekrój wzdłuż na pół. Wyłóż pieczarki, szynkę w paskach i posyp serem.",
-        "Piecz 8–10 minut, aż ser się roztopi i zarumieni. Na wierzch ketchup."
+        "Włącz piekarnik na 200°C, grzanie góra-dół. Blachę wyłóż papierem do pieczenia.",
+        "Pieczarki ({pieczarki}) opłucz, odetnij końcówki nóżek i pokrój w cienkie plasterki. Szynkę ({szynka}) pokrój w paski.",
+        "Patelnię postaw na średnim ogniu, wlej olej ({olej}) i wrzuć pieczarki. Smaż 5 minut, mieszając, aż odparuje z nich woda. Posól szczyptą.",
+        "Bagietkę ({bagietka}) przekrój wzdłuż na pół i połóż na blasze przekrojem do góry.",
+        "Rozłóż na bagietce pieczarki i szynkę, posyp równo serem ({ser}).",
+        "Piecz 8–10 minut na środkowej półce, aż ser się roztopi i zarumieni.",
+        "Polej ketchupem ({ketchup}) i jedz na ciepło."
       ]
     },
     {
@@ -1057,10 +1083,11 @@
         ]
       ],
       "kroki": [
-        "Makaron ugotuj według opakowania, a w drugim garnku jajka na twardo (9 minut). Przelej zimną wodą.",
-        "Szynkę, jajka i ogórka pokrój w kostkę, kukurydzę odsącz.",
-        "Wymieszaj z makaronem, jogurtem i musztardą. Sól, pieprz.",
-        "Najlepsza schłodzona. W lodówce trzyma się 2 dni — idealna do boxa na zmianę."
+        "W garnku zagotuj ok. 1,5 litra wody z 1 łyżeczką soli. Wsyp makaron ({makaron}) i gotuj tyle minut, ile podaje opakowanie. Odcedź i przelej zimną wodą, żeby się nie skleił.",
+        "Jajka na twardo: w małym garnku zagotuj tyle wody, żeby przykryła jajka ({jaja}). Łyżką ostrożnie włóż jajka do wrzątku i gotuj 9 minut na średnim ogniu. Odlej wrzątek, zalej zimną wodą na 3 minuty i obierz ze skorupki.",
+        "Szynkę ({szynka}), jajka i ogórki kiszone ({ogorek_kiszony}) pokrój w kostkę ok. 1 cm. Kukurydzę ({kukurydza}) odsącz na sitku.",
+        "W dużej misce wymieszaj makaron, szynkę, jajka, ogórki i kukurydzę z jogurtem ({jogurt_grecki}) i musztardą ({musztarda}). Dopraw szczyptą soli i pieprzu.",
+        "Najlepsza schłodzona — wstaw na 30 minut do lodówki. W zamkniętym pojemniku wytrzyma 2 dni."
       ]
     }
   ]

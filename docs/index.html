@@ -214,7 +214,7 @@ const esc = s => String(s??"").replace(/[&<>"]/g, c => ({"&":"&amp;","<":"&lt;",
 /* Wersja panelu. iPhone dodany do ekranu głównego potrafi trzymać stary HTML
    w nieskończoność. dane.json leci zawsze świeży, więc porównujemy numery
    i przy różnicy przeładowujemy stronę z ?v=, co omija cache przeglądarki. */
-const WERSJA = 16;
+const WERSJA = 17;
 let D = null, widok = "dzis";
 
 /* ---- zapis z telefonu ------------------------------------------------------
@@ -679,8 +679,37 @@ function widokZakupy(){
   return kartaZaksiegowanych() + `<div class="karta"><h2>Zakupy na 3 dni</h2>${banner}${html}</div>${mam}${lod}`;
 }
 
+function kluczPorcji(){ return "trener:porcje:" + ((D.plan && D.plan.od) || "") + ":" + D.baza.id; }
+function czytajPorcje(){ try { return JSON.parse(localStorage.getItem(kluczPorcji()) || "{}"); } catch(e) { return {}; } }
+
+function kartaPorcji(b){
+  const skl = (b.skladowe && b.skladowe.length) ? b.skladowe : [{nazwa: "Całe danie", opis: ""}];
+  const zap = czytajPorcje();
+  return `<div class="karta"><h2>Ile nałożyć na porcję</h2>
+    <div class="op">Każdy z ${b.porcje} pojemników to jedna porcja — makro zgadza się tylko wtedy, gdy są równe.
+      Wpisz wagę pustego naczynia (przed gotowaniem) i naczynia z jedzeniem (po ugotowaniu), zawsze razem z tą samą deską.
+      Jeśli garnek z jedzeniem jest za ciężki dla wagi, przełóż wszystko do dużej miski i zważ miskę (pustą też).</div>
+    ${skl.map((x, i) => {
+      const z = zap[i] || {};
+      const netto = (z.pelny || 0) - (z.pusty || 0);
+      const na = netto > 0 ? Math.round(netto / b.porcje) : null;
+      return `<div class="cw"><div class="g"><b>${esc(x.nazwa)}</b></div>
+        ${x.opis ? `<div class="w">${esc(x.opis)}</div>` : ""}
+        <div style="display:flex;gap:6px;margin-top:6px">
+          <input class="pole porcja-in" data-i="${i}" data-pole="pusty" type="number" inputmode="numeric" placeholder="puste naczynie (g)" value="${z.pusty ?? ""}">
+          <input class="pole porcja-in" data-i="${i}" data-pole="pelny" type="number" inputmode="numeric" placeholder="z jedzeniem (g)" value="${z.pelny ?? ""}">
+        </div>
+        <div class="w" style="color:var(--akcent);margin-top:5px">${na
+          ? `Do każdego pojemnika nałóż <b>${na} g</b> (razem ${netto} g ÷ ${b.porcje}).`
+          : "Wpisz obie wagi, a policzę gramy na porcję."}</div></div>`;
+    }).join("")}</div>`;
+}
+
 function widokGotowanie(){
   const b = D.baza, s = zapamietane();
+  if(D.bez_garnka) return `<div class="karta"><h2>W tym cyklu nie gotujesz garnka</h2>
+    <div class="op">Obiady są proste, bez gotowania na 3 dni. Przepis krok po kroku masz przy obiedzie w zakładce Dziś.</div>
+    ${D.bez_garnka.map(x => `<div class="poz"><span class="nazwa">${esc(x.obiad)}</span><span class="ile">${esc(x.data)}</span></div>`).join("")}</div>`;
   const naPorcje = k => Math.round(k*10)/10;
   return `<div class="karta"><h2>Gotowanie na 3 dni</h2>
       <div class="tyt" style="font-size:17px">${esc(b.nazwa)}</div>
@@ -695,7 +724,7 @@ function widokGotowanie(){
     </ol></div>
     <div class="karta"><h2>Po ugotowaniu</h2>
       <div class="cw"><div class="g"><b>Przechowywanie</b></div><div class="w">${esc(b.przechowywanie)}</div></div>
-      <div class="cw"><div class="g"><b>Odgrzewanie</b></div><div class="w">${esc(b.odgrzewanie)}</div></div></div>`;
+      <div class="cw"><div class="g"><b>Odgrzewanie</b></div><div class="w">${esc(b.odgrzewanie)}</div></div></div>` + kartaPorcji(b);
 }
 
 function ytLink(nazwa){
@@ -1086,6 +1115,17 @@ $("#widok").addEventListener("input", e => {
   rysuj();
   const pole = $("#pora");
   if(pole){ pole.focus(); try{ pole.setSelectionRange(pos, pos); }catch{} }
+});
+
+$("#widok").addEventListener("change", e => {
+  const el = e.target;
+  if(!el.classList || !el.classList.contains("porcja-in")) return;
+  const zap = czytajPorcje();
+  const i = el.dataset.i;
+  zap[i] = zap[i] || {};
+  zap[i][el.dataset.pole] = Number(el.value) || null;
+  try { localStorage.setItem(kluczPorcji(), JSON.stringify(zap)); } catch(err) {}
+  rysuj();
 });
 
 $("#widok").addEventListener("change", async e => {

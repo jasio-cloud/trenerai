@@ -15,7 +15,7 @@ CLI:
   py trener.py lodowka | waga 81.4 | kroki 6420 [--ping] | budzik 23:33
   py trener.py eksport | tick | auto | test
 """
-import os, sys, json, math, random, datetime, urllib.request, urllib.error
+import os, re, sys, json, math, random, datetime, urllib.request, urllib.error
 
 try:
     sys.stdout.reconfigure(encoding="utf-8")
@@ -377,6 +377,47 @@ def fmt_ilosc(klucz, ilosc):
         forma = formy[0] if n == 1 else formy[1] if 2 <= n % 10 <= 4 and not 12 <= n % 100 <= 14 else formy[2]
         return "%d %s (%d %s)" % (n, forma, zaokr, baza)
     return "%d %s" % (zaokr, baza)
+
+
+def _lyzki(n, formy):
+    txt = ("%g" % n).replace(".", ",")
+    if n == 1:
+        return "1 " + formy[0]
+    return "%s %s" % (txt, formy[1] if (n != int(n) or 2 <= n <= 4) else formy[2])
+
+
+def _ilosc_w_kroku(k, q):
+    """Ilosc wpisana prosto w krok przepisu: '15 ml (1 łyżka)', '500 g — całe opakowanie'."""
+    p = PROD[k]
+    # "1 szt. (55 g)" w nawiasie po nazwie dawalo podwojne nawiasy — w kroku piszemy "1 szt., 55 g"
+    t = re.sub(r" \(([\d,.]+ (?:g|ml))\)$", r", \1", fmt_ilosc(k, q))
+    if k in ("olej", "oliwa"):
+        if q < 12:
+            n = max(0.5, round(q / 5.0 * 2) / 2)
+            t += ", ok. %s" % _lyzki(n, ("łyżeczka", "łyżeczki", "łyżeczek"))
+        else:
+            n = max(1, round(q / 15.0 * 2) / 2)
+            t += ", ok. %s" % _lyzki(n, ("łyżka", "łyżki", "łyżek"))
+    elif p["jedn"] in ("g", "ml") and p.get("opak"):
+        if abs(q - p["opak"]) < 0.5:
+            t += " — całe opakowanie"
+        elif abs(q * 2 - p["opak"]) < 1:
+            t += " — pół opakowania"
+    return t
+
+
+def wypelnij_kroki(kroki, produkty):
+    """{klucz} w kroku -> konkretna ilosc. Dla laika 'dodaj olej' nic nie mowi,
+    'dodaj olej (15 ml, ok. 1 łyżka)' juz tak."""
+    ilosci = {}
+    for k, q in produkty:
+        ilosci[k] = ilosci.get(k, 0) + q
+    def podstaw(m):
+        k = m.group(1)
+        if k in ilosci:
+            return _ilosc_w_kroku(k, ilosci[k])
+        return PROD[k]["nazwa"].lower() if k in PROD else m.group(0)
+    return [re.sub(r"\{([a-z_]+)\}", podstaw, x) for x in kroki]
 
 
 def rozpiska(pid, porcja=1.0):
@@ -1732,15 +1773,22 @@ def agenda(d=None):
             if pid in QUICK_BY_ID:
                 q = QUICK_BY_ID[pid]
                 e["jak"], e["czas_min"] = "przepis", q["czas_min"]
-                e["kroki"] = list(q["kroki"]) + ["Ilości każdego składnika masz w rozpisce — porcja jest dopasowana do Twojego celu na ten dzień."]
+                e["kroki"] = wypelnij_kroki(q["kroki"], produkty_posilku(pid, porcja)) + [
+                    "Wszystkie ilości w krokach są już przeliczone na Twoją porcję na dziś — nic nie musisz dzielić."]
+                if e["slot"] == "obiad" and q.get("box"):
+                    _, jutro = plan_dnia(d + datetime.timedelta(days=1))
+                    if jutro and jutro.get("obiad") == pid:
+                        e["kroki"].append("Jutro na obiad jest to samo — przygotuj od razu drugą porcję (jej ilości "
+                                          "zobaczysz w planie jutrzejszego dnia) i schowaj ją w pojemniku do lodówki.")
             else:
                 b = BAZA_BY_ID[pid]
                 if typ_dnia(d) == DZIEN_GOTOWANIA:
                     e["jak"], e["czas_min"] = "gotowanie", b["czas_min"]
-                    e["kroki"] = ["To przepis na cały garnek — %d porcje, obiady na 3 dni. Gramatury na garnek masz w zakładce Gotuję." % b["porcje"]] + list(b["kroki"])
+                    e["kroki"] = (["To przepis na cały garnek — %d porcje, obiady na 3 dni. Ilości w krokach są na cały garnek." % b["porcje"]]
+                                  + wypelnij_kroki(b["kroki"], b["produkty"]))
                 else:
                     e["jak"], e["czas_min"] = "odgrzewanie", 4
-                    e["kroki"] = ["Wyjmij jeden pojemnik z garnka ugotowanego w dniu gotowania.",
+                    e["kroki"] = ["Wyjmij jeden pojemnik z lodówki — to cała porcja na dziś, odważona w dniu gotowania.",
                                   "Odgrzej: %s." % b["odgrzewanie"],
                                   "Przechowywanie: %s." % b["przechowywanie"]]
             if e["slot"] == "sniadanie" and dzien.get("dodatek_w") and porcja != 0:
@@ -2272,7 +2320,17 @@ def eksport():
     """Zrzuca wszystko, czego potrzebuje panel WWW, do jednego pliku."""
     d = dzis()
     plan = generuj_plan(d)
-    baza = BAZA_BY_ID[plan["baza"]]
+    baza = dict(BAZA_BY_ID[plan["baza"]])
+    baza["kroki"] = wypelnij_kroki(baza["kroki"], baza["produkty"])
+    pierwszy = parse_date(plan["od"])
+    pod = podmiany(pierwszy).get("obiad")
+    bez_garnka = None
+    if pod in QUICK_BY_ID and QUICK_BY_ID[pod].get("bez_gotowania"):
+        bez_garnka = []
+        for i in range(3):
+            dd = pierwszy + datetime.timedelta(days=i)
+            _, dz_ = plan_dnia(dd)
+            bez_garnka.append({"data": dd.isoformat(), "obiad": nazwa_posilku(dz_["obiad"]) if dz_ else ""})
     dane = {
         "wygenerowano": teraz().isoformat(timespec="seconds"),
         "dzis": d.isoformat(),
@@ -2282,6 +2340,7 @@ def eksport():
         "user": CFG["user"],
         "plan": plan,
         "baza": baza,
+        "bez_garnka": bez_garnka,
         "agenda": agenda(d),
         "zakupy": lista_zakupow(plan),
         "lodowka": wczytaj_lodowke()["stan"],
