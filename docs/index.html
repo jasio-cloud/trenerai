@@ -646,13 +646,13 @@ function widokZakupy(){
                         pieczywo:"Pieczywo i makarony", spizarnia:"Spiżarnia"};
   let html = "", ost = null, ostSklep = null;
   const sumy = {};
-  for(const p of z.kup){ const sk = p.sklep || "Biedronka"; sumy[sk] = (sumy[sk] || 0) + p.cena; }
+  for(const p of z.kup){ const sk = p.sklep || "Dino"; sumy[sk] = (sumy[sk] || 0) + p.cena; }
   for(const p of z.kup){
-    const sk = p.sklep || "Biedronka";
+    const sk = p.sklep || "Dino";
     if(sk !== ostSklep){
       if(ostSklep !== null) html += `<div class="suma"><span>${esc(ostSklep)}</span><span>${sumy[ostSklep].toFixed(2)} zł</span></div>`;
       ostSklep = sk; ost = null;
-      html += `<h3 class="sklep">🛒 ${esc(sk)}${sk === "Dino" ? " — mięso świeżo mielone z lady, przed gotowaniem" : ""}</h3>`;
+      html += `<h3 class="sklep">🛒 ${esc(sk)}</h3>`;
     }
     if(p.kat !== ost){ ost = p.kat; html += `<div class="dzial">${nazwyDzialow[ost] ?? ost}</div>`; }
     const id = "z_" + p.klucz, on = !!s[id];

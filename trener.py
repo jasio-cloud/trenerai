@@ -607,11 +607,11 @@ def waga_kosztu(d):
 def _koszt_posilku(pid):
     """Ile zlotych kosztuje zuzycie na jedna porcje (czesc opakowania, nie cale)."""
     if pid not in _koszty:
-        # produkt spoza Biedronki liczy sie jak 15 zl drozej — planer go omija,
+        # produkt, ktorego w Twoim sklepie nie ma, liczy sie jak 15 zl drozej — planer go omija,
         # chyba ze danie naprawde nie ma zamiennika
         _koszty[pid] = (sum(q / PROD[k]["opak"] * PROD[k]["cena"]
                             for k, q in produkty_posilku(pid) if k != "przyprawy")
-                        + 15 * sum(1 for k, _ in produkty_posilku(pid) if PROD[k].get("biedronka") is False))
+                        + 15 * sum(1 for k, _ in produkty_posilku(pid) if PROD[k].get("dostepnosc", {}).get(CFG.get("sklep", "Dino")) is False))
     return _koszty[pid]
 
 
@@ -1291,7 +1291,7 @@ def lista_zakupow(plan=None):
         p = PROD[klucz]
         w_domu = stan.get(klucz, {}).get("ilosc", 0)
         if p.get("zapas"):
-            # trzymasz to w domu i kupujesz gdzie indziej (np. odzywka) — nie na liste do Biedronki
+            # trzymasz to w domu i kupujesz gdzie indziej (np. odzywka) — nie na liste do sklepu
             w_domu = max(w_domu, ile)
         brakuje = max(0.0, ile - w_domu)
         if brakuje <= 0.001:
@@ -1303,13 +1303,13 @@ def lista_zakupow(plan=None):
         koszt += cena
         kup.append({
             "klucz": klucz, "nazwa": p["nazwa"], "kat": p["kat"], "trw": p["trw"],
-            "sklep": p.get("sklep", CFG.get("sklep", "Biedronka")),
+            "sklep": p.get("sklep", CFG.get("sklep", "Dino")),
             "opakowan": opakowan, "opak": p["opak"], "jedn": p["jedn"],
             "brakuje": round(brakuje, 1), "dokupisz": opakowan * p["opak"],
             "cena": cena,
         })
     kolejnosc = {"mieso": 0, "nabial": 1, "warzywa": 2, "pieczywo": 3, "spizarnia": 4}
-    glowny = CFG.get("sklep", "Biedronka")
+    glowny = CFG.get("sklep", "Dino")
     kup.sort(key=lambda x: (x["sklep"] != glowny, x["sklep"], kolejnosc.get(x["kat"], 9), x["nazwa"]))
     sklepy = {}
     for x in kup:
@@ -2327,13 +2327,13 @@ def tresc_pinga(e, d):
         z = lista_zakupow(plan_cyklu(d) or generuj_plan())
         sklepy = {}
         for x in z["kup"]:
-            sk = x.get("sklep", CFG.get("sklep", "Biedronka"))
+            sk = x.get("sklep", CFG.get("sklep", "Dino"))
             n_, c_ = sklepy.get(sk, (0, 0.0))
             sklepy[sk] = (n_ + 1, c_ + x["cena"])
         opis_sklepow = " · ".join("%s: %d poz., ok. %.0f zł" % (k, v[0], v[1]) for k, v in sklepy.items())
         czesci.insert(0, "%s. %d rzeczy już masz w lodówce." % (opis_sklepow, len(z["mam"])))
-        if any(k != CFG.get("sklep", "Biedronka") for k in sklepy):
-            czesci.insert(1, "🥩 Mięso bierzesz świeżo mielone z lady w Dino — zdąż przed gotowaniem.")
+        if any(k != CFG.get("sklep", "Dino") for k in sklepy):
+            czesci.insert(1, "Część listy kupujesz w innym sklepie — sprawdź podział w panelu.")
     if e.get("akcja") == "budzik":
         b = budzik_dla(e["czas"], d)
         tekst = "Ustaw budzik na %s — to %s snu." % (b["godzina"], b["ile"])

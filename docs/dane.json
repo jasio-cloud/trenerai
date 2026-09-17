@@ -1,5 +1,5 @@
 {
-  "wygenerowano": "2026-09-17T06:29:23",
+  "wygenerowano": "2026-09-17T14:07:00",
   "dzis": "2026-09-17",
   "typ_dzis": 1,
   "typy": {
@@ -218,15 +218,15 @@
       "ikona": "🏁",
       "ping": true,
       "nastepny_dzien": true,
-      "opis": "Za 15 minut kończysz. Lista zakupów czeka w panelu — prosto z pracy do Biedronki."
+      "opis": "Za 15 minut kończysz. Lista zakupów czeka w panelu — prosto z pracy do Dino."
     },
     {
       "czas": "07:10",
-      "tytul": "ZAKUPY w Biedronce",
+      "tytul": "ZAKUPY w Dino",
       "ikona": "🛒",
       "ping": true,
       "akcja": "zakupy",
-      "opis": "Prosto ze zmiany, zanim pójdziesz spać. Kupujesz tylko to, co jest na liście w panelu — resztę masz w lodówce. Po dobie na nogach łatwo wrzucić do koszyka coś słodkiego, więc trzymaj się listy."
+      "opis": "Prosto ze zmiany, zanim pójdziesz spać. Kupujesz tylko to, co jest na liście w panelu — resztę masz w lodówce. Po dobie na nogach łatwo wrzucić do koszyka coś słodkiego, więc trzymaj się listy. Mięso bierz świeżo mielone z lady."
     },
     {
       "czas": "08:00",
@@ -393,7 +393,7 @@
           "wegle": 1.3
         },
         {
-          "nazwa": "Skyr pitny (butelka, np. Fruvita albo Piątnica)",
+          "nazwa": "Skyr pitny (butelka 330 ml)",
           "ile": "165 ml",
           "g": 165,
           "kcal": 132,
@@ -609,7 +609,7 @@
         "nazwa": "Polędwica sopocka (wędlina)",
         "kat": "mieso",
         "trw": "chlodnia",
-        "sklep": "Biedronka",
+        "sklep": "Dino",
         "opakowan": 1,
         "opak": 100,
         "jedn": "g",
@@ -622,7 +622,7 @@
         "nazwa": "Szynka w plastrach",
         "kat": "mieso",
         "trw": "chlodnia",
-        "sklep": "Biedronka",
+        "sklep": "Dino",
         "opakowan": 2,
         "opak": 150,
         "jedn": "g",
@@ -635,7 +635,7 @@
         "nazwa": "Jaja",
         "kat": "nabial",
         "trw": "chlodnia",
-        "sklep": "Biedronka",
+        "sklep": "Dino",
         "opakowan": 2,
         "opak": 10,
         "jedn": "szt",
@@ -648,7 +648,7 @@
         "nazwa": "Jogurt grecki 2%",
         "kat": "nabial",
         "trw": "chlodnia",
-        "sklep": "Biedronka",
+        "sklep": "Dino",
         "opakowan": 2,
         "opak": 400,
         "jedn": "g",
@@ -661,7 +661,7 @@
         "nazwa": "Masło",
         "kat": "nabial",
         "trw": "chlodnia",
-        "sklep": "Biedronka",
+        "sklep": "Dino",
         "opakowan": 1,
         "opak": 200,
         "jedn": "g",
@@ -674,7 +674,7 @@
         "nazwa": "Mleko 2%",
         "kat": "nabial",
         "trw": "chlodnia",
-        "sklep": "Biedronka",
+        "sklep": "Dino",
         "opakowan": 1,
         "opak": 1000,
         "jedn": "ml",
@@ -687,7 +687,7 @@
         "nazwa": "Napój proteinowy Müllermilch Protein (400 ml)",
         "kat": "nabial",
         "trw": "chlodnia",
-        "sklep": "Biedronka",
+        "sklep": "Dino",
         "opakowan": 2,
         "opak": 1,
         "jedn": "butelka",
@@ -700,7 +700,7 @@
         "nazwa": "Ser żółty w plastrach",
         "kat": "nabial",
         "trw": "chlodnia",
-        "sklep": "Biedronka",
+        "sklep": "Dino",
         "opakowan": 1,
         "opak": 12,
         "jedn": "plaster",
@@ -713,7 +713,7 @@
         "nazwa": "Skyr pitny (butelka, np. Fruvita albo Piątnica)",
         "kat": "nabial",
         "trw": "chlodnia",
-        "sklep": "Biedronka",
+        "sklep": "Dino",
         "opakowan": 1,
         "opak": 1,
         "jedn": "butelka",
@@ -726,7 +726,7 @@
         "nazwa": "Skyr waniliowy (kubek 150 g)",
         "kat": "nabial",
         "trw": "chlodnia",
-        "sklep": "Biedronka",
+        "sklep": "Dino",
         "opakowan": 2,
         "opak": 1,
         "jedn": "kubek",
@@ -739,7 +739,7 @@
         "nazwa": "Twaróg półtłusty",
         "kat": "nabial",
         "trw": "chlodnia",
-        "sklep": "Biedronka",
+        "sklep": "Dino",
         "opakowan": 1,
         "opak": 250,
         "jedn": "g",
@@ -752,7 +752,7 @@
         "nazwa": "Banan",
         "kat": "warzywa",
         "trw": "chlodnia",
-        "sklep": "Biedronka",
+        "sklep": "Dino",
         "opakowan": 3,
         "opak": 1,
         "jedn": "szt",
@@ -765,7 +765,7 @@
         "nazwa": "Jabłko",
         "kat": "warzywa",
         "trw": "trwale",
-        "sklep": "Biedronka",
+        "sklep": "Dino",
         "opakowan": 1,
         "opak": 1,
         "jedn": "szt",
@@ -778,7 +778,7 @@
         "nazwa": "Marchew",
         "kat": "warzywa",
         "trw": "trwale",
-        "sklep": "Biedronka",
+        "sklep": "Dino",
         "opakowan": 2,
         "opak": 1,
         "jedn": "szt",
@@ -791,7 +791,7 @@
         "nazwa": "Ogórek długi",
         "kat": "warzywa",
         "trw": "swieze",
-        "sklep": "Biedronka",
+        "sklep": "Dino",
         "opakowan": 1,
         "opak": 1,
         "jedn": "szt",
@@ -804,7 +804,7 @@
         "nazwa": "Ogórek kiszony",
         "kat": "warzywa",
         "trw": "trwale",
-        "sklep": "Biedronka",
+        "sklep": "Dino",
         "opakowan": 1,
         "opak": 8,
         "jedn": "szt",
@@ -817,7 +817,7 @@
         "nazwa": "Pomidor",
         "kat": "warzywa",
         "trw": "swieze",
-        "sklep": "Biedronka",
+        "sklep": "Dino",
         "opakowan": 2,
         "opak": 1,
         "jedn": "szt",
@@ -830,7 +830,7 @@
         "nazwa": "Chleb pszenny (zwykły biały)",
         "kat": "pieczywo",
         "trw": "chlodnia",
-        "sklep": "Biedronka",
+        "sklep": "Dino",
         "opakowan": 1,
         "opak": 16,
         "jedn": "kromka",
@@ -843,7 +843,7 @@
         "nazwa": "Makaron (świderki/penne)",
         "kat": "pieczywo",
         "trw": "trwale",
-        "sklep": "Biedronka",
+        "sklep": "Dino",
         "opakowan": 1,
         "opak": 500,
         "jedn": "g",
@@ -856,7 +856,7 @@
         "nazwa": "Tortilla pszenna",
         "kat": "pieczywo",
         "trw": "trwale",
-        "sklep": "Biedronka",
+        "sklep": "Dino",
         "opakowan": 1,
         "opak": 8,
         "jedn": "szt",
@@ -869,7 +869,7 @@
         "nazwa": "Dżem niskosłodzony (truskawkowy)",
         "kat": "spizarnia",
         "trw": "trwale",
-        "sklep": "Biedronka",
+        "sklep": "Dino",
         "opakowan": 1,
         "opak": 280,
         "jedn": "g",
@@ -882,7 +882,7 @@
         "nazwa": "Kukurydza konserwowa",
         "kat": "spizarnia",
         "trw": "trwale",
-        "sklep": "Biedronka",
+        "sklep": "Dino",
         "opakowan": 1,
         "opak": 200,
         "jedn": "g",
@@ -895,7 +895,7 @@
         "nazwa": "Majonez sriracha",
         "kat": "spizarnia",
         "trw": "trwale",
-        "sklep": "Biedronka",
+        "sklep": "Dino",
         "opakowan": 1,
         "opak": 250,
         "jedn": "ml",
@@ -908,7 +908,7 @@
         "nazwa": "Miód",
         "kat": "spizarnia",
         "trw": "trwale",
-        "sklep": "Biedronka",
+        "sklep": "Dino",
         "opakowan": 1,
         "opak": 20,
         "jedn": "lyzka",
@@ -921,7 +921,7 @@
         "nazwa": "Musztarda",
         "kat": "spizarnia",
         "trw": "trwale",
-        "sklep": "Biedronka",
+        "sklep": "Dino",
         "opakowan": 1,
         "opak": 12,
         "jedn": "lyzka",
@@ -934,7 +934,7 @@
         "nazwa": "Mąka pszenna",
         "kat": "spizarnia",
         "trw": "trwale",
-        "sklep": "Biedronka",
+        "sklep": "Dino",
         "opakowan": 1,
         "opak": 1000,
         "jedn": "g",
@@ -947,7 +947,7 @@
         "nazwa": "Orzechy / migdały",
         "kat": "spizarnia",
         "trw": "trwale",
-        "sklep": "Biedronka",
+        "sklep": "Dino",
         "opakowan": 1,
         "opak": 200,
         "jedn": "g",
@@ -960,7 +960,7 @@
         "nazwa": "Proszek do pieczenia",
         "kat": "spizarnia",
         "trw": "trwale",
-        "sklep": "Biedronka",
+        "sklep": "Dino",
         "opakowan": 1,
         "opak": 30,
         "jedn": "g",
@@ -973,7 +973,7 @@
         "nazwa": "Przyprawa do cynamonek / cynamon",
         "kat": "spizarnia",
         "trw": "trwale",
-        "sklep": "Biedronka",
+        "sklep": "Dino",
         "opakowan": 1,
         "opak": 20,
         "jedn": "g",
@@ -986,7 +986,7 @@
         "nazwa": "Przyprawy (sól, pieprz, papryka, oregano, majeranek)",
         "kat": "spizarnia",
         "trw": "trwale",
-        "sklep": "Biedronka",
+        "sklep": "Dino",
         "opakowan": 1,
         "opak": 100,
         "jedn": "porcja",
@@ -1006,7 +1006,7 @@
     ],
     "koszt": 220.6,
     "sklepy": {
-      "Biedronka": 220.6
+      "Dino": 220.6
     },
     "zrobione": true
   },
@@ -2409,26 +2409,24 @@
       "baza": "ml"
     },
     "mielone_wolowe": {
-      "nazwa": "Wołowina świeżo mielona (z lady, Dino)",
+      "nazwa": "Wołowina świeżo mielona (z lady)",
       "jedn": "g",
       "opak": 400,
       "cena": 18.0,
       "kat": "mieso",
       "trw": "swieze",
       "g": 1,
-      "baza": "g",
-      "sklep": "Dino"
+      "baza": "g"
     },
     "wolowina_gulasz": {
-      "nazwa": "Wołowina z łopatki (z lady, Dino)",
+      "nazwa": "Wołowina z łopatki (z lady)",
       "jedn": "g",
       "opak": 500,
       "cena": 30.0,
       "kat": "mieso",
       "trw": "swieze",
       "g": 1,
-      "baza": "g",
-      "sklep": "Dino"
+      "baza": "g"
     },
     "chleb": {
       "nazwa": "Chleb pszenny (zwykły biały)",
@@ -2779,7 +2777,9 @@
       "trw": "chlodnia",
       "g": 40,
       "baza": "g",
-      "biedronka": false
+      "dostepnosc": {
+        "Biedronka": false
+      }
     },
     "kabanosy": {
       "nazwa": "Kabanosy wołowe",
@@ -2800,7 +2800,9 @@
       "trw": "chlodnia",
       "g": 1,
       "baza": "g",
-      "biedronka": false
+      "dostepnosc": {
+        "Biedronka": false
+      }
     },
     "kakao": {
       "nazwa": "Kakao naturalne (bez cukru)",
@@ -2843,7 +2845,7 @@
       "baza": "g"
     },
     "odzywka_wpc": {
-      "nazwa": "Odżywka białkowa WPC 80 (czekoladowa) — zapas, nie z Biedronki",
+      "nazwa": "Odżywka białkowa WPC 80 (czekoladowa) — zapas, kupujesz osobno",
       "jedn": "g",
       "opak": 700,
       "cena": 75.0,
@@ -2851,8 +2853,11 @@
       "trw": "trwale",
       "g": 1,
       "baza": "g",
-      "biedronka": false,
-      "zapas": true
+      "zapas": true,
+      "dostepnosc": {
+        "Biedronka": false,
+        "Dino": false
+      }
     },
     "dzem_niskoslodzony": {
       "nazwa": "Dżem niskosłodzony (truskawkowy)",
@@ -2875,7 +2880,7 @@
       "baza": "ml"
     },
     "skyr_pitny": {
-      "nazwa": "Skyr pitny (butelka, np. Fruvita albo Piątnica)",
+      "nazwa": "Skyr pitny (butelka 330 ml)",
       "jedn": "butelka",
       "opak": 1,
       "cena": 4.5,
@@ -3371,7 +3376,7 @@
           },
           "skladniki": [
             {
-              "nazwa": "Wołowina świeżo mielona (z lady, Dino)",
+              "nazwa": "Wołowina świeżo mielona (z lady)",
               "ile": "200 g",
               "g": 200,
               "kcal": 430,
@@ -3614,15 +3619,15 @@
           "ikona": "🏁",
           "ping": true,
           "nastepny_dzien": true,
-          "opis": "Za 15 minut kończysz. Lista zakupów czeka w panelu — prosto z pracy do Biedronki."
+          "opis": "Za 15 minut kończysz. Lista zakupów czeka w panelu — prosto z pracy do Dino."
         },
         {
           "czas": "07:10",
-          "tytul": "ZAKUPY w Biedronce",
+          "tytul": "ZAKUPY w Dino",
           "ikona": "🛒",
           "ping": true,
           "akcja": "zakupy",
-          "opis": "Prosto ze zmiany, zanim pójdziesz spać. Kupujesz tylko to, co jest na liście w panelu — resztę masz w lodówce. Po dobie na nogach łatwo wrzucić do koszyka coś słodkiego, więc trzymaj się listy."
+          "opis": "Prosto ze zmiany, zanim pójdziesz spać. Kupujesz tylko to, co jest na liście w panelu — resztę masz w lodówce. Po dobie na nogach łatwo wrzucić do koszyka coś słodkiego, więc trzymaj się listy. Mięso bierz świeżo mielone z lady."
         },
         {
           "czas": "08:00",
@@ -3887,7 +3892,7 @@
           },
           "skladniki": [
             {
-              "nazwa": "Wołowina świeżo mielona (z lady, Dino)",
+              "nazwa": "Wołowina świeżo mielona (z lady)",
               "ile": "200 g",
               "g": 200,
               "kcal": 430,
@@ -4394,7 +4399,7 @@
           },
           "skladniki": [
             {
-              "nazwa": "Wołowina świeżo mielona (z lady, Dino)",
+              "nazwa": "Wołowina świeżo mielona (z lady)",
               "ile": "200 g",
               "g": 200,
               "kcal": 430,
@@ -4865,7 +4870,7 @@
           },
           "skladniki": [
             {
-              "nazwa": "Wołowina świeżo mielona (z lady, Dino)",
+              "nazwa": "Wołowina świeżo mielona (z lady)",
               "ile": "200 g",
               "g": 200,
               "kcal": 430,
@@ -5125,15 +5130,15 @@
           "ikona": "🏁",
           "ping": true,
           "nastepny_dzien": true,
-          "opis": "Za 15 minut kończysz. Lista zakupów czeka w panelu — prosto z pracy do Biedronki."
+          "opis": "Za 15 minut kończysz. Lista zakupów czeka w panelu — prosto z pracy do Dino."
         },
         {
           "czas": "07:10",
-          "tytul": "ZAKUPY w Biedronce",
+          "tytul": "ZAKUPY w Dino",
           "ikona": "🛒",
           "ping": true,
           "akcja": "zakupy",
-          "opis": "Prosto ze zmiany, zanim pójdziesz spać. Kupujesz tylko to, co jest na liście w panelu — resztę masz w lodówce. Po dobie na nogach łatwo wrzucić do koszyka coś słodkiego, więc trzymaj się listy."
+          "opis": "Prosto ze zmiany, zanim pójdziesz spać. Kupujesz tylko to, co jest na liście w panelu — resztę masz w lodówce. Po dobie na nogach łatwo wrzucić do koszyka coś słodkiego, więc trzymaj się listy. Mięso bierz świeżo mielone z lady."
         },
         {
           "czas": "08:00",
@@ -5420,7 +5425,7 @@
           },
           "skladniki": [
             {
-              "nazwa": "Wołowina z łopatki (z lady, Dino)",
+              "nazwa": "Wołowina z łopatki (z lady)",
               "ile": "200 g",
               "g": 200,
               "kcal": 320,
@@ -5933,7 +5938,7 @@
           },
           "skladniki": [
             {
-              "nazwa": "Wołowina z łopatki (z lady, Dino)",
+              "nazwa": "Wołowina z łopatki (z lady)",
               "ile": "200 g",
               "g": 200,
               "kcal": 320,
@@ -6396,7 +6401,7 @@
           },
           "skladniki": [
             {
-              "nazwa": "Wołowina z łopatki (z lady, Dino)",
+              "nazwa": "Wołowina z łopatki (z lady)",
               "ile": "200 g",
               "g": 200,
               "kcal": 320,
@@ -6662,15 +6667,15 @@
           "ikona": "🏁",
           "ping": true,
           "nastepny_dzien": true,
-          "opis": "Za 15 minut kończysz. Lista zakupów czeka w panelu — prosto z pracy do Biedronki."
+          "opis": "Za 15 minut kończysz. Lista zakupów czeka w panelu — prosto z pracy do Dino."
         },
         {
           "czas": "07:10",
-          "tytul": "ZAKUPY w Biedronce",
+          "tytul": "ZAKUPY w Dino",
           "ikona": "🛒",
           "ping": true,
           "akcja": "zakupy",
-          "opis": "Prosto ze zmiany, zanim pójdziesz spać. Kupujesz tylko to, co jest na liście w panelu — resztę masz w lodówce. Po dobie na nogach łatwo wrzucić do koszyka coś słodkiego, więc trzymaj się listy."
+          "opis": "Prosto ze zmiany, zanim pójdziesz spać. Kupujesz tylko to, co jest na liście w panelu — resztę masz w lodówce. Po dobie na nogach łatwo wrzucić do koszyka coś słodkiego, więc trzymaj się listy. Mięso bierz świeżo mielone z lady."
         },
         {
           "czas": "08:00",
@@ -6837,7 +6842,7 @@
               "wegle": 1.3
             },
             {
-              "nazwa": "Skyr pitny (butelka, np. Fruvita albo Piątnica)",
+              "nazwa": "Skyr pitny (butelka 330 ml)",
               "ile": "165 ml",
               "g": 165,
               "kcal": 132,
@@ -7272,7 +7277,7 @@
               "wegle": 24.8
             },
             {
-              "nazwa": "Odżywka białkowa WPC 80 (czekoladowa) — zapas, nie z Biedronki",
+              "nazwa": "Odżywka białkowa WPC 80 (czekoladowa) — zapas, kupujesz osobno",
               "ile": "20 g",
               "g": 20,
               "kcal": 75,
@@ -7797,7 +7802,7 @@
               "wegle": 35.5
             },
             {
-              "nazwa": "Odżywka białkowa WPC 80 (czekoladowa) — zapas, nie z Biedronki",
+              "nazwa": "Odżywka białkowa WPC 80 (czekoladowa) — zapas, kupujesz osobno",
               "ile": "30 g",
               "g": 30,
               "kcal": 112,
@@ -8222,15 +8227,15 @@
           "ikona": "🏁",
           "ping": true,
           "nastepny_dzien": true,
-          "opis": "Za 15 minut kończysz. Lista zakupów czeka w panelu — prosto z pracy do Biedronki."
+          "opis": "Za 15 minut kończysz. Lista zakupów czeka w panelu — prosto z pracy do Dino."
         },
         {
           "czas": "07:10",
-          "tytul": "ZAKUPY w Biedronce",
+          "tytul": "ZAKUPY w Dino",
           "ikona": "🛒",
           "ping": true,
           "akcja": "zakupy",
-          "opis": "Prosto ze zmiany, zanim pójdziesz spać. Kupujesz tylko to, co jest na liście w panelu — resztę masz w lodówce. Po dobie na nogach łatwo wrzucić do koszyka coś słodkiego, więc trzymaj się listy."
+          "opis": "Prosto ze zmiany, zanim pójdziesz spać. Kupujesz tylko to, co jest na liście w panelu — resztę masz w lodówce. Po dobie na nogach łatwo wrzucić do koszyka coś słodkiego, więc trzymaj się listy. Mięso bierz świeżo mielone z lady."
         },
         {
           "czas": "08:00",
@@ -8512,7 +8517,7 @@
           },
           "skladniki": [
             {
-              "nazwa": "Wołowina świeżo mielona (z lady, Dino)",
+              "nazwa": "Wołowina świeżo mielona (z lady)",
               "ile": "165 g",
               "g": 167,
               "kcal": 358,
@@ -8902,7 +8907,7 @@
               "wegle": 21.3
             },
             {
-              "nazwa": "Odżywka białkowa WPC 80 (czekoladowa) — zapas, nie z Biedronki",
+              "nazwa": "Odżywka białkowa WPC 80 (czekoladowa) — zapas, kupujesz osobno",
               "ile": "18 g",
               "g": 18,
               "kcal": 67,
@@ -9092,7 +9097,7 @@
           },
           "skladniki": [
             {
-              "nazwa": "Wołowina świeżo mielona (z lady, Dino)",
+              "nazwa": "Wołowina świeżo mielona (z lady)",
               "ile": "165 g",
               "g": 167,
               "kcal": 358,
@@ -9457,7 +9462,7 @@
               "wegle": 24.8
             },
             {
-              "nazwa": "Odżywka białkowa WPC 80 (czekoladowa) — zapas, nie z Biedronki",
+              "nazwa": "Odżywka białkowa WPC 80 (czekoladowa) — zapas, kupujesz osobno",
               "ile": "20 g",
               "g": 20,
               "kcal": 75,
@@ -9626,7 +9631,7 @@
           },
           "skladniki": [
             {
-              "nazwa": "Wołowina świeżo mielona (z lady, Dino)",
+              "nazwa": "Wołowina świeżo mielona (z lady)",
               "ile": "165 g",
               "g": 167,
               "kcal": 358,
@@ -9893,15 +9898,15 @@
           "ikona": "🏁",
           "ping": true,
           "nastepny_dzien": true,
-          "opis": "Za 15 minut kończysz. Lista zakupów czeka w panelu — prosto z pracy do Biedronki."
+          "opis": "Za 15 minut kończysz. Lista zakupów czeka w panelu — prosto z pracy do Dino."
         },
         {
           "czas": "07:10",
-          "tytul": "ZAKUPY w Biedronce",
+          "tytul": "ZAKUPY w Dino",
           "ikona": "🛒",
           "ping": true,
           "akcja": "zakupy",
-          "opis": "Prosto ze zmiany, zanim pójdziesz spać. Kupujesz tylko to, co jest na liście w panelu — resztę masz w lodówce. Po dobie na nogach łatwo wrzucić do koszyka coś słodkiego, więc trzymaj się listy."
+          "opis": "Prosto ze zmiany, zanim pójdziesz spać. Kupujesz tylko to, co jest na liście w panelu — resztę masz w lodówce. Po dobie na nogach łatwo wrzucić do koszyka coś słodkiego, więc trzymaj się listy. Mięso bierz świeżo mielone z lady."
         },
         {
           "czas": "08:00",
@@ -10113,7 +10118,7 @@
               "wegle": 24.8
             },
             {
-              "nazwa": "Odżywka białkowa WPC 80 (czekoladowa) — zapas, nie z Biedronki",
+              "nazwa": "Odżywka białkowa WPC 80 (czekoladowa) — zapas, kupujesz osobno",
               "ile": "20 g",
               "g": 20,
               "kcal": 75,
@@ -10216,7 +10221,7 @@
           },
           "skladniki": [
             {
-              "nazwa": "Wołowina świeżo mielona (z lady, Dino)",
+              "nazwa": "Wołowina świeżo mielona (z lady)",
               "ile": "165 g",
               "g": 167,
               "kcal": 358,
@@ -10504,7 +10509,7 @@
         "nazwa": "Polędwica sopocka (wędlina)",
         "kat": "mieso",
         "trw": "chlodnia",
-        "sklep": "Biedronka",
+        "sklep": "Dino",
         "opakowan": 1,
         "opak": 100,
         "jedn": "g",
@@ -10517,7 +10522,7 @@
         "nazwa": "Szynka w plastrach",
         "kat": "mieso",
         "trw": "chlodnia",
-        "sklep": "Biedronka",
+        "sklep": "Dino",
         "opakowan": 2,
         "opak": 150,
         "jedn": "g",
@@ -10530,7 +10535,7 @@
         "nazwa": "Jaja",
         "kat": "nabial",
         "trw": "chlodnia",
-        "sklep": "Biedronka",
+        "sklep": "Dino",
         "opakowan": 2,
         "opak": 10,
         "jedn": "szt",
@@ -10543,7 +10548,7 @@
         "nazwa": "Jogurt grecki 2%",
         "kat": "nabial",
         "trw": "chlodnia",
-        "sklep": "Biedronka",
+        "sklep": "Dino",
         "opakowan": 2,
         "opak": 400,
         "jedn": "g",
@@ -10556,7 +10561,7 @@
         "nazwa": "Masło",
         "kat": "nabial",
         "trw": "chlodnia",
-        "sklep": "Biedronka",
+        "sklep": "Dino",
         "opakowan": 1,
         "opak": 200,
         "jedn": "g",
@@ -10569,7 +10574,7 @@
         "nazwa": "Mleko 2%",
         "kat": "nabial",
         "trw": "chlodnia",
-        "sklep": "Biedronka",
+        "sklep": "Dino",
         "opakowan": 1,
         "opak": 1000,
         "jedn": "ml",
@@ -10582,7 +10587,7 @@
         "nazwa": "Napój proteinowy Müllermilch Protein (400 ml)",
         "kat": "nabial",
         "trw": "chlodnia",
-        "sklep": "Biedronka",
+        "sklep": "Dino",
         "opakowan": 2,
         "opak": 1,
         "jedn": "butelka",
@@ -10595,7 +10600,7 @@
         "nazwa": "Ser żółty w plastrach",
         "kat": "nabial",
         "trw": "chlodnia",
-        "sklep": "Biedronka",
+        "sklep": "Dino",
         "opakowan": 1,
         "opak": 12,
         "jedn": "plaster",
@@ -10608,7 +10613,7 @@
         "nazwa": "Skyr pitny (butelka, np. Fruvita albo Piątnica)",
         "kat": "nabial",
         "trw": "chlodnia",
-        "sklep": "Biedronka",
+        "sklep": "Dino",
         "opakowan": 1,
         "opak": 1,
         "jedn": "butelka",
@@ -10621,7 +10626,7 @@
         "nazwa": "Skyr waniliowy (kubek 150 g)",
         "kat": "nabial",
         "trw": "chlodnia",
-        "sklep": "Biedronka",
+        "sklep": "Dino",
         "opakowan": 2,
         "opak": 1,
         "jedn": "kubek",
@@ -10634,7 +10639,7 @@
         "nazwa": "Twaróg półtłusty",
         "kat": "nabial",
         "trw": "chlodnia",
-        "sklep": "Biedronka",
+        "sklep": "Dino",
         "opakowan": 1,
         "opak": 250,
         "jedn": "g",
@@ -10647,7 +10652,7 @@
         "nazwa": "Banan",
         "kat": "warzywa",
         "trw": "chlodnia",
-        "sklep": "Biedronka",
+        "sklep": "Dino",
         "opakowan": 3,
         "opak": 1,
         "jedn": "szt",
@@ -10660,7 +10665,7 @@
         "nazwa": "Jabłko",
         "kat": "warzywa",
         "trw": "trwale",
-        "sklep": "Biedronka",
+        "sklep": "Dino",
         "opakowan": 1,
         "opak": 1,
         "jedn": "szt",
@@ -10673,7 +10678,7 @@
         "nazwa": "Marchew",
         "kat": "warzywa",
         "trw": "trwale",
-        "sklep": "Biedronka",
+        "sklep": "Dino",
         "opakowan": 2,
         "opak": 1,
         "jedn": "szt",
@@ -10686,7 +10691,7 @@
         "nazwa": "Ogórek długi",
         "kat": "warzywa",
         "trw": "swieze",
-        "sklep": "Biedronka",
+        "sklep": "Dino",
         "opakowan": 1,
         "opak": 1,
         "jedn": "szt",
@@ -10699,7 +10704,7 @@
         "nazwa": "Ogórek kiszony",
         "kat": "warzywa",
         "trw": "trwale",
-        "sklep": "Biedronka",
+        "sklep": "Dino",
         "opakowan": 1,
         "opak": 8,
         "jedn": "szt",
@@ -10712,7 +10717,7 @@
         "nazwa": "Pomidor",
         "kat": "warzywa",
         "trw": "swieze",
-        "sklep": "Biedronka",
+        "sklep": "Dino",
         "opakowan": 2,
         "opak": 1,
         "jedn": "szt",
@@ -10725,7 +10730,7 @@
         "nazwa": "Chleb pszenny (zwykły biały)",
         "kat": "pieczywo",
         "trw": "chlodnia",
-        "sklep": "Biedronka",
+        "sklep": "Dino",
         "opakowan": 1,
         "opak": 16,
         "jedn": "kromka",
@@ -10738,7 +10743,7 @@
         "nazwa": "Makaron (świderki/penne)",
         "kat": "pieczywo",
         "trw": "trwale",
-        "sklep": "Biedronka",
+        "sklep": "Dino",
         "opakowan": 1,
         "opak": 500,
         "jedn": "g",
@@ -10751,7 +10756,7 @@
         "nazwa": "Tortilla pszenna",
         "kat": "pieczywo",
         "trw": "trwale",
-        "sklep": "Biedronka",
+        "sklep": "Dino",
         "opakowan": 1,
         "opak": 8,
         "jedn": "szt",
@@ -10764,7 +10769,7 @@
         "nazwa": "Dżem niskosłodzony (truskawkowy)",
         "kat": "spizarnia",
         "trw": "trwale",
-        "sklep": "Biedronka",
+        "sklep": "Dino",
         "opakowan": 1,
         "opak": 280,
         "jedn": "g",
@@ -10777,7 +10782,7 @@
         "nazwa": "Kukurydza konserwowa",
         "kat": "spizarnia",
         "trw": "trwale",
-        "sklep": "Biedronka",
+        "sklep": "Dino",
         "opakowan": 1,
         "opak": 200,
         "jedn": "g",
@@ -10790,7 +10795,7 @@
         "nazwa": "Majonez sriracha",
         "kat": "spizarnia",
         "trw": "trwale",
-        "sklep": "Biedronka",
+        "sklep": "Dino",
         "opakowan": 1,
         "opak": 250,
         "jedn": "ml",
@@ -10803,7 +10808,7 @@
         "nazwa": "Miód",
         "kat": "spizarnia",
         "trw": "trwale",
-        "sklep": "Biedronka",
+        "sklep": "Dino",
         "opakowan": 1,
         "opak": 20,
         "jedn": "lyzka",
@@ -10816,7 +10821,7 @@
         "nazwa": "Musztarda",
         "kat": "spizarnia",
         "trw": "trwale",
-        "sklep": "Biedronka",
+        "sklep": "Dino",
         "opakowan": 1,
         "opak": 12,
         "jedn": "lyzka",
@@ -10829,7 +10834,7 @@
         "nazwa": "Mąka pszenna",
         "kat": "spizarnia",
         "trw": "trwale",
-        "sklep": "Biedronka",
+        "sklep": "Dino",
         "opakowan": 1,
         "opak": 1000,
         "jedn": "g",
@@ -10842,7 +10847,7 @@
         "nazwa": "Orzechy / migdały",
         "kat": "spizarnia",
         "trw": "trwale",
-        "sklep": "Biedronka",
+        "sklep": "Dino",
         "opakowan": 1,
         "opak": 200,
         "jedn": "g",
@@ -10855,7 +10860,7 @@
         "nazwa": "Proszek do pieczenia",
         "kat": "spizarnia",
         "trw": "trwale",
-        "sklep": "Biedronka",
+        "sklep": "Dino",
         "opakowan": 1,
         "opak": 30,
         "jedn": "g",
@@ -10868,7 +10873,7 @@
         "nazwa": "Przyprawa do cynamonek / cynamon",
         "kat": "spizarnia",
         "trw": "trwale",
-        "sklep": "Biedronka",
+        "sklep": "Dino",
         "opakowan": 1,
         "opak": 20,
         "jedn": "g",
@@ -10881,7 +10886,7 @@
         "nazwa": "Przyprawy (sól, pieprz, papryka, oregano, majeranek)",
         "kat": "spizarnia",
         "trw": "trwale",
-        "sklep": "Biedronka",
+        "sklep": "Dino",
         "opakowan": 1,
         "opak": 100,
         "jedn": "porcja",
@@ -10901,7 +10906,7 @@
     ],
     "koszt": 220.6,
     "sklepy": {
-      "Biedronka": 220.6
+      "Dino": 220.6
     },
     "zrobione": true
   },

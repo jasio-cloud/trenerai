@@ -1,5 +1,5 @@
 {
-  "_info": "Cennik PLN (dyskont 2026). jedn = jednostka w przepisie, g = ile gramow (dla plynow ml) wazy JEDNA taka jednostka, baza = w czym liczymy makro (g albo ml). opak = ile jednostek w opakowaniu, cena = za cale opakowanie, trw = swieze/chlodnia/trwale, kat = dzial sklepu. biedronka=false: w Biedronce zwykle tego nie ma (sprawdzone w sklepie internetowym 16.09.2026) — planer omija dania z takimi produktami. zapas=true: masz to w domu i kupujesz poza Biedronką — nigdy nie trafia na listę zakupów. sklep: gdzie to kupujesz, gdy nie w Biedronce (np. mięso świeżo mielone z lady w Dino).",
+  "_info": "Cennik PLN (dyskont 2026). jedn = jednostka w przepisie, g = ile gramow (dla plynow ml) wazy JEDNA taka jednostka, baza = w czym liczymy makro (g albo ml). opak = ile jednostek w opakowaniu, cena = za cale opakowanie, trw = swieze/chlodnia/trwale, kat = dzial sklepu. dostepnosc: {sklep: false} — w tym sklepie zwykle tego nie ma, planer omija dania z takimi produktami. zapas=true: masz to w domu i kupujesz poza Biedronką — nigdy nie trafia na listę zakupów. sklep: gdzie to kupujesz, jeśli nie w głównym sklepie z config.sklep.",
   "jaja": {
     "nazwa": "Jaja",
     "jedn": "szt",
@@ -121,26 +121,24 @@
     "baza": "ml"
   },
   "mielone_wolowe": {
-    "nazwa": "Wołowina świeżo mielona (z lady, Dino)",
+    "nazwa": "Wołowina świeżo mielona (z lady)",
     "jedn": "g",
     "opak": 400,
     "cena": 18.0,
     "kat": "mieso",
     "trw": "swieze",
     "g": 1,
-    "baza": "g",
-    "sklep": "Dino"
+    "baza": "g"
   },
   "wolowina_gulasz": {
-    "nazwa": "Wołowina z łopatki (z lady, Dino)",
+    "nazwa": "Wołowina z łopatki (z lady)",
     "jedn": "g",
     "opak": 500,
     "cena": 30.0,
     "kat": "mieso",
     "trw": "swieze",
     "g": 1,
-    "baza": "g",
-    "sklep": "Dino"
+    "baza": "g"
   },
   "chleb": {
     "nazwa": "Chleb pszenny (zwykły biały)",
@@ -491,7 +489,9 @@
     "trw": "chlodnia",
     "g": 40,
     "baza": "g",
-    "biedronka": false
+    "dostepnosc": {
+      "Biedronka": false
+    }
   },
   "kabanosy": {
     "nazwa": "Kabanosy wołowe",
@@ -512,7 +512,9 @@
     "trw": "chlodnia",
     "g": 1,
     "baza": "g",
-    "biedronka": false
+    "dostepnosc": {
+      "Biedronka": false
+    }
   },
   "kakao": {
     "nazwa": "Kakao naturalne (bez cukru)",
@@ -555,7 +557,7 @@
     "baza": "g"
   },
   "odzywka_wpc": {
-    "nazwa": "Odżywka białkowa WPC 80 (czekoladowa) — zapas, nie z Biedronki",
+    "nazwa": "Odżywka białkowa WPC 80 (czekoladowa) — zapas, kupujesz osobno",
     "jedn": "g",
     "opak": 700,
     "cena": 75.0,
@@ -563,8 +565,11 @@
     "trw": "trwale",
     "g": 1,
     "baza": "g",
-    "biedronka": false,
-    "zapas": true
+    "zapas": true,
+    "dostepnosc": {
+      "Biedronka": false,
+      "Dino": false
+    }
   },
   "dzem_niskoslodzony": {
     "nazwa": "Dżem niskosłodzony (truskawkowy)",
@@ -587,7 +592,7 @@
     "baza": "ml"
   },
   "skyr_pitny": {
-    "nazwa": "Skyr pitny (butelka, np. Fruvita albo Piątnica)",
+    "nazwa": "Skyr pitny (butelka 330 ml)",
     "jedn": "butelka",
     "opak": 1,
     "cena": 4.5,
