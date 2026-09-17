@@ -1,5 +1,5 @@
 {
-  "wygenerowano": "2026-09-17T16:41:19+02:00",
+  "wygenerowano": "2026-09-17T16:51:18+02:00",
   "dzis": "2026-09-17",
   "typ_dzis": 1,
   "typy": {
@@ -1177,7 +1177,17 @@
           "wskazowka": "Barki boczne nawet w dzień po zmianie — mały ciężar, duży efekt.",
           "latwiej": "Jedną ręką, drugą trzymasz się racka.",
           "trudniej": "Seria zrywana.",
-          "serie": 2
+          "serie": 2,
+          "propozycja": {
+            "ciezar": 5.0,
+            "poprzedni": 5.0,
+            "powt": [
+              12,
+              12
+            ],
+            "data": "2026-09-17",
+            "podwyzka": 0.0
+          }
         }
       ],
       "finisz": "Każda seria kończy się z zapasem: 3 powtórzenia w zapasie. Uczysz się ruchu, nie dźwigasz. Ciężar tak lekki, że mógłbyś zrobić jeszcze 3 powtórzenia. Ma ci się chcieć przyjść na następny trening."
@@ -3041,6 +3051,14 @@
         "pierwszy": 21.0,
         "najlepszy": 21.0,
         "ostatni": 21.0,
+        "sesji": 1,
+        "miara": "kg (szac. max)",
+        "od": "2026-09-17"
+      },
+      "Unoszenie hantli bokiem": {
+        "pierwszy": 7.0,
+        "najlepszy": 7.0,
+        "ostatni": 7.0,
         "sesji": 1,
         "miara": "kg (szac. max)",
         "od": "2026-09-17"
@@ -7154,6 +7172,16 @@
             12,
             12
           ]
+        },
+        {
+          "data": "2026-09-17",
+          "typ": "seria",
+          "cwiczenie": "Unoszenie hantli bokiem",
+          "ciezar": 5,
+          "powt": [
+            12,
+            12
+          ]
         }
       ],
       "trening": {
@@ -7217,7 +7245,17 @@
               "wskazowka": "Barki boczne nawet w dzień po zmianie — mały ciężar, duży efekt.",
               "latwiej": "Jedną ręką, drugą trzymasz się racka.",
               "trudniej": "Seria zrywana.",
-              "serie": 2
+              "serie": 2,
+              "propozycja": {
+                "ciezar": 5.0,
+                "poprzedni": 5.0,
+                "powt": [
+                  12,
+                  12
+                ],
+                "data": "2026-09-17",
+                "podwyzka": 0.0
+              }
             }
           ],
           "finisz": "Każda seria kończy się z zapasem: 3 powtórzenia w zapasie. Uczysz się ruchu, nie dźwigasz. Ciężar tak lekki, że mógłbyś zrobić jeszcze 3 powtórzenia. Ma ci się chcieć przyjść na następny trening."
@@ -7800,7 +7838,17 @@
               "wskazowka": "Trzeci raz w cyklu. Tak ma być.",
               "latwiej": "Jedną ręką, drugą trzymasz się racka.",
               "trudniej": "Seria zrywana.",
-              "serie": 2
+              "serie": 2,
+              "propozycja": {
+                "ciezar": 5.0,
+                "poprzedni": 5.0,
+                "powt": [
+                  12,
+                  12
+                ],
+                "data": "2026-09-17",
+                "podwyzka": 0.0
+              }
             }
           ],
           "finisz": "Każda seria kończy się z zapasem: 3 powtórzenia w zapasie. Uczysz się ruchu, nie dźwigasz. Ciężar tak lekki, że mógłbyś zrobić jeszcze 3 powtórzenia. Ma ci się chcieć przyjść na następny trening."
@@ -8880,7 +8928,17 @@
               "wskazowka": "Barki boczne nawet w dzień po zmianie — mały ciężar, duży efekt.",
               "latwiej": "Jedną ręką, drugą trzymasz się racka.",
               "trudniej": "Seria zrywana.",
-              "serie": 2
+              "serie": 2,
+              "propozycja": {
+                "ciezar": 5.0,
+                "poprzedni": 5.0,
+                "powt": [
+                  12,
+                  12
+                ],
+                "data": "2026-09-17",
+                "podwyzka": 0.0
+              }
             }
           ],
           "finisz": "Każda seria kończy się z zapasem: 3 powtórzenia w zapasie. Uczysz się ruchu, nie dźwigasz. Ciężar tak lekki, że mógłbyś zrobić jeszcze 3 powtórzenia. Ma ci się chcieć przyjść na następny trening."
@@ -9452,7 +9510,17 @@
               "wskazowka": "Łokcie lekko ugięte, ruch prowadzą łokcie, nie dłonie. Unosisz do wysokości barków, nie wyżej. Mały ciężar — to ćwiczenie od techniki, nie od ego.",
               "latwiej": "Jedną ręką, drugą trzymasz się racka.",
               "trudniej": "Seria zrywana: po odmowie lżejszy hantel i dalej.",
-              "serie": 2
+              "serie": 2,
+              "propozycja": {
+                "ciezar": 5.0,
+                "poprzedni": 5.0,
+                "powt": [
+                  12,
+                  12
+                ],
+                "data": "2026-09-17",
+                "podwyzka": 0.0
+              }
             },
             {
               "nazwa": "Wyciskanie hantli na ławce skośnej",
@@ -10624,7 +10692,17 @@
               "wskazowka": "Barki boczne nawet w dzień po zmianie — mały ciężar, duży efekt.",
               "latwiej": "Jedną ręką, drugą trzymasz się racka.",
               "trudniej": "Seria zrywana.",
-              "serie": 2
+              "serie": 2,
+              "propozycja": {
+                "ciezar": 5.0,
+                "poprzedni": 5.0,
+                "powt": [
+                  12,
+                  12
+                ],
+                "data": "2026-09-17",
+                "podwyzka": 0.0
+              }
             }
           ],
           "finisz": "Każda seria kończy się z zapasem: 3 powtórzenia w zapasie. Uczysz się ruchu, nie dźwigasz. Ciężar tak lekki, że mógłbyś zrobić jeszcze 3 powtórzenia. Ma ci się chcieć przyjść na następny trening."
@@ -10669,6 +10747,16 @@
         "typ": "seria",
         "cwiczenie": "Wiosłowanie hantlem jednorącz",
         "ciezar": 15,
+        "powt": [
+          12,
+          12
+        ]
+      },
+      {
+        "data": "2026-09-17",
+        "typ": "seria",
+        "cwiczenie": "Unoszenie hantli bokiem",
+        "ciezar": 5,
         "powt": [
           12,
           12
@@ -11571,6 +11659,16 @@
         12
       ],
       "nastepny": 17.5,
+      "nieudane": 0,
+      "data": "2026-09-17"
+    },
+    "Unoszenie hantli bokiem": {
+      "ciezar": 5.0,
+      "powt": [
+        12,
+        12
+      ],
+      "nastepny": 5.0,
       "nieudane": 0,
       "data": "2026-09-17"
     }
