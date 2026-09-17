@@ -641,7 +641,7 @@
     },
     {
       "id": "o_kanapki_xl",
-      "nazwa": "Duże kanapki z wędliną wołową i serem",
+      "nazwa": "Duże kanapki z szynką i serem",
       "sloty": [
         "obiad"
       ],
@@ -654,7 +654,7 @@
           4
         ],
         [
-          "wedlina_wolowa",
+          "szynka",
           120
         ],
         [
@@ -680,7 +680,7 @@
       ],
       "kroki": [
         "Cztery kromki, cienko masłem, potem musztardą.",
-        "Wędlina, ser, plastry ogórka i pomidora.",
+        "Szynka, ser, plastry ogórka i pomidora.",
         "Zero garnków. Do boxa zawijasz w folię i jedziesz."
       ]
     },
@@ -935,6 +935,40 @@
         "Tortillę podgrzej 20–30 sekund na suchej patelni, żeby się nie łamała.",
         "Posmaruj majonezem sriracha, wyłóż jajecznicę i polędwicę, zwiń.",
         "Skyr pitny do popicia."
+      ]
+    },
+    {
+      "id": "o_tosty",
+      "nazwa": "Tosty z szynką i serem",
+      "sloty": [
+        "obiad",
+        "kolacja"
+      ],
+      "box": true,
+      "czas_min": 12,
+      "bez_gotowania": true,
+      "produkty": [
+        [
+          "chleb_tostowy",
+          6
+        ],
+        [
+          "szynka",
+          150
+        ],
+        [
+          "ser_zolty",
+          4
+        ],
+        [
+          "ketchup",
+          1
+        ]
+      ],
+      "kroki": [
+        "Na 3 tosty: na kromkę plaster sera, szynka, drugi plaster sera, druga kromka.",
+        "Opiekacz albo sucha patelnia na średnim ogniu: 3–4 minuty z każdej strony, aż ser się roztopi.",
+        "Ketchup do maczania. Do boxa: ostudzone zawiń w folię — na zmianie zjesz na zimno albo 30 s w mikrofali."
       ]
     }
   ]

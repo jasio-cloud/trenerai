@@ -1,5 +1,5 @@
 {
-  "_info": "Cennik PLN (dyskont 2026). jedn = jednostka w przepisie, g = ile gramow (dla plynow ml) wazy JEDNA taka jednostka, baza = w czym liczymy makro (g albo ml). opak = ile jednostek w opakowaniu, cena = za cale opakowanie, trw = swieze/chlodnia/trwale, kat = dzial sklepu. biedronka=false: w Biedronce zwykle tego nie ma (sprawdzone w sklepie internetowym 16.09.2026) — planer omija dania z takimi produktami. zapas=true: masz to w domu i kupujesz poza Biedronką — nigdy nie trafia na listę zakupów.",
+  "_info": "Cennik PLN (dyskont 2026). jedn = jednostka w przepisie, g = ile gramow (dla plynow ml) wazy JEDNA taka jednostka, baza = w czym liczymy makro (g albo ml). opak = ile jednostek w opakowaniu, cena = za cale opakowanie, trw = swieze/chlodnia/trwale, kat = dzial sklepu. biedronka=false: w Biedronce zwykle tego nie ma (sprawdzone w sklepie internetowym 16.09.2026) — planer omija dania z takimi produktami. zapas=true: masz to w domu i kupujesz poza Biedronką — nigdy nie trafia na listę zakupów. sklep: gdzie to kupujesz, gdy nie w Biedronce (np. mięso świeżo mielone z lady w Dino).",
   "jaja": {
     "nazwa": "Jaja",
     "jedn": "szt",
@@ -121,24 +121,26 @@
     "baza": "ml"
   },
   "mielone_wolowe": {
-    "nazwa": "Mielona wołowina",
+    "nazwa": "Wołowina świeżo mielona (z lady, Dino)",
     "jedn": "g",
     "opak": 400,
     "cena": 18.0,
     "kat": "mieso",
     "trw": "swieze",
     "g": 1,
-    "baza": "g"
+    "baza": "g",
+    "sklep": "Dino"
   },
   "wolowina_gulasz": {
-    "nazwa": "Wołowina z łopatki (w Biedronce: stek wołowy z łopatki)",
+    "nazwa": "Wołowina z łopatki (z lady, Dino)",
     "jedn": "g",
     "opak": 500,
     "cena": 30.0,
     "kat": "mieso",
     "trw": "swieze",
     "g": 1,
-    "baza": "g"
+    "baza": "g",
+    "sklep": "Dino"
   },
   "chleb": {
     "nazwa": "Chleb pszenny (zwykły biały)",
@@ -613,5 +615,25 @@
     "trw": "trwale",
     "g": 1,
     "baza": "ml"
+  },
+  "chleb_tostowy": {
+    "nazwa": "Chleb tostowy pszenny",
+    "jedn": "kromka",
+    "opak": 20,
+    "cena": 4.0,
+    "kat": "pieczywo",
+    "trw": "chlodnia",
+    "g": 25,
+    "baza": "g"
+  },
+  "szynka": {
+    "nazwa": "Szynka w plastrach",
+    "jedn": "g",
+    "opak": 150,
+    "cena": 6.5,
+    "kat": "mieso",
+    "trw": "chlodnia",
+    "g": 1,
+    "baza": "g"
   }
 }

@@ -1194,13 +1194,18 @@ def lista_zakupow(plan=None):
         koszt += cena
         kup.append({
             "klucz": klucz, "nazwa": p["nazwa"], "kat": p["kat"], "trw": p["trw"],
+            "sklep": p.get("sklep", CFG.get("sklep", "Biedronka")),
             "opakowan": opakowan, "opak": p["opak"], "jedn": p["jedn"],
             "brakuje": round(brakuje, 1), "dokupisz": opakowan * p["opak"],
             "cena": cena,
         })
     kolejnosc = {"mieso": 0, "nabial": 1, "warzywa": 2, "pieczywo": 3, "spizarnia": 4}
-    kup.sort(key=lambda x: (kolejnosc.get(x["kat"], 9), x["nazwa"]))
-    return {"kup": kup, "mam": mam, "koszt": round(koszt, 2), "zrobione": False}
+    glowny = CFG.get("sklep", "Biedronka")
+    kup.sort(key=lambda x: (x["sklep"] != glowny, x["sklep"], kolejnosc.get(x["kat"], 9), x["nazwa"]))
+    sklepy = {}
+    for x in kup:
+        sklepy[x["sklep"]] = round(sklepy.get(x["sklep"], 0) + x["cena"], 2)
+    return {"kup": kup, "mam": mam, "koszt": round(koszt, 2), "sklepy": sklepy, "zrobione": False}
 
 
 def oznacz_niekupione(klucz):
@@ -1698,6 +1703,11 @@ def agenda(d=None):
             if str(e.get("akcja") or "").startswith("trening"):
                 e.update({"tytul": "Bez treningu — dzień lżejszy", "ping": False, "akcja": None,
                           "ikona": "🛌", "opis": "Dziś odpoczywasz. Jeśli masz siłę, zrób spokojny spacer."})
+    if t == DZIEN_GOTOWANIA:
+        # obiad podmieniony na cos bez garnka (np. tosty) — nie ma czego gotowac
+        pod = podmiany(d).get("obiad")
+        if pod in QUICK_BY_ID and QUICK_BY_ID[pod].get("bez_gotowania"):
+            zdarzenia = [e for e in zdarzenia if e.get("akcja") != "gotowanie"]
     zdarzenia = _dodaj_kosciol(d, zdarzenia)
     _, dzien = plan_dnia(d)
     for e in zdarzenia:
@@ -2026,8 +2036,15 @@ def tresc_pinga(e, d):
         # ping planowany jest z wyprzedzeniem (jeszcze w dniu zmiany), wiec lista
         # musi byc dla cyklu z dnia zakupow, a nie dla biezacego
         z = lista_zakupow(plan_cyklu(d) or generuj_plan())
-        czesci.insert(0, "Biedronka: %d pozycji, ok. %.2f zł. %d rzeczy już masz w lodówce."
-                      % (len(z["kup"]), z["koszt"], len(z["mam"])))
+        sklepy = {}
+        for x in z["kup"]:
+            sk = x.get("sklep", CFG.get("sklep", "Biedronka"))
+            n_, c_ = sklepy.get(sk, (0, 0.0))
+            sklepy[sk] = (n_ + 1, c_ + x["cena"])
+        opis_sklepow = " · ".join("%s: %d poz., ok. %.0f zł" % (k, v[0], v[1]) for k, v in sklepy.items())
+        czesci.insert(0, "%s. %d rzeczy już masz w lodówce." % (opis_sklepow, len(z["mam"])))
+        if any(k != CFG.get("sklep", "Biedronka") for k in sklepy):
+            czesci.insert(1, "🥩 Mięso bierzesz świeżo mielone z lady w Dino — zdąż przed gotowaniem.")
     if e.get("akcja") == "budzik":
         b = budzik_dla(e["czas"], d)
         tekst = "Ustaw budzik na %s — to %s snu." % (b["godzina"], b["ile"])
