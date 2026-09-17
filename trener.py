@@ -440,7 +440,10 @@ def makra_posilku(pid, porcja=1.0):
 
 # Skladniki liczone w sztukach, ktorych nie da sie sensownie przepolowic.
 CALE_SZTUKI = {"skyr", "jaja", "tortilla", "parowki_wolowe", "serek_wiejski", "banan", "jablko",
-               "chleb", "ser_zolty", "czosnek", "bulion"}
+               "chleb", "ser_zolty", "czosnek", "bulion",
+               # opakowania jednorazowe: otwarty kubek czy butelka nie przetrwa do jutra,
+               # wiec zawsze calosc — reszte porcji dopasowuja inne skladniki
+               "skyr", "skyr_waniliowy", "skyr_pitny", "napoj_proteinowy", "serek_wiejski"}
 
 
 def _zaokraglij(klucz, q):
