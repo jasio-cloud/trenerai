@@ -555,6 +555,14 @@ KOSZT_WAGA = 20
 _koszty = {}
 
 
+def waga_kosztu(d):
+    """Okres oszczedzania (config.oszczedzanie): koszt liczy sie mocniej niz zwykle."""
+    o = CFG.get("oszczedzanie")
+    if o and d.isoformat() <= o["do"]:
+        return o["waga"]
+    return KOSZT_WAGA
+
+
 def _koszt_posilku(pid):
     """Ile zlotych kosztuje zuzycie na jedna porcje (czesc opakowania, nie cale)."""
     if pid not in _koszty:
@@ -599,14 +607,19 @@ def _pule(box_only):
     return out
 
 
-def _wybierz_baze(historia):
+def _wybierz_baze(historia, d=None):
     """Baza, której dawno nie było — żeby nie jeść bolognese trzeci cykl z rzędu."""
     ostatnie = historia.get("bazy", [])
     def klucz(b):
         return ostatnie.index(b["id"]) if b["id"] in ostatnie else -1
-    kandydaci = sorted(BAZY, key=klucz)[:4]
+    # na start tylko sprawdzone obiady (config.obiady.dozwolone) — jestes wybredny,
+    # wiec nowe dania wchodza dopiero, gdy sam o nie poprosisz
+    dozw = CFG.get("obiady", {}).get("dozwolone")
+    kandydaci = sorted([b for b in BAZY if not dozw or b["id"] in dozw], key=klucz)[:4]
     # z czterech najdawniej jedzonych — jedno z dwoch najtanszych
     kandydaci = sorted(kandydaci, key=lambda b: _koszt_posilku(b["id"]))[:2]
+    if d is not None and waga_kosztu(d) != KOSZT_WAGA:
+        return kandydaci[0]   # okres oszczedzania: najtansza, bez losowania
     return random.choice(kandydaci)
 
 
@@ -702,7 +715,7 @@ def generuj_plan(d=None, force=False, zapisz=True):
 
     historia = load(HIST_PATH, {"bazy": [], "waga": [], "treningi": []})
     random.seed(nr_cyklu(d) * 7919)
-    baza = _wybierz_baze(historia)
+    baza = _wybierz_baze(historia, start)
     makra_bazy = makra_posilku(baza["id"])
 
     daty = [start + datetime.timedelta(days=i) for i in range(3)]
@@ -710,6 +723,10 @@ def generuj_plan(d=None, force=False, zapisz=True):
     pule = [_pule(box_only=(typ_dnia(dd) == 0)) for dd in daty]
     # Ulubione tylko tam, gdzie wypada ich dzien — i wtedy bez konkurencji. Box nie
     # ma znaczenia: sniadanie w dniu zmiany jesz w domu, przed wyjsciem.
+    # Przy oszczedzaniu liczy sie to, co wyjmiesz z portfela w sklepie: kazdy produkt,
+    # ktorego nie ma w lodowce, to cale opakowanie (sloik miodu, paczka orzechow).
+    oszcz = CFG.get("oszczedzanie") if waga_kosztu(start) != KOSZT_WAGA else None
+    stan_lod = wczytaj_lodowke()["stan"] if oszcz else {}
     ul = _ulubione()
     for i, dd in enumerate(daty):
         for s_ in pule[i]:
@@ -751,8 +768,12 @@ def generuj_plan(d=None, force=False, zapisz=True):
         # ulubione na zmiane: to samo dwa razy w cyklu tylko, gdy makra naprawde tego chca
         kary += 150 * (len(ul_uzyte) - len(set(ul_uzyte)))
         # ulubione sa wybrane przez Ciebie — koszt ich nie wypycha, liczy sie dla reszty
-        kary += KOSZT_WAGA * sum(_koszt_posilku(dz[s_]) for dz in kandydat
+        kary += waga_kosztu(start) * sum(_koszt_posilku(dz[s_]) for dz in kandydat
                                  for s_ in ("sniadanie", "drugi", "kolacja") if dz[s_] not in ul)
+        if oszcz:
+            nowe = {k for k in klucze_produktow
+                    if k != "przyprawy" and stan_lod.get(k, {}).get("ilosc", 0) <= 0}
+            kary += oszcz.get("waga_opakowan", 15) * sum(PROD[k]["cena"] for k in nowe)
         # deser bialkowy najwyzej raz dziennie — to ma byc cos slodkiego w planie, nie trzy kremy dziennie
         kary += 500 * sum(max(0, sum(1 for s_ in ("sniadanie", "drugi", "kolacja")
                                      if QUICK_BY_ID[dz[s_]].get("deser")) - 1) for dz in kandydat)
@@ -923,7 +944,8 @@ def alternatywy_slotu(slot, d=None, ile=4):
     box_only = typ_dnia(d) == 0
     if slot == "obiad":
         kand = [q["id"] for q in QUICK if q.get("bez_gotowania") and (q["box"] if box_only else True)]
-        kand += [b["id"] for b in BAZY]
+        dozw = CFG.get("obiady", {}).get("dozwolone")
+        kand += [b["id"] for b in BAZY if not dozw or b["id"] in dozw]
     else:
         kand = [q["id"] for q in QUICK
                 if slot in q.get("sloty", []) and (q["box"] if box_only else True)]

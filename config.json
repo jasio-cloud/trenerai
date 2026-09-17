@@ -207,5 +207,19 @@
     "niedziela_po_zmianie": "18:00",
     "wyjscie_min": 30,
     "komentarz": "Msza w każdą niedzielę: wolne 12:00, po zmianie 18:00. Niedziela na służbie — bez mszy (decyzja użytkownika). Ping przychodzi wyjscie_min przed mszą."
+  },
+  "obiady": {
+    "dozwolone": [
+      "b_bolo",
+      "b_zapiekanka",
+      "b_pieczarkowy"
+    ],
+    "komentarz": "Na start tylko sprawdzone, proste obiady z mielonej wołowiny i makaronu. Łopatka (gulasz, wołowina w cebuli) odłożona na później — droga. Kolejne dania dopisujemy, gdy użytkownik sam poprosi."
+  },
+  "oszczedzanie": {
+    "do": "2026-09-19",
+    "waga": 30,
+    "waga_opakowan": 15,
+    "komentarz": "Do tej daty planer patrzy na portfel: każde nowe opakowanie kosztuje 15 pkt błędu za 1 zł, zużycie 30 zamiast 20, a obiad to najtańsze z dozwolonych."
   }
 }

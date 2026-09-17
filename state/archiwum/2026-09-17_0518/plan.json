@@ -1,0 +1,51 @@
+{
+  "cykl": 29,
+  "od": "2026-09-17",
+  "do": "2026-09-19",
+  "baza": "b_wolowina_cebula",
+  "dni": [
+    {
+      "sniadanie": "q_grzanki",
+      "drugi": "q_tortilla_jajecznica",
+      "kolacja": "q_twarog",
+      "obiad": "b_wolowina_cebula",
+      "data": "2026-09-17",
+      "typ": 1,
+      "makra": {
+        "kcal": 2626,
+        "bialko": 183,
+        "tluszcz": 104,
+        "wegle": 231
+      }
+    },
+    {
+      "sniadanie": "q_omlet_marchewkowy",
+      "drugi": "q_kanapki_ser",
+      "kolacja": "q_omlet",
+      "obiad": "b_wolowina_cebula",
+      "data": "2026-09-18",
+      "typ": 2,
+      "makra": {
+        "kcal": 2806,
+        "bialko": 187,
+        "tluszcz": 99,
+        "wegle": 280
+      }
+    },
+    {
+      "sniadanie": "q_tortilla_jajecznica",
+      "drugi": "q_jogurt_orzechy",
+      "kolacja": "q_kanapki_jajko",
+      "obiad": "b_wolowina_cebula",
+      "data": "2026-09-19",
+      "typ": 0,
+      "makra": {
+        "kcal": 2564,
+        "bialko": 172,
+        "tluszcz": 107,
+        "wegle": 218
+      }
+    }
+  ],
+  "wygenerowano": "2026-09-17T00:16:36+02:00"
+}
