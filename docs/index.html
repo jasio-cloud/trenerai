@@ -72,8 +72,8 @@
   label.poz.zrobione .nazwa{text-decoration:line-through;opacity:.45}
   .nazwa{flex:1}
   .ile{color:var(--slaby);font-size:12.5px;font-variant-numeric:tabular-nums;white-space:nowrap}
-  .dzial{font-size:11px;letter-spacing:.07em;text-transform:uppercase;color:var(--slaby);
-    margin:14px 0 2px;font-weight:700}
+  .dzial{font-size:12.5px;letter-spacing:.06em;text-transform:uppercase;color:var(--akcent);
+    margin:18px 0 4px;padding:6px 0 4px;font-weight:800;border-bottom:1px solid var(--linia, rgba(128,128,128,.3))}
   .dzial:first-child{margin-top:0}
 
   .kroki{counter-reset:k;list-style:none;margin:0;padding:0}
@@ -215,7 +215,7 @@ const esc = s => String(s??"").replace(/[&<>"]/g, c => ({"&":"&amp;","<":"&lt;",
 /* Wersja panelu. iPhone dodany do ekranu głównego potrafi trzymać stary HTML
    w nieskończoność. dane.json leci zawsze świeży, więc porównujemy numery
    i przy różnicy przeładowujemy stronę z ?v=, co omija cache przeglądarki. */
-const WERSJA = 18;
+const WERSJA = 19;
 let D = null, widok = "dzis";
 
 /* ---- zapis z telefonu ------------------------------------------------------
@@ -670,10 +670,18 @@ function widokZakupy(){
     ${z.mam.map(p=>`<div class="poz" style="opacity:.6"><span class="nazwa">✓ ${esc(p.nazwa)}</span>
       <span class="ile">${p.w_domu} ${esc(p.jedn)}</span></div>`).join("")}</div>` : "";
 
-  const lod = Object.keys(D.lodowka).length ? `<div class="karta"><h2>Lodówka i spiżarnia</h2>
-    ${Object.entries(D.lodowka).map(([k,v])=>`<div class="poz">
+  const kolejnoscDzialow = ["mieso", "nabial", "warzywa", "pieczywo", "spizarnia"];
+  const ranga = k => { const i = kolejnoscDzialow.indexOf(D.produkty[k]?.kat); return i < 0 ? 9 : i; };
+  let lodHtml = "", lodOst = null;
+  for(const [k, v] of Object.entries(D.lodowka).sort((a, b) => ranga(a[0]) - ranga(b[0])
+        || String(D.produkty[a[0]]?.nazwa ?? a[0]).localeCompare(String(D.produkty[b[0]]?.nazwa ?? b[0]), "pl"))){
+    const kat = D.produkty[k]?.kat;
+    if(kat !== lodOst){ lodOst = kat; lodHtml += `<div class="dzial">${nazwyDzialow[kat] ?? kat ?? "Inne"}</div>`; }
+    lodHtml += `<div class="poz">
       <span class="nazwa">${esc(D.produkty[k]?.nazwa ?? k)}</span>
-      <span class="ile">${v.ilosc} ${esc(D.produkty[k]?.jedn ?? "")} · do ${v.do}</span></div>`).join("")}</div>` : "";
+      <span class="ile">${Math.round(v.ilosc * 10) / 10} ${esc(D.produkty[k]?.jedn ?? "")} · do ${v.do}</span></div>`;
+  }
+  const lod = lodHtml ? `<div class="karta"><h2>Lodówka i spiżarnia</h2>${lodHtml}</div>` : "";
 
   const banner = z.zrobione ? `<div class="op" style="margin:-4px 0 10px">
       ✓ Ta lista jest już zaksięgowana — lodówka policzona. Odhaczaj przy półce,
