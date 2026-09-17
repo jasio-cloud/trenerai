@@ -1,5 +1,5 @@
 {
-  "wygenerowano": "2026-09-17T16:37:24",
+  "wygenerowano": "2026-09-17T16:41:19+02:00",
   "dzis": "2026-09-17",
   "typ_dzis": 1,
   "typy": {
@@ -1157,7 +1157,17 @@
           "wskazowka": "Ciągniesz do biodra, spokojnie.",
           "latwiej": "Lżejszy hantel.",
           "trudniej": "Zatrzymanie na górze.",
-          "serie": 2
+          "serie": 2,
+          "propozycja": {
+            "ciezar": 17.5,
+            "poprzedni": 15.0,
+            "powt": [
+              12,
+              12
+            ],
+            "data": "2026-09-17",
+            "podwyzka": 2.5
+          }
         },
         {
           "nazwa": "Unoszenie hantli bokiem",
@@ -3025,6 +3035,14 @@
         "ostatni": 15,
         "sesji": 2,
         "miara": "powt.",
+        "od": "2026-09-17"
+      },
+      "Wiosłowanie hantlem jednorącz": {
+        "pierwszy": 21.0,
+        "najlepszy": 21.0,
+        "ostatni": 21.0,
+        "sesji": 1,
+        "miara": "kg (szac. max)",
         "od": "2026-09-17"
       }
     },
@@ -7126,6 +7144,16 @@
             15,
             15
           ]
+        },
+        {
+          "data": "2026-09-17",
+          "typ": "seria",
+          "cwiczenie": "Wiosłowanie hantlem jednorącz",
+          "ciezar": 15,
+          "powt": [
+            12,
+            12
+          ]
         }
       ],
       "trening": {
@@ -7169,7 +7197,17 @@
               "wskazowka": "Ciągniesz do biodra, spokojnie.",
               "latwiej": "Lżejszy hantel.",
               "trudniej": "Zatrzymanie na górze.",
-              "serie": 2
+              "serie": 2,
+              "propozycja": {
+                "ciezar": 17.5,
+                "poprzedni": 15.0,
+                "powt": [
+                  12,
+                  12
+                ],
+                "data": "2026-09-17",
+                "podwyzka": 2.5
+              }
             },
             {
               "nazwa": "Unoszenie hantli bokiem",
@@ -8822,7 +8860,17 @@
               "wskazowka": "Ciągniesz do biodra, spokojnie.",
               "latwiej": "Lżejszy hantel.",
               "trudniej": "Zatrzymanie na górze.",
-              "serie": 2
+              "serie": 2,
+              "propozycja": {
+                "ciezar": 17.5,
+                "poprzedni": 15.0,
+                "powt": [
+                  12,
+                  12
+                ],
+                "data": "2026-09-17",
+                "podwyzka": 2.5
+              }
             },
             {
               "nazwa": "Unoszenie hantli bokiem",
@@ -10556,7 +10604,17 @@
               "wskazowka": "Ciągniesz do biodra, spokojnie.",
               "latwiej": "Lżejszy hantel.",
               "trudniej": "Zatrzymanie na górze.",
-              "serie": 2
+              "serie": 2,
+              "propozycja": {
+                "ciezar": 17.5,
+                "poprzedni": 15.0,
+                "powt": [
+                  12,
+                  12
+                ],
+                "data": "2026-09-17",
+                "podwyzka": 2.5
+              }
             },
             {
               "nazwa": "Unoszenie hantli bokiem",
@@ -10604,6 +10662,16 @@
         "powt": [
           15,
           15
+        ]
+      },
+      {
+        "data": "2026-09-17",
+        "typ": "seria",
+        "cwiczenie": "Wiosłowanie hantlem jednorącz",
+        "ciezar": 15,
+        "powt": [
+          12,
+          12
         ]
       }
     ]
@@ -11493,6 +11561,16 @@
         15
       ],
       "nastepny": 0.0,
+      "nieudane": 0,
+      "data": "2026-09-17"
+    },
+    "Wiosłowanie hantlem jednorącz": {
+      "ciezar": 15.0,
+      "powt": [
+        12,
+        12
+      ],
+      "nastepny": 17.5,
       "nieudane": 0,
       "data": "2026-09-17"
     }
