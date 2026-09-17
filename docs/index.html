@@ -172,6 +172,9 @@
   .yt{display:inline-block;margin-top:6px;font-size:13px;font-weight:600;color:var(--akcent);text-decoration:none}
   h3.sklep{margin:14px 0 2px;font-size:15px}
   details.przepis li.etap{list-style:none;margin:10px 0 2px -18px;font-weight:700}
+  .serie-wiersz{display:flex;flex-wrap:wrap;gap:6px;align-items:flex-end;margin-top:7px}
+  .serie-pole{display:flex;flex-direction:column;gap:2px;font-size:11px;color:var(--slaby);width:64px}
+  .serie-pole .pole{width:100%}
   .wariant{font-size:12.5px;color:var(--slaby);margin-top:3px}
   [hidden]{display:none !important}
 </style>
@@ -215,7 +218,7 @@ const esc = s => String(s??"").replace(/[&<>"]/g, c => ({"&":"&amp;","<":"&lt;",
 /* Wersja panelu. iPhone dodany do ekranu głównego potrafi trzymać stary HTML
    w nieskończoność. dane.json leci zawsze świeży, więc porównujemy numery
    i przy różnicy przeładowujemy stronę z ?v=, co omija cache przeglądarki. */
-const WERSJA = 19;
+const WERSJA = 20;
 let D = null, widok = "dzis";
 
 /* ---- zapis z telefonu ------------------------------------------------------
@@ -877,11 +880,13 @@ function widokTrening(){
         ${c.trudniej && c.trudniej !== "—" ? `<div class="wariant">Za łatwe? ${esc(c.trudniej)}</div>` : ""}
         <div class="w">przerwa ${esc(c.przerwa)}</div>
         <div class="w" style="color:var(--akcent)">${historia}</div>
-        <div style="display:flex;gap:6px;margin-top:7px">
-          <input class="pole cw-kg"   type="number" step="2.5" inputmode="decimal"
-                 placeholder="kg" value="${mc ? 0 : (sugestia ?? "")}" data-cw="${esc(c.nazwa)}">
-          <input class="pole cw-powt" type="text" inputmode="numeric"
-                 placeholder="powt. np. 8 8 7" data-cw="${esc(c.nazwa)}">
+        <div class="serie-wiersz">
+          <label class="serie-pole"><span>kg</span>
+            <input class="pole cw-kg" type="number" step="0.5" inputmode="decimal"
+                   placeholder="kg" value="${mc ? 0 : (sugestia ?? "")}" data-cw="${esc(c.nazwa)}"></label>
+          ${Array.from({length: Number(c.serie) || 1}, (_, i) => `<label class="serie-pole"><span>seria ${i + 1}</span>
+            <input class="pole cw-powt" type="number" inputmode="numeric" min="0"
+                   placeholder="powt." data-cw="${esc(c.nazwa)}"></label>`).join("")}
           <button class="mini" data-serie="${esc(c.nazwa)}">zapisz</button>
         </div></div>`;}).join("")}</div>
     <div class="karta"><h2>Na koniec</h2><div class="op">${esc(t.finisz)}</div></div>` + kartaPostepu();
@@ -1171,9 +1176,9 @@ $("#widok").addEventListener("click", async e => {
     if(b.dataset.serie){
       const cw = b.dataset.serie;
       const kg = document.querySelector(`.cw-kg[data-cw="${CSS.escape(cw)}"]`)?.value;
-      const powt = (document.querySelector(`.cw-powt[data-cw="${CSS.escape(cw)}"]`)?.value || "")
-        .split(/[^0-9]+/).filter(Boolean).map(Number);
-      if(!kg || !powt.length){ alert("Wpisz ciężar i powtórzenia, np. 8 8 7."); return; }
+      const powt = [...document.querySelectorAll(`.cw-powt[data-cw="${CSS.escape(cw)}"]`)]
+        .map(el => el.value.trim()).filter(v => v !== "").map(Number).filter(n => n > 0);
+      if(kg === "" || kg === undefined || !powt.length){ alert("Wpisz ciężar (przy ćwiczeniach z masą ciała 0) i powtórzenia w polach „seria 1”, „seria 2”…"); return; }
       await zapisz({typ:"seria", cwiczenie:cw, ciezar:Number(kg), powt}, b);
       return;
     }
