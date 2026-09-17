@@ -1,5 +1,5 @@
 {
-  "wygenerowano": "2026-09-17T06:25:37",
+  "wygenerowano": "2026-09-17T06:25:56+02:00",
   "dzis": "2026-09-17",
   "typ_dzis": 1,
   "typy": {
@@ -1008,9 +1008,114 @@
     "sklepy": {
       "Biedronka": 220.6
     },
-    "zrobione": false
+    "zrobione": true
   },
-  "lodowka": {},
+  "lodowka": {
+    "poledwica": {
+      "ilosc": 82,
+      "do": "2026-09-29"
+    },
+    "szynka": {
+      "ilosc": 20,
+      "do": "2026-09-29"
+    },
+    "jaja": {
+      "ilosc": 8,
+      "do": "2026-09-29"
+    },
+    "jogurt_grecki": {
+      "ilosc": 345,
+      "do": "2026-09-29"
+    },
+    "maslo": {
+      "ilosc": 183,
+      "do": "2026-09-29"
+    },
+    "mleko": {
+      "ilosc": 990,
+      "do": "2026-09-29"
+    },
+    "napoj_proteinowy": {
+      "ilosc": 0.5,
+      "do": "2026-09-29"
+    },
+    "ser_zolty": {
+      "ilosc": 4,
+      "do": "2026-09-29"
+    },
+    "skyr_pitny": {
+      "ilosc": 0.5,
+      "do": "2026-09-29"
+    },
+    "skyr_waniliowy": {
+      "ilosc": 0.5,
+      "do": "2026-09-29"
+    },
+    "twarog": {
+      "ilosc": 150,
+      "do": "2026-09-29"
+    },
+    "marchew": {
+      "ilosc": 0.85,
+      "do": "2027-04-05"
+    },
+    "ogorek": {
+      "ilosc": 0.5,
+      "do": "2026-09-21"
+    },
+    "ogorek_kiszony": {
+      "ilosc": 3.5,
+      "do": "2027-04-05"
+    },
+    "chleb": {
+      "ilosc": 6,
+      "do": "2026-09-29"
+    },
+    "makaron": {
+      "ilosc": 350,
+      "do": "2027-04-05"
+    },
+    "tortilla": {
+      "ilosc": 7,
+      "do": "2027-04-05"
+    },
+    "dzem_niskoslodzony": {
+      "ilosc": 20,
+      "do": "2027-04-05"
+    },
+    "majonez_sriracha": {
+      "ilosc": 236,
+      "do": "2027-04-05"
+    },
+    "miod": {
+      "ilosc": 19.0,
+      "do": "2027-04-05"
+    },
+    "musztarda": {
+      "ilosc": 6.5,
+      "do": "2027-04-05"
+    },
+    "maka": {
+      "ilosc": 915,
+      "do": "2027-04-05"
+    },
+    "orzechy": {
+      "ilosc": 186,
+      "do": "2027-04-05"
+    },
+    "proszek_do_pieczenia": {
+      "ilosc": 25,
+      "do": "2027-04-05"
+    },
+    "cynamon": {
+      "ilosc": 11,
+      "do": "2027-04-05"
+    },
+    "przyprawy": {
+      "ilosc": 95,
+      "do": "2027-04-05"
+    }
+  },
   "trening": {
     "rodzaj": "krotki",
     "trening": {
@@ -9812,61 +9917,72 @@
           "ping": true,
           "slot": "sniadanie",
           "opis": "Coś lekkiego i białkowego. Na pusty żołądek gorzej zaśniesz, na pełny obudzisz się rozbity.",
-          "posilek": "Twarożek na słodko z dżemem + pieczywo",
-          "posilek_id": "q_twarog",
+          "posilek": "Twaróg z bananem i miodem",
+          "posilek_id": "q_twarog_banan",
           "porcja": 0.9,
           "makra": {
-            "kcal": 474,
-            "bialko": 40,
-            "tluszcz": 11,
-            "wegle": 52
+            "kcal": 565,
+            "bialko": 35,
+            "tluszcz": 14,
+            "wegle": 74
           },
           "skladniki": [
             {
               "nazwa": "Twaróg półtłusty",
-              "ile": "180 g",
-              "g": 180,
-              "kcal": 239,
-              "bialko": 33.7,
-              "tluszcz": 8.5,
-              "wegle": 6.7
+              "ile": "160 g",
+              "g": 160,
+              "kcal": 213,
+              "bialko": 29.9,
+              "tluszcz": 7.5,
+              "wegle": 5.9
             },
             {
-              "nazwa": "Mleko 2%",
-              "ile": "18 ml",
-              "g": 18,
-              "kcal": 9,
-              "bialko": 0.6,
-              "tluszcz": 0.4,
+              "nazwa": "Banan",
+              "ile": "2 szt. (240 g), w tym +1 szt.",
+              "g": 240,
+              "kcal": 212,
+              "bialko": 2.6,
+              "tluszcz": 0.8,
+              "wegle": 48.4,
+              "dodatek": true
+            },
+            {
+              "nazwa": "Miód",
+              "ile": "1 łyżka (20 g)",
+              "g": 20,
+              "kcal": 61,
+              "bialko": 0.1,
+              "tluszcz": 0.0,
+              "wegle": 16.4
+            },
+            {
+              "nazwa": "Orzechy / migdały",
+              "ile": "9 g",
+              "g": 9,
+              "kcal": 58,
+              "bialko": 1.7,
+              "tluszcz": 5.1,
               "wegle": 0.9
             },
             {
-              "nazwa": "Dżem niskosłodzony (truskawkowy)",
-              "ile": "35 g",
-              "g": 35,
-              "kcal": 50,
-              "bialko": 0.2,
-              "tluszcz": 0.2,
-              "wegle": 11.9
-            },
-            {
-              "nazwa": "Chleb pszenny (zwykły biały)",
-              "ile": "2 kromki (70 g)",
-              "g": 70,
-              "kcal": 175,
-              "bialko": 5.6,
-              "tluszcz": 2.1,
-              "wegle": 32.9
+              "nazwa": "Mleko 2%",
+              "ile": "45 ml",
+              "g": 45,
+              "kcal": 22,
+              "bialko": 1.5,
+              "tluszcz": 0.9,
+              "wegle": 2.2
             }
           ],
           "jak": "przepis",
           "czas_min": 4,
           "kroki": [
-            "Twaróg (180 g) włóż do miski i dolej mleko (18 ml).",
-            "Rozgniataj widelcem ok. minuty, aż twaróg będzie gładki i kremowy.",
-            "Dżem (35 g): połowę wmieszaj w twaróg, resztę połóż na wierzch.",
-            "Zjedz z chlebem (2 kromki, 70 g) albo posmaruj nim kromki. Do boxa: twarożek w zakręcanym pojemniku, chleb w osobnej torebce.",
-            "Wszystkie ilości w krokach są już przeliczone na Twoją porcję na dziś — nic nie musisz dzielić."
+            "Twaróg (160 g) włóż do miski, dolej mleko (45 ml) i rozgniataj widelcem ok. minuty na krem.",
+            "Banana (1 szt., 120 g) obierz i pokrój w plasterki na wierzch.",
+            "Polej miodem (1 łyżka, 20 g) i posyp orzechami (9 g).",
+            "Na zmianę: wszystko do zakręcanego pojemnika, banana weź w całości i pokrój przy jedzeniu.",
+            "Wszystkie ilości w krokach są już przeliczone na Twoją porcję na dziś — nic nie musisz dzielić.",
+            "Do tego dodatek węglowy: banan 1 szt.. Zjedz obok — to paliwo na trening i regenerację, bez niego dzień nie dobija węglowodanów."
           ]
         },
         {
@@ -9914,9 +10030,9 @@
           "ikona": "🍳",
           "ping": true,
           "akcja": "kuchnia",
-          "opis": "Przygotujesz: garnek: Makaron z wołowiną i pieczarkami w sosie, Omlet marchewkowy z dżemem i bananem + napój proteinowy, Kanapki z jajkiem na twardo i serem. Potem do jutra tylko sięgasz do lodówki.",
+          "opis": "Przygotujesz: garnek: Makaron z wołowiną i pieczarkami w sosie, Omlet marchewkowy z dżemem i bananem + napój proteinowy, Kanapki z serem, musztardą i kiszonym ogórkiem. Potem do jutra tylko sięgasz do lodówki.",
           "kroki": [
-            "Wyjmij wszystko na blat, zanim zaczniesz: banan 1 szt. (120 g), cebula 2 szt. (200 g), chleb pszenny 2 kromki (70 g), przyprawa do cynamonek / cynamon 4 g, czosnek 3 ząbki (15 g), dżem niskosłodzony 100 g, jaja 3 szt. (165 g), mąka pszenna 35 g, makaron 240 g, marchew 40 g, wołowina świeżo mielona 500 g, musztarda 1 łyżka (15 g), napój proteinowy müllermilch protein 200 ml, odżywka białkowa wpc 80 20 g, ogórek kiszony 1 szt. (65 g), olej rzepakowy 15 ml, pieczarki 400 g, proszek do pieczenia 2 g, przyprawy 1 porcja (2 g), ser żółty starty 40 g, ser żółty w plastrach 2 plastry (40 g), skyr waniliowy 75 g, śmietana 18% 150 ml.",
+            "Wyjmij wszystko na blat, zanim zaczniesz: banan 1 szt. (120 g), cebula 2 szt. (200 g), chleb pszenny 2 kromki (70 g), przyprawa do cynamonek / cynamon 4 g, czosnek 3 ząbki (15 g), dżem niskosłodzony 100 g, jaja 1 szt. (55 g), mąka pszenna 35 g, makaron 240 g, marchew 40 g, masło 5 g, wołowina świeżo mielona 500 g, musztarda 1 łyżka (15 g), napój proteinowy müllermilch protein 200 ml, odżywka białkowa wpc 80 20 g, ogórek kiszony 100 g, olej rzepakowy 15 ml, pieczarki 400 g, pomidor 1 szt. (120 g), proszek do pieczenia 2 g, ser żółty starty 40 g, ser żółty w plastrach 2 plastry (40 g), skyr waniliowy 75 g, śmietana 18% 150 ml.",
             "Przygotuj 1 pojemnik i opisz je karteczką: dziś 20:30 — kolacja.",
             "▸ Garnek: Makaron z wołowiną i pieczarkami w sosie — zaczynasz od niego, bo najdłużej się gotuje.",
             "Zanim zaczniesz: postaw na wadze kuchennej deskę do krojenia, na niej pusty duży garnek (ten do makaronu), i wpisz tę wagę w zakładce Gotuję → „Ile nałożyć na porcję” (pole „puste naczynie”). Na tej samej desce zważysz później naczynie z jedzeniem — deska chroni wagę przed gorącem.",
@@ -9929,14 +10045,12 @@
             "Przełóż sos z patelni do garnka z makaronem i dokładnie wymieszaj.",
             "Porcjowanie: zważ garnek z gotowym jedzeniem na tej samej desce i wpisz wagę w panelu — pokaże, ile gramów nałożyć do każdego z 3 pojemników.",
             "Do każdego z 3 pojemników nałóż wyliczone gramy: postaw pusty pojemnik na wadze, wciśnij TARA (waga pokaże 0) i nakładaj, aż dojdziesz do liczby z panelu. Zostaw pojemniki otwarte na 20–30 minut, żeby wystygły, potem zamknij i wstaw do lodówki. Każdy pojemnik to dokładnie jedna porcja z Twojego planu.",
-            "▸ Woda — postaw ją od razu, zanim zaczniesz resztę:",
-            "Jajka na twardo dla Kanapki z jajkiem na twardo i serem (2 szt.) — razem 2 szt.: w małym garnku zagotuj wodę, łyżką włóż jajka, gotuj 9 minut na średnim ogniu, odlej wrzątek i zalej zimną wodą. Obierzesz je przy daniach.",
             "▸ Kiedy garnek się gotuje, robisz resztę — od najczystszych produktów do tych, po których myjesz nóż i deskę:",
-            "▸ Kanapki z jajkiem na twardo i serem",
-            "Weź 2 szt. ugotowanych jajek z garnka z zimną wodą.",
-            "Jajka pokrój w plastry.",
-            "Chleb (2 kromki, 70 g) posmaruj cienko musztardą (1 łyżka, 15 g), połóż ser (2 plastry, 40 g), na to plastry jajka. Posól i popieprz szczyptą.",
-            "Ogórka kiszonego (1 szt., 65 g) pokrój w plasterki i ułóż na wierzchu. Do boxa zawiń każdą kanapkę w folię.",
+            "▸ Kanapki z serem, musztardą i kiszonym ogórkiem",
+            "Kromki chleba (2 kromki, 70 g) posmaruj cienko masłem (5 g), potem musztardą (1 łyżka, 15 g).",
+            "Ser (2 plastry, 40 g) rozłóż po równo na kromkach.",
+            "Ogórki kiszone (100 g) i pomidora (1 szt., 120 g) pokrój w plasterki i ułóż na serze.",
+            "Do boxa zawiń kanapki w folię.",
             "Przełóż do pojemnika „dziś 20:30 — kolacja”.",
             "▸ Omlet marchewkowy z dżemem i bananem + napój proteinowy",
             "Marchew (40 g) obierz i zetrzyj na tarce na drobnych oczkach.",
@@ -9952,7 +10066,7 @@
             "▸ Na koniec: ciepłe pojemniki wystudź 20–30 minut bez pokrywki, potem wszystkie do lodówki na jedną półkę. Naczynia do zlewu, przetrzyj blat — 5 minut teraz oszczędza 20 jutro."
           ],
           "jak": "kuchnia",
-          "czas_min": 45
+          "czas_min": 37
         },
         {
           "czas": "15:15",
@@ -10197,25 +10311,16 @@
           "ping": true,
           "slot": "kolacja",
           "opis": "",
-          "posilek": "Kanapki z jajkiem na twardo i serem",
-          "posilek_id": "q_kanapki_jajko",
-          "porcja": 1.0,
+          "posilek": "Kanapki z serem, musztardą i kiszonym ogórkiem",
+          "posilek_id": "q_kanapki_ser",
+          "porcja": 0.8,
           "makra": {
-            "kcal": 497,
-            "bialko": 31,
-            "tluszcz": 24,
-            "wegle": 36
+            "kcal": 402,
+            "bialko": 18,
+            "tluszcz": 18,
+            "wegle": 40
           },
           "skladniki": [
-            {
-              "nazwa": "Jaja",
-              "ile": "2 szt. (110 g)",
-              "g": 110,
-              "kcal": 157,
-              "bialko": 13.9,
-              "tluszcz": 10.5,
-              "wegle": 0.8
-            },
             {
               "nazwa": "Chleb pszenny (zwykły biały)",
               "ile": "2 kromki (70 g)",
@@ -10245,22 +10350,40 @@
             },
             {
               "nazwa": "Ogórek kiszony",
-              "ile": "1 szt. (65 g)",
-              "g": 65,
-              "kcal": 8,
-              "bialko": 0.3,
-              "tluszcz": 0.1,
-              "wegle": 1.3
+              "ile": "100 g",
+              "g": 98,
+              "kcal": 12,
+              "bialko": 0.5,
+              "tluszcz": 0.2,
+              "wegle": 1.9
+            },
+            {
+              "nazwa": "Masło",
+              "ile": "5 g",
+              "g": 5,
+              "kcal": 37,
+              "bialko": 0.0,
+              "tluszcz": 4.1,
+              "wegle": 0.0
+            },
+            {
+              "nazwa": "Pomidor",
+              "ile": "1 szt. (120 g)",
+              "g": 120,
+              "kcal": 22,
+              "bialko": 1.1,
+              "tluszcz": 0.2,
+              "wegle": 3.2
             }
           ],
           "jak": "przepis",
-          "czas_min": 12,
+          "czas_min": 4,
           "kroki": [
             "📦 To zrobiłeś w bloku kuchni (dziś o 14:15) — teraz tylko wyjmij pojemnik z lodówki. Przepis niżej, gdybyś robił na świeżo.",
-            "Jajka na twardo: w małym garnku zagotuj tyle wody, żeby przykryła jajka (2 szt., 110 g). Łyżką ostrożnie włóż jajka do wrzątku i gotuj 9 minut na średnim ogniu. Odlej wrzątek, zalej zimną wodą na 3 minuty i obierz ze skorupki.",
-            "Jajka pokrój w plastry.",
-            "Chleb (2 kromki, 70 g) posmaruj cienko musztardą (1 łyżka, 15 g), połóż ser (2 plastry, 40 g), na to plastry jajka. Posól i popieprz szczyptą.",
-            "Ogórka kiszonego (1 szt., 65 g) pokrój w plasterki i ułóż na wierzchu. Do boxa zawiń każdą kanapkę w folię.",
+            "Kromki chleba (2 kromki, 70 g) posmaruj cienko masłem (5 g), potem musztardą (1 łyżka, 15 g).",
+            "Ser (2 plastry, 40 g) rozłóż po równo na kromkach.",
+            "Ogórki kiszone (100 g) i pomidora (1 szt., 120 g) pokrój w plasterki i ułóż na serze.",
+            "Do boxa zawiń kanapki w folię.",
             "Wszystkie ilości w krokach są już przeliczone na Twoją porcję na dziś — nic nie musisz dzielić."
           ]
         },
@@ -10288,13 +10411,18 @@
         }
       ],
       "makra": {
-        "kcal": 2596,
-        "bialko": 171,
-        "tluszcz": 90,
-        "wegle": 265
+        "kcal": 2592,
+        "bialko": 153,
+        "tluszcz": 87,
+        "wegle": 291
       },
       "dobitka": 0,
-      "dodatek_w": [],
+      "dodatek_w": [
+        [
+          "banan",
+          1
+        ]
+      ],
       "poza_planem": [],
       "lzejszy": false,
       "cel": {
@@ -10369,7 +10497,414 @@
     "waga": [],
     "serie": []
   },
-  "zakupy_zamrozone": {},
+  "zakupy_zamrozone": {
+    "kup": [
+      {
+        "klucz": "poledwica",
+        "nazwa": "Polędwica sopocka (wędlina)",
+        "kat": "mieso",
+        "trw": "chlodnia",
+        "sklep": "Biedronka",
+        "opakowan": 1,
+        "opak": 100,
+        "jedn": "g",
+        "brakuje": 18,
+        "dokupisz": 100,
+        "cena": 6.5
+      },
+      {
+        "klucz": "szynka",
+        "nazwa": "Szynka w plastrach",
+        "kat": "mieso",
+        "trw": "chlodnia",
+        "sklep": "Biedronka",
+        "opakowan": 2,
+        "opak": 150,
+        "jedn": "g",
+        "brakuje": 280,
+        "dokupisz": 300,
+        "cena": 13.0
+      },
+      {
+        "klucz": "jaja",
+        "nazwa": "Jaja",
+        "kat": "nabial",
+        "trw": "chlodnia",
+        "sklep": "Biedronka",
+        "opakowan": 2,
+        "opak": 10,
+        "jedn": "szt",
+        "brakuje": 12,
+        "dokupisz": 20,
+        "cena": 24.0
+      },
+      {
+        "klucz": "jogurt_grecki",
+        "nazwa": "Jogurt grecki 2%",
+        "kat": "nabial",
+        "trw": "chlodnia",
+        "sklep": "Biedronka",
+        "opakowan": 2,
+        "opak": 400,
+        "jedn": "g",
+        "brakuje": 455,
+        "dokupisz": 800,
+        "cena": 12.0
+      },
+      {
+        "klucz": "maslo",
+        "nazwa": "Masło",
+        "kat": "nabial",
+        "trw": "chlodnia",
+        "sklep": "Biedronka",
+        "opakowan": 1,
+        "opak": 200,
+        "jedn": "g",
+        "brakuje": 17,
+        "dokupisz": 200,
+        "cena": 8.5
+      },
+      {
+        "klucz": "mleko",
+        "nazwa": "Mleko 2%",
+        "kat": "nabial",
+        "trw": "chlodnia",
+        "sklep": "Biedronka",
+        "opakowan": 1,
+        "opak": 1000,
+        "jedn": "ml",
+        "brakuje": 10,
+        "dokupisz": 1000,
+        "cena": 4.0
+      },
+      {
+        "klucz": "napoj_proteinowy",
+        "nazwa": "Napój proteinowy Müllermilch Protein (400 ml)",
+        "kat": "nabial",
+        "trw": "chlodnia",
+        "sklep": "Biedronka",
+        "opakowan": 2,
+        "opak": 1,
+        "jedn": "butelka",
+        "brakuje": 1.5,
+        "dokupisz": 2,
+        "cena": 13.0
+      },
+      {
+        "klucz": "ser_zolty",
+        "nazwa": "Ser żółty w plastrach",
+        "kat": "nabial",
+        "trw": "chlodnia",
+        "sklep": "Biedronka",
+        "opakowan": 1,
+        "opak": 12,
+        "jedn": "plaster",
+        "brakuje": 8,
+        "dokupisz": 12,
+        "cena": 10.0
+      },
+      {
+        "klucz": "skyr_pitny",
+        "nazwa": "Skyr pitny (butelka, np. Fruvita albo Piątnica)",
+        "kat": "nabial",
+        "trw": "chlodnia",
+        "sklep": "Biedronka",
+        "opakowan": 1,
+        "opak": 1,
+        "jedn": "butelka",
+        "brakuje": 0.5,
+        "dokupisz": 1,
+        "cena": 4.5
+      },
+      {
+        "klucz": "skyr_waniliowy",
+        "nazwa": "Skyr waniliowy (kubek 150 g)",
+        "kat": "nabial",
+        "trw": "chlodnia",
+        "sklep": "Biedronka",
+        "opakowan": 2,
+        "opak": 1,
+        "jedn": "kubek",
+        "brakuje": 1.5,
+        "dokupisz": 2,
+        "cena": 7.0
+      },
+      {
+        "klucz": "twarog",
+        "nazwa": "Twaróg półtłusty",
+        "kat": "nabial",
+        "trw": "chlodnia",
+        "sklep": "Biedronka",
+        "opakowan": 1,
+        "opak": 250,
+        "jedn": "g",
+        "brakuje": 100,
+        "dokupisz": 250,
+        "cena": 5.5
+      },
+      {
+        "klucz": "banan",
+        "nazwa": "Banan",
+        "kat": "warzywa",
+        "trw": "chlodnia",
+        "sklep": "Biedronka",
+        "opakowan": 3,
+        "opak": 1,
+        "jedn": "szt",
+        "brakuje": 3,
+        "dokupisz": 3,
+        "cena": 3.6
+      },
+      {
+        "klucz": "jablko",
+        "nazwa": "Jabłko",
+        "kat": "warzywa",
+        "trw": "trwale",
+        "sklep": "Biedronka",
+        "opakowan": 1,
+        "opak": 1,
+        "jedn": "szt",
+        "brakuje": 1,
+        "dokupisz": 1,
+        "cena": 1.2
+      },
+      {
+        "klucz": "marchew",
+        "nazwa": "Marchew",
+        "kat": "warzywa",
+        "trw": "trwale",
+        "sklep": "Biedronka",
+        "opakowan": 2,
+        "opak": 1,
+        "jedn": "szt",
+        "brakuje": 1.1,
+        "dokupisz": 2,
+        "cena": 1.0
+      },
+      {
+        "klucz": "ogorek",
+        "nazwa": "Ogórek długi",
+        "kat": "warzywa",
+        "trw": "swieze",
+        "sklep": "Biedronka",
+        "opakowan": 1,
+        "opak": 1,
+        "jedn": "szt",
+        "brakuje": 0.5,
+        "dokupisz": 1,
+        "cena": 2.5
+      },
+      {
+        "klucz": "ogorek_kiszony",
+        "nazwa": "Ogórek kiszony",
+        "kat": "warzywa",
+        "trw": "trwale",
+        "sklep": "Biedronka",
+        "opakowan": 1,
+        "opak": 8,
+        "jedn": "szt",
+        "brakuje": 4.5,
+        "dokupisz": 8,
+        "cena": 8.0
+      },
+      {
+        "klucz": "pomidor",
+        "nazwa": "Pomidor",
+        "kat": "warzywa",
+        "trw": "swieze",
+        "sklep": "Biedronka",
+        "opakowan": 2,
+        "opak": 1,
+        "jedn": "szt",
+        "brakuje": 2.0,
+        "dokupisz": 2,
+        "cena": 3.0
+      },
+      {
+        "klucz": "chleb",
+        "nazwa": "Chleb pszenny (zwykły biały)",
+        "kat": "pieczywo",
+        "trw": "chlodnia",
+        "sklep": "Biedronka",
+        "opakowan": 1,
+        "opak": 16,
+        "jedn": "kromka",
+        "brakuje": 10,
+        "dokupisz": 16,
+        "cena": 4.5
+      },
+      {
+        "klucz": "makaron",
+        "nazwa": "Makaron (świderki/penne)",
+        "kat": "pieczywo",
+        "trw": "trwale",
+        "sklep": "Biedronka",
+        "opakowan": 1,
+        "opak": 500,
+        "jedn": "g",
+        "brakuje": 150,
+        "dokupisz": 500,
+        "cena": 4.5
+      },
+      {
+        "klucz": "tortilla",
+        "nazwa": "Tortilla pszenna",
+        "kat": "pieczywo",
+        "trw": "trwale",
+        "sklep": "Biedronka",
+        "opakowan": 1,
+        "opak": 8,
+        "jedn": "szt",
+        "brakuje": 1,
+        "dokupisz": 8,
+        "cena": 8.0
+      },
+      {
+        "klucz": "dzem_niskoslodzony",
+        "nazwa": "Dżem niskosłodzony (truskawkowy)",
+        "kat": "spizarnia",
+        "trw": "trwale",
+        "sklep": "Biedronka",
+        "opakowan": 1,
+        "opak": 280,
+        "jedn": "g",
+        "brakuje": 260,
+        "dokupisz": 280,
+        "cena": 7.0
+      },
+      {
+        "klucz": "kukurydza",
+        "nazwa": "Kukurydza konserwowa",
+        "kat": "spizarnia",
+        "trw": "trwale",
+        "sklep": "Biedronka",
+        "opakowan": 1,
+        "opak": 200,
+        "jedn": "g",
+        "brakuje": 200,
+        "dokupisz": 200,
+        "cena": 4.0
+      },
+      {
+        "klucz": "majonez_sriracha",
+        "nazwa": "Majonez sriracha",
+        "kat": "spizarnia",
+        "trw": "trwale",
+        "sklep": "Biedronka",
+        "opakowan": 1,
+        "opak": 250,
+        "jedn": "ml",
+        "brakuje": 14,
+        "dokupisz": 250,
+        "cena": 9.0
+      },
+      {
+        "klucz": "miod",
+        "nazwa": "Miód",
+        "kat": "spizarnia",
+        "trw": "trwale",
+        "sklep": "Biedronka",
+        "opakowan": 1,
+        "opak": 20,
+        "jedn": "lyzka",
+        "brakuje": 1.0,
+        "dokupisz": 20,
+        "cena": 18.0
+      },
+      {
+        "klucz": "musztarda",
+        "nazwa": "Musztarda",
+        "kat": "spizarnia",
+        "trw": "trwale",
+        "sklep": "Biedronka",
+        "opakowan": 1,
+        "opak": 12,
+        "jedn": "lyzka",
+        "brakuje": 5.5,
+        "dokupisz": 12,
+        "cena": 4.0
+      },
+      {
+        "klucz": "maka",
+        "nazwa": "Mąka pszenna",
+        "kat": "spizarnia",
+        "trw": "trwale",
+        "sklep": "Biedronka",
+        "opakowan": 1,
+        "opak": 1000,
+        "jedn": "g",
+        "brakuje": 85,
+        "dokupisz": 1000,
+        "cena": 3.5
+      },
+      {
+        "klucz": "orzechy",
+        "nazwa": "Orzechy / migdały",
+        "kat": "spizarnia",
+        "trw": "trwale",
+        "sklep": "Biedronka",
+        "opakowan": 1,
+        "opak": 200,
+        "jedn": "g",
+        "brakuje": 14,
+        "dokupisz": 200,
+        "cena": 12.0
+      },
+      {
+        "klucz": "proszek_do_pieczenia",
+        "nazwa": "Proszek do pieczenia",
+        "kat": "spizarnia",
+        "trw": "trwale",
+        "sklep": "Biedronka",
+        "opakowan": 1,
+        "opak": 30,
+        "jedn": "g",
+        "brakuje": 5,
+        "dokupisz": 30,
+        "cena": 0.8
+      },
+      {
+        "klucz": "cynamon",
+        "nazwa": "Przyprawa do cynamonek / cynamon",
+        "kat": "spizarnia",
+        "trw": "trwale",
+        "sklep": "Biedronka",
+        "opakowan": 1,
+        "opak": 20,
+        "jedn": "g",
+        "brakuje": 9,
+        "dokupisz": 20,
+        "cena": 3.0
+      },
+      {
+        "klucz": "przyprawy",
+        "nazwa": "Przyprawy (sól, pieprz, papryka, oregano, majeranek)",
+        "kat": "spizarnia",
+        "trw": "trwale",
+        "sklep": "Biedronka",
+        "opakowan": 1,
+        "opak": 100,
+        "jedn": "porcja",
+        "brakuje": 5,
+        "dokupisz": 100,
+        "cena": 15.0
+      }
+    ],
+    "mam": [
+      {
+        "klucz": "odzywka_wpc",
+        "nazwa": "Odżywka białkowa WPC 80 (czekoladowa) — zapas, nie z Biedronki",
+        "potrzeba": 50,
+        "w_domu": 50,
+        "jedn": "g"
+      }
+    ],
+    "koszt": 220.6,
+    "sklepy": {
+      "Biedronka": 220.6
+    },
+    "zrobione": true
+  },
   "repo": "jasio-cloud/trenerai",
   "galaz": "main",
   "suple": {
