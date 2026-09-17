@@ -639,13 +639,65 @@ def slot_ulubionego(d):
     return "drugi" if typ_dnia(d) == 1 else "sniadanie"
 
 
-def _pule(box_only):
-    """Kandydaci na każdy slot; na dniu zmiany tylko to, co da się zjeść na zimno z boxa."""
+def wymaga_boxa(d, slot):
+    """Czy posilek musi wytrzymac w pojemniku. Na swiezo jesz tylko to, co konczy
+    blok kuchni: posilek po treningu w dniu po zmianie i sniadanie w dzien wolny.
+    Reszta jest robiona wczesniej i czeka w lodowce."""
+    t = typ_dnia(d)
+    if t == 1 and slot == "drugi":
+        return False
+    if t == 2 and slot == "sniadanie":
+        return False
+    return True
+
+
+def _pule(d):
+    """Kandydaci na kazdy slot danego dnia. Maly posilek po nocce (8:15) nie wchodzi
+    do bloku kuchni, wiec musi byc bez gotowania — do 5 minut."""
+    t = typ_dnia(d)
     out = {}
     for slot in ("sniadanie", "drugi", "kolacja"):
+        box = wymaga_boxa(d, slot)
         out[slot] = [q["id"] for q in QUICK
-                     if slot in q["sloty"] and (q["box"] if box_only else True)]
+                     if slot in q["sloty"] and (q["box"] or not box)
+                     and not (t == 1 and slot == "sniadanie" and q["czas_min"] > 5)]
     return out
+
+
+_PROD_POSILKU = {}
+
+
+def _produkty_dict(pid, porcja=1.0):
+    klucz = (pid, porcja)
+    if klucz not in _PROD_POSILKU:
+        out = {}
+        for k, q in produkty_posilku(pid, porcja):
+            if k != "przyprawy":
+                out[k] = out.get(k, 0) + q
+        _PROD_POSILKU[klucz] = out
+    return _PROD_POSILKU[klucz]
+
+
+def koszt_portfela(potrzeba, stan_lod):
+    """(ile kosztuje zuzycie tego, czego nie ma w lodowce; ile zl pojdzie do kosza).
+
+    Kupujesz cale opakowania. Jesli z kostki twarogu 250 g zuzyjesz 100 g, reszta
+    krotko trwalych produktow przepada — planer ma tego unikac i dobierac dania tak,
+    zeby otwarte opakowania schodzily do konca. Produkty z chlodni liczymy w polowie,
+    bo czesc zejdzie w nastepnym cyklu."""
+    koszt = zmarn = 0.0
+    for k, q in potrzeba.items():
+        p = PROD[k]
+        brak = q - stan_lod.get(k, {}).get("ilosc", 0)
+        if brak <= 0.001:
+            continue
+        koszt += brak / p["opak"] * p["cena"]
+        if p["trw"] == "trwale":
+            continue
+        opak = math.ceil(brak / p["opak"] - 1e-9)
+        reszta = opak * p["opak"] - brak
+        zmarn += reszta / p["opak"] * p["cena"] * (1.0 if p["trw"] == "swieze" else 0.5)
+    return koszt, zmarn
 
 
 def _wybierz_baze(historia, d=None):
@@ -761,19 +813,25 @@ def generuj_plan(d=None, force=False, zapisz=True):
 
     daty = [start + datetime.timedelta(days=i) for i in range(3)]
     cele = [cel_dnia(dd) for dd in daty]
-    pule = [_pule(box_only=(typ_dnia(dd) == 0)) for dd in daty]
+    pule = [_pule(dd) for dd in daty]
     # Ulubione tylko tam, gdzie wypada ich dzien — i wtedy bez konkurencji. Box nie
     # ma znaczenia: sniadanie w dniu zmiany jesz w domu, przed wyjsciem.
     # Przy oszczedzaniu liczy sie to, co wyjmiesz z portfela w sklepie: kazdy produkt,
     # ktorego nie ma w lodowce, to cale opakowanie (sloik miodu, paczka orzechow).
-    oszcz = CFG.get("oszczedzanie") if waga_kosztu(start) != KOSZT_WAGA else None
-    stan_lod = wczytaj_lodowke()["stan"] if oszcz else {}
+    stan_lod = wczytaj_lodowke()["stan"]
+    waga_k = waga_kosztu(start)
+    baza_dict = {k: q * 3 for k, q in _produkty_dict(baza["id"]).items()}
     ul = _ulubione()
     for i, dd in enumerate(daty):
         for s_ in pule[i]:
             pule[i][s_] = [p for p in pule[i][s_] if p not in ul]
         if ul and dzien_ulubionego(dd):
-            pule[i][slot_ulubionego(dd)] = [ulubione_na(dd)]
+            s_ul = slot_ulubionego(dd)
+            fav = ulubione_na(dd)
+            if wymaga_boxa(dd, s_ul) and not QUICK_BY_ID[fav]["box"]:
+                fav = next((u for u in ul if QUICK_BY_ID[u]["box"]), None)
+            if fav:
+                pule[i][s_ul] = [fav]
 
     import heapq
     czolowka = []   # najlepsi kandydaci PRZED dopasowaniem porcji
@@ -808,17 +866,19 @@ def generuj_plan(d=None, force=False, zapisz=True):
         kary = 450 * (len(uzyte) - len(set(uzyte))) - 8 * (len(klucze_produktow) - len(set(klucze_produktow)))
         # ulubione na zmiane: to samo dwa razy w cyklu tylko, gdy makra naprawde tego chca
         kary += 150 * (len(ul_uzyte) - len(set(ul_uzyte)))
-        # ulubione sa wybrane przez Ciebie — koszt ich nie wypycha, liczy sie dla reszty
-        kary += waga_kosztu(start) * sum(_koszt_posilku(dz[s_]) for dz in kandydat
-                                 for s_ in ("sniadanie", "drugi", "kolacja") if dz[s_] not in ul)
-        if oszcz:
-            nowe = {k for k in klucze_produktow
-                    if k != "przyprawy" and stan_lod.get(k, {}).get("ilosc", 0) <= 0}
-            kary += oszcz.get("waga_opakowan", 15) * sum(PROD[k]["cena"] for k in nowe)
+        # deser nizej, portfel osobno (w drugiej rundzie liczony dokladnie, po porcjach)
+        potrzeba = dict(baza_dict)
+        for dz in kandydat:
+            for s_ in ("sniadanie", "drugi", "kolacja"):
+                for k, q in _produkty_dict(dz[s_]).items():
+                    potrzeba[k] = potrzeba.get(k, 0) + q
+        koszt_, zmarn_ = koszt_portfela(potrzeba, stan_lod)
+        portfel = waga_k * (koszt_ + zmarn_)
         # deser bialkowy najwyzej raz dziennie — to ma byc cos slodkiego w planie, nie trzy kremy dziennie
         kary += 500 * sum(max(0, sum(1 for s_ in ("sniadanie", "drugi", "kolacja")
                                      if QUICK_BY_ID[dz[s_]].get("deser")) - 1) for dz in kandydat)
         wynik += kary - (450 * (len(uzyte) - len(set(uzyte))) - 8 * (len(klucze_produktow) - len(set(klucze_produktow))))
+        wynik += portfel
         wpis = (-wynik, nr, kandydat, kary)
         if len(czolowka) < 80:
             heapq.heappush(czolowka, wpis)
@@ -831,6 +891,7 @@ def generuj_plan(d=None, force=False, zapisz=True):
     najlepszy, najlepszy_wynik = None, float("inf")
     for _, _, kandydat, kary in czolowka:
         wynik = kary
+        potrzeba = dict(baza_dict)
         for i_, dzien in enumerate(kandydat):
             pelny = dict(dzien, obiad=baza["id"])
             porcje = dopasuj_porcje(pelny, cele[i_], porcje=_zakres_porcji(daty[i_]))
@@ -838,6 +899,13 @@ def generuj_plan(d=None, force=False, zapisz=True):
             pelny["dodatek_w"] = porcje.pop("_dodatek_w", [])
             pelny["porcje"] = porcje
             wynik += _blad_dnia(makra_dnia(pelny), cele[i_])
+            for s_ in ("sniadanie", "drugi", "kolacja"):
+                for k, q in _produkty_dict(dzien[s_], porcje.get(s_, 1.0)).items():
+                    potrzeba[k] = potrzeba.get(k, 0) + q
+            for k, q in pelny["dodatek_w"] + ([[DOBITKA_PRODUKT, pelny["dobitka"]]] if pelny["dobitka"] else []):
+                potrzeba[k] = potrzeba.get(k, 0) + q
+        koszt_, zmarn_ = koszt_portfela(potrzeba, stan_lod)
+        wynik += waga_k * (koszt_ + zmarn_)
         if wynik < najlepszy_wynik:
             najlepszy_wynik, najlepszy = wynik, kandydat
 
@@ -982,7 +1050,7 @@ def alternatywy_slotu(slot, d=None, ile=4):
     _, dzien = plan_dnia(d)
     obecny = dzien[slot]
     cel = makra_posilku(obecny)
-    box_only = typ_dnia(d) == 0
+    box_only = wymaga_boxa(d, slot)
     if slot == "obiad":
         kand = [q["id"] for q in QUICK if q.get("bez_gotowania") and (q["box"] if box_only else True)]
         dozw = CFG.get("obiady", {}).get("dozwolone")
@@ -1103,7 +1171,7 @@ def zamien_posilek(slot, d=None):
 
 
 def _najlepszy_gotowiec(d, cel):
-    box_only = typ_dnia(d) == 0
+    box_only = True   # obiad zawsze czeka w pojemniku — robisz go w bloku kuchni
     kandydaci = [q["id"] for q in QUICK if q.get("bez_gotowania") and (q["box"] if box_only else True)]
     if not kandydaci:
         return None
@@ -1681,6 +1749,170 @@ def kalkulator_snu(o_ktorej=None, d=None):
 
 # ------------------------------------------------------------------ agenda
 
+def _godzina_kuchni(d):
+    e = next((x for x in DNI["plan"][str(typ_dnia(d))] if x.get("akcja") == "kuchnia"), None)
+    return e["czas"] if e else None
+
+
+def blok_dla(d, slot):
+    """Kiedy przygotowujesz posilek: (dzien bloku, godzina) albo None, gdy robisz go na miejscu."""
+    t = typ_dnia(d)
+    if t == 1 and slot == "sniadanie":
+        return None
+    bd = d - datetime.timedelta(days=1) if t == 0 else d
+    g = _godzina_kuchni(bd)
+    return (bd, g) if g else None
+
+
+def posilki_bloku(d):
+    """Co robisz w bloku kuchni danego dnia: dzis w dniu po zmianie posilki do wieczora,
+    w dzien wolny posilki na dzis i wszystkie pojemniki na jutrzejsza zmiane."""
+    t = typ_dnia(d)
+    dni_ = []
+    if t == 1:
+        dni_ = [(d, ("drugi", "obiad", "kolacja"))]
+    elif t == 2:
+        dni_ = [(d, ("sniadanie", "drugi", "obiad", "kolacja")),
+                (d + datetime.timedelta(days=1), ("sniadanie", "drugi", "obiad", "kolacja"))]
+    out = []
+    for dd, sloty in dni_:
+        _, dz = plan_dnia(dd)
+        if not dz:
+            continue
+        szablon = {e["slot"]: e for e in DNI["plan"][str(typ_dnia(dd))] if e.get("slot")}
+        for sl in sloty:
+            pid = dz[sl]
+            por = dz.get("porcje", {}).get(sl, 1.0)
+            if por == 0 or pid not in QUICK_BY_ID:
+                continue
+            kiedy = "dziś" if dd == d else "jutro"
+            out.append({"data": dd, "slot": sl, "pid": pid, "porcja": por,
+                        "na_teraz": dd == d and not wymaga_boxa(dd, sl),
+                        "etykieta": "%s %s — %s" % (kiedy, szablon[sl]["czas"], szablon[sl]["tytul"].lower()),
+                        "dodatek_w": dz.get("dodatek_w", []) if sl == "sniadanie" else [],
+                        "dobitka": dz.get("dobitka", 0) if sl == "drugi" else 0})
+    return out
+
+
+def _pauza_garnka(kroki):
+    for i, k in enumerate(kroki):
+        m = re.search(r"(gotuj|duś|piecz)[^.]*?(\d+) minut", k, re.I)
+        if m and int(m.group(2)) >= 15:
+            return i
+    return len(kroki) - 1
+
+
+def plan_kuchni(d):
+    """Jedna godzina w kuchni: wszystkie posilki naraz, w kolejnosci, ktora oszczedza czas —
+    najpierw to, co dlugo sie gotuje, potem woda na makaron i jajka, a w czasie gotowania
+    reszta. Te same dania robisz raz na kilka posilkow, czyste produkty przed brudzacymi."""
+    wpisy = posilki_bloku(d)
+    b = None
+    if typ_dnia(d) == DZIEN_GOTOWANIA:
+        _, dz = plan_dnia(d)
+        if dz and dz["obiad"] in BAZA_BY_ID:
+            b = BAZA_BY_ID[dz["obiad"]]
+    if not wpisy and not b:
+        return None
+    grupy = {}
+    for w in wpisy:
+        grupy.setdefault(w["pid"], []).append(w)
+    ranga = {"pieczywo": 0, "warzywa": 0, "spizarnia": 1, "nabial": 2, "mieso": 3}
+    def brud(pid):
+        return max([ranga.get(PROD[k]["kat"], 1) for k, _ in QUICK_BY_ID[pid]["produkty"] if k != "przyprawy"] or [0])
+    kolejnosc = sorted(grupy, key=lambda pid: (all(w["na_teraz"] for w in grupy[pid]), brud(pid), QUICK_BY_ID[pid]["czas_min"]))
+
+    razem, woda, bloki, piec = {}, [], [], False
+    jajka = []
+    for pid in kolejnosc:
+        ws = grupy[pid]
+        prod = {}
+        for w in ws:
+            for k, q in produkty_posilku(pid, w["porcja"]):
+                prod[k] = prod.get(k, 0) + q
+        for w in ws:
+            for k, q in w["dodatek_w"] + ([[DOBITKA_PRODUKT, w["dobitka"]]] if w["dobitka"] else []):
+                razem[k] = razem.get(k, 0) + q
+        for k, q in prod.items():
+            razem[k] = razem.get(k, 0) + q
+        wlasne = []
+        for k in wypelnij_kroki(QUICK_BY_ID[pid]["kroki"], list(prod.items())):
+            if re.search(r"piekarnik", k, re.I) and re.search(r"włącz|nagrzej", k, re.I):
+                piec = True
+                wlasne.append(re.sub(r"^Włącz piekarnik[^.]*\.\s*", "", k) or "Piekarnik już się grzeje.")
+            elif k.startswith("Jajka na twardo"):
+                jajka.append((nazwa_posilku(pid), prod.get("jaja", 0)))
+                wlasne.append("Weź %s ugotowanych jajek z garnka z zimną wodą." % fmt_ilosc("jaja", prod.get("jaja", 0)).split(" (")[0])
+            elif re.search(r"zagotuj", k, re.I):
+                woda.append("%s: %s" % (nazwa_posilku(pid), k))
+            else:
+                wlasne.append(k)
+        wlasne = [x for x in wlasne if x]
+        naglowek = "▸ " + nazwa_posilku(pid)
+        if len(ws) > 1:
+            suma = sum(w["porcja"] for w in ws)
+            naglowek += " — od razu na %d posiłki (ilości są już zsumowane)" % len(ws)
+            wlasne.append("Gotowe danie zważ i podziel: " + "; ".join(
+                "%d%% do pojemnika „%s”" % (round(w["porcja"] / suma * 100), w["etykieta"]) for w in ws) + ".")
+        elif ws[0]["na_teraz"]:
+            wlasne.append("To zjadasz od razu, na koniec bloku.")
+        else:
+            wlasne.append("Przełóż do pojemnika „%s”." % ws[0]["etykieta"])
+        bloki.append([naglowek] + wlasne)
+
+    kroki = []
+    if b:
+        for k, q in b["produkty"]:
+            if k != "przyprawy":
+                razem[k] = razem.get(k, 0) + q
+    kroki.append("Wyjmij wszystko na blat, zanim zaczniesz: " + ", ".join(
+        "%s %s" % (PROD[k]["nazwa"].split(" (")[0].lower(), fmt_ilosc(k, q)) for k, q in sorted(razem.items())) + ".")
+    etykiety = [w["etykieta"] for w in wpisy if not w["na_teraz"]]
+    if etykiety:
+        n_ = len(set(etykiety))
+        kroki.append("Przygotuj %d %s i opisz je karteczką: %s." % (
+            n_, "pojemnik" if n_ == 1 else ("pojemniki" if 2 <= n_ <= 4 else "pojemników"), "; ".join(dict.fromkeys(etykiety))))
+    bk = []
+    if b:
+        bk = wypelnij_kroki(b["kroki"], b["produkty"])
+        if any(re.search(r"piekarnik", x, re.I) for x in bk):
+            piec = False
+    if piec:
+        kroki.append("Włącz piekarnik na 200°C, grzanie góra-dół — nagrzewa się ok. 10 minut, w tym czasie robisz resztę.")
+    ip = _pauza_garnka(bk) if b else -1
+    if b:
+        kroki.append("▸ Garnek: %s — zaczynasz od niego, bo najdłużej się gotuje." % b["nazwa"])
+        kroki += bk[:ip + 1]
+    if woda or jajka:
+        kroki.append("▸ Woda — postaw ją od razu, zanim zaczniesz resztę:")
+        if jajka:
+            n = sum(x[1] for x in jajka)
+            kroki.append("Jajka na twardo dla %s — razem %s: w małym garnku zagotuj wodę, łyżką włóż jajka, gotuj 9 minut na średnim ogniu, "
+                         "odlej wrzątek i zalej zimną wodą. Obierzesz je przy daniach." % (
+                             ", ".join("%s (%s)" % (a, fmt_ilosc("jaja", q).split(" (")[0]) for a, q in jajka),
+                             fmt_ilosc("jaja", n).split(" (")[0]))
+        kroki += woda
+    if b and bloki:
+        kroki.append("▸ Kiedy garnek się gotuje, robisz resztę — od najczystszych produktów do tych, po których myjesz nóż i deskę:")
+    for bl in bloki:
+        kroki += bl
+    if b:
+        kroki.append("▸ Wróć do garnka: " + b["nazwa"])
+        kroki += bk[ip + 1:]
+    for w in wpisy:
+        dod = w["dodatek_w"] + ([[DOBITKA_PRODUKT, w["dobitka"]]] if w["dobitka"] else [])
+        if dod:
+            kroki.append("Do „%s” dołóż: %s." % (w["etykieta"], ", ".join(
+                "%s %s" % (PROD[k]["nazwa"].split(" (")[0].lower(), fmt_ilosc(k, q)) for k, q in dod)))
+    kroki.append("▸ Na koniec: ciepłe pojemniki wystudź 20–30 minut bez pokrywki, potem wszystkie do lodówki na jedną półkę. "
+                 "Naczynia do zlewu, przetrzyj blat — 5 minut teraz oszczędza 20 jutro.")
+    czas = (b["czas_pracy"] if b else 0) + sum(QUICK_BY_ID[p]["czas_min"] + 3 * (len(grupy[p]) - 1) for p in grupy)
+    posilki = [nazwa_posilku(p) + (" ×%d" % len(grupy[p]) if len(grupy[p]) > 1 else "") for p in grupy]
+    if b:
+        posilki.insert(0, "garnek: " + b["nazwa"])
+    return {"kroki": kroki, "czas": czas, "posilki": posilki}
+
+
 def _dodaj_kosciol(d, zdarzenia):
     """Msza w kazda niedziele. Wolne: 12:00. Po zmianie: 18:00 — gotowanie idzie
     godzine wczesniej, a obiad i kolacja po powrocie. Gdy niedziela wypada na
@@ -1692,9 +1924,6 @@ def _dodaj_kosciol(d, zdarzenia):
     godz, opis = None, ""
     if d.weekday() == 6 and t == 2:
         godz = k["niedziela_wolne"]
-        for e in zdarzenia:
-            if e.get("slot") == "drugi":
-                e["czas"] = "13:15"
     elif d.weekday() == 6 and t == 1:
         godz = k["niedziela_po_zmianie"]
         for e in zdarzenia:
@@ -1752,6 +1981,13 @@ def agenda(d=None):
     zdarzenia = _dodaj_kosciol(d, zdarzenia)
     _, dzien = plan_dnia(d)
     for e in zdarzenia:
+        if e.get("akcja") == "kuchnia":
+            kp = plan_kuchni(d)
+            if kp:
+                e.update({"kroki": kp["kroki"], "jak": "kuchnia", "czas_min": kp["czas"],
+                          "opis": "Przygotujesz: %s. Potem do jutra tylko sięgasz do lodówki." % ", ".join(kp["posilki"])})
+            else:
+                e.update({"ping": False, "tytul": "Dziś bez kuchni", "opis": "Nic nie trzeba gotować."})
         if e.get("akcja") == "budzik":
             e["budzik"] = budzik_dla(e["czas"], d)
         if e.get("slot") and dzien:
@@ -1775,11 +2011,11 @@ def agenda(d=None):
                 e["jak"], e["czas_min"] = "przepis", q["czas_min"]
                 e["kroki"] = wypelnij_kroki(q["kroki"], produkty_posilku(pid, porcja)) + [
                     "Wszystkie ilości w krokach są już przeliczone na Twoją porcję na dziś — nic nie musisz dzielić."]
-                if e["slot"] == "obiad" and q.get("box"):
-                    _, jutro = plan_dnia(d + datetime.timedelta(days=1))
-                    if jutro and jutro.get("obiad") == pid:
-                        e["kroki"].append("Jutro na obiad jest to samo — przygotuj od razu drugą porcję (jej ilości "
-                                          "zobaczysz w planie jutrzejszego dnia) i schowaj ją w pojemniku do lodówki.")
+                bl = blok_dla(d, e["slot"])
+                if bl and wymaga_boxa(d, e["slot"]):
+                    kiedy = "dziś" if bl[0] == d else "wczoraj"
+                    e["kroki"].insert(0, "📦 To zrobiłeś w bloku kuchni (%s o %s) — teraz tylko wyjmij pojemnik z lodówki. "
+                                         "Przepis niżej, gdybyś robił na świeżo." % (kiedy, bl[1]))
             else:
                 b = BAZA_BY_ID[pid]
                 if typ_dnia(d) == DZIEN_GOTOWANIA:
@@ -2053,6 +2289,11 @@ def tresc_pinga(e, d):
     if e.get("akcja") == "gotowanie":
         b = BAZA_BY_ID[generuj_plan(d)["baza"]]
         czesci.insert(0, "Dziś gotujesz: %s — %d min, %s." % (b["nazwa"], b["czas_min"], b["naczynia"]))
+    if e.get("akcja") == "kuchnia":
+        kp = plan_kuchni(d)
+        if kp:
+            czesci.insert(0, "Godzina w kuchni (ok. %d min): %s. Plan krok po kroku w panelu."
+                          % (kp["czas"], ", ".join(kp["posilki"])))
     if e.get("akcja") == "podsumowanie":
         czesci.insert(0, tekst_podsumowania(podsumowanie_cyklu(d)))
     if e.get("akcja") == "waga" and PLAN_ROKU.get("final"):

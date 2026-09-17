@@ -171,6 +171,7 @@
     border-radius:4px;padding:1px 5px;margin-left:6px;vertical-align:2px}
   .yt{display:inline-block;margin-top:6px;font-size:13px;font-weight:600;color:var(--akcent);text-decoration:none}
   h3.sklep{margin:14px 0 2px;font-size:15px}
+  details.przepis li.etap{list-style:none;margin:10px 0 2px -18px;font-weight:700}
   .wariant{font-size:12.5px;color:var(--slaby);margin-top:3px}
   [hidden]{display:none !important}
 </style>
@@ -214,7 +215,7 @@ const esc = s => String(s??"").replace(/[&<>"]/g, c => ({"&":"&amp;","<":"&lt;",
 /* Wersja panelu. iPhone dodany do ekranu głównego potrafi trzymać stary HTML
    w nieskończoność. dane.json leci zawsze świeży, więc porównujemy numery
    i przy różnicy przeładowujemy stronę z ?v=, co omija cache przeglądarki. */
-const WERSJA = 17;
+const WERSJA = 18;
 let D = null, widok = "dzis";
 
 /* ---- zapis z telefonu ------------------------------------------------------
@@ -352,10 +353,11 @@ const OPIS_ZRODLA = {
    przejrzec jednym rzutem oka, a przepis byl na jedno tapniecie. */
 function przygotowanie(e){
   if(e.pominiety || !e.kroki || !e.kroki.length) return "";
-  const tytul = e.jak === "gotowanie" ? "Gotujesz garnek na 3 dni"
+  const tytul = e.jak === "kuchnia" ? "Plan kuchni krok po kroku"
+              : e.jak === "gotowanie" ? "Gotujesz garnek na 3 dni"
               : e.jak === "odgrzewanie" ? "Z lodówki — tylko odgrzej" : "Jak przygotować";
   return `<details class="przepis"><summary>${tytul} · ${e.czas_min} min</summary>
-    <ol>${e.kroki.map(k => `<li>${esc(k)}</li>`).join("")}</ol></details>`;
+    <ol>${e.kroki.map(k => k.startsWith("▸") ? `<li class="etap">${esc(k.slice(2))}</li>` : `<li>${esc(k)}</li>`).join("")}</ol></details>`;
 }
 
 function tabelaSkladnikow(e){
@@ -657,7 +659,8 @@ function widokZakupy(){
     html += `<label class="poz ${on?"zrobione":""}">
       <input type="checkbox" data-id="${id}" ${on?"checked":""}>
       <span class="nazwa">${esc(p.nazwa)}</span>
-      <span class="ile">${p.opakowan} × ${p.opak} ${esc(p.jedn)} · ${p.cena.toFixed(2)} zł</span></label>`;
+      <span class="ile">${p.opakowan} × ${p.opak} ${esc(p.jedn)} · ${p.cena.toFixed(2)} zł
+        ${p.dokupisz - p.brakuje > 0.5 ? `<br><span class="kcal">zużyjesz ${p.brakuje}, ${Math.round((p.dokupisz - p.brakuje) * 10) / 10} zostanie na następne dni</span>` : ""}</span></label>`;
   }
   if(ostSklep !== null && Object.keys(sumy).length > 1)
     html += `<div class="suma"><span>${esc(ostSklep)}</span><span>${sumy[ostSklep].toFixed(2)} zł</span></div>`;

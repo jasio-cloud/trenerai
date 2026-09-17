@@ -5,7 +5,7 @@
       "nazwa": "ZMIANA 24h",
       "emoji": "🛡️",
       "opis": "Służba 07:00–07:00. Jesz wyłącznie z boxów spakowanych wczoraj. W nocy 4 drzemki po 1 h 20.",
-      "pobudka": "05:30"
+      "pobudka": "05:00"
     },
     "1": {
       "nazwa": "PO ZMIANIE",
@@ -23,15 +23,15 @@
   "plan": {
     "0": [
       {
-        "czas": "05:30",
+        "czas": "05:00",
         "tytul": "Pobudka",
         "ikona": "⏰",
         "ping": true,
-        "opis": "Najpierw toaleta — za 5 minut ping do ważenia, więc jeszcze nic nie pij. Boxy masz spakowane w lodówce od wczoraj — wyjmij je teraz, żeby nie zapomnieć.",
+        "opis": "Toaleta — za 5 minut waga, więc jeszcze nic nie pij. O 5:30 jedziesz: pojemniki na cały dzień czekają w lodówce, zrobione wczoraj.",
         "akcja": "suple"
       },
       {
-        "czas": "05:35",
+        "czas": "05:05",
         "tytul": "Waga",
         "ikona": "⚖️",
         "ping": true,
@@ -39,19 +39,11 @@
         "opis": "Po toalecie, przed jedzeniem i piciem, w samej bieliźnie. Wpisz wynik w panelu — liczy się średnia z 7 dni, nie pojedynczy wynik."
       },
       {
-        "czas": "05:45",
-        "tytul": "Śniadanie w domu",
-        "ikona": "🍳",
-        "ping": false,
-        "slot": "sniadanie",
-        "opis": "Zjedz na spokojnie w domu, nie w biegu."
-      },
-      {
-        "czas": "06:20",
+        "czas": "05:25",
         "tytul": "Wyjście z domu",
         "ikona": "🚪",
         "ping": true,
-        "opis": "Sprawdź: boxy, butelka wody 1,5 l, ładowarka."
+        "opis": "Pojemniki z lodówki do torby (śniadanie, drugi posiłek, obiad, kolacja), butelka wody 1,5 l, ładowarka. O 5:30 w samochodzie."
       },
       {
         "czas": "07:00",
@@ -61,7 +53,15 @@
         "opis": "Dziś bez treningu — jedyny dzień w cyklu, kiedy nie dźwigasz. Zadanie na dobę: jeść regularnie, wypić 3 l wody i przespać swoje drzemki."
       },
       {
-        "czas": "09:30",
+        "czas": "07:30",
+        "tytul": "Śniadanie w pracy",
+        "ikona": "🥪",
+        "ping": true,
+        "slot": "sniadanie",
+        "opis": "Z pojemnika zrobionego wczoraj w bloku kuchni."
+      },
+      {
+        "czas": "10:30",
         "tytul": "Drugi posiłek",
         "ikona": "🥪",
         "ping": true,
@@ -76,7 +76,7 @@
         "opis": "5 minut: 10 przysiadów, krążenia ramion, rozciągnięcie karku. Plecy po staniu Ci podziękują."
       },
       {
-        "czas": "13:30",
+        "czas": "14:00",
         "tytul": "Obiad",
         "ikona": "🍽️",
         "ping": true,
@@ -202,15 +202,23 @@
         "opis": "35 minut, ciężary 80% normy. Zaczynasz dzień od zrobionej roboty, zanim cokolwiek zdąży w tym przeszkodzić."
       },
       {
-        "czas": "14:30",
+        "czas": "14:15",
+        "tytul": "KUCHNIA — godzina na gotowanie",
+        "ikona": "🍳",
+        "ping": true,
+        "akcja": "kuchnia",
+        "opis": "Jedna godzina, a potem do jutra tylko sięgasz do lodówki."
+      },
+      {
+        "czas": "15:15",
         "tytul": "Posiłek po treningu",
         "ikona": "🍽️",
         "ping": true,
         "slot": "drugi",
-        "opis": "Pierwszy porządny posiłek dnia. Trenowałeś na czczo, więc nie odkładaj go na później."
+        "opis": "Pierwszy porządny posiłek dnia — robisz go na końcu bloku kuchni i jesz od razu."
       },
       {
-        "czas": "15:15",
+        "czas": "15:45",
         "tytul": "Podsumowanie cyklu",
         "ikona": "📊",
         "ping": true,
@@ -218,20 +226,12 @@
         "opis": "Trzy dni za Tobą. Zanim staniesz do garów, zobacz, co z nich wyszło."
       },
       {
-        "czas": "16:30",
-        "tytul": "GOTOWANIE na 3 dni",
-        "ikona": "🍳",
-        "ping": true,
-        "akcja": "gotowanie",
-        "opis": "Jeden garnek, jedno podejście, 3 pojemniki. Przepis krok po kroku masz w panelu."
-      },
-      {
         "czas": "18:15",
         "tytul": "Obiad",
         "ikona": "🍲",
         "ping": true,
         "slot": "obiad",
-        "opis": "Prosto z garnka, świeży. Reszta ostudzona idzie do lodówki."
+        "opis": "Z garnka ugotowanego w bloku kuchni (albo z pojemnika) — odgrzej i jedz."
       },
       {
         "czas": "20:30",
@@ -283,15 +283,23 @@
         "opis": "Najlepsza sesja w cyklu: wyspany, po dniu normalnego jedzenia. Tu bijesz rekordy. Wchodzisz i robisz, zero telefonu przed."
       },
       {
-        "czas": "09:45",
+        "czas": "09:30",
+        "tytul": "KUCHNIA — godzina na gotowanie",
+        "ikona": "🍳",
+        "ping": true,
+        "akcja": "kuchnia",
+        "opis": "Jedna godzina: posiłki na dziś i pojemniki na jutrzejszą zmianę."
+      },
+      {
+        "czas": "10:30",
         "tytul": "Śniadanie po treningu",
         "ikona": "🍳",
         "ping": true,
         "slot": "sniadanie",
-        "opis": "Pierwszy posiłek dnia, zaraz po sztandze."
+        "opis": "Pierwszy posiłek dnia — robisz go na końcu bloku kuchni i jesz od razu."
       },
       {
-        "czas": "13:00",
+        "czas": "13:30",
         "tytul": "Drugi posiłek",
         "ikona": "🥪",
         "ping": true,
@@ -323,11 +331,11 @@
       },
       {
         "czas": "21:00",
-        "tytul": "PAKOWANIE BOXÓW na jutro",
+        "tytul": "Pojemniki na jutro — sprawdź",
         "ikona": "📦",
         "ping": true,
         "akcja": "boxy",
-        "opis": "Najważniejsze 15 minut w całym cyklu. Bez tego jutro na zmianie jesz z automatu i cała robota z gotowaniem idzie w piach."
+        "opis": "Wszystko zrobiłeś rano. Postaw 4 pojemniki na jutro razem na jednej półce w lodówce, żeby o 5:25 wziąć je jednym ruchem."
       },
       {
         "czas": "21:30",

@@ -5,47 +5,47 @@
   "baza": "b_bolo",
   "dni": [
     {
-      "sniadanie": "q_omlet",
+      "sniadanie": "q_twarog_banan",
       "drugi": "q_tortilla_jajecznica",
       "kolacja": "q_twarog",
       "obiad": "b_bolo",
       "data": "2026-09-17",
       "typ": 1,
       "makra": {
-        "kcal": 2745,
-        "bialko": 183,
-        "tluszcz": 117,
-        "wegle": 226
+        "kcal": 2710,
+        "bialko": 187,
+        "tluszcz": 100,
+        "wegle": 256
       }
     },
     {
       "sniadanie": "q_omlet_marchewkowy",
-      "drugi": "q_kanapki_jajko",
-      "kolacja": "q_jajecznica",
+      "drugi": "q_jogurt_orzechy",
+      "kolacja": "q_kanapki_ser",
       "obiad": "b_bolo",
       "data": "2026-09-18",
       "typ": 2,
       "makra": {
-        "kcal": 2866,
-        "bialko": 184,
-        "tluszcz": 92,
-        "wegle": 307
+        "kcal": 2837,
+        "bialko": 181,
+        "tluszcz": 85,
+        "wegle": 321
       }
     },
     {
-      "sniadanie": "q_tortilla_jajecznica",
+      "sniadanie": "q_omlet_marchewkowy",
       "drugi": "q_jajka_kukurydza",
-      "kolacja": "q_kanapki_ser",
+      "kolacja": "q_kanapki_jajko",
       "obiad": "b_bolo",
       "data": "2026-09-19",
       "typ": 0,
       "makra": {
-        "kcal": 2670,
-        "bialko": 162,
-        "tluszcz": 118,
-        "wegle": 224
+        "kcal": 2869,
+        "bialko": 191,
+        "tluszcz": 90,
+        "wegle": 304
       }
     }
   ],
-  "wygenerowano": "2026-09-17T05:19:53"
+  "wygenerowano": "2026-09-17T06:25:37"
 }
