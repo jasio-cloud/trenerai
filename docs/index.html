@@ -218,7 +218,7 @@ const esc = s => String(s??"").replace(/[&<>"]/g, c => ({"&":"&amp;","<":"&lt;",
 /* Wersja panelu. iPhone dodany do ekranu głównego potrafi trzymać stary HTML
    w nieskończoność. dane.json leci zawsze świeży, więc porównujemy numery
    i przy różnicy przeładowujemy stronę z ?v=, co omija cache przeglądarki. */
-const WERSJA = 20;
+const WERSJA = 21;
 let D = null, widok = "dzis";
 
 /* ---- zapis z telefonu ------------------------------------------------------
@@ -292,6 +292,21 @@ async function wyslijZdarzenie(zdarzenie, proba = 0){
 function lokalnie(id, wartosc){
   try { const s = zapamietane(); s[id] = wartosc;
         localStorage.setItem(kluczCyklu(), JSON.stringify(s)); } catch {}
+}
+
+/* Serie zapisane dzis trzymamy tez na telefonie: chmura przetwarza je kilka minut,
+   a panel odswieza sie po powrocie do apki — bez tego pola wracaly puste. */
+const kluczSerii = () => "trener:serie:" + lokalnaData();
+function serieDzis(){ try { return JSON.parse(localStorage.getItem(kluczSerii()) || "{}"); } catch(e) { return {}; } }
+function zapamietajSerie(cw, kg, powt){
+  try {
+    const s = serieDzis(); s[cw] = {kg, powt};
+    localStorage.setItem(kluczSerii(), JSON.stringify(s));
+    for(let i = localStorage.length - 1; i >= 0; i--){
+      const k = localStorage.key(i);
+      if(k && k.startsWith("trener:serie:") && k !== kluczSerii()) localStorage.removeItem(k);
+    }
+  } catch(e) {}
 }
 
 async function zapisz(zdarzenie, element){
@@ -858,6 +873,7 @@ function widokTrening(){
     <div class="karta"><h2>Ćwiczenia</h2>
       ${t.cwiczenia.map(c=>{
         const h = (D.ciezary||{})[c.nazwa];
+        const juz = serieDzis()[c.nazwa] || (h && h.data === lokalnaData() ? {kg: h.ciezar, powt: h.powt || []} : null);
         const st = (D.ciezary_start||{})[c.nazwa] || null;
         const mc = !!(st && st.jedn === "masa ciała");
         const jd = st && !mc ? " " + esc(st.jedn) : "";
@@ -879,14 +895,15 @@ function widokTrening(){
         ${c.latwiej ? `<div class="wariant">Za trudne? ${esc(c.latwiej)}</div>` : ""}
         ${c.trudniej && c.trudniej !== "—" ? `<div class="wariant">Za łatwe? ${esc(c.trudniej)}</div>` : ""}
         <div class="w">przerwa ${esc(c.przerwa)}</div>
-        <div class="w" style="color:var(--akcent)">${historia}</div>
+        ${juz ? `<div class="w" style="color:var(--ok);font-weight:700">✓ Zapisane dziś: ${juz.kg} kg × ${(juz.powt || []).join(", ")}. Możesz poprawić i zapisać jeszcze raz.</div>`
+              : `<div class="w" style="color:var(--akcent)">${historia}</div>`}
         <div class="serie-wiersz">
           <label class="serie-pole"><span>kg</span>
             <input class="pole cw-kg" type="number" step="0.5" inputmode="decimal"
-                   placeholder="kg" value="${mc ? 0 : (sugestia ?? "")}" data-cw="${esc(c.nazwa)}"></label>
+                   placeholder="kg" value="${juz ? juz.kg : (mc ? 0 : (sugestia ?? ""))}" data-cw="${esc(c.nazwa)}"></label>
           ${Array.from({length: Number(c.serie) || 1}, (_, i) => `<label class="serie-pole"><span>seria ${i + 1}</span>
             <input class="pole cw-powt" type="number" inputmode="numeric" min="0"
-                   placeholder="powt." data-cw="${esc(c.nazwa)}"></label>`).join("")}
+                   placeholder="powt." value="${juz && juz.powt[i] != null ? juz.powt[i] : ""}" data-cw="${esc(c.nazwa)}"></label>`).join("")}
           <button class="mini" data-serie="${esc(c.nazwa)}">zapisz</button>
         </div></div>`;}).join("")}</div>
     <div class="karta"><h2>Na koniec</h2><div class="op">${esc(t.finisz)}</div></div>` + kartaPostepu();
@@ -1179,7 +1196,10 @@ $("#widok").addEventListener("click", async e => {
       const powt = [...document.querySelectorAll(`.cw-powt[data-cw="${CSS.escape(cw)}"]`)]
         .map(el => el.value.trim()).filter(v => v !== "").map(Number).filter(n => n > 0);
       if(kg === "" || kg === undefined || !powt.length){ alert("Wpisz ciężar (przy ćwiczeniach z masą ciała 0) i powtórzenia w polach „seria 1”, „seria 2”…"); return; }
-      await zapisz({typ:"seria", cwiczenie:cw, ciezar:Number(kg), powt}, b);
+      if(await zapisz({typ:"seria", cwiczenie:cw, ciezar:Number(kg), powt}, b)){
+        zapamietajSerie(cw, Number(kg), powt);
+        rysuj();
+      }
       return;
     }
     if(b.id === "zapisz-wage"){
