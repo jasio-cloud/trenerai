@@ -1,5 +1,5 @@
 {
-  "wygenerowano": "2026-09-17T05:35:44",
+  "wygenerowano": "2026-09-17T05:39:14+02:00",
   "dzis": "2026-09-17",
   "typ_dzis": 1,
   "typy": {
@@ -6713,7 +6713,9 @@
       "faza": "Start",
       "tydzien": 1,
       "nadwyzka": 22,
-      "odhaczone": {},
+      "odhaczone": {
+        "00:10|Drzemka 2 z 4 — do 01:30": true
+      },
       "waga": null,
       "kroki": null,
       "serie": [],
@@ -10370,7 +10372,9 @@
       ]
     }
   },
-  "odhaczone": {},
+  "odhaczone": {
+    "00:10|Drzemka 2 z 4 — do 01:30": true
+  },
   "podmiany": {
     "obiad": "o_zapiekanki"
   },
