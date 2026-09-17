@@ -1,5 +1,5 @@
 {
-  "wygenerowano": "2026-09-17T16:51:18+02:00",
+  "wygenerowano": "2026-09-17T16:52:21+02:00",
   "dzis": "2026-09-17",
   "typ_dzis": 1,
   "typy": {
@@ -1159,8 +1159,8 @@
           "trudniej": "Zatrzymanie na górze.",
           "serie": 2,
           "propozycja": {
-            "ciezar": 17.5,
-            "poprzedni": 15.0,
+            "ciezar": 14.5,
+            "poprzedni": 12.0,
             "powt": [
               12,
               12
@@ -3050,8 +3050,8 @@
       "Wiosłowanie hantlem jednorącz": {
         "pierwszy": 21.0,
         "najlepszy": 21.0,
-        "ostatni": 21.0,
-        "sesji": 1,
+        "ostatni": 16.8,
+        "sesji": 2,
         "miara": "kg (szac. max)",
         "od": "2026-09-17"
       },
@@ -7182,6 +7182,16 @@
             12,
             12
           ]
+        },
+        {
+          "data": "2026-09-17",
+          "typ": "seria",
+          "cwiczenie": "Wiosłowanie hantlem jednorącz",
+          "ciezar": 12,
+          "powt": [
+            12,
+            12
+          ]
         }
       ],
       "trening": {
@@ -7227,8 +7237,8 @@
               "trudniej": "Zatrzymanie na górze.",
               "serie": 2,
               "propozycja": {
-                "ciezar": 17.5,
-                "poprzedni": 15.0,
+                "ciezar": 14.5,
+                "poprzedni": 12.0,
                 "powt": [
                   12,
                   12
@@ -8910,8 +8920,8 @@
               "trudniej": "Zatrzymanie na górze.",
               "serie": 2,
               "propozycja": {
-                "ciezar": 17.5,
-                "poprzedni": 15.0,
+                "ciezar": 14.5,
+                "poprzedni": 12.0,
                 "powt": [
                   12,
                   12
@@ -10674,8 +10684,8 @@
               "trudniej": "Zatrzymanie na górze.",
               "serie": 2,
               "propozycja": {
-                "ciezar": 17.5,
-                "poprzedni": 15.0,
+                "ciezar": 14.5,
+                "poprzedni": 12.0,
                 "powt": [
                   12,
                   12
@@ -10757,6 +10767,16 @@
         "typ": "seria",
         "cwiczenie": "Unoszenie hantli bokiem",
         "ciezar": 5,
+        "powt": [
+          12,
+          12
+        ]
+      },
+      {
+        "data": "2026-09-17",
+        "typ": "seria",
+        "cwiczenie": "Wiosłowanie hantlem jednorącz",
+        "ciezar": 12,
         "powt": [
           12,
           12
@@ -11653,12 +11673,12 @@
       "data": "2026-09-17"
     },
     "Wiosłowanie hantlem jednorącz": {
-      "ciezar": 15.0,
+      "ciezar": 12.0,
       "powt": [
         12,
         12
       ],
-      "nastepny": 17.5,
+      "nastepny": 14.5,
       "nieudane": 0,
       "data": "2026-09-17"
     },
