@@ -944,7 +944,7 @@
         "obiad",
         "kolacja"
       ],
-      "box": true,
+      "box": false,
       "czas_min": 12,
       "bez_gotowania": true,
       "produkty": [
@@ -968,7 +968,99 @@
       "kroki": [
         "Na 3 tosty: na kromkę plaster sera, szynka, drugi plaster sera, druga kromka.",
         "Opiekacz albo sucha patelnia na średnim ogniu: 3–4 minuty z każdej strony, aż ser się roztopi.",
-        "Ketchup do maczania. Do boxa: ostudzone zawiń w folię — na zmianie zjesz na zimno albo 30 s w mikrofali."
+        "Ketchup do maczania. Tosty są dobre tylko na świeżo — nie pakuj ich na zapas."
+      ]
+    },
+    {
+      "id": "o_zapiekanki",
+      "nazwa": "Zapiekanki z pieczarkami, szynką i serem",
+      "sloty": [
+        "obiad"
+      ],
+      "box": false,
+      "czas_min": 20,
+      "bez_gotowania": true,
+      "produkty": [
+        [
+          "bagietka",
+          1
+        ],
+        [
+          "pieczarki",
+          150
+        ],
+        [
+          "szynka",
+          80
+        ],
+        [
+          "ser",
+          60
+        ],
+        [
+          "ketchup",
+          2
+        ],
+        [
+          "olej",
+          5
+        ]
+      ],
+      "kroki": [
+        "Piekarnik nagrzej na 200°C (góra-dół).",
+        "Pieczarki pokrój w plasterki i podsmaż 4–5 minut na łyżeczce oleju, posól.",
+        "Bagietkę przekrój wzdłuż na pół. Wyłóż pieczarki, szynkę w paskach i posyp serem.",
+        "Piecz 8–10 minut, aż ser się roztopi i zarumieni. Na wierzch ketchup."
+      ]
+    },
+    {
+      "id": "o_salatka_makaronowa",
+      "nazwa": "Sałatka makaronowa z szynką, jajkiem i kukurydzą",
+      "sloty": [
+        "obiad"
+      ],
+      "box": true,
+      "czas_min": 20,
+      "bez_gotowania": true,
+      "produkty": [
+        [
+          "makaron",
+          100
+        ],
+        [
+          "szynka",
+          100
+        ],
+        [
+          "jaja",
+          2
+        ],
+        [
+          "kukurydza",
+          80
+        ],
+        [
+          "ogorek_kiszony",
+          1
+        ],
+        [
+          "jogurt_grecki",
+          80
+        ],
+        [
+          "musztarda",
+          1
+        ],
+        [
+          "przyprawy",
+          1
+        ]
+      ],
+      "kroki": [
+        "Makaron ugotuj według opakowania, a w drugim garnku jajka na twardo (9 minut). Przelej zimną wodą.",
+        "Szynkę, jajka i ogórka pokrój w kostkę, kukurydzę odsącz.",
+        "Wymieszaj z makaronem, jogurtem i musztardą. Sól, pieprz.",
+        "Najlepsza schłodzona. W lodówce trzyma się 2 dni — idealna do boxa na zmianę."
       ]
     }
   ]
