@@ -1,5 +1,5 @@
 {
-  "wygenerowano": "2026-09-17T16:09:54+02:00",
+  "wygenerowano": "2026-09-17T16:23:40+02:00",
   "dzis": "2026-09-17",
   "typ_dzis": 1,
   "typy": {
@@ -1137,7 +1137,16 @@
           "wskazowka": "Po dobie na służbie bez ambicji na rekord. Czyste powtórzenia.",
           "latwiej": "Na ławce.",
           "trudniej": "Nogi na ławce.",
-          "serie": 2
+          "serie": 2,
+          "propozycja": {
+            "ciezar": 0.0,
+            "poprzedni": 0.0,
+            "powt": [
+              15
+            ],
+            "data": "2026-09-17",
+            "podwyzka": 0.0
+          }
         },
         {
           "nazwa": "Wiosłowanie hantlem jednorącz",
@@ -3008,7 +3017,16 @@
   "slowo": "Zapisuj ciężary. Za pół roku to będzie najlepsza lektura, jaką masz.",
   "analiza": {
     "pomiary": [],
-    "sila": {},
+    "sila": {
+      "Pompki": {
+        "pierwszy": 15,
+        "najlepszy": 15,
+        "ostatni": 15,
+        "sesji": 1,
+        "miara": "powt.",
+        "od": "2026-09-17"
+      }
+    },
     "cele": {
       "_info": "Wskaźniki sylwetki mierzone taśmą — tanie, a mówią więcej niż waga.",
       "talia_do_wzrostu": 0.45,
@@ -3025,7 +3043,7 @@
       "id": "pierwszy_trening",
       "nazwa": "Pierwszy trening",
       "opis": "Zapisany pierwszy trening. Najtrudniejszy za tobą.",
-      "zdobyta": null
+      "zdobyta": "2026-09-17"
     },
     {
       "id": "treningi_10",
@@ -7088,7 +7106,17 @@
       },
       "waga": 84.45,
       "kroki": null,
-      "serie": [],
+      "serie": [
+        {
+          "data": "2026-09-17",
+          "typ": "seria",
+          "cwiczenie": "Pompki",
+          "ciezar": 0,
+          "powt": [
+            15
+          ]
+        }
+      ],
       "trening": {
         "rodzaj": "krotki",
         "trening": {
@@ -7110,7 +7138,16 @@
               "wskazowka": "Po dobie na służbie bez ambicji na rekord. Czyste powtórzenia.",
               "latwiej": "Na ławce.",
               "trudniej": "Nogi na ławce.",
-              "serie": 2
+              "serie": 2,
+              "propozycja": {
+                "ciezar": 0.0,
+                "poprzedni": 0.0,
+                "powt": [
+                  15
+                ],
+                "data": "2026-09-17",
+                "podwyzka": 0.0
+              }
             },
             {
               "nazwa": "Wiosłowanie hantlem jednorącz",
@@ -8753,7 +8790,16 @@
               "wskazowka": "Po dobie na służbie bez ambicji na rekord. Czyste powtórzenia.",
               "latwiej": "Na ławce.",
               "trudniej": "Nogi na ławce.",
-              "serie": 2
+              "serie": 2,
+              "propozycja": {
+                "ciezar": 0.0,
+                "poprzedni": 0.0,
+                "powt": [
+                  15
+                ],
+                "data": "2026-09-17",
+                "podwyzka": 0.0
+              }
             },
             {
               "nazwa": "Wiosłowanie hantlem jednorącz",
@@ -9373,7 +9419,16 @@
               "wskazowka": "Ciało prosto jak deska, klatka dotyka prawie podłogi. Licz powtórzenia — to twój test siły co tydzień.",
               "latwiej": "Z rękami na ławce albo na kolanach.",
               "trudniej": "Nogi na ławce.",
-              "serie": 2
+              "serie": 2,
+              "propozycja": {
+                "ciezar": 0.0,
+                "poprzedni": 0.0,
+                "powt": [
+                  15
+                ],
+                "data": "2026-09-17",
+                "podwyzka": 0.0
+              }
             }
           ],
           "finisz": "Każda seria kończy się z zapasem: 3 powtórzenia w zapasie. Uczysz się ruchu, nie dźwigasz. Ciężar tak lekki, że mógłbyś zrobić jeszcze 3 powtórzenia. Ma ci się chcieć przyjść na następny trening."
@@ -10467,7 +10522,16 @@
               "wskazowka": "Po dobie na służbie bez ambicji na rekord. Czyste powtórzenia.",
               "latwiej": "Na ławce.",
               "trudniej": "Nogi na ławce.",
-              "serie": 2
+              "serie": 2,
+              "propozycja": {
+                "ciezar": 0.0,
+                "poprzedni": 0.0,
+                "powt": [
+                  15
+                ],
+                "data": "2026-09-17",
+                "podwyzka": 0.0
+              }
             },
             {
               "nazwa": "Wiosłowanie hantlem jednorącz",
@@ -10507,7 +10571,17 @@
         "kg": 84.45
       }
     ],
-    "serie": []
+    "serie": [
+      {
+        "data": "2026-09-17",
+        "typ": "seria",
+        "cwiczenie": "Pompki",
+        "ciezar": 0,
+        "powt": [
+          15
+        ]
+      }
+    ]
   },
   "zakupy_zamrozone": {
     "kup": [
@@ -11386,7 +11460,17 @@
   "podmiany": {
     "obiad": "o_salatka_makaronowa"
   },
-  "ciezary": {},
+  "ciezary": {
+    "Pompki": {
+      "ciezar": 0.0,
+      "powt": [
+        15
+      ],
+      "nastepny": 0.0,
+      "nieudane": 0,
+      "data": "2026-09-17"
+    }
+  },
   "ciezary_start": {
     "Unoszenie hantli bokiem": {
       "kg": 5,
