@@ -1,5 +1,5 @@
 {
-  "wygenerowano": "2026-09-18T10:09:54",
+  "wygenerowano": "2026-09-18T10:26:27+02:00",
   "dzis": "2026-09-18",
   "typ_dzis": 2,
   "typy": {
@@ -1216,7 +1216,17 @@
           "wskazowka": "Sztanga tuż przy udach, chwyt na szerokość barków. Kolana lekko ugięte i tak zostają, biodra jadą do tyłu, sztanga sunie po udach. Plecy proste jak deska przez cały ruch, łopatki ściągnięte. Schodzisz mniej więcej do połowy łydki albo tam, gdzie czujesz mocne ciągnięcie z tyłu uda — niżej nie ma sensu.",
           "latwiej": "Z hantlami w dłoniach, mniejszy zakres.",
           "trudniej": "3 sekundy w dół i sekunda przerwy na dole.",
-          "serie": 2
+          "serie": 2,
+          "propozycja": {
+            "ciezar": 35.0,
+            "poprzedni": 30.0,
+            "powt": [
+              12,
+              12
+            ],
+            "data": "2026-09-18",
+            "podwyzka": 5.0
+          }
         },
         {
           "nazwa": "Unoszenie kolan w zwisie",
@@ -3169,6 +3179,14 @@
         "pierwszy": 20.5,
         "najlepszy": 20.5,
         "ostatni": 20.5,
+        "sesji": 1,
+        "miara": "kg (szac. max)",
+        "od": "2026-09-18"
+      },
+      "Rumuński martwy ciąg ze sztangą": {
+        "pierwszy": 42.0,
+        "najlepszy": 42.0,
+        "ostatni": 42.0,
         "sesji": 1,
         "miara": "kg (szac. max)",
         "od": "2026-09-18"
@@ -7395,6 +7413,16 @@
             12,
             14
           ]
+        },
+        {
+          "data": "2026-09-18",
+          "typ": "seria",
+          "cwiczenie": "Rumuński martwy ciąg ze sztangą",
+          "ciezar": 30,
+          "powt": [
+            12,
+            12
+          ]
         }
       ],
       "trening": {
@@ -7437,7 +7465,17 @@
               "wskazowka": "Sztanga tuż przy udach, chwyt na szerokość barków. Kolana lekko ugięte i tak zostają, biodra jadą do tyłu, sztanga sunie po udach. Plecy proste jak deska przez cały ruch, łopatki ściągnięte. Schodzisz mniej więcej do połowy łydki albo tam, gdzie czujesz mocne ciągnięcie z tyłu uda — niżej nie ma sensu.",
               "latwiej": "Z hantlami w dłoniach, mniejszy zakres.",
               "trudniej": "3 sekundy w dół i sekunda przerwy na dole.",
-              "serie": 2
+              "serie": 2,
+              "propozycja": {
+                "ciezar": 35.0,
+                "poprzedni": 30.0,
+                "powt": [
+                  12,
+                  12
+                ],
+                "data": "2026-09-18",
+                "podwyzka": 5.0
+              }
             },
             {
               "nazwa": "Unoszenie kolan w zwisie",
@@ -10994,6 +11032,16 @@
           12,
           14
         ]
+      },
+      {
+        "data": "2026-09-18",
+        "typ": "seria",
+        "cwiczenie": "Rumuński martwy ciąg ze sztangą",
+        "ciezar": 30,
+        "powt": [
+          12,
+          12
+        ]
       }
     ]
   },
@@ -11918,6 +11966,16 @@
         14
       ],
       "nastepny": 19.0,
+      "nieudane": 0,
+      "data": "2026-09-18"
+    },
+    "Rumuński martwy ciąg ze sztangą": {
+      "ciezar": 30.0,
+      "powt": [
+        12,
+        12
+      ],
+      "nastepny": 35.0,
       "nieudane": 0,
       "data": "2026-09-18"
     }
