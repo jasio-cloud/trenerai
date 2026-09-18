@@ -529,9 +529,18 @@ def dopasuj_porcje(dzien, cel=None, dodatkowe=None, zamrozone=None, porcje=PORCJ
     ck, cb, ct, cw = c["kcal"], c["bialko"], c["tluszcz"], c["wegle"]
     # Skyr (bialko) x dodatek weglowy — wszystkie pary liczone z gory jako krotki.
     # Petla leci kilkaset tysiecy razy na plan, wiec bez slownikow w srodku.
+    # Dodatki proponujemy tylko z tego, co realnie jest w lodowce — inaczej plan kaze
+    # dolozyc kubek skyru, ktorego nie ma, i dzien z miejsca nie trafia w makro.
+    stan_ = wczytaj_lodowke()["stan"]
+    def jest(k, ile):
+        return stan_.get(k, {}).get("ilosc", 0) >= ile - 0.001
     warianty = []
     for g in DOBITKI:
+        if g and not jest(DOBITKA_PRODUKT, g):
+            continue
         for dod in DODATKI_W:
+            if any(not jest(k, q) for k, q in dod):
+                continue
             m = makra_produktow([(DOBITKA_PRODUKT, g)] + list(dod))
             # lekkie kary: przy remisie wolimy dzien bez dokladek
             kara = 0.05 * gramy(DOBITKA_PRODUKT, g) + 0.08 * sum(gramy(k, q) for k, q in dod)

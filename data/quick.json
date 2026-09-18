@@ -1177,6 +1177,122 @@
         "Wymieszaj makaron, jajka, ogórki i kukurydzę z majonezem ({majonez_sriracha}), posól i popieprz.",
         "Do pojemnika. Na zimno jest najlepsza, wytrzyma 2 dni."
       ]
+    },
+    {
+      "id": "q_shake",
+      "nazwa": "Shake białkowy z bananem",
+      "sloty": [
+        "drugi",
+        "kolacja",
+        "sniadanie"
+      ],
+      "box": true,
+      "czas_min": 2,
+      "produkty": [
+        [
+          "odzywka_wpc",
+          40
+        ],
+        [
+          "banan",
+          1
+        ],
+        [
+          "orzechy",
+          20
+        ]
+      ],
+      "kroki": [
+        "Do shakera wsyp odżywkę ({odzywka_wpc}) i wlej ok. 350 ml zimnej wody. Zakręć i potrząsaj 20 sekund.",
+        "Banana ({banan}) i orzechy ({orzechy}) weź osobno — zjadasz obok shake'a.",
+        "Na zmianę: odżywkę wsyp do shakera już w domu, wodę dolejesz na miejscu. Nic się nie zepsuje."
+      ]
+    },
+    {
+      "id": "q_tortilla_poledwica",
+      "nazwa": "Tortilla z jajkiem na twardo, polędwicą i serem",
+      "sloty": [
+        "sniadanie",
+        "drugi",
+        "kolacja"
+      ],
+      "box": true,
+      "czas_min": 6,
+      "produkty": [
+        [
+          "tortilla",
+          2
+        ],
+        [
+          "jaja",
+          3
+        ],
+        [
+          "poledwica",
+          40
+        ],
+        [
+          "ser_zolty",
+          2
+        ],
+        [
+          "majonez_sriracha",
+          20
+        ],
+        [
+          "ogorek_kiszony",
+          1
+        ]
+      ],
+      "kroki": [
+        "Jajka na twardo: zagotuj wodę, łyżką włóż jajka ({jaja}), gotuj 9 minut, potem zimna woda i obierz.",
+        "Jajka i ogórki kiszone ({ogorek_kiszony}) pokrój w plastry.",
+        "Tortille ({tortilla}) posmaruj majonezem ({majonez_sriracha}).",
+        "Wyłóż polędwicę ({poledwica}), ser ({ser_zolty}), plastry jajka i ogórka.",
+        "Zwiń w rulon, przekrój na pół i zawiń w folię. Zero smażenia."
+      ]
+    },
+    {
+      "id": "q_jajka_majonez",
+      "nazwa": "Sałatka jajeczna z kukurydzą i majonezem",
+      "sloty": [
+        "drugi",
+        "kolacja"
+      ],
+      "box": true,
+      "czas_min": 12,
+      "produkty": [
+        [
+          "jaja",
+          3
+        ],
+        [
+          "kukurydza",
+          150
+        ],
+        [
+          "majonez_sriracha",
+          20
+        ],
+        [
+          "ogorek_kiszony",
+          1
+        ],
+        [
+          "chleb",
+          1
+        ],
+        [
+          "przyprawy",
+          1
+        ]
+      ],
+      "kroki": [
+        "Jajka na twardo: 9 minut od wrzenia, potem zimna woda i obierz. Pokrój w kostkę.",
+        "Kukurydzę ({kukurydza}) odsącz na sitku, ogórki kiszone ({ogorek_kiszony}) pokrój w kostkę.",
+        "Wymieszaj z majonezem ({majonez_sriracha}), posól i popieprz.",
+        "Do pojemnika, chleb ({chleb}) osobno."
+      ]
     }
   ]
 }
