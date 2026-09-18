@@ -1,5 +1,5 @@
 {
-  "wygenerowano": "2026-09-18T00:56:18+02:00",
+  "wygenerowano": "2026-09-18T09:46:46+02:00",
   "dzis": "2026-09-18",
   "typ_dzis": 2,
   "typy": {
@@ -7507,7 +7507,9 @@
       "faza": "Start",
       "tydzien": 1,
       "nadwyzka": 0,
-      "odhaczone": {},
+      "odhaczone": {
+        "08:00|Pobudka": true
+      },
       "waga": null,
       "kroki": null,
       "serie": [],
@@ -11956,7 +11958,9 @@
       ]
     }
   },
-  "odhaczone": {},
+  "odhaczone": {
+    "08:00|Pobudka": true
+  },
   "podmiany": {
     "obiad": "o_kanapki_xl"
   },
