@@ -1,5 +1,5 @@
 {
-  "wygenerowano": "2026-09-18T09:46:46+02:00",
+  "wygenerowano": "2026-09-18T09:57:50+02:00",
   "dzis": "2026-09-18",
   "typ_dzis": 2,
   "typy": {
@@ -3186,7 +3186,7 @@
       "barki_do_talii": 1.5,
       "tluszcz_proc": 10
     },
-    "srednia_7d": 84.5,
+    "srednia_7d": 83.7,
     "pomiary_nalezne": true,
     "wzrost": 182
   },
@@ -7510,7 +7510,7 @@
       "odhaczone": {
         "08:00|Pobudka": true
       },
-      "waga": null,
+      "waga": 83.0,
       "kroki": null,
       "serie": [],
       "trening": {
@@ -11035,6 +11035,10 @@
       {
         "data": "2026-09-17",
         "kg": 84.45
+      },
+      {
+        "data": "2026-09-18",
+        "kg": 83.0
       }
     ],
     "serie": [
@@ -12152,6 +12156,10 @@
       {
         "data": "2026-09-17",
         "kg": 84.45
+      },
+      {
+        "data": "2026-09-18",
+        "kg": 83.0
       }
     ],
     "treningi": [],
