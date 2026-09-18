@@ -1,5 +1,5 @@
 {
-  "wygenerowano": "2026-09-18T10:26:27+02:00",
+  "wygenerowano": "2026-09-18T10:28:38",
   "dzis": "2026-09-18",
   "typ_dzis": 2,
   "typy": {
@@ -1229,12 +1229,12 @@
           }
         },
         {
-          "nazwa": "Unoszenie kolan w zwisie",
+          "nazwa": "Unoszenie nóg leżąc",
           "powt": "10-15",
           "przerwa": "60 s",
-          "wskazowka": "Zwis na drążku, kolana do klatki bez bujania. Brzuch widoczny na zdjęciu to w połowie ten mięsień, w połowie dieta.",
-          "latwiej": "Leżąc na ławce.",
-          "trudniej": "Proste nogi.",
+          "wskazowka": "Leżysz na plecach, dłonie pod pośladkami, nogi proste albo lekko ugięte. Unosisz je do pionu i opuszczasz powoli, nie kładąc pięt na podłodze. Dolna część pleców cały czas dociśnięta do podłogi — jeśli się odrywa, mocniej ugnij kolana. Brzuch widoczny na zdjęciu to w połowie ten mięsień, w połowie dieta.",
+          "latwiej": "Kolana mocno ugięte, mniejszy zakres.",
+          "trudniej": "Nogi całkiem proste, 3 sekundy w dół.",
           "serie": 2
         },
         {
@@ -3283,20 +3283,14 @@
       "zdobyta": null
     },
     {
-      "id": "podciaganie_1",
-      "nazwa": "Pierwsze podciągnięcie",
-      "opis": "Pełne, z martwego zwisu. Wielki dzień.",
-      "zdobyta": null
-    },
-    {
-      "id": "podciaganie_5",
-      "nazwa": "5 podciągnięć",
+      "id": "wioslo_40",
+      "nazwa": "Wiosłowanie 40 kg",
       "opis": "Plecy zaczynają robić szerokość.",
       "zdobyta": null
     },
     {
-      "id": "podciaganie_10",
-      "nazwa": "10 podciągnięć",
+      "id": "wioslo_50",
+      "nazwa": "Wiosłowanie 50 kg",
       "opis": "Poziom, którego nie ma większość ludzi na siłowni.",
       "zdobyta": null
     },
@@ -7478,12 +7472,12 @@
               }
             },
             {
-              "nazwa": "Unoszenie kolan w zwisie",
+              "nazwa": "Unoszenie nóg leżąc",
               "powt": "10-15",
               "przerwa": "60 s",
-              "wskazowka": "Zwis na drążku, kolana do klatki bez bujania. Brzuch widoczny na zdjęciu to w połowie ten mięsień, w połowie dieta.",
-              "latwiej": "Leżąc na ławce.",
-              "trudniej": "Proste nogi.",
+              "wskazowka": "Leżysz na plecach, dłonie pod pośladkami, nogi proste albo lekko ugięte. Unosisz je do pionu i opuszczasz powoli, nie kładąc pięt na podłodze. Dolna część pleców cały czas dociśnięta do podłogi — jeśli się odrywa, mocniej ugnij kolana. Brzuch widoczny na zdjęciu to w połowie ten mięsień, w połowie dieta.",
+              "latwiej": "Kolana mocno ugięte, mniejszy zakres.",
+              "trudniej": "Nogi całkiem proste, 3 sekundy w dół.",
               "serie": 2
             },
             {
@@ -10883,13 +10877,13 @@
           ],
           "cwiczenia": [
             {
-              "nazwa": "Podciąganie na drążku",
-              "powt": "max (cel 8-10)",
+              "nazwa": "Wiosłowanie sztangą w opadzie",
+              "powt": "8-12",
               "przerwa": "2 min",
               "v": true,
-              "wskazowka": "Najważniejsze ćwiczenie na szerokość pleców. Chwyt trochę szerzej niż barki, ciągniesz łokcie do bioder. Zapisuj, ile razy — nawet jeśli to 0 i same negatywy.",
-              "latwiej": "Negatywy: wchodzisz na górę z ławki i schodzisz przez 4 sekundy. Albo ławka pod drążkiem i pomagasz sobie jedną nogą.",
-              "trudniej": "Z hantlem między nogami.",
+              "wskazowka": "Najważniejsze ćwiczenie na plecy, gdy nie masz drążka. Sztanga przy goleniach, biodra do tyłu, tułów pochylony ok. 45 stopni, plecy proste jak deska. Ciągniesz sztangę do brzucha (nie do klatki), łokcie blisko ciała, na górze ściągasz łopatki. Opuszczasz powoli, bez zaokrąglania pleców.",
+              "latwiej": "Mniejszy ciężar i tułów wyżej, ok. 60 stopni.",
+              "trudniej": "Sekunda przerwy przy brzuchu w każdym powtórzeniu.",
               "serie": 2
             },
             {
@@ -12016,11 +12010,6 @@
       "jedn": "na hantel",
       "krok": 2.5
     },
-    "Podciąganie na drążku": {
-      "kg": 0,
-      "jedn": "masa ciała",
-      "krok": 0
-    },
     "Wiosłowanie hantlem jednorącz": {
       "kg": 15,
       "jedn": "na hantel",
@@ -12051,11 +12040,6 @@
       "jedn": "jeden hantel",
       "krok": 5
     },
-    "Unoszenie kolan w zwisie": {
-      "kg": 0,
-      "jedn": "masa ciała",
-      "krok": 0
-    },
     "Wykroki z hantlami": {
       "kg": 7.5,
       "jedn": "na hantel",
@@ -12085,6 +12069,16 @@
       "kg": 30,
       "jedn": "razem z gryfem",
       "krok": 5
+    },
+    "Wiosłowanie sztangą w opadzie": {
+      "kg": 30,
+      "jedn": "razem z gryfem",
+      "krok": 2.5
+    },
+    "Unoszenie nóg leżąc": {
+      "kg": 0,
+      "jedn": "masa ciała",
+      "krok": 0
     }
   },
   "kalorie": {

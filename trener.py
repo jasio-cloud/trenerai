@@ -2233,10 +2233,9 @@ def _definicje_odznak():
     waga_spadek = (wagi[0]["kg"] - min(w["kg"] for w in wagi)) if wagi else 0
 
     def max_ciezar(fragment):
-    return max([c["ciezar"] for n, c in dziennik.ciezary().items() if fragment in n.lower()] or [0])
+        return max([c["ciezar"] for n, c in dziennik.ciezary().items() if fragment in n.lower()] or [0])
 
-
-def max_powt(fragment):
+    def max_powt(fragment):
         return max([max(z["powt"]) for z in zd if z.get("typ") == "seria" and z.get("powt")
                     and fragment in z["cwiczenie"].lower()] or [0])
 
