@@ -2232,7 +2232,11 @@ def _definicje_odznak():
     talia_spadek = (pom[0]["talia"] - min(p["talia"] for p in pom)) if pom else 0
     waga_spadek = (wagi[0]["kg"] - min(w["kg"] for w in wagi)) if wagi else 0
 
-    def max_powt(fragment):
+    def max_ciezar(fragment):
+    return max([c["ciezar"] for n, c in dziennik.ciezary().items() if fragment in n.lower()] or [0])
+
+
+def max_powt(fragment):
         return max([max(z["powt"]) for z in zd if z.get("typ") == "seria" and z.get("powt")
                     and fragment in z["cwiczenie"].lower()] or [0])
 
@@ -2252,10 +2256,9 @@ def _definicje_odznak():
         ("talia_8", "Talia −8 cm", "Zmiana, którą widzą inni.", talia_spadek >= 8),
         ("waga_3", "−3 kg", "Trzy kilogramy mniej od startu.", waga_spadek >= 3),
         ("waga_6", "−6 kg", "Sześć kilogramów mniej od startu.", waga_spadek >= 6),
-        ("podciaganie_1", "Pierwsze podciągnięcie", "Pełne, z martwego zwisu. Wielki dzień.", max_powt("podciąganie") >= 1),
-        ("podciaganie_5", "5 podciągnięć", "Plecy zaczynają robić szerokość.", max_powt("podciąganie") >= 5),
-        ("podciaganie_10", "10 podciągnięć", "Poziom, którego nie ma większość ludzi na siłowni.", max_powt("podciąganie") >= 10),
-        ("pompki_20", "20 pompek", "Dwadzieścia w jednej serii.", max_powt("pompki") >= 20),
+        ("wioslo_40", "Wiosłowanie 40 kg", "Plecy zaczynają robić szerokość.", max_ciezar("wiosłowanie sztangą") >= 40),
+        ("wioslo_50", "Wiosłowanie 50 kg", "Poziom, którego nie ma większość ludzi na siłowni.", max_ciezar("wiosłowanie sztangą") >= 50),
+                ("pompki_20", "20 pompek", "Dwadzieścia w jednej serii.", max_powt("pompki") >= 20),
         ("seria_7", "Tydzień bez przerwy", "Siedem dni zaliczonych z rzędu.", seria >= 7),
         ("seria_14", "Dwa tygodnie", "Czternaście dni z rzędu.", seria >= 14),
         ("seria_30", "Miesiąc bez przerwy", "Trzydzieści dni z rzędu. To już twój styl życia.", seria >= 30),

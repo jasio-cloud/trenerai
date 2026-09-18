@@ -1,5 +1,5 @@
 {
-  "_info": "Program treningowy v2 — dla laika, dom (Marbo Kelton: rack z drążkiem, ławka, sztanga, EZ, hantle). Bez wyciągu i bez gum — wszystko na hantlach, sztandze i drążku. Priorytety pod sylwetkę w kształcie litery V: barki boczne, szerokość pleców, klatka górna, ramiona, wąska talia. Ćwiczenia w każdej sesji ułożone od najważniejszego — w pierwszych blokach robisz tylko kilka pierwszych. Każde ma łatwiejszą i trudniejszą wersję, żeby zawsze było od czego zacząć.",
+  "_info": "Program treningowy v2 — dla laika, dom (Marbo Kelton: rack, ławka, sztanga, EZ, hantle — bez drążka). Bez wyciągu i bez gum — wszystko na hantlach, sztandze i drążku. Priorytety pod sylwetkę w kształcie litery V: barki boczne, szerokość pleców, klatka górna, ramiona, wąska talia. Ćwiczenia w każdej sesji ułożone od najważniejszego — w pierwszych blokach robisz tylko kilka pierwszych. Każde ma łatwiejszą i trudniejszą wersję, żeby zawsze było od czego zacząć.",
 
   "bloki": [
     {"id": "nauka", "nazwa": "Blok 1 — Nauka ruchu", "od_tygodnia": 1, "do_tygodnia": 2,
@@ -49,9 +49,9 @@
        "latwiej": "Lżejsze hantle, więcej powtórzeń.", "trudniej": "Seria zrywana: po odmowie lżejszy ciężar i dalej."}
     ]},
     {"id": "g_plecy", "nazwa": "Plecy i ramiona", "cwiczenia": [
-      {"nazwa": "Podciąganie na drążku", "powt": "max (cel 8-10)", "przerwa": "2 min", "v": true,
-       "wskazowka": "Najważniejsze ćwiczenie na szerokość pleców. Chwyt trochę szerzej niż barki, ciągniesz łokcie do bioder. Zapisuj, ile razy — nawet jeśli to 0 i same negatywy.",
-       "latwiej": "Negatywy: wchodzisz na górę z ławki i schodzisz przez 4 sekundy. Albo ławka pod drążkiem i pomagasz sobie jedną nogą.", "trudniej": "Z hantlem między nogami."},
+      {"nazwa": "Wiosłowanie sztangą w opadzie", "powt": "8-12", "przerwa": "2 min", "v": true,
+       "wskazowka": "Najważniejsze ćwiczenie na plecy, gdy nie masz drążka. Sztanga przy goleniach, biodra do tyłu, tułów pochylony ok. 45 stopni, plecy proste jak deska. Ciągniesz sztangę do brzucha (nie do klatki), łokcie blisko ciała, na górze ściągasz łopatki. Opuszczasz powoli, bez zaokrąglania pleców.",
+       "latwiej": "Mniejszy ciężar i tułów wyżej, ok. 60 stopni.", "trudniej": "Sekunda przerwy przy brzuchu w każdym powtórzeniu."},
       {"nazwa": "Wiosłowanie hantlem jednorącz", "powt": "8-12", "przerwa": "90 s", "v": true,
        "wskazowka": "Kolano i ręka na ławce. Ciągniesz hantel do biodra, nie do barku — wtedy pracują plecy, a nie biceps.",
        "latwiej": "Lżejszy hantel, 2 sekundy zatrzymania na górze.", "trudniej": "Wiosłowanie sztangą w opadzie."},
@@ -78,9 +78,9 @@
       {"nazwa": "Rumuński martwy ciąg ze sztangą", "powt": "8-12", "przerwa": "2 min",
        "wskazowka": "Sztanga tuż przy udach, chwyt na szerokość barków. Kolana lekko ugięte i tak zostają, biodra jadą do tyłu, sztanga sunie po udach. Plecy proste jak deska przez cały ruch, łopatki ściągnięte. Schodzisz mniej więcej do połowy łydki albo tam, gdzie czujesz mocne ciągnięcie z tyłu uda — niżej nie ma sensu.",
        "latwiej": "Z hantlami w dłoniach, mniejszy zakres.", "trudniej": "3 sekundy w dół i sekunda przerwy na dole."},
-      {"nazwa": "Unoszenie kolan w zwisie", "powt": "10-15", "przerwa": "60 s",
-       "wskazowka": "Zwis na drążku, kolana do klatki bez bujania. Brzuch widoczny na zdjęciu to w połowie ten mięsień, w połowie dieta.",
-       "latwiej": "Leżąc na ławce.", "trudniej": "Proste nogi."},
+      {"nazwa": "Unoszenie nóg leżąc", "powt": "10-15", "przerwa": "60 s",
+       "wskazowka": "Leżysz na plecach, dłonie pod pośladkami, nogi proste albo lekko ugięte. Unosisz je do pionu i opuszczasz powoli, nie kładąc pięt na podłodze. Dolna część pleców cały czas dociśnięta do podłogi — jeśli się odrywa, mocniej ugnij kolana. Brzuch widoczny na zdjęciu to w połowie ten mięsień, w połowie dieta.",
+       "latwiej": "Kolana mocno ugięte, mniejszy zakres.", "trudniej": "Nogi całkiem proste, 3 sekundy w dół."},
       {"nazwa": "Unoszenie hantli bokiem", "powt": "12-15", "przerwa": "60 s", "v": true,
        "wskazowka": "Trzeci raz w cyklu. Tak ma być.",
        "latwiej": "Jedną ręką, drugą trzymasz się racka.", "trudniej": "Seria zrywana."},
@@ -138,8 +138,8 @@
       {"nazwa": "Deska", "powt": "30-60 s", "przerwa": "45 s",
        "wskazowka": "Przedramiona pod barkami, ciało w jednej linii od głowy do pięt. Pośladki i brzuch napięte, jakbyś miał dostać cios w brzuch. Wpisujesz liczbę sekund.",
        "latwiej": "Na kolanach.", "trudniej": "Z uniesioną jedną nogą."},
-      {"nazwa": "Unoszenie kolan w zwisie", "powt": "10-15", "przerwa": "60 s",
-       "wskazowka": "Zwis na drążku, kolana do klatki bez bujania, powoli w dół.",
-       "latwiej": "Leżąc na ławce.", "trudniej": "Proste nogi."}
+      {"nazwa": "Unoszenie nóg leżąc", "powt": "10-15", "przerwa": "60 s",
+       "wskazowka": "Leżysz na plecach, dłonie pod pośladkami, nogi unosisz do pionu i powoli opuszczasz, nie kładąc pięt na podłodze.",
+       "latwiej": "Kolana ugięte.", "trudniej": "Nogi proste, 3 sekundy w dół."}
     ]}
 }
