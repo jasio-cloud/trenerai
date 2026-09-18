@@ -661,8 +661,9 @@ def _pule(d):
     out = {}
     for slot in ("sniadanie", "drugi", "kolacja"):
         box = wymaga_boxa(d, slot)
+        limit = CFG.get("kuchnia", {}).get("max_min_posilek", 99)
         out[slot] = [q["id"] for q in QUICK
-                     if slot in q["sloty"] and (q["box"] or not box)
+                     if slot in q["sloty"] and (q["box"] or not box) and q["czas_min"] <= limit
                      and not (t == 1 and slot == "sniadanie" and q["czas_min"] > 5)]
     return out
 

@@ -1090,6 +1090,93 @@
         "W dużej misce wymieszaj makaron, szynkę, jajka, ogórki i kukurydzę z jogurtem ({jogurt_grecki}) i musztardą ({musztarda}). Dopraw szczyptą soli i pieprzu.",
         "Najlepsza schłodzona — wstaw na 30 minut do lodówki. W zamkniętym pojemniku wytrzyma 2 dni."
       ]
+    },
+    {
+      "id": "q_tortilla_zimna",
+      "nazwa": "Tortilla z jajkiem na twardo, szynką i serem",
+      "sloty": [
+        "sniadanie",
+        "drugi",
+        "kolacja"
+      ],
+      "box": true,
+      "czas_min": 6,
+      "produkty": [
+        [
+          "tortilla",
+          2
+        ],
+        [
+          "jaja",
+          3
+        ],
+        [
+          "szynka",
+          60
+        ],
+        [
+          "ser_zolty",
+          2
+        ],
+        [
+          "majonez_sriracha",
+          20
+        ],
+        [
+          "ogorek_kiszony",
+          1
+        ]
+      ],
+      "kroki": [
+        "Jajka na twardo: w małym garnku zagotuj wodę, łyżką włóż jajka ({jaja}) i gotuj 9 minut. Odlej wrzątek, zalej zimną wodą na 3 minuty i obierz. W tym czasie nie musisz nic robić.",
+        "Jajka i ogórki kiszone ({ogorek_kiszony}) pokrój w plastry.",
+        "Tortille ({tortilla}) rozłóż na desce i posmaruj majonezem ({majonez_sriracha}).",
+        "Na każdą wyłóż szynkę ({szynka}), ser ({ser_zolty}), plastry jajka i ogórka.",
+        "Złóż boki do środka i zwiń w rulon, potem przekrój na pół i zawiń w folię. Zero smażenia, w pojemniku wytrzyma do jutra."
+      ]
+    },
+    {
+      "id": "o_salatka_jajeczna_makaron",
+      "nazwa": "Sałatka makaronowa z jajkiem i kukurydzą",
+      "sloty": [
+        "obiad"
+      ],
+      "box": true,
+      "czas_min": 12,
+      "bez_gotowania": true,
+      "produkty": [
+        [
+          "makaron",
+          100
+        ],
+        [
+          "jaja",
+          3
+        ],
+        [
+          "kukurydza",
+          100
+        ],
+        [
+          "majonez_sriracha",
+          20
+        ],
+        [
+          "ogorek_kiszony",
+          1
+        ],
+        [
+          "przyprawy",
+          1
+        ]
+      ],
+      "kroki": [
+        "Zagotuj ok. 1,5 litra wody z 1 łyżeczką soli, wsyp makaron ({makaron}) i gotuj tyle, ile podaje opakowanie. Odcedź i przelej zimną wodą.",
+        "W drugim garnku ugotuj jajka na twardo ({jaja}): 9 minut od wrzenia, potem zimna woda i obierz. Oba garnki robią się same.",
+        "Jajka i ogórki kiszone ({ogorek_kiszony}) pokrój w kostkę, kukurydzę ({kukurydza}) odsącz na sitku.",
+        "Wymieszaj makaron, jajka, ogórki i kukurydzę z majonezem ({majonez_sriracha}), posól i popieprz.",
+        "Do pojemnika. Na zimno jest najlepsza, wytrzyma 2 dni."
+      ]
     }
   ]
 }

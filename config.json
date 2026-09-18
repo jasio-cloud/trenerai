@@ -221,5 +221,9 @@
     "waga": 30,
     "waga_opakowan": 15,
     "komentarz": "Do tej daty planer patrzy na portfel: każde nowe opakowanie kosztuje 15 pkt błędu za 1 zł, zużycie 30 zamiast 20, a obiad to najtańsze z dozwolonych."
+  },
+  "kuchnia": {
+    "max_min_posilek": 12,
+    "komentarz": "Górny limit czasu na jeden posiłek w planie. Planer nie wstawi nic dłuższego; garnek na obiady (dzień gotowania) jest z tego wyłączony."
   }
 }
