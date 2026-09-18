@@ -225,7 +225,9 @@
   },
   "kuchnia": {
     "max_min_posilek": 12,
-    "komentarz": "Górny limit czasu na jeden posiłek w planie. Planer nie wstawi nic dłuższego; garnek na obiady (dzień gotowania) jest z tego wyłączony."
+    "komentarz": "max_min_posilek: górny limit czasu na posiłek. W dniu zmiany gotujesz rano (20 minut), więc tam wchodzą tylko dania do max_min_zmiana minut, bez patelni i garnków.",
+    "max_min_zmiana": 8,
+    "blok_rano_w_dniu_zmiany": true
   },
   "zielona_strefa": {
     "kcal_od": 2300,

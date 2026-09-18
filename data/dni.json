@@ -5,7 +5,7 @@
       "nazwa": "ZMIANA 24h",
       "emoji": "🛡️",
       "opis": "Służba 07:00–07:00. Jesz wyłącznie z boxów spakowanych wczoraj. W nocy 4 drzemki po 1 h 20.",
-      "pobudka": "05:00"
+      "pobudka": "04:40"
     },
     "1": {
       "nazwa": "PO ZMIANIE",
@@ -23,15 +23,15 @@
   "plan": {
     "0": [
       {
-        "czas": "05:00",
+        "czas": "04:40",
         "tytul": "Pobudka",
         "ikona": "⏰",
         "ping": true,
-        "opis": "Toaleta — za 5 minut waga, więc jeszcze nic nie pij. O 5:30 jedziesz: pojemniki na cały dzień czekają w lodówce, zrobione wczoraj.",
+        "opis": "Toaleta — za 5 minut waga, więc jeszcze nic nie pij. Potem 20 minut w kuchni i o 5:30 jedziesz.",
         "akcja": "suple"
       },
       {
-        "czas": "05:05",
+        "czas": "04:45",
         "tytul": "Waga",
         "ikona": "⚖️",
         "ping": true,
@@ -39,11 +39,19 @@
         "opis": "Po toalecie, przed jedzeniem i piciem, w samej bieliźnie. Wpisz wynik w panelu — liczy się średnia z 7 dni, nie pojedynczy wynik."
       },
       {
+        "czas": "04:50",
+        "tytul": "KUCHNIA — 20 minut",
+        "ikona": "🍳",
+        "ping": true,
+        "akcja": "kuchnia",
+        "opis": "Same zimne rzeczy do pojemników na dziś: składasz, pakujesz i wychodzisz."
+      },
+      {
         "czas": "05:25",
         "tytul": "Wyjście z domu",
         "ikona": "🚪",
         "ping": true,
-        "opis": "Pojemniki z lodówki do torby (śniadanie, drugi posiłek, obiad, kolacja), butelka wody 1,5 l, ładowarka. O 5:30 w samochodzie."
+        "opis": "Pojemniki z blatu do torby (śniadanie, drugi posiłek, obiad, kolacja), butelka wody 1,5 l, ładowarka. O 5:30 w samochodzie."
       },
       {
         "czas": "07:00",

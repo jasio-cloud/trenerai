@@ -671,6 +671,8 @@ def _pule(d):
     for slot in ("sniadanie", "drugi", "kolacja"):
         box = wymaga_boxa(d, slot)
         limit = CFG.get("kuchnia", {}).get("max_min_posilek", 99)
+        if t == 0 and CFG.get("kuchnia", {}).get("blok_rano_w_dniu_zmiany"):
+            limit = min(limit, CFG.get("kuchnia", {}).get("max_min_zmiana", limit))
         out[slot] = [q["id"] for q in QUICK
                      if slot in q["sloty"] and (q["box"] or not box) and q["czas_min"] <= limit
                      and not (t == 1 and slot == "sniadanie" and q["czas_min"] > 5)]
@@ -1789,11 +1791,16 @@ def posilki_bloku(d):
     w dzien wolny posilki na dzis i wszystkie pojemniki na jutrzejsza zmiane."""
     t = typ_dnia(d)
     dni_ = []
+    rano = CFG.get("kuchnia", {}).get("blok_rano_w_dniu_zmiany")
     if t == 1:
         dni_ = [(d, ("drugi", "obiad", "kolacja"))]
     elif t == 2:
-        dni_ = [(d, ("sniadanie", "drugi", "obiad", "kolacja")),
-                (d + datetime.timedelta(days=1), ("sniadanie", "drugi", "obiad", "kolacja"))]
+        dni_ = [(d, ("sniadanie", "drugi", "obiad", "kolacja"))]
+        if not rano:
+            dni_.append((d + datetime.timedelta(days=1), ("sniadanie", "drugi", "obiad", "kolacja")))
+    elif t == 0 and rano:
+        # zmiana: skladasz rano, tuz przed wyjazdem — wszystko na zimno, z gotowych skladnikow
+        dni_ = [(d, ("sniadanie", "drugi", "obiad", "kolacja"))]
     out = []
     for dd, sloty in dni_:
         _, dz = plan_dnia(dd)
