@@ -1,5 +1,5 @@
 {
-  "wygenerowano": "2026-09-18T10:56:05",
+  "wygenerowano": "2026-09-18T10:57:48+02:00",
   "dzis": "2026-09-18",
   "typ_dzis": 2,
   "typy": {
@@ -3213,6 +3213,14 @@
         "pierwszy": 15,
         "najlepszy": 15,
         "ostatni": 15,
+        "sesji": 1,
+        "miara": "powt.",
+        "od": "2026-09-18"
+      },
+      "Deska": {
+        "pierwszy": 60,
+        "najlepszy": 60,
+        "ostatni": 60,
         "sesji": 1,
         "miara": "powt.",
         "od": "2026-09-18"
@@ -7419,7 +7427,8 @@
       "tydzien": 1,
       "nadwyzka": 0,
       "odhaczone": {
-        "08:00|Pobudka": true
+        "08:00|Pobudka": true,
+        "08:05|Waga": true
       },
       "waga": 83.0,
       "kroki": null,
@@ -7472,6 +7481,16 @@
           "powt": [
             15,
             15
+          ]
+        },
+        {
+          "data": "2026-09-18",
+          "typ": "seria",
+          "cwiczenie": "Deska",
+          "ciezar": 0,
+          "powt": [
+            50,
+            60
           ]
         }
       ],
@@ -11132,6 +11151,16 @@
           15,
           15
         ]
+      },
+      {
+        "data": "2026-09-18",
+        "typ": "seria",
+        "cwiczenie": "Deska",
+        "ciezar": 0,
+        "powt": [
+          50,
+          60
+        ]
       }
     ]
   },
@@ -12013,7 +12042,8 @@
     }
   },
   "odhaczone": {
-    "08:00|Pobudka": true
+    "08:00|Pobudka": true,
+    "08:05|Waga": true
   },
   "podmiany": {
     "obiad": "q_jajka_kukurydza"
@@ -12084,6 +12114,16 @@
       "powt": [
         15,
         15
+      ],
+      "nastepny": 0.0,
+      "nieudane": 0,
+      "data": "2026-09-18"
+    },
+    "Deska": {
+      "ciezar": 0.0,
+      "powt": [
+        50,
+        60
       ],
       "nastepny": 0.0,
       "nieudane": 0,
