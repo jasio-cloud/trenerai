@@ -1,5 +1,5 @@
 {
-  "wygenerowano": "2026-09-18T09:57:50+02:00",
+  "wygenerowano": "2026-09-18T10:07:28+02:00",
   "dzis": "2026-09-18",
   "typ_dzis": 2,
   "typy": {
@@ -1221,7 +1221,17 @@
           "wskazowka": "Hantel przy klatce, schodzisz między kolana, plecy proste. Najbezpieczniejsza szkoła przysiadu dla początkującego.",
           "latwiej": "Przysiad do ławki.",
           "trudniej": "Przysiad ze sztangą w racku, z ustawionymi bolcami.",
-          "serie": 2
+          "serie": 2,
+          "propozycja": {
+            "ciezar": 19.0,
+            "poprzedni": 14.0,
+            "powt": [
+              12,
+              14
+            ],
+            "data": "2026-09-18",
+            "podwyzka": 5.0
+          }
         },
         {
           "nazwa": "Rumuński martwy ciąg",
@@ -3178,6 +3188,14 @@
         "sesji": 1,
         "miara": "kg (szac. max)",
         "od": "2026-09-17"
+      },
+      "Przysiad goblet z hantlem": {
+        "pierwszy": 20.5,
+        "najlepszy": 20.5,
+        "ostatni": 20.5,
+        "sesji": 1,
+        "miara": "kg (szac. max)",
+        "od": "2026-09-18"
       }
     },
     "cele": {
@@ -7512,7 +7530,18 @@
       },
       "waga": 83.0,
       "kroki": null,
-      "serie": [],
+      "serie": [
+        {
+          "data": "2026-09-18",
+          "typ": "seria",
+          "cwiczenie": "Przysiad goblet z hantlem",
+          "ciezar": 14,
+          "powt": [
+            12,
+            14
+          ]
+        }
+      ],
       "trening": {
         "rodzaj": "glowny",
         "trening": {
@@ -7534,7 +7563,17 @@
               "wskazowka": "Hantel przy klatce, schodzisz między kolana, plecy proste. Najbezpieczniejsza szkoła przysiadu dla początkującego.",
               "latwiej": "Przysiad do ławki.",
               "trudniej": "Przysiad ze sztangą w racku, z ustawionymi bolcami.",
-              "serie": 2
+              "serie": 2,
+              "propozycja": {
+                "ciezar": 19.0,
+                "poprzedni": 14.0,
+                "powt": [
+                  12,
+                  14
+                ],
+                "data": "2026-09-18",
+                "podwyzka": 5.0
+              }
             },
             {
               "nazwa": "Rumuński martwy ciąg",
@@ -11090,6 +11129,16 @@
           12,
           12
         ]
+      },
+      {
+        "data": "2026-09-18",
+        "typ": "seria",
+        "cwiczenie": "Przysiad goblet z hantlem",
+        "ciezar": 14,
+        "powt": [
+          12,
+          14
+        ]
       }
     ]
   },
@@ -11998,6 +12047,16 @@
       "nastepny": 5.0,
       "nieudane": 0,
       "data": "2026-09-17"
+    },
+    "Przysiad goblet z hantlem": {
+      "ciezar": 14.0,
+      "powt": [
+        12,
+        14
+      ],
+      "nastepny": 19.0,
+      "nieudane": 0,
+      "data": "2026-09-18"
     }
   },
   "ciezary_start": {
