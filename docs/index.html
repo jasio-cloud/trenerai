@@ -218,7 +218,7 @@ const esc = s => String(s??"").replace(/[&<>"]/g, c => ({"&":"&amp;","<":"&lt;",
 /* Wersja panelu. iPhone dodany do ekranu głównego potrafi trzymać stary HTML
    w nieskończoność. dane.json leci zawsze świeży, więc porównujemy numery
    i przy różnicy przeładowujemy stronę z ?v=, co omija cache przeglądarki. */
-const WERSJA = 21;
+const WERSJA = 22;
 let D = null, widok = "dzis";
 
 /* ---- zapis z telefonu ------------------------------------------------------
@@ -255,27 +255,36 @@ async function gh(url, opcje = {}){
 /* Dopisanie zdarzenia: czytamy aktualny plik razem z jego sha, doklejamy wpis
    i zapisujemy. Gdy w międzyczasie zapisał cron, GitHub odrzuca zapis (409) —
    wtedy czytamy najnowszą wersję i próbujemy raz jeszcze, zamiast nadpisywać. */
-async function wyslijZdarzenie(zdarzenie, proba = 0){
+async function wyslijZdarzenie(zdarzenie){
   if(!token()) throw new Error("Brak tokenu — ustaw go na dole zakładki Dziś.");
-  const url = API("state/zdarzenia.json") + "?ref=" + (D.galaz || "main");
-  let lista = [], sha = null;
-  try {
-    const plik = await gh(url);
-    sha = plik.sha;
-    lista = JSON.parse(zB64(plik.content));
-    if(!Array.isArray(lista)) lista = [];
-  } catch(e){ if(!String(e.message).startsWith("404")) throw e; }
-
-  lista.push({data: lokalnaData(), ...zdarzenie});
-  try {
-    await gh(API("state/zdarzenia.json"), {method:"PUT",
-      body: JSON.stringify({message: "panel: " + zdarzenie.typ,
-        content: b64(JSON.stringify(lista.slice(-500), null, 2)),
-        branch: D.galaz || "main", ...(sha ? {sha} : {})})});
-  } catch(e){
-    if(proba === 0 && /^(409|422)/.test(e.message)) return wyslijZdarzenie(zdarzenie, 1);
-    throw e;
+  /* 409 znaczy "ktoś zapisał plik przed tobą" — zwykle cron w chmurze. Kluczowe jest
+     świeże sha: bez dopisanego znacznika czasu GitHub potrafi oddać wersję z cache
+     i każda kolejna próba leci w to samo. Próbujemy kilka razy, z rosnącą przerwą. */
+  let ostatni = null;
+  for(let proba = 0; proba < 5; proba++){
+    const url = API("state/zdarzenia.json") + "?ref=" + (D.galaz || "main") + "&_=" + Date.now();
+    let lista = [], sha = null;
+    try {
+      const plik = await gh(url);
+      sha = plik.sha;
+      lista = JSON.parse(zB64(plik.content));
+      if(!Array.isArray(lista)) lista = [];
+    } catch(e){ if(!String(e.message).startsWith("404")) throw e; }
+    lista.push({data: lokalnaData(), ...zdarzenie});
+    try {
+      await gh(API("state/zdarzenia.json"), {method:"PUT",
+        body: JSON.stringify({message: "panel: " + zdarzenie.typ,
+          content: b64(JSON.stringify(lista.slice(-500), null, 2)),
+          branch: D.galaz || "main", ...(sha ? {sha} : {})})});
+      ostatni = null;
+      break;
+    } catch(e){
+      ostatni = e;
+      if(!/^(409|422)/.test(e.message)) throw e;
+      await new Promise(r => setTimeout(r, 400 + proba * 700));
+    }
   }
+  if(ostatni) throw new Error(ostatni.message + " — chmura właśnie zapisywała plik. Spróbuj jeszcze raz za chwilę.");
   /* Budzimy chmure od razu. Bez tego zmiana czekalaby na kolejny przebieg crona,
      a ten przychodzi srednio co ~3,5 h. Porazka budzenia nie psuje zapisu —
      zdarzenie i tak lezy w logu i zostanie przetworzone przy najblizszym przebiegu. */
