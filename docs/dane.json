@@ -1,5 +1,5 @@
 {
-  "wygenerowano": "2026-09-18T10:52:47",
+  "wygenerowano": "2026-09-18T10:54:36+02:00",
   "dzis": "2026-09-18",
   "typ_dzis": 2,
   "typy": {
@@ -3202,6 +3202,14 @@
         "od": "2026-09-18"
       },
       "Unoszenie nóg leżąc": {
+        "pierwszy": 15,
+        "najlepszy": 15,
+        "ostatni": 15,
+        "sesji": 1,
+        "miara": "powt.",
+        "od": "2026-09-18"
+      },
+      "Spięcia brzucha (brzuszki)": {
         "pierwszy": 15,
         "najlepszy": 15,
         "ostatni": 15,
@@ -7455,6 +7463,16 @@
             12,
             12
           ]
+        },
+        {
+          "data": "2026-09-18",
+          "typ": "seria",
+          "cwiczenie": "Spięcia brzucha (brzuszki)",
+          "ciezar": 0,
+          "powt": [
+            15,
+            15
+          ]
         }
       ],
       "trening": {
@@ -11104,6 +11122,16 @@
           12,
           12
         ]
+      },
+      {
+        "data": "2026-09-18",
+        "typ": "seria",
+        "cwiczenie": "Spięcia brzucha (brzuszki)",
+        "ciezar": 0,
+        "powt": [
+          15,
+          15
+        ]
       }
     ]
   },
@@ -12042,6 +12070,16 @@
       "data": "2026-09-18"
     },
     "Unoszenie nóg leżąc": {
+      "ciezar": 0.0,
+      "powt": [
+        15,
+        15
+      ],
+      "nastepny": 0.0,
+      "nieudane": 0,
+      "data": "2026-09-18"
+    },
+    "Spięcia brzucha (brzuszki)": {
       "ciezar": 0.0,
       "powt": [
         15,
