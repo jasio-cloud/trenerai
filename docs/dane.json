@@ -1,5 +1,5 @@
 {
-  "wygenerowano": "2026-09-19T09:13:02+02:00",
+  "wygenerowano": "2026-09-19T09:13:23+02:00",
   "dzis": "2026-09-19",
   "typ_dzis": 0,
   "typy": {
@@ -7442,7 +7442,12 @@
       "faza": "Start",
       "tydzien": 1,
       "nadwyzka": 0,
-      "odhaczone": {},
+      "odhaczone": {
+        "04:40|Pobudka": true,
+        "04:45|Waga": true,
+        "04:50|KUCHNIA — 20 minut": true,
+        "05:25|Wyjście z domu": true
+      },
       "waga": 83.1,
       "kroki": null,
       "serie": [],
@@ -11855,7 +11860,12 @@
       ]
     }
   },
-  "odhaczone": {},
+  "odhaczone": {
+    "04:40|Pobudka": true,
+    "04:45|Waga": true,
+    "04:50|KUCHNIA — 20 minut": true,
+    "05:25|Wyjście z domu": true
+  },
   "podmiany": {
     "obiad": "q_jajka_majonez",
     "sniadanie": "q_tortilla_poledwica",
