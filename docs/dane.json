@@ -1,5 +1,5 @@
 {
-  "wygenerowano": "2026-09-19T00:48:36+02:00",
+  "wygenerowano": "2026-09-19T09:13:02+02:00",
   "dzis": "2026-09-19",
   "typ_dzis": 0,
   "typy": {
@@ -3280,7 +3280,7 @@
       "barki_do_talii": 1.5,
       "tluszcz_proc": 10
     },
-    "srednia_7d": 83.7,
+    "srednia_7d": 83.5,
     "pomiary_nalezne": true,
     "wzrost": 182
   },
@@ -7443,7 +7443,7 @@
       "tydzien": 1,
       "nadwyzka": 0,
       "odhaczone": {},
-      "waga": null,
+      "waga": 83.1,
       "kroki": null,
       "serie": [],
       "trening": {
@@ -10852,6 +10852,10 @@
       {
         "data": "2026-09-18",
         "kg": 83.0
+      },
+      {
+        "data": "2026-09-19",
+        "kg": 83.1
       }
     ],
     "serie": [
@@ -12085,11 +12089,18 @@
     }
   },
   "kalorie": {
-    "trend": null,
+    "trend": {
+      "kg_tydzien": -4.73,
+      "pomiarow": 3,
+      "od": "2026-09-17",
+      "do": "2026-09-19",
+      "waga_teraz": 83.1
+    },
     "korekta_teraz": 0,
     "kcal_teraz": 2400,
-    "zmiana": 0,
-    "ocena": "Za mało pomiarów, żeby cokolwiek liczyć. Potrzebuję trzech ważeń w ciągu trzech tygodni — ważysz się raz na cykl, więc to około tygodnia."
+    "zmiana": 150,
+    "kcal_po": 2550,
+    "ocena": "Tempo -4.73 kg/tydz. jest poniżej widełek tej fazy (-0.3 do +0.3). Dokładam 150 kcal."
   },
   "cel_bazowy": 2400,
   "sen": {
@@ -12137,6 +12148,10 @@
       {
         "data": "2026-09-18",
         "kg": 83.0
+      },
+      {
+        "data": "2026-09-19",
+        "kg": 83.1
       }
     ],
     "treningi": [],
