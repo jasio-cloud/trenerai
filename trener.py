@@ -469,6 +469,10 @@ def produkty_posilku(pid, porcja=1.0):
     return [(k, q / b["porcje"]) for k, q in b["produkty"]]
 
 
+NABIAL = {"twarog", "skyr", "skyr_waniliowy", "skyr_pitny", "jogurt_grecki", "mleko",
+           "serek_wiejski", "napoj_proteinowy", "smietana"}
+SLODKIE = {"miod", "dzem_niskoslodzony"}
+
 PORCJE = (0.8, 0.9, 1.0, 1.1, 1.2, 1.3)
 
 # Dobitka bialkowa: skyr dokladany do drugiego posilku tylko wtedy, gdy dzien go
@@ -889,6 +893,20 @@ def generuj_plan(d=None, force=False, zapisz=True):
                     potrzeba[k] = potrzeba.get(k, 0) + q
         koszt_, zmarn_ = koszt_portfela(potrzeba, stan_lod)
         portfel = waga_k * (koszt_ + zmarn_)
+        # limity dzienne: laktoza i cukry proste w jednym dniu (po biegunce 19.09)
+        lim = CFG.get("limity") or {}
+        if lim:
+            for dz in kandydat:
+                nab = cuk = 0.0
+                for s_ in ("sniadanie", "drugi", "kolacja"):
+                    for k, q in _produkty_dict(dz[s_]).items():
+                        g = gramy(k, q)
+                        if k in NABIAL:
+                            nab += g
+                        elif k in SLODKIE:
+                            cuk += g
+                kary += 2.0 * max(0, nab - lim.get("nabial_g", 9999))
+                kary += 6.0 * max(0, cuk - lim.get("cukry_dodane_g", 9999))
         # deser bialkowy najwyzej raz dziennie — to ma byc cos slodkiego w planie, nie trzy kremy dziennie
         kary += 500 * sum(max(0, sum(1 for s_ in ("sniadanie", "drugi", "kolacja")
                                      if QUICK_BY_ID[dz[s_]].get("deser")) - 1) for dz in kandydat)
