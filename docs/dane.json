@@ -1,5 +1,5 @@
 {
-  "wygenerowano": "2026-09-20T08:49:38+02:00",
+  "wygenerowano": "2026-09-20T13:53:26+02:00",
   "dzis": "2026-09-20",
   "typ_dzis": 1,
   "typy": {
@@ -23,7 +23,7 @@
     }
   },
   "cel": {
-    "kcal": 2550,
+    "kcal": 2700,
     "bialko": 160,
     "tluszcz": 80,
     "wegle": 260
@@ -43,43 +43,43 @@
     "baza": "b_pieczarkowy",
     "dni": [
       {
-        "sniadanie": "q_twarog",
-        "drugi": "q_twarog_banan",
-        "kolacja": "q_tortilla_zimna",
+        "sniadanie": "q_twarog_banan",
+        "drugi": "q_kanapki_ser",
+        "kolacja": "d_twarog_kakao",
         "obiad": "b_pieczarkowy",
         "data": "2026-09-20",
         "typ": 1,
         "makra": {
-          "kcal": 2819,
-          "bialko": 186,
-          "tluszcz": 120,
-          "wegle": 244
+          "kcal": 2341,
+          "bialko": 157,
+          "tluszcz": 105,
+          "wegle": 189
         },
         "nazwy": {
-          "sniadanie": "Twarożek na słodko z dżemem + pieczywo",
-          "drugi": "Twaróg z bananem i miodem",
+          "sniadanie": "Twaróg z bananem i miodem",
+          "drugi": "Kanapki z serem, musztardą i kiszonym ogórkiem",
           "obiad": "Makaron z wołowiną i pieczarkami w sosie",
-          "kolacja": "Tortilla z jajkiem na twardo, szynką i serem"
+          "kolacja": "Deser: twarożek kakaowy z masłem orzechowym"
         }
       },
       {
         "sniadanie": "q_omlet_marchewkowy",
-        "drugi": "q_kanapki_ser",
-        "kolacja": "q_kanapki_jajko",
+        "drugi": "q_kanapki_jajko",
+        "kolacja": "q_jajka_majonez",
         "obiad": "b_pieczarkowy",
         "data": "2026-09-21",
         "typ": 2,
         "makra": {
-          "kcal": 2949,
-          "bialko": 184,
-          "tluszcz": 107,
+          "kcal": 3023,
+          "bialko": 189,
+          "tluszcz": 111,
           "wegle": 298
         },
         "nazwy": {
           "sniadanie": "Omlet marchewkowy z dżemem i bananem + napój proteinowy",
-          "drugi": "Kanapki z serem, musztardą i kiszonym ogórkiem",
+          "drugi": "Kanapki z jajkiem na twardo i serem",
           "obiad": "Makaron z wołowiną i pieczarkami w sosie",
-          "kolacja": "Kanapki z jajkiem na twardo i serem"
+          "kolacja": "Sałatka jajeczna z kukurydzą i majonezem"
         }
       },
       {
@@ -103,7 +103,7 @@
         }
       }
     ],
-    "wygenerowano": "2026-09-20T08:49:38+02:00"
+    "wygenerowano": "2026-09-20T13:53:26+02:00"
   },
   "baza": {
     "id": "b_pieczarkowy",
@@ -228,61 +228,82 @@
       "ping": true,
       "slot": "sniadanie",
       "opis": "Coś lekkiego i białkowego. Na pusty żołądek gorzej zaśniesz, na pełny obudzisz się rozbity.",
-      "posilek": "Twarożek na słodko z dżemem + pieczywo",
-      "posilek_id": "q_twarog",
-      "porcja": 0.8,
+      "posilek": "Twaróg z bananem i miodem",
+      "posilek_id": "q_twarog_banan",
+      "porcja": 1.0,
       "makra": {
-        "kcal": 439,
-        "bialko": 36,
-        "tluszcz": 10,
-        "wegle": 50
+        "kcal": 967,
+        "bialko": 50,
+        "tluszcz": 20,
+        "wegle": 150
       },
       "skladniki": [
         {
           "nazwa": "Twaróg półtłusty",
-          "ile": "160 g",
-          "g": 160,
-          "kcal": 213,
-          "bialko": 29.9,
-          "tluszcz": 7.5,
-          "wegle": 5.9
+          "ile": "180 g",
+          "g": 180,
+          "kcal": 239,
+          "bialko": 33.7,
+          "tluszcz": 8.5,
+          "wegle": 6.7
+        },
+        {
+          "nazwa": "Banan",
+          "ile": "1 szt. (120 g)",
+          "g": 120,
+          "kcal": 106,
+          "bialko": 1.3,
+          "tluszcz": 0.4,
+          "wegle": 24.2
+        },
+        {
+          "nazwa": "Miód",
+          "ile": "3 łyżki (60 g), w tym +2 łyżki",
+          "g": 60,
+          "kcal": 183,
+          "bialko": 0.2,
+          "tluszcz": 0.0,
+          "wegle": 49.2,
+          "dodatek": true
+        },
+        {
+          "nazwa": "Orzechy / migdały",
+          "ile": "10 g",
+          "g": 10,
+          "kcal": 64,
+          "bialko": 1.9,
+          "tluszcz": 5.7,
+          "wegle": 1.0
         },
         {
           "nazwa": "Mleko 2%",
-          "ile": "16 ml",
-          "g": 16,
-          "kcal": 8,
-          "bialko": 0.5,
-          "tluszcz": 0.3,
-          "wegle": 0.8
-        },
-        {
-          "nazwa": "Dżem (np. malinowy, słoik 200 g)",
-          "ile": "30 g",
-          "g": 30,
-          "kcal": 43,
-          "bialko": 0.1,
-          "tluszcz": 0.1,
-          "wegle": 10.2
+          "ile": "50 ml",
+          "g": 50,
+          "kcal": 25,
+          "bialko": 1.6,
+          "tluszcz": 1.0,
+          "wegle": 2.4
         },
         {
           "nazwa": "Chleb pszenny (zwykły biały)",
-          "ile": "2 kromki (70 g)",
-          "g": 70,
-          "kcal": 175,
-          "bialko": 5.6,
-          "tluszcz": 2.1,
-          "wegle": 32.9
+          "ile": "+ 4 kromki (140 g)",
+          "g": 140,
+          "kcal": 350,
+          "bialko": 11.2,
+          "tluszcz": 4.2,
+          "wegle": 65.8,
+          "dodatek": true
         }
       ],
       "jak": "przepis",
       "czas_min": 4,
       "kroki": [
-        "Twaróg (160 g) włóż do miski i dolej mleko (16 ml).",
-        "Rozgniataj widelcem ok. minuty, aż twaróg będzie gładki i kremowy.",
-        "Dżem (30 g): połowę wmieszaj w twaróg, resztę połóż na wierzch.",
-        "Zjedz z chlebem (2 kromki, 70 g) albo posmaruj nim kromki. Do boxa: twarożek w zakręcanym pojemniku, chleb w osobnej torebce.",
-        "Wszystkie ilości w krokach są już przeliczone na Twoją porcję na dziś — nic nie musisz dzielić."
+        "Twaróg (180 g) włóż do miski, dolej mleko (50 ml) i rozgniataj widelcem ok. minuty na krem.",
+        "Banana (1 szt., 120 g) obierz i pokrój w plasterki na wierzch.",
+        "Polej miodem (1 łyżka, 20 g) i posyp orzechami (10 g).",
+        "Na zmianę: wszystko do zakręcanego pojemnika, banana weź w całości i pokrój przy jedzeniu.",
+        "Wszystkie ilości w krokach są już przeliczone na Twoją porcję na dziś — nic nie musisz dzielić.",
+        "Do tego dodatek węglowy: chleb pszenny 4 kromki, miód 2 łyżki. Zjedz obok — to paliwo na trening i regenerację, bez niego dzień nie dobija węglowodanów."
       ]
     },
     {
@@ -330,9 +351,9 @@
       "ikona": "🍳",
       "ping": true,
       "akcja": "kuchnia",
-      "opis": "Przygotujesz: garnek: Makaron z wołowiną i pieczarkami w sosie, Twaróg z bananem i miodem, Tortilla z jajkiem na twardo, szynką i serem. Potem do jutra tylko sięgasz do lodówki.",
+      "opis": "Przygotujesz: garnek: Makaron z wołowiną i pieczarkami w sosie, Kanapki z serem, musztardą i kiszonym ogórkiem, Deser: twarożek kakaowy z masłem orzechowym. Potem do jutra tylko sięgasz do lodówki.",
       "kroki": [
-        "Wyjmij wszystko na blat, zanim zaczniesz: banan 1 szt. (120 g), cebula 2 szt. (200 g), czosnek 3 ząbki (15 g), jaja 2 szt. (110 g), majonez sriracha 16 ml, makaron 240 g, wołowina świeżo mielona 500 g, miód 1 łyżka (20 g), mleko 2% 40 ml, ogórek kiszony 1 szt. (65 g), olej rzepakowy 15 ml, orzechy / migdały 8 g, pieczarki 400 g, ser żółty starty 40 g, ser żółty w plastrach 2 plastry (40 g), śmietana 18% 150 ml, szynka w plastrach 50 g, tortilla pszenna 2 szt. (125 g), twaróg półtłusty 145 g.",
+        "Wyjmij wszystko na blat, zanim zaczniesz: cebula 2 szt. (200 g), chleb pszenny 2 kromki (70 g), czosnek 3 ząbki (15 g), kakao naturalne 1 łyżka (8 g), makaron 240 g, masło 5 g, masło orzechowe 100% 1 łyżka (16 g), wołowina świeżo mielona 500 g, miód 1 łyżka (20 g), mleko 2% 35 ml, musztarda 1 łyżka (15 g), ogórek kiszony 100 g, olej rzepakowy 15 ml, pieczarki 400 g, pomidor 1 szt. (120 g), ser żółty starty 40 g, ser żółty w plastrach 2 plastry (40 g), śmietana 18% 150 ml, twaróg półtłusty 180 g.",
         "Przygotuj 1 pojemnik i opisz je karteczką: dziś 20:30 — kolacja.",
         "▸ Garnek: Makaron z wołowiną i pieczarkami w sosie — zaczynasz od niego, bo najdłużej się gotuje.",
         "Zanim zaczniesz: postaw na wadze kuchennej deskę do krojenia, na niej pusty duży garnek (ten do makaronu), i wpisz tę wagę w zakładce Gotuję → „Ile nałożyć na porcję” (pole „puste naczynie”). Na tej samej desce zważysz później naczynie z jedzeniem — deska chroni wagę przed gorącem.",
@@ -345,27 +366,23 @@
         "Przełóż sos z patelni do garnka z makaronem i dokładnie wymieszaj.",
         "Porcjowanie: zważ garnek z gotowym jedzeniem na tej samej desce i wpisz wagę w panelu — pokaże, ile gramów nałożyć do każdego z 3 pojemników.",
         "Do każdego z 3 pojemników nałóż wyliczone gramy: postaw pusty pojemnik na wadze, wciśnij TARA (waga pokaże 0) i nakładaj, aż dojdziesz do liczby z panelu. Zostaw pojemniki otwarte na 20–30 minut, żeby wystygły, potem zamknij i wstaw do lodówki. Każdy pojemnik to dokładnie jedna porcja z Twojego planu.",
-        "▸ Woda — postaw ją od razu, zanim zaczniesz resztę:",
-        "Jajka na twardo dla Tortilla z jajkiem na twardo, szynką i serem (2 szt.) — razem 2 szt.: w małym garnku zagotuj wodę, łyżką włóż jajka, gotuj 9 minut na średnim ogniu, odlej wrzątek i zalej zimną wodą. Obierzesz je przy daniach.",
         "▸ Kiedy garnek się gotuje, robisz resztę — od najczystszych produktów do tych, po których myjesz nóż i deskę:",
-        "▸ Tortilla z jajkiem na twardo, szynką i serem",
-        "Weź 2 szt. ugotowanych jajek z garnka z zimną wodą.",
-        "Jajka i ogórki kiszone (1 szt., 65 g) pokrój w plastry.",
-        "Tortille (2 szt., 125 g) rozłóż na desce i posmaruj majonezem (16 ml).",
-        "Na każdą wyłóż szynkę (50 g), ser (2 plastry, 40 g), plastry jajka i ogórka.",
-        "Złóż boki do środka i zwiń w rulon, potem przekrój na pół i zawiń w folię. Zero smażenia, w pojemniku wytrzyma do jutra.",
+        "▸ Deser: twarożek kakaowy z masłem orzechowym",
+        "Twaróg (180 g) włóż do miski, dolej mleko (35 ml) i rozgniataj widelcem ok. minuty na krem.",
+        "Dodaj kakao (1 łyżka, 8 g) i miód (1 łyżka, 20 g) i mieszaj, aż kolor będzie jednolity.",
+        "Na wierzch nałóż masło orzechowe (1 łyżka, 16 g).",
         "Przełóż do pojemnika „dziś 20:30 — kolacja”.",
-        "▸ Twaróg z bananem i miodem",
-        "Twaróg (145 g) włóż do miski, dolej mleko (40 ml) i rozgniataj widelcem ok. minuty na krem.",
-        "Banana (1 szt., 120 g) obierz i pokrój w plasterki na wierzch.",
-        "Polej miodem (1 łyżka, 20 g) i posyp orzechami (8 g).",
-        "Na zmianę: wszystko do zakręcanego pojemnika, banana weź w całości i pokrój przy jedzeniu.",
+        "▸ Kanapki z serem, musztardą i kiszonym ogórkiem",
+        "Kromki chleba (2 kromki, 70 g) posmaruj cienko masłem (5 g), potem musztardą (1 łyżka, 15 g).",
+        "Ser (2 plastry, 40 g) rozłóż po równo na kromkach.",
+        "Ogórki kiszone (100 g) i pomidora (1 szt., 120 g) pokrój w plasterki i ułóż na serze.",
+        "Do boxa zawiń kanapki w folię.",
         "To zjadasz od razu, na koniec bloku.",
         "▸ Wróć do garnka: Makaron z wołowiną i pieczarkami w sosie",
         "▸ Na koniec: ciepłe pojemniki wystudź 20–30 minut bez pokrywki, potem wszystkie do lodówki na jedną półkę. Naczynia do zlewu, przetrzyj blat — 5 minut teraz oszczędza 20 jutro."
       ],
       "jak": "kuchnia",
-      "czas_min": 28
+      "czas_min": 26
     },
     {
       "czas": "15:15",
@@ -374,69 +391,78 @@
       "ping": true,
       "slot": "drugi",
       "opis": "Pierwszy porządny posiłek dnia — robisz go na końcu bloku kuchni i jesz od razu.",
-      "posilek": "Twaróg z bananem i miodem",
-      "posilek_id": "q_twarog_banan",
+      "posilek": "Kanapki z serem, musztardą i kiszonym ogórkiem",
+      "posilek_id": "q_kanapki_ser",
       "porcja": 0.8,
       "makra": {
-        "kcal": 430,
-        "bialko": 31,
-        "tluszcz": 13,
-        "wegle": 49
+        "kcal": 402,
+        "bialko": 18,
+        "tluszcz": 18,
+        "wegle": 40
       },
       "skladniki": [
         {
-          "nazwa": "Twaróg półtłusty",
-          "ile": "145 g",
-          "g": 145,
-          "kcal": 193,
-          "bialko": 27.1,
-          "tluszcz": 6.8,
-          "wegle": 5.4
+          "nazwa": "Chleb pszenny (zwykły biały)",
+          "ile": "2 kromki (70 g)",
+          "g": 70,
+          "kcal": 175,
+          "bialko": 5.6,
+          "tluszcz": 2.1,
+          "wegle": 32.9
         },
         {
-          "nazwa": "Banan",
+          "nazwa": "Ser żółty w plastrach",
+          "ile": "2 plastry (40 g)",
+          "g": 40,
+          "kcal": 140,
+          "bialko": 10.2,
+          "tluszcz": 10.8,
+          "wegle": 0.2
+        },
+        {
+          "nazwa": "Musztarda",
+          "ile": "1 łyżka (15 g)",
+          "g": 15,
+          "kcal": 16,
+          "bialko": 0.8,
+          "tluszcz": 0.9,
+          "wegle": 1.2
+        },
+        {
+          "nazwa": "Ogórek kiszony",
+          "ile": "100 g",
+          "g": 98,
+          "kcal": 12,
+          "bialko": 0.5,
+          "tluszcz": 0.2,
+          "wegle": 1.9
+        },
+        {
+          "nazwa": "Masło",
+          "ile": "5 g",
+          "g": 5,
+          "kcal": 37,
+          "bialko": 0.0,
+          "tluszcz": 4.1,
+          "wegle": 0.0
+        },
+        {
+          "nazwa": "Pomidor",
           "ile": "1 szt. (120 g)",
           "g": 120,
-          "kcal": 106,
-          "bialko": 1.3,
-          "tluszcz": 0.4,
-          "wegle": 24.2
-        },
-        {
-          "nazwa": "Miód",
-          "ile": "1 łyżka (20 g)",
-          "g": 20,
-          "kcal": 61,
-          "bialko": 0.1,
-          "tluszcz": 0.0,
-          "wegle": 16.4
-        },
-        {
-          "nazwa": "Orzechy / migdały",
-          "ile": "8 g",
-          "g": 8,
-          "kcal": 51,
-          "bialko": 1.5,
-          "tluszcz": 4.6,
-          "wegle": 0.8
-        },
-        {
-          "nazwa": "Mleko 2%",
-          "ile": "40 ml",
-          "g": 40,
-          "kcal": 20,
-          "bialko": 1.3,
-          "tluszcz": 0.8,
-          "wegle": 1.9
+          "kcal": 22,
+          "bialko": 1.1,
+          "tluszcz": 0.2,
+          "wegle": 3.2
         }
       ],
       "jak": "przepis",
       "czas_min": 4,
       "kroki": [
-        "Twaróg (145 g) włóż do miski, dolej mleko (40 ml) i rozgniataj widelcem ok. minuty na krem.",
-        "Banana (1 szt., 120 g) obierz i pokrój w plasterki na wierzch.",
-        "Polej miodem (1 łyżka, 20 g) i posyp orzechami (8 g).",
-        "Na zmianę: wszystko do zakręcanego pojemnika, banana weź w całości i pokrój przy jedzeniu.",
+        "Kromki chleba (2 kromki, 70 g) posmaruj cienko masłem (5 g), potem musztardą (1 łyżka, 15 g).",
+        "Ser (2 plastry, 40 g) rozłóż po równo na kromkach.",
+        "Ogórki kiszone (100 g) i pomidora (1 szt., 120 g) pokrój w plasterki i ułóż na serze.",
+        "Do boxa zawiń kanapki w folię.",
         "Wszystkie ilości w krokach są już przeliczone na Twoją porcję na dziś — nic nie musisz dzielić."
       ]
     },
@@ -568,80 +594,69 @@
       "ping": true,
       "slot": "kolacja",
       "opis": "",
-      "posilek": "Tortilla z jajkiem na twardo, szynką i serem",
-      "posilek_id": "q_tortilla_zimna",
-      "porcja": 0.8,
+      "posilek": "Deser: twarożek kakaowy z masłem orzechowym",
+      "posilek_id": "d_twarog_kakao",
+      "porcja": 0.9,
       "makra": {
-        "kcal": 819,
-        "bialko": 44,
-        "tluszcz": 40,
-        "wegle": 68
+        "kcal": 447,
+        "bialko": 41,
+        "tluszcz": 19,
+        "wegle": 28
       },
       "skladniki": [
         {
-          "nazwa": "Tortilla pszenna",
-          "ile": "2 szt. (125 g)",
-          "g": 124,
-          "kcal": 378,
-          "bialko": 10.4,
-          "tluszcz": 9.1,
-          "wegle": 63.2
-        },
-        {
-          "nazwa": "Jaja",
-          "ile": "2 szt. (110 g)",
-          "g": 110,
-          "kcal": 157,
-          "bialko": 13.9,
-          "tluszcz": 10.5,
-          "wegle": 0.8
-        },
-        {
-          "nazwa": "Szynka w plastrach",
-          "ile": "50 g",
-          "g": 50,
-          "kcal": 52,
-          "bialko": 9.5,
-          "tluszcz": 1.5,
-          "wegle": 0.8
-        },
-        {
-          "nazwa": "Ser żółty w plastrach",
-          "ile": "2 plastry (40 g)",
-          "g": 40,
-          "kcal": 140,
-          "bialko": 10.2,
-          "tluszcz": 10.8,
-          "wegle": 0.2
-        },
-        {
-          "nazwa": "Majonez sriracha",
-          "ile": "16 ml",
-          "g": 16,
-          "kcal": 83,
-          "bialko": 0.2,
+          "nazwa": "Twaróg półtłusty",
+          "ile": "180 g",
+          "g": 180,
+          "kcal": 239,
+          "bialko": 33.7,
           "tluszcz": 8.5,
-          "wegle": 1.5
+          "wegle": 6.7
         },
         {
-          "nazwa": "Ogórek kiszony",
-          "ile": "1 szt. (65 g)",
-          "g": 65,
-          "kcal": 8,
-          "bialko": 0.3,
-          "tluszcz": 0.1,
-          "wegle": 1.3
+          "nazwa": "Kakao naturalne (bez cukru)",
+          "ile": "1 łyżka (8 g)",
+          "g": 8,
+          "kcal": 30,
+          "bialko": 1.8,
+          "tluszcz": 1.6,
+          "wegle": 1.0
+        },
+        {
+          "nazwa": "Miód",
+          "ile": "1 łyżka (20 g)",
+          "g": 20,
+          "kcal": 61,
+          "bialko": 0.1,
+          "tluszcz": 0.0,
+          "wegle": 16.4
+        },
+        {
+          "nazwa": "Masło orzechowe 100%",
+          "ile": "1 łyżka (16 g)",
+          "g": 16,
+          "kcal": 99,
+          "bialko": 4.2,
+          "tluszcz": 8.2,
+          "wegle": 1.8
+        },
+        {
+          "nazwa": "Mleko 2%",
+          "ile": "35 ml",
+          "g": 35,
+          "kcal": 18,
+          "bialko": 1.2,
+          "tluszcz": 0.7,
+          "wegle": 1.7
         }
       ],
       "jak": "przepis",
-      "czas_min": 6,
+      "czas_min": 4,
       "kroki": [
         "📦 To zrobiłeś w bloku kuchni (dziś o 14:15) — teraz tylko wyjmij pojemnik z lodówki. Przepis niżej, gdybyś robił na świeżo.",
-        "Jajka na twardo: w małym garnku zagotuj wodę, łyżką włóż jajka (2 szt., 110 g) i gotuj 9 minut. Odlej wrzątek, zalej zimną wodą na 3 minuty i obierz. W tym czasie nie musisz nic robić.",
-        "Jajka i ogórki kiszone (1 szt., 65 g) pokrój w plastry.",
-        "Tortille (2 szt., 125 g) rozłóż na desce i posmaruj majonezem (16 ml).",
-        "Na każdą wyłóż szynkę (50 g), ser (2 plastry, 40 g), plastry jajka i ogórka.",
-        "Złóż boki do środka i zwiń w rulon, potem przekrój na pół i zawiń w folię. Zero smażenia, w pojemniku wytrzyma do jutra.",
+        "Twaróg (180 g) włóż do miski, dolej mleko (35 ml) i rozgniataj widelcem ok. minuty na krem.",
+        "Dodaj kakao (1 łyżka, 8 g) i miód (1 łyżka, 20 g) i mieszaj, aż kolor będzie jednolity.",
+        "Na wierzch nałóż masło orzechowe (1 łyżka, 16 g).",
         "Wszystkie ilości w krokach są już przeliczone na Twoją porcję na dziś — nic nie musisz dzielić."
       ]
     },
@@ -5687,12 +5702,12 @@
           "akcja": "kuchnia",
           "opis": "Przygotujesz: Tortilla z jajecznicą, polędwicą i majonezem sriracha + skyr pitny. Potem do jutra tylko sięgasz do lodówki.",
           "kroki": [
-            "Wyjmij wszystko na blat, zanim zaczniesz: jaja 2 szt. (110 g), majonez sriracha 12 ml, polędwica sopocka 15 g, przyprawy 1 porcja (2 g), skyr pitny 1 butelka (330 ml), tortilla pszenna 1 szt. (60 g).",
+            "Wyjmij wszystko na blat, zanim zaczniesz: jaja 4 szt. (220 g), majonez sriracha 18 ml, polędwica sopocka 20 g, przyprawy 1 porcja (2 g), skyr pitny 1 butelka (330 ml), tortilla pszenna 1 szt. (60 g).",
             "▸ Tortilla z jajecznicą, polędwicą i majonezem sriracha + skyr pitny",
-            "Wbij jajka (2 szt., 110 g) do miski, dodaj szczyptę soli i pieprzu i roztrzep widelcem.",
+            "Wbij jajka (4 szt., 220 g) do miski, dodaj szczyptę soli i pieprzu i roztrzep widelcem.",
             "Patelnię z powłoką postaw na średnim ogniu, bez tłuszczu. Wlej jajka i mieszaj łopatką 3 minuty, aż jajecznica będzie ścięta. Przełóż na talerz.",
             "Tortillę (1 szt., 60 g) połóż na suchej patelni na 20–30 sekund, żeby zmiękła.",
-            "Posmaruj tortillę majonezem (12 ml), wyłóż jajecznicę i polędwicę (15 g).",
+            "Posmaruj tortillę majonezem (18 ml), wyłóż jajecznicę i polędwicę (20 g).",
             "Złóż boki do środka i zwiń od dołu w rulon. Do popicia skyr pitny (1 butelka, 330 ml).",
             "To zjadasz od razu, na koniec bloku.",
             "▸ Na koniec: ciepłe pojemniki wystudź 20–30 minut bez pokrywki, potem wszystkie do lodówki na jedną półkę. Naczynia do zlewu, przetrzyj blat — 5 minut teraz oszczędza 20 jutro."
@@ -5709,12 +5724,12 @@
           "opis": "Pierwszy porządny posiłek dnia — robisz go na końcu bloku kuchni i jesz od razu.",
           "posilek": "Tortilla z jajecznicą, polędwicą i majonezem sriracha + skyr pitny",
           "posilek_id": "q_tortilla_jajecznica",
-          "porcja": 0.6,
+          "porcja": 0.9,
           "makra": {
-            "kcal": 687,
-            "bialko": 43,
-            "tluszcz": 27,
-            "wegle": 67
+            "kcal": 881,
+            "bialko": 58,
+            "tluszcz": 40,
+            "wegle": 68
           },
           "skladniki": [
             {
@@ -5728,30 +5743,30 @@
             },
             {
               "nazwa": "Jaja",
-              "ile": "2 szt. (110 g)",
-              "g": 110,
-              "kcal": 157,
-              "bialko": 13.9,
-              "tluszcz": 10.5,
-              "wegle": 0.8
+              "ile": "4 szt. (220 g)",
+              "g": 220,
+              "kcal": 315,
+              "bialko": 27.7,
+              "tluszcz": 20.9,
+              "wegle": 1.5
             },
             {
               "nazwa": "Polędwica sopocka (wędlina)",
-              "ile": "15 g",
-              "g": 15,
-              "kcal": 14,
-              "bialko": 2.7,
-              "tluszcz": 0.2,
-              "wegle": 0.4
+              "ile": "20 g",
+              "g": 20,
+              "kcal": 19,
+              "bialko": 3.6,
+              "tluszcz": 0.3,
+              "wegle": 0.5
             },
             {
               "nazwa": "Majonez sriracha",
-              "ile": "12 ml",
-              "g": 12,
-              "kcal": 62,
-              "bialko": 0.1,
-              "tluszcz": 6.4,
-              "wegle": 1.1
+              "ile": "18 ml",
+              "g": 18,
+              "kcal": 94,
+              "bialko": 0.2,
+              "tluszcz": 9.5,
+              "wegle": 1.7
             },
             {
               "nazwa": "Skyr pitny (butelka 330 ml)",
@@ -5766,10 +5781,10 @@
           "jak": "przepis",
           "czas_min": 10,
           "kroki": [
-            "Wbij jajka (2 szt., 110 g) do miski, dodaj szczyptę soli i pieprzu i roztrzep widelcem.",
+            "Wbij jajka (4 szt., 220 g) do miski, dodaj szczyptę soli i pieprzu i roztrzep widelcem.",
             "Patelnię z powłoką postaw na średnim ogniu, bez tłuszczu. Wlej jajka i mieszaj łopatką 3 minuty, aż jajecznica będzie ścięta. Przełóż na talerz.",
             "Tortillę (1 szt., 60 g) połóż na suchej patelni na 20–30 sekund, żeby zmiękła.",
-            "Posmaruj tortillę majonezem (12 ml), wyłóż jajecznicę i polędwicę (15 g).",
+            "Posmaruj tortillę majonezem (18 ml), wyłóż jajecznicę i polędwicę (20 g).",
             "Złóż boki do środka i zwiń od dołu w rulon. Do popicia skyr pitny (1 butelka, 330 ml).",
             "Wszystkie ilości w krokach są już przeliczone na Twoją porcję na dziś — nic nie musisz dzielić."
           ]
@@ -5865,10 +5880,10 @@
         }
       ],
       "makra": {
-        "kcal": 2552,
-        "bialko": 205,
-        "tluszcz": 54,
-        "wegle": 308
+        "kcal": 2746,
+        "bialko": 220,
+        "tluszcz": 67,
+        "wegle": 309
       },
       "dobitka": 0,
       "dodatek_w": [],
@@ -5903,7 +5918,7 @@
       ],
       "lzejszy": false,
       "cel": {
-        "kcal": 2550,
+        "kcal": 2700,
         "bialko": 160,
         "tluszcz": 80,
         "wegle": 260
@@ -5911,7 +5926,7 @@
       "slowo": "Zapisuj ciężary. Za pół roku to będzie najlepsza lektura, jaką masz.",
       "faza": "Start",
       "tydzien": 1,
-      "nadwyzka": 2,
+      "nadwyzka": 46,
       "odhaczone": {
         "00:10|Drzemka 2 z 4 — do 01:30": true,
         "06:45|Zdanie służby": true,
@@ -6101,7 +6116,7 @@
           "akcja": "kuchnia",
           "opis": "Przygotujesz: Omlet marchewkowy z dżemem i bananem + napój proteinowy, Tortilla z jajkiem na twardo, szynką i serem. Potem do jutra tylko sięgasz do lodówki.",
           "kroki": [
-            "Wyjmij wszystko na blat, zanim zaczniesz: banan 1 szt. (120 g), chleb pszenny 2 kromki (70 g), przyprawa do cynamonek / cynamon 4 g, dżem 100 g, jaja 4 szt. (220 g), majonez sriracha 18 ml, mąka pszenna 35 g, marchew 40 g, miód 1 łyżka (20 g), napój proteinowy müllermilch protein 1 butelka (400 ml), odżywka białkowa wpc 80 20 g, ogórek kiszony 1 szt. (65 g), proszek do pieczenia 2 g, ser żółty w plastrach 2 plastry (40 g), skyr waniliowy 1 kubek (150 g), szynka w plastrach 55 g, tortilla pszenna 2 szt. (125 g).",
+            "Wyjmij wszystko na blat, zanim zaczniesz: banan 1 szt. (120 g), chleb pszenny 2 kromki (70 g), przyprawa do cynamonek / cynamon 5 g, dżem 140 g, jaja 4 szt. (220 g), majonez sriracha 18 ml, mąka pszenna 50 g, marchew 50 g, miód 1 łyżka (20 g), napój proteinowy müllermilch protein 1 butelka (400 ml), odżywka białkowa wpc 80 30 g, ogórek kiszony 1 szt. (65 g), proszek do pieczenia 3 g, ser żółty w plastrach 2 plastry (40 g), skyr waniliowy 1 kubek (150 g), szynka w plastrach 55 g, tortilla pszenna 2 szt. (125 g).",
             "Przygotuj 1 pojemnik i opisz je karteczką: dziś 19:30 — kolacja.",
             "▸ Woda — postaw ją od razu, zanim zaczniesz resztę:",
             "Jajka na twardo dla Tortilla z jajkiem na twardo, szynką i serem (3 szt.) — razem 3 szt.: w małym garnku zagotuj wodę, łyżką włóż jajka, gotuj 9 minut na średnim ogniu, odlej wrzątek i zalej zimną wodą. Obierzesz je przy daniach.",
@@ -6113,13 +6128,13 @@
             "Złóż boki do środka i zwiń w rulon, potem przekrój na pół i zawiń w folię. Zero smażenia, w pojemniku wytrzyma do jutra.",
             "Przełóż do pojemnika „dziś 19:30 — kolacja”.",
             "▸ Omlet marchewkowy z dżemem i bananem + napój proteinowy",
-            "Marchew (40 g) obierz i zetrzyj na tarce na drobnych oczkach.",
-            "Do miski wbij jajko (1 szt., 55 g), dodaj skyr (1 kubek, 150 g), mąkę (35 g), odżywkę (20 g), proszek do pieczenia (2 g) i przyprawę (4 g). Mieszaj łyżką ok. minuty, aż nie będzie grudek.",
+            "Marchew (50 g) obierz i zetrzyj na tarce na drobnych oczkach.",
+            "Do miski wbij jajko (1 szt., 55 g), dodaj skyr (1 kubek, 150 g), mąkę (50 g), odżywkę (30 g), proszek do pieczenia (3 g) i przyprawę (5 g). Mieszaj łyżką ok. minuty, aż nie będzie grudek.",
             "Wmieszaj marchewkę. Ciasto ma być gęste, jak na placki.",
             "Patelnię z powłoką postaw na małym ogniu (1/3 skali) na minutę. Wylej ciasto i rozprowadź łyżką na grubość ok. 1 cm.",
             "Przykryj pokrywką i smaż 5–6 minut, aż spód będzie brązowy, a wierzch przestanie być płynny.",
             "Przewróć: zsuń omlet na talerz, przykryj go patelnią i odwróć razem z talerzem. Smaż jeszcze 3–4 minuty pod przykryciem.",
-            "Przełóż na talerz, posmaruj dżemem (100 g — pół opakowania) i ułóż banana (1 szt., 120 g) pokrojonego w plasterki. Do popicia napój proteinowy (1 butelka, 400 ml).",
+            "Przełóż na talerz, posmaruj dżemem (140 g) i ułóż banana (1 szt., 120 g) pokrojonego w plasterki. Do popicia napój proteinowy (1 butelka, 400 ml).",
             "Do pojemnika: na zimno smakuje jak ciasto marchewkowe — dżem i banana dołóż w osobnym pudełku, napój weź w butelce.",
             "To zjadasz od razu, na koniec bloku.",
             "Do „dziś 10:30 — śniadanie po treningu” dołóż: chleb pszenny 2 kromki (70 g), miód 1 łyżka (20 g).",
@@ -6137,12 +6152,12 @@
           "opis": "Pierwszy posiłek dnia — robisz go na końcu bloku kuchni i jesz od razu.",
           "posilek": "Omlet marchewkowy z dżemem i bananem + napój proteinowy",
           "posilek_id": "q_omlet_marchewkowy",
-          "porcja": 0.7,
+          "porcja": 1.0,
           "makra": {
-            "kcal": 1163,
-            "bialko": 76,
+            "kcal": 1318,
+            "bialko": 86,
             "tluszcz": 16,
-            "wegle": 176
+            "wegle": 202
           },
           "skladniki": [
             {
@@ -6165,57 +6180,57 @@
             },
             {
               "nazwa": "Mąka pszenna",
-              "ile": "35 g",
-              "g": 35,
-              "kcal": 120,
-              "bialko": 3.5,
-              "tluszcz": 0.4,
-              "wegle": 24.8
+              "ile": "50 g",
+              "g": 50,
+              "kcal": 172,
+              "bialko": 5.0,
+              "tluszcz": 0.6,
+              "wegle": 35.5
             },
             {
               "nazwa": "Odżywka białkowa WPC 80 (czekoladowa) — zapas, kupujesz osobno",
-              "ile": "20 g",
-              "g": 20,
-              "kcal": 75,
-              "bialko": 16.4,
-              "tluszcz": 0.9,
-              "wegle": 0.3
+              "ile": "30 g",
+              "g": 30,
+              "kcal": 112,
+              "bialko": 24.6,
+              "tluszcz": 1.4,
+              "wegle": 0.5
             },
             {
               "nazwa": "Marchew",
-              "ile": "40 g",
-              "g": 40,
-              "kcal": 16,
-              "bialko": 0.4,
+              "ile": "50 g",
+              "g": 52,
+              "kcal": 21,
+              "bialko": 0.5,
               "tluszcz": 0.1,
-              "wegle": 2.8
+              "wegle": 3.6
             },
             {
               "nazwa": "Proszek do pieczenia",
-              "ile": "2 g",
-              "g": 2,
-              "kcal": 1,
+              "ile": "3 g",
+              "g": 3,
+              "kcal": 2,
               "bialko": 0.1,
               "tluszcz": 0.0,
-              "wegle": 0.3
+              "wegle": 0.4
             },
             {
               "nazwa": "Przyprawa do cynamonek / cynamon",
-              "ile": "4 g",
-              "g": 4,
-              "kcal": 11,
+              "ile": "5 g",
+              "g": 5,
+              "kcal": 14,
               "bialko": 0.1,
               "tluszcz": 0.1,
-              "wegle": 1.8
+              "wegle": 2.3
             },
             {
               "nazwa": "Dżem (np. malinowy, słoik 200 g)",
-              "ile": "100 g",
-              "g": 100,
-              "kcal": 144,
-              "bialko": 0.5,
-              "tluszcz": 0.5,
-              "wegle": 34.0
+              "ile": "140 g",
+              "g": 140,
+              "kcal": 202,
+              "bialko": 0.7,
+              "tluszcz": 0.7,
+              "wegle": 47.6
             },
             {
               "nazwa": "Banan",
@@ -6259,13 +6274,13 @@
           "jak": "przepis",
           "czas_min": 15,
           "kroki": [
-            "Marchew (40 g) obierz i zetrzyj na tarce na drobnych oczkach.",
-            "Do miski wbij jajko (1 szt., 55 g), dodaj skyr (1 kubek, 150 g), mąkę (35 g), odżywkę (20 g), proszek do pieczenia (2 g) i przyprawę (4 g). Mieszaj łyżką ok. minuty, aż nie będzie grudek.",
+            "Marchew (50 g) obierz i zetrzyj na tarce na drobnych oczkach.",
+            "Do miski wbij jajko (1 szt., 55 g), dodaj skyr (1 kubek, 150 g), mąkę (50 g), odżywkę (30 g), proszek do pieczenia (3 g) i przyprawę (5 g). Mieszaj łyżką ok. minuty, aż nie będzie grudek.",
             "Wmieszaj marchewkę. Ciasto ma być gęste, jak na placki.",
             "Patelnię z powłoką postaw na małym ogniu (1/3 skali) na minutę. Wylej ciasto i rozprowadź łyżką na grubość ok. 1 cm.",
             "Przykryj pokrywką i smaż 5–6 minut, aż spód będzie brązowy, a wierzch przestanie być płynny.",
             "Przewróć: zsuń omlet na talerz, przykryj go patelnią i odwróć razem z talerzem. Smaż jeszcze 3–4 minuty pod przykryciem.",
-            "Przełóż na talerz, posmaruj dżemem (100 g — pół opakowania) i ułóż banana (1 szt., 120 g) pokrojonego w plasterki. Do popicia napój proteinowy (1 butelka, 400 ml).",
+            "Przełóż na talerz, posmaruj dżemem (140 g) i ułóż banana (1 szt., 120 g) pokrojonego w plasterki. Do popicia napój proteinowy (1 butelka, 400 ml).",
             "Do pojemnika: na zimno smakuje jak ciasto marchewkowe — dżem i banana dołóż w osobnym pudełku, napój weź w butelce.",
             "Wszystkie ilości w krokach są już przeliczone na Twoją porcję na dziś — nic nie musisz dzielić.",
             "Do tego dodatek węglowy: chleb pszenny 2 kromki, miód 1 łyżka. Zjedz obok — to paliwo na trening i regenerację, bez niego dzień nie dobija węglowodanów."
@@ -6451,10 +6466,10 @@
         }
       ],
       "makra": {
-        "kcal": 2555,
-        "bialko": 150,
+        "kcal": 2710,
+        "bialko": 160,
         "tluszcz": 78,
-        "wegle": 314
+        "wegle": 340
       },
       "dobitka": 0,
       "dodatek_w": [
@@ -6489,7 +6504,7 @@
       ],
       "lzejszy": false,
       "cel": {
-        "kcal": 2550,
+        "kcal": 2700,
         "bialko": 160,
         "tluszcz": 80,
         "wegle": 260
@@ -6497,7 +6512,7 @@
       "slowo": "Silniejszy za rok zaczyna się od tego, że dziś podniesiesz ciężar o jeden raz więcej.",
       "faza": "Start",
       "tydzien": 1,
-      "nadwyzka": 5,
+      "nadwyzka": 10,
       "odhaczone": {
         "08:00|Pobudka": true,
         "08:05|Waga": true,
@@ -6686,10 +6701,10 @@
           "akcja": "kuchnia",
           "opis": "Przygotujesz: Tortilla z jajkiem na twardo, polędwicą i serem, Shake białkowy z bananem, Sałatka jajeczna z kukurydzą i majonezem, Kanapki z serem, musztardą i kiszonym ogórkiem. Potem do jutra tylko sięgasz do lodówki.",
           "kroki": [
-            "Wyjmij wszystko na blat, zanim zaczniesz: banan 1 szt. (120 g), chleb pszenny 5 kromek (175 g), jaja 6 szt. (330 g), kukurydza konserwowa 165 g, majonez sriracha 38 ml, masło 5 g, miód 1 łyżka (20 g), musztarda 1 łyżka (15 g), odżywka białkowa wpc 80 50 g, ogórek kiszony 230 g, orzechy / migdały 25 g, polędwica sopocka 35 g, pomidor 1 szt. (120 g), przyprawy 1 porcja (2 g), ser żółty w plastrach 4 plastry (80 g), tortilla pszenna 2 szt. (125 g).",
+            "Wyjmij wszystko na blat, zanim zaczniesz: banan 1 szt. (120 g), chleb pszenny 5 kromek (175 g), jaja 7 szt. (385 g), kukurydza konserwowa 195 g, majonez sriracha 45 ml, masło 5 g, miód 1 łyżka (20 g), musztarda 1 łyżka (15 g), odżywka białkowa wpc 80 50 g, ogórek kiszony 4 szt. (260 g), orzechy / migdały 25 g, polędwica sopocka 45 g, pomidor 1 szt. (120 g), przyprawy 1 porcja (2 g), ser żółty w plastrach 4 plastry (80 g), tortilla pszenna 2 szt. (125 g).",
             "Przygotuj 4 pojemniki i opisz je karteczką: dziś 07:30 — śniadanie w pracy; dziś 10:30 — drugi posiłek; dziś 14:00 — obiad; dziś 20:30 — kolacja.",
             "▸ Woda — postaw ją od razu, zanim zaczniesz resztę:",
-            "Jajka na twardo dla Sałatka jajeczna z kukurydzą i majonezem (3 szt.), Tortilla z jajkiem na twardo, polędwicą i serem (3 szt.) — razem 6 szt.: w małym garnku zagotuj wodę, łyżką włóż jajka, gotuj 9 minut na średnim ogniu, odlej wrzątek i zalej zimną wodą. Obierzesz je przy daniach.",
+            "Jajka na twardo dla Sałatka jajeczna z kukurydzą i majonezem (4 szt.), Tortilla z jajkiem na twardo, polędwicą i serem (3 szt.) — razem 7 szt.: w małym garnku zagotuj wodę, łyżką włóż jajka, gotuj 9 minut na średnim ogniu, odlej wrzątek i zalej zimną wodą. Obierzesz je przy daniach.",
             "▸ Shake białkowy z bananem",
             "Do shakera wsyp odżywkę (50 g) i wlej ok. 350 ml zimnej wody. Zakręć i potrząsaj 20 sekund.",
             "Banana (1 szt., 120 g) i orzechy (25 g) weź osobno — zjadasz obok shake'a.",
@@ -6702,16 +6717,16 @@
             "Do boxa zawiń kanapki w folię.",
             "Przełóż do pojemnika „dziś 20:30 — kolacja”.",
             "▸ Sałatka jajeczna z kukurydzą i majonezem",
-            "Weź 3 szt. ugotowanych jajek z garnka z zimną wodą.",
-            "Kukurydzę (165 g) odsącz na sitku, ogórki kiszone (1 szt., 65 g) pokrój w kostkę.",
-            "Wymieszaj z majonezem (20 ml), posól i popieprz.",
+            "Weź 4 szt. ugotowanych jajek z garnka z zimną wodą.",
+            "Kukurydzę (195 g) odsącz na sitku, ogórki kiszone (100 g) pokrój w kostkę.",
+            "Wymieszaj z majonezem (25 ml), posól i popieprz.",
             "Do pojemnika, chleb (1 kromka, 35 g) osobno.",
             "Przełóż do pojemnika „dziś 14:00 — obiad”.",
             "▸ Tortilla z jajkiem na twardo, polędwicą i serem",
             "Weź 3 szt. ugotowanych jajek z garnka z zimną wodą.",
             "Jajka i ogórki kiszone (1 szt., 65 g) pokrój w plastry.",
-            "Tortille (2 szt., 125 g) posmaruj majonezem (18 ml).",
-            "Wyłóż polędwicę (35 g), ser (2 plastry, 40 g), plastry jajka i ogórka.",
+            "Tortille (2 szt., 125 g) posmaruj majonezem (20 ml).",
+            "Wyłóż polędwicę (45 g), ser (2 plastry, 40 g), plastry jajka i ogórka.",
             "Zwiń w rulon, przekrój na pół i zawiń w folię. Zero smażenia.",
             "Przełóż do pojemnika „dziś 07:30 — śniadanie w pracy”.",
             "Do „dziś 07:30 — śniadanie w pracy” dołóż: chleb pszenny 2 kromki (70 g), miód 1 łyżka (20 g).",
@@ -6743,12 +6758,12 @@
           "opis": "Z pojemnika zrobionego wczoraj w bloku kuchni.",
           "posilek": "Tortilla z jajkiem na twardo, polędwicą i serem",
           "posilek_id": "q_tortilla_poledwica",
-          "porcja": 0.9,
+          "porcja": 1.1,
           "makra": {
-            "kcal": 1125,
-            "bialko": 54,
-            "tluszcz": 48,
-            "wegle": 117
+            "kcal": 1145,
+            "bialko": 56,
+            "tluszcz": 49,
+            "wegle": 118
           },
           "skladniki": [
             {
@@ -6771,12 +6786,12 @@
             },
             {
               "nazwa": "Polędwica sopocka (wędlina)",
-              "ile": "35 g",
-              "g": 35,
-              "kcal": 34,
-              "bialko": 6.3,
-              "tluszcz": 0.6,
-              "wegle": 0.8
+              "ile": "45 g",
+              "g": 45,
+              "kcal": 43,
+              "bialko": 8.1,
+              "tluszcz": 0.7,
+              "wegle": 1.1
             },
             {
               "nazwa": "Ser żółty w plastrach",
@@ -6789,12 +6804,12 @@
             },
             {
               "nazwa": "Majonez sriracha",
-              "ile": "18 ml",
-              "g": 18,
-              "kcal": 94,
+              "ile": "20 ml",
+              "g": 20,
+              "kcal": 104,
               "bialko": 0.2,
-              "tluszcz": 9.5,
-              "wegle": 1.7
+              "tluszcz": 10.6,
+              "wegle": 1.9
             },
             {
               "nazwa": "Ogórek kiszony",
@@ -6832,8 +6847,8 @@
             "📦 To zrobiłeś w bloku kuchni (wczoraj o 09:30) — teraz tylko wyjmij pojemnik z lodówki. Przepis niżej, gdybyś robił na świeżo.",
             "Jajka na twardo: zagotuj wodę, łyżką włóż jajka (3 szt., 165 g), gotuj 9 minut, potem zimna woda i obierz.",
             "Jajka i ogórki kiszone (1 szt., 65 g) pokrój w plastry.",
-            "Tortille (2 szt., 125 g) posmaruj majonezem (18 ml).",
-            "Wyłóż polędwicę (35 g), ser (2 plastry, 40 g), plastry jajka i ogórka.",
+            "Tortille (2 szt., 125 g) posmaruj majonezem (20 ml).",
+            "Wyłóż polędwicę (45 g), ser (2 plastry, 40 g), plastry jajka i ogórka.",
             "Zwiń w rulon, przekrój na pół i zawiń w folię. Zero smażenia.",
             "Wszystkie ilości w krokach są już przeliczone na Twoją porcję na dziś — nic nie musisz dzielić.",
             "Do tego dodatek węglowy: chleb pszenny 2 kromki, miód 1 łyżka. Zjedz obok — to paliwo na trening i regenerację, bez niego dzień nie dobija węglowodanów."
@@ -6910,49 +6925,49 @@
           "opis": "Główny box z lodówki — odgrzej w mikrofali.",
           "posilek": "Sałatka jajeczna z kukurydzą i majonezem",
           "posilek_id": "q_jajka_majonez",
-          "porcja": 1.1,
+          "porcja": 1.3,
           "makra": {
-            "kcal": 571,
-            "bialko": 29,
-            "tluszcz": 30,
-            "wegle": 42
+            "kcal": 704,
+            "bialko": 37,
+            "tluszcz": 38,
+            "wegle": 48
           },
           "skladniki": [
             {
               "nazwa": "Jaja",
-              "ile": "3 szt. (165 g)",
-              "g": 165,
-              "kcal": 236,
-              "bialko": 20.8,
-              "tluszcz": 15.7,
-              "wegle": 1.2
+              "ile": "4 szt. (220 g)",
+              "g": 220,
+              "kcal": 315,
+              "bialko": 27.7,
+              "tluszcz": 20.9,
+              "wegle": 1.5
             },
             {
               "nazwa": "Kukurydza konserwowa",
-              "ile": "165 g",
-              "g": 165,
-              "kcal": 135,
-              "bialko": 4.5,
-              "tluszcz": 2.1,
-              "wegle": 21.4
+              "ile": "195 g",
+              "g": 195,
+              "kcal": 160,
+              "bialko": 5.3,
+              "tluszcz": 2.5,
+              "wegle": 25.3
             },
             {
               "nazwa": "Majonez sriracha",
-              "ile": "20 ml",
-              "g": 20,
-              "kcal": 104,
+              "ile": "25 ml",
+              "g": 25,
+              "kcal": 130,
               "bialko": 0.2,
-              "tluszcz": 10.6,
-              "wegle": 1.9
+              "tluszcz": 13.2,
+              "wegle": 2.4
             },
             {
               "nazwa": "Ogórek kiszony",
-              "ile": "1 szt. (65 g)",
-              "g": 65,
-              "kcal": 8,
-              "bialko": 0.3,
-              "tluszcz": 0.1,
-              "wegle": 1.3
+              "ile": "100 g",
+              "g": 98,
+              "kcal": 12,
+              "bialko": 0.5,
+              "tluszcz": 0.2,
+              "wegle": 1.9
             },
             {
               "nazwa": "Chleb pszenny (zwykły biały)",
@@ -6969,8 +6984,8 @@
           "kroki": [
             "📦 To zrobiłeś w bloku kuchni (wczoraj o 09:30) — teraz tylko wyjmij pojemnik z lodówki. Przepis niżej, gdybyś robił na świeżo.",
             "Jajka na twardo: 9 minut od wrzenia, potem zimna woda i obierz. Pokrój w kostkę.",
-            "Kukurydzę (165 g) odsącz na sitku, ogórki kiszone (1 szt., 65 g) pokrój w kostkę.",
-            "Wymieszaj z majonezem (20 ml), posól i popieprz.",
+            "Kukurydzę (195 g) odsącz na sitku, ogórki kiszone (100 g) pokrój w kostkę.",
+            "Wymieszaj z majonezem (25 ml), posól i popieprz.",
             "Do pojemnika, chleb (1 kromka, 35 g) osobno.",
             "Wszystkie ilości w krokach są już przeliczone na Twoją porcję na dziś — nic nie musisz dzielić."
           ]
@@ -7081,10 +7096,10 @@
         }
       ],
       "makra": {
-        "kcal": 2550,
-        "bialko": 148,
-        "tluszcz": 113,
-        "wegle": 227
+        "kcal": 2703,
+        "bialko": 158,
+        "tluszcz": 122,
+        "wegle": 234
       },
       "dobitka": 0,
       "dodatek_w": [
@@ -7100,7 +7115,7 @@
       "poza_planem": [],
       "lzejszy": false,
       "cel": {
-        "kcal": 2550,
+        "kcal": 2700,
         "bialko": 160,
         "tluszcz": 80,
         "wegle": 260
@@ -7207,61 +7222,82 @@
           "ping": true,
           "slot": "sniadanie",
           "opis": "Coś lekkiego i białkowego. Na pusty żołądek gorzej zaśniesz, na pełny obudzisz się rozbity.",
-          "posilek": "Twarożek na słodko z dżemem + pieczywo",
-          "posilek_id": "q_twarog",
-          "porcja": 0.8,
+          "posilek": "Twaróg z bananem i miodem",
+          "posilek_id": "q_twarog_banan",
+          "porcja": 1.0,
           "makra": {
-            "kcal": 439,
-            "bialko": 36,
-            "tluszcz": 10,
-            "wegle": 50
+            "kcal": 967,
+            "bialko": 50,
+            "tluszcz": 20,
+            "wegle": 150
           },
           "skladniki": [
             {
               "nazwa": "Twaróg półtłusty",
-              "ile": "160 g",
-              "g": 160,
-              "kcal": 213,
-              "bialko": 29.9,
-              "tluszcz": 7.5,
-              "wegle": 5.9
+              "ile": "180 g",
+              "g": 180,
+              "kcal": 239,
+              "bialko": 33.7,
+              "tluszcz": 8.5,
+              "wegle": 6.7
+            },
+            {
+              "nazwa": "Banan",
+              "ile": "1 szt. (120 g)",
+              "g": 120,
+              "kcal": 106,
+              "bialko": 1.3,
+              "tluszcz": 0.4,
+              "wegle": 24.2
+            },
+            {
+              "nazwa": "Miód",
+              "ile": "3 łyżki (60 g), w tym +2 łyżki",
+              "g": 60,
+              "kcal": 183,
+              "bialko": 0.2,
+              "tluszcz": 0.0,
+              "wegle": 49.2,
+              "dodatek": true
+            },
+            {
+              "nazwa": "Orzechy / migdały",
+              "ile": "10 g",
+              "g": 10,
+              "kcal": 64,
+              "bialko": 1.9,
+              "tluszcz": 5.7,
+              "wegle": 1.0
             },
             {
               "nazwa": "Mleko 2%",
-              "ile": "16 ml",
-              "g": 16,
-              "kcal": 8,
-              "bialko": 0.5,
-              "tluszcz": 0.3,
-              "wegle": 0.8
-            },
-            {
-              "nazwa": "Dżem (np. malinowy, słoik 200 g)",
-              "ile": "30 g",
-              "g": 30,
-              "kcal": 43,
-              "bialko": 0.1,
-              "tluszcz": 0.1,
-              "wegle": 10.2
+              "ile": "50 ml",
+              "g": 50,
+              "kcal": 25,
+              "bialko": 1.6,
+              "tluszcz": 1.0,
+              "wegle": 2.4
             },
             {
               "nazwa": "Chleb pszenny (zwykły biały)",
-              "ile": "2 kromki (70 g)",
-              "g": 70,
-              "kcal": 175,
-              "bialko": 5.6,
-              "tluszcz": 2.1,
-              "wegle": 32.9
+              "ile": "+ 4 kromki (140 g)",
+              "g": 140,
+              "kcal": 350,
+              "bialko": 11.2,
+              "tluszcz": 4.2,
+              "wegle": 65.8,
+              "dodatek": true
             }
           ],
           "jak": "przepis",
           "czas_min": 4,
           "kroki": [
-            "Twaróg (160 g) włóż do miski i dolej mleko (16 ml).",
-            "Rozgniataj widelcem ok. minuty, aż twaróg będzie gładki i kremowy.",
-            "Dżem (30 g): połowę wmieszaj w twaróg, resztę połóż na wierzch.",
-            "Zjedz z chlebem (2 kromki, 70 g) albo posmaruj nim kromki. Do boxa: twarożek w zakręcanym pojemniku, chleb w osobnej torebce.",
-            "Wszystkie ilości w krokach są już przeliczone na Twoją porcję na dziś — nic nie musisz dzielić."
+            "Twaróg (180 g) włóż do miski, dolej mleko (50 ml) i rozgniataj widelcem ok. minuty na krem.",
+            "Banana (1 szt., 120 g) obierz i pokrój w plasterki na wierzch.",
+            "Polej miodem (1 łyżka, 20 g) i posyp orzechami (10 g).",
+            "Na zmianę: wszystko do zakręcanego pojemnika, banana weź w całości i pokrój przy jedzeniu.",
+            "Wszystkie ilości w krokach są już przeliczone na Twoją porcję na dziś — nic nie musisz dzielić.",
+            "Do tego dodatek węglowy: chleb pszenny 4 kromki, miód 2 łyżki. Zjedz obok — to paliwo na trening i regenerację, bez niego dzień nie dobija węglowodanów."
           ]
         },
         {
@@ -7309,9 +7345,9 @@
           "ikona": "🍳",
           "ping": true,
           "akcja": "kuchnia",
-          "opis": "Przygotujesz: garnek: Makaron z wołowiną i pieczarkami w sosie, Twaróg z bananem i miodem, Tortilla z jajkiem na twardo, szynką i serem. Potem do jutra tylko sięgasz do lodówki.",
+          "opis": "Przygotujesz: garnek: Makaron z wołowiną i pieczarkami w sosie, Kanapki z serem, musztardą i kiszonym ogórkiem, Deser: twarożek kakaowy z masłem orzechowym. Potem do jutra tylko sięgasz do lodówki.",
           "kroki": [
-            "Wyjmij wszystko na blat, zanim zaczniesz: banan 1 szt. (120 g), cebula 2 szt. (200 g), czosnek 3 ząbki (15 g), jaja 2 szt. (110 g), majonez sriracha 16 ml, makaron 240 g, wołowina świeżo mielona 500 g, miód 1 łyżka (20 g), mleko 2% 40 ml, ogórek kiszony 1 szt. (65 g), olej rzepakowy 15 ml, orzechy / migdały 8 g, pieczarki 400 g, ser żółty starty 40 g, ser żółty w plastrach 2 plastry (40 g), śmietana 18% 150 ml, szynka w plastrach 50 g, tortilla pszenna 2 szt. (125 g), twaróg półtłusty 145 g.",
+            "Wyjmij wszystko na blat, zanim zaczniesz: cebula 2 szt. (200 g), chleb pszenny 2 kromki (70 g), czosnek 3 ząbki (15 g), kakao naturalne 1 łyżka (8 g), makaron 240 g, masło 5 g, masło orzechowe 100% 1 łyżka (16 g), wołowina świeżo mielona 500 g, miód 1 łyżka (20 g), mleko 2% 35 ml, musztarda 1 łyżka (15 g), ogórek kiszony 100 g, olej rzepakowy 15 ml, pieczarki 400 g, pomidor 1 szt. (120 g), ser żółty starty 40 g, ser żółty w plastrach 2 plastry (40 g), śmietana 18% 150 ml, twaróg półtłusty 180 g.",
             "Przygotuj 1 pojemnik i opisz je karteczką: dziś 20:30 — kolacja.",
             "▸ Garnek: Makaron z wołowiną i pieczarkami w sosie — zaczynasz od niego, bo najdłużej się gotuje.",
             "Zanim zaczniesz: postaw na wadze kuchennej deskę do krojenia, na niej pusty duży garnek (ten do makaronu), i wpisz tę wagę w zakładce Gotuję → „Ile nałożyć na porcję” (pole „puste naczynie”). Na tej samej desce zważysz później naczynie z jedzeniem — deska chroni wagę przed gorącem.",
@@ -7324,27 +7360,23 @@
             "Przełóż sos z patelni do garnka z makaronem i dokładnie wymieszaj.",
             "Porcjowanie: zważ garnek z gotowym jedzeniem na tej samej desce i wpisz wagę w panelu — pokaże, ile gramów nałożyć do każdego z 3 pojemników.",
             "Do każdego z 3 pojemników nałóż wyliczone gramy: postaw pusty pojemnik na wadze, wciśnij TARA (waga pokaże 0) i nakładaj, aż dojdziesz do liczby z panelu. Zostaw pojemniki otwarte na 20–30 minut, żeby wystygły, potem zamknij i wstaw do lodówki. Każdy pojemnik to dokładnie jedna porcja z Twojego planu.",
-            "▸ Woda — postaw ją od razu, zanim zaczniesz resztę:",
-            "Jajka na twardo dla Tortilla z jajkiem na twardo, szynką i serem (2 szt.) — razem 2 szt.: w małym garnku zagotuj wodę, łyżką włóż jajka, gotuj 9 minut na średnim ogniu, odlej wrzątek i zalej zimną wodą. Obierzesz je przy daniach.",
             "▸ Kiedy garnek się gotuje, robisz resztę — od najczystszych produktów do tych, po których myjesz nóż i deskę:",
-            "▸ Tortilla z jajkiem na twardo, szynką i serem",
-            "Weź 2 szt. ugotowanych jajek z garnka z zimną wodą.",
-            "Jajka i ogórki kiszone (1 szt., 65 g) pokrój w plastry.",
-            "Tortille (2 szt., 125 g) rozłóż na desce i posmaruj majonezem (16 ml).",
-            "Na każdą wyłóż szynkę (50 g), ser (2 plastry, 40 g), plastry jajka i ogórka.",
-            "Złóż boki do środka i zwiń w rulon, potem przekrój na pół i zawiń w folię. Zero smażenia, w pojemniku wytrzyma do jutra.",
+            "▸ Deser: twarożek kakaowy z masłem orzechowym",
+            "Twaróg (180 g) włóż do miski, dolej mleko (35 ml) i rozgniataj widelcem ok. minuty na krem.",
+            "Dodaj kakao (1 łyżka, 8 g) i miód (1 łyżka, 20 g) i mieszaj, aż kolor będzie jednolity.",
+            "Na wierzch nałóż masło orzechowe (1 łyżka, 16 g).",
             "Przełóż do pojemnika „dziś 20:30 — kolacja”.",
-            "▸ Twaróg z bananem i miodem",
-            "Twaróg (145 g) włóż do miski, dolej mleko (40 ml) i rozgniataj widelcem ok. minuty na krem.",
-            "Banana (1 szt., 120 g) obierz i pokrój w plasterki na wierzch.",
-            "Polej miodem (1 łyżka, 20 g) i posyp orzechami (8 g).",
-            "Na zmianę: wszystko do zakręcanego pojemnika, banana weź w całości i pokrój przy jedzeniu.",
+            "▸ Kanapki z serem, musztardą i kiszonym ogórkiem",
+            "Kromki chleba (2 kromki, 70 g) posmaruj cienko masłem (5 g), potem musztardą (1 łyżka, 15 g).",
+            "Ser (2 plastry, 40 g) rozłóż po równo na kromkach.",
+            "Ogórki kiszone (100 g) i pomidora (1 szt., 120 g) pokrój w plasterki i ułóż na serze.",
+            "Do boxa zawiń kanapki w folię.",
             "To zjadasz od razu, na koniec bloku.",
             "▸ Wróć do garnka: Makaron z wołowiną i pieczarkami w sosie",
             "▸ Na koniec: ciepłe pojemniki wystudź 20–30 minut bez pokrywki, potem wszystkie do lodówki na jedną półkę. Naczynia do zlewu, przetrzyj blat — 5 minut teraz oszczędza 20 jutro."
           ],
           "jak": "kuchnia",
-          "czas_min": 28
+          "czas_min": 26
         },
         {
           "czas": "15:15",
@@ -7353,69 +7385,78 @@
           "ping": true,
           "slot": "drugi",
           "opis": "Pierwszy porządny posiłek dnia — robisz go na końcu bloku kuchni i jesz od razu.",
-          "posilek": "Twaróg z bananem i miodem",
-          "posilek_id": "q_twarog_banan",
+          "posilek": "Kanapki z serem, musztardą i kiszonym ogórkiem",
+          "posilek_id": "q_kanapki_ser",
           "porcja": 0.8,
           "makra": {
-            "kcal": 430,
-            "bialko": 31,
-            "tluszcz": 13,
-            "wegle": 49
+            "kcal": 402,
+            "bialko": 18,
+            "tluszcz": 18,
+            "wegle": 40
           },
           "skladniki": [
             {
-              "nazwa": "Twaróg półtłusty",
-              "ile": "145 g",
-              "g": 145,
-              "kcal": 193,
-              "bialko": 27.1,
-              "tluszcz": 6.8,
-              "wegle": 5.4
+              "nazwa": "Chleb pszenny (zwykły biały)",
+              "ile": "2 kromki (70 g)",
+              "g": 70,
+              "kcal": 175,
+              "bialko": 5.6,
+              "tluszcz": 2.1,
+              "wegle": 32.9
             },
             {
-              "nazwa": "Banan",
+              "nazwa": "Ser żółty w plastrach",
+              "ile": "2 plastry (40 g)",
+              "g": 40,
+              "kcal": 140,
+              "bialko": 10.2,
+              "tluszcz": 10.8,
+              "wegle": 0.2
+            },
+            {
+              "nazwa": "Musztarda",
+              "ile": "1 łyżka (15 g)",
+              "g": 15,
+              "kcal": 16,
+              "bialko": 0.8,
+              "tluszcz": 0.9,
+              "wegle": 1.2
+            },
+            {
+              "nazwa": "Ogórek kiszony",
+              "ile": "100 g",
+              "g": 98,
+              "kcal": 12,
+              "bialko": 0.5,
+              "tluszcz": 0.2,
+              "wegle": 1.9
+            },
+            {
+              "nazwa": "Masło",
+              "ile": "5 g",
+              "g": 5,
+              "kcal": 37,
+              "bialko": 0.0,
+              "tluszcz": 4.1,
+              "wegle": 0.0
+            },
+            {
+              "nazwa": "Pomidor",
               "ile": "1 szt. (120 g)",
               "g": 120,
-              "kcal": 106,
-              "bialko": 1.3,
-              "tluszcz": 0.4,
-              "wegle": 24.2
-            },
-            {
-              "nazwa": "Miód",
-              "ile": "1 łyżka (20 g)",
-              "g": 20,
-              "kcal": 61,
-              "bialko": 0.1,
-              "tluszcz": 0.0,
-              "wegle": 16.4
-            },
-            {
-              "nazwa": "Orzechy / migdały",
-              "ile": "8 g",
-              "g": 8,
-              "kcal": 51,
-              "bialko": 1.5,
-              "tluszcz": 4.6,
-              "wegle": 0.8
-            },
-            {
-              "nazwa": "Mleko 2%",
-              "ile": "40 ml",
-              "g": 40,
-              "kcal": 20,
-              "bialko": 1.3,
-              "tluszcz": 0.8,
-              "wegle": 1.9
+              "kcal": 22,
+              "bialko": 1.1,
+              "tluszcz": 0.2,
+              "wegle": 3.2
             }
           ],
           "jak": "przepis",
           "czas_min": 4,
           "kroki": [
-            "Twaróg (145 g) włóż do miski, dolej mleko (40 ml) i rozgniataj widelcem ok. minuty na krem.",
-            "Banana (1 szt., 120 g) obierz i pokrój w plasterki na wierzch.",
-            "Polej miodem (1 łyżka, 20 g) i posyp orzechami (8 g).",
-            "Na zmianę: wszystko do zakręcanego pojemnika, banana weź w całości i pokrój przy jedzeniu.",
+            "Kromki chleba (2 kromki, 70 g) posmaruj cienko masłem (5 g), potem musztardą (1 łyżka, 15 g).",
+            "Ser (2 plastry, 40 g) rozłóż po równo na kromkach.",
+            "Ogórki kiszone (100 g) i pomidora (1 szt., 120 g) pokrój w plasterki i ułóż na serze.",
+            "Do boxa zawiń kanapki w folię.",
             "Wszystkie ilości w krokach są już przeliczone na Twoją porcję na dziś — nic nie musisz dzielić."
           ]
         },
@@ -7547,80 +7588,69 @@
           "ping": true,
           "slot": "kolacja",
           "opis": "",
-          "posilek": "Tortilla z jajkiem na twardo, szynką i serem",
-          "posilek_id": "q_tortilla_zimna",
-          "porcja": 0.8,
+          "posilek": "Deser: twarożek kakaowy z masłem orzechowym",
+          "posilek_id": "d_twarog_kakao",
+          "porcja": 0.9,
           "makra": {
-            "kcal": 819,
-            "bialko": 44,
-            "tluszcz": 40,
-            "wegle": 68
+            "kcal": 447,
+            "bialko": 41,
+            "tluszcz": 19,
+            "wegle": 28
           },
           "skladniki": [
             {
-              "nazwa": "Tortilla pszenna",
-              "ile": "2 szt. (125 g)",
-              "g": 124,
-              "kcal": 378,
-              "bialko": 10.4,
-              "tluszcz": 9.1,
-              "wegle": 63.2
-            },
-            {
-              "nazwa": "Jaja",
-              "ile": "2 szt. (110 g)",
-              "g": 110,
-              "kcal": 157,
-              "bialko": 13.9,
-              "tluszcz": 10.5,
-              "wegle": 0.8
-            },
-            {
-              "nazwa": "Szynka w plastrach",
-              "ile": "50 g",
-              "g": 50,
-              "kcal": 52,
-              "bialko": 9.5,
-              "tluszcz": 1.5,
-              "wegle": 0.8
-            },
-            {
-              "nazwa": "Ser żółty w plastrach",
-              "ile": "2 plastry (40 g)",
-              "g": 40,
-              "kcal": 140,
-              "bialko": 10.2,
-              "tluszcz": 10.8,
-              "wegle": 0.2
-            },
-            {
-              "nazwa": "Majonez sriracha",
-              "ile": "16 ml",
-              "g": 16,
-              "kcal": 83,
-              "bialko": 0.2,
+              "nazwa": "Twaróg półtłusty",
+              "ile": "180 g",
+              "g": 180,
+              "kcal": 239,
+              "bialko": 33.7,
               "tluszcz": 8.5,
-              "wegle": 1.5
+              "wegle": 6.7
             },
             {
-              "nazwa": "Ogórek kiszony",
-              "ile": "1 szt. (65 g)",
-              "g": 65,
-              "kcal": 8,
-              "bialko": 0.3,
-              "tluszcz": 0.1,
-              "wegle": 1.3
+              "nazwa": "Kakao naturalne (bez cukru)",
+              "ile": "1 łyżka (8 g)",
+              "g": 8,
+              "kcal": 30,
+              "bialko": 1.8,
+              "tluszcz": 1.6,
+              "wegle": 1.0
+            },
+            {
+              "nazwa": "Miód",
+              "ile": "1 łyżka (20 g)",
+              "g": 20,
+              "kcal": 61,
+              "bialko": 0.1,
+              "tluszcz": 0.0,
+              "wegle": 16.4
+            },
+            {
+              "nazwa": "Masło orzechowe 100%",
+              "ile": "1 łyżka (16 g)",
+              "g": 16,
+              "kcal": 99,
+              "bialko": 4.2,
+              "tluszcz": 8.2,
+              "wegle": 1.8
+            },
+            {
+              "nazwa": "Mleko 2%",
+              "ile": "35 ml",
+              "g": 35,
+              "kcal": 18,
+              "bialko": 1.2,
+              "tluszcz": 0.7,
+              "wegle": 1.7
             }
           ],
           "jak": "przepis",
-          "czas_min": 6,
+          "czas_min": 4,
           "kroki": [
             "📦 To zrobiłeś w bloku kuchni (dziś o 14:15) — teraz tylko wyjmij pojemnik z lodówki. Przepis niżej, gdybyś robił na świeżo.",
-            "Jajka na twardo: w małym garnku zagotuj wodę, łyżką włóż jajka (2 szt., 110 g) i gotuj 9 minut. Odlej wrzątek, zalej zimną wodą na 3 minuty i obierz. W tym czasie nie musisz nic robić.",
-            "Jajka i ogórki kiszone (1 szt., 65 g) pokrój w plastry.",
-            "Tortille (2 szt., 125 g) rozłóż na desce i posmaruj majonezem (16 ml).",
-            "Na każdą wyłóż szynkę (50 g), ser (2 plastry, 40 g), plastry jajka i ogórka.",
-            "Złóż boki do środka i zwiń w rulon, potem przekrój na pół i zawiń w folię. Zero smażenia, w pojemniku wytrzyma do jutra.",
+            "Twaróg (180 g) włóż do miski, dolej mleko (35 ml) i rozgniataj widelcem ok. minuty na krem.",
+            "Dodaj kakao (1 łyżka, 8 g) i miód (1 łyżka, 20 g) i mieszaj, aż kolor będzie jednolity.",
+            "Na wierzch nałóż masło orzechowe (1 łyżka, 16 g).",
             "Wszystkie ilości w krokach są już przeliczone na Twoją porcję na dziś — nic nie musisz dzielić."
           ]
         },
@@ -7648,17 +7678,26 @@
         }
       ],
       "makra": {
-        "kcal": 2574,
-        "bialko": 161,
-        "tluszcz": 107,
-        "wegle": 236
+        "kcal": 2702,
+        "bialko": 159,
+        "tluszcz": 101,
+        "wegle": 287
       },
       "dobitka": 0,
-      "dodatek_w": [],
+      "dodatek_w": [
+        [
+          "chleb",
+          4
+        ],
+        [
+          "miod",
+          2
+        ]
+      ],
       "poza_planem": [],
       "lzejszy": false,
       "cel": {
-        "kcal": 2550,
+        "kcal": 2700,
         "bialko": 160,
         "tluszcz": 80,
         "wegle": 260
@@ -7798,38 +7837,38 @@
           "ikona": "🍳",
           "ping": true,
           "akcja": "kuchnia",
-          "opis": "Przygotujesz: Omlet marchewkowy z dżemem i bananem + napój proteinowy, Kanapki z serem, musztardą i kiszonym ogórkiem, Kanapki z jajkiem na twardo i serem. Potem do jutra tylko sięgasz do lodówki.",
+          "opis": "Przygotujesz: Omlet marchewkowy z dżemem i bananem + napój proteinowy, Kanapki z jajkiem na twardo i serem, Sałatka jajeczna z kukurydzą i majonezem. Potem do jutra tylko sięgasz do lodówki.",
           "kroki": [
-            "Wyjmij wszystko na blat, zanim zaczniesz: banan 1 szt. (120 g), chleb pszenny 4 kromki (140 g), przyprawa do cynamonek / cynamon 2 g, dżem 70 g, jaja 3 szt. (165 g), mąka pszenna 25 g, marchew 40 g, masło 5 g, musztarda 2 łyżki (30 g), napój proteinowy müllermilch protein 1 butelka (400 ml), odżywka białkowa wpc 80 15 g, ogórek kiszony 160 g, pomidor 1 szt. (120 g), proszek do pieczenia 2 g, przyprawy 1 porcja (2 g), ser żółty w plastrach 4 plastry (80 g), skyr waniliowy 1 kubek (150 g).",
+            "Wyjmij wszystko na blat, zanim zaczniesz: banan 1 szt. (120 g), chleb pszenny 3 kromki (105 g), przyprawa do cynamonek / cynamon 3 g, dżem 85 g, jaja 5 szt. (275 g), kukurydza konserwowa 120 g, majonez sriracha 16 ml, mąka pszenna 30 g, marchew 40 g, musztarda 1 łyżka (15 g), napój proteinowy müllermilch protein 1 butelka (400 ml), odżywka białkowa wpc 80 18 g, ogórek kiszony 2 szt. (130 g), proszek do pieczenia 2 g, przyprawy 2 porcje (4 g), ser żółty w plastrach 2 plastry (40 g), skyr waniliowy 1 kubek (150 g).",
             "Przygotuj 2 pojemniki i opisz je karteczką: dziś 13:30 — drugi posiłek; dziś 19:30 — kolacja.",
             "▸ Woda — postaw ją od razu, zanim zaczniesz resztę:",
-            "Jajka na twardo dla Kanapki z jajkiem na twardo i serem (2 szt.) — razem 2 szt.: w małym garnku zagotuj wodę, łyżką włóż jajka, gotuj 9 minut na średnim ogniu, odlej wrzątek i zalej zimną wodą. Obierzesz je przy daniach.",
-            "▸ Kanapki z serem, musztardą i kiszonym ogórkiem",
-            "Kromki chleba (2 kromki, 70 g) posmaruj cienko masłem (5 g), potem musztardą (1 łyżka, 15 g).",
-            "Ser (2 plastry, 40 g) rozłóż po równo na kromkach.",
-            "Ogórki kiszone (100 g) i pomidora (1 szt., 120 g) pokrój w plasterki i ułóż na serze.",
-            "Do boxa zawiń kanapki w folię.",
-            "Przełóż do pojemnika „dziś 13:30 — drugi posiłek”.",
+            "Jajka na twardo dla Kanapki z jajkiem na twardo i serem (2 szt.), Sałatka jajeczna z kukurydzą i majonezem (2 szt.) — razem 4 szt.: w małym garnku zagotuj wodę, łyżką włóż jajka, gotuj 9 minut na średnim ogniu, odlej wrzątek i zalej zimną wodą. Obierzesz je przy daniach.",
             "▸ Kanapki z jajkiem na twardo i serem",
             "Weź 2 szt. ugotowanych jajek z garnka z zimną wodą.",
             "Jajka pokrój w plastry.",
             "Chleb (2 kromki, 70 g) posmaruj cienko musztardą (1 łyżka, 15 g), połóż ser (2 plastry, 40 g), na to plastry jajka. Posól i popieprz szczyptą.",
             "Ogórka kiszonego (1 szt., 65 g) pokrój w plasterki i ułóż na wierzchu. Do boxa zawiń każdą kanapkę w folię.",
+            "Przełóż do pojemnika „dziś 13:30 — drugi posiłek”.",
+            "▸ Sałatka jajeczna z kukurydzą i majonezem",
+            "Weź 2 szt. ugotowanych jajek z garnka z zimną wodą.",
+            "Kukurydzę (120 g) odsącz na sitku, ogórki kiszone (1 szt., 65 g) pokrój w kostkę.",
+            "Wymieszaj z majonezem (16 ml), posól i popieprz.",
+            "Do pojemnika, chleb (1 kromka, 35 g) osobno.",
             "Przełóż do pojemnika „dziś 19:30 — kolacja”.",
             "▸ Omlet marchewkowy z dżemem i bananem + napój proteinowy",
             "Marchew (40 g) obierz i zetrzyj na tarce na drobnych oczkach.",
-            "Do miski wbij jajko (1 szt., 55 g), dodaj skyr (1 kubek, 150 g), mąkę (25 g), odżywkę (15 g), proszek do pieczenia (2 g) i przyprawę (2 g). Mieszaj łyżką ok. minuty, aż nie będzie grudek.",
+            "Do miski wbij jajko (1 szt., 55 g), dodaj skyr (1 kubek, 150 g), mąkę (30 g), odżywkę (18 g), proszek do pieczenia (2 g) i przyprawę (3 g). Mieszaj łyżką ok. minuty, aż nie będzie grudek.",
             "Wmieszaj marchewkę. Ciasto ma być gęste, jak na placki.",
             "Patelnię z powłoką postaw na małym ogniu (1/3 skali) na minutę. Wylej ciasto i rozprowadź łyżką na grubość ok. 1 cm.",
             "Przykryj pokrywką i smaż 5–6 minut, aż spód będzie brązowy, a wierzch przestanie być płynny.",
             "Przewróć: zsuń omlet na talerz, przykryj go patelnią i odwróć razem z talerzem. Smaż jeszcze 3–4 minuty pod przykryciem.",
-            "Przełóż na talerz, posmaruj dżemem (70 g) i ułóż banana (1 szt., 120 g) pokrojonego w plasterki. Do popicia napój proteinowy (1 butelka, 400 ml).",
+            "Przełóż na talerz, posmaruj dżemem (85 g) i ułóż banana (1 szt., 120 g) pokrojonego w plasterki. Do popicia napój proteinowy (1 butelka, 400 ml).",
             "Do pojemnika: na zimno smakuje jak ciasto marchewkowe — dżem i banana dołóż w osobnym pudełku, napój weź w butelce.",
             "To zjadasz od razu, na koniec bloku.",
             "▸ Na koniec: ciepłe pojemniki wystudź 20–30 minut bez pokrywki, potem wszystkie do lodówki na jedną półkę. Naczynia do zlewu, przetrzyj blat — 5 minut teraz oszczędza 20 jutro."
           ],
           "jak": "kuchnia",
-          "czas_min": 31
+          "czas_min": 39
         },
         {
           "czas": "10:30",
@@ -7840,12 +7879,12 @@
           "opis": "Pierwszy posiłek dnia — robisz go na końcu bloku kuchni i jesz od razu.",
           "posilek": "Omlet marchewkowy z dżemem i bananem + napój proteinowy",
           "posilek_id": "q_omlet_marchewkowy",
-          "porcja": 0.5,
+          "porcja": 0.6,
           "makra": {
-            "kcal": 825,
-            "bialko": 65,
+            "kcal": 878,
+            "bialko": 68,
             "tluszcz": 13,
-            "wegle": 109
+            "wegle": 118
           },
           "skladniki": [
             {
@@ -7868,20 +7907,20 @@
             },
             {
               "nazwa": "Mąka pszenna",
-              "ile": "25 g",
-              "g": 25,
-              "kcal": 86,
-              "bialko": 2.5,
-              "tluszcz": 0.3,
-              "wegle": 17.8
+              "ile": "30 g",
+              "g": 30,
+              "kcal": 103,
+              "bialko": 3.0,
+              "tluszcz": 0.4,
+              "wegle": 21.3
             },
             {
               "nazwa": "Odżywka białkowa WPC 80 (czekoladowa) — zapas, kupujesz osobno",
-              "ile": "15 g",
-              "g": 15,
-              "kcal": 56,
-              "bialko": 12.3,
-              "tluszcz": 0.7,
+              "ile": "18 g",
+              "g": 18,
+              "kcal": 67,
+              "bialko": 14.8,
+              "tluszcz": 0.8,
               "wegle": 0.3
             },
             {
@@ -7904,21 +7943,21 @@
             },
             {
               "nazwa": "Przyprawa do cynamonek / cynamon",
-              "ile": "2 g",
-              "g": 2,
-              "kcal": 6,
-              "bialko": 0.0,
-              "tluszcz": 0.0,
-              "wegle": 0.9
+              "ile": "3 g",
+              "g": 3,
+              "kcal": 8,
+              "bialko": 0.1,
+              "tluszcz": 0.1,
+              "wegle": 1.4
             },
             {
               "nazwa": "Dżem (np. malinowy, słoik 200 g)",
-              "ile": "70 g",
-              "g": 70,
-              "kcal": 101,
-              "bialko": 0.3,
-              "tluszcz": 0.3,
-              "wegle": 23.8
+              "ile": "85 g",
+              "g": 85,
+              "kcal": 122,
+              "bialko": 0.4,
+              "tluszcz": 0.4,
+              "wegle": 28.9
             },
             {
               "nazwa": "Banan",
@@ -7943,12 +7982,12 @@
           "czas_min": 15,
           "kroki": [
             "Marchew (40 g) obierz i zetrzyj na tarce na drobnych oczkach.",
-            "Do miski wbij jajko (1 szt., 55 g), dodaj skyr (1 kubek, 150 g), mąkę (25 g), odżywkę (15 g), proszek do pieczenia (2 g) i przyprawę (2 g). Mieszaj łyżką ok. minuty, aż nie będzie grudek.",
+            "Do miski wbij jajko (1 szt., 55 g), dodaj skyr (1 kubek, 150 g), mąkę (30 g), odżywkę (18 g), proszek do pieczenia (2 g) i przyprawę (3 g). Mieszaj łyżką ok. minuty, aż nie będzie grudek.",
             "Wmieszaj marchewkę. Ciasto ma być gęste, jak na placki.",
             "Patelnię z powłoką postaw na małym ogniu (1/3 skali) na minutę. Wylej ciasto i rozprowadź łyżką na grubość ok. 1 cm.",
             "Przykryj pokrywką i smaż 5–6 minut, aż spód będzie brązowy, a wierzch przestanie być płynny.",
             "Przewróć: zsuń omlet na talerz, przykryj go patelnią i odwróć razem z talerzem. Smaż jeszcze 3–4 minuty pod przykryciem.",
-            "Przełóż na talerz, posmaruj dżemem (70 g) i ułóż banana (1 szt., 120 g) pokrojonego w plasterki. Do popicia napój proteinowy (1 butelka, 400 ml).",
+            "Przełóż na talerz, posmaruj dżemem (85 g) i ułóż banana (1 szt., 120 g) pokrojonego w plasterki. Do popicia napój proteinowy (1 butelka, 400 ml).",
             "Do pojemnika: na zimno smakuje jak ciasto marchewkowe — dżem i banana dołóż w osobnym pudełku, napój weź w butelce.",
             "Wszystkie ilości w krokach są już przeliczone na Twoją porcję na dziś — nic nie musisz dzielić."
           ]
@@ -7960,16 +7999,25 @@
           "ping": true,
           "slot": "drugi",
           "opis": "",
-          "posilek": "Kanapki z serem, musztardą i kiszonym ogórkiem",
-          "posilek_id": "q_kanapki_ser",
-          "porcja": 0.8,
+          "posilek": "Kanapki z jajkiem na twardo i serem",
+          "posilek_id": "q_kanapki_jajko",
+          "porcja": 1.0,
           "makra": {
-            "kcal": 402,
-            "bialko": 18,
-            "tluszcz": 18,
-            "wegle": 40
+            "kcal": 497,
+            "bialko": 31,
+            "tluszcz": 24,
+            "wegle": 36
           },
           "skladniki": [
+            {
+              "nazwa": "Jaja",
+              "ile": "2 szt. (110 g)",
+              "g": 110,
+              "kcal": 157,
+              "bialko": 13.9,
+              "tluszcz": 10.5,
+              "wegle": 0.8
+            },
             {
               "nazwa": "Chleb pszenny (zwykły biały)",
               "ile": "2 kromki (70 g)",
@@ -7999,40 +8047,22 @@
             },
             {
               "nazwa": "Ogórek kiszony",
-              "ile": "100 g",
-              "g": 98,
-              "kcal": 12,
-              "bialko": 0.5,
-              "tluszcz": 0.2,
-              "wegle": 1.9
-            },
-            {
-              "nazwa": "Masło",
-              "ile": "5 g",
-              "g": 5,
-              "kcal": 37,
-              "bialko": 0.0,
-              "tluszcz": 4.1,
-              "wegle": 0.0
-            },
-            {
-              "nazwa": "Pomidor",
-              "ile": "1 szt. (120 g)",
-              "g": 120,
-              "kcal": 22,
-              "bialko": 1.1,
-              "tluszcz": 0.2,
-              "wegle": 3.2
+              "ile": "1 szt. (65 g)",
+              "g": 65,
+              "kcal": 8,
+              "bialko": 0.3,
+              "tluszcz": 0.1,
+              "wegle": 1.3
             }
           ],
           "jak": "przepis",
-          "czas_min": 4,
+          "czas_min": 12,
           "kroki": [
             "📦 To zrobiłeś w bloku kuchni (dziś o 09:30) — teraz tylko wyjmij pojemnik z lodówki. Przepis niżej, gdybyś robił na świeżo.",
-            "Kromki chleba (2 kromki, 70 g) posmaruj cienko masłem (5 g), potem musztardą (1 łyżka, 15 g).",
-            "Ser (2 plastry, 40 g) rozłóż po równo na kromkach.",
-            "Ogórki kiszone (100 g) i pomidora (1 szt., 120 g) pokrój w plasterki i ułóż na serze.",
-            "Do boxa zawiń kanapki w folię.",
+            "Jajka na twardo: w małym garnku zagotuj tyle wody, żeby przykryła jajka (2 szt., 110 g). Łyżką ostrożnie włóż jajka do wrzątku i gotuj 9 minut na średnim ogniu. Odlej wrzątek, zalej zimną wodą na 3 minuty i obierz ze skorupki.",
+            "Jajka pokrój w plastry.",
+            "Chleb (2 kromki, 70 g) posmaruj cienko musztardą (1 łyżka, 15 g), połóż ser (2 plastry, 40 g), na to plastry jajka. Posól i popieprz szczyptą.",
+            "Ogórka kiszonego (1 szt., 65 g) pokrój w plasterki i ułóż na wierzchu. Do boxa zawiń każdą kanapkę w folię.",
             "Wszystkie ilości w krokach są już przeliczone na Twoją porcję na dziś — nic nie musisz dzielić."
           ]
         },
@@ -8148,13 +8178,13 @@
           "ping": true,
           "slot": "kolacja",
           "opis": "",
-          "posilek": "Kanapki z jajkiem na twardo i serem",
-          "posilek_id": "q_kanapki_jajko",
-          "porcja": 1.0,
+          "posilek": "Sałatka jajeczna z kukurydzą i majonezem",
+          "posilek_id": "q_jajka_majonez",
+          "porcja": 0.8,
           "makra": {
-            "kcal": 497,
-            "bialko": 31,
-            "tluszcz": 24,
+            "kcal": 434,
+            "bialko": 20,
+            "tluszcz": 22,
             "wegle": 36
           },
           "skladniki": [
@@ -8168,31 +8198,22 @@
               "wegle": 0.8
             },
             {
-              "nazwa": "Chleb pszenny (zwykły biały)",
-              "ile": "2 kromki (70 g)",
-              "g": 70,
-              "kcal": 175,
-              "bialko": 5.6,
-              "tluszcz": 2.1,
-              "wegle": 32.9
+              "nazwa": "Kukurydza konserwowa",
+              "ile": "120 g",
+              "g": 120,
+              "kcal": 98,
+              "bialko": 3.2,
+              "tluszcz": 1.6,
+              "wegle": 15.6
             },
             {
-              "nazwa": "Ser żółty w plastrach",
-              "ile": "2 plastry (40 g)",
-              "g": 40,
-              "kcal": 140,
-              "bialko": 10.2,
-              "tluszcz": 10.8,
-              "wegle": 0.2
-            },
-            {
-              "nazwa": "Musztarda",
-              "ile": "1 łyżka (15 g)",
-              "g": 15,
-              "kcal": 16,
-              "bialko": 0.8,
-              "tluszcz": 0.9,
-              "wegle": 1.2
+              "nazwa": "Majonez sriracha",
+              "ile": "16 ml",
+              "g": 16,
+              "kcal": 83,
+              "bialko": 0.2,
+              "tluszcz": 8.5,
+              "wegle": 1.5
             },
             {
               "nazwa": "Ogórek kiszony",
@@ -8202,16 +8223,25 @@
               "bialko": 0.3,
               "tluszcz": 0.1,
               "wegle": 1.3
+            },
+            {
+              "nazwa": "Chleb pszenny (zwykły biały)",
+              "ile": "1 kromka (35 g)",
+              "g": 35,
+              "kcal": 88,
+              "bialko": 2.8,
+              "tluszcz": 1.0,
+              "wegle": 16.4
             }
           ],
           "jak": "przepis",
           "czas_min": 12,
           "kroki": [
             "📦 To zrobiłeś w bloku kuchni (dziś o 09:30) — teraz tylko wyjmij pojemnik z lodówki. Przepis niżej, gdybyś robił na świeżo.",
-            "Jajka na twardo: w małym garnku zagotuj tyle wody, żeby przykryła jajka (2 szt., 110 g). Łyżką ostrożnie włóż jajka do wrzątku i gotuj 9 minut na średnim ogniu. Odlej wrzątek, zalej zimną wodą na 3 minuty i obierz ze skorupki.",
-            "Jajka pokrój w plastry.",
-            "Chleb (2 kromki, 70 g) posmaruj cienko musztardą (1 łyżka, 15 g), połóż ser (2 plastry, 40 g), na to plastry jajka. Posól i popieprz szczyptą.",
-            "Ogórka kiszonego (1 szt., 65 g) pokrój w plasterki i ułóż na wierzchu. Do boxa zawiń każdą kanapkę w folię.",
+            "Jajka na twardo: 9 minut od wrzenia, potem zimna woda i obierz. Pokrój w kostkę.",
+            "Kukurydzę (120 g) odsącz na sitku, ogórki kiszone (1 szt., 65 g) pokrój w kostkę.",
+            "Wymieszaj z majonezem (16 ml), posól i popieprz.",
+            "Do pojemnika, chleb (1 kromka, 35 g) osobno.",
             "Wszystkie ilości w krokach są już przeliczone na Twoją porcję na dziś — nic nie musisz dzielić."
           ]
         },
@@ -8247,17 +8277,17 @@
         }
       ],
       "makra": {
-        "kcal": 2610,
-        "bialko": 164,
-        "tluszcz": 99,
-        "wegle": 254
+        "kcal": 2695,
+        "bialko": 169,
+        "tluszcz": 103,
+        "wegle": 259
       },
       "dobitka": 0,
       "dodatek_w": [],
       "poza_planem": [],
       "lzejszy": false,
       "cel": {
-        "kcal": 2550,
+        "kcal": 2700,
         "bialko": 160,
         "tluszcz": 80,
         "wegle": 260
@@ -8392,7 +8422,7 @@
           "akcja": "kuchnia",
           "opis": "Przygotujesz: Omlet marchewkowy z dżemem i bananem + napój proteinowy, Shake białkowy z bananem, Sałatka z fetą, jajkiem i pomidorem + pieczywo. Potem do jutra tylko sięgasz do lodówki.",
           "kroki": [
-            "Wyjmij wszystko na blat, zanim zaczniesz: banan 2 szt. (240 g), chleb pszenny 1 kromka (35 g), przyprawa do cynamonek / cynamon 3 g, dżem 85 g, ser feta 55 g, jaja 3 szt. (165 g), mąka pszenna 30 g, marchew 40 g, napój proteinowy müllermilch protein 1 butelka (400 ml), odżywka białkowa wpc 80 48 g, ogórek długi 150 g, oliwa z oliwek 6 ml, orzechy / migdały 16 g, pomidor 180 g, proszek do pieczenia 2 g, przyprawy 1 porcja (2 g), sałata / mix sałat 50 g, skyr waniliowy 1 kubek (150 g).",
+            "Wyjmij wszystko na blat, zanim zaczniesz: banan 2 szt. (240 g), chleb pszenny 1 kromka (35 g), przyprawa do cynamonek / cynamon 4 g, dżem 125 g, ser feta 55 g, jaja 3 szt. (165 g), mąka pszenna 45 g, marchew 40 g, napój proteinowy müllermilch protein 1 butelka (400 ml), odżywka białkowa wpc 80 55 g, ogórek długi 150 g, oliwa z oliwek 6 ml, orzechy / migdały 16 g, pomidor 180 g, proszek do pieczenia 3 g, przyprawy 1 porcja (2 g), sałata / mix sałat 50 g, skyr waniliowy 1 kubek (150 g).",
             "Przygotuj 3 pojemniki i opisz je karteczką: dziś 07:30 — śniadanie w pracy; dziś 10:30 — drugi posiłek; dziś 20:30 — kolacja.",
             "▸ Woda — postaw ją od razu, zanim zaczniesz resztę:",
             "Jajka na twardo dla Sałatka z fetą, jajkiem i pomidorem + pieczywo (2 szt.) — razem 2 szt.: w małym garnku zagotuj wodę, łyżką włóż jajka, gotuj 9 minut na średnim ogniu, odlej wrzątek i zalej zimną wodą. Obierzesz je przy daniach.",
@@ -8411,12 +8441,12 @@
             "Przełóż do pojemnika „dziś 20:30 — kolacja”.",
             "▸ Omlet marchewkowy z dżemem i bananem + napój proteinowy",
             "Marchew (40 g) obierz i zetrzyj na tarce na drobnych oczkach.",
-            "Do miski wbij jajko (1 szt., 55 g), dodaj skyr (1 kubek, 150 g), mąkę (30 g), odżywkę (18 g), proszek do pieczenia (2 g) i przyprawę (3 g). Mieszaj łyżką ok. minuty, aż nie będzie grudek.",
+            "Do miski wbij jajko (1 szt., 55 g), dodaj skyr (1 kubek, 150 g), mąkę (45 g), odżywkę (25 g), proszek do pieczenia (3 g) i przyprawę (4 g). Mieszaj łyżką ok. minuty, aż nie będzie grudek.",
             "Wmieszaj marchewkę. Ciasto ma być gęste, jak na placki.",
             "Patelnię z powłoką postaw na małym ogniu (1/3 skali) na minutę. Wylej ciasto i rozprowadź łyżką na grubość ok. 1 cm.",
             "Przykryj pokrywką i smaż 5–6 minut, aż spód będzie brązowy, a wierzch przestanie być płynny.",
             "Przewróć: zsuń omlet na talerz, przykryj go patelnią i odwróć razem z talerzem. Smaż jeszcze 3–4 minuty pod przykryciem.",
-            "Przełóż na talerz, posmaruj dżemem (85 g) i ułóż banana (1 szt., 120 g) pokrojonego w plasterki. Do popicia napój proteinowy (1 butelka, 400 ml).",
+            "Przełóż na talerz, posmaruj dżemem (125 g) i ułóż banana (1 szt., 120 g) pokrojonego w plasterki. Do popicia napój proteinowy (1 butelka, 400 ml).",
             "Do pojemnika: na zimno smakuje jak ciasto marchewkowe — dżem i banana dołóż w osobnym pudełku, napój weź w butelce.",
             "Przełóż do pojemnika „dziś 07:30 — śniadanie w pracy”.",
             "▸ Na koniec: ciepłe pojemniki wystudź 20–30 minut bez pokrywki, potem wszystkie do lodówki na jedną półkę. Naczynia do zlewu, przetrzyj blat — 5 minut teraz oszczędza 20 jutro."
@@ -8447,12 +8477,12 @@
           "opis": "Z pojemnika zrobionego wczoraj w bloku kuchni.",
           "posilek": "Omlet marchewkowy z dżemem i bananem + napój proteinowy",
           "posilek_id": "q_omlet_marchewkowy",
-          "porcja": 0.6,
+          "porcja": 0.9,
           "makra": {
-            "kcal": 878,
-            "bialko": 68,
-            "tluszcz": 13,
-            "wegle": 118
+            "kcal": 1016,
+            "bialko": 75,
+            "tluszcz": 14,
+            "wegle": 143
           },
           "skladniki": [
             {
@@ -8475,21 +8505,21 @@
             },
             {
               "nazwa": "Mąka pszenna",
-              "ile": "30 g",
-              "g": 30,
-              "kcal": 103,
-              "bialko": 3.0,
-              "tluszcz": 0.4,
-              "wegle": 21.3
+              "ile": "45 g",
+              "g": 45,
+              "kcal": 154,
+              "bialko": 4.5,
+              "tluszcz": 0.5,
+              "wegle": 31.9
             },
             {
               "nazwa": "Odżywka białkowa WPC 80 (czekoladowa) — zapas, kupujesz osobno",
-              "ile": "18 g",
-              "g": 18,
-              "kcal": 67,
-              "bialko": 14.8,
-              "tluszcz": 0.8,
-              "wegle": 0.3
+              "ile": "25 g",
+              "g": 25,
+              "kcal": 93,
+              "bialko": 20.5,
+              "tluszcz": 1.2,
+              "wegle": 0.4
             },
             {
               "nazwa": "Marchew",
@@ -8502,30 +8532,30 @@
             },
             {
               "nazwa": "Proszek do pieczenia",
-              "ile": "2 g",
-              "g": 2,
-              "kcal": 1,
+              "ile": "3 g",
+              "g": 3,
+              "kcal": 2,
               "bialko": 0.1,
               "tluszcz": 0.0,
-              "wegle": 0.3
+              "wegle": 0.4
             },
             {
               "nazwa": "Przyprawa do cynamonek / cynamon",
-              "ile": "3 g",
-              "g": 3,
-              "kcal": 8,
+              "ile": "4 g",
+              "g": 4,
+              "kcal": 11,
               "bialko": 0.1,
               "tluszcz": 0.1,
-              "wegle": 1.4
+              "wegle": 1.8
             },
             {
               "nazwa": "Dżem (np. malinowy, słoik 200 g)",
-              "ile": "85 g",
-              "g": 85,
-              "kcal": 122,
-              "bialko": 0.4,
-              "tluszcz": 0.4,
-              "wegle": 28.9
+              "ile": "125 g",
+              "g": 125,
+              "kcal": 180,
+              "bialko": 0.6,
+              "tluszcz": 0.6,
+              "wegle": 42.5
             },
             {
               "nazwa": "Banan",
@@ -8551,12 +8581,12 @@
           "kroki": [
             "📦 To zrobiłeś w bloku kuchni (wczoraj o 09:30) — teraz tylko wyjmij pojemnik z lodówki. Przepis niżej, gdybyś robił na świeżo.",
             "Marchew (40 g) obierz i zetrzyj na tarce na drobnych oczkach.",
-            "Do miski wbij jajko (1 szt., 55 g), dodaj skyr (1 kubek, 150 g), mąkę (30 g), odżywkę (18 g), proszek do pieczenia (2 g) i przyprawę (3 g). Mieszaj łyżką ok. minuty, aż nie będzie grudek.",
+            "Do miski wbij jajko (1 szt., 55 g), dodaj skyr (1 kubek, 150 g), mąkę (45 g), odżywkę (25 g), proszek do pieczenia (3 g) i przyprawę (4 g). Mieszaj łyżką ok. minuty, aż nie będzie grudek.",
             "Wmieszaj marchewkę. Ciasto ma być gęste, jak na placki.",
             "Patelnię z powłoką postaw na małym ogniu (1/3 skali) na minutę. Wylej ciasto i rozprowadź łyżką na grubość ok. 1 cm.",
             "Przykryj pokrywką i smaż 5–6 minut, aż spód będzie brązowy, a wierzch przestanie być płynny.",
             "Przewróć: zsuń omlet na talerz, przykryj go patelnią i odwróć razem z talerzem. Smaż jeszcze 3–4 minuty pod przykryciem.",
-            "Przełóż na talerz, posmaruj dżemem (85 g) i ułóż banana (1 szt., 120 g) pokrojonego w plasterki. Do popicia napój proteinowy (1 butelka, 400 ml).",
+            "Przełóż na talerz, posmaruj dżemem (125 g) i ułóż banana (1 szt., 120 g) pokrojonego w plasterki. Do popicia napój proteinowy (1 butelka, 400 ml).",
             "Do pojemnika: na zimno smakuje jak ciasto marchewkowe — dżem i banana dołóż w osobnym pudełku, napój weź w butelce.",
             "Wszystkie ilości w krokach są już przeliczone na Twoją porcję na dziś — nic nie musisz dzielić."
           ]
@@ -8838,17 +8868,17 @@
         }
       ],
       "makra": {
-        "kcal": 2585,
-        "bialko": 175,
-        "tluszcz": 97,
-        "wegle": 241
+        "kcal": 2723,
+        "bialko": 182,
+        "tluszcz": 98,
+        "wegle": 266
       },
       "dobitka": 0,
       "dodatek_w": [],
       "poza_planem": [],
       "lzejszy": false,
       "cel": {
-        "kcal": 2550,
+        "kcal": 2700,
         "bialko": 160,
         "tluszcz": 80,
         "wegle": 260
@@ -9030,9 +9060,9 @@
           "ikona": "🍳",
           "ping": true,
           "akcja": "kuchnia",
-          "opis": "Przygotujesz: garnek: Makaron z wołowiną i pieczarkami w sosie, Omlet marchewkowy z dżemem i bananem + napój proteinowy, Sałatka jajeczna z kukurydzą i majonezem. Potem do jutra tylko sięgasz do lodówki.",
+          "opis": "Przygotujesz: garnek: Makaron z wołowiną i pieczarkami w sosie, Omlet marchewkowy z dżemem i bananem + napój proteinowy, Kanapki z jajkiem na twardo i serem. Potem do jutra tylko sięgasz do lodówki.",
           "kroki": [
-            "Wyjmij wszystko na blat, zanim zaczniesz: banan 1 szt. (120 g), cebula 2 szt. (200 g), chleb pszenny 1 kromka (35 g), przyprawa do cynamonek / cynamon 4 g, czosnek 3 ząbki (15 g), dżem 100 g, jaja 3 szt. (165 g), kukurydza konserwowa 120 g, majonez sriracha 16 ml, mąka pszenna 35 g, makaron 240 g, marchew 40 g, wołowina świeżo mielona 500 g, napój proteinowy müllermilch protein 1 butelka (400 ml), odżywka białkowa wpc 80 20 g, ogórek kiszony 1 szt. (65 g), olej rzepakowy 15 ml, pieczarki 400 g, proszek do pieczenia 2 g, przyprawy 1 porcja (2 g), ser żółty starty 40 g, skyr waniliowy 1 kubek (150 g), śmietana 18% 150 ml.",
+            "Wyjmij wszystko na blat, zanim zaczniesz: banan 1 szt. (120 g), cebula 2 szt. (200 g), chleb pszenny 2 kromki (70 g), przyprawa do cynamonek / cynamon 4 g, czosnek 3 ząbki (15 g), dżem 125 g, jaja 3 szt. (165 g), mąka pszenna 45 g, makaron 240 g, marchew 40 g, wołowina świeżo mielona 500 g, musztarda 1 łyżka (15 g), napój proteinowy müllermilch protein 1 butelka (400 ml), odżywka białkowa wpc 80 25 g, ogórek kiszony 1 szt. (65 g), olej rzepakowy 15 ml, pieczarki 400 g, proszek do pieczenia 3 g, przyprawy 1 porcja (2 g), ser żółty starty 40 g, ser żółty w plastrach 2 plastry (40 g), skyr waniliowy 1 kubek (150 g), śmietana 18% 150 ml.",
             "Przygotuj 1 pojemnik i opisz je karteczką: dziś 20:30 — kolacja.",
             "▸ Garnek: Makaron z wołowiną i pieczarkami w sosie — zaczynasz od niego, bo najdłużej się gotuje.",
             "Zanim zaczniesz: postaw na wadze kuchennej deskę do krojenia, na niej pusty duży garnek (ten do makaronu), i wpisz tę wagę w zakładce Gotuję → „Ile nałożyć na porcję” (pole „puste naczynie”). Na tej samej desce zważysz później naczynie z jedzeniem — deska chroni wagę przed gorącem.",
@@ -9046,22 +9076,22 @@
             "Porcjowanie: zważ garnek z gotowym jedzeniem na tej samej desce i wpisz wagę w panelu — pokaże, ile gramów nałożyć do każdego z 3 pojemników.",
             "Do każdego z 3 pojemników nałóż wyliczone gramy: postaw pusty pojemnik na wadze, wciśnij TARA (waga pokaże 0) i nakładaj, aż dojdziesz do liczby z panelu. Zostaw pojemniki otwarte na 20–30 minut, żeby wystygły, potem zamknij i wstaw do lodówki. Każdy pojemnik to dokładnie jedna porcja z Twojego planu.",
             "▸ Woda — postaw ją od razu, zanim zaczniesz resztę:",
-            "Jajka na twardo dla Sałatka jajeczna z kukurydzą i majonezem (2 szt.) — razem 2 szt.: w małym garnku zagotuj wodę, łyżką włóż jajka, gotuj 9 minut na średnim ogniu, odlej wrzątek i zalej zimną wodą. Obierzesz je przy daniach.",
+            "Jajka na twardo dla Kanapki z jajkiem na twardo i serem (2 szt.) — razem 2 szt.: w małym garnku zagotuj wodę, łyżką włóż jajka, gotuj 9 minut na średnim ogniu, odlej wrzątek i zalej zimną wodą. Obierzesz je przy daniach.",
             "▸ Kiedy garnek się gotuje, robisz resztę — od najczystszych produktów do tych, po których myjesz nóż i deskę:",
-            "▸ Sałatka jajeczna z kukurydzą i majonezem",
+            "▸ Kanapki z jajkiem na twardo i serem",
             "Weź 2 szt. ugotowanych jajek z garnka z zimną wodą.",
-            "Kukurydzę (120 g) odsącz na sitku, ogórki kiszone (1 szt., 65 g) pokrój w kostkę.",
-            "Wymieszaj z majonezem (16 ml), posól i popieprz.",
-            "Do pojemnika, chleb (1 kromka, 35 g) osobno.",
+            "Jajka pokrój w plastry.",
+            "Chleb (2 kromki, 70 g) posmaruj cienko musztardą (1 łyżka, 15 g), połóż ser (2 plastry, 40 g), na to plastry jajka. Posól i popieprz szczyptą.",
+            "Ogórka kiszonego (1 szt., 65 g) pokrój w plasterki i ułóż na wierzchu. Do boxa zawiń każdą kanapkę w folię.",
             "Przełóż do pojemnika „dziś 20:30 — kolacja”.",
             "▸ Omlet marchewkowy z dżemem i bananem + napój proteinowy",
             "Marchew (40 g) obierz i zetrzyj na tarce na drobnych oczkach.",
-            "Do miski wbij jajko (1 szt., 55 g), dodaj skyr (1 kubek, 150 g), mąkę (35 g), odżywkę (20 g), proszek do pieczenia (2 g) i przyprawę (4 g). Mieszaj łyżką ok. minuty, aż nie będzie grudek.",
+            "Do miski wbij jajko (1 szt., 55 g), dodaj skyr (1 kubek, 150 g), mąkę (45 g), odżywkę (25 g), proszek do pieczenia (3 g) i przyprawę (4 g). Mieszaj łyżką ok. minuty, aż nie będzie grudek.",
             "Wmieszaj marchewkę. Ciasto ma być gęste, jak na placki.",
             "Patelnię z powłoką postaw na małym ogniu (1/3 skali) na minutę. Wylej ciasto i rozprowadź łyżką na grubość ok. 1 cm.",
             "Przykryj pokrywką i smaż 5–6 minut, aż spód będzie brązowy, a wierzch przestanie być płynny.",
             "Przewróć: zsuń omlet na talerz, przykryj go patelnią i odwróć razem z talerzem. Smaż jeszcze 3–4 minuty pod przykryciem.",
-            "Przełóż na talerz, posmaruj dżemem (100 g — pół opakowania) i ułóż banana (1 szt., 120 g) pokrojonego w plasterki. Do popicia napój proteinowy (1 butelka, 400 ml).",
+            "Przełóż na talerz, posmaruj dżemem (125 g) i ułóż banana (1 szt., 120 g) pokrojonego w plasterki. Do popicia napój proteinowy (1 butelka, 400 ml).",
             "Do pojemnika: na zimno smakuje jak ciasto marchewkowe — dżem i banana dołóż w osobnym pudełku, napój weź w butelce.",
             "To zjadasz od razu, na koniec bloku.",
             "▸ Wróć do garnka: Makaron z wołowiną i pieczarkami w sosie",
@@ -9079,12 +9109,12 @@
           "opis": "Pierwszy porządny posiłek dnia — robisz go na końcu bloku kuchni i jesz od razu.",
           "posilek": "Omlet marchewkowy z dżemem i bananem + napój proteinowy",
           "posilek_id": "q_omlet_marchewkowy",
-          "porcja": 0.7,
+          "porcja": 0.9,
           "makra": {
-            "kcal": 927,
-            "bialko": 70,
+            "kcal": 1016,
+            "bialko": 75,
             "tluszcz": 14,
-            "wegle": 127
+            "wegle": 143
           },
           "skladniki": [
             {
@@ -9107,21 +9137,21 @@
             },
             {
               "nazwa": "Mąka pszenna",
-              "ile": "35 g",
-              "g": 35,
-              "kcal": 120,
-              "bialko": 3.5,
-              "tluszcz": 0.4,
-              "wegle": 24.8
+              "ile": "45 g",
+              "g": 45,
+              "kcal": 154,
+              "bialko": 4.5,
+              "tluszcz": 0.5,
+              "wegle": 31.9
             },
             {
               "nazwa": "Odżywka białkowa WPC 80 (czekoladowa) — zapas, kupujesz osobno",
-              "ile": "20 g",
-              "g": 20,
-              "kcal": 75,
-              "bialko": 16.4,
-              "tluszcz": 0.9,
-              "wegle": 0.3
+              "ile": "25 g",
+              "g": 25,
+              "kcal": 93,
+              "bialko": 20.5,
+              "tluszcz": 1.2,
+              "wegle": 0.4
             },
             {
               "nazwa": "Marchew",
@@ -9134,12 +9164,12 @@
             },
             {
               "nazwa": "Proszek do pieczenia",
-              "ile": "2 g",
-              "g": 2,
-              "kcal": 1,
+              "ile": "3 g",
+              "g": 3,
+              "kcal": 2,
               "bialko": 0.1,
               "tluszcz": 0.0,
-              "wegle": 0.3
+              "wegle": 0.4
             },
             {
               "nazwa": "Przyprawa do cynamonek / cynamon",
@@ -9152,12 +9182,12 @@
             },
             {
               "nazwa": "Dżem (np. malinowy, słoik 200 g)",
-              "ile": "100 g",
-              "g": 100,
-              "kcal": 144,
-              "bialko": 0.5,
-              "tluszcz": 0.5,
-              "wegle": 34.0
+              "ile": "125 g",
+              "g": 125,
+              "kcal": 180,
+              "bialko": 0.6,
+              "tluszcz": 0.6,
+              "wegle": 42.5
             },
             {
               "nazwa": "Banan",
@@ -9182,12 +9212,12 @@
           "czas_min": 15,
           "kroki": [
             "Marchew (40 g) obierz i zetrzyj na tarce na drobnych oczkach.",
-            "Do miski wbij jajko (1 szt., 55 g), dodaj skyr (1 kubek, 150 g), mąkę (35 g), odżywkę (20 g), proszek do pieczenia (2 g) i przyprawę (4 g). Mieszaj łyżką ok. minuty, aż nie będzie grudek.",
+            "Do miski wbij jajko (1 szt., 55 g), dodaj skyr (1 kubek, 150 g), mąkę (45 g), odżywkę (25 g), proszek do pieczenia (3 g) i przyprawę (4 g). Mieszaj łyżką ok. minuty, aż nie będzie grudek.",
             "Wmieszaj marchewkę. Ciasto ma być gęste, jak na placki.",
             "Patelnię z powłoką postaw na małym ogniu (1/3 skali) na minutę. Wylej ciasto i rozprowadź łyżką na grubość ok. 1 cm.",
             "Przykryj pokrywką i smaż 5–6 minut, aż spód będzie brązowy, a wierzch przestanie być płynny.",
             "Przewróć: zsuń omlet na talerz, przykryj go patelnią i odwróć razem z talerzem. Smaż jeszcze 3–4 minuty pod przykryciem.",
-            "Przełóż na talerz, posmaruj dżemem (100 g — pół opakowania) i ułóż banana (1 szt., 120 g) pokrojonego w plasterki. Do popicia napój proteinowy (1 butelka, 400 ml).",
+            "Przełóż na talerz, posmaruj dżemem (125 g) i ułóż banana (1 szt., 120 g) pokrojonego w plasterki. Do popicia napój proteinowy (1 butelka, 400 ml).",
             "Do pojemnika: na zimno smakuje jak ciasto marchewkowe — dżem i banana dołóż w osobnym pudełku, napój weź w butelce.",
             "Wszystkie ilości w krokach są już przeliczone na Twoją porcję na dziś — nic nie musisz dzielić."
           ]
@@ -9313,13 +9343,13 @@
           "ping": true,
           "slot": "kolacja",
           "opis": "",
-          "posilek": "Sałatka jajeczna z kukurydzą i majonezem",
-          "posilek_id": "q_jajka_majonez",
-          "porcja": 0.8,
+          "posilek": "Kanapki z jajkiem na twardo i serem",
+          "posilek_id": "q_kanapki_jajko",
+          "porcja": 1.0,
           "makra": {
-            "kcal": 434,
-            "bialko": 20,
-            "tluszcz": 22,
+            "kcal": 497,
+            "bialko": 31,
+            "tluszcz": 24,
             "wegle": 36
           },
           "skladniki": [
@@ -9333,22 +9363,31 @@
               "wegle": 0.8
             },
             {
-              "nazwa": "Kukurydza konserwowa",
-              "ile": "120 g",
-              "g": 120,
-              "kcal": 98,
-              "bialko": 3.2,
-              "tluszcz": 1.6,
-              "wegle": 15.6
+              "nazwa": "Chleb pszenny (zwykły biały)",
+              "ile": "2 kromki (70 g)",
+              "g": 70,
+              "kcal": 175,
+              "bialko": 5.6,
+              "tluszcz": 2.1,
+              "wegle": 32.9
             },
             {
-              "nazwa": "Majonez sriracha",
-              "ile": "16 ml",
-              "g": 16,
-              "kcal": 83,
-              "bialko": 0.2,
-              "tluszcz": 8.5,
-              "wegle": 1.5
+              "nazwa": "Ser żółty w plastrach",
+              "ile": "2 plastry (40 g)",
+              "g": 40,
+              "kcal": 140,
+              "bialko": 10.2,
+              "tluszcz": 10.8,
+              "wegle": 0.2
+            },
+            {
+              "nazwa": "Musztarda",
+              "ile": "1 łyżka (15 g)",
+              "g": 15,
+              "kcal": 16,
+              "bialko": 0.8,
+              "tluszcz": 0.9,
+              "wegle": 1.2
             },
             {
               "nazwa": "Ogórek kiszony",
@@ -9358,25 +9397,16 @@
               "bialko": 0.3,
               "tluszcz": 0.1,
               "wegle": 1.3
-            },
-            {
-              "nazwa": "Chleb pszenny (zwykły biały)",
-              "ile": "1 kromka (35 g)",
-              "g": 35,
-              "kcal": 88,
-              "bialko": 2.8,
-              "tluszcz": 1.0,
-              "wegle": 16.4
             }
           ],
           "jak": "przepis",
           "czas_min": 12,
           "kroki": [
             "📦 To zrobiłeś w bloku kuchni (dziś o 14:15) — teraz tylko wyjmij pojemnik z lodówki. Przepis niżej, gdybyś robił na świeżo.",
-            "Jajka na twardo: 9 minut od wrzenia, potem zimna woda i obierz. Pokrój w kostkę.",
-            "Kukurydzę (120 g) odsącz na sitku, ogórki kiszone (1 szt., 65 g) pokrój w kostkę.",
-            "Wymieszaj z majonezem (16 ml), posól i popieprz.",
-            "Do pojemnika, chleb (1 kromka, 35 g) osobno.",
+            "Jajka na twardo: w małym garnku zagotuj tyle wody, żeby przykryła jajka (2 szt., 110 g). Łyżką ostrożnie włóż jajka do wrzątku i gotuj 9 minut na średnim ogniu. Odlej wrzątek, zalej zimną wodą na 3 minuty i obierz ze skorupki.",
+            "Jajka pokrój w plastry.",
+            "Chleb (2 kromki, 70 g) posmaruj cienko musztardą (1 łyżka, 15 g), połóż ser (2 plastry, 40 g), na to plastry jajka. Posól i popieprz szczyptą.",
+            "Ogórka kiszonego (1 szt., 65 g) pokrój w plasterki i ułóż na wierzchu. Do boxa zawiń każdą kanapkę w folię.",
             "Wszystkie ilości w krokach są już przeliczone na Twoją porcję na dziś — nic nie musisz dzielić."
           ]
         },
@@ -9404,17 +9434,17 @@
         }
       ],
       "makra": {
-        "kcal": 2567,
-        "bialko": 169,
-        "tluszcz": 91,
-        "wegle": 258
+        "kcal": 2719,
+        "bialko": 185,
+        "tluszcz": 93,
+        "wegle": 274
       },
       "dobitka": 0,
       "dodatek_w": [],
       "poza_planem": [],
       "lzejszy": false,
       "cel": {
-        "kcal": 2550,
+        "kcal": 2700,
         "bialko": 160,
         "tluszcz": 80,
         "wegle": 260
@@ -9554,34 +9584,33 @@
           "ikona": "🍳",
           "ping": true,
           "akcja": "kuchnia",
-          "opis": "Przygotujesz: Twarożek na słodko z dżemem + pieczywo, Deser: twarożek kakaowy z masłem orzechowym, Tortilla z jajkiem na twardo, polędwicą i serem. Potem do jutra tylko sięgasz do lodówki.",
+          "opis": "Przygotujesz: Grzanki z serem, jajkiem i pomidorem, Jogurt grecki z orzechami i miodem, Deser: twarożek kakaowy z masłem orzechowym. Potem do jutra tylko sięgasz do lodówki.",
           "kroki": [
-            "Wyjmij wszystko na blat, zanim zaczniesz: chleb pszenny 2 kromki (70 g), dżem 30 g, jaja 2 szt. (110 g), kakao naturalne 1 łyżka (8 g), majonez sriracha 16 ml, masło orzechowe 100% 1 łyżka (16 g), miód 1 łyżka (20 g), mleko 2% 46 ml, ogórek kiszony 1 szt. (65 g), polędwica sopocka 30 g, ser żółty w plastrach 2 plastry (40 g), tortilla pszenna 2 szt. (125 g), twaróg półtłusty 320 g.",
+            "Wyjmij wszystko na blat, zanim zaczniesz: chleb pszenny 6 kromek (210 g), jabłko 1 szt. (170 g), jaja 2 szt. (110 g), jogurt grecki 2% 240 g, kakao naturalne 1 łyżka (8 g), ketchup 1 łyżka (17 g), masło orzechowe 100% 1 łyżka (16 g), miód 4 łyżki (80 g), mleko 2% 35 ml, orzechy / migdały 12 g, pomidor 1 szt. (120 g), przyprawy 1 porcja (2 g), ser żółty w plastrach 2 plastry (40 g), twaróg półtłusty 180 g.",
             "Przygotuj 2 pojemniki i opisz je karteczką: dziś 13:30 — drugi posiłek; dziś 19:30 — kolacja.",
-            "▸ Woda — postaw ją od razu, zanim zaczniesz resztę:",
-            "Jajka na twardo dla Tortilla z jajkiem na twardo, polędwicą i serem (2 szt.) — razem 2 szt.: w małym garnku zagotuj wodę, łyżką włóż jajka, gotuj 9 minut na średnim ogniu, odlej wrzątek i zalej zimną wodą. Obierzesz je przy daniach.",
+            "Włącz piekarnik na 200°C, grzanie góra-dół — nagrzewa się ok. 10 minut, w tym czasie robisz resztę.",
+            "▸ Jogurt grecki z orzechami i miodem",
+            "Jogurt (240 g) przełóż do miski lub pojemnika.",
+            "Jabłko (1 szt., 170 g) umyj, wytnij gniazdo z pestkami i pokrój w kostkę na wierzch.",
+            "Posyp orzechami (12 g) i polej miodem (1 łyżka, 20 g).",
+            "Przełóż do pojemnika „dziś 13:30 — drugi posiłek”.",
             "▸ Deser: twarożek kakaowy z masłem orzechowym",
-            "Twaróg (160 g) włóż do miski, dolej mleko (30 ml) i rozgniataj widelcem ok. minuty na krem.",
+            "Twaróg (180 g) włóż do miski, dolej mleko (35 ml) i rozgniataj widelcem ok. minuty na krem.",
             "Dodaj kakao (1 łyżka, 8 g) i miód (1 łyżka, 20 g) i mieszaj, aż kolor będzie jednolity.",
             "Na wierzch nałóż masło orzechowe (1 łyżka, 16 g).",
-            "Przełóż do pojemnika „dziś 13:30 — drugi posiłek”.",
-            "▸ Tortilla z jajkiem na twardo, polędwicą i serem",
-            "Weź 2 szt. ugotowanych jajek z garnka z zimną wodą.",
-            "Jajka i ogórki kiszone (1 szt., 65 g) pokrój w plastry.",
-            "Tortille (2 szt., 125 g) posmaruj majonezem (16 ml).",
-            "Wyłóż polędwicę (30 g), ser (2 plastry, 40 g), plastry jajka i ogórka.",
-            "Zwiń w rulon, przekrój na pół i zawiń w folię. Zero smażenia.",
             "Przełóż do pojemnika „dziś 19:30 — kolacja”.",
-            "▸ Twarożek na słodko z dżemem + pieczywo",
-            "Twaróg (160 g) włóż do miski i dolej mleko (16 ml).",
-            "Rozgniataj widelcem ok. minuty, aż twaróg będzie gładki i kremowy.",
-            "Dżem (30 g): połowę wmieszaj w twaróg, resztę połóż na wierzch.",
-            "Zjedz z chlebem (2 kromki, 70 g) albo posmaruj nim kromki. Do boxa: twarożek w zakręcanym pojemniku, chleb w osobnej torebce.",
+            "▸ Grzanki z serem, jajkiem i pomidorem",
+            "Blachę wyłóż papierem do pieczenia.",
+            "Na kromki chleba (2 kromki, 70 g) połóż ser (2 plastry, 40 g), na to pomidora (1 szt., 120 g) pokrojonego w plastry i posól szczyptą.",
+            "Połóż kromki na blasze i piecz 6 minut na środkowej półce, aż ser się roztopi.",
+            "W tym czasie postaw patelnię z powłoką na średnim ogniu, bez tłuszczu. Wbij jajka (2 szt., 110 g) obok siebie i smaż 3–4 minuty, aż białko będzie całe białe.",
+            "Połóż jajka na grzankach i dodaj ketchup (1 łyżka, 17 g).",
             "To zjadasz od razu, na koniec bloku.",
+            "Do „dziś 10:30 — śniadanie po treningu” dołóż: chleb pszenny 4 kromki (140 g), miód 2 łyżki (40 g).",
             "▸ Na koniec: ciepłe pojemniki wystudź 20–30 minut bez pokrywki, potem wszystkie do lodówki na jedną półkę. Naczynia do zlewu, przetrzyj blat — 5 minut teraz oszczędza 20 jutro."
           ],
           "jak": "kuchnia",
-          "czas_min": 14
+          "czas_min": 17
         },
         {
           "czas": "10:30",
@@ -9590,61 +9619,83 @@
           "ping": true,
           "slot": "sniadanie",
           "opis": "Pierwszy posiłek dnia — robisz go na końcu bloku kuchni i jesz od razu.",
-          "posilek": "Twarożek na słodko z dżemem + pieczywo",
-          "posilek_id": "q_twarog",
-          "porcja": 0.8,
+          "posilek": "Grzanki z serem, jajkiem i pomidorem",
+          "posilek_id": "q_grzanki",
+          "porcja": 1.0,
           "makra": {
-            "kcal": 439,
-            "bialko": 36,
-            "tluszcz": 10,
-            "wegle": 50
+            "kcal": 983,
+            "bialko": 42,
+            "tluszcz": 28,
+            "wegle": 140
           },
           "skladniki": [
             {
-              "nazwa": "Twaróg półtłusty",
-              "ile": "160 g",
-              "g": 160,
-              "kcal": 213,
-              "bialko": 29.9,
-              "tluszcz": 7.5,
-              "wegle": 5.9
+              "nazwa": "Chleb pszenny (zwykły biały)",
+              "ile": "6 kromek (210 g), w tym +4 kromki",
+              "g": 210,
+              "kcal": 525,
+              "bialko": 16.8,
+              "tluszcz": 6.3,
+              "wegle": 98.7,
+              "dodatek": true
             },
             {
-              "nazwa": "Mleko 2%",
-              "ile": "16 ml",
-              "g": 16,
-              "kcal": 8,
-              "bialko": 0.5,
-              "tluszcz": 0.3,
+              "nazwa": "Ser żółty w plastrach",
+              "ile": "2 plastry (40 g)",
+              "g": 40,
+              "kcal": 140,
+              "bialko": 10.2,
+              "tluszcz": 10.8,
+              "wegle": 0.2
+            },
+            {
+              "nazwa": "Jaja",
+              "ile": "2 szt. (110 g)",
+              "g": 110,
+              "kcal": 157,
+              "bialko": 13.9,
+              "tluszcz": 10.5,
               "wegle": 0.8
             },
             {
-              "nazwa": "Dżem (np. malinowy, słoik 200 g)",
-              "ile": "30 g",
-              "g": 30,
-              "kcal": 43,
-              "bialko": 0.1,
-              "tluszcz": 0.1,
-              "wegle": 10.2
+              "nazwa": "Pomidor",
+              "ile": "1 szt. (120 g)",
+              "g": 120,
+              "kcal": 22,
+              "bialko": 1.1,
+              "tluszcz": 0.2,
+              "wegle": 3.2
             },
             {
-              "nazwa": "Chleb pszenny (zwykły biały)",
-              "ile": "2 kromki (70 g)",
-              "g": 70,
-              "kcal": 175,
-              "bialko": 5.6,
-              "tluszcz": 2.1,
-              "wegle": 32.9
+              "nazwa": "Ketchup",
+              "ile": "1 łyżka (17 g)",
+              "g": 17,
+              "kcal": 17,
+              "bialko": 0.2,
+              "tluszcz": 0.0,
+              "wegle": 4.1
+            },
+            {
+              "nazwa": "Miód",
+              "ile": "+ 2 łyżki (40 g)",
+              "g": 40,
+              "kcal": 122,
+              "bialko": 0.1,
+              "tluszcz": 0.0,
+              "wegle": 32.8,
+              "dodatek": true
             }
           ],
           "jak": "przepis",
-          "czas_min": 4,
+          "czas_min": 10,
           "kroki": [
-            "Twaróg (160 g) włóż do miski i dolej mleko (16 ml).",
-            "Rozgniataj widelcem ok. minuty, aż twaróg będzie gładki i kremowy.",
-            "Dżem (30 g): połowę wmieszaj w twaróg, resztę połóż na wierzch.",
-            "Zjedz z chlebem (2 kromki, 70 g) albo posmaruj nim kromki. Do boxa: twarożek w zakręcanym pojemniku, chleb w osobnej torebce.",
-            "Wszystkie ilości w krokach są już przeliczone na Twoją porcję na dziś — nic nie musisz dzielić."
+            "Włącz piekarnik na 220°C z opcją grill (albo nagrzej opiekacz). Blachę wyłóż papierem do pieczenia.",
+            "Na kromki chleba (2 kromki, 70 g) połóż ser (2 plastry, 40 g), na to pomidora (1 szt., 120 g) pokrojonego w plastry i posól szczyptą.",
+            "Połóż kromki na blasze i piecz 6 minut na środkowej półce, aż ser się roztopi.",
+            "W tym czasie postaw patelnię z powłoką na średnim ogniu, bez tłuszczu. Wbij jajka (2 szt., 110 g) obok siebie i smaż 3–4 minuty, aż białko będzie całe białe.",
+            "Połóż jajka na grzankach i dodaj ketchup (1 łyżka, 17 g).",
+            "Wszystkie ilości w krokach są już przeliczone na Twoją porcję na dziś — nic nie musisz dzielić.",
+            "Do tego dodatek węglowy: chleb pszenny 4 kromki, miód 2 łyżki. Zjedz obok — to paliwo na trening i regenerację, bez niego dzień nie dobija węglowodanów."
           ]
         },
         {
@@ -9654,33 +9705,33 @@
           "ping": true,
           "slot": "drugi",
           "opis": "",
-          "posilek": "Deser: twarożek kakaowy z masłem orzechowym",
-          "posilek_id": "d_twarog_kakao",
+          "posilek": "Jogurt grecki z orzechami i miodem",
+          "posilek_id": "q_jogurt_orzechy",
           "porcja": 0.8,
           "makra": {
-            "kcal": 418,
-            "bialko": 37,
-            "tluszcz": 18,
-            "wegle": 27
+            "kcal": 398,
+            "bialko": 27,
+            "tluszcz": 12,
+            "wegle": 44
           },
           "skladniki": [
             {
-              "nazwa": "Twaróg półtłusty",
-              "ile": "160 g",
-              "g": 160,
-              "kcal": 213,
-              "bialko": 29.9,
-              "tluszcz": 7.5,
-              "wegle": 5.9
+              "nazwa": "Jogurt grecki 2%",
+              "ile": "240 g",
+              "g": 240,
+              "kcal": 175,
+              "bialko": 23.8,
+              "tluszcz": 4.8,
+              "wegle": 7.4
             },
             {
-              "nazwa": "Kakao naturalne (bez cukru)",
-              "ile": "1 łyżka (8 g)",
-              "g": 8,
-              "kcal": 30,
-              "bialko": 1.8,
-              "tluszcz": 1.6,
-              "wegle": 1.0
+              "nazwa": "Orzechy / migdały",
+              "ile": "12 g",
+              "g": 12,
+              "kcal": 77,
+              "bialko": 2.3,
+              "tluszcz": 6.8,
+              "wegle": 1.2
             },
             {
               "nazwa": "Miód",
@@ -9692,31 +9743,22 @@
               "wegle": 16.4
             },
             {
-              "nazwa": "Masło orzechowe 100%",
-              "ile": "1 łyżka (16 g)",
-              "g": 16,
-              "kcal": 99,
-              "bialko": 4.2,
-              "tluszcz": 8.2,
-              "wegle": 1.8
-            },
-            {
-              "nazwa": "Mleko 2%",
-              "ile": "30 ml",
-              "g": 30,
-              "kcal": 15,
-              "bialko": 1.0,
-              "tluszcz": 0.6,
-              "wegle": 1.4
+              "nazwa": "Jabłko",
+              "ile": "1 szt. (170 g)",
+              "g": 170,
+              "kcal": 85,
+              "bialko": 0.5,
+              "tluszcz": 0.3,
+              "wegle": 19.4
             }
           ],
           "jak": "przepis",
-          "czas_min": 4,
+          "czas_min": 3,
           "kroki": [
             "📦 To zrobiłeś w bloku kuchni (dziś o 09:30) — teraz tylko wyjmij pojemnik z lodówki. Przepis niżej, gdybyś robił na świeżo.",
-            "Twaróg (160 g) włóż do miski, dolej mleko (30 ml) i rozgniataj widelcem ok. minuty na krem.",
-            "Dodaj kakao (1 łyżka, 8 g) i miód (1 łyżka, 20 g) i mieszaj, aż kolor będzie jednolity.",
-            "Na wierzch nałóż masło orzechowe (1 łyżka, 16 g).",
+            "Jogurt (240 g) przełóż do miski lub pojemnika.",
+            "Jabłko (1 szt., 170 g) umyj, wytnij gniazdo z pestkami i pokrój w kostkę na wierzch.",
+            "Posyp orzechami (12 g) i polej miodem (1 łyżka, 20 g).",
             "Wszystkie ilości w krokach są już przeliczone na Twoją porcję na dziś — nic nie musisz dzielić."
           ]
         },
@@ -9832,80 +9874,69 @@
           "ping": true,
           "slot": "kolacja",
           "opis": "",
-          "posilek": "Tortilla z jajkiem na twardo, polędwicą i serem",
-          "posilek_id": "q_tortilla_poledwica",
-          "porcja": 0.8,
+          "posilek": "Deser: twarożek kakaowy z masłem orzechowym",
+          "posilek_id": "d_twarog_kakao",
+          "porcja": 0.9,
           "makra": {
-            "kcal": 795,
-            "bialko": 40,
-            "tluszcz": 39,
-            "wegle": 68
+            "kcal": 447,
+            "bialko": 41,
+            "tluszcz": 19,
+            "wegle": 28
           },
           "skladniki": [
             {
-              "nazwa": "Tortilla pszenna",
-              "ile": "2 szt. (125 g)",
-              "g": 124,
-              "kcal": 378,
-              "bialko": 10.4,
-              "tluszcz": 9.1,
-              "wegle": 63.2
-            },
-            {
-              "nazwa": "Jaja",
-              "ile": "2 szt. (110 g)",
-              "g": 110,
-              "kcal": 157,
-              "bialko": 13.9,
-              "tluszcz": 10.5,
-              "wegle": 0.8
-            },
-            {
-              "nazwa": "Polędwica sopocka (wędlina)",
-              "ile": "30 g",
-              "g": 30,
-              "kcal": 29,
-              "bialko": 5.4,
-              "tluszcz": 0.5,
-              "wegle": 0.7
-            },
-            {
-              "nazwa": "Ser żółty w plastrach",
-              "ile": "2 plastry (40 g)",
-              "g": 40,
-              "kcal": 140,
-              "bialko": 10.2,
-              "tluszcz": 10.8,
-              "wegle": 0.2
-            },
-            {
-              "nazwa": "Majonez sriracha",
-              "ile": "16 ml",
-              "g": 16,
-              "kcal": 83,
-              "bialko": 0.2,
+              "nazwa": "Twaróg półtłusty",
+              "ile": "180 g",
+              "g": 180,
+              "kcal": 239,
+              "bialko": 33.7,
               "tluszcz": 8.5,
-              "wegle": 1.5
+              "wegle": 6.7
             },
             {
-              "nazwa": "Ogórek kiszony",
-              "ile": "1 szt. (65 g)",
-              "g": 65,
-              "kcal": 8,
-              "bialko": 0.3,
-              "tluszcz": 0.1,
-              "wegle": 1.3
+              "nazwa": "Kakao naturalne (bez cukru)",
+              "ile": "1 łyżka (8 g)",
+              "g": 8,
+              "kcal": 30,
+              "bialko": 1.8,
+              "tluszcz": 1.6,
+              "wegle": 1.0
+            },
+            {
+              "nazwa": "Miód",
+              "ile": "1 łyżka (20 g)",
+              "g": 20,
+              "kcal": 61,
+              "bialko": 0.1,
+              "tluszcz": 0.0,
+              "wegle": 16.4
+            },
+            {
+              "nazwa": "Masło orzechowe 100%",
+              "ile": "1 łyżka (16 g)",
+              "g": 16,
+              "kcal": 99,
+              "bialko": 4.2,
+              "tluszcz": 8.2,
+              "wegle": 1.8
+            },
+            {
+              "nazwa": "Mleko 2%",
+              "ile": "35 ml",
+              "g": 35,
+              "kcal": 18,
+              "bialko": 1.2,
+              "tluszcz": 0.7,
+              "wegle": 1.7
             }
           ],
           "jak": "przepis",
-          "czas_min": 6,
+          "czas_min": 4,
           "kroki": [
             "📦 To zrobiłeś w bloku kuchni (dziś o 09:30) — teraz tylko wyjmij pojemnik z lodówki. Przepis niżej, gdybyś robił na świeżo.",
-            "Jajka na twardo: zagotuj wodę, łyżką włóż jajka (2 szt., 110 g), gotuj 9 minut, potem zimna woda i obierz.",
-            "Jajka i ogórki kiszone (1 szt., 65 g) pokrój w plastry.",
-            "Tortille (2 szt., 125 g) posmaruj majonezem (16 ml).",
-            "Wyłóż polędwicę (30 g), ser (2 plastry, 40 g), plastry jajka i ogórka.",
-            "Zwiń w rulon, przekrój na pół i zawiń w folię. Zero smażenia.",
+            "Twaróg (180 g) włóż do miski, dolej mleko (35 ml) i rozgniataj widelcem ok. minuty na krem.",
+            "Dodaj kakao (1 łyżka, 8 g) i miód (1 łyżka, 20 g) i mieszaj, aż kolor będzie jednolity.",
+            "Na wierzch nałóż masło orzechowe (1 łyżka, 16 g).",
             "Wszystkie ilości w krokach są już przeliczone na Twoją porcję na dziś — nic nie musisz dzielić."
           ]
         },
@@ -9941,17 +9972,26 @@
         }
       ],
       "makra": {
-        "kcal": 2538,
-        "bialko": 163,
-        "tluszcz": 111,
-        "wegle": 214
+        "kcal": 2714,
+        "bialko": 160,
+        "tluszcz": 103,
+        "wegle": 281
       },
       "dobitka": 0,
-      "dodatek_w": [],
+      "dodatek_w": [
+        [
+          "chleb",
+          4
+        ],
+        [
+          "miod",
+          2
+        ]
+      ],
       "poza_planem": [],
       "lzejszy": false,
       "cel": {
-        "kcal": 2550,
+        "kcal": 2700,
         "bialko": 160,
         "tluszcz": 80,
         "wegle": 260
@@ -10084,9 +10124,9 @@
           "ikona": "🍳",
           "ping": true,
           "akcja": "kuchnia",
-          "opis": "Przygotujesz: Omlet marchewkowy z dżemem i bananem + napój proteinowy, Sałatka z fetą, jajkiem i pomidorem + pieczywo, Kanapki z serem, musztardą i kiszonym ogórkiem. Potem do jutra tylko sięgasz do lodówki.",
+          "opis": "Przygotujesz: Omlet marchewkowy z dżemem i bananem + napój proteinowy, Kanapki z serem, musztardą i kiszonym ogórkiem, Sałatka z fetą, jajkiem i pomidorem + pieczywo. Potem do jutra tylko sięgasz do lodówki.",
           "kroki": [
-            "Wyjmij wszystko na blat, zanim zaczniesz: banan 1 szt. (120 g), chleb pszenny 3 kromki (105 g), przyprawa do cynamonek / cynamon 2 g, dżem 70 g, ser feta 55 g, jaja 3 szt. (165 g), mąka pszenna 25 g, marchew 40 g, masło 5 g, musztarda 1 łyżka (15 g), napój proteinowy müllermilch protein 1 butelka (400 ml), odżywka białkowa wpc 80 15 g, ogórek długi 150 g, ogórek kiszony 100 g, oliwa z oliwek 6 ml, pomidor 300 g, proszek do pieczenia 2 g, przyprawy 1 porcja (2 g), sałata / mix sałat 50 g, ser żółty w plastrach 2 plastry (40 g), skyr waniliowy 1 kubek (150 g).",
+            "Wyjmij wszystko na blat, zanim zaczniesz: banan 1 szt. (120 g), chleb pszenny 3 kromki (105 g), przyprawa do cynamonek / cynamon 4 g, dżem 100 g, ser feta 55 g, jaja 3 szt. (165 g), mąka pszenna 35 g, marchew 40 g, masło 5 g, musztarda 1 łyżka (15 g), napój proteinowy müllermilch protein 1 butelka (400 ml), odżywka białkowa wpc 80 20 g, ogórek długi 150 g, ogórek kiszony 100 g, oliwa z oliwek 6 ml, pomidor 300 g, proszek do pieczenia 2 g, przyprawy 1 porcja (2 g), sałata / mix sałat 50 g, ser żółty w plastrach 2 plastry (40 g), skyr waniliowy 1 kubek (150 g).",
             "Przygotuj 3 pojemniki i opisz je karteczką: dziś 07:30 — śniadanie w pracy; dziś 10:30 — drugi posiłek; dziś 20:30 — kolacja.",
             "▸ Woda — postaw ją od razu, zanim zaczniesz resztę:",
             "Jajka na twardo dla Sałatka z fetą, jajkiem i pomidorem + pieczywo (2 szt.) — razem 2 szt.: w małym garnku zagotuj wodę, łyżką włóż jajka, gotuj 9 minut na średnim ogniu, odlej wrzątek i zalej zimną wodą. Obierzesz je przy daniach.",
@@ -10095,7 +10135,7 @@
             "Ser (2 plastry, 40 g) rozłóż po równo na kromkach.",
             "Ogórki kiszone (100 g) i pomidora (1 szt., 120 g) pokrój w plasterki i ułóż na serze.",
             "Do boxa zawiń kanapki w folię.",
-            "Przełóż do pojemnika „dziś 20:30 — kolacja”.",
+            "Przełóż do pojemnika „dziś 10:30 — drugi posiłek”.",
             "▸ Sałatka z fetą, jajkiem i pomidorem + pieczywo",
             "Weź 2 szt. ugotowanych jajek z garnka z zimną wodą.",
             "Jajka pokrój na ćwiartki. Pomidory (180 g) i ogórka (150 g) umyj i pokrój w kostkę ok. 2 cm.",
@@ -10103,15 +10143,15 @@
             "Fetę (55 g) pokrusz palcami na wierzch.",
             "Polej oliwą (6 ml, ok. 1 łyżeczka), posyp szczyptą soli, pieprzu i oregano i wymieszaj delikatnie.",
             "Do boxa: oliwę weź w małym słoiczku i polej dopiero przed jedzeniem. Chleb (1 kromka, 35 g) zapakuj osobno.",
-            "Przełóż do pojemnika „dziś 10:30 — drugi posiłek”.",
+            "Przełóż do pojemnika „dziś 20:30 — kolacja”.",
             "▸ Omlet marchewkowy z dżemem i bananem + napój proteinowy",
             "Marchew (40 g) obierz i zetrzyj na tarce na drobnych oczkach.",
-            "Do miski wbij jajko (1 szt., 55 g), dodaj skyr (1 kubek, 150 g), mąkę (25 g), odżywkę (15 g), proszek do pieczenia (2 g) i przyprawę (2 g). Mieszaj łyżką ok. minuty, aż nie będzie grudek.",
+            "Do miski wbij jajko (1 szt., 55 g), dodaj skyr (1 kubek, 150 g), mąkę (35 g), odżywkę (20 g), proszek do pieczenia (2 g) i przyprawę (4 g). Mieszaj łyżką ok. minuty, aż nie będzie grudek.",
             "Wmieszaj marchewkę. Ciasto ma być gęste, jak na placki.",
             "Patelnię z powłoką postaw na małym ogniu (1/3 skali) na minutę. Wylej ciasto i rozprowadź łyżką na grubość ok. 1 cm.",
             "Przykryj pokrywką i smaż 5–6 minut, aż spód będzie brązowy, a wierzch przestanie być płynny.",
             "Przewróć: zsuń omlet na talerz, przykryj go patelnią i odwróć razem z talerzem. Smaż jeszcze 3–4 minuty pod przykryciem.",
-            "Przełóż na talerz, posmaruj dżemem (70 g) i ułóż banana (1 szt., 120 g) pokrojonego w plasterki. Do popicia napój proteinowy (1 butelka, 400 ml).",
+            "Przełóż na talerz, posmaruj dżemem (100 g — pół opakowania) i ułóż banana (1 szt., 120 g) pokrojonego w plasterki. Do popicia napój proteinowy (1 butelka, 400 ml).",
             "Do pojemnika: na zimno smakuje jak ciasto marchewkowe — dżem i banana dołóż w osobnym pudełku, napój weź w butelce.",
             "Przełóż do pojemnika „dziś 07:30 — śniadanie w pracy”.",
             "▸ Na koniec: ciepłe pojemniki wystudź 20–30 minut bez pokrywki, potem wszystkie do lodówki na jedną półkę. Naczynia do zlewu, przetrzyj blat — 5 minut teraz oszczędza 20 jutro."
@@ -10142,12 +10182,12 @@
           "opis": "Z pojemnika zrobionego wczoraj w bloku kuchni.",
           "posilek": "Omlet marchewkowy z dżemem i bananem + napój proteinowy",
           "posilek_id": "q_omlet_marchewkowy",
-          "porcja": 0.5,
+          "porcja": 0.7,
           "makra": {
-            "kcal": 825,
-            "bialko": 65,
-            "tluszcz": 13,
-            "wegle": 109
+            "kcal": 927,
+            "bialko": 70,
+            "tluszcz": 14,
+            "wegle": 127
           },
           "skladniki": [
             {
@@ -10170,20 +10210,20 @@
             },
             {
               "nazwa": "Mąka pszenna",
-              "ile": "25 g",
-              "g": 25,
-              "kcal": 86,
-              "bialko": 2.5,
-              "tluszcz": 0.3,
-              "wegle": 17.8
+              "ile": "35 g",
+              "g": 35,
+              "kcal": 120,
+              "bialko": 3.5,
+              "tluszcz": 0.4,
+              "wegle": 24.8
             },
             {
               "nazwa": "Odżywka białkowa WPC 80 (czekoladowa) — zapas, kupujesz osobno",
-              "ile": "15 g",
-              "g": 15,
-              "kcal": 56,
-              "bialko": 12.3,
-              "tluszcz": 0.7,
+              "ile": "20 g",
+              "g": 20,
+              "kcal": 75,
+              "bialko": 16.4,
+              "tluszcz": 0.9,
               "wegle": 0.3
             },
             {
@@ -10206,21 +10246,21 @@
             },
             {
               "nazwa": "Przyprawa do cynamonek / cynamon",
-              "ile": "2 g",
-              "g": 2,
-              "kcal": 6,
-              "bialko": 0.0,
-              "tluszcz": 0.0,
-              "wegle": 0.9
+              "ile": "4 g",
+              "g": 4,
+              "kcal": 11,
+              "bialko": 0.1,
+              "tluszcz": 0.1,
+              "wegle": 1.8
             },
             {
               "nazwa": "Dżem (np. malinowy, słoik 200 g)",
-              "ile": "70 g",
-              "g": 70,
-              "kcal": 101,
-              "bialko": 0.3,
-              "tluszcz": 0.3,
-              "wegle": 23.8
+              "ile": "100 g",
+              "g": 100,
+              "kcal": 144,
+              "bialko": 0.5,
+              "tluszcz": 0.5,
+              "wegle": 34.0
             },
             {
               "nazwa": "Banan",
@@ -10246,12 +10286,12 @@
           "kroki": [
             "📦 To zrobiłeś w bloku kuchni (wczoraj o 09:30) — teraz tylko wyjmij pojemnik z lodówki. Przepis niżej, gdybyś robił na świeżo.",
             "Marchew (40 g) obierz i zetrzyj na tarce na drobnych oczkach.",
-            "Do miski wbij jajko (1 szt., 55 g), dodaj skyr (1 kubek, 150 g), mąkę (25 g), odżywkę (15 g), proszek do pieczenia (2 g) i przyprawę (2 g). Mieszaj łyżką ok. minuty, aż nie będzie grudek.",
+            "Do miski wbij jajko (1 szt., 55 g), dodaj skyr (1 kubek, 150 g), mąkę (35 g), odżywkę (20 g), proszek do pieczenia (2 g) i przyprawę (4 g). Mieszaj łyżką ok. minuty, aż nie będzie grudek.",
             "Wmieszaj marchewkę. Ciasto ma być gęste, jak na placki.",
             "Patelnię z powłoką postaw na małym ogniu (1/3 skali) na minutę. Wylej ciasto i rozprowadź łyżką na grubość ok. 1 cm.",
             "Przykryj pokrywką i smaż 5–6 minut, aż spód będzie brązowy, a wierzch przestanie być płynny.",
             "Przewróć: zsuń omlet na talerz, przykryj go patelnią i odwróć razem z talerzem. Smaż jeszcze 3–4 minuty pod przykryciem.",
-            "Przełóż na talerz, posmaruj dżemem (70 g) i ułóż banana (1 szt., 120 g) pokrojonego w plasterki. Do popicia napój proteinowy (1 butelka, 400 ml).",
+            "Przełóż na talerz, posmaruj dżemem (100 g — pół opakowania) i ułóż banana (1 szt., 120 g) pokrojonego w plasterki. Do popicia napój proteinowy (1 butelka, 400 ml).",
             "Do pojemnika: na zimno smakuje jak ciasto marchewkowe — dżem i banana dołóż w osobnym pudełku, napój weź w butelce.",
             "Wszystkie ilości w krokach są już przeliczone na Twoją porcję na dziś — nic nie musisz dzielić."
           ]
@@ -10263,90 +10303,79 @@
           "ping": true,
           "slot": "drugi",
           "opis": "Z boxa. Nie odkładaj — po czterech godzinach głodu zawsze dojadasz byle czym z automatu.",
-          "posilek": "Sałatka z fetą, jajkiem i pomidorem + pieczywo",
-          "posilek_id": "q_salatka_feta",
+          "posilek": "Kanapki z serem, musztardą i kiszonym ogórkiem",
+          "posilek_id": "q_kanapki_ser",
           "porcja": 0.8,
           "makra": {
-            "kcal": 501,
-            "bialko": 28,
-            "tluszcz": 29,
-            "wegle": 28
+            "kcal": 402,
+            "bialko": 18,
+            "tluszcz": 18,
+            "wegle": 40
           },
           "skladniki": [
             {
-              "nazwa": "Ser feta",
-              "ile": "55 g",
-              "g": 55,
-              "kcal": 145,
-              "bialko": 7.8,
-              "tluszcz": 11.7,
-              "wegle": 0.6
+              "nazwa": "Chleb pszenny (zwykły biały)",
+              "ile": "2 kromki (70 g)",
+              "g": 70,
+              "kcal": 175,
+              "bialko": 5.6,
+              "tluszcz": 2.1,
+              "wegle": 32.9
             },
             {
-              "nazwa": "Jaja",
-              "ile": "2 szt. (110 g)",
-              "g": 110,
-              "kcal": 157,
-              "bialko": 13.9,
-              "tluszcz": 10.5,
-              "wegle": 0.8
+              "nazwa": "Ser żółty w plastrach",
+              "ile": "2 plastry (40 g)",
+              "g": 40,
+              "kcal": 140,
+              "bialko": 10.2,
+              "tluszcz": 10.8,
+              "wegle": 0.2
             },
             {
-              "nazwa": "Pomidor",
-              "ile": "180 g",
-              "g": 180,
-              "kcal": 32,
-              "bialko": 1.6,
-              "tluszcz": 0.4,
-              "wegle": 4.9
+              "nazwa": "Musztarda",
+              "ile": "1 łyżka (15 g)",
+              "g": 15,
+              "kcal": 16,
+              "bialko": 0.8,
+              "tluszcz": 0.9,
+              "wegle": 1.2
             },
             {
-              "nazwa": "Ogórek długi",
-              "ile": "150 g",
-              "g": 150,
-              "kcal": 21,
-              "bialko": 1.0,
+              "nazwa": "Ogórek kiszony",
+              "ile": "100 g",
+              "g": 98,
+              "kcal": 12,
+              "bialko": 0.5,
               "tluszcz": 0.2,
-              "wegle": 4.3
+              "wegle": 1.9
             },
             {
-              "nazwa": "Sałata / mix sałat",
-              "ile": "50 g",
-              "g": 50,
-              "kcal": 8,
-              "bialko": 0.7,
-              "tluszcz": 0.1,
-              "wegle": 0.8
-            },
-            {
-              "nazwa": "Oliwa z oliwek",
-              "ile": "6 ml",
-              "g": 6,
-              "kcal": 50,
+              "nazwa": "Masło",
+              "ile": "5 g",
+              "g": 5,
+              "kcal": 37,
               "bialko": 0.0,
-              "tluszcz": 5.5,
+              "tluszcz": 4.1,
               "wegle": 0.0
             },
             {
-              "nazwa": "Chleb pszenny (zwykły biały)",
-              "ile": "1 kromka (35 g)",
-              "g": 35,
-              "kcal": 88,
-              "bialko": 2.8,
-              "tluszcz": 1.0,
-              "wegle": 16.4
+              "nazwa": "Pomidor",
+              "ile": "1 szt. (120 g)",
+              "g": 120,
+              "kcal": 22,
+              "bialko": 1.1,
+              "tluszcz": 0.2,
+              "wegle": 3.2
             }
           ],
           "jak": "przepis",
-          "czas_min": 7,
+          "czas_min": 4,
           "kroki": [
             "📦 To zrobiłeś w bloku kuchni (wczoraj o 09:30) — teraz tylko wyjmij pojemnik z lodówki. Przepis niżej, gdybyś robił na świeżo.",
-            "Jajka na twardo: w małym garnku zagotuj tyle wody, żeby przykryła jajka (2 szt., 110 g). Łyżką ostrożnie włóż jajka do wrzątku i gotuj 9 minut na średnim ogniu. Odlej wrzątek, zalej zimną wodą na 3 minuty i obierz ze skorupki.",
-            "Jajka pokrój na ćwiartki. Pomidory (180 g) i ogórka (150 g) umyj i pokrój w kostkę ok. 2 cm.",
-            "Sałatę (50 g) przełóż do miski lub pojemnika, na to pomidory, ogórka i jajka.",
-            "Fetę (55 g) pokrusz palcami na wierzch.",
-            "Polej oliwą (6 ml, ok. 1 łyżeczka), posyp szczyptą soli, pieprzu i oregano i wymieszaj delikatnie.",
-            "Do boxa: oliwę weź w małym słoiczku i polej dopiero przed jedzeniem. Chleb (1 kromka, 35 g) zapakuj osobno.",
+            "Kromki chleba (2 kromki, 70 g) posmaruj cienko masłem (5 g), potem musztardą (1 łyżka, 15 g).",
+            "Ser (2 plastry, 40 g) rozłóż po równo na kromkach.",
+            "Ogórki kiszone (100 g) i pomidora (1 szt., 120 g) pokrój w plasterki i ułóż na serze.",
+            "Do boxa zawiń kanapki w folię.",
             "Wszystkie ilości w krokach są już przeliczone na Twoją porcję na dziś — nic nie musisz dzielić."
           ]
         },
@@ -10469,79 +10498,90 @@
           "ping": true,
           "slot": "kolacja",
           "opis": "Ostatni posiłek na zmianie. Lekki, żeby nie leżeć z pełnym brzuchem przed pierwszą drzemką.",
-          "posilek": "Kanapki z serem, musztardą i kiszonym ogórkiem",
-          "posilek_id": "q_kanapki_ser",
+          "posilek": "Sałatka z fetą, jajkiem i pomidorem + pieczywo",
+          "posilek_id": "q_salatka_feta",
           "porcja": 0.8,
           "makra": {
-            "kcal": 402,
-            "bialko": 18,
-            "tluszcz": 18,
-            "wegle": 40
+            "kcal": 501,
+            "bialko": 28,
+            "tluszcz": 29,
+            "wegle": 28
           },
           "skladniki": [
             {
-              "nazwa": "Chleb pszenny (zwykły biały)",
-              "ile": "2 kromki (70 g)",
-              "g": 70,
-              "kcal": 175,
-              "bialko": 5.6,
-              "tluszcz": 2.1,
-              "wegle": 32.9
+              "nazwa": "Ser feta",
+              "ile": "55 g",
+              "g": 55,
+              "kcal": 145,
+              "bialko": 7.8,
+              "tluszcz": 11.7,
+              "wegle": 0.6
             },
             {
-              "nazwa": "Ser żółty w plastrach",
-              "ile": "2 plastry (40 g)",
-              "g": 40,
-              "kcal": 140,
-              "bialko": 10.2,
-              "tluszcz": 10.8,
-              "wegle": 0.2
-            },
-            {
-              "nazwa": "Musztarda",
-              "ile": "1 łyżka (15 g)",
-              "g": 15,
-              "kcal": 16,
-              "bialko": 0.8,
-              "tluszcz": 0.9,
-              "wegle": 1.2
-            },
-            {
-              "nazwa": "Ogórek kiszony",
-              "ile": "100 g",
-              "g": 98,
-              "kcal": 12,
-              "bialko": 0.5,
-              "tluszcz": 0.2,
-              "wegle": 1.9
-            },
-            {
-              "nazwa": "Masło",
-              "ile": "5 g",
-              "g": 5,
-              "kcal": 37,
-              "bialko": 0.0,
-              "tluszcz": 4.1,
-              "wegle": 0.0
+              "nazwa": "Jaja",
+              "ile": "2 szt. (110 g)",
+              "g": 110,
+              "kcal": 157,
+              "bialko": 13.9,
+              "tluszcz": 10.5,
+              "wegle": 0.8
             },
             {
               "nazwa": "Pomidor",
-              "ile": "1 szt. (120 g)",
-              "g": 120,
-              "kcal": 22,
-              "bialko": 1.1,
+              "ile": "180 g",
+              "g": 180,
+              "kcal": 32,
+              "bialko": 1.6,
+              "tluszcz": 0.4,
+              "wegle": 4.9
+            },
+            {
+              "nazwa": "Ogórek długi",
+              "ile": "150 g",
+              "g": 150,
+              "kcal": 21,
+              "bialko": 1.0,
               "tluszcz": 0.2,
-              "wegle": 3.2
+              "wegle": 4.3
+            },
+            {
+              "nazwa": "Sałata / mix sałat",
+              "ile": "50 g",
+              "g": 50,
+              "kcal": 8,
+              "bialko": 0.7,
+              "tluszcz": 0.1,
+              "wegle": 0.8
+            },
+            {
+              "nazwa": "Oliwa z oliwek",
+              "ile": "6 ml",
+              "g": 6,
+              "kcal": 50,
+              "bialko": 0.0,
+              "tluszcz": 5.5,
+              "wegle": 0.0
+            },
+            {
+              "nazwa": "Chleb pszenny (zwykły biały)",
+              "ile": "1 kromka (35 g)",
+              "g": 35,
+              "kcal": 88,
+              "bialko": 2.8,
+              "tluszcz": 1.0,
+              "wegle": 16.4
             }
           ],
           "jak": "przepis",
-          "czas_min": 4,
+          "czas_min": 7,
           "kroki": [
             "📦 To zrobiłeś w bloku kuchni (wczoraj o 09:30) — teraz tylko wyjmij pojemnik z lodówki. Przepis niżej, gdybyś robił na świeżo.",
-            "Kromki chleba (2 kromki, 70 g) posmaruj cienko masłem (5 g), potem musztardą (1 łyżka, 15 g).",
-            "Ser (2 plastry, 40 g) rozłóż po równo na kromkach.",
-            "Ogórki kiszone (100 g) i pomidora (1 szt., 120 g) pokrój w plasterki i ułóż na serze.",
-            "Do boxa zawiń kanapki w folię.",
+            "Jajka na twardo: w małym garnku zagotuj tyle wody, żeby przykryła jajka (2 szt., 110 g). Łyżką ostrożnie włóż jajka do wrzątku i gotuj 9 minut na średnim ogniu. Odlej wrzątek, zalej zimną wodą na 3 minuty i obierz ze skorupki.",
+            "Jajka pokrój na ćwiartki. Pomidory (180 g) i ogórka (150 g) umyj i pokrój w kostkę ok. 2 cm.",
+            "Sałatę (50 g) przełóż do miski lub pojemnika, na to pomidory, ogórka i jajka.",
+            "Fetę (55 g) pokrusz palcami na wierzch.",
+            "Polej oliwą (6 ml, ok. 1 łyżeczka), posyp szczyptą soli, pieprzu i oregano i wymieszaj delikatnie.",
+            "Do boxa: oliwę weź w małym słoiczku i polej dopiero przed jedzeniem. Chleb (1 kromka, 35 g) zapakuj osobno.",
             "Wszystkie ilości w krokach są już przeliczone na Twoją porcję na dziś — nic nie musisz dzielić."
           ]
         },
@@ -10561,17 +10601,17 @@
         }
       ],
       "makra": {
-        "kcal": 2614,
-        "bialko": 161,
-        "tluszcz": 104,
-        "wegle": 246
+        "kcal": 2716,
+        "bialko": 166,
+        "tluszcz": 105,
+        "wegle": 264
       },
       "dobitka": 0,
       "dodatek_w": [],
       "poza_planem": [],
       "lzejszy": false,
       "cel": {
-        "kcal": 2550,
+        "kcal": 2700,
         "bialko": 160,
         "tluszcz": 80,
         "wegle": 260
@@ -10661,50 +10701,78 @@
           "ping": true,
           "slot": "sniadanie",
           "opis": "Coś lekkiego i białkowego. Na pusty żołądek gorzej zaśniesz, na pełny obudzisz się rozbity.",
-          "posilek": "Shake białkowy z bananem",
-          "posilek_id": "q_shake",
+          "posilek": "Kanapki z serem, musztardą i kiszonym ogórkiem",
+          "posilek_id": "q_kanapki_ser",
           "porcja": 0.8,
           "makra": {
-            "kcal": 320,
-            "bialko": 29,
-            "tluszcz": 11,
-            "wegle": 26
+            "kcal": 402,
+            "bialko": 18,
+            "tluszcz": 18,
+            "wegle": 40
           },
           "skladniki": [
             {
-              "nazwa": "Odżywka białkowa WPC 80 (czekoladowa) — zapas, kupujesz osobno",
-              "ile": "30 g",
-              "g": 30,
-              "kcal": 112,
-              "bialko": 24.6,
-              "tluszcz": 1.4,
-              "wegle": 0.5
+              "nazwa": "Chleb pszenny (zwykły biały)",
+              "ile": "2 kromki (70 g)",
+              "g": 70,
+              "kcal": 175,
+              "bialko": 5.6,
+              "tluszcz": 2.1,
+              "wegle": 32.9
             },
             {
-              "nazwa": "Banan",
+              "nazwa": "Ser żółty w plastrach",
+              "ile": "2 plastry (40 g)",
+              "g": 40,
+              "kcal": 140,
+              "bialko": 10.2,
+              "tluszcz": 10.8,
+              "wegle": 0.2
+            },
+            {
+              "nazwa": "Musztarda",
+              "ile": "1 łyżka (15 g)",
+              "g": 15,
+              "kcal": 16,
+              "bialko": 0.8,
+              "tluszcz": 0.9,
+              "wegle": 1.2
+            },
+            {
+              "nazwa": "Ogórek kiszony",
+              "ile": "100 g",
+              "g": 98,
+              "kcal": 12,
+              "bialko": 0.5,
+              "tluszcz": 0.2,
+              "wegle": 1.9
+            },
+            {
+              "nazwa": "Masło",
+              "ile": "5 g",
+              "g": 5,
+              "kcal": 37,
+              "bialko": 0.0,
+              "tluszcz": 4.1,
+              "wegle": 0.0
+            },
+            {
+              "nazwa": "Pomidor",
               "ile": "1 szt. (120 g)",
               "g": 120,
-              "kcal": 106,
-              "bialko": 1.3,
-              "tluszcz": 0.4,
-              "wegle": 24.2
-            },
-            {
-              "nazwa": "Orzechy / migdały",
-              "ile": "16 g",
-              "g": 16,
-              "kcal": 102,
-              "bialko": 3.0,
-              "tluszcz": 9.1,
-              "wegle": 1.6
+              "kcal": 22,
+              "bialko": 1.1,
+              "tluszcz": 0.2,
+              "wegle": 3.2
             }
           ],
           "jak": "przepis",
-          "czas_min": 2,
+          "czas_min": 4,
           "kroki": [
-            "Do shakera wsyp odżywkę (30 g) i wlej ok. 350 ml zimnej wody. Zakręć i potrząsaj 20 sekund.",
-            "Banana (1 szt., 120 g) i orzechy (16 g) weź osobno — zjadasz obok shake'a.",
-            "Na zmianę: odżywkę wsyp do shakera już w domu, wodę dolejesz na miejscu. Nic się nie zepsuje.",
+            "Kromki chleba (2 kromki, 70 g) posmaruj cienko masłem (5 g), potem musztardą (1 łyżka, 15 g).",
+            "Ser (2 plastry, 40 g) rozłóż po równo na kromkach.",
+            "Ogórki kiszone (100 g) i pomidora (1 szt., 120 g) pokrój w plasterki i ułóż na serze.",
+            "Do boxa zawiń kanapki w folię.",
             "Wszystkie ilości w krokach są już przeliczone na Twoją porcję na dziś — nic nie musisz dzielić."
           ]
         },
@@ -10755,7 +10823,7 @@
           "akcja": "kuchnia",
           "opis": "Przygotujesz: garnek: Makaron bolognese na wołowinie, Omlet marchewkowy z dżemem i bananem + napój proteinowy, Kanapki z jajkiem na twardo i serem. Potem do jutra tylko sięgasz do lodówki.",
           "kroki": [
-            "Wyjmij wszystko na blat, zanim zaczniesz: banan 1 szt. (120 g), cebula 2 szt. (200 g), chleb pszenny 2 kromki (70 g), przyprawa do cynamonek / cynamon 4 g, czosnek 3 ząbki (15 g), dżem 100 g, jaja 3 szt. (165 g), koncentrat pomidorowy 60 g, mąka pszenna 35 g, makaron 240 g, marchew 200 g, wołowina świeżo mielona 500 g, musztarda 1 łyżka (15 g), napój proteinowy müllermilch protein 1 butelka (400 ml), odżywka białkowa wpc 80 20 g, ogórek kiszony 1 szt. (65 g), olej rzepakowy 15 ml, passata pomidorowa 500 g, proszek do pieczenia 2 g, przyprawy 1 porcja (2 g), ser żółty w plastrach 2 plastry (40 g), skyr waniliowy 1 kubek (150 g).",
+            "Wyjmij wszystko na blat, zanim zaczniesz: banan 1 szt. (120 g), cebula 2 szt. (200 g), chleb pszenny 2 kromki (70 g), przyprawa do cynamonek / cynamon 4 g, czosnek 3 ząbki (15 g), dżem 110 g, jaja 3 szt. (165 g), koncentrat pomidorowy 60 g, mąka pszenna 40 g, makaron 240 g, marchew 200 g, wołowina świeżo mielona 500 g, musztarda 1 łyżka (15 g), napój proteinowy müllermilch protein 1 butelka (400 ml), odżywka białkowa wpc 80 25 g, ogórek kiszony 1 szt. (65 g), olej rzepakowy 15 ml, passata pomidorowa 500 g, proszek do pieczenia 2 g, przyprawy 1 porcja (2 g), ser żółty w plastrach 2 plastry (40 g), skyr waniliowy 1 kubek (150 g).",
             "Przygotuj 1 pojemnik i opisz je karteczką: dziś 20:30 — kolacja.",
             "▸ Garnek: Makaron bolognese na wołowinie — zaczynasz od niego, bo najdłużej się gotuje.",
             "Zanim zaczniesz: postaw na wadze kuchennej deskę do krojenia, na niej pusty duży garnek, i wpisz tę wagę w zakładce Gotuję → „Ile nałożyć na porcję” (pole „puste naczynie”). Na tej samej desce zważysz później naczynie z jedzeniem — deska chroni wagę przed gorącem.",
@@ -10777,12 +10845,12 @@
             "Przełóż do pojemnika „dziś 20:30 — kolacja”.",
             "▸ Omlet marchewkowy z dżemem i bananem + napój proteinowy",
             "Marchew (40 g) obierz i zetrzyj na tarce na drobnych oczkach.",
-            "Do miski wbij jajko (1 szt., 55 g), dodaj skyr (1 kubek, 150 g), mąkę (35 g), odżywkę (20 g), proszek do pieczenia (2 g) i przyprawę (4 g). Mieszaj łyżką ok. minuty, aż nie będzie grudek.",
+            "Do miski wbij jajko (1 szt., 55 g), dodaj skyr (1 kubek, 150 g), mąkę (40 g), odżywkę (25 g), proszek do pieczenia (2 g) i przyprawę (4 g). Mieszaj łyżką ok. minuty, aż nie będzie grudek.",
             "Wmieszaj marchewkę. Ciasto ma być gęste, jak na placki.",
             "Patelnię z powłoką postaw na małym ogniu (1/3 skali) na minutę. Wylej ciasto i rozprowadź łyżką na grubość ok. 1 cm.",
             "Przykryj pokrywką i smaż 5–6 minut, aż spód będzie brązowy, a wierzch przestanie być płynny.",
             "Przewróć: zsuń omlet na talerz, przykryj go patelnią i odwróć razem z talerzem. Smaż jeszcze 3–4 minuty pod przykryciem.",
-            "Przełóż na talerz, posmaruj dżemem (100 g — pół opakowania) i ułóż banana (1 szt., 120 g) pokrojonego w plasterki. Do popicia napój proteinowy (1 butelka, 400 ml).",
+            "Przełóż na talerz, posmaruj dżemem (110 g) i ułóż banana (1 szt., 120 g) pokrojonego w plasterki. Do popicia napój proteinowy (1 butelka, 400 ml).",
             "Do pojemnika: na zimno smakuje jak ciasto marchewkowe — dżem i banana dołóż w osobnym pudełku, napój weź w butelce.",
             "To zjadasz od razu, na koniec bloku.",
             "▸ Wróć do garnka: Makaron bolognese na wołowinie",
@@ -10804,12 +10872,12 @@
           "opis": "Pierwszy porządny posiłek dnia — robisz go na końcu bloku kuchni i jesz od razu.",
           "posilek": "Omlet marchewkowy z dżemem i bananem + napój proteinowy",
           "posilek_id": "q_omlet_marchewkowy",
-          "porcja": 0.7,
+          "porcja": 0.8,
           "makra": {
-            "kcal": 927,
-            "bialko": 70,
+            "kcal": 977,
+            "bialko": 75,
             "tluszcz": 14,
-            "wegle": 127
+            "wegle": 134
           },
           "skladniki": [
             {
@@ -10832,21 +10900,21 @@
             },
             {
               "nazwa": "Mąka pszenna",
-              "ile": "35 g",
-              "g": 35,
-              "kcal": 120,
-              "bialko": 3.5,
-              "tluszcz": 0.4,
-              "wegle": 24.8
+              "ile": "40 g",
+              "g": 40,
+              "kcal": 137,
+              "bialko": 4.0,
+              "tluszcz": 0.5,
+              "wegle": 28.4
             },
             {
               "nazwa": "Odżywka białkowa WPC 80 (czekoladowa) — zapas, kupujesz osobno",
-              "ile": "20 g",
-              "g": 20,
-              "kcal": 75,
-              "bialko": 16.4,
-              "tluszcz": 0.9,
-              "wegle": 0.3
+              "ile": "25 g",
+              "g": 25,
+              "kcal": 93,
+              "bialko": 20.5,
+              "tluszcz": 1.2,
+              "wegle": 0.4
             },
             {
               "nazwa": "Marchew",
@@ -10877,12 +10945,12 @@
             },
             {
               "nazwa": "Dżem (np. malinowy, słoik 200 g)",
-              "ile": "100 g",
-              "g": 100,
-              "kcal": 144,
-              "bialko": 0.5,
-              "tluszcz": 0.5,
-              "wegle": 34.0
+              "ile": "110 g",
+              "g": 110,
+              "kcal": 158,
+              "bialko": 0.6,
+              "tluszcz": 0.6,
+              "wegle": 37.4
             },
             {
               "nazwa": "Banan",
@@ -10907,12 +10975,12 @@
           "czas_min": 15,
           "kroki": [
             "Marchew (40 g) obierz i zetrzyj na tarce na drobnych oczkach.",
-            "Do miski wbij jajko (1 szt., 55 g), dodaj skyr (1 kubek, 150 g), mąkę (35 g), odżywkę (20 g), proszek do pieczenia (2 g) i przyprawę (4 g). Mieszaj łyżką ok. minuty, aż nie będzie grudek.",
+            "Do miski wbij jajko (1 szt., 55 g), dodaj skyr (1 kubek, 150 g), mąkę (40 g), odżywkę (25 g), proszek do pieczenia (2 g) i przyprawę (4 g). Mieszaj łyżką ok. minuty, aż nie będzie grudek.",
             "Wmieszaj marchewkę. Ciasto ma być gęste, jak na placki.",
             "Patelnię z powłoką postaw na małym ogniu (1/3 skali) na minutę. Wylej ciasto i rozprowadź łyżką na grubość ok. 1 cm.",
             "Przykryj pokrywką i smaż 5–6 minut, aż spód będzie brązowy, a wierzch przestanie być płynny.",
             "Przewróć: zsuń omlet na talerz, przykryj go patelnią i odwróć razem z talerzem. Smaż jeszcze 3–4 minuty pod przykryciem.",
-            "Przełóż na talerz, posmaruj dżemem (100 g — pół opakowania) i ułóż banana (1 szt., 120 g) pokrojonego w plasterki. Do popicia napój proteinowy (1 butelka, 400 ml).",
+            "Przełóż na talerz, posmaruj dżemem (110 g) i ułóż banana (1 szt., 120 g) pokrojonego w plasterki. Do popicia napój proteinowy (1 butelka, 400 ml).",
             "Do pojemnika: na zimno smakuje jak ciasto marchewkowe — dżem i banana dołóż w osobnym pudełku, napój weź w butelce.",
             "Wszystkie ilości w krokach są już przeliczone na Twoją porcję na dziś — nic nie musisz dzielić."
           ]
@@ -11131,17 +11199,17 @@
         }
       ],
       "makra": {
-        "kcal": 2554,
-        "bialko": 175,
-        "tluszcz": 80,
-        "wegle": 270
+        "kcal": 2686,
+        "bialko": 169,
+        "tluszcz": 87,
+        "wegle": 291
       },
       "dobitka": 0,
       "dodatek_w": [],
       "poza_planem": [],
       "lzejszy": false,
       "cel": {
-        "kcal": 2550,
+        "kcal": 2700,
         "bialko": 160,
         "tluszcz": 80,
         "wegle": 260
@@ -11776,6 +11844,14 @@
   "alternatywy": {
     "sniadanie": [
       {
+        "id": "q_twarog",
+        "nazwa": "Twarożek na słodko z dżemem + pieczywo",
+        "kcal": 509,
+        "bialko": 44,
+        "czas": 4,
+        "bez_gotowania": false
+      },
+      {
         "id": "q_kanapki_jajko",
         "nazwa": "Kanapki z jajkiem na twardo i serem",
         "kcal": 497,
@@ -11798,25 +11874,9 @@
         "bialko": 38,
         "czas": 2,
         "bez_gotowania": false
-      },
-      {
-        "id": "q_kanapki_ser",
-        "nazwa": "Kanapki z serem, musztardą i kiszonym ogórkiem",
-        "kcal": 484,
-        "bialko": 23,
-        "czas": 4,
-        "bez_gotowania": false
       }
     ],
     "drugi": [
-      {
-        "id": "q_jajka_kukurydza",
-        "nazwa": "Box: sałatka jajeczna z kukurydzą",
-        "kcal": 480,
-        "bialko": 35,
-        "czas": 12,
-        "bez_gotowania": false
-      },
       {
         "id": "q_kanapki_jajko",
         "nazwa": "Kanapki z jajkiem na twardo i serem",
@@ -11826,19 +11886,27 @@
         "bez_gotowania": false
       },
       {
-        "id": "d_twarog_kakao",
-        "nazwa": "Deser: twarożek kakaowy z masłem orzechowym",
-        "kcal": 476,
-        "bialko": 45,
-        "czas": 4,
+        "id": "q_jajka_kukurydza",
+        "nazwa": "Box: sałatka jajeczna z kukurydzą",
+        "kcal": 480,
+        "bialko": 35,
+        "czas": 12,
         "bez_gotowania": false
       },
       {
-        "id": "d_pudding",
-        "nazwa": "Deser: czekoladowy pudding ze skyru z bananem",
-        "kcal": 419,
-        "bialko": 39,
-        "czas": 4,
+        "id": "q_jogurt_orzechy",
+        "nazwa": "Jogurt grecki z orzechami i miodem",
+        "kcal": 461,
+        "bialko": 33,
+        "czas": 3,
+        "bez_gotowania": false
+      },
+      {
+        "id": "q_jajka_majonez",
+        "nazwa": "Sałatka jajeczna z kukurydzą i majonezem",
+        "kcal": 558,
+        "bialko": 28,
+        "czas": 12,
         "bez_gotowania": false
       }
     ],
@@ -11878,19 +11946,11 @@
     ],
     "kolacja": [
       {
-        "id": "q_tortilla_poledwica",
-        "nazwa": "Tortilla z jajkiem na twardo, polędwicą i serem",
-        "kcal": 904,
-        "bialko": 49,
-        "czas": 6,
-        "bez_gotowania": false
-      },
-      {
-        "id": "d_sernik",
-        "nazwa": "Deser: sernik na zimno w kubku (bez pieczenia)",
-        "kcal": 572,
-        "bialko": 57,
-        "czas": 6,
+        "id": "q_twarog",
+        "nazwa": "Twarożek na słodko z dżemem + pieczywo",
+        "kcal": 509,
+        "bialko": 44,
+        "czas": 4,
         "bez_gotowania": false
       },
       {
@@ -11902,10 +11962,18 @@
         "bez_gotowania": false
       },
       {
-        "id": "d_twarog_kakao",
-        "nazwa": "Deser: twarożek kakaowy z masłem orzechowym",
-        "kcal": 476,
-        "bialko": 45,
+        "id": "q_jajka_kukurydza",
+        "nazwa": "Box: sałatka jajeczna z kukurydzą",
+        "kcal": 480,
+        "bialko": 35,
+        "czas": 12,
+        "bez_gotowania": false
+      },
+      {
+        "id": "d_pudding",
+        "nazwa": "Deser: czekoladowy pudding ze skyru z bananem",
+        "kcal": 419,
+        "bialko": 39,
         "czas": 4,
         "bez_gotowania": false
       }
@@ -12453,10 +12521,10 @@
       "do": "2026-09-19",
       "waga_teraz": 83.1
     },
-    "korekta_teraz": 150,
-    "kcal_teraz": 2550,
+    "korekta_teraz": 300,
+    "kcal_teraz": 2700,
     "zmiana": 150,
-    "kcal_po": 2700,
+    "kcal_po": 2850,
     "ocena": "Tempo -4.73 kg/tydz. jest poniżej widełek tej fazy (-0.3 do +0.3). Dokładam 150 kcal."
   },
   "cel_bazowy": 2400,
@@ -12492,7 +12560,7 @@
     "bazy": [
       "b_pieczarkowy",
       "b_pieczarkowy",
-      "b_bolo",
+      "b_pieczarkowy",
       "b_bolo",
       "b_bolo",
       "b_bolo"
