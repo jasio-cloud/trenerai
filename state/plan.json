@@ -5,30 +5,30 @@
   "baza": "b_pieczarkowy",
   "dni": [
     {
-      "sniadanie": "q_twarog_banan",
-      "drugi": "q_kanapki_ser",
-      "kolacja": "d_twarog_kakao",
+      "sniadanie": "q_twarog",
+      "drugi": "q_twarog_banan",
+      "kolacja": "q_tortilla_zimna",
       "obiad": "b_pieczarkowy",
       "data": "2026-09-20",
       "typ": 1,
       "makra": {
-        "kcal": 2341,
-        "bialko": 157,
-        "tluszcz": 105,
-        "wegle": 189
+        "kcal": 2819,
+        "bialko": 186,
+        "tluszcz": 120,
+        "wegle": 244
       }
     },
     {
       "sniadanie": "q_omlet_marchewkowy",
-      "drugi": "q_kanapki_jajko",
-      "kolacja": "q_jajka_majonez",
+      "drugi": "q_kanapki_ser",
+      "kolacja": "q_kanapki_jajko",
       "obiad": "b_pieczarkowy",
       "data": "2026-09-21",
       "typ": 2,
       "makra": {
-        "kcal": 3023,
-        "bialko": 189,
-        "tluszcz": 111,
+        "kcal": 2949,
+        "bialko": 184,
+        "tluszcz": 107,
         "wegle": 298
       }
     },
@@ -47,5 +47,5 @@
       }
     }
   ],
-  "wygenerowano": "2026-09-20T18:47:06+02:00"
+  "wygenerowano": "2026-09-20T18:55:34+02:00"
 }
