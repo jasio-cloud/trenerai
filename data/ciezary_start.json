@@ -1,105 +1,105 @@
 {
-  "_info": "Ciężary startowe po przerwie: ok. 80% tego, co miałeś przed przerwą (pole cel). Wracasz do swoich liczb w 3–5 tygodni, potem idziesz wyżej. kg jak w polu jedn; krok = ile dokładasz po trafieniu w górę zakresu we wszystkich seriach.",
+  "_info": "Ciężary liczymy jako SAME TALERZE, bez gryfa (gryf ~10 kg) i bez trzonka hantli — tak, jak je zakładasz, żeby nie liczyć w głowie. Start po przerwie to ok. 80% pola cel (Twój stan sprzed przerwy, też bez gryfa). krok = ile talerzy dokładasz po trafieniu w górny koniec zakresu we wszystkich seriach.",
   "Wyciskanie leżąc": {
-    "kg": 45,
-    "cel": 55,
-    "jedn": "razem z gryfem",
+    "kg": 35,
+    "cel": 45,
+    "jedn": "same talerze (bez gryfa)",
     "krok": 2.5
   },
   "Wyciskanie skos (góra klatki)": {
-    "kg": 27.5,
-    "cel": 32.5,
-    "jedn": "razem z gryfem",
+    "kg": 17.5,
+    "cel": 22.5,
+    "jedn": "same talerze (bez gryfa)",
     "krok": 2.5
   },
   "Wyciskanie żołnierskie (OHP)": {
-    "kg": 20,
-    "cel": 25,
-    "jedn": "razem z gryfem",
+    "kg": 10,
+    "cel": 15,
+    "jedn": "same talerze (bez gryfa)",
     "krok": 2.5
   },
   "Przysiad ze sztangą": {
-    "kg": 40,
-    "cel": 50,
-    "jedn": "razem z gryfem",
+    "kg": 30,
+    "cel": 40,
+    "jedn": "same talerze (bez gryfa)",
     "krok": 5
   },
   "Martwy ciąg": {
-    "kg": 55,
-    "cel": 65,
-    "jedn": "razem z gryfem",
+    "kg": 45,
+    "cel": 55,
+    "jedn": "same talerze (bez gryfa)",
     "krok": 5
   },
   "Rumuński martwy ciąg ze sztangą": {
-    "kg": 40,
-    "cel": 50,
-    "jedn": "razem z gryfem",
+    "kg": 30,
+    "cel": 40,
+    "jedn": "same talerze (bez gryfa)",
     "krok": 5
   },
   "Wiosłowanie sztangą podchwytem": {
-    "kg": 35,
-    "cel": 42.5,
-    "jedn": "razem z gryfem",
+    "kg": 25,
+    "cel": 32.5,
+    "jedn": "same talerze (bez gryfa)",
     "krok": 2.5
   },
   "Wiosłowanie hantlem jednorącz": {
     "kg": 12.5,
     "cel": 15,
-    "jedn": "na hantel",
+    "jedn": "talerze na hantel",
     "krok": 2.5
   },
   "Przysiad bułgarski": {
     "kg": 8,
     "cel": 10,
-    "jedn": "na hantel",
+    "jedn": "talerze na hantel",
     "krok": 2.5
   },
   "Wspięcia na palce": {
     "kg": 12,
     "cel": 15,
-    "jedn": "na hantel",
+    "jedn": "talerze na hantel",
     "krok": 2.5
   },
   "Uginanie ramion ze sztangą": {
-    "kg": 17.5,
-    "cel": 22.5,
-    "jedn": "razem z gryfem",
+    "kg": 7.5,
+    "cel": 12.5,
+    "jedn": "same talerze (bez gryfa)",
     "krok": 2.5
   },
   "Uginanie młotkowe": {
     "kg": 8,
     "cel": 10,
-    "jedn": "na hantel",
+    "jedn": "talerze na hantel",
     "krok": 2.5
   },
   "Unoszenie hantli bokiem": {
     "kg": 5,
     "cel": 8,
-    "jedn": "na hantel",
+    "jedn": "talerze na hantel",
     "krok": 2.5
   },
   "Pullover z hantlem": {
     "kg": 12.5,
     "cel": 15,
-    "jedn": "jeden hantel oburącz",
+    "jedn": "talerze na hantel (oburącz)",
     "krok": 2.5
   },
   "Prostowanie ramion z hantlem nad głową": {
     "kg": 10,
     "cel": 12.5,
-    "jedn": "jeden hantel oburącz",
+    "jedn": "talerze na hantel (oburącz)",
     "krok": 2.5
   },
   "Rozpiętki z hantlami na ławce skośnej": {
     "kg": 7.5,
     "cel": 10,
-    "jedn": "na hantel",
+    "jedn": "talerze na hantel",
     "krok": 2.5
   },
   "Odwrotne rozpiętki w opadzie": {
     "kg": 5,
     "cel": 7.5,
-    "jedn": "na hantel",
+    "jedn": "talerze na hantel",
     "krok": 2.5
   },
   "Dipy między ławkami": {
@@ -139,7 +139,7 @@
   },
   "Przysiad goblet z hantlem": {
     "kg": 20,
-    "jedn": "jeden hantel",
+    "jedn": "talerze na hantel",
     "krok": 5
   }
 }
