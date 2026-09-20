@@ -5,11 +5,11 @@
       "do": "2026-09-29"
     },
     "szynka": {
-      "ilosc": 90,
+      "ilosc": 40,
       "do": "2026-09-29"
     },
     "jaja": {
-      "ilosc": 9,
+      "ilosc": 1,
       "do": "2026-09-29"
     },
     "jogurt_grecki": {
@@ -17,19 +17,15 @@
       "do": "2026-09-29"
     },
     "maslo": {
-      "ilosc": 183,
+      "ilosc": 178,
       "do": "2026-09-29"
     },
     "mleko": {
-      "ilosc": 990,
+      "ilosc": 934,
       "do": "2026-09-29"
     },
     "napoj_proteinowy": {
       "ilosc": 0.5,
-      "do": "2026-09-29"
-    },
-    "ser_zolty": {
-      "ilosc": 6,
       "do": "2026-09-29"
     },
     "skyr_pitny": {
@@ -41,59 +37,55 @@
       "do": "2026-09-29"
     },
     "marchew": {
-      "ilosc": 1.85,
+      "ilosc": 0.85,
       "do": "2027-04-05"
     },
-    "ogorek": {
-      "ilosc": 0.5,
-      "do": "2026-09-21"
-    },
     "ogorek_kiszony": {
-      "ilosc": 4.0,
+      "ilosc": 0.5,
       "do": "2027-04-05"
     },
     "chleb": {
-      "ilosc": 4,
+      "ilosc": 11,
       "do": "2026-09-29"
     },
     "makaron": {
-      "ilosc": 420,
+      "ilosc": 180.0,
       "do": "2027-04-05"
     },
     "tortilla": {
-      "ilosc": 5,
+      "ilosc": 3,
       "do": "2027-04-05"
     },
     "majonez_sriracha": {
-      "ilosc": 236,
+      "ilosc": 220,
       "do": "2027-04-05"
     },
     "miod": {
-      "ilosc": 19.0,
+      "ilosc": 18.0,
       "do": "2027-04-05"
     },
     "musztarda": {
-      "ilosc": 6.5,
+      "ilosc": 4.5,
       "do": "2027-04-05"
     },
     "maka": {
-      "ilosc": 1015,
+      "ilosc": 960,
       "do": "2027-04-05"
     },
     "orzechy": {
-      "ilosc": 186,
+      "ilosc": 162,
       "do": "2027-04-05"
     },
     "proszek_do_pieczenia": {
-      "ilosc": 25,
+      "ilosc": 21,
       "do": "2027-04-05"
     },
     "cynamon": {
-      "ilosc": 6,
+      "ilosc": 1,
       "do": "2027-04-05"
     },
     "przyprawy": {
-      "ilosc": 95,
+      "ilosc": 90.0,
       "do": "2027-04-05"
     },
     "kukurydza": {
@@ -104,17 +96,49 @@
       "ilosc": 17,
       "do": "2027-04-05"
     },
-    "banan": {
-      "ilosc": 1,
-      "do": "2026-09-29"
-    },
     "pomidor": {
-      "ilosc": 1,
+      "ilosc": 0.5,
       "do": "2026-09-21"
     },
     "dzem_niskoslodzony": {
-      "ilosc": 100,
+      "ilosc": 115,
       "do": "2027-04-06"
+    },
+    "mielone_wolowe": {
+      "ilosc": 300.0,
+      "do": "2026-09-24"
+    },
+    "feta": {
+      "ilosc": 145,
+      "do": "2026-10-02"
+    },
+    "ser": {
+      "ilosc": 160.0,
+      "do": "2026-10-02"
+    },
+    "twarog": {
+      "ilosc": 195,
+      "do": "2026-10-02"
+    },
+    "smietana": {
+      "ilosc": 50.0,
+      "do": "2026-10-02"
+    },
+    "czosnek": {
+      "ilosc": 7.0,
+      "do": "2027-04-08"
+    },
+    "salata": {
+      "ilosc": 100,
+      "do": "2026-09-24"
+    },
+    "olej": {
+      "ilosc": 985.0,
+      "do": "2027-04-08"
+    },
+    "oliwa": {
+      "ilosc": 494,
+      "do": "2027-04-08"
     }
   },
   "log": [
@@ -123,6 +147,12 @@
       "co": "cykl:2026-09-17",
       "pozycji": 30,
       "koszt": 220.6
+    },
+    {
+      "data": "2026-09-20",
+      "co": "cykl:2026-09-20",
+      "pozycji": 17,
+      "koszt": 138.18
     }
   ]
 }

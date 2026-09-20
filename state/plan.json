@@ -5,47 +5,47 @@
   "baza": "b_pieczarkowy",
   "dni": [
     {
-      "sniadanie": "q_twarog_banan",
-      "drugi": "q_jajka_kukurydza",
-      "kolacja": "q_jajka_majonez",
+      "sniadanie": "q_twarog",
+      "drugi": "q_twarog_banan",
+      "kolacja": "q_tortilla_zimna",
       "obiad": "b_pieczarkowy",
       "data": "2026-09-20",
       "typ": 1,
       "makra": {
-        "kcal": 2419,
-        "bialko": 152,
-        "tluszcz": 110,
-        "wegle": 194
-      }
-    },
-    {
-      "sniadanie": "q_omlet_marchewkowy",
-      "drugi": "q_kanapki_jajko",
-      "kolacja": "q_shake",
-      "obiad": "b_pieczarkowy",
-      "data": "2026-09-21",
-      "typ": 2,
-      "makra": {
-        "kcal": 2848,
-        "bialko": 199,
-        "tluszcz": 96,
-        "wegle": 285
+        "kcal": 2819,
+        "bialko": 186,
+        "tluszcz": 120,
+        "wegle": 244
       }
     },
     {
       "sniadanie": "q_omlet_marchewkowy",
       "drugi": "q_kanapki_ser",
-      "kolacja": "q_shake",
+      "kolacja": "q_kanapki_jajko",
+      "obiad": "b_pieczarkowy",
+      "data": "2026-09-21",
+      "typ": 2,
+      "makra": {
+        "kcal": 2949,
+        "bialko": 184,
+        "tluszcz": 107,
+        "wegle": 298
+      }
+    },
+    {
+      "sniadanie": "q_omlet_marchewkowy",
+      "drugi": "q_shake",
+      "kolacja": "q_salatka_feta",
       "obiad": "b_pieczarkowy",
       "data": "2026-09-22",
       "typ": 0,
       "makra": {
-        "kcal": 2835,
-        "bialko": 191,
-        "tluszcz": 97,
-        "wegle": 289
+        "kcal": 2920,
+        "bialko": 199,
+        "tluszcz": 107,
+        "wegle": 279
       }
     }
   ],
-  "wygenerowano": "2026-09-20T00:36:16"
+  "wygenerowano": "2026-09-20T08:49:38+02:00"
 }

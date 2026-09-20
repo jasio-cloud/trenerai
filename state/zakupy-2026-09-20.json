@@ -1,0 +1,365 @@
+{
+  "kup": [
+    {
+      "klucz": "mielone_wolowe",
+      "nazwa": "Wołowina świeżo mielona (z lady)",
+      "kat": "mieso",
+      "trw": "swieze",
+      "sklep": "Dino",
+      "opakowan": 2,
+      "opak": 400,
+      "jedn": "g",
+      "brakuje": 500.0,
+      "dokupisz": 800,
+      "cena": 36.0
+    },
+    {
+      "klucz": "napoj_proteinowy",
+      "nazwa": "Napój proteinowy Müllermilch Protein (400 ml)",
+      "kat": "nabial",
+      "trw": "chlodnia",
+      "sklep": "Dino",
+      "opakowan": 2,
+      "opak": 1,
+      "jedn": "butelka",
+      "brakuje": 1.5,
+      "dokupisz": 2,
+      "cena": 10.58
+    },
+    {
+      "klucz": "feta",
+      "nazwa": "Ser feta",
+      "kat": "nabial",
+      "trw": "chlodnia",
+      "sklep": "Dino",
+      "opakowan": 1,
+      "opak": 200,
+      "jedn": "g",
+      "brakuje": 55,
+      "dokupisz": 200,
+      "cena": 8.0
+    },
+    {
+      "klucz": "ser",
+      "nazwa": "Ser żółty starty",
+      "kat": "nabial",
+      "trw": "chlodnia",
+      "sklep": "Dino",
+      "opakowan": 1,
+      "opak": 200,
+      "jedn": "g",
+      "brakuje": 40.0,
+      "dokupisz": 200,
+      "cena": 9.0
+    },
+    {
+      "klucz": "skyr_waniliowy",
+      "nazwa": "Skyr waniliowy (kubek 150 g)",
+      "kat": "nabial",
+      "trw": "chlodnia",
+      "sklep": "Dino",
+      "opakowan": 2,
+      "opak": 1,
+      "jedn": "kubek",
+      "brakuje": 1.5,
+      "dokupisz": 2,
+      "cena": 7.38
+    },
+    {
+      "klucz": "twarog",
+      "nazwa": "Twaróg półtłusty",
+      "kat": "nabial",
+      "trw": "chlodnia",
+      "sklep": "Dino",
+      "opakowan": 2,
+      "opak": 250,
+      "jedn": "g",
+      "brakuje": 305,
+      "dokupisz": 500,
+      "cena": 6.78
+    },
+    {
+      "klucz": "smietana",
+      "nazwa": "Śmietana 18%",
+      "kat": "nabial",
+      "trw": "chlodnia",
+      "sklep": "Dino",
+      "opakowan": 1,
+      "opak": 200,
+      "jedn": "ml",
+      "brakuje": 150.0,
+      "dokupisz": 200,
+      "cena": 3.5
+    },
+    {
+      "klucz": "banan",
+      "nazwa": "Banan",
+      "kat": "warzywa",
+      "trw": "chlodnia",
+      "sklep": "Dino",
+      "opakowan": 3,
+      "opak": 1,
+      "jedn": "szt",
+      "brakuje": 3,
+      "dokupisz": 3,
+      "cena": 1.26
+    },
+    {
+      "klucz": "cebula",
+      "nazwa": "Cebula",
+      "kat": "warzywa",
+      "trw": "trwale",
+      "sklep": "Dino",
+      "opakowan": 2,
+      "opak": 1,
+      "jedn": "szt",
+      "brakuje": 2.0,
+      "dokupisz": 2,
+      "cena": 1.2
+    },
+    {
+      "klucz": "czosnek",
+      "nazwa": "Czosnek",
+      "kat": "warzywa",
+      "trw": "trwale",
+      "sklep": "Dino",
+      "opakowan": 1,
+      "opak": 10,
+      "jedn": "zabek",
+      "brakuje": 3.0,
+      "dokupisz": 10,
+      "cena": 3.0
+    },
+    {
+      "klucz": "pieczarki",
+      "nazwa": "Pieczarki",
+      "kat": "warzywa",
+      "trw": "swieze",
+      "sklep": "Dino",
+      "opakowan": 1,
+      "opak": 400,
+      "jedn": "g",
+      "brakuje": 400.0,
+      "dokupisz": 400,
+      "cena": 6.0
+    },
+    {
+      "klucz": "pomidor",
+      "nazwa": "Pomidor",
+      "kat": "warzywa",
+      "trw": "swieze",
+      "sklep": "Dino",
+      "opakowan": 2,
+      "opak": 1,
+      "jedn": "szt",
+      "brakuje": 1.5,
+      "dokupisz": 2,
+      "cena": 1.2
+    },
+    {
+      "klucz": "salata",
+      "nazwa": "Sałata / mix sałat",
+      "kat": "warzywa",
+      "trw": "swieze",
+      "sklep": "Dino",
+      "opakowan": 1,
+      "opak": 150,
+      "jedn": "g",
+      "brakuje": 50,
+      "dokupisz": 150,
+      "cena": 5.0
+    },
+    {
+      "klucz": "chleb",
+      "nazwa": "Chleb pszenny (zwykły biały)",
+      "kat": "pieczywo",
+      "trw": "chlodnia",
+      "sklep": "Dino",
+      "opakowan": 1,
+      "opak": 14,
+      "jedn": "kromka",
+      "brakuje": 3,
+      "dokupisz": 14,
+      "cena": 4.79
+    },
+    {
+      "klucz": "dzem_niskoslodzony",
+      "nazwa": "Dżem (np. malinowy, słoik 200 g)",
+      "kat": "spizarnia",
+      "trw": "trwale",
+      "sklep": "Dino",
+      "opakowan": 1,
+      "opak": 200,
+      "jedn": "g",
+      "brakuje": 85,
+      "dokupisz": 200,
+      "cena": 5.49
+    },
+    {
+      "klucz": "olej",
+      "nazwa": "Olej rzepakowy",
+      "kat": "spizarnia",
+      "trw": "trwale",
+      "sklep": "Dino",
+      "opakowan": 1,
+      "opak": 1000,
+      "jedn": "ml",
+      "brakuje": 15.0,
+      "dokupisz": 1000,
+      "cena": 9.0
+    },
+    {
+      "klucz": "oliwa",
+      "nazwa": "Oliwa z oliwek",
+      "kat": "spizarnia",
+      "trw": "trwale",
+      "sklep": "Dino",
+      "opakowan": 1,
+      "opak": 500,
+      "jedn": "ml",
+      "brakuje": 6,
+      "dokupisz": 500,
+      "cena": 20.0
+    }
+  ],
+  "mam": [
+    {
+      "klucz": "cynamon",
+      "nazwa": "Przyprawa do cynamonek / cynamon",
+      "potrzeba": 5,
+      "w_domu": 6,
+      "jedn": "g"
+    },
+    {
+      "klucz": "jaja",
+      "nazwa": "Jaja",
+      "potrzeba": 8,
+      "w_domu": 9,
+      "jedn": "szt"
+    },
+    {
+      "klucz": "majonez_sriracha",
+      "nazwa": "Majonez sriracha",
+      "potrzeba": 16,
+      "w_domu": 236,
+      "jedn": "ml"
+    },
+    {
+      "klucz": "maka",
+      "nazwa": "Mąka pszenna",
+      "potrzeba": 55,
+      "w_domu": 1015,
+      "jedn": "g"
+    },
+    {
+      "klucz": "makaron",
+      "nazwa": "Makaron (świderki/penne)",
+      "potrzeba": 240.0,
+      "w_domu": 420,
+      "jedn": "g"
+    },
+    {
+      "klucz": "marchew",
+      "nazwa": "Marchew",
+      "potrzeba": 1.0,
+      "w_domu": 1.85,
+      "jedn": "szt"
+    },
+    {
+      "klucz": "maslo",
+      "nazwa": "Masło",
+      "potrzeba": 5,
+      "w_domu": 183,
+      "jedn": "g"
+    },
+    {
+      "klucz": "miod",
+      "nazwa": "Miód",
+      "potrzeba": 1.0,
+      "w_domu": 19.0,
+      "jedn": "lyzka"
+    },
+    {
+      "klucz": "mleko",
+      "nazwa": "Mleko 2%",
+      "potrzeba": 56,
+      "w_domu": 990,
+      "jedn": "ml"
+    },
+    {
+      "klucz": "musztarda",
+      "nazwa": "Musztarda",
+      "potrzeba": 2.0,
+      "w_domu": 6.5,
+      "jedn": "lyzka"
+    },
+    {
+      "klucz": "odzywka_wpc",
+      "nazwa": "Odżywka białkowa WPC 80 (czekoladowa) — zapas, kupujesz osobno",
+      "potrzeba": 63,
+      "w_domu": 63,
+      "jedn": "g"
+    },
+    {
+      "klucz": "ogorek",
+      "nazwa": "Ogórek długi",
+      "potrzeba": 0.5,
+      "w_domu": 0.5,
+      "jedn": "szt"
+    },
+    {
+      "klucz": "ogorek_kiszony",
+      "nazwa": "Ogórek kiszony",
+      "potrzeba": 3.5,
+      "w_domu": 4.0,
+      "jedn": "szt"
+    },
+    {
+      "klucz": "orzechy",
+      "nazwa": "Orzechy / migdały",
+      "potrzeba": 24,
+      "w_domu": 186,
+      "jedn": "g"
+    },
+    {
+      "klucz": "proszek_do_pieczenia",
+      "nazwa": "Proszek do pieczenia",
+      "potrzeba": 4,
+      "w_domu": 25,
+      "jedn": "g"
+    },
+    {
+      "klucz": "przyprawy",
+      "nazwa": "Przyprawy (sól, pieprz, papryka, oregano, majeranek)",
+      "potrzeba": 5.0,
+      "w_domu": 95,
+      "jedn": "porcja"
+    },
+    {
+      "klucz": "ser_zolty",
+      "nazwa": "Ser żółty w plastrach",
+      "potrzeba": 6,
+      "w_domu": 6,
+      "jedn": "plaster"
+    },
+    {
+      "klucz": "szynka",
+      "nazwa": "Szynka w plastrach",
+      "potrzeba": 50,
+      "w_domu": 90,
+      "jedn": "g"
+    },
+    {
+      "klucz": "tortilla",
+      "nazwa": "Tortilla pszenna",
+      "potrzeba": 2,
+      "w_domu": 5,
+      "jedn": "szt"
+    }
+  ],
+  "koszt": 138.18,
+  "sklepy": {
+    "Dino": 138.18
+  },
+  "zrobione": true
+}
