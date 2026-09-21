@@ -96,10 +96,6 @@
       "ilosc": 17,
       "do": "2027-04-05"
     },
-    "pomidor": {
-      "ilosc": 0.5,
-      "do": "2026-09-21"
-    },
     "dzem_niskoslodzony": {
       "ilosc": 115,
       "do": "2027-04-06"
@@ -153,6 +149,12 @@
       "co": "cykl:2026-09-20",
       "pozycji": 17,
       "koszt": 138.18
+    },
+    {
+      "data": "2026-09-22",
+      "co": "wyrzucone",
+      "produkt": "pomidor",
+      "ilosc": 0.5
     }
   ]
 }

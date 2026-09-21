@@ -1,7 +1,7 @@
 {
-  "wygenerowano": "2026-09-21T11:01:15",
-  "dzis": "2026-09-21",
-  "typ_dzis": 2,
+  "wygenerowano": "2026-09-22T00:14:45+02:00",
+  "dzis": "2026-09-22",
+  "typ_dzis": 0,
   "typy": {
     "0": {
       "nazwa": "ZMIANA 24h",
@@ -201,14 +201,14 @@
   "bez_garnka": null,
   "agenda": [
     {
-      "czas": "08:00",
+      "czas": "04:40",
       "tytul": "Pobudka",
       "ikona": "⏰",
       "ping": true,
-      "opis": "Toaleta, za 5 minut waga. Potem woda i suple — i bez telefonu."
+      "opis": "Toaleta — za 5 minut waga, więc jeszcze nic nie pij. Potem 20 minut w kuchni i o 5:30 jedziesz."
     },
     {
-      "czas": "08:05",
+      "czas": "04:45",
       "tytul": "Waga",
       "ikona": "⚖️",
       "ping": true,
@@ -216,39 +216,26 @@
       "opis": "Po toalecie, przed jedzeniem i piciem, w samej bieliźnie. Wpisz wynik w panelu — liczy się średnia z 7 dni, nie pojedynczy wynik."
     },
     {
-      "czas": "08:30",
-      "tytul": "TRENING GŁÓWNY — pierwsza rzecz dnia",
-      "ikona": "🏋️",
-      "ping": true,
-      "akcja": "trening_glowny",
-      "opis": "Najlepsza sesja w cyklu: wyspany, po dniu normalnego jedzenia. Tu bijesz rekordy. Wchodzisz i robisz, zero telefonu przed."
-    },
-    {
-      "czas": "09:30",
-      "tytul": "KUCHNIA — godzina na gotowanie",
+      "czas": "04:50",
+      "tytul": "KUCHNIA — 20 minut",
       "ikona": "🍳",
       "ping": true,
       "akcja": "kuchnia",
-      "opis": "Przygotujesz: Omlet marchewkowy z dżemem i bananem + napój proteinowy, Sałatka jajeczna z kukurydzą i majonezem, Sałatka z fetą, jajkiem i pomidorem + pieczywo. Potem do jutra tylko sięgasz do lodówki.",
+      "opis": "Przygotujesz: Omlet marchewkowy z dżemem i bananem + napój proteinowy, Shake białkowy z bananem, Kanapki z serem, musztardą i kiszonym ogórkiem. Potem do jutra tylko sięgasz do lodówki.",
       "kroki": [
-        "Wyjmij wszystko na blat, zanim zaczniesz: banan 1 szt. (120 g), chleb pszenny 2 kromki (70 g), przyprawa do cynamonek / cynamon 2 g, dżem 70 g, ser feta 55 g, jaja 5 szt. (275 g), kukurydza konserwowa 120 g, majonez sriracha 16 ml, mąka pszenna 25 g, marchew 40 g, napój proteinowy müllermilch protein 1 butelka (400 ml), odżywka białkowa wpc 80 15 g, ogórek długi 150 g, ogórek kiszony 1 szt. (65 g), oliwa z oliwek 6 ml, pomidor 180 g, proszek do pieczenia 2 g, przyprawy 2 porcje (4 g), sałata / mix sałat 50 g, skyr waniliowy 1 kubek (150 g).",
-        "Przygotuj 2 pojemniki i opisz je karteczką: dziś 13:30 — drugi posiłek; dziś 19:30 — kolacja.",
-        "▸ Woda — postaw ją od razu, zanim zaczniesz resztę:",
-        "Jajka na twardo dla Sałatka z fetą, jajkiem i pomidorem + pieczywo (2 szt.), Sałatka jajeczna z kukurydzą i majonezem (2 szt.) — razem 4 szt.: w małym garnku zagotuj wodę, łyżką włóż jajka, gotuj 9 minut na średnim ogniu, odlej wrzątek i zalej zimną wodą. Obierzesz je przy daniach.",
-        "▸ Sałatka z fetą, jajkiem i pomidorem + pieczywo",
-        "Weź 2 szt. ugotowanych jajek z garnka z zimną wodą.",
-        "Jajka pokrój na ćwiartki. Pomidory (180 g) i ogórka (150 g) umyj i pokrój w kostkę ok. 2 cm.",
-        "Sałatę (50 g) przełóż do miski lub pojemnika, na to pomidory, ogórka i jajka.",
-        "Fetę (55 g) pokrusz palcami na wierzch.",
-        "Polej oliwą (6 ml, ok. 1 łyżeczka), posyp szczyptą soli, pieprzu i oregano i wymieszaj delikatnie.",
-        "Do boxa: oliwę weź w małym słoiczku i polej dopiero przed jedzeniem. Chleb (1 kromka, 35 g) zapakuj osobno.",
-        "Przełóż do pojemnika „dziś 19:30 — kolacja”.",
-        "▸ Sałatka jajeczna z kukurydzą i majonezem",
-        "Weź 2 szt. ugotowanych jajek z garnka z zimną wodą.",
-        "Kukurydzę (120 g) odsącz na sitku, ogórki kiszone (1 szt., 65 g) pokrój w kostkę.",
-        "Wymieszaj z majonezem (16 ml), posól i popieprz.",
-        "Do pojemnika, chleb (1 kromka, 35 g) osobno.",
-        "Przełóż do pojemnika „dziś 13:30 — drugi posiłek”.",
+        "Wyjmij wszystko na blat, zanim zaczniesz: banan 2 szt. (240 g), chleb pszenny 2 kromki (70 g), przyprawa do cynamonek / cynamon 2 g, dżem 70 g, jaja 1 szt. (55 g), mąka pszenna 25 g, marchew 40 g, masło 5 g, musztarda 1 łyżka (15 g), napój proteinowy müllermilch protein 1 butelka (400 ml), odżywka białkowa wpc 80 45 g, ogórek kiszony 100 g, orzechy / migdały 16 g, pomidor 1 szt. (120 g), proszek do pieczenia 2 g, ser żółty w plastrach 2 plastry (40 g), skyr waniliowy 1 kubek (150 g).",
+        "Przygotuj 3 pojemniki i opisz je karteczką: dziś 07:30 — śniadanie w pracy; dziś 10:30 — drugi posiłek; dziś 20:30 — kolacja.",
+        "▸ Shake białkowy z bananem",
+        "Do shakera wsyp odżywkę (30 g) i wlej ok. 350 ml zimnej wody. Zakręć i potrząsaj 20 sekund.",
+        "Banana (1 szt., 120 g) i orzechy (16 g) weź osobno — zjadasz obok shake'a.",
+        "Na zmianę: odżywkę wsyp do shakera już w domu, wodę dolejesz na miejscu. Nic się nie zepsuje.",
+        "Przełóż do pojemnika „dziś 10:30 — drugi posiłek”.",
+        "▸ Kanapki z serem, musztardą i kiszonym ogórkiem",
+        "Kromki chleba (2 kromki, 70 g) posmaruj cienko masłem (5 g), potem musztardą (1 łyżka, 15 g).",
+        "Ser (2 plastry, 40 g) rozłóż po równo na kromkach.",
+        "Ogórki kiszone (100 g) i pomidora (1 szt., 120 g) pokrój w plasterki i ułóż na serze.",
+        "Do boxa zawiń kanapki w folię.",
+        "Przełóż do pojemnika „dziś 20:30 — kolacja”.",
         "▸ Omlet marchewkowy z dżemem i bananem + napój proteinowy",
         "Marchew (40 g) obierz i zetrzyj na tarce na drobnych oczkach.",
         "Do miski wbij jajko (1 szt., 55 g), dodaj skyr (1 kubek, 150 g), mąkę (25 g), odżywkę (15 g), proszek do pieczenia (2 g) i przyprawę (2 g). Mieszaj łyżką ok. minuty, aż nie będzie grudek.",
@@ -258,19 +245,33 @@
         "Przewróć: zsuń omlet na talerz, przykryj go patelnią i odwróć razem z talerzem. Smaż jeszcze 3–4 minuty pod przykryciem.",
         "Przełóż na talerz, posmaruj dżemem (70 g) i ułóż banana (1 szt., 120 g) pokrojonego w plasterki. Do popicia napój proteinowy (1 butelka, 400 ml).",
         "Do pojemnika: na zimno smakuje jak ciasto marchewkowe — dżem i banana dołóż w osobnym pudełku, napój weź w butelce.",
-        "To zjadasz od razu, na koniec bloku.",
+        "Przełóż do pojemnika „dziś 07:30 — śniadanie w pracy”.",
         "▸ Na koniec: ciepłe pojemniki wystudź 20–30 minut bez pokrywki, potem wszystkie do lodówki na jedną półkę. Naczynia do zlewu, przetrzyj blat — 5 minut teraz oszczędza 20 jutro."
       ],
       "jak": "kuchnia",
-      "czas_min": 34
+      "czas_min": 21
     },
     {
-      "czas": "10:30",
-      "tytul": "Śniadanie po treningu",
-      "ikona": "🍳",
+      "czas": "05:25",
+      "tytul": "Wyjście z domu",
+      "ikona": "🚪",
+      "ping": true,
+      "opis": "Pojemniki z blatu do torby (śniadanie, drugi posiłek, obiad, kolacja), butelka wody 1,5 l, ładowarka. O 5:30 w samochodzie."
+    },
+    {
+      "czas": "07:00",
+      "tytul": "Początek służby",
+      "ikona": "🛡️",
+      "ping": false,
+      "opis": "Dziś bez treningu — jedyny dzień w cyklu, kiedy nie dźwigasz. Zadanie na dobę: jeść regularnie, wypić 3 l wody i przespać swoje drzemki."
+    },
+    {
+      "czas": "07:30",
+      "tytul": "Śniadanie w pracy",
+      "ikona": "🥪",
       "ping": true,
       "slot": "sniadanie",
-      "opis": "Pierwszy posiłek dnia — robisz go na końcu bloku kuchni i jesz od razu.",
+      "opis": "Z pojemnika zrobionego wczoraj w bloku kuchni.",
       "posilek": "Omlet marchewkowy z dżemem i bananem + napój proteinowy",
       "posilek_id": "q_omlet_marchewkowy",
       "porcja": 0.5,
@@ -375,6 +376,7 @@
       "jak": "przepis",
       "czas_min": 15,
       "kroki": [
+        "📦 To zrobiłeś w bloku kuchni (wczoraj o 09:30) — teraz tylko wyjmij pojemnik z lodówki. Przepis niżej, gdybyś robił na świeżo.",
         "Marchew (40 g) obierz i zetrzyj na tarce na drobnych oczkach.",
         "Do miski wbij jajko (1 szt., 55 g), dodaj skyr (1 kubek, 150 g), mąkę (25 g), odżywkę (15 g), proszek do pieczenia (2 g) i przyprawę (2 g). Mieszaj łyżką ok. minuty, aż nie będzie grudek.",
         "Wmieszaj marchewkę. Ciasto ma być gęste, jak na placki.",
@@ -387,7 +389,7 @@
       ]
     },
     {
-      "czas": "10:45",
+      "czas": "07:40",
       "tytul": "Suplementy — po śniadaniu",
       "ikona": "💊",
       "ping": true,
@@ -395,86 +397,74 @@
       "opis": "Z pierwszym posiłkiem, bo D3 i omega-3 wchłaniają się z tłuszczem."
     },
     {
-      "czas": "13:30",
+      "czas": "10:30",
       "tytul": "Drugi posiłek",
       "ikona": "🥪",
       "ping": true,
       "slot": "drugi",
-      "opis": "",
-      "posilek": "Sałatka jajeczna z kukurydzą i majonezem",
-      "posilek_id": "q_jajka_majonez",
+      "opis": "Z boxa. Nie odkładaj — po czterech godzinach głodu zawsze dojadasz byle czym z automatu.",
+      "posilek": "Shake białkowy z bananem",
+      "posilek_id": "q_shake",
       "porcja": 0.8,
       "makra": {
-        "kcal": 434,
-        "bialko": 20,
-        "tluszcz": 22,
-        "wegle": 36
+        "kcal": 320,
+        "bialko": 29,
+        "tluszcz": 11,
+        "wegle": 26
       },
       "skladniki": [
         {
-          "nazwa": "Jaja",
-          "ile": "2 szt. (110 g)",
-          "g": 110,
-          "kcal": 157,
-          "bialko": 13.9,
-          "tluszcz": 10.5,
-          "wegle": 0.8
+          "nazwa": "Odżywka białkowa WPC 80 (czekoladowa) — zapas, kupujesz osobno",
+          "ile": "30 g",
+          "g": 30,
+          "kcal": 112,
+          "bialko": 24.6,
+          "tluszcz": 1.4,
+          "wegle": 0.5
         },
         {
-          "nazwa": "Kukurydza konserwowa",
-          "ile": "120 g",
+          "nazwa": "Banan",
+          "ile": "1 szt. (120 g)",
           "g": 120,
-          "kcal": 98,
-          "bialko": 3.2,
-          "tluszcz": 1.6,
-          "wegle": 15.6
+          "kcal": 106,
+          "bialko": 1.3,
+          "tluszcz": 0.4,
+          "wegle": 24.2
         },
         {
-          "nazwa": "Majonez sriracha",
-          "ile": "16 ml",
+          "nazwa": "Orzechy / migdały",
+          "ile": "16 g",
           "g": 16,
-          "kcal": 83,
-          "bialko": 0.2,
-          "tluszcz": 8.5,
-          "wegle": 1.5
-        },
-        {
-          "nazwa": "Ogórek kiszony",
-          "ile": "1 szt. (65 g)",
-          "g": 65,
-          "kcal": 8,
-          "bialko": 0.3,
-          "tluszcz": 0.1,
-          "wegle": 1.3
-        },
-        {
-          "nazwa": "Chleb pszenny (zwykły biały)",
-          "ile": "1 kromka (35 g)",
-          "g": 35,
-          "kcal": 88,
-          "bialko": 2.8,
-          "tluszcz": 1.0,
-          "wegle": 16.4
+          "kcal": 102,
+          "bialko": 3.0,
+          "tluszcz": 9.1,
+          "wegle": 1.6
         }
       ],
       "jak": "przepis",
-      "czas_min": 12,
+      "czas_min": 2,
       "kroki": [
-        "📦 To zrobiłeś w bloku kuchni (dziś o 09:30) — teraz tylko wyjmij pojemnik z lodówki. Przepis niżej, gdybyś robił na świeżo.",
-        "Jajka na twardo: 9 minut od wrzenia, potem zimna woda i obierz. Pokrój w kostkę.",
-        "Kukurydzę (120 g) odsącz na sitku, ogórki kiszone (1 szt., 65 g) pokrój w kostkę.",
-        "Wymieszaj z majonezem (16 ml), posól i popieprz.",
-        "Do pojemnika, chleb (1 kromka, 35 g) osobno.",
+        "📦 To zrobiłeś w bloku kuchni (wczoraj o 09:30) — teraz tylko wyjmij pojemnik z lodówki. Przepis niżej, gdybyś robił na świeżo.",
+        "Do shakera wsyp odżywkę (30 g) i wlej ok. 350 ml zimnej wody. Zakręć i potrząsaj 20 sekund.",
+        "Banana (1 szt., 120 g) i orzechy (16 g) weź osobno — zjadasz obok shake'a.",
+        "Na zmianę: odżywkę wsyp do shakera już w domu, wodę dolejesz na miejscu. Nic się nie zepsuje.",
         "Wszystkie ilości w krokach są już przeliczone na Twoją porcję na dziś — nic nie musisz dzielić."
       ]
     },
     {
-      "czas": "16:00",
+      "czas": "12:00",
+      "tytul": "Rozruszaj się",
+      "ikona": "🤸",
+      "ping": true,
+      "opis": "5 minut: 10 przysiadów, krążenia ramion, rozciągnięcie karku. Plecy po staniu Ci podziękują."
+    },
+    {
+      "czas": "14:00",
       "tytul": "Obiad",
       "ikona": "🍽️",
       "ping": true,
       "slot": "obiad",
-      "opis": "Box z lodówki, mikrofala, zero roboty.",
+      "opis": "Główny box z lodówki — odgrzej w mikrofali.",
       "posilek": "Makaron z wołowiną i pieczarkami w sosie",
       "posilek_id": "b_pieczarkowy",
       "porcja": 1.0,
@@ -567,131 +557,97 @@
       ]
     },
     {
-      "czas": "18:00",
-      "tytul": "Rower — zone 2",
-      "ikona": "🚴",
+      "czas": "17:00",
+      "tytul": "Woda — kontrola",
+      "ikona": "💧",
       "ping": true,
-      "opis": "35–45 minut spokojnie: tempo, przy którym da się rozmawiać pełnymi zdaniami. To spala tłuszcz i nie zabiera sił na trening."
+      "opis": "Powinieneś mieć wypite ok. 2 l. Nadrabiaj teraz, nie w nocy — inaczej przedrzemiesz noc na chodzeniu do toalety."
     },
     {
-      "czas": "19:30",
+      "czas": "20:30",
       "tytul": "Kolacja",
       "ikona": "🌙",
       "ping": true,
       "slot": "kolacja",
-      "opis": "",
-      "posilek": "Sałatka z fetą, jajkiem i pomidorem + pieczywo",
-      "posilek_id": "q_salatka_feta",
+      "opis": "Ostatni posiłek na zmianie. Lekki, żeby nie leżeć z pełnym brzuchem przed pierwszą drzemką.",
+      "posilek": "Kanapki z serem, musztardą i kiszonym ogórkiem",
+      "posilek_id": "q_kanapki_ser",
       "porcja": 0.8,
       "makra": {
-        "kcal": 501,
-        "bialko": 28,
-        "tluszcz": 29,
-        "wegle": 28
+        "kcal": 402,
+        "bialko": 18,
+        "tluszcz": 18,
+        "wegle": 40
       },
       "skladniki": [
         {
-          "nazwa": "Ser feta",
-          "ile": "55 g",
-          "g": 55,
-          "kcal": 145,
-          "bialko": 7.8,
-          "tluszcz": 11.7,
-          "wegle": 0.6
+          "nazwa": "Chleb pszenny (zwykły biały)",
+          "ile": "2 kromki (70 g)",
+          "g": 70,
+          "kcal": 175,
+          "bialko": 5.6,
+          "tluszcz": 2.1,
+          "wegle": 32.9
         },
         {
-          "nazwa": "Jaja",
-          "ile": "2 szt. (110 g)",
-          "g": 110,
-          "kcal": 157,
-          "bialko": 13.9,
-          "tluszcz": 10.5,
-          "wegle": 0.8
+          "nazwa": "Ser żółty w plastrach",
+          "ile": "2 plastry (40 g)",
+          "g": 40,
+          "kcal": 140,
+          "bialko": 10.2,
+          "tluszcz": 10.8,
+          "wegle": 0.2
         },
         {
-          "nazwa": "Pomidor",
-          "ile": "180 g",
-          "g": 180,
-          "kcal": 32,
-          "bialko": 1.6,
-          "tluszcz": 0.4,
-          "wegle": 4.9
+          "nazwa": "Musztarda",
+          "ile": "1 łyżka (15 g)",
+          "g": 15,
+          "kcal": 16,
+          "bialko": 0.8,
+          "tluszcz": 0.9,
+          "wegle": 1.2
         },
         {
-          "nazwa": "Ogórek długi",
-          "ile": "150 g",
-          "g": 150,
-          "kcal": 21,
-          "bialko": 1.0,
+          "nazwa": "Ogórek kiszony",
+          "ile": "100 g",
+          "g": 98,
+          "kcal": 12,
+          "bialko": 0.5,
           "tluszcz": 0.2,
-          "wegle": 4.3
+          "wegle": 1.9
         },
         {
-          "nazwa": "Sałata / mix sałat",
-          "ile": "50 g",
-          "g": 50,
-          "kcal": 8,
-          "bialko": 0.7,
-          "tluszcz": 0.1,
-          "wegle": 0.8
-        },
-        {
-          "nazwa": "Oliwa z oliwek",
-          "ile": "6 ml",
-          "g": 6,
-          "kcal": 50,
+          "nazwa": "Masło",
+          "ile": "5 g",
+          "g": 5,
+          "kcal": 37,
           "bialko": 0.0,
-          "tluszcz": 5.5,
+          "tluszcz": 4.1,
           "wegle": 0.0
         },
         {
-          "nazwa": "Chleb pszenny (zwykły biały)",
-          "ile": "1 kromka (35 g)",
-          "g": 35,
-          "kcal": 88,
-          "bialko": 2.8,
-          "tluszcz": 1.0,
-          "wegle": 16.4
+          "nazwa": "Pomidor",
+          "ile": "1 szt. (120 g)",
+          "g": 120,
+          "kcal": 22,
+          "bialko": 1.1,
+          "tluszcz": 0.2,
+          "wegle": 3.2
         }
       ],
       "jak": "przepis",
-      "czas_min": 7,
+      "czas_min": 4,
       "kroki": [
-        "📦 To zrobiłeś w bloku kuchni (dziś o 09:30) — teraz tylko wyjmij pojemnik z lodówki. Przepis niżej, gdybyś robił na świeżo.",
-        "Jajka na twardo: w małym garnku zagotuj tyle wody, żeby przykryła jajka (2 szt., 110 g). Łyżką ostrożnie włóż jajka do wrzątku i gotuj 9 minut na średnim ogniu. Odlej wrzątek, zalej zimną wodą na 3 minuty i obierz ze skorupki.",
-        "Jajka pokrój na ćwiartki. Pomidory (180 g) i ogórka (150 g) umyj i pokrój w kostkę ok. 2 cm.",
-        "Sałatę (50 g) przełóż do miski lub pojemnika, na to pomidory, ogórka i jajka.",
-        "Fetę (55 g) pokrusz palcami na wierzch.",
-        "Polej oliwą (6 ml, ok. 1 łyżeczka), posyp szczyptą soli, pieprzu i oregano i wymieszaj delikatnie.",
-        "Do boxa: oliwę weź w małym słoiczku i polej dopiero przed jedzeniem. Chleb (1 kromka, 35 g) zapakuj osobno.",
+        "📦 To zrobiłeś w bloku kuchni (wczoraj o 09:30) — teraz tylko wyjmij pojemnik z lodówki. Przepis niżej, gdybyś robił na świeżo.",
+        "Kromki chleba (2 kromki, 70 g) posmaruj cienko masłem (5 g), potem musztardą (1 łyżka, 15 g).",
+        "Ser (2 plastry, 40 g) rozłóż po równo na kromkach.",
+        "Ogórki kiszone (100 g) i pomidora (1 szt., 120 g) pokrój w plasterki i ułóż na serze.",
+        "Do boxa zawiń kanapki w folię.",
         "Wszystkie ilości w krokach są już przeliczone na Twoją porcję na dziś — nic nie musisz dzielić."
       ]
     },
     {
-      "czas": "21:00",
-      "tytul": "Pojemniki na jutro — sprawdź",
-      "ikona": "📦",
-      "ping": true,
-      "akcja": "boxy",
-      "opis": "Wszystko zrobiłeś rano. Postaw 4 pojemniki na jutro razem na jednej półce w lodówce, żeby o 5:25 wziąć je jednym ruchem."
-    },
-    {
-      "czas": "21:30",
-      "tytul": "Telefon w dół + budzik",
-      "ikona": "📵",
-      "ping": true,
-      "akcja": "budzik",
-      "opis": "Jutro zmiana — to jest ten wieczór, którego nie można przespać po łebkach.",
-      "budzik": {
-        "godzina": "04:40",
-        "minut": 430,
-        "jutro": true,
-        "ile": "7 h 10 min",
-        "typ_docelowy": "ZMIANA 24h"
-      }
-    },
-    {
-      "czas": "21:30",
+      "czas": "22:10",
       "tytul": "Suplementy — wieczór",
       "ikona": "💊",
       "ping": true,
@@ -699,11 +655,18 @@
       "opis": "Magnez przed snem."
     },
     {
-      "czas": "22:00",
-      "tytul": "Sen",
+      "czas": "22:15",
+      "tytul": "Przygotuj się do nocy",
+      "ikona": "🤸",
+      "ping": true,
+      "opis": "5 minut rozciągania bioder i karku. Ustaw cztery budziki na końce drzemek: 23:59, 01:30, 03:00, 04:30."
+    },
+    {
+      "czas": "22:30",
+      "tytul": "Drzemka 1 z 4 — do 23:59",
       "ikona": "😴",
       "ping": true,
-      "opis": "Krótka noc przed zmianą, ale jak położysz się teraz, wstaniesz w miarę ludzko."
+      "opis": "Półtorej godziny to pełny cykl snu, dlatego po tej drzemce wstaniesz najmniej rozbity. Telefon ekranem w dół."
     }
   ],
   "zakupy": {
@@ -1168,10 +1131,6 @@
       "ilosc": 17,
       "do": "2027-04-05"
     },
-    "pomidor": {
-      "ilosc": 0.5,
-      "do": "2026-09-21"
-    },
     "dzem_niskoslodzony": {
       "ilosc": 115,
       "do": "2027-04-06"
@@ -1214,115 +1173,16 @@
     }
   },
   "trening": {
-    "rodzaj": "glowny",
+    "rodzaj": "zmiana",
     "trening": {
-      "id": "g_upper",
-      "nazwa": "Upper + Core — góra i brzuch",
-      "czas_min": 50,
-      "blok": "Blok 1 — Nauka ruchu",
-      "blok_opis": "Uczysz się ruchu, nie dźwigasz. Ciężar tak lekki, że mógłbyś zrobić jeszcze 3 powtórzenia. Ma ci się chcieć przyjść na następny trening.",
-      "zapas": "3 powtórzenia w zapasie",
-      "rozgrzewka": [
-        "5 minut: krążenia ramion i bioder, 15 przysiadów bez ciężaru, 10 pompek (mogą być na kolanach).",
-        "Przed pierwszym ćwiczeniem seria na pustej sztandze albo lekkich hantlach — 12 powtórzeń."
-      ],
-      "cwiczenia": [
-        {
-          "nazwa": "Wyciskanie hantli na ławce skośnej",
-          "powt": "10",
-          "wskazowka": "Ławka pod kątem ok. 30 stopni, łopatki ściągnięte. Hantle schodzą do poziomu klatki, łokcie ok. 45 stopni od tułowia. Góra klatki robi najwięcej w sylwetce.",
-          "latwiej": "Lżejsze hantle.",
-          "trudniej": "3 sekundy w dół.",
-          "serie": 3,
-          "przerwa": "90 s"
-        },
-        {
-          "nazwa": "Wiosłowanie sztangą podchwytem",
-          "powt": "10",
-          "przerwa": "90 s",
-          "v": true,
-          "wskazowka": "Chwyt podchwytem na szerokość barków, tułów pochylony ok. 45 stopni, plecy proste. Ciągniesz sztangę do brzucha, łokcie blisko ciała, na górze ściągasz łopatki. Podchwyt mocniej angażuje dolną część najszerszych i biceps.",
-          "latwiej": "Tułów wyżej, ok. 60 stopni, mniejszy ciężar.",
-          "trudniej": "Sekunda pauzy przy brzuchu.",
-          "serie": 3
-        },
-        {
-          "nazwa": "Uginanie ramion z hantlami",
-          "powt": "10",
-          "wskazowka": "Stojąc, dłonie do przodu (podchwyt), łokcie przy tułowiu i w miejscu. Unosisz oba hantle naraz albo na zmianę, opuszczasz wolniej, niż podnosisz.",
-          "latwiej": "Na zmianę, lżejsze hantle.",
-          "trudniej": "Na ławce skośnej, siedząc.",
-          "serie": 3,
-          "przerwa": "90 s"
-        },
-        {
-          "nazwa": "Prostowanie ramion z hantlem nad głową",
-          "powt": "12",
-          "przerwa": "90 s",
-          "wskazowka": "Jeden hantel oburącz nad głową. Łokcie blisko głowy i w miejscu, rusza się tylko przedramię. Triceps to dwie trzecie obwodu ramienia.",
-          "latwiej": "Lżejszy hantel, jedną ręką.",
-          "trudniej": "Wyciskanie francuskie sztangą EZ leżąc.",
-          "serie": 3
-        },
-        {
-          "nazwa": "Deska",
-          "powt": "45 s",
-          "przerwa": "90 s",
-          "wskazowka": "Przedramiona pod barkami, ciało w jednej linii od głowy do pięt, pośladki i brzuch napięte. Wpisujesz liczbę sekund.",
-          "latwiej": "Na kolanach.",
-          "trudniej": "Z uniesioną jedną nogą.",
-          "serie": 3,
-          "propozycja": {
-            "ciezar": 0.0,
-            "poprzedni": 0.0,
-            "powt": [
-              50,
-              60
-            ],
-            "data": "2026-09-18",
-            "podwyzka": 0.0
-          }
-        },
-        {
-          "nazwa": "Unoszenie nóg leżąc",
-          "powt": "12",
-          "przerwa": "90 s",
-          "wskazowka": "Leżysz na plecach, dłonie pod pośladkami, nogi proste albo lekko ugięte. Unosisz je do pionu i powoli opuszczasz, nie kładąc pięt na podłodze. Dolna część pleców dociśnięta do podłogi.",
-          "latwiej": "Kolana mocno ugięte.",
-          "trudniej": "Nogi całkiem proste, 3 sekundy w dół.",
-          "serie": 3,
-          "propozycja": {
-            "ciezar": 0.0,
-            "poprzedni": 0.0,
-            "powt": [
-              15,
-              15
-            ],
-            "data": "2026-09-18",
-            "podwyzka": 0.0
-          }
-        },
-        {
-          "nazwa": "Spięcia brzucha (brzuszki)",
-          "powt": "15",
-          "przerwa": "90 s",
-          "wskazowka": "Leżysz na plecach, kolana zgięte, stopy na podłodze, ręce skrzyżowane na klatce. Zwijasz tułów i odrywasz łopatki od podłogi na jakieś 10 cm — to cały ruch, plecy niżej zostają na ziemi. Broda odsunięta od klatki na szerokość pięści, nie ciągniesz głowy. Na górze zatrzymaj na sekundę i mocno napnij brzuch, potem powoli w dół. Tu poczujesz brzuch od pierwszej serii.",
-          "latwiej": "Mniejszy zakres, ręce wyciągnięte wzdłuż ciała.",
-          "trudniej": "Ręce przy skroniach albo hantel trzymany na klatce.",
-          "serie": 3,
-          "propozycja": {
-            "ciezar": 0.0,
-            "poprzedni": 0.0,
-            "powt": [
-              15,
-              15
-            ],
-            "data": "2026-09-20",
-            "podwyzka": 0.0
-          }
-        }
-      ],
-      "finisz": "Każda seria kończy się z zapasem: 3 powtórzenia w zapasie. Uczysz się ruchu, nie dźwigasz. Ciężar tak lekki, że mógłbyś zrobić jeszcze 3 powtórzenia. Ma ci się chcieć przyjść na następny trening."
+      "nazwa": "Dzień zmiany — bez treningu",
+      "zasada": "Na 24 h służbie nie trenujesz. Co 2–3 godziny wstań i przejdź się 5 minut, zrób 10 przysiadów i rozciągnij kark — to profilaktyka pleców, a nie trening.",
+      "mikro": [
+        "10 przysiadów bez ciężaru",
+        "10 krążeń ramion w tył",
+        "30 s rozciągania bioder na każdą nogę",
+        "Kark: głowa w tył i na boki po 15 s"
+      ]
     }
   },
   "nawyki": [
@@ -3341,8 +3201,8 @@
     "final": "2027-06-26",
     "final_nazwa": "Początek wakacji",
     "tydzien": 1,
-    "dzien": 5,
-    "dni_do_finalu": 278,
+    "dzien": 6,
+    "dni_do_finalu": 277,
     "faza": {
       "id": "F0",
       "nazwa": "Start",
@@ -3394,7 +3254,7 @@
       }
     ]
   },
-  "slowo": "Nie musisz być szybki. Musisz być uparty.",
+  "slowo": "Zrób pomiary. Za rok będziesz dziękował sobie za każdy centymetr, który dziś zapiszesz.",
   "analiza": {
     "pomiary": [],
     "sila": {
@@ -3619,594 +3479,8 @@
   "minimum": false,
   "dni": [
     {
-      "data": "2026-09-14",
-      "przesuniecie": -7,
-      "typ": 1,
-      "zrodlo": "zapis",
-      "nazwa_typu": "PO ZMIANIE",
-      "emoji": "😴",
-      "opis_typu": "Wracasz 7:30, śpisz do 13:00. Po wstaniu od razu trening, potem zakupy i gotowanie na 3 dni.",
-      "agenda": [
-        {
-          "czas": "00:10",
-          "tytul": "Drzemka 2 z 4 — do 01:30",
-          "ikona": "😴",
-          "ping": true,
-          "nastepny_dzien": true,
-          "opis": "Między drzemkami łyk wody. Nie sięgaj po telefon — światło ekranu kosztuje Cię zaśnięcie przy kolejnej."
-        },
-        {
-          "czas": "01:40",
-          "tytul": "Drzemka 3 z 4 — do 03:00",
-          "ikona": "😴",
-          "ping": true,
-          "nastepny_dzien": true,
-          "opis": "To najcięższa pora doby. Jak nie zaśniesz w 15 minut, po prostu leż z zamkniętymi oczami — to też się liczy."
-        },
-        {
-          "czas": "03:10",
-          "tytul": "Drzemka 4 z 4 — do 04:30",
-          "ikona": "😴",
-          "ping": true,
-          "nastepny_dzien": true,
-          "opis": "Ostatnia. Po niej już nie śpisz: woda, rozrusz się i spokojnie do końca służby."
-        },
-        {
-          "czas": "06:45",
-          "tytul": "Zdanie służby",
-          "ikona": "🏁",
-          "ping": true,
-          "nastepny_dzien": true,
-          "opis": "Za 15 minut kończysz. Lista zakupów czeka w panelu — prosto z pracy do Dino."
-        },
-        {
-          "czas": "07:10",
-          "tytul": "ZAKUPY w Dino",
-          "ikona": "🛒",
-          "ping": true,
-          "akcja": "zakupy",
-          "opis": "Prosto ze zmiany, zanim pójdziesz spać. Kupujesz tylko to, co jest na liście w panelu — resztę masz w lodówce. Po dobie na nogach łatwo wrzucić do koszyka coś słodkiego, więc trzymaj się listy. Mięso bierz świeżo mielone z lady."
-        },
-        {
-          "czas": "08:00",
-          "tytul": "Jesteś w domu",
-          "ikona": "🚿",
-          "ping": true,
-          "opis": "Zakupy do lodówki, prysznic, zasłoń okna. NIE siadaj do telefonu — po dobie na nogach jedno przewijanie kosztuje Cię godzinę snu."
-        },
-        {
-          "czas": "08:15",
-          "tytul": "Mały posiłek przed snem",
-          "ikona": "🥛",
-          "ping": true,
-          "slot": "sniadanie",
-          "opis": "Coś lekkiego i białkowego. Na pusty żołądek gorzej zaśniesz, na pełny obudzisz się rozbity.",
-          "posilek": "Jajka w sosie pomidorowym (shakshuka)",
-          "posilek_id": "q_shakshuka",
-          "porcja": 0.9,
-          "makra": {
-            "kcal": 511,
-            "bialko": 28,
-            "tluszcz": 24,
-            "wegle": 41
-          },
-          "skladniki": [
-            {
-              "nazwa": "Jaja",
-              "ile": "3 szt. (165 g)",
-              "g": 165,
-              "kcal": 236,
-              "bialko": 20.8,
-              "tluszcz": 15.7,
-              "wegle": 1.2
-            },
-            {
-              "nazwa": "Passata pomidorowa",
-              "ile": "180 g",
-              "g": 180,
-              "kcal": 56,
-              "bialko": 2.5,
-              "tluszcz": 0.4,
-              "wegle": 10.1
-            },
-            {
-              "nazwa": "Cebula",
-              "ile": "1 szt. (100 g)",
-              "g": 100,
-              "kcal": 40,
-              "bialko": 1.1,
-              "tluszcz": 0.1,
-              "wegle": 7.6
-            },
-            {
-              "nazwa": "Czosnek",
-              "ile": "1 ząbek (5 g)",
-              "g": 5,
-              "kcal": 7,
-              "bialko": 0.3,
-              "tluszcz": 0.0,
-              "wegle": 1.6
-            },
-            {
-              "nazwa": "Papryka",
-              "ile": "85 g",
-              "g": 85,
-              "kcal": 26,
-              "bialko": 0.8,
-              "tluszcz": 0.3,
-              "wegle": 3.9
-            },
-            {
-              "nazwa": "Chleb pszenny (zwykły biały)",
-              "ile": "1 kromka (35 g)",
-              "g": 35,
-              "kcal": 88,
-              "bialko": 2.8,
-              "tluszcz": 1.0,
-              "wegle": 16.4
-            },
-            {
-              "nazwa": "Olej rzepakowy",
-              "ile": "7 ml",
-              "g": 7,
-              "kcal": 58,
-              "bialko": 0.0,
-              "tluszcz": 6.4,
-              "wegle": 0.0
-            }
-          ],
-          "jak": "przepis",
-          "czas_min": 12,
-          "kroki": [
-            "Obierz cebulę (1 szt., 100 g) i pokrój w drobną kostkę. Paprykę (85 g) oczyść z pestek i pokrój w kostkę. Obierz czosnek (1 ząbek, 5 g) i posiekaj.",
-            "Patelnię postaw na średnim ogniu, wlej olej (7 ml, ok. 1,5 łyżeczki), po minucie wrzuć cebulę i paprykę. Smaż 5 minut, mieszając.",
-            "Dodaj czosnek, passatę (180 g), szczyptę soli i pieprzu oraz pół łyżeczki słodkiej papryki w proszku. Gotuj 3 minuty, mieszając.",
-            "Łyżką zrób w sosie tyle dołków, ile masz jajek (3 szt., 165 g), i wbij do każdego po jednym.",
-            "Przykryj pokrywką i gotuj 5 minut na małym ogniu, aż białka będą białe i ścięte, a żółtka jeszcze miękkie.",
-            "Jedz prosto z patelni, maczając chleb (1 kromka, 35 g).",
-            "Wszystkie ilości w krokach są już przeliczone na Twoją porcję na dziś — nic nie musisz dzielić."
-          ]
-        },
-        {
-          "czas": "08:20",
-          "tytul": "Suplementy — po śniadaniu",
-          "ikona": "💊",
-          "ping": true,
-          "akcja": "suple",
-          "opis": "Z pierwszym posiłkiem, bo D3 i omega-3 wchłaniają się z tłuszczem."
-        },
-        {
-          "czas": "08:30",
-          "tytul": "SEN — najważniejsza rzecz dziś",
-          "ikona": "😴",
-          "ping": true,
-          "akcja": "budzik",
-          "opis": "To Twój główny sen po dobie służby. Noc na czterech drzemkach go nie zastąpiła.",
-          "budzik": {
-            "godzina": "13:00",
-            "minut": 270,
-            "jutro": false,
-            "ile": "4 h 30 min",
-            "typ_docelowy": "PO ZMIANIE"
-          }
-        },
-        {
-          "czas": "13:00",
-          "tytul": "Pobudka",
-          "ikona": "⏰",
-          "ping": true,
-          "opis": "Toaleta, za 5 minut waga. Potem woda i suple. Bez telefonu — dziś zaczynasz od sztangi, nie od ekranu."
-        },
-        {
-          "czas": "13:05",
-          "tytul": "Waga",
-          "ikona": "⚖️",
-          "ping": true,
-          "akcja": "waga",
-          "opis": "Po toalecie, przed jedzeniem i piciem, w samej bieliźnie. Wpisz wynik w panelu — liczy się średnia z 7 dni, nie pojedynczy wynik."
-        },
-        {
-          "czas": "13:30",
-          "tytul": "Przed startem — bez treningu",
-          "ikona": "🩹",
-          "ping": false,
-          "akcja": null,
-          "opis": "Plan treningowy rusza 2026-09-17. Dziś tylko regeneracja."
-        },
-        {
-          "czas": "14:15",
-          "tytul": "KUCHNIA — godzina na gotowanie",
-          "ikona": "🍳",
-          "ping": true,
-          "akcja": "kuchnia",
-          "opis": "Przygotujesz: garnek: Gulasz wołowy z papryką + ziemniaki, Deser: czekoladowy pudding ze skyru z bananem, Sałatka z fetą, jajkiem i pomidorem + pieczywo. Potem do jutra tylko sięgasz do lodówki.",
-          "kroki": [
-            "Wyjmij wszystko na blat, zanim zaczniesz: banan 1 szt. (120 g), kostka bulionowa 2 kostki (20 g), cebula 2 szt. (200 g), chleb pszenny 1 kromka (35 g), ser feta 70 g, jaja 2 szt. (110 g), kakao naturalne 20 g, mąka pszenna 20 g, miód 30 g, ogórek długi 150 g, olej rzepakowy 20 ml, oliwa z oliwek 8 ml, papryka 3 szt. (510 g), passata pomidorowa 300 g, pomidor 2 szt. (240 g), przyprawy 1 porcja (2 g), sałata / mix sałat 60 g, skyr naturalny 3 kubki (450 g), wołowina z łopatki 600 g, ziemniaki 900 g.",
-            "Przygotuj 1 pojemnik i opisz je karteczką: dziś 20:30 — kolacja.",
-            "▸ Garnek: Gulasz wołowy z papryką + ziemniaki — zaczynasz od niego, bo najdłużej się gotuje.",
-            "Zanim zaczniesz: postaw na wadze kuchennej deskę do krojenia, na niej pusty duży garnek, i wpisz tę wagę w zakładce Gotuję → „Ile nałożyć na porcję” (pole „puste naczynie”). Na tej samej desce zważysz później naczynie z jedzeniem — deska chroni wagę przed gorącem.",
-            "Zważ też pustą dużą miskę na ugotowane ziemniaki i wpisz jej wagę w panelu przy „Ziemniaki”.",
-            "Mięso (600 g) osusz ręcznikiem papierowym i pokrój w kostkę ok. 2 × 2 cm, odcinając twarde białe błony. Po krojeniu mięsa umyj deskę, nóż i ręce ciepłą wodą z płynem.",
-            "Obierz cebulę (2 szt., 200 g), przekrój na pół i pokrój w cienkie piórka. Paprykę (3 szt., 510 g) przekrój, wytnij gniazdo z pestkami i pokrój w paski szerokości ok. 1 cm.",
-            "Garnek postaw na dużym ogniu (3/4 skali), wlej olej (20 ml, ok. 1,5 łyżki) i odczekaj 2 minuty. Wrzuć całe mięso i przez pierwsze 3 minuty nie mieszaj — ma się przyrumienić. Potem mieszaj i smaż jeszcze 3 minuty.",
-            "Zmniejsz ogień na średni. Dodaj cebulę i smaż 4 minuty, mieszając. Wsyp 1 łyżkę słodkiej papryki w proszku, pół łyżeczki soli i pół łyżeczki pieprzu, wymieszaj.",
-            "Wlej passatę (300 g) i 400 ml wody (2 szklanki), wrzuć kostki bulionowe (2 kostki, 20 g). Gdy zacznie bulgotać, zmniejsz ogień na najmniejszy, przykryj i gotuj 60 minut. Co 15 minut zamieszaj; jeśli płyn nie przykrywa mięsa, dolej 100 ml wody.",
-            "▸ Woda — postaw ją od razu, zanim zaczniesz resztę:",
-            "Jajka na twardo dla Sałatka z fetą, jajkiem i pomidorem + pieczywo (2 szt.) — razem 2 szt.: w małym garnku zagotuj wodę, łyżką włóż jajka, gotuj 9 minut na średnim ogniu, odlej wrzątek i zalej zimną wodą. Obierzesz je przy daniach.",
-            "▸ Kiedy garnek się gotuje, robisz resztę — od najczystszych produktów do tych, po których myjesz nóż i deskę:",
-            "▸ Sałatka z fetą, jajkiem i pomidorem + pieczywo",
-            "Weź 2 szt. ugotowanych jajek z garnka z zimną wodą.",
-            "Jajka pokrój na ćwiartki. Pomidory (2 szt., 240 g) i ogórka (150 g) umyj i pokrój w kostkę ok. 2 cm.",
-            "Sałatę (60 g) przełóż do miski lub pojemnika, na to pomidory, ogórka i jajka.",
-            "Fetę (70 g) pokrusz palcami na wierzch.",
-            "Polej oliwą (8 ml, ok. 1,5 łyżeczki), posyp szczyptą soli, pieprzu i oregano i wymieszaj delikatnie.",
-            "Do boxa: oliwę weź w małym słoiczku i polej dopiero przed jedzeniem. Chleb (1 kromka, 35 g) zapakuj osobno.",
-            "Przełóż do pojemnika „dziś 20:30 — kolacja”.",
-            "▸ Deser: czekoladowy pudding ze skyru z bananem",
-            "Skyr (3 kubki, 450 g) przełóż do miski. Dodaj kakao (20 g) i miód (30 g).",
-            "Mieszaj łyżką przez pełną minutę, aż nie będzie grudek kakao i krem będzie jednolicie brązowy.",
-            "Banana (1 szt., 120 g) obierz i pokrój w plasterki na wierzch.",
-            "To zjadasz od razu, na koniec bloku.",
-            "▸ Wróć do garnka: Gulasz wołowy z papryką + ziemniaki",
-            "Ziemniaki: obierz ziemniaki (900 g) obieraczką, większe przekrój na pół. Włóż do garnka, zalej zimną wodą tak, żeby je przykryła, dodaj 1 łyżeczkę soli i postaw na dużym ogniu. Gdy woda zacznie bulgotać, zmniejsz ogień na średni i gotuj 20 minut. Są gotowe, gdy nóż wchodzi w ziemniaka bez oporu. Odcedź na durszlaku.",
-            "Po 60 minutach dodaj paprykę i gotuj jeszcze 15 minut pod przykryciem. Mięso jest gotowe, gdy kawałek łatwo przetniesz łyżką.",
-            "Mąkę (20 g) wsyp do kubka, wlej 100 ml ZIMNEJ wody i rozmieszaj widelcem bez grudek. Wlej do gulaszu, cały czas mieszając, i gotuj 3 minuty, aż sos zgęstnieje.",
-            "Porcjowanie: przełóż ugotowane ziemniaki do zważonej miski i zważ ją. Zważ też garnek z gulaszem (na tej samej desce). Wpisz obie wagi w panelu — pokaże, ile gramów gulaszu i ile ziemniaków nałożyć do każdego pojemnika.",
-            "Do każdego z 3 pojemników nałóż wyliczone gramy: postaw pusty pojemnik na wadze, wciśnij TARA (waga pokaże 0) i nakładaj, aż dojdziesz do liczby z panelu. Zostaw pojemniki otwarte na 20–30 minut, żeby wystygły, potem zamknij i wstaw do lodówki. Każdy pojemnik to dokładnie jedna porcja z Twojego planu.",
-            "▸ Na koniec: ciepłe pojemniki wystudź 20–30 minut bez pokrywki, potem wszystkie do lodówki na jedną półkę. Naczynia do zlewu, przetrzyj blat — 5 minut teraz oszczędza 20 jutro."
-          ],
-          "jak": "kuchnia",
-          "czas_min": 31
-        },
-        {
-          "czas": "15:15",
-          "tytul": "Posiłek po treningu",
-          "ikona": "🍽️",
-          "ping": true,
-          "slot": "drugi",
-          "opis": "Pierwszy porządny posiłek dnia — robisz go na końcu bloku kuchni i jesz od razu.",
-          "posilek": "Deser: czekoladowy pudding ze skyru z bananem",
-          "posilek_id": "d_pudding",
-          "porcja": 1.3,
-          "makra": {
-            "kcal": 561,
-            "bialko": 58,
-            "tluszcz": 5,
-            "wegle": 69
-          },
-          "skladniki": [
-            {
-              "nazwa": "Skyr naturalny (kubek 150 g)",
-              "ile": "3 kubki (450 g)",
-              "g": 450,
-              "kcal": 288,
-              "bialko": 51.8,
-              "tluszcz": 0.9,
-              "wegle": 17.1
-            },
-            {
-              "nazwa": "Kakao naturalne (bez cukru)",
-              "ile": "20 g",
-              "g": 20,
-              "kcal": 76,
-              "bialko": 4.4,
-              "tluszcz": 4.0,
-              "wegle": 2.6
-            },
-            {
-              "nazwa": "Miód",
-              "ile": "30 g",
-              "g": 30,
-              "kcal": 91,
-              "bialko": 0.1,
-              "tluszcz": 0.0,
-              "wegle": 24.6
-            },
-            {
-              "nazwa": "Banan",
-              "ile": "1 szt. (120 g)",
-              "g": 120,
-              "kcal": 106,
-              "bialko": 1.3,
-              "tluszcz": 0.4,
-              "wegle": 24.2
-            }
-          ],
-          "jak": "przepis",
-          "czas_min": 4,
-          "kroki": [
-            "Skyr (3 kubki, 450 g) przełóż do miski. Dodaj kakao (20 g) i miód (30 g).",
-            "Mieszaj łyżką przez pełną minutę, aż nie będzie grudek kakao i krem będzie jednolicie brązowy.",
-            "Banana (1 szt., 120 g) obierz i pokrój w plasterki na wierzch.",
-            "Wszystkie ilości w krokach są już przeliczone na Twoją porcję na dziś — nic nie musisz dzielić."
-          ]
-        },
-        {
-          "czas": "15:45",
-          "tytul": "Podsumowanie cyklu",
-          "ikona": "📊",
-          "ping": true,
-          "akcja": "podsumowanie",
-          "opis": "Trzy dni za Tobą. Zanim staniesz do garów, zobacz, co z nich wyszło."
-        },
-        {
-          "czas": "18:15",
-          "tytul": "Obiad",
-          "ikona": "🍲",
-          "ping": true,
-          "slot": "obiad",
-          "opis": "Z garnka ugotowanego w bloku kuchni (albo z pojemnika) — odgrzej i jedz.",
-          "posilek": "Gulasz wołowy z papryką + ziemniaki",
-          "posilek_id": "b_gulasz",
-          "porcja": 1.0,
-          "makra": {
-            "kcal": 756,
-            "bialko": 51,
-            "tluszcz": 27,
-            "wegle": 74
-          },
-          "skladniki": [
-            {
-              "nazwa": "Wołowina z łopatki (z lady)",
-              "ile": "200 g",
-              "g": 200,
-              "kcal": 320,
-              "bialko": 40.0,
-              "tluszcz": 18.0,
-              "wegle": 0.0
-            },
-            {
-              "nazwa": "Ziemniaki",
-              "ile": "300 g",
-              "g": 300,
-              "kcal": 231,
-              "bialko": 6.0,
-              "tluszcz": 0.3,
-              "wegle": 49.5
-            },
-            {
-              "nazwa": "Papryka",
-              "ile": "1 szt. (170 g)",
-              "g": 170,
-              "kcal": 53,
-              "bialko": 1.7,
-              "tluszcz": 0.5,
-              "wegle": 7.8
-            },
-            {
-              "nazwa": "Cebula",
-              "ile": "65 g",
-              "g": 67,
-              "kcal": 27,
-              "bialko": 0.7,
-              "tluszcz": 0.1,
-              "wegle": 5.1
-            },
-            {
-              "nazwa": "Passata pomidorowa",
-              "ile": "100 g",
-              "g": 100,
-              "kcal": 31,
-              "bialko": 1.4,
-              "tluszcz": 0.2,
-              "wegle": 5.6
-            },
-            {
-              "nazwa": "Kostka bulionowa",
-              "ile": "7 g",
-              "g": 7,
-              "kcal": 17,
-              "bialko": 0.5,
-              "tluszcz": 1.3,
-              "wegle": 1.0
-            },
-            {
-              "nazwa": "Mąka pszenna",
-              "ile": "7 g",
-              "g": 7,
-              "kcal": 23,
-              "bialko": 0.7,
-              "tluszcz": 0.1,
-              "wegle": 4.7
-            },
-            {
-              "nazwa": "Olej rzepakowy",
-              "ile": "7 ml",
-              "g": 7,
-              "kcal": 55,
-              "bialko": 0.0,
-              "tluszcz": 6.1,
-              "wegle": 0.0
-            }
-          ],
-          "jak": "gotowanie",
-          "czas_min": 95,
-          "kroki": [
-            "To przepis na cały garnek — 3 porcje, obiady na 3 dni. Ilości w krokach są na cały garnek.",
-            "Zanim zaczniesz: postaw na wadze kuchennej deskę do krojenia, na niej pusty duży garnek, i wpisz tę wagę w zakładce Gotuję → „Ile nałożyć na porcję” (pole „puste naczynie”). Na tej samej desce zważysz później naczynie z jedzeniem — deska chroni wagę przed gorącem.",
-            "Zważ też pustą dużą miskę na ugotowane ziemniaki i wpisz jej wagę w panelu przy „Ziemniaki”.",
-            "Mięso (600 g) osusz ręcznikiem papierowym i pokrój w kostkę ok. 2 × 2 cm, odcinając twarde białe błony. Po krojeniu mięsa umyj deskę, nóż i ręce ciepłą wodą z płynem.",
-            "Obierz cebulę (2 szt., 200 g), przekrój na pół i pokrój w cienkie piórka. Paprykę (3 szt., 510 g) przekrój, wytnij gniazdo z pestkami i pokrój w paski szerokości ok. 1 cm.",
-            "Garnek postaw na dużym ogniu (3/4 skali), wlej olej (20 ml, ok. 1,5 łyżki) i odczekaj 2 minuty. Wrzuć całe mięso i przez pierwsze 3 minuty nie mieszaj — ma się przyrumienić. Potem mieszaj i smaż jeszcze 3 minuty.",
-            "Zmniejsz ogień na średni. Dodaj cebulę i smaż 4 minuty, mieszając. Wsyp 1 łyżkę słodkiej papryki w proszku, pół łyżeczki soli i pół łyżeczki pieprzu, wymieszaj.",
-            "Wlej passatę (300 g) i 400 ml wody (2 szklanki), wrzuć kostki bulionowe (2 kostki, 20 g). Gdy zacznie bulgotać, zmniejsz ogień na najmniejszy, przykryj i gotuj 60 minut. Co 15 minut zamieszaj; jeśli płyn nie przykrywa mięsa, dolej 100 ml wody.",
-            "Ziemniaki: obierz ziemniaki (900 g) obieraczką, większe przekrój na pół. Włóż do garnka, zalej zimną wodą tak, żeby je przykryła, dodaj 1 łyżeczkę soli i postaw na dużym ogniu. Gdy woda zacznie bulgotać, zmniejsz ogień na średni i gotuj 20 minut. Są gotowe, gdy nóż wchodzi w ziemniaka bez oporu. Odcedź na durszlaku.",
-            "Po 60 minutach dodaj paprykę i gotuj jeszcze 15 minut pod przykryciem. Mięso jest gotowe, gdy kawałek łatwo przetniesz łyżką.",
-            "Mąkę (20 g) wsyp do kubka, wlej 100 ml ZIMNEJ wody i rozmieszaj widelcem bez grudek. Wlej do gulaszu, cały czas mieszając, i gotuj 3 minuty, aż sos zgęstnieje.",
-            "Porcjowanie: przełóż ugotowane ziemniaki do zważonej miski i zważ ją. Zważ też garnek z gulaszem (na tej samej desce). Wpisz obie wagi w panelu — pokaże, ile gramów gulaszu i ile ziemniaków nałożyć do każdego pojemnika.",
-            "Do każdego z 3 pojemników nałóż wyliczone gramy: postaw pusty pojemnik na wadze, wciśnij TARA (waga pokaże 0) i nakładaj, aż dojdziesz do liczby z panelu. Zostaw pojemniki otwarte na 20–30 minut, żeby wystygły, potem zamknij i wstaw do lodówki. Każdy pojemnik to dokładnie jedna porcja z Twojego planu."
-          ]
-        },
-        {
-          "czas": "20:30",
-          "tytul": "Kolacja",
-          "ikona": "🌙",
-          "ping": true,
-          "slot": "kolacja",
-          "opis": "",
-          "posilek": "Sałatka z fetą, jajkiem i pomidorem + pieczywo",
-          "posilek_id": "q_salatka_feta",
-          "porcja": 1.0,
-          "makra": {
-            "kcal": 569,
-            "bialko": 31,
-            "tluszcz": 35,
-            "wegle": 30
-          },
-          "skladniki": [
-            {
-              "nazwa": "Ser feta",
-              "ile": "70 g",
-              "g": 70,
-              "kcal": 185,
-              "bialko": 9.9,
-              "tluszcz": 14.9,
-              "wegle": 0.7
-            },
-            {
-              "nazwa": "Jaja",
-              "ile": "2 szt. (110 g)",
-              "g": 110,
-              "kcal": 157,
-              "bialko": 13.9,
-              "tluszcz": 10.5,
-              "wegle": 0.8
-            },
-            {
-              "nazwa": "Pomidor",
-              "ile": "2 szt. (240 g)",
-              "g": 240,
-              "kcal": 43,
-              "bialko": 2.2,
-              "tluszcz": 0.5,
-              "wegle": 6.5
-            },
-            {
-              "nazwa": "Ogórek długi",
-              "ile": "150 g",
-              "g": 150,
-              "kcal": 21,
-              "bialko": 1.0,
-              "tluszcz": 0.2,
-              "wegle": 4.3
-            },
-            {
-              "nazwa": "Sałata / mix sałat",
-              "ile": "60 g",
-              "g": 60,
-              "kcal": 9,
-              "bialko": 0.8,
-              "tluszcz": 0.1,
-              "wegle": 1.0
-            },
-            {
-              "nazwa": "Oliwa z oliwek",
-              "ile": "8 ml",
-              "g": 8,
-              "kcal": 66,
-              "bialko": 0.0,
-              "tluszcz": 7.4,
-              "wegle": 0.0
-            },
-            {
-              "nazwa": "Chleb pszenny (zwykły biały)",
-              "ile": "1 kromka (35 g)",
-              "g": 35,
-              "kcal": 88,
-              "bialko": 2.8,
-              "tluszcz": 1.0,
-              "wegle": 16.4
-            }
-          ],
-          "jak": "przepis",
-          "czas_min": 7,
-          "kroki": [
-            "📦 To zrobiłeś w bloku kuchni (dziś o 14:15) — teraz tylko wyjmij pojemnik z lodówki. Przepis niżej, gdybyś robił na świeżo.",
-            "Jajka na twardo: w małym garnku zagotuj tyle wody, żeby przykryła jajka (2 szt., 110 g). Łyżką ostrożnie włóż jajka do wrzątku i gotuj 9 minut na średnim ogniu. Odlej wrzątek, zalej zimną wodą na 3 minuty i obierz ze skorupki.",
-            "Jajka pokrój na ćwiartki. Pomidory (2 szt., 240 g) i ogórka (150 g) umyj i pokrój w kostkę ok. 2 cm.",
-            "Sałatę (60 g) przełóż do miski lub pojemnika, na to pomidory, ogórka i jajka.",
-            "Fetę (70 g) pokrusz palcami na wierzch.",
-            "Polej oliwą (8 ml, ok. 1,5 łyżeczki), posyp szczyptą soli, pieprzu i oregano i wymieszaj delikatnie.",
-            "Do boxa: oliwę weź w małym słoiczku i polej dopiero przed jedzeniem. Chleb (1 kromka, 35 g) zapakuj osobno.",
-            "Wszystkie ilości w krokach są już przeliczone na Twoją porcję na dziś — nic nie musisz dzielić."
-          ]
-        },
-        {
-          "czas": "22:00",
-          "tytul": "Odkładasz telefon",
-          "ikona": "📵",
-          "ping": true,
-          "opis": "Ekran w dół. Za 30 minut śpisz i to Ci resetuje rytm po zmianie."
-        },
-        {
-          "czas": "22:00",
-          "tytul": "Suplementy — wieczór",
-          "ikona": "💊",
-          "ping": true,
-          "akcja": "suple_wieczor",
-          "opis": "Magnez przed snem."
-        },
-        {
-          "czas": "22:30",
-          "tytul": "Sen",
-          "ikona": "😴",
-          "ping": true,
-          "akcja": "budzik",
-          "opis": "Długa noc jednym ciągiem — po dobie na drzemkach jest Ci potrzebna.",
-          "budzik": {
-            "godzina": "08:00",
-            "minut": 570,
-            "jutro": true,
-            "ile": "9 h 30 min",
-            "typ_docelowy": "WOLNE"
-          }
-        }
-      ],
-      "makra": {
-        "kcal": 2397,
-        "bialko": 168,
-        "tluszcz": 91,
-        "wegle": 214
-      },
-      "dobitka": 0,
-      "dodatek_w": [],
-      "poza_planem": [],
-      "lzejszy": false,
-      "cel": {
-        "kcal": 2400,
-        "bialko": 160,
-        "tluszcz": 80,
-        "wegle": 260
-      },
-      "slowo": "Nie ważysz się, żeby się ocenić. Ważysz się, żeby system wiedział, jak ci pomóc.",
-      "faza": "Przed startem",
-      "tydzien": 0,
-      "nadwyzka": 0,
-      "odhaczone": {},
-      "waga": null,
-      "kroki": {
-        "data": "2026-09-14",
-        "kroki": 4468,
-        "cel": 3500,
-        "status": "ok"
-      },
-      "serie": [],
-      "trening": {
-        "rodzaj": "przedstart",
-        "trening": {
-          "nazwa": "Przed startem — gojenie",
-          "zasada": "Plan treningowy zaczyna się 17 września. Do tego czasu wracasz do zdrowia po zabiegu: bez treningu, bez deficytu, dużo snu.",
-          "mikro": [
-            "Spokojny spacer, jeśli czujesz się dobrze",
-            "Dużo płynów",
-            "Zakup taśmy krawieckiej do pomiarów"
-          ]
-        }
-      }
-    },
-    {
       "data": "2026-09-15",
-      "przesuniecie": -6,
+      "przesuniecie": -7,
       "typ": 2,
       "zrodlo": "zapis",
       "nazwa_typu": "WOLNE",
@@ -4687,7 +3961,7 @@
     },
     {
       "data": "2026-09-16",
-      "przesuniecie": -5,
+      "przesuniecie": -6,
       "typ": 0,
       "zrodlo": "zapis",
       "nazwa_typu": "ZMIANA 24h",
@@ -5198,7 +4472,7 @@
     },
     {
       "data": "2026-09-17",
-      "przesuniecie": -4,
+      "przesuniecie": -5,
       "typ": 1,
       "zrodlo": "zapis",
       "nazwa_typu": "PO ZMIANIE",
@@ -5708,7 +4982,7 @@
     },
     {
       "data": "2026-09-18",
-      "przesuniecie": -3,
+      "przesuniecie": -4,
       "typ": 2,
       "zrodlo": "zapis",
       "nazwa_typu": "WOLNE",
@@ -6296,7 +5570,7 @@
     },
     {
       "data": "2026-09-19",
-      "przesuniecie": -2,
+      "przesuniecie": -3,
       "typ": 0,
       "zrodlo": "zapis",
       "nazwa_typu": "ZMIANA 24h",
@@ -6802,7 +6076,7 @@
     },
     {
       "data": "2026-09-20",
-      "przesuniecie": -1,
+      "przesuniecie": -2,
       "typ": 1,
       "zrodlo": "zapis",
       "nazwa_typu": "PO ZMIANIE",
@@ -7457,9 +6731,9 @@
     },
     {
       "data": "2026-09-21",
-      "przesuniecie": 0,
+      "przesuniecie": -1,
       "typ": 2,
-      "zrodlo": "dzis",
+      "zrodlo": "zapis",
       "nazwa_typu": "WOLNE",
       "emoji": "💪",
       "opis_typu": "Pełny dzień w domu. Trening na starcie dnia, wieczorem pakujesz boxy na jutrzejszą zmianę.",
@@ -8109,9 +7383,9 @@
     },
     {
       "data": "2026-09-22",
-      "przesuniecie": 1,
+      "przesuniecie": 0,
       "typ": 0,
-      "zrodlo": "plan",
+      "zrodlo": "dzis",
       "nazwa_typu": "ZMIANA 24h",
       "emoji": "🛡️",
       "opis_typu": "Służba 07:00–07:00. Jesz wyłącznie z boxów spakowanych wczoraj. W nocy 4 drzemki po 1 h 20.",
@@ -8625,7 +7899,7 @@
     },
     {
       "data": "2026-09-23",
-      "przesuniecie": 2,
+      "przesuniecie": 1,
       "typ": 1,
       "zrodlo": "prognoza",
       "nazwa_typu": "PO ZMIANIE",
@@ -9271,7 +8545,7 @@
     },
     {
       "data": "2026-09-24",
-      "przesuniecie": 3,
+      "przesuniecie": 2,
       "typ": 2,
       "zrodlo": "prognoza",
       "nazwa_typu": "WOLNE",
@@ -9835,7 +9109,7 @@
     },
     {
       "data": "2026-09-25",
-      "przesuniecie": 4,
+      "przesuniecie": 3,
       "typ": 0,
       "zrodlo": "prognoza",
       "nazwa_typu": "ZMIANA 24h",
@@ -10395,7 +9669,7 @@
     },
     {
       "data": "2026-09-26",
-      "przesuniecie": 5,
+      "przesuniecie": 4,
       "typ": 1,
       "zrodlo": "prognoza",
       "nazwa_typu": "PO ZMIANIE",
@@ -11031,7 +10305,7 @@
     },
     {
       "data": "2026-09-27",
-      "przesuniecie": 6,
+      "przesuniecie": 5,
       "typ": 2,
       "zrodlo": "prognoza",
       "nazwa_typu": "WOLNE",
@@ -11621,6 +10895,502 @@
             }
           ],
           "finisz": "Każda seria kończy się z zapasem: 3 powtórzenia w zapasie. Uczysz się ruchu, nie dźwigasz. Ciężar tak lekki, że mógłbyś zrobić jeszcze 3 powtórzenia. Ma ci się chcieć przyjść na następny trening."
+        }
+      }
+    },
+    {
+      "data": "2026-09-28",
+      "przesuniecie": 6,
+      "typ": 0,
+      "zrodlo": "prognoza",
+      "nazwa_typu": "ZMIANA 24h",
+      "emoji": "🛡️",
+      "opis_typu": "Służba 07:00–07:00. Jesz wyłącznie z boxów spakowanych wczoraj. W nocy 4 drzemki po 1 h 20.",
+      "agenda": [
+        {
+          "czas": "04:40",
+          "tytul": "Pobudka",
+          "ikona": "⏰",
+          "ping": true,
+          "opis": "Toaleta — za 5 minut waga, więc jeszcze nic nie pij. Potem 20 minut w kuchni i o 5:30 jedziesz."
+        },
+        {
+          "czas": "04:45",
+          "tytul": "Waga",
+          "ikona": "⚖️",
+          "ping": true,
+          "akcja": "waga",
+          "opis": "Po toalecie, przed jedzeniem i piciem, w samej bieliźnie. Wpisz wynik w panelu — liczy się średnia z 7 dni, nie pojedynczy wynik."
+        },
+        {
+          "czas": "04:50",
+          "tytul": "KUCHNIA — 20 minut",
+          "ikona": "🍳",
+          "ping": true,
+          "akcja": "kuchnia",
+          "opis": "Przygotujesz: Twaróg z bananem i miodem, Sałatka z fetą, jajkiem i pomidorem + pieczywo, Deser: twarożek kakaowy z masłem orzechowym. Potem do jutra tylko sięgasz do lodówki.",
+          "kroki": [
+            "Wyjmij wszystko na blat, zanim zaczniesz: banan 1 szt. (120 g), chleb pszenny 1 kromka (35 g), ser feta 65 g, jaja 2 szt. (110 g), kakao naturalne 1 łyżka (8 g), masło orzechowe 100% 1 łyżka (16 g), miód 50 g, mleko 2% 95 ml, ogórek długi 150 g, oliwa z oliwek 7 ml, orzechy / migdały 13 g, pomidor 2 szt. (240 g), przyprawy 1 porcja (2 g), sałata / mix sałat 55 g, twaróg półtłusty 395 g.",
+            "Przygotuj 3 pojemniki i opisz je karteczką: dziś 07:30 — śniadanie w pracy; dziś 10:30 — drugi posiłek; dziś 20:30 — kolacja.",
+            "▸ Woda — postaw ją od razu, zanim zaczniesz resztę:",
+            "Jajka na twardo dla Sałatka z fetą, jajkiem i pomidorem + pieczywo (2 szt.) — razem 2 szt.: w małym garnku zagotuj wodę, łyżką włóż jajka, gotuj 9 minut na średnim ogniu, odlej wrzątek i zalej zimną wodą. Obierzesz je przy daniach.",
+            "▸ Twaróg z bananem i miodem",
+            "Twaróg (235 g) włóż do miski, dolej mleko (65 ml) i rozgniataj widelcem ok. minuty na krem.",
+            "Banana (1 szt., 120 g) obierz i pokrój w plasterki na wierzch.",
+            "Polej miodem (30 g) i posyp orzechami (13 g).",
+            "Na zmianę: wszystko do zakręcanego pojemnika, banana weź w całości i pokrój przy jedzeniu.",
+            "Przełóż do pojemnika „dziś 07:30 — śniadanie w pracy”.",
+            "▸ Deser: twarożek kakaowy z masłem orzechowym",
+            "Twaróg (160 g) włóż do miski, dolej mleko (30 ml) i rozgniataj widelcem ok. minuty na krem.",
+            "Dodaj kakao (1 łyżka, 8 g) i miód (1 łyżka, 20 g) i mieszaj, aż kolor będzie jednolity.",
+            "Na wierzch nałóż masło orzechowe (1 łyżka, 16 g).",
+            "Przełóż do pojemnika „dziś 20:30 — kolacja”.",
+            "▸ Sałatka z fetą, jajkiem i pomidorem + pieczywo",
+            "Weź 2 szt. ugotowanych jajek z garnka z zimną wodą.",
+            "Jajka pokrój na ćwiartki. Pomidory (2 szt., 240 g) i ogórka (150 g) umyj i pokrój w kostkę ok. 2 cm.",
+            "Sałatę (55 g) przełóż do miski lub pojemnika, na to pomidory, ogórka i jajka.",
+            "Fetę (65 g) pokrusz palcami na wierzch.",
+            "Polej oliwą (7 ml, ok. 1,5 łyżeczki), posyp szczyptą soli, pieprzu i oregano i wymieszaj delikatnie.",
+            "Do boxa: oliwę weź w małym słoiczku i polej dopiero przed jedzeniem. Chleb (1 kromka, 35 g) zapakuj osobno.",
+            "Przełóż do pojemnika „dziś 10:30 — drugi posiłek”.",
+            "▸ Na koniec: ciepłe pojemniki wystudź 20–30 minut bez pokrywki, potem wszystkie do lodówki na jedną półkę. Naczynia do zlewu, przetrzyj blat — 5 minut teraz oszczędza 20 jutro."
+          ],
+          "jak": "kuchnia",
+          "czas_min": 15
+        },
+        {
+          "czas": "05:25",
+          "tytul": "Wyjście z domu",
+          "ikona": "🚪",
+          "ping": true,
+          "opis": "Pojemniki z blatu do torby (śniadanie, drugi posiłek, obiad, kolacja), butelka wody 1,5 l, ładowarka. O 5:30 w samochodzie."
+        },
+        {
+          "czas": "07:00",
+          "tytul": "Początek służby",
+          "ikona": "🛡️",
+          "ping": false,
+          "opis": "Dziś bez treningu — jedyny dzień w cyklu, kiedy nie dźwigasz. Zadanie na dobę: jeść regularnie, wypić 3 l wody i przespać swoje drzemki."
+        },
+        {
+          "czas": "07:30",
+          "tytul": "Śniadanie w pracy",
+          "ikona": "🥪",
+          "ping": true,
+          "slot": "sniadanie",
+          "opis": "Z pojemnika zrobionego wczoraj w bloku kuchni.",
+          "posilek": "Twaróg z bananem i miodem",
+          "posilek_id": "q_twarog_banan",
+          "porcja": 1.3,
+          "makra": {
+            "kcal": 625,
+            "bialko": 50,
+            "tluszcz": 20,
+            "wegle": 62
+          },
+          "skladniki": [
+            {
+              "nazwa": "Twaróg półtłusty",
+              "ile": "235 g",
+              "g": 235,
+              "kcal": 313,
+              "bialko": 43.9,
+              "tluszcz": 11.0,
+              "wegle": 8.7
+            },
+            {
+              "nazwa": "Banan",
+              "ile": "1 szt. (120 g)",
+              "g": 120,
+              "kcal": 106,
+              "bialko": 1.3,
+              "tluszcz": 0.4,
+              "wegle": 24.2
+            },
+            {
+              "nazwa": "Miód",
+              "ile": "30 g",
+              "g": 30,
+              "kcal": 91,
+              "bialko": 0.1,
+              "tluszcz": 0.0,
+              "wegle": 24.6
+            },
+            {
+              "nazwa": "Orzechy / migdały",
+              "ile": "13 g",
+              "g": 13,
+              "kcal": 83,
+              "bialko": 2.5,
+              "tluszcz": 7.4,
+              "wegle": 1.3
+            },
+            {
+              "nazwa": "Mleko 2%",
+              "ile": "65 ml",
+              "g": 65,
+              "kcal": 32,
+              "bialko": 2.1,
+              "tluszcz": 1.3,
+              "wegle": 3.1
+            }
+          ],
+          "jak": "przepis",
+          "czas_min": 4,
+          "kroki": [
+            "📦 To zrobiłeś w bloku kuchni (wczoraj o 09:30) — teraz tylko wyjmij pojemnik z lodówki. Przepis niżej, gdybyś robił na świeżo.",
+            "Twaróg (235 g) włóż do miski, dolej mleko (65 ml) i rozgniataj widelcem ok. minuty na krem.",
+            "Banana (1 szt., 120 g) obierz i pokrój w plasterki na wierzch.",
+            "Polej miodem (30 g) i posyp orzechami (13 g).",
+            "Na zmianę: wszystko do zakręcanego pojemnika, banana weź w całości i pokrój przy jedzeniu.",
+            "Wszystkie ilości w krokach są już przeliczone na Twoją porcję na dziś — nic nie musisz dzielić."
+          ]
+        },
+        {
+          "czas": "07:40",
+          "tytul": "Suplementy — po śniadaniu",
+          "ikona": "💊",
+          "ping": true,
+          "akcja": "suple",
+          "opis": "Z pierwszym posiłkiem, bo D3 i omega-3 wchłaniają się z tłuszczem."
+        },
+        {
+          "czas": "10:30",
+          "tytul": "Drugi posiłek",
+          "ikona": "🥪",
+          "ping": true,
+          "slot": "drugi",
+          "opis": "Z boxa. Nie odkładaj — po czterech godzinach głodu zawsze dojadasz byle czym z automatu.",
+          "posilek": "Sałatka z fetą, jajkiem i pomidorem + pieczywo",
+          "posilek_id": "q_salatka_feta",
+          "porcja": 0.9,
+          "makra": {
+            "kcal": 547,
+            "bialko": 30,
+            "tluszcz": 33,
+            "wegle": 30
+          },
+          "skladniki": [
+            {
+              "nazwa": "Ser feta",
+              "ile": "65 g",
+              "g": 65,
+              "kcal": 172,
+              "bialko": 9.2,
+              "tluszcz": 13.8,
+              "wegle": 0.7
+            },
+            {
+              "nazwa": "Jaja",
+              "ile": "2 szt. (110 g)",
+              "g": 110,
+              "kcal": 157,
+              "bialko": 13.9,
+              "tluszcz": 10.5,
+              "wegle": 0.8
+            },
+            {
+              "nazwa": "Pomidor",
+              "ile": "2 szt. (240 g)",
+              "g": 240,
+              "kcal": 43,
+              "bialko": 2.2,
+              "tluszcz": 0.5,
+              "wegle": 6.5
+            },
+            {
+              "nazwa": "Ogórek długi",
+              "ile": "150 g",
+              "g": 150,
+              "kcal": 21,
+              "bialko": 1.0,
+              "tluszcz": 0.2,
+              "wegle": 4.3
+            },
+            {
+              "nazwa": "Sałata / mix sałat",
+              "ile": "55 g",
+              "g": 55,
+              "kcal": 8,
+              "bialko": 0.8,
+              "tluszcz": 0.1,
+              "wegle": 0.9
+            },
+            {
+              "nazwa": "Oliwa z oliwek",
+              "ile": "7 ml",
+              "g": 7,
+              "kcal": 58,
+              "bialko": 0.0,
+              "tluszcz": 6.4,
+              "wegle": 0.0
+            },
+            {
+              "nazwa": "Chleb pszenny (zwykły biały)",
+              "ile": "1 kromka (35 g)",
+              "g": 35,
+              "kcal": 88,
+              "bialko": 2.8,
+              "tluszcz": 1.0,
+              "wegle": 16.4
+            }
+          ],
+          "jak": "przepis",
+          "czas_min": 7,
+          "kroki": [
+            "📦 To zrobiłeś w bloku kuchni (wczoraj o 09:30) — teraz tylko wyjmij pojemnik z lodówki. Przepis niżej, gdybyś robił na świeżo.",
+            "Jajka na twardo: w małym garnku zagotuj tyle wody, żeby przykryła jajka (2 szt., 110 g). Łyżką ostrożnie włóż jajka do wrzątku i gotuj 9 minut na średnim ogniu. Odlej wrzątek, zalej zimną wodą na 3 minuty i obierz ze skorupki.",
+            "Jajka pokrój na ćwiartki. Pomidory (2 szt., 240 g) i ogórka (150 g) umyj i pokrój w kostkę ok. 2 cm.",
+            "Sałatę (55 g) przełóż do miski lub pojemnika, na to pomidory, ogórka i jajka.",
+            "Fetę (65 g) pokrusz palcami na wierzch.",
+            "Polej oliwą (7 ml, ok. 1,5 łyżeczki), posyp szczyptą soli, pieprzu i oregano i wymieszaj delikatnie.",
+            "Do boxa: oliwę weź w małym słoiczku i polej dopiero przed jedzeniem. Chleb (1 kromka, 35 g) zapakuj osobno.",
+            "Wszystkie ilości w krokach są już przeliczone na Twoją porcję na dziś — nic nie musisz dzielić."
+          ]
+        },
+        {
+          "czas": "12:00",
+          "tytul": "Rozruszaj się",
+          "ikona": "🤸",
+          "ping": true,
+          "opis": "5 minut: 10 przysiadów, krążenia ramion, rozciągnięcie karku. Plecy po staniu Ci podziękują."
+        },
+        {
+          "czas": "14:00",
+          "tytul": "Obiad",
+          "ikona": "🍽️",
+          "ping": true,
+          "slot": "obiad",
+          "opis": "Główny box z lodówki — odgrzej w mikrofali.",
+          "posilek": "Makaron bolognese na wołowinie",
+          "posilek_id": "b_bolo",
+          "porcja": 1.0,
+          "makra": {
+            "kcal": 810,
+            "bialko": 45,
+            "tluszcz": 31,
+            "wegle": 81
+          },
+          "skladniki": [
+            {
+              "nazwa": "Wołowina świeżo mielona (z lady)",
+              "ile": "165 g",
+              "g": 167,
+              "kcal": 358,
+              "bialko": 31.0,
+              "tluszcz": 25.0,
+              "wegle": 0.0
+            },
+            {
+              "nazwa": "Makaron (świderki/penne)",
+              "ile": "80 g",
+              "g": 80,
+              "kcal": 284,
+              "bialko": 9.6,
+              "tluszcz": 1.2,
+              "wegle": 57.6
+            },
+            {
+              "nazwa": "Passata pomidorowa",
+              "ile": "165 g",
+              "g": 167,
+              "kcal": 52,
+              "bialko": 2.3,
+              "tluszcz": 0.3,
+              "wegle": 9.3
+            },
+            {
+              "nazwa": "Koncentrat pomidorowy",
+              "ile": "20 g",
+              "g": 20,
+              "kcal": 19,
+              "bialko": 0.9,
+              "tluszcz": 0.1,
+              "wegle": 3.4
+            },
+            {
+              "nazwa": "Cebula",
+              "ile": "65 g",
+              "g": 67,
+              "kcal": 27,
+              "bialko": 0.7,
+              "tluszcz": 0.1,
+              "wegle": 5.1
+            },
+            {
+              "nazwa": "Marchew",
+              "ile": "55 g",
+              "g": 53,
+              "kcal": 22,
+              "bialko": 0.5,
+              "tluszcz": 0.1,
+              "wegle": 3.7
+            },
+            {
+              "nazwa": "Czosnek",
+              "ile": "1 ząbek (5 g)",
+              "g": 5,
+              "kcal": 7,
+              "bialko": 0.3,
+              "tluszcz": 0.0,
+              "wegle": 1.6
+            },
+            {
+              "nazwa": "Olej rzepakowy",
+              "ile": "5 ml",
+              "g": 5,
+              "kcal": 41,
+              "bialko": 0.0,
+              "tluszcz": 4.6,
+              "wegle": 0.0
+            }
+          ],
+          "jak": "odgrzewanie",
+          "czas_min": 4,
+          "kroki": [
+            "Wyjmij jeden pojemnik z lodówki — to cała porcja na dziś, odważona w dniu gotowania.",
+            "Odgrzej: mikrofala 2,5 min, wymieszać w połowie.",
+            "Przechowywanie: lodówka, 3 dni w pojemnikach."
+          ]
+        },
+        {
+          "czas": "17:00",
+          "tytul": "Woda — kontrola",
+          "ikona": "💧",
+          "ping": true,
+          "opis": "Powinieneś mieć wypite ok. 2 l. Nadrabiaj teraz, nie w nocy — inaczej przedrzemiesz noc na chodzeniu do toalety."
+        },
+        {
+          "czas": "20:30",
+          "tytul": "Kolacja",
+          "ikona": "🌙",
+          "ping": true,
+          "slot": "kolacja",
+          "opis": "Ostatni posiłek na zmianie. Lekki, żeby nie leżeć z pełnym brzuchem przed pierwszą drzemką.",
+          "posilek": "Deser: twarożek kakaowy z masłem orzechowym",
+          "posilek_id": "d_twarog_kakao",
+          "porcja": 0.8,
+          "makra": {
+            "kcal": 418,
+            "bialko": 37,
+            "tluszcz": 18,
+            "wegle": 27
+          },
+          "skladniki": [
+            {
+              "nazwa": "Twaróg półtłusty",
+              "ile": "160 g",
+              "g": 160,
+              "kcal": 213,
+              "bialko": 29.9,
+              "tluszcz": 7.5,
+              "wegle": 5.9
+            },
+            {
+              "nazwa": "Kakao naturalne (bez cukru)",
+              "ile": "1 łyżka (8 g)",
+              "g": 8,
+              "kcal": 30,
+              "bialko": 1.8,
+              "tluszcz": 1.6,
+              "wegle": 1.0
+            },
+            {
+              "nazwa": "Miód",
+              "ile": "1 łyżka (20 g)",
+              "g": 20,
+              "kcal": 61,
+              "bialko": 0.1,
+              "tluszcz": 0.0,
+              "wegle": 16.4
+            },
+            {
+              "nazwa": "Masło orzechowe 100%",
+              "ile": "1 łyżka (16 g)",
+              "g": 16,
+              "kcal": 99,
+              "bialko": 4.2,
+              "tluszcz": 8.2,
+              "wegle": 1.8
+            },
+            {
+              "nazwa": "Mleko 2%",
+              "ile": "30 ml",
+              "g": 30,
+              "kcal": 15,
+              "bialko": 1.0,
+              "tluszcz": 0.6,
+              "wegle": 1.4
+            }
+          ],
+          "jak": "przepis",
+          "czas_min": 4,
+          "kroki": [
+            "📦 To zrobiłeś w bloku kuchni (wczoraj o 09:30) — teraz tylko wyjmij pojemnik z lodówki. Przepis niżej, gdybyś robił na świeżo.",
+            "Twaróg (160 g) włóż do miski, dolej mleko (30 ml) i rozgniataj widelcem ok. minuty na krem.",
+            "Dodaj kakao (1 łyżka, 8 g) i miód (1 łyżka, 20 g) i mieszaj, aż kolor będzie jednolity.",
+            "Na wierzch nałóż masło orzechowe (1 łyżka, 16 g).",
+            "Wszystkie ilości w krokach są już przeliczone na Twoją porcję na dziś — nic nie musisz dzielić."
+          ]
+        },
+        {
+          "czas": "22:10",
+          "tytul": "Suplementy — wieczór",
+          "ikona": "💊",
+          "ping": true,
+          "akcja": "suple_wieczor",
+          "opis": "Magnez przed snem."
+        },
+        {
+          "czas": "22:15",
+          "tytul": "Przygotuj się do nocy",
+          "ikona": "🤸",
+          "ping": true,
+          "opis": "5 minut rozciągania bioder i karku. Ustaw cztery budziki na końce drzemek: 23:59, 01:30, 03:00, 04:30."
+        },
+        {
+          "czas": "22:30",
+          "tytul": "Drzemka 1 z 4 — do 23:59",
+          "ikona": "😴",
+          "ping": true,
+          "opis": "Półtorej godziny to pełny cykl snu, dlatego po tej drzemce wstaniesz najmniej rozbity. Telefon ekranem w dół."
+        }
+      ],
+      "makra": {
+        "kcal": 2400,
+        "bialko": 162,
+        "tluszcz": 102,
+        "wegle": 200
+      },
+      "dobitka": 0,
+      "dodatek_w": [],
+      "poza_planem": [],
+      "lzejszy": false,
+      "cel": {
+        "kcal": 2400,
+        "bialko": 160,
+        "tluszcz": 80,
+        "wegle": 260
+      },
+      "slowo": "Dziś forma buduje się w nocy: woda, boxy i drzemki zgodnie z planem.",
+      "faza": "Start",
+      "tydzien": 2,
+      "nadwyzka": 0,
+      "odhaczone": {},
+      "waga": null,
+      "kroki": null,
+      "serie": [],
+      "trening": {
+        "rodzaj": "zmiana",
+        "trening": {
+          "nazwa": "Dzień zmiany — bez treningu",
+          "zasada": "Na 24 h służbie nie trenujesz. Co 2–3 godziny wstań i przejdź się 5 minut, zrób 10 przysiadów i rozciągnij kark — to profilaktyka pleców, a nie trening.",
+          "mikro": [
+            "10 przysiadów bez ciężaru",
+            "10 krążeń ramion w tył",
+            "30 s rozciągania bioder na każdą nogę",
+            "Kark: głowa w tył i na boki po 15 s"
+          ]
         }
       }
     }
@@ -12225,14 +11995,6 @@
   "alternatywy": {
     "sniadanie": [
       {
-        "id": "q_tortilla_jajecznica",
-        "nazwa": "Tortilla z jajecznicą, polędwicą i majonezem sriracha + skyr pitny",
-        "kcal": 896,
-        "bialko": 59,
-        "czas": 10,
-        "bez_gotowania": false
-      },
-      {
         "id": "q_tortilla_zimna",
         "nazwa": "Tortilla z jajkiem na twardo, szynką i serem",
         "kcal": 929,
@@ -12255,31 +12017,31 @@
         "bialko": 44,
         "czas": 4,
         "bez_gotowania": false
+      },
+      {
+        "id": "q_twarog_banan",
+        "nazwa": "Twaróg z bananem i miodem",
+        "kcal": 495,
+        "bialko": 39,
+        "czas": 4,
+        "bez_gotowania": false
       }
     ],
     "drugi": [
       {
-        "id": "q_kanapki_jajko",
-        "nazwa": "Kanapki z jajkiem na twardo i serem",
-        "kcal": 497,
-        "bialko": 31,
-        "czas": 12,
+        "id": "q_skyr",
+        "nazwa": "Skyr z bananem i masłem orzechowym",
+        "kcal": 397,
+        "bialko": 40,
+        "czas": 3,
         "bez_gotowania": false
       },
       {
-        "id": "q_kanapki_ser",
-        "nazwa": "Kanapki z serem, musztardą i kiszonym ogórkiem",
-        "kcal": 484,
-        "bialko": 23,
+        "id": "d_pudding",
+        "nazwa": "Deser: czekoladowy pudding ze skyru z bananem",
+        "kcal": 419,
+        "bialko": 39,
         "czas": 4,
-        "bez_gotowania": false
-      },
-      {
-        "id": "q_jajka_kukurydza",
-        "nazwa": "Box: sałatka jajeczna z kukurydzą",
-        "kcal": 480,
-        "bialko": 35,
-        "czas": 12,
         "bez_gotowania": false
       },
       {
@@ -12288,6 +12050,14 @@
         "kcal": 461,
         "bialko": 33,
         "czas": 3,
+        "bez_gotowania": false
+      },
+      {
+        "id": "q_twarog_banan",
+        "nazwa": "Twaróg z bananem i miodem",
+        "kcal": 495,
+        "bialko": 39,
+        "czas": 4,
         "bez_gotowania": false
       }
     ],
@@ -12343,19 +12113,19 @@
         "bez_gotowania": false
       },
       {
-        "id": "q_kanapki_ser",
-        "nazwa": "Kanapki z serem, musztardą i kiszonym ogórkiem",
-        "kcal": 484,
-        "bialko": 23,
-        "czas": 4,
+        "id": "q_jajka_majonez",
+        "nazwa": "Sałatka jajeczna z kukurydzą i majonezem",
+        "kcal": 558,
+        "bialko": 28,
+        "czas": 12,
         "bez_gotowania": false
       },
       {
-        "id": "q_serek_box",
-        "nazwa": "Box: serek wiejski + jajka na twardo + ogórki",
-        "kcal": 533,
-        "bialko": 46,
-        "czas": 12,
+        "id": "q_salatka_feta",
+        "nazwa": "Sałatka z fetą, jajkiem i pomidorem + pieczywo",
+        "kcal": 569,
+        "bialko": 31,
+        "czas": 7,
         "bez_gotowania": false
       }
     ]
@@ -12667,7 +12437,10 @@
     }
   },
   "odhaczone": {},
-  "podmiany": {},
+  "podmiany": {
+    "drugi": "q_shake",
+    "kolacja": "q_kanapki_ser"
+  },
   "ciezary": {
     "Pompki": {
       "ciezar": 0.0,
@@ -13023,6 +12796,6 @@
   "kroki": null,
   "kroki_cel": {
     "cel": 8000,
-    "komentarz": "Jedyny pełny dzień w domu. Tu robisz większość tygodniowego chodzenia."
+    "komentarz": "Na służbie kroki robią się same z obchodów — ten cel to sygnał, żebyś nie przesiedział całej doby na krześle."
   }
 }
