@@ -1,5 +1,5 @@
 {
-  "wygenerowano": "2026-09-21T10:55:32",
+  "wygenerowano": "2026-09-21T10:57:15",
   "dzis": "2026-09-21",
   "typ_dzis": 2,
   "typy": {
@@ -1247,13 +1247,13 @@
           }
         },
         {
-          "nazwa": "Dipy między ławkami",
-          "powt": "max",
-          "przerwa": "90 s",
-          "wskazowka": "Dłonie na jednej ławce za plecami, pięty na drugiej. Schodzisz, aż ramiona będą równolegle do podłogi, łokcie do tyłu, nie na boki. Zapisujesz liczbę powtórzeń.",
-          "latwiej": "Stopy na podłodze, kolana ugięte.",
-          "trudniej": "Talerz na udach.",
-          "serie": 3
+          "nazwa": "Wyciskanie wąskim chwytem",
+          "serie": 3,
+          "powt": "8-10",
+          "przerwa": "2 min",
+          "wskazowka": "Jak zwykłe wyciskanie leżąc, ale dłonie na szerokość barków (nie węziej — za wąsko bolą nadgarstki). Łokcie blisko tułowia, sztanga schodzi do dolnej części klatki. To najlepsze ćwiczenie na triceps, jakie zrobisz ze sztangą.",
+          "latwiej": "Mniejszy ciężar, pauza przy klatce.",
+          "trudniej": "3 sekundy w dół."
         },
         {
           "nazwa": "Prostowanie ramion z hantlem nad głową",
@@ -7892,13 +7892,13 @@
               }
             },
             {
-              "nazwa": "Dipy między ławkami",
-              "powt": "max",
-              "przerwa": "90 s",
-              "wskazowka": "Dłonie na jednej ławce za plecami, pięty na drugiej. Schodzisz, aż ramiona będą równolegle do podłogi, łokcie do tyłu, nie na boki. Zapisujesz liczbę powtórzeń.",
-              "latwiej": "Stopy na podłodze, kolana ugięte.",
-              "trudniej": "Talerz na udach.",
-              "serie": 3
+              "nazwa": "Wyciskanie wąskim chwytem",
+              "serie": 3,
+              "powt": "8-10",
+              "przerwa": "2 min",
+              "wskazowka": "Jak zwykłe wyciskanie leżąc, ale dłonie na szerokość barków (nie węziej — za wąsko bolą nadgarstki). Łokcie blisko tułowia, sztanga schodzi do dolnej części klatki. To najlepsze ćwiczenie na triceps, jakie zrobisz ze sztangą.",
+              "latwiej": "Mniejszy ciężar, pauza przy klatce.",
+              "trudniej": "3 sekundy w dół."
             },
             {
               "nazwa": "Prostowanie ramion z hantlem nad głową",
@@ -12551,11 +12551,6 @@
       "jedn": "talerze na hantel",
       "krok": 2.5
     },
-    "Dipy między ławkami": {
-      "kg": 0,
-      "jedn": "masa ciała",
-      "krok": 0
-    },
     "Unoszenie nóg leżąc": {
       "kg": 0,
       "jedn": "masa ciała",
@@ -12590,6 +12585,12 @@
       "kg": 20,
       "jedn": "talerze na hantel",
       "krok": 5
+    },
+    "Wyciskanie wąskim chwytem": {
+      "kg": 25,
+      "cel": 32.5,
+      "jedn": "same talerze (bez gryfa)",
+      "krok": 2.5
     }
   },
   "kalorie": {

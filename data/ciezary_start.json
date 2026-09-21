@@ -102,11 +102,6 @@
     "jedn": "talerze na hantel",
     "krok": 2.5
   },
-  "Dipy między ławkami": {
-    "kg": 0,
-    "jedn": "masa ciała",
-    "krok": 0
-  },
   "Unoszenie nóg leżąc": {
     "kg": 0,
     "jedn": "masa ciała",
@@ -141,5 +136,11 @@
     "kg": 20,
     "jedn": "talerze na hantel",
     "krok": 5
+  },
+  "Wyciskanie wąskim chwytem": {
+    "kg": 25,
+    "cel": 32.5,
+    "jedn": "same talerze (bez gryfa)",
+    "krok": 2.5
   }
 }
