@@ -225,9 +225,21 @@ def przelicz_kalorie(cel_bazowy, zastosuj=False, tempo=(-0.7, -0.3), faza=None, 
     korekta = korekta_kcal(faza)
     wynik = {"trend": t, "korekta_teraz": korekta,
              "kcal_teraz": cel_bazowy + korekta, "zmiana": 0}
+    # Za krotki odcinek to szum: po nocce, slonym posilku albo biegunce waga skacze o kilogram
+    # w dwa dni i "tempo" wychodzi -2 kg/tydz. Liczymy dopiero z 10 dni i 5 wazen.
+    if t:
+        rozpietosc = (datetime.date.fromisoformat(t["do"]) - datetime.date.fromisoformat(t["od"])).days
+        if rozpietosc < 10 or t.get("pomiarow", 0) < 5:
+            t = None
     if not t:
-        wynik["ocena"] = ("Za mało pomiarów, żeby cokolwiek liczyć. Potrzebuję trzech ważeń "
-                          "w ciągu trzech tygodni — ważysz się raz na cykl, więc to około tygodnia.")
+        wynik["trend"] = None
+        wynik["ocena"] = ("Za mało danych, żeby ruszać kalorie. Liczę trend dopiero z co najmniej "
+                          "10 dni i 5 ważeń — do tego czasu trzymamy cel fazy.")
+        return wynik
+    # najwyzej jedna korekta na tydzien — cialo potrzebuje czasu, zeby pokazac efekt
+    ost = _load(os.path.join(STATE, "kcal_korekta.json"), {})
+    if ost.get("data") and (_dzis() - datetime.date.fromisoformat(ost["data"])).days < 7 and korekta:
+        wynik["ocena"] = ("Ostatnia korekta była %s — następna najwcześniej po tygodniu." % ost["data"])
         return wynik
 
     # Widelki zaleza od fazy: na redukcji waga ma spadac, na budowie rosnac. Stala
@@ -247,6 +259,8 @@ def przelicz_kalorie(cel_bazowy, zastosuj=False, tempo=(-0.7, -0.3), faza=None, 
         ocena = "Tempo %+.2f kg/tydz. mieści się w widełkach tej fazy. Nic nie ruszam." % real
     tempo = real
 
+    # korekta w sumie najwyzej +-450 kcal od celu fazy — reszta to sprawa zmiany fazy, nie automatu
+    zmiana = max(-450 - korekta, min(450 - korekta, zmiana))
     nowe = max(1800, cel_bazowy + korekta + zmiana)
     zmiana = nowe - (cel_bazowy + korekta)
     if nowe == 1800 and zmiana == 0:

@@ -1558,7 +1558,7 @@ def _sesja(szablon, blok, ile):
             c["propozycja"] = prop
         cw.append(c)
     # brzuch na koniec kazdej sesji: 2 cwiczenia, ktorych jeszcze nie bylo
-    for c in PROGRAM.get("brzuch", {}).get("cwiczenia", []):
+    for c in (PROGRAM.get("brzuch", {}).get("cwiczenia", []) if PROGRAM.get("brzuch_zawsze", True) else []):
         if sum(1 for x in cw if x.get("brzuch")) >= 2:
             break
         if any(x["nazwa"] == c["nazwa"] for x in cw):
@@ -1601,6 +1601,18 @@ def podpowiedz_ciezaru(nazwa):
     return "ciężar dobierz sam i zapisz w panelu"
 
 
+def _nr_sesji(d):
+    """Ktora z kolei sesja splitu: liczymy dni treningowe (po zmianie i wolne) od startu planu,
+    wiec Push, Pull i Nogi ida po kolei niezaleznie od tego, jak ulozy sie grafik."""
+    st = _start_planu() or d
+    n, dd = 0, st
+    while dd < d:
+        if typ_dnia(dd) in (1, 2):
+            n += 1
+        dd += datetime.timedelta(days=1)
+    return n
+
+
 def trening_dnia(d=None):
     d = d or dzis()
     if _start_planu() and tydzien_planu(d) == 0:
@@ -1622,9 +1634,10 @@ def trening_dnia(d=None):
         return {"rodzaj": "minimum", "trening": m}
     blok = blok_treningowy(d)
     if t == 1:
-        return {"rodzaj": "krotki", "trening": _sesja(PROGRAM["sesja_krotka"], blok, blok["cwiczen_krotki"])}
+        sesje = PROGRAM["sesje_glowne"]
+        return {"rodzaj": "krotki", "trening": _sesja(sesje[_nr_sesji(d) % len(sesje)], blok, 4)}
     sesje = PROGRAM["sesje_glowne"]
-    return {"rodzaj": "glowny", "trening": _sesja(sesje[nr_cyklu(d) % len(sesje)], blok, blok["cwiczen_glowny"])}
+    return {"rodzaj": "glowny", "trening": _sesja(sesje[_nr_sesji(d) % len(sesje)], blok, 99)}
 
 
 # ------------------------------------------------------------------ budzik
