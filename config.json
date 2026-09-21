@@ -6,7 +6,33 @@
     "wzrost_cm": 182,
     "wiek": 21,
     "cel": "redukcja — zejść z wagi, utrzymać mięśnie",
-    "sprzet": "klatka Kelton, ławka Marbo, sztanga, hantle do 80 kg, ok. 114 kg talerzy — bez drążka i wyciągu"
+    "sprzet": "klatka Kelton, ławka Marbo, sztanga, hantle do 80 kg, ok. 114 kg talerzy — bez drążka i wyciągu",
+    "nie_je": [
+      "pierś z kurczaka",
+      "ryby",
+      "tuńczyk",
+      "ryż",
+      "kasza",
+      "owsianka",
+      "pieczywo pełnoziarniste",
+      "gulasz",
+      "klopsiki",
+      "kotlety mielone",
+      "szczypiorek"
+    ],
+    "je": [
+      "jajka",
+      "skyr",
+      "twaróg",
+      "serek wiejski",
+      "mielona wołowina",
+      "indyk",
+      "makaron",
+      "ziemniaki",
+      "banany",
+      "WPC"
+    ],
+    "cardio": "rower, zone 2, 35–45 min"
   },
   "makra": {
     "kcal": 2400,
@@ -91,7 +117,7 @@
           0.8,
           1.3
         ],
-        "kroki": 6000,
+        "kroki": 8000,
         "cel": "Powrót po przerwie: ciężary wracają do stanu sprzed przerwy, waga stoi."
       },
       {
@@ -135,7 +161,7 @@
           1.0,
           1.6
         ],
-        "kroki": 7500,
+        "kroki": 8000,
         "cel": "Lekka nadwyżka pod barki, plecy i klatkę górną — także na święta. Waga rośnie powoli."
       },
       {
@@ -157,7 +183,7 @@
           0.7,
           1.3
         ],
-        "kroki": 11000,
+        "kroki": 8000,
         "cel": "Odsłaniamy mięśnie na wakacje: 8–10% tłuszczu."
       },
       {
@@ -179,7 +205,7 @@
           0.8,
           1.3
         ],
-        "kroki": 9000,
+        "kroki": 8000,
         "cel": "Utrzymanie formy i zdjęcie porównawcze 26 czerwca — zaliczony pierwszy rok."
       }
     ],

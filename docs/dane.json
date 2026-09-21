@@ -1,5 +1,5 @@
 {
-  "wygenerowano": "2026-09-21T10:57:15",
+  "wygenerowano": "2026-09-21T11:01:15",
   "dzis": "2026-09-21",
   "typ_dzis": 2,
   "typy": {
@@ -34,7 +34,33 @@
     "wzrost_cm": 182,
     "wiek": 21,
     "cel": "redukcja — zejść z wagi, utrzymać mięśnie",
-    "sprzet": "klatka Kelton, ławka Marbo, sztanga, hantle do 80 kg, ok. 114 kg talerzy — bez drążka i wyciągu"
+    "sprzet": "klatka Kelton, ławka Marbo, sztanga, hantle do 80 kg, ok. 114 kg talerzy — bez drążka i wyciągu",
+    "nie_je": [
+      "pierś z kurczaka",
+      "ryby",
+      "tuńczyk",
+      "ryż",
+      "kasza",
+      "owsianka",
+      "pieczywo pełnoziarniste",
+      "gulasz",
+      "klopsiki",
+      "kotlety mielone",
+      "szczypiorek"
+    ],
+    "je": [
+      "jajka",
+      "skyr",
+      "twaróg",
+      "serek wiejski",
+      "mielona wołowina",
+      "indyk",
+      "makaron",
+      "ziemniaki",
+      "banany",
+      "WPC"
+    ],
+    "cardio": "rower, zone 2, 35–45 min"
   },
   "plan": {
     "cykl": 30,
@@ -179,7 +205,6 @@
       "tytul": "Pobudka",
       "ikona": "⏰",
       "ping": true,
-      "akcja": "suple",
       "opis": "Toaleta, za 5 minut waga. Potem woda i suple — i bez telefonu."
     },
     {
@@ -362,6 +387,14 @@
       ]
     },
     {
+      "czas": "10:45",
+      "tytul": "Suplementy — po śniadaniu",
+      "ikona": "💊",
+      "ping": true,
+      "akcja": "suple",
+      "opis": "Z pierwszym posiłkiem, bo D3 i omega-3 wchłaniają się z tłuszczem."
+    },
+    {
       "czas": "13:30",
       "tytul": "Drugi posiłek",
       "ikona": "🥪",
@@ -535,10 +568,10 @@
     },
     {
       "czas": "18:00",
-      "tytul": "Spacer",
-      "ikona": "🚶",
+      "tytul": "Rower — zone 2",
+      "ikona": "🚴",
       "ping": true,
-      "opis": "20–30 minut. Nie kardio — chodzi o rozruszanie bioder i pleców oraz o kroki, których dziś nie zrobisz sam z siebie."
+      "opis": "35–45 minut spokojnie: tempo, przy którym da się rozmawiać pełnymi zdaniami. To spala tłuszcz i nie zabiera sił na trening."
     },
     {
       "czas": "19:30",
@@ -656,6 +689,14 @@
         "ile": "7 h 10 min",
         "typ_docelowy": "ZMIANA 24h"
       }
+    },
+    {
+      "czas": "21:30",
+      "tytul": "Suplementy — wieczór",
+      "ikona": "💊",
+      "ping": true,
+      "akcja": "suple_wieczor",
+      "opis": "Magnez przed snem."
     },
     {
       "czas": "22:00",
@@ -1175,9 +1216,9 @@
   "trening": {
     "rodzaj": "glowny",
     "trening": {
-      "id": "g_push",
-      "nazwa": "Push — klatka, barki, triceps",
-      "czas_min": 46,
+      "id": "g_upper",
+      "nazwa": "Upper + Core — góra i brzuch",
+      "czas_min": 50,
       "blok": "Blok 1 — Nauka ruchu",
       "blok_opis": "Uczysz się ruchu, nie dźwigasz. Ciężar tak lekki, że mógłbyś zrobić jeszcze 3 powtórzenia. Ma ci się chcieć przyjść na następny trening.",
       "zapas": "3 powtórzenia w zapasie",
@@ -1187,82 +1228,98 @@
       ],
       "cwiczenia": [
         {
-          "nazwa": "Wyciskanie leżąc",
-          "powt": "6-8",
-          "przerwa": "2-3 min",
-          "v": true,
-          "wskazowka": "Ławka pod klatką w klatce Kelton, bolce ustawione na wysokości klatki. Łopatki ściągnięte i wbite w ławkę, stopy mocno na podłodze. Sztanga schodzi do dolnej części klatki, łokcie ok. 45 stopni od tułowia, nie na boki.",
-          "latwiej": "Hantle na ławce płaskiej.",
-          "trudniej": "3 sekundy w dół, sekunda przerwy przy klatce.",
-          "serie": 4,
-          "propozycja": {
-            "ciezar": 42.5,
-            "poprzedni": 40.0,
-            "powt": [
-              14,
-              10
-            ],
-            "data": "2026-09-20",
-            "podwyzka": 2.5
-          }
+          "nazwa": "Wyciskanie hantli na ławce skośnej",
+          "powt": "10",
+          "wskazowka": "Ławka pod kątem ok. 30 stopni, łopatki ściągnięte. Hantle schodzą do poziomu klatki, łokcie ok. 45 stopni od tułowia. Góra klatki robi najwięcej w sylwetce.",
+          "latwiej": "Lżejsze hantle.",
+          "trudniej": "3 sekundy w dół.",
+          "serie": 3,
+          "przerwa": "90 s"
         },
         {
-          "nazwa": "Wyciskanie skos (góra klatki)",
-          "powt": "8",
-          "przerwa": "2 min",
+          "nazwa": "Wiosłowanie sztangą podchwytem",
+          "powt": "10",
+          "przerwa": "90 s",
           "v": true,
-          "wskazowka": "Ławka pod kątem 30 stopni. Sztanga albo hantle schodzą do obojczyków, łopatki cały czas ściągnięte. To ćwiczenie robi górną część klatki, która najmocniej zmienia sylwetkę.",
-          "latwiej": "Hantle zamiast sztangi.",
-          "trudniej": "Pauza sekunda na dole.",
+          "wskazowka": "Chwyt podchwytem na szerokość barków, tułów pochylony ok. 45 stopni, plecy proste. Ciągniesz sztangę do brzucha, łokcie blisko ciała, na górze ściągasz łopatki. Podchwyt mocniej angażuje dolną część najszerszych i biceps.",
+          "latwiej": "Tułów wyżej, ok. 60 stopni, mniejszy ciężar.",
+          "trudniej": "Sekunda pauzy przy brzuchu.",
           "serie": 3
         },
         {
-          "nazwa": "Wyciskanie żołnierskie (OHP)",
-          "powt": "8",
-          "przerwa": "2 min",
-          "v": true,
-          "wskazowka": "Stojąc, sztanga na przednich barkach, brzuch i pośladki napięte, żebra w dół. Wyciskasz nad głowę i chowasz głowę pod sztangę na końcu ruchu. Nie odchylaj się do tyłu.",
-          "latwiej": "Siedząc na ławce z oparciem, z hantlami.",
-          "trudniej": "Pauza sekunda nad głową.",
-          "serie": 3
-        },
-        {
-          "nazwa": "Unoszenie hantli bokiem",
-          "powt": "12-15",
-          "przerwa": "60 s",
-          "v": true,
-          "wskazowka": "Łokcie lekko ugięte, ruch prowadzą łokcie, nie dłonie. Unosisz do wysokości barków, nie wyżej. Mały ciężar, czysta technika — to ćwiczenie robi szerokość barków.",
-          "latwiej": "Jedną ręką, drugą trzymasz się klatki.",
-          "trudniej": "Seria zrywana: po odmowie lżejszy hantel i dalej.",
+          "nazwa": "Uginanie ramion z hantlami",
+          "powt": "10",
+          "wskazowka": "Stojąc, dłonie do przodu (podchwyt), łokcie przy tułowiu i w miejscu. Unosisz oba hantle naraz albo na zmianę, opuszczasz wolniej, niż podnosisz.",
+          "latwiej": "Na zmianę, lżejsze hantle.",
+          "trudniej": "Na ławce skośnej, siedząc.",
           "serie": 3,
-          "propozycja": {
-            "ciezar": 7.0,
-            "poprzedni": 7.0,
-            "powt": [
-              12,
-              12
-            ],
-            "data": "2026-09-20",
-            "podwyzka": 0.0
-          }
-        },
-        {
-          "nazwa": "Wyciskanie wąskim chwytem",
-          "serie": 3,
-          "powt": "8-10",
-          "przerwa": "2 min",
-          "wskazowka": "Jak zwykłe wyciskanie leżąc, ale dłonie na szerokość barków (nie węziej — za wąsko bolą nadgarstki). Łokcie blisko tułowia, sztanga schodzi do dolnej części klatki. To najlepsze ćwiczenie na triceps, jakie zrobisz ze sztangą.",
-          "latwiej": "Mniejszy ciężar, pauza przy klatce.",
-          "trudniej": "3 sekundy w dół."
+          "przerwa": "90 s"
         },
         {
           "nazwa": "Prostowanie ramion z hantlem nad głową",
-          "powt": "10-12",
-          "przerwa": "75 s",
+          "powt": "12",
+          "przerwa": "90 s",
           "wskazowka": "Jeden hantel oburącz nad głową. Łokcie blisko głowy i w miejscu, rusza się tylko przedramię. Triceps to dwie trzecie obwodu ramienia.",
           "latwiej": "Lżejszy hantel, jedną ręką.",
           "trudniej": "Wyciskanie francuskie sztangą EZ leżąc.",
           "serie": 3
+        },
+        {
+          "nazwa": "Deska",
+          "powt": "45 s",
+          "przerwa": "90 s",
+          "wskazowka": "Przedramiona pod barkami, ciało w jednej linii od głowy do pięt, pośladki i brzuch napięte. Wpisujesz liczbę sekund.",
+          "latwiej": "Na kolanach.",
+          "trudniej": "Z uniesioną jedną nogą.",
+          "serie": 3,
+          "propozycja": {
+            "ciezar": 0.0,
+            "poprzedni": 0.0,
+            "powt": [
+              50,
+              60
+            ],
+            "data": "2026-09-18",
+            "podwyzka": 0.0
+          }
+        },
+        {
+          "nazwa": "Unoszenie nóg leżąc",
+          "powt": "12",
+          "przerwa": "90 s",
+          "wskazowka": "Leżysz na plecach, dłonie pod pośladkami, nogi proste albo lekko ugięte. Unosisz je do pionu i powoli opuszczasz, nie kładąc pięt na podłodze. Dolna część pleców dociśnięta do podłogi.",
+          "latwiej": "Kolana mocno ugięte.",
+          "trudniej": "Nogi całkiem proste, 3 sekundy w dół.",
+          "serie": 3,
+          "propozycja": {
+            "ciezar": 0.0,
+            "poprzedni": 0.0,
+            "powt": [
+              15,
+              15
+            ],
+            "data": "2026-09-18",
+            "podwyzka": 0.0
+          }
+        },
+        {
+          "nazwa": "Spięcia brzucha (brzuszki)",
+          "powt": "15",
+          "przerwa": "90 s",
+          "wskazowka": "Leżysz na plecach, kolana zgięte, stopy na podłodze, ręce skrzyżowane na klatce. Zwijasz tułów i odrywasz łopatki od podłogi na jakieś 10 cm — to cały ruch, plecy niżej zostają na ziemi. Broda odsunięta od klatki na szerokość pięści, nie ciągniesz głowy. Na górze zatrzymaj na sekundę i mocno napnij brzuch, potem powoli w dół. Tu poczujesz brzuch od pierwszej serii.",
+          "latwiej": "Mniejszy zakres, ręce wyciągnięte wzdłuż ciała.",
+          "trudniej": "Ręce przy skroniach albo hantel trzymany na klatce.",
+          "serie": 3,
+          "propozycja": {
+            "ciezar": 0.0,
+            "poprzedni": 0.0,
+            "powt": [
+              15,
+              15
+            ],
+            "data": "2026-09-20",
+            "podwyzka": 0.0
+          }
         }
       ],
       "finisz": "Każda seria kończy się z zapasem: 3 powtórzenia w zapasie. Uczysz się ruchu, nie dźwigasz. Ciężar tak lekki, że mógłbyś zrobić jeszcze 3 powtórzenia. Ma ci się chcieć przyjść na następny trening."
@@ -1281,7 +1338,7 @@
     },
     {
       "id": "kroki",
-      "nazwa": "Średnio 6 000 kroków dziennie",
+      "nazwa": "Średnio 8 000 kroków dziennie",
       "opis": "Na zmianie zbierasz je sam z siebie. W dni wolne trzeba wyjść na spacer."
     },
     {
@@ -3290,7 +3347,7 @@
       "id": "F0",
       "nazwa": "Start",
       "cel": "Powrót po przerwie: ciężary wracają do stanu sprzed przerwy, waga stoi.",
-      "kroki": 6000,
+      "kroki": 8000,
       "od_tyg": 1,
       "do_tyg": 2,
       "tempo_kg_tydz": [
@@ -3711,6 +3768,14 @@
           ]
         },
         {
+          "czas": "08:20",
+          "tytul": "Suplementy — po śniadaniu",
+          "ikona": "💊",
+          "ping": true,
+          "akcja": "suple",
+          "opis": "Z pierwszym posiłkiem, bo D3 i omega-3 wchłaniają się z tłuszczem."
+        },
+        {
           "czas": "08:30",
           "tytul": "SEN — najważniejsza rzecz dziś",
           "ikona": "😴",
@@ -3730,8 +3795,7 @@
           "tytul": "Pobudka",
           "ikona": "⏰",
           "ping": true,
-          "opis": "Toaleta, za 5 minut waga. Potem woda i suple. Bez telefonu — dziś zaczynasz od sztangi, nie od ekranu.",
-          "akcja": "suple"
+          "opis": "Toaleta, za 5 minut waga. Potem woda i suple. Bez telefonu — dziś zaczynasz od sztangi, nie od ekranu."
         },
         {
           "czas": "13:05",
@@ -4075,6 +4139,14 @@
           "opis": "Ekran w dół. Za 30 minut śpisz i to Ci resetuje rytm po zmianie."
         },
         {
+          "czas": "22:00",
+          "tytul": "Suplementy — wieczór",
+          "ikona": "💊",
+          "ping": true,
+          "akcja": "suple_wieczor",
+          "opis": "Magnez przed snem."
+        },
+        {
           "czas": "22:30",
           "tytul": "Sen",
           "ikona": "😴",
@@ -4146,7 +4218,6 @@
           "tytul": "Pobudka",
           "ikona": "⏰",
           "ping": true,
-          "akcja": "suple",
           "opis": "Toaleta, za 5 minut waga. Potem woda i suple — i bez telefonu."
         },
         {
@@ -4285,6 +4356,14 @@
             "Wszystkie ilości w krokach są już przeliczone na Twoją porcję na dziś — nic nie musisz dzielić.",
             "Do tego dodatek węglowy: chleb pszenny 2 kromki, miód 1 łyżka. Zjedz obok — to paliwo na trening i regenerację, bez niego dzień nie dobija węglowodanów."
           ]
+        },
+        {
+          "czas": "10:45",
+          "tytul": "Suplementy — po śniadaniu",
+          "ikona": "💊",
+          "ping": true,
+          "akcja": "suple",
+          "opis": "Z pierwszym posiłkiem, bo D3 i omega-3 wchłaniają się z tłuszczem."
         },
         {
           "czas": "13:30",
@@ -4450,10 +4529,10 @@
         },
         {
           "czas": "18:00",
-          "tytul": "Spacer",
-          "ikona": "🚶",
+          "tytul": "Rower — zone 2",
+          "ikona": "🚴",
           "ping": true,
-          "opis": "20–30 minut. Nie kardio — chodzi o rozruszanie bioder i pleców oraz o kroki, których dziś nie zrobisz sam z siebie."
+          "opis": "35–45 minut spokojnie: tempo, przy którym da się rozmawiać pełnymi zdaniami. To spala tłuszcz i nie zabiera sił na trening."
         },
         {
           "czas": "19:30",
@@ -4545,6 +4624,14 @@
           }
         },
         {
+          "czas": "21:30",
+          "tytul": "Suplementy — wieczór",
+          "ikona": "💊",
+          "ping": true,
+          "akcja": "suple_wieczor",
+          "opis": "Magnez przed snem."
+        },
+        {
           "czas": "22:00",
           "tytul": "Sen",
           "ikona": "😴",
@@ -4612,8 +4699,7 @@
           "tytul": "Pobudka",
           "ikona": "⏰",
           "ping": true,
-          "opis": "Toaleta — za 5 minut waga, więc jeszcze nic nie pij. Potem 20 minut w kuchni i o 5:30 jedziesz.",
-          "akcja": "suple"
+          "opis": "Toaleta — za 5 minut waga, więc jeszcze nic nie pij. Potem 20 minut w kuchni i o 5:30 jedziesz."
         },
         {
           "czas": "04:45",
@@ -4758,6 +4844,14 @@
             "Wszystkie ilości w krokach są już przeliczone na Twoją porcję na dziś — nic nie musisz dzielić.",
             "Do tego dodatek węglowy: chleb pszenny 2 kromki, miód 1 łyżka. Zjedz obok — to paliwo na trening i regenerację, bez niego dzień nie dobija węglowodanów."
           ]
+        },
+        {
+          "czas": "07:40",
+          "tytul": "Suplementy — po śniadaniu",
+          "ikona": "💊",
+          "ping": true,
+          "akcja": "suple",
+          "opis": "Z pierwszym posiłkiem, bo D3 i omega-3 wchłaniają się z tłuszczem."
         },
         {
           "czas": "10:30",
@@ -5029,6 +5123,14 @@
           ]
         },
         {
+          "czas": "22:10",
+          "tytul": "Suplementy — wieczór",
+          "ikona": "💊",
+          "ping": true,
+          "akcja": "suple_wieczor",
+          "opis": "Magnez przed snem."
+        },
+        {
           "czas": "22:15",
           "tytul": "Przygotuj się do nocy",
           "ikona": "🤸",
@@ -5179,6 +5281,14 @@
           ]
         },
         {
+          "czas": "08:20",
+          "tytul": "Suplementy — po śniadaniu",
+          "ikona": "💊",
+          "ping": true,
+          "akcja": "suple",
+          "opis": "Z pierwszym posiłkiem, bo D3 i omega-3 wchłaniają się z tłuszczem."
+        },
+        {
           "czas": "08:30",
           "tytul": "SEN — najważniejsza rzecz dziś",
           "ikona": "😴",
@@ -5198,8 +5308,7 @@
           "tytul": "Pobudka",
           "ikona": "⏰",
           "ping": true,
-          "opis": "Toaleta, za 5 minut waga. Potem woda i suple. Bez telefonu — dziś zaczynasz od sztangi, nie od ekranu.",
-          "akcja": "suple"
+          "opis": "Toaleta, za 5 minut waga. Potem woda i suple. Bez telefonu — dziś zaczynasz od sztangi, nie od ekranu."
         },
         {
           "czas": "13:05",
@@ -5387,6 +5496,14 @@
           "opis": "Ekran w dół. Za 30 minut śpisz i to Ci resetuje rytm po zmianie."
         },
         {
+          "czas": "22:00",
+          "tytul": "Suplementy — wieczór",
+          "ikona": "💊",
+          "ping": true,
+          "akcja": "suple_wieczor",
+          "opis": "Magnez przed snem."
+        },
+        {
           "czas": "22:30",
           "tytul": "Sen",
           "ikona": "😴",
@@ -5527,7 +5644,7 @@
             {
               "nazwa": "Wyciskanie leżąc",
               "powt": "6-8",
-              "przerwa": "2-3 min",
+              "przerwa": "90 s",
               "v": true,
               "wskazowka": "Ławka pod klatką w klatce Kelton, bolce ustawione na wysokości klatki. Łopatki ściągnięte i wbite w ławkę, stopy mocno na podłodze. Sztanga schodzi do dolnej części klatki, łokcie ok. 45 stopni od tułowia, nie na boki.",
               "latwiej": "Hantle na ławce płaskiej.",
@@ -5547,7 +5664,7 @@
             {
               "nazwa": "Wyciskanie skos (góra klatki)",
               "powt": "8",
-              "przerwa": "2 min",
+              "przerwa": "90 s",
               "v": true,
               "wskazowka": "Ławka pod kątem 30 stopni. Sztanga albo hantle schodzą do obojczyków, łopatki cały czas ściągnięte. To ćwiczenie robi górną część klatki, która najmocniej zmienia sylwetkę.",
               "latwiej": "Hantle zamiast sztangi.",
@@ -5557,7 +5674,7 @@
             {
               "nazwa": "Wyciskanie żołnierskie (OHP)",
               "powt": "8",
-              "przerwa": "2 min",
+              "przerwa": "90 s",
               "v": true,
               "wskazowka": "Stojąc, sztanga na przednich barkach, brzuch i pośladki napięte, żebra w dół. Wyciskasz nad głowę i chowasz głowę pod sztangę na końcu ruchu. Nie odchylaj się do tyłu.",
               "latwiej": "Siedząc na ławce z oparciem, z hantlami.",
@@ -5567,7 +5684,7 @@
             {
               "nazwa": "Unoszenie hantli bokiem",
               "powt": "12-15",
-              "przerwa": "60 s",
+              "przerwa": "90 s",
               "v": true,
               "wskazowka": "Łokcie lekko ugięte, ruch prowadzą łokcie, nie dłonie. Unosisz do wysokości barków, nie wyżej. Mały ciężar, czysta technika — to ćwiczenie robi szerokość barków.",
               "latwiej": "Jedną ręką, drugą trzymasz się klatki.",
@@ -5603,7 +5720,6 @@
           "tytul": "Pobudka",
           "ikona": "⏰",
           "ping": true,
-          "akcja": "suple",
           "opis": "Toaleta, za 5 minut waga. Potem woda i suple — i bez telefonu."
         },
         {
@@ -5779,6 +5895,14 @@
           ]
         },
         {
+          "czas": "10:45",
+          "tytul": "Suplementy — po śniadaniu",
+          "ikona": "💊",
+          "ping": true,
+          "akcja": "suple",
+          "opis": "Z pierwszym posiłkiem, bo D3 i omega-3 wchłaniają się z tłuszczem."
+        },
+        {
           "czas": "13:30",
           "tytul": "Drugi posiłek",
           "ikona": "🥪",
@@ -5837,10 +5961,10 @@
         },
         {
           "czas": "18:00",
-          "tytul": "Spacer",
-          "ikona": "🚶",
+          "tytul": "Rower — zone 2",
+          "ikona": "🚴",
           "ping": true,
-          "opis": "20–30 minut. Nie kardio — chodzi o rozruszanie bioder i pleców oraz o kroki, których dziś nie zrobisz sam z siebie."
+          "opis": "35–45 minut spokojnie: tempo, przy którym da się rozmawiać pełnymi zdaniami. To spala tłuszcz i nie zabiera sił na trening."
         },
         {
           "czas": "19:30",
@@ -5948,6 +6072,14 @@
             "ile": "7 h 10 min",
             "typ_docelowy": "ZMIANA 24h"
           }
+        },
+        {
+          "czas": "21:30",
+          "tytul": "Suplementy — wieczór",
+          "ikona": "💊",
+          "ping": true,
+          "akcja": "suple_wieczor",
+          "opis": "Magnez przed snem."
         },
         {
           "czas": "22:00",
@@ -6083,7 +6215,7 @@
             {
               "nazwa": "Wiosłowanie sztangą podchwytem",
               "powt": "8",
-              "przerwa": "2 min",
+              "przerwa": "90 s",
               "v": true,
               "wskazowka": "Chwyt podchwytem na szerokość barków, tułów pochylony ok. 45 stopni, plecy proste. Ciągniesz sztangę do brzucha, łokcie blisko ciała, na górze ściągasz łopatki. Podchwyt mocniej angażuje dolną część najszerszych i biceps.",
               "latwiej": "Tułów wyżej, ok. 60 stopni, mniejszy ciężar.",
@@ -6093,7 +6225,7 @@
             {
               "nazwa": "Martwy ciąg",
               "powt": "6",
-              "przerwa": "3 min",
+              "przerwa": "90 s",
               "v": true,
               "wskazowka": "Sztanga nad środkiem stopy, chwyt na szerokość barków. Klatka w górę, plecy proste, napinasz całe ciało i odpychasz się nogami od podłogi. Sztanga sunie po nogach. Każde powtórzenie zaczynasz od nowa z podłogi, bez sprężynowania.",
               "latwiej": "Sztanga na podstawkach, ok. 10 cm wyżej.",
@@ -6123,7 +6255,7 @@
             {
               "nazwa": "Pullover z hantlem",
               "powt": "12",
-              "przerwa": "75 s",
+              "przerwa": "90 s",
               "v": true,
               "wskazowka": "Leżysz na ławce, jeden hantel oburącz nad klatką. Na prawie prostych rękach opuszczasz go za głowę, aż poczujesz rozciąganie pod pachami, i wracasz. Pracują najszersze — to one robią szerokość pleców.",
               "latwiej": "Lżejszy hantel, mniejszy zakres.",
@@ -6133,29 +6265,29 @@
             {
               "nazwa": "Uginanie ramion ze sztangą",
               "powt": "10",
-              "przerwa": "75 s",
+              "przerwa": "90 s",
               "wskazowka": "Łokcie przy tułowiu i w miejscu, bez bujania tułowiem. Opuszczasz wolniej, niż podnosisz.",
               "latwiej": "Sztanga EZ albo hantle naprzemiennie.",
               "trudniej": "Ostatnie 2 powtórzenia z lekkim wspomaganiem i wolny opust.",
               "serie": 3
             },
             {
-              "nazwa": "Uginanie młotkowe",
+              "nazwa": "Uginanie ramion z hantlami",
               "powt": "10",
-              "przerwa": "60 s",
-              "wskazowka": "Chwyt jak przy trzymaniu młotka, kciuki do góry. Buduje grubość ramienia widoczną z boku.",
-              "latwiej": "Jedną ręką na zmianę.",
-              "trudniej": "Wolny opust 3 sekundy.",
-              "serie": 3
+              "wskazowka": "Stojąc, dłonie do przodu (podchwyt), łokcie przy tułowiu i w miejscu. Unosisz oba hantle naraz albo na zmianę, opuszczasz wolniej, niż podnosisz.",
+              "latwiej": "Na zmianę, lżejsze hantle.",
+              "trudniej": "Na ławce skośnej, siedząc.",
+              "serie": 3,
+              "przerwa": "90 s"
             },
             {
-              "nazwa": "Odwrotne rozpiętki w opadzie",
+              "nazwa": "Odwrotne rozpiętki leżąc na skosie",
               "powt": "15",
-              "przerwa": "60 s",
-              "wskazowka": "Pochylony, klatka prawie równolegle do podłogi, lekkie hantle, rozkładasz ręce jak skrzydła. Tył barków: bez niego barki wyglądają płasko z boku.",
-              "latwiej": "Leżąc przodem na ławce skośnej.",
+              "wskazowka": "Leżysz brzuchem na ławce ustawionej na skos, hantle zwisają w dół. Rozkładasz ręce na boki jak skrzydła, łokcie lekko ugięte, na górze ściągasz łopatki. Tył barków — bez niego barki wyglądają płasko z boku.",
+              "latwiej": "Lżejsze hantle.",
               "trudniej": "2 sekundy zatrzymania na górze.",
-              "serie": 3
+              "serie": 3,
+              "przerwa": "90 s"
             }
           ],
           "finisz": "Każda seria kończy się z zapasem: 3 powtórzenia w zapasie. Uczysz się ruchu, nie dźwigasz. Ciężar tak lekki, że mógłbyś zrobić jeszcze 3 powtórzenia. Ma ci się chcieć przyjść na następny trening."
@@ -6176,8 +6308,7 @@
           "tytul": "Pobudka",
           "ikona": "⏰",
           "ping": true,
-          "opis": "Toaleta — za 5 minut waga, więc jeszcze nic nie pij. Potem 20 minut w kuchni i o 5:30 jedziesz.",
-          "akcja": "suple"
+          "opis": "Toaleta — za 5 minut waga, więc jeszcze nic nie pij. Potem 20 minut w kuchni i o 5:30 jedziesz."
         },
         {
           "czas": "04:45",
@@ -6347,6 +6478,14 @@
             "Wszystkie ilości w krokach są już przeliczone na Twoją porcję na dziś — nic nie musisz dzielić.",
             "Do tego dodatek węglowy: chleb pszenny 2 kromki, miód 1 łyżka. Zjedz obok — to paliwo na trening i regenerację, bez niego dzień nie dobija węglowodanów."
           ]
+        },
+        {
+          "czas": "07:40",
+          "tytul": "Suplementy — po śniadaniu",
+          "ikona": "💊",
+          "ping": true,
+          "akcja": "suple",
+          "opis": "Z pierwszym posiłkiem, bo D3 i omega-3 wchłaniają się z tłuszczem."
         },
         {
           "czas": "10:30",
@@ -6575,6 +6714,14 @@
           ]
         },
         {
+          "czas": "22:10",
+          "tytul": "Suplementy — wieczór",
+          "ikona": "💊",
+          "ping": true,
+          "akcja": "suple_wieczor",
+          "opis": "Magnez przed snem."
+        },
+        {
           "czas": "22:15",
           "tytul": "Przygotuj się do nocy",
           "ikona": "🤸",
@@ -6774,6 +6921,14 @@
           ]
         },
         {
+          "czas": "08:20",
+          "tytul": "Suplementy — po śniadaniu",
+          "ikona": "💊",
+          "ping": true,
+          "akcja": "suple",
+          "opis": "Z pierwszym posiłkiem, bo D3 i omega-3 wchłaniają się z tłuszczem."
+        },
+        {
           "czas": "08:30",
           "tytul": "SEN — najważniejsza rzecz dziś",
           "ikona": "😴",
@@ -6793,8 +6948,7 @@
           "tytul": "Pobudka",
           "ikona": "⏰",
           "ping": true,
-          "opis": "Toaleta, za 5 minut waga. Potem woda i suple. Bez telefonu — dziś zaczynasz od sztangi, nie od ekranu.",
-          "akcja": "suple"
+          "opis": "Toaleta, za 5 minut waga. Potem woda i suple. Bez telefonu — dziś zaczynasz od sztangi, nie od ekranu."
         },
         {
           "czas": "13:05",
@@ -7141,6 +7295,14 @@
           "opis": "Ekran w dół. Za 30 minut śpisz i to Ci resetuje rytm po zmianie."
         },
         {
+          "czas": "22:00",
+          "tytul": "Suplementy — wieczór",
+          "ikona": "💊",
+          "ping": true,
+          "akcja": "suple_wieczor",
+          "opis": "Magnez przed snem."
+        },
+        {
           "czas": "22:30",
           "tytul": "Sen",
           "ikona": "😴",
@@ -7232,7 +7394,7 @@
         "rodzaj": "krotki",
         "trening": {
           "id": "g_nogi",
-          "nazwa": "Nogi i brzuch",
+          "nazwa": "Legs — nogi",
           "czas_min": 34,
           "blok": "Blok 1 — Nauka ruchu",
           "blok_opis": "Uczysz się ruchu, nie dźwigasz. Ciężar tak lekki, że mógłbyś zrobić jeszcze 3 powtórzenia. Ma ci się chcieć przyjść na następny trening.",
@@ -7245,7 +7407,7 @@
             {
               "nazwa": "Przysiad ze sztangą",
               "powt": "5-8",
-              "przerwa": "3 min",
+              "przerwa": "90 s",
               "wskazowka": "Sztanga na górze pleców, bolce w klatce ustawione tuż pod dołem ruchu. Stopy na szerokość barków, palce lekko na zewnątrz. Schodzisz biodrami w dół i w tył, kolana idą w kierunku palców, plecy proste. Schodzisz do momentu, gdy uda są równolegle do podłogi albo niżej.",
               "latwiej": "Przysiad goblet z hantlem.",
               "trudniej": "Pauza sekunda na dole.",
@@ -7254,7 +7416,7 @@
             {
               "nazwa": "Rumuński martwy ciąg ze sztangą",
               "powt": "8-10",
-              "przerwa": "2 min",
+              "przerwa": "90 s",
               "wskazowka": "Sztanga tuż przy udach, kolana lekko ugięte i tak zostają, biodra jadą do tyłu, sztanga sunie po udach. Plecy proste, łopatki ściągnięte. Schodzisz tam, gdzie czujesz mocne ciągnięcie z tyłu uda.",
               "latwiej": "Z hantlami, mniejszy zakres.",
               "trudniej": "3 sekundy w dół i sekunda pauzy.",
@@ -7282,7 +7444,7 @@
             {
               "nazwa": "Wspięcia na palce",
               "powt": "15-20",
-              "przerwa": "45 s",
+              "przerwa": "90 s",
               "wskazowka": "Hantle w dłoniach, przednia część stóp na podwyższeniu (talerz albo stopień). Pełny zakres: głęboko w dół, wysoko w górę, sekunda zatrzymania na górze.",
               "latwiej": "Bez hantli.",
               "trudniej": "Jedna noga, hantel w ręce.",
@@ -7307,7 +7469,6 @@
           "tytul": "Pobudka",
           "ikona": "⏰",
           "ping": true,
-          "akcja": "suple",
           "opis": "Toaleta, za 5 minut waga. Potem woda i suple — i bez telefonu."
         },
         {
@@ -7490,6 +7651,14 @@
           ]
         },
         {
+          "czas": "10:45",
+          "tytul": "Suplementy — po śniadaniu",
+          "ikona": "💊",
+          "ping": true,
+          "akcja": "suple",
+          "opis": "Z pierwszym posiłkiem, bo D3 i omega-3 wchłaniają się z tłuszczem."
+        },
+        {
           "czas": "13:30",
           "tytul": "Drugi posiłek",
           "ikona": "🥪",
@@ -7663,10 +7832,10 @@
         },
         {
           "czas": "18:00",
-          "tytul": "Spacer",
-          "ikona": "🚶",
+          "tytul": "Rower — zone 2",
+          "ikona": "🚴",
           "ping": true,
-          "opis": "20–30 minut. Nie kardio — chodzi o rozruszanie bioder i pleców oraz o kroki, których dziś nie zrobisz sam z siebie."
+          "opis": "35–45 minut spokojnie: tempo, przy którym da się rozmawiać pełnymi zdaniami. To spala tłuszcz i nie zabiera sił na trening."
         },
         {
           "czas": "19:30",
@@ -7786,6 +7955,14 @@
           }
         },
         {
+          "czas": "21:30",
+          "tytul": "Suplementy — wieczór",
+          "ikona": "💊",
+          "ping": true,
+          "akcja": "suple_wieczor",
+          "opis": "Magnez przed snem."
+        },
+        {
           "czas": "22:00",
           "tytul": "Sen",
           "ikona": "😴",
@@ -7820,9 +7997,9 @@
       "trening": {
         "rodzaj": "glowny",
         "trening": {
-          "id": "g_push",
-          "nazwa": "Push — klatka, barki, triceps",
-          "czas_min": 46,
+          "id": "g_upper",
+          "nazwa": "Upper + Core — góra i brzuch",
+          "czas_min": 50,
           "blok": "Blok 1 — Nauka ruchu",
           "blok_opis": "Uczysz się ruchu, nie dźwigasz. Ciężar tak lekki, że mógłbyś zrobić jeszcze 3 powtórzenia. Ma ci się chcieć przyjść na następny trening.",
           "zapas": "3 powtórzenia w zapasie",
@@ -7832,82 +8009,98 @@
           ],
           "cwiczenia": [
             {
-              "nazwa": "Wyciskanie leżąc",
-              "powt": "6-8",
-              "przerwa": "2-3 min",
-              "v": true,
-              "wskazowka": "Ławka pod klatką w klatce Kelton, bolce ustawione na wysokości klatki. Łopatki ściągnięte i wbite w ławkę, stopy mocno na podłodze. Sztanga schodzi do dolnej części klatki, łokcie ok. 45 stopni od tułowia, nie na boki.",
-              "latwiej": "Hantle na ławce płaskiej.",
-              "trudniej": "3 sekundy w dół, sekunda przerwy przy klatce.",
-              "serie": 4,
-              "propozycja": {
-                "ciezar": 42.5,
-                "poprzedni": 40.0,
-                "powt": [
-                  14,
-                  10
-                ],
-                "data": "2026-09-20",
-                "podwyzka": 2.5
-              }
+              "nazwa": "Wyciskanie hantli na ławce skośnej",
+              "powt": "10",
+              "wskazowka": "Ławka pod kątem ok. 30 stopni, łopatki ściągnięte. Hantle schodzą do poziomu klatki, łokcie ok. 45 stopni od tułowia. Góra klatki robi najwięcej w sylwetce.",
+              "latwiej": "Lżejsze hantle.",
+              "trudniej": "3 sekundy w dół.",
+              "serie": 3,
+              "przerwa": "90 s"
             },
             {
-              "nazwa": "Wyciskanie skos (góra klatki)",
-              "powt": "8",
-              "przerwa": "2 min",
+              "nazwa": "Wiosłowanie sztangą podchwytem",
+              "powt": "10",
+              "przerwa": "90 s",
               "v": true,
-              "wskazowka": "Ławka pod kątem 30 stopni. Sztanga albo hantle schodzą do obojczyków, łopatki cały czas ściągnięte. To ćwiczenie robi górną część klatki, która najmocniej zmienia sylwetkę.",
-              "latwiej": "Hantle zamiast sztangi.",
-              "trudniej": "Pauza sekunda na dole.",
+              "wskazowka": "Chwyt podchwytem na szerokość barków, tułów pochylony ok. 45 stopni, plecy proste. Ciągniesz sztangę do brzucha, łokcie blisko ciała, na górze ściągasz łopatki. Podchwyt mocniej angażuje dolną część najszerszych i biceps.",
+              "latwiej": "Tułów wyżej, ok. 60 stopni, mniejszy ciężar.",
+              "trudniej": "Sekunda pauzy przy brzuchu.",
               "serie": 3
             },
             {
-              "nazwa": "Wyciskanie żołnierskie (OHP)",
-              "powt": "8",
-              "przerwa": "2 min",
-              "v": true,
-              "wskazowka": "Stojąc, sztanga na przednich barkach, brzuch i pośladki napięte, żebra w dół. Wyciskasz nad głowę i chowasz głowę pod sztangę na końcu ruchu. Nie odchylaj się do tyłu.",
-              "latwiej": "Siedząc na ławce z oparciem, z hantlami.",
-              "trudniej": "Pauza sekunda nad głową.",
-              "serie": 3
-            },
-            {
-              "nazwa": "Unoszenie hantli bokiem",
-              "powt": "12-15",
-              "przerwa": "60 s",
-              "v": true,
-              "wskazowka": "Łokcie lekko ugięte, ruch prowadzą łokcie, nie dłonie. Unosisz do wysokości barków, nie wyżej. Mały ciężar, czysta technika — to ćwiczenie robi szerokość barków.",
-              "latwiej": "Jedną ręką, drugą trzymasz się klatki.",
-              "trudniej": "Seria zrywana: po odmowie lżejszy hantel i dalej.",
+              "nazwa": "Uginanie ramion z hantlami",
+              "powt": "10",
+              "wskazowka": "Stojąc, dłonie do przodu (podchwyt), łokcie przy tułowiu i w miejscu. Unosisz oba hantle naraz albo na zmianę, opuszczasz wolniej, niż podnosisz.",
+              "latwiej": "Na zmianę, lżejsze hantle.",
+              "trudniej": "Na ławce skośnej, siedząc.",
               "serie": 3,
-              "propozycja": {
-                "ciezar": 7.0,
-                "poprzedni": 7.0,
-                "powt": [
-                  12,
-                  12
-                ],
-                "data": "2026-09-20",
-                "podwyzka": 0.0
-              }
-            },
-            {
-              "nazwa": "Wyciskanie wąskim chwytem",
-              "serie": 3,
-              "powt": "8-10",
-              "przerwa": "2 min",
-              "wskazowka": "Jak zwykłe wyciskanie leżąc, ale dłonie na szerokość barków (nie węziej — za wąsko bolą nadgarstki). Łokcie blisko tułowia, sztanga schodzi do dolnej części klatki. To najlepsze ćwiczenie na triceps, jakie zrobisz ze sztangą.",
-              "latwiej": "Mniejszy ciężar, pauza przy klatce.",
-              "trudniej": "3 sekundy w dół."
+              "przerwa": "90 s"
             },
             {
               "nazwa": "Prostowanie ramion z hantlem nad głową",
-              "powt": "10-12",
-              "przerwa": "75 s",
+              "powt": "12",
+              "przerwa": "90 s",
               "wskazowka": "Jeden hantel oburącz nad głową. Łokcie blisko głowy i w miejscu, rusza się tylko przedramię. Triceps to dwie trzecie obwodu ramienia.",
               "latwiej": "Lżejszy hantel, jedną ręką.",
               "trudniej": "Wyciskanie francuskie sztangą EZ leżąc.",
               "serie": 3
+            },
+            {
+              "nazwa": "Deska",
+              "powt": "45 s",
+              "przerwa": "90 s",
+              "wskazowka": "Przedramiona pod barkami, ciało w jednej linii od głowy do pięt, pośladki i brzuch napięte. Wpisujesz liczbę sekund.",
+              "latwiej": "Na kolanach.",
+              "trudniej": "Z uniesioną jedną nogą.",
+              "serie": 3,
+              "propozycja": {
+                "ciezar": 0.0,
+                "poprzedni": 0.0,
+                "powt": [
+                  50,
+                  60
+                ],
+                "data": "2026-09-18",
+                "podwyzka": 0.0
+              }
+            },
+            {
+              "nazwa": "Unoszenie nóg leżąc",
+              "powt": "12",
+              "przerwa": "90 s",
+              "wskazowka": "Leżysz na plecach, dłonie pod pośladkami, nogi proste albo lekko ugięte. Unosisz je do pionu i powoli opuszczasz, nie kładąc pięt na podłodze. Dolna część pleców dociśnięta do podłogi.",
+              "latwiej": "Kolana mocno ugięte.",
+              "trudniej": "Nogi całkiem proste, 3 sekundy w dół.",
+              "serie": 3,
+              "propozycja": {
+                "ciezar": 0.0,
+                "poprzedni": 0.0,
+                "powt": [
+                  15,
+                  15
+                ],
+                "data": "2026-09-18",
+                "podwyzka": 0.0
+              }
+            },
+            {
+              "nazwa": "Spięcia brzucha (brzuszki)",
+              "powt": "15",
+              "przerwa": "90 s",
+              "wskazowka": "Leżysz na plecach, kolana zgięte, stopy na podłodze, ręce skrzyżowane na klatce. Zwijasz tułów i odrywasz łopatki od podłogi na jakieś 10 cm — to cały ruch, plecy niżej zostają na ziemi. Broda odsunięta od klatki na szerokość pięści, nie ciągniesz głowy. Na górze zatrzymaj na sekundę i mocno napnij brzuch, potem powoli w dół. Tu poczujesz brzuch od pierwszej serii.",
+              "latwiej": "Mniejszy zakres, ręce wyciągnięte wzdłuż ciała.",
+              "trudniej": "Ręce przy skroniach albo hantel trzymany na klatce.",
+              "serie": 3,
+              "propozycja": {
+                "ciezar": 0.0,
+                "poprzedni": 0.0,
+                "powt": [
+                  15,
+                  15
+                ],
+                "data": "2026-09-20",
+                "podwyzka": 0.0
+              }
             }
           ],
           "finisz": "Każda seria kończy się z zapasem: 3 powtórzenia w zapasie. Uczysz się ruchu, nie dźwigasz. Ciężar tak lekki, że mógłbyś zrobić jeszcze 3 powtórzenia. Ma ci się chcieć przyjść na następny trening."
@@ -7928,8 +8121,7 @@
           "tytul": "Pobudka",
           "ikona": "⏰",
           "ping": true,
-          "opis": "Toaleta — za 5 minut waga, więc jeszcze nic nie pij. Potem 20 minut w kuchni i o 5:30 jedziesz.",
-          "akcja": "suple"
+          "opis": "Toaleta — za 5 minut waga, więc jeszcze nic nie pij. Potem 20 minut w kuchni i o 5:30 jedziesz."
         },
         {
           "czas": "04:45",
@@ -8111,6 +8303,14 @@
             "Do pojemnika: na zimno smakuje jak ciasto marchewkowe — dżem i banana dołóż w osobnym pudełku, napój weź w butelce.",
             "Wszystkie ilości w krokach są już przeliczone na Twoją porcję na dziś — nic nie musisz dzielić."
           ]
+        },
+        {
+          "czas": "07:40",
+          "tytul": "Suplementy — po śniadaniu",
+          "ikona": "💊",
+          "ping": true,
+          "akcja": "suple",
+          "opis": "Z pierwszym posiłkiem, bo D3 i omega-3 wchłaniają się z tłuszczem."
         },
         {
           "czas": "10:30",
@@ -8363,6 +8563,14 @@
           ]
         },
         {
+          "czas": "22:10",
+          "tytul": "Suplementy — wieczór",
+          "ikona": "💊",
+          "ping": true,
+          "akcja": "suple_wieczor",
+          "opis": "Magnez przed snem."
+        },
+        {
           "czas": "22:15",
           "tytul": "Przygotuj się do nocy",
           "ikona": "🤸",
@@ -8526,6 +8734,14 @@
           ]
         },
         {
+          "czas": "08:20",
+          "tytul": "Suplementy — po śniadaniu",
+          "ikona": "💊",
+          "ping": true,
+          "akcja": "suple",
+          "opis": "Z pierwszym posiłkiem, bo D3 i omega-3 wchłaniają się z tłuszczem."
+        },
+        {
           "czas": "08:30",
           "tytul": "SEN — najważniejsza rzecz dziś",
           "ikona": "😴",
@@ -8545,8 +8761,7 @@
           "tytul": "Pobudka",
           "ikona": "⏰",
           "ping": true,
-          "opis": "Toaleta, za 5 minut waga. Potem woda i suple. Bez telefonu — dziś zaczynasz od sztangi, nie od ekranu.",
-          "akcja": "suple"
+          "opis": "Toaleta, za 5 minut waga. Potem woda i suple. Bez telefonu — dziś zaczynasz od sztangi, nie od ekranu."
         },
         {
           "czas": "13:05",
@@ -8928,6 +9143,14 @@
           "opis": "Ekran w dół. Za 30 minut śpisz i to Ci resetuje rytm po zmianie."
         },
         {
+          "czas": "22:00",
+          "tytul": "Suplementy — wieczór",
+          "ikona": "💊",
+          "ping": true,
+          "akcja": "suple_wieczor",
+          "opis": "Magnez przed snem."
+        },
+        {
           "czas": "22:30",
           "tytul": "Sen",
           "ikona": "😴",
@@ -8970,8 +9193,8 @@
       "trening": {
         "rodzaj": "krotki",
         "trening": {
-          "id": "g_pull",
-          "nazwa": "Pull — plecy i biceps",
+          "id": "g_push",
+          "nazwa": "Push — klatka, barki, triceps",
           "czas_min": 34,
           "blok": "Blok 1 — Nauka ruchu",
           "blok_opis": "Uczysz się ruchu, nie dźwigasz. Ciężar tak lekki, że mógłbyś zrobić jeszcze 3 powtórzenia. Ma ci się chcieć przyjść na następny trening.",
@@ -8982,54 +9205,64 @@
           ],
           "cwiczenia": [
             {
-              "nazwa": "Wiosłowanie sztangą podchwytem",
-              "powt": "8",
-              "przerwa": "2 min",
-              "v": true,
-              "wskazowka": "Chwyt podchwytem na szerokość barków, tułów pochylony ok. 45 stopni, plecy proste. Ciągniesz sztangę do brzucha, łokcie blisko ciała, na górze ściągasz łopatki. Podchwyt mocniej angażuje dolną część najszerszych i biceps.",
-              "latwiej": "Tułów wyżej, ok. 60 stopni, mniejszy ciężar.",
-              "trudniej": "Sekunda pauzy przy brzuchu.",
-              "serie": 4
-            },
-            {
-              "nazwa": "Martwy ciąg",
-              "powt": "6",
-              "przerwa": "3 min",
-              "v": true,
-              "wskazowka": "Sztanga nad środkiem stopy, chwyt na szerokość barków. Klatka w górę, plecy proste, napinasz całe ciało i odpychasz się nogami od podłogi. Sztanga sunie po nogach. Każde powtórzenie zaczynasz od nowa z podłogi, bez sprężynowania.",
-              "latwiej": "Sztanga na podstawkach, ok. 10 cm wyżej.",
-              "trudniej": "Pauza sekunda tuż nad podłogą przy opuszczaniu.",
-              "serie": 3
-            },
-            {
-              "nazwa": "Wiosłowanie hantlem jednorącz",
-              "powt": "12",
+              "nazwa": "Wyciskanie leżąc",
+              "powt": "6-8",
               "przerwa": "90 s",
               "v": true,
-              "wskazowka": "Kolano i ręka na ławce, plecy płaskie. Ciągniesz hantel do biodra, nie do barku — wtedy pracują plecy, a nie biceps.",
-              "latwiej": "Lżejszy hantel, sekunda pauzy na górze.",
-              "trudniej": "Wolny opust 3 sekundy.",
-              "serie": 3,
+              "wskazowka": "Ławka pod klatką w klatce Kelton, bolce ustawione na wysokości klatki. Łopatki ściągnięte i wbite w ławkę, stopy mocno na podłodze. Sztanga schodzi do dolnej części klatki, łokcie ok. 45 stopni od tułowia, nie na boki.",
+              "latwiej": "Hantle na ławce płaskiej.",
+              "trudniej": "3 sekundy w dół, sekunda przerwy przy klatce.",
+              "serie": 4,
               "propozycja": {
-                "ciezar": 16.5,
-                "poprzedni": 14.0,
+                "ciezar": 42.5,
+                "poprzedni": 40.0,
                 "powt": [
-                  12,
-                  12
+                  14,
+                  10
                 ],
                 "data": "2026-09-20",
                 "podwyzka": 2.5
               }
             },
             {
-              "nazwa": "Pullover z hantlem",
-              "powt": "12",
-              "przerwa": "75 s",
+              "nazwa": "Wyciskanie skos (góra klatki)",
+              "powt": "8",
+              "przerwa": "90 s",
               "v": true,
-              "wskazowka": "Leżysz na ławce, jeden hantel oburącz nad klatką. Na prawie prostych rękach opuszczasz go za głowę, aż poczujesz rozciąganie pod pachami, i wracasz. Pracują najszersze — to one robią szerokość pleców.",
-              "latwiej": "Lżejszy hantel, mniejszy zakres.",
-              "trudniej": "Wolny opust 3 sekundy i pauza na dole.",
+              "wskazowka": "Ławka pod kątem 30 stopni. Sztanga albo hantle schodzą do obojczyków, łopatki cały czas ściągnięte. To ćwiczenie robi górną część klatki, która najmocniej zmienia sylwetkę.",
+              "latwiej": "Hantle zamiast sztangi.",
+              "trudniej": "Pauza sekunda na dole.",
               "serie": 3
+            },
+            {
+              "nazwa": "Wyciskanie żołnierskie (OHP)",
+              "powt": "8",
+              "przerwa": "90 s",
+              "v": true,
+              "wskazowka": "Stojąc, sztanga na przednich barkach, brzuch i pośladki napięte, żebra w dół. Wyciskasz nad głowę i chowasz głowę pod sztangę na końcu ruchu. Nie odchylaj się do tyłu.",
+              "latwiej": "Siedząc na ławce z oparciem, z hantlami.",
+              "trudniej": "Pauza sekunda nad głową.",
+              "serie": 3
+            },
+            {
+              "nazwa": "Unoszenie hantli bokiem",
+              "powt": "12-15",
+              "przerwa": "90 s",
+              "v": true,
+              "wskazowka": "Łokcie lekko ugięte, ruch prowadzą łokcie, nie dłonie. Unosisz do wysokości barków, nie wyżej. Mały ciężar, czysta technika — to ćwiczenie robi szerokość barków.",
+              "latwiej": "Jedną ręką, drugą trzymasz się klatki.",
+              "trudniej": "Seria zrywana: po odmowie lżejszy hantel i dalej.",
+              "serie": 3,
+              "propozycja": {
+                "ciezar": 7.0,
+                "poprzedni": 7.0,
+                "powt": [
+                  12,
+                  12
+                ],
+                "data": "2026-09-20",
+                "podwyzka": 0.0
+              }
             }
           ],
           "finisz": "Każda seria kończy się z zapasem: 3 powtórzenia w zapasie. Uczysz się ruchu, nie dźwigasz. Ciężar tak lekki, że mógłbyś zrobić jeszcze 3 powtórzenia. Ma ci się chcieć przyjść na następny trening."
@@ -9050,7 +9283,6 @@
           "tytul": "Pobudka",
           "ikona": "⏰",
           "ping": true,
-          "akcja": "suple",
           "opis": "Toaleta, za 5 minut waga. Potem woda i suple — i bez telefonu."
         },
         {
@@ -9190,6 +9422,14 @@
             "Wszystkie ilości w krokach są już przeliczone na Twoją porcję na dziś — nic nie musisz dzielić.",
             "Do tego dodatek węglowy: chleb pszenny 2 kromki, miód 1 łyżka. Zjedz obok — to paliwo na trening i regenerację, bez niego dzień nie dobija węglowodanów."
           ]
+        },
+        {
+          "czas": "10:45",
+          "tytul": "Suplementy — po śniadaniu",
+          "ikona": "💊",
+          "ping": true,
+          "akcja": "suple",
+          "opis": "Z pierwszym posiłkiem, bo D3 i omega-3 wchłaniają się z tłuszczem."
         },
         {
           "czas": "13:30",
@@ -9347,10 +9587,10 @@
         },
         {
           "czas": "18:00",
-          "tytul": "Spacer",
-          "ikona": "🚶",
+          "tytul": "Rower — zone 2",
+          "ikona": "🚴",
           "ping": true,
-          "opis": "20–30 minut. Nie kardio — chodzi o rozruszanie bioder i pleców oraz o kroki, których dziś nie zrobisz sam z siebie."
+          "opis": "35–45 minut spokojnie: tempo, przy którym da się rozmawiać pełnymi zdaniami. To spala tłuszcz i nie zabiera sił na trening."
         },
         {
           "czas": "19:30",
@@ -9449,6 +9689,14 @@
           }
         },
         {
+          "czas": "21:30",
+          "tytul": "Suplementy — wieczór",
+          "ikona": "💊",
+          "ping": true,
+          "akcja": "suple_wieczor",
+          "opis": "Magnez przed snem."
+        },
+        {
           "czas": "22:00",
           "tytul": "Sen",
           "ikona": "😴",
@@ -9492,9 +9740,9 @@
       "trening": {
         "rodzaj": "glowny",
         "trening": {
-          "id": "g_nogi",
-          "nazwa": "Nogi i brzuch",
-          "czas_min": 46,
+          "id": "g_pull",
+          "nazwa": "Pull — plecy i biceps",
+          "czas_min": 52,
           "blok": "Blok 1 — Nauka ruchu",
           "blok_opis": "Uczysz się ruchu, nie dźwigasz. Ciężar tak lekki, że mógłbyś zrobić jeszcze 3 powtórzenia. Ma ci się chcieć przyjść na następny trening.",
           "zapas": "3 powtórzenia w zapasie",
@@ -9504,88 +9752,81 @@
           ],
           "cwiczenia": [
             {
-              "nazwa": "Przysiad ze sztangą",
-              "powt": "5-8",
-              "przerwa": "3 min",
-              "wskazowka": "Sztanga na górze pleców, bolce w klatce ustawione tuż pod dołem ruchu. Stopy na szerokość barków, palce lekko na zewnątrz. Schodzisz biodrami w dół i w tył, kolana idą w kierunku palców, plecy proste. Schodzisz do momentu, gdy uda są równolegle do podłogi albo niżej.",
-              "latwiej": "Przysiad goblet z hantlem.",
-              "trudniej": "Pauza sekunda na dole.",
+              "nazwa": "Wiosłowanie sztangą podchwytem",
+              "powt": "8",
+              "przerwa": "90 s",
+              "v": true,
+              "wskazowka": "Chwyt podchwytem na szerokość barków, tułów pochylony ok. 45 stopni, plecy proste. Ciągniesz sztangę do brzucha, łokcie blisko ciała, na górze ściągasz łopatki. Podchwyt mocniej angażuje dolną część najszerszych i biceps.",
+              "latwiej": "Tułów wyżej, ok. 60 stopni, mniejszy ciężar.",
+              "trudniej": "Sekunda pauzy przy brzuchu.",
               "serie": 4
             },
             {
-              "nazwa": "Rumuński martwy ciąg ze sztangą",
-              "powt": "8-10",
-              "przerwa": "2 min",
-              "wskazowka": "Sztanga tuż przy udach, kolana lekko ugięte i tak zostają, biodra jadą do tyłu, sztanga sunie po udach. Plecy proste, łopatki ściągnięte. Schodzisz tam, gdzie czujesz mocne ciągnięcie z tyłu uda.",
-              "latwiej": "Z hantlami, mniejszy zakres.",
-              "trudniej": "3 sekundy w dół i sekunda pauzy.",
+              "nazwa": "Martwy ciąg",
+              "powt": "6",
+              "przerwa": "90 s",
+              "v": true,
+              "wskazowka": "Sztanga nad środkiem stopy, chwyt na szerokość barków. Klatka w górę, plecy proste, napinasz całe ciało i odpychasz się nogami od podłogi. Sztanga sunie po nogach. Każde powtórzenie zaczynasz od nowa z podłogi, bez sprężynowania.",
+              "latwiej": "Sztanga na podstawkach, ok. 10 cm wyżej.",
+              "trudniej": "Pauza sekunda tuż nad podłogą przy opuszczaniu.",
+              "serie": 3
+            },
+            {
+              "nazwa": "Wiosłowanie hantlem jednorącz",
+              "powt": "12",
+              "przerwa": "90 s",
+              "v": true,
+              "wskazowka": "Kolano i ręka na ławce, plecy płaskie. Ciągniesz hantel do biodra, nie do barku — wtedy pracują plecy, a nie biceps.",
+              "latwiej": "Lżejszy hantel, sekunda pauzy na górze.",
+              "trudniej": "Wolny opust 3 sekundy.",
               "serie": 3,
               "propozycja": {
-                "ciezar": 35.0,
-                "poprzedni": 30.0,
+                "ciezar": 16.5,
+                "poprzedni": 14.0,
                 "powt": [
                   12,
                   12
                 ],
-                "data": "2026-09-18",
-                "podwyzka": 5.0
+                "data": "2026-09-20",
+                "podwyzka": 2.5
               }
             },
             {
-              "nazwa": "Przysiad bułgarski",
+              "nazwa": "Pullover z hantlem",
+              "powt": "12",
+              "przerwa": "90 s",
+              "v": true,
+              "wskazowka": "Leżysz na ławce, jeden hantel oburącz nad klatką. Na prawie prostych rękach opuszczasz go za głowę, aż poczujesz rozciąganie pod pachami, i wracasz. Pracują najszersze — to one robią szerokość pleców.",
+              "latwiej": "Lżejszy hantel, mniejszy zakres.",
+              "trudniej": "Wolny opust 3 sekundy i pauza na dole.",
+              "serie": 3
+            },
+            {
+              "nazwa": "Uginanie ramion ze sztangą",
               "powt": "10",
               "przerwa": "90 s",
-              "wskazowka": "Tylna stopa na ławce, przednia wysunięta tak, żeby kolano nie wychodziło daleko przed palce. Schodzisz pionowo w dół, ciężar na przedniej pięcie. Hantle w dłoniach. Powtórzenia liczysz na jedną nogę.",
-              "latwiej": "Bez hantli, przytrzymując się klatki.",
-              "trudniej": "Wolny opust 3 sekundy.",
+              "wskazowka": "Łokcie przy tułowiu i w miejscu, bez bujania tułowiem. Opuszczasz wolniej, niż podnosisz.",
+              "latwiej": "Sztanga EZ albo hantle naprzemiennie.",
+              "trudniej": "Ostatnie 2 powtórzenia z lekkim wspomaganiem i wolny opust.",
               "serie": 3
             },
             {
-              "nazwa": "Wspięcia na palce",
-              "powt": "15-20",
-              "przerwa": "45 s",
-              "wskazowka": "Hantle w dłoniach, przednia część stóp na podwyższeniu (talerz albo stopień). Pełny zakres: głęboko w dół, wysoko w górę, sekunda zatrzymania na górze.",
-              "latwiej": "Bez hantli.",
-              "trudniej": "Jedna noga, hantel w ręce.",
-              "serie": 3
+              "nazwa": "Uginanie ramion z hantlami",
+              "powt": "10",
+              "wskazowka": "Stojąc, dłonie do przodu (podchwyt), łokcie przy tułowiu i w miejscu. Unosisz oba hantle naraz albo na zmianę, opuszczasz wolniej, niż podnosisz.",
+              "latwiej": "Na zmianę, lżejsze hantle.",
+              "trudniej": "Na ławce skośnej, siedząc.",
+              "serie": 3,
+              "przerwa": "90 s"
             },
             {
-              "nazwa": "Unoszenie nóg leżąc",
-              "powt": "12",
-              "przerwa": "60 s",
-              "wskazowka": "Leżysz na plecach, dłonie pod pośladkami, nogi proste albo lekko ugięte. Unosisz je do pionu i powoli opuszczasz, nie kładąc pięt na podłodze. Dolna część pleców dociśnięta do podłogi.",
-              "latwiej": "Kolana mocno ugięte.",
-              "trudniej": "Nogi całkiem proste, 3 sekundy w dół.",
+              "nazwa": "Odwrotne rozpiętki leżąc na skosie",
+              "powt": "15",
+              "wskazowka": "Leżysz brzuchem na ławce ustawionej na skos, hantle zwisają w dół. Rozkładasz ręce na boki jak skrzydła, łokcie lekko ugięte, na górze ściągasz łopatki. Tył barków — bez niego barki wyglądają płasko z boku.",
+              "latwiej": "Lżejsze hantle.",
+              "trudniej": "2 sekundy zatrzymania na górze.",
               "serie": 3,
-              "propozycja": {
-                "ciezar": 0.0,
-                "poprzedni": 0.0,
-                "powt": [
-                  15,
-                  15
-                ],
-                "data": "2026-09-18",
-                "podwyzka": 0.0
-              }
-            },
-            {
-              "nazwa": "Deska",
-              "powt": "45 s",
-              "przerwa": "45 s",
-              "wskazowka": "Przedramiona pod barkami, ciało w jednej linii od głowy do pięt. Pośladki i brzuch napięte, jakbyś miał dostać cios w brzuch. Wpisujesz liczbę sekund.",
-              "latwiej": "Na kolanach.",
-              "trudniej": "Z uniesioną jedną nogą.",
-              "serie": 3,
-              "propozycja": {
-                "ciezar": 0.0,
-                "poprzedni": 0.0,
-                "powt": [
-                  50,
-                  60
-                ],
-                "data": "2026-09-18",
-                "podwyzka": 0.0
-              }
+              "przerwa": "90 s"
             }
           ],
           "finisz": "Każda seria kończy się z zapasem: 3 powtórzenia w zapasie. Uczysz się ruchu, nie dźwigasz. Ciężar tak lekki, że mógłbyś zrobić jeszcze 3 powtórzenia. Ma ci się chcieć przyjść na następny trening."
@@ -9606,8 +9847,7 @@
           "tytul": "Pobudka",
           "ikona": "⏰",
           "ping": true,
-          "opis": "Toaleta — za 5 minut waga, więc jeszcze nic nie pij. Potem 20 minut w kuchni i o 5:30 jedziesz.",
-          "akcja": "suple"
+          "opis": "Toaleta — za 5 minut waga, więc jeszcze nic nie pij. Potem 20 minut w kuchni i o 5:30 jedziesz."
         },
         {
           "czas": "04:45",
@@ -9794,6 +10034,14 @@
             "Do pojemnika: na zimno smakuje jak ciasto marchewkowe — dżem i banana dołóż w osobnym pudełku, napój weź w butelce.",
             "Wszystkie ilości w krokach są już przeliczone na Twoją porcję na dziś — nic nie musisz dzielić."
           ]
+        },
+        {
+          "czas": "07:40",
+          "tytul": "Suplementy — po śniadaniu",
+          "ikona": "💊",
+          "ping": true,
+          "akcja": "suple",
+          "opis": "Z pierwszym posiłkiem, bo D3 i omega-3 wchłaniają się z tłuszczem."
         },
         {
           "czas": "10:30",
@@ -10085,6 +10333,14 @@
           ]
         },
         {
+          "czas": "22:10",
+          "tytul": "Suplementy — wieczór",
+          "ikona": "💊",
+          "ping": true,
+          "akcja": "suple_wieczor",
+          "opis": "Magnez przed snem."
+        },
+        {
           "czas": "22:15",
           "tytul": "Przygotuj się do nocy",
           "ikona": "🤸",
@@ -10248,6 +10504,14 @@
           ]
         },
         {
+          "czas": "08:20",
+          "tytul": "Suplementy — po śniadaniu",
+          "ikona": "💊",
+          "ping": true,
+          "akcja": "suple",
+          "opis": "Z pierwszym posiłkiem, bo D3 i omega-3 wchłaniają się z tłuszczem."
+        },
+        {
           "czas": "08:30",
           "tytul": "SEN — najważniejsza rzecz dziś",
           "ikona": "😴",
@@ -10267,8 +10531,7 @@
           "tytul": "Pobudka",
           "ikona": "⏰",
           "ping": true,
-          "opis": "Toaleta, za 5 minut waga. Potem woda i suple. Bez telefonu — dziś zaczynasz od sztangi, nie od ekranu.",
-          "akcja": "suple"
+          "opis": "Toaleta, za 5 minut waga. Potem woda i suple. Bez telefonu — dziś zaczynasz od sztangi, nie od ekranu."
         },
         {
           "czas": "13:05",
@@ -10654,6 +10917,14 @@
           "opis": "Ekran w dół. Za 30 minut śpisz i to Ci resetuje rytm po zmianie."
         },
         {
+          "czas": "22:00",
+          "tytul": "Suplementy — wieczór",
+          "ikona": "💊",
+          "ping": true,
+          "akcja": "suple_wieczor",
+          "opis": "Magnez przed snem."
+        },
+        {
           "czas": "22:30",
           "tytul": "Sen",
           "ikona": "😴",
@@ -10696,8 +10967,8 @@
       "trening": {
         "rodzaj": "krotki",
         "trening": {
-          "id": "g_push",
-          "nazwa": "Push — klatka, barki, triceps",
+          "id": "g_nogi",
+          "nazwa": "Legs — nogi",
           "czas_min": 34,
           "blok": "Blok 1 — Nauka ruchu",
           "blok_opis": "Uczysz się ruchu, nie dźwigasz. Ciężar tak lekki, że mógłbyś zrobić jeszcze 3 powtórzenia. Ma ci się chcieć przyjść na następny trening.",
@@ -10708,64 +10979,50 @@
           ],
           "cwiczenia": [
             {
-              "nazwa": "Wyciskanie leżąc",
-              "powt": "6-8",
-              "przerwa": "2-3 min",
-              "v": true,
-              "wskazowka": "Ławka pod klatką w klatce Kelton, bolce ustawione na wysokości klatki. Łopatki ściągnięte i wbite w ławkę, stopy mocno na podłodze. Sztanga schodzi do dolnej części klatki, łokcie ok. 45 stopni od tułowia, nie na boki.",
-              "latwiej": "Hantle na ławce płaskiej.",
-              "trudniej": "3 sekundy w dół, sekunda przerwy przy klatce.",
-              "serie": 4,
-              "propozycja": {
-                "ciezar": 42.5,
-                "poprzedni": 40.0,
-                "powt": [
-                  14,
-                  10
-                ],
-                "data": "2026-09-20",
-                "podwyzka": 2.5
-              }
-            },
-            {
-              "nazwa": "Wyciskanie skos (góra klatki)",
-              "powt": "8",
-              "przerwa": "2 min",
-              "v": true,
-              "wskazowka": "Ławka pod kątem 30 stopni. Sztanga albo hantle schodzą do obojczyków, łopatki cały czas ściągnięte. To ćwiczenie robi górną część klatki, która najmocniej zmienia sylwetkę.",
-              "latwiej": "Hantle zamiast sztangi.",
+              "nazwa": "Przysiad ze sztangą",
+              "powt": "5-8",
+              "przerwa": "90 s",
+              "wskazowka": "Sztanga na górze pleców, bolce w klatce ustawione tuż pod dołem ruchu. Stopy na szerokość barków, palce lekko na zewnątrz. Schodzisz biodrami w dół i w tył, kolana idą w kierunku palców, plecy proste. Schodzisz do momentu, gdy uda są równolegle do podłogi albo niżej.",
+              "latwiej": "Przysiad goblet z hantlem.",
               "trudniej": "Pauza sekunda na dole.",
-              "serie": 3
+              "serie": 4
             },
             {
-              "nazwa": "Wyciskanie żołnierskie (OHP)",
-              "powt": "8",
-              "przerwa": "2 min",
-              "v": true,
-              "wskazowka": "Stojąc, sztanga na przednich barkach, brzuch i pośladki napięte, żebra w dół. Wyciskasz nad głowę i chowasz głowę pod sztangę na końcu ruchu. Nie odchylaj się do tyłu.",
-              "latwiej": "Siedząc na ławce z oparciem, z hantlami.",
-              "trudniej": "Pauza sekunda nad głową.",
-              "serie": 3
-            },
-            {
-              "nazwa": "Unoszenie hantli bokiem",
-              "powt": "12-15",
-              "przerwa": "60 s",
-              "v": true,
-              "wskazowka": "Łokcie lekko ugięte, ruch prowadzą łokcie, nie dłonie. Unosisz do wysokości barków, nie wyżej. Mały ciężar, czysta technika — to ćwiczenie robi szerokość barków.",
-              "latwiej": "Jedną ręką, drugą trzymasz się klatki.",
-              "trudniej": "Seria zrywana: po odmowie lżejszy hantel i dalej.",
+              "nazwa": "Rumuński martwy ciąg ze sztangą",
+              "powt": "8-10",
+              "przerwa": "90 s",
+              "wskazowka": "Sztanga tuż przy udach, kolana lekko ugięte i tak zostają, biodra jadą do tyłu, sztanga sunie po udach. Plecy proste, łopatki ściągnięte. Schodzisz tam, gdzie czujesz mocne ciągnięcie z tyłu uda.",
+              "latwiej": "Z hantlami, mniejszy zakres.",
+              "trudniej": "3 sekundy w dół i sekunda pauzy.",
               "serie": 3,
               "propozycja": {
-                "ciezar": 7.0,
-                "poprzedni": 7.0,
+                "ciezar": 35.0,
+                "poprzedni": 30.0,
                 "powt": [
                   12,
                   12
                 ],
-                "data": "2026-09-20",
-                "podwyzka": 0.0
+                "data": "2026-09-18",
+                "podwyzka": 5.0
               }
+            },
+            {
+              "nazwa": "Przysiad bułgarski",
+              "powt": "10",
+              "przerwa": "90 s",
+              "wskazowka": "Tylna stopa na ławce, przednia wysunięta tak, żeby kolano nie wychodziło daleko przed palce. Schodzisz pionowo w dół, ciężar na przedniej pięcie. Hantle w dłoniach. Powtórzenia liczysz na jedną nogę.",
+              "latwiej": "Bez hantli, przytrzymując się klatki.",
+              "trudniej": "Wolny opust 3 sekundy.",
+              "serie": 3
+            },
+            {
+              "nazwa": "Wspięcia na palce",
+              "powt": "15-20",
+              "przerwa": "90 s",
+              "wskazowka": "Hantle w dłoniach, przednia część stóp na podwyższeniu (talerz albo stopień). Pełny zakres: głęboko w dół, wysoko w górę, sekunda zatrzymania na górze.",
+              "latwiej": "Bez hantli.",
+              "trudniej": "Jedna noga, hantel w ręce.",
+              "serie": 3
             }
           ],
           "finisz": "Każda seria kończy się z zapasem: 3 powtórzenia w zapasie. Uczysz się ruchu, nie dźwigasz. Ciężar tak lekki, że mógłbyś zrobić jeszcze 3 powtórzenia. Ma ci się chcieć przyjść na następny trening."
@@ -10786,7 +11043,6 @@
           "tytul": "Pobudka",
           "ikona": "⏰",
           "ping": true,
-          "akcja": "suple",
           "opis": "Toaleta, za 5 minut waga. Potem woda i suple — i bez telefonu."
         },
         {
@@ -10914,6 +11170,14 @@
             "Złóż boki do środka i zwiń od dołu w rulon. Do popicia skyr pitny (1 butelka, 330 ml).",
             "Wszystkie ilości w krokach są już przeliczone na Twoją porcję na dziś — nic nie musisz dzielić."
           ]
+        },
+        {
+          "czas": "10:45",
+          "tytul": "Suplementy — po śniadaniu",
+          "ikona": "💊",
+          "ping": true,
+          "akcja": "suple",
+          "opis": "Z pierwszym posiłkiem, bo D3 i omega-3 wchłaniają się z tłuszczem."
         },
         {
           "czas": "11:30",
@@ -11096,10 +11360,10 @@
         },
         {
           "czas": "18:00",
-          "tytul": "Spacer",
-          "ikona": "🚶",
+          "tytul": "Rower — zone 2",
+          "ikona": "🚴",
           "ping": true,
-          "opis": "20–30 minut. Nie kardio — chodzi o rozruszanie bioder i pleców oraz o kroki, których dziś nie zrobisz sam z siebie."
+          "opis": "35–45 minut spokojnie: tempo, przy którym da się rozmawiać pełnymi zdaniami. To spala tłuszcz i nie zabiera sił na trening."
         },
         {
           "czas": "19:30",
@@ -11208,6 +11472,14 @@
           }
         },
         {
+          "czas": "21:30",
+          "tytul": "Suplementy — wieczór",
+          "ikona": "💊",
+          "ping": true,
+          "akcja": "suple_wieczor",
+          "opis": "Magnez przed snem."
+        },
+        {
           "czas": "22:00",
           "tytul": "Sen",
           "ikona": "😴",
@@ -11242,9 +11514,9 @@
       "trening": {
         "rodzaj": "glowny",
         "trening": {
-          "id": "g_pull",
-          "nazwa": "Pull — plecy i biceps",
-          "czas_min": 52,
+          "id": "g_upper",
+          "nazwa": "Upper + Core — góra i brzuch",
+          "czas_min": 50,
           "blok": "Blok 1 — Nauka ruchu",
           "blok_opis": "Uczysz się ruchu, nie dźwigasz. Ciężar tak lekki, że mógłbyś zrobić jeszcze 3 powtórzenia. Ma ci się chcieć przyjść na następny trening.",
           "zapas": "3 powtórzenia w zapasie",
@@ -11254,81 +11526,98 @@
           ],
           "cwiczenia": [
             {
+              "nazwa": "Wyciskanie hantli na ławce skośnej",
+              "powt": "10",
+              "wskazowka": "Ławka pod kątem ok. 30 stopni, łopatki ściągnięte. Hantle schodzą do poziomu klatki, łokcie ok. 45 stopni od tułowia. Góra klatki robi najwięcej w sylwetce.",
+              "latwiej": "Lżejsze hantle.",
+              "trudniej": "3 sekundy w dół.",
+              "serie": 3,
+              "przerwa": "90 s"
+            },
+            {
               "nazwa": "Wiosłowanie sztangą podchwytem",
-              "powt": "8",
-              "przerwa": "2 min",
+              "powt": "10",
+              "przerwa": "90 s",
               "v": true,
               "wskazowka": "Chwyt podchwytem na szerokość barków, tułów pochylony ok. 45 stopni, plecy proste. Ciągniesz sztangę do brzucha, łokcie blisko ciała, na górze ściągasz łopatki. Podchwyt mocniej angażuje dolną część najszerszych i biceps.",
               "latwiej": "Tułów wyżej, ok. 60 stopni, mniejszy ciężar.",
               "trudniej": "Sekunda pauzy przy brzuchu.",
-              "serie": 4
-            },
-            {
-              "nazwa": "Martwy ciąg",
-              "powt": "6",
-              "przerwa": "3 min",
-              "v": true,
-              "wskazowka": "Sztanga nad środkiem stopy, chwyt na szerokość barków. Klatka w górę, plecy proste, napinasz całe ciało i odpychasz się nogami od podłogi. Sztanga sunie po nogach. Każde powtórzenie zaczynasz od nowa z podłogi, bez sprężynowania.",
-              "latwiej": "Sztanga na podstawkach, ok. 10 cm wyżej.",
-              "trudniej": "Pauza sekunda tuż nad podłogą przy opuszczaniu.",
               "serie": 3
             },
             {
-              "nazwa": "Wiosłowanie hantlem jednorącz",
+              "nazwa": "Uginanie ramion z hantlami",
+              "powt": "10",
+              "wskazowka": "Stojąc, dłonie do przodu (podchwyt), łokcie przy tułowiu i w miejscu. Unosisz oba hantle naraz albo na zmianę, opuszczasz wolniej, niż podnosisz.",
+              "latwiej": "Na zmianę, lżejsze hantle.",
+              "trudniej": "Na ławce skośnej, siedząc.",
+              "serie": 3,
+              "przerwa": "90 s"
+            },
+            {
+              "nazwa": "Prostowanie ramion z hantlem nad głową",
               "powt": "12",
               "przerwa": "90 s",
-              "v": true,
-              "wskazowka": "Kolano i ręka na ławce, plecy płaskie. Ciągniesz hantel do biodra, nie do barku — wtedy pracują plecy, a nie biceps.",
-              "latwiej": "Lżejszy hantel, sekunda pauzy na górze.",
-              "trudniej": "Wolny opust 3 sekundy.",
+              "wskazowka": "Jeden hantel oburącz nad głową. Łokcie blisko głowy i w miejscu, rusza się tylko przedramię. Triceps to dwie trzecie obwodu ramienia.",
+              "latwiej": "Lżejszy hantel, jedną ręką.",
+              "trudniej": "Wyciskanie francuskie sztangą EZ leżąc.",
+              "serie": 3
+            },
+            {
+              "nazwa": "Deska",
+              "powt": "45 s",
+              "przerwa": "90 s",
+              "wskazowka": "Przedramiona pod barkami, ciało w jednej linii od głowy do pięt, pośladki i brzuch napięte. Wpisujesz liczbę sekund.",
+              "latwiej": "Na kolanach.",
+              "trudniej": "Z uniesioną jedną nogą.",
               "serie": 3,
               "propozycja": {
-                "ciezar": 16.5,
-                "poprzedni": 14.0,
+                "ciezar": 0.0,
+                "poprzedni": 0.0,
                 "powt": [
-                  12,
-                  12
+                  50,
+                  60
                 ],
-                "data": "2026-09-20",
-                "podwyzka": 2.5
+                "data": "2026-09-18",
+                "podwyzka": 0.0
               }
             },
             {
-              "nazwa": "Pullover z hantlem",
+              "nazwa": "Unoszenie nóg leżąc",
               "powt": "12",
-              "przerwa": "75 s",
-              "v": true,
-              "wskazowka": "Leżysz na ławce, jeden hantel oburącz nad klatką. Na prawie prostych rękach opuszczasz go za głowę, aż poczujesz rozciąganie pod pachami, i wracasz. Pracują najszersze — to one robią szerokość pleców.",
-              "latwiej": "Lżejszy hantel, mniejszy zakres.",
-              "trudniej": "Wolny opust 3 sekundy i pauza na dole.",
-              "serie": 3
+              "przerwa": "90 s",
+              "wskazowka": "Leżysz na plecach, dłonie pod pośladkami, nogi proste albo lekko ugięte. Unosisz je do pionu i powoli opuszczasz, nie kładąc pięt na podłodze. Dolna część pleców dociśnięta do podłogi.",
+              "latwiej": "Kolana mocno ugięte.",
+              "trudniej": "Nogi całkiem proste, 3 sekundy w dół.",
+              "serie": 3,
+              "propozycja": {
+                "ciezar": 0.0,
+                "poprzedni": 0.0,
+                "powt": [
+                  15,
+                  15
+                ],
+                "data": "2026-09-18",
+                "podwyzka": 0.0
+              }
             },
             {
-              "nazwa": "Uginanie ramion ze sztangą",
-              "powt": "10",
-              "przerwa": "75 s",
-              "wskazowka": "Łokcie przy tułowiu i w miejscu, bez bujania tułowiem. Opuszczasz wolniej, niż podnosisz.",
-              "latwiej": "Sztanga EZ albo hantle naprzemiennie.",
-              "trudniej": "Ostatnie 2 powtórzenia z lekkim wspomaganiem i wolny opust.",
-              "serie": 3
-            },
-            {
-              "nazwa": "Uginanie młotkowe",
-              "powt": "10",
-              "przerwa": "60 s",
-              "wskazowka": "Chwyt jak przy trzymaniu młotka, kciuki do góry. Buduje grubość ramienia widoczną z boku.",
-              "latwiej": "Jedną ręką na zmianę.",
-              "trudniej": "Wolny opust 3 sekundy.",
-              "serie": 3
-            },
-            {
-              "nazwa": "Odwrotne rozpiętki w opadzie",
+              "nazwa": "Spięcia brzucha (brzuszki)",
               "powt": "15",
-              "przerwa": "60 s",
-              "wskazowka": "Pochylony, klatka prawie równolegle do podłogi, lekkie hantle, rozkładasz ręce jak skrzydła. Tył barków: bez niego barki wyglądają płasko z boku.",
-              "latwiej": "Leżąc przodem na ławce skośnej.",
-              "trudniej": "2 sekundy zatrzymania na górze.",
-              "serie": 3
+              "przerwa": "90 s",
+              "wskazowka": "Leżysz na plecach, kolana zgięte, stopy na podłodze, ręce skrzyżowane na klatce. Zwijasz tułów i odrywasz łopatki od podłogi na jakieś 10 cm — to cały ruch, plecy niżej zostają na ziemi. Broda odsunięta od klatki na szerokość pięści, nie ciągniesz głowy. Na górze zatrzymaj na sekundę i mocno napnij brzuch, potem powoli w dół. Tu poczujesz brzuch od pierwszej serii.",
+              "latwiej": "Mniejszy zakres, ręce wyciągnięte wzdłuż ciała.",
+              "trudniej": "Ręce przy skroniach albo hantel trzymany na klatce.",
+              "serie": 3,
+              "propozycja": {
+                "ciezar": 0.0,
+                "poprzedni": 0.0,
+                "powt": [
+                  15,
+                  15
+                ],
+                "data": "2026-09-20",
+                "podwyzka": 0.0
+              }
             }
           ],
           "finisz": "Każda seria kończy się z zapasem: 3 powtórzenia w zapasie. Uczysz się ruchu, nie dźwigasz. Ciężar tak lekki, że mógłbyś zrobić jeszcze 3 powtórzenia. Ma ci się chcieć przyjść na następny trening."
@@ -11880,35 +12169,58 @@
   "repo": "jasio-cloud/trenerai",
   "galaz": "main",
   "suple": {
-    "_info": "Jeden ping dziennie, przy pobudce — zgodnie z tym, co ustaliliśmy: wszystko naraz po wstaniu, przed treningiem, zero rozbijania na godziny. To jest PROPOZYCJA dobrana pod Twoją sytuację (praca zmianowa, redukcja, brak ryb w diecie, trening w domu). Wyrzuć z listy to, czego nie bierzesz, i dopisz to, co masz w szafce — ping czyta ten plik.",
-    "pora": "przy pobudce",
-    "lista": [
-      {
-        "nazwa": "Kreatyna monohydrat",
-        "ile": "5 g",
-        "po_co": "Najlepiej przebadany suplement na siłę i masę. Na redukcji pomaga utrzymać ciężary mimo deficytu.",
-        "uwaga": "Pora dnia nie ma znaczenia — liczy się codzienność, także w dni bez treningu."
-      },
+    "_info": "Suplementy według Twojej listy: rano po śniadaniu i wieczorem. Ping przychodzi po pierwszym posiłku i przed snem.",
+    "rano": [
       {
         "nazwa": "Witamina D3",
-        "ile": "2000 IU",
-        "po_co": "Pracujesz na zmiany i sporo doby spędzasz w budynku, a w Polsce od października do marca słońce i tak nie wystarcza.",
-        "uwaga": "Bierz z posiłkiem zawierającym tłuszcz — inaczej wchłonie się gorzej. U Ciebie to śniadanie po treningu."
+        "ile": "1 porcja"
       },
       {
-        "nazwa": "Omega-3 (EPA/DHA)",
-        "ile": "1000-2000 mg",
-        "po_co": "Nie jesz ryb, więc to jedyne realne źródło. Wpływa na regenerację i stany zapalne.",
-        "uwaga": "To akurat wynika wprost z Twoich wykluczeń, a nie z mody na suple."
+        "nazwa": "Omega-3",
+        "ile": "2 kapsułki"
       },
       {
-        "nazwa": "Magnez",
-        "ile": "300-400 mg",
-        "po_co": "Praca zmianowa i rozjechany sen. Pomaga też na skurcze przy większej objętości treningowej.",
-        "uwaga": "Cytrynian albo mleczan. Tlenek magnezu wchłania się słabo — nie kupuj najtańszego."
+        "nazwa": "Witamina C",
+        "ile": "1 porcja"
+      },
+      {
+        "nazwa": "Kwas foliowy",
+        "ile": "1 tabletka"
+      },
+      {
+        "nazwa": "Tiamohep",
+        "ile": "1 porcja"
       }
     ],
-    "przypis": "Suplementy są dodatkiem do diety, a nie jej zamiennikiem — przy Twoich 2200 kcal z prawdziwego jedzenia robią różnicę na marginesie, nie w środku. Jeśli bierzesz coś jeszcze (odżywka białkowa, witamina C, cynk), dopisz do listy."
+    "wieczor": [
+      {
+        "nazwa": "Magnez + B6",
+        "ile": "1 porcja"
+      }
+    ],
+    "lista": [
+      {
+        "nazwa": "Witamina D3",
+        "ile": "1 porcja"
+      },
+      {
+        "nazwa": "Omega-3",
+        "ile": "2 kapsułki"
+      },
+      {
+        "nazwa": "Witamina C",
+        "ile": "1 porcja"
+      },
+      {
+        "nazwa": "Kwas foliowy",
+        "ile": "1 tabletka"
+      },
+      {
+        "nazwa": "Tiamohep",
+        "ile": "1 porcja"
+      }
+    ],
+    "przypis": "WPC (KFD Premium WPC80) planer dokłada według potrzeb makro — nie jako suplement na godzinę."
   },
   "alternatywy": {
     "sniadanie": [
@@ -12591,6 +12903,24 @@
       "cel": 32.5,
       "jedn": "same talerze (bez gryfa)",
       "krok": 2.5
+    },
+    "Wyciskanie hantli na ławce skośnej": {
+      "kg": 12.5,
+      "cel": 15,
+      "jedn": "talerze na hantel",
+      "krok": 2.5
+    },
+    "Uginanie ramion z hantlami": {
+      "kg": 8,
+      "cel": 10,
+      "jedn": "talerze na hantel",
+      "krok": 2.5
+    },
+    "Odwrotne rozpiętki leżąc na skosie": {
+      "kg": 5,
+      "cel": 7.5,
+      "jedn": "talerze na hantel",
+      "krok": 2.5
     }
   },
   "kalorie": {
@@ -12692,7 +13022,7 @@
   },
   "kroki": null,
   "kroki_cel": {
-    "cel": 8500,
+    "cel": 8000,
     "komentarz": "Jedyny pełny dzień w domu. Tu robisz większość tygodniowego chodzenia."
   }
 }

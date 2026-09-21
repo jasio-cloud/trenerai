@@ -27,8 +27,7 @@
         "tytul": "Pobudka",
         "ikona": "⏰",
         "ping": true,
-        "opis": "Toaleta — za 5 minut waga, więc jeszcze nic nie pij. Potem 20 minut w kuchni i o 5:30 jedziesz.",
-        "akcja": "suple"
+        "opis": "Toaleta — za 5 minut waga, więc jeszcze nic nie pij. Potem 20 minut w kuchni i o 5:30 jedziesz."
       },
       {
         "czas": "04:45",
@@ -69,6 +68,14 @@
         "opis": "Z pojemnika zrobionego wczoraj w bloku kuchni."
       },
       {
+        "czas": "07:40",
+        "tytul": "Suplementy — po śniadaniu",
+        "ikona": "💊",
+        "ping": true,
+        "akcja": "suple",
+        "opis": "Z pierwszym posiłkiem, bo D3 i omega-3 wchłaniają się z tłuszczem."
+      },
+      {
         "czas": "10:30",
         "tytul": "Drugi posiłek",
         "ikona": "🥪",
@@ -105,6 +112,14 @@
         "ping": true,
         "slot": "kolacja",
         "opis": "Ostatni posiłek na zmianie. Lekki, żeby nie leżeć z pełnym brzuchem przed pierwszą drzemką."
+      },
+      {
+        "czas": "22:10",
+        "tytul": "Suplementy — wieczór",
+        "ikona": "💊",
+        "ping": true,
+        "akcja": "suple_wieczor",
+        "opis": "Magnez przed snem."
       },
       {
         "czas": "22:15",
@@ -178,6 +193,14 @@
         "opis": "Coś lekkiego i białkowego. Na pusty żołądek gorzej zaśniesz, na pełny obudzisz się rozbity."
       },
       {
+        "czas": "08:20",
+        "tytul": "Suplementy — po śniadaniu",
+        "ikona": "💊",
+        "ping": true,
+        "akcja": "suple",
+        "opis": "Z pierwszym posiłkiem, bo D3 i omega-3 wchłaniają się z tłuszczem."
+      },
+      {
         "czas": "08:30",
         "tytul": "SEN — najważniejsza rzecz dziś",
         "ikona": "😴",
@@ -190,8 +213,7 @@
         "tytul": "Pobudka",
         "ikona": "⏰",
         "ping": true,
-        "opis": "Toaleta, za 5 minut waga. Potem woda i suple. Bez telefonu — dziś zaczynasz od sztangi, nie od ekranu.",
-        "akcja": "suple"
+        "opis": "Toaleta, za 5 minut waga. Potem woda i suple. Bez telefonu — dziś zaczynasz od sztangi, nie od ekranu."
       },
       {
         "czas": "13:05",
@@ -257,6 +279,14 @@
         "opis": "Ekran w dół. Za 30 minut śpisz i to Ci resetuje rytm po zmianie."
       },
       {
+        "czas": "22:00",
+        "tytul": "Suplementy — wieczór",
+        "ikona": "💊",
+        "ping": true,
+        "akcja": "suple_wieczor",
+        "opis": "Magnez przed snem."
+      },
+      {
         "czas": "22:30",
         "tytul": "Sen",
         "ikona": "😴",
@@ -271,7 +301,6 @@
         "tytul": "Pobudka",
         "ikona": "⏰",
         "ping": true,
-        "akcja": "suple",
         "opis": "Toaleta, za 5 minut waga. Potem woda i suple — i bez telefonu."
       },
       {
@@ -307,6 +336,14 @@
         "opis": "Pierwszy posiłek dnia — robisz go na końcu bloku kuchni i jesz od razu."
       },
       {
+        "czas": "10:45",
+        "tytul": "Suplementy — po śniadaniu",
+        "ikona": "💊",
+        "ping": true,
+        "akcja": "suple",
+        "opis": "Z pierwszym posiłkiem, bo D3 i omega-3 wchłaniają się z tłuszczem."
+      },
+      {
         "czas": "13:30",
         "tytul": "Drugi posiłek",
         "ikona": "🥪",
@@ -324,10 +361,10 @@
       },
       {
         "czas": "18:00",
-        "tytul": "Spacer",
-        "ikona": "🚶",
+        "tytul": "Rower — zone 2",
+        "ikona": "🚴",
         "ping": true,
-        "opis": "20–30 minut. Nie kardio — chodzi o rozruszanie bioder i pleców oraz o kroki, których dziś nie zrobisz sam z siebie."
+        "opis": "35–45 minut spokojnie: tempo, przy którym da się rozmawiać pełnymi zdaniami. To spala tłuszcz i nie zabiera sił na trening."
       },
       {
         "czas": "19:30",
@@ -352,6 +389,14 @@
         "ping": true,
         "akcja": "budzik",
         "opis": "Jutro zmiana — to jest ten wieczór, którego nie można przespać po łebkach."
+      },
+      {
+        "czas": "21:30",
+        "tytul": "Suplementy — wieczór",
+        "ikona": "💊",
+        "ping": true,
+        "akcja": "suple_wieczor",
+        "opis": "Magnez przed snem."
       },
       {
         "czas": "22:00",

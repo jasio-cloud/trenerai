@@ -2378,9 +2378,11 @@ def tresc_pinga(e, d):
             if dni >= 3:
                 czesci.insert(0, "Ostatnie wazenie %d dni temu. Bez regularnych pomiarow system "
                                  "nie wie, czy deficyt dziala — zwaz sie dzis." % dni)
+    if e.get("akcja") == "suple_wieczor":
+        czesci.insert(0, "Teraz: " + ", ".join("%s (%s)" % (x["nazwa"], x["ile"]) for x in SUPLE.get("wieczor", [])))
     if e.get("akcja") == "suple":
-        czesci.append("Suple na teraz: " + ", ".join("%s (%s)" % (x["nazwa"], x["ile"])
-                                                     for x in SUPLE["lista"]))
+        czesci.insert(0, "Teraz: " + ", ".join("%s (%s)" % (x["nazwa"], x["ile"])
+                                               for x in SUPLE.get("rano", SUPLE["lista"])))
     if e.get("akcja") == "zakupy":
         # ping planowany jest z wyprzedzeniem (jeszcze w dniu zmiany), wiec lista
         # musi byc dla cyklu z dnia zakupow, a nie dla biezacego
