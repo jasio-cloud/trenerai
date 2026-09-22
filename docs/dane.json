@@ -1,5 +1,5 @@
 {
-  "wygenerowano": "2026-09-22T00:14:45+02:00",
+  "wygenerowano": "2026-09-22T20:00:16+02:00",
   "dzis": "2026-09-22",
   "typ_dzis": 0,
   "typy": {
@@ -7881,7 +7881,12 @@
       "nadwyzka": 0,
       "odhaczone": {},
       "waga": null,
-      "kroki": null,
+      "kroki": {
+        "data": "2026-09-22",
+        "kroki": 2742,
+        "cel": 8000,
+        "status": "malo"
+      },
       "serie": [],
       "trening": {
         "rodzaj": "zmiana",
@@ -12790,10 +12795,24 @@
         "kroki": 10023,
         "cel": 6000,
         "status": "ok"
+      },
+      {
+        "data": "2026-09-22",
+        "kroki": 2742,
+        "cel": 8000,
+        "status": "malo"
       }
     ]
   },
-  "kroki": null,
+  "kroki": {
+    "kroki": 2742,
+    "cel": 8000,
+    "brakuje": 5258,
+    "status": "malo",
+    "sugestia": "Dziś siedziałeś prawie całą dobę. Nie nadrobisz tego w nocy i nie ma sensu próbować — zrób 10 minut chodzenia teraz i rozciągnij plecy, żeby jutro nie bolały.",
+    "komentarz": "Na służbie kroki robią się same z obchodów — ten cel to sygnał, żebyś nie przesiedział całej doby na krześle.",
+    "procent": 34
+  },
   "kroki_cel": {
     "cel": 8000,
     "komentarz": "Na służbie kroki robią się same z obchodów — ten cel to sygnał, żebyś nie przesiedział całej doby na krześle."
