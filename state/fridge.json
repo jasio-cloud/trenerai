@@ -100,10 +100,6 @@
       "ilosc": 175,
       "do": "2027-04-06"
     },
-    "mielone_wolowe": {
-      "ilosc": 200.0,
-      "do": "2026-09-24"
-    },
     "feta": {
       "ilosc": 90,
       "do": "2026-10-02"
@@ -123,10 +119,6 @@
     "czosnek": {
       "ilosc": 4.0,
       "do": "2027-04-08"
-    },
-    "salata": {
-      "ilosc": 50,
-      "do": "2026-09-24"
     },
     "olej": {
       "ilosc": 970.0,
@@ -181,6 +173,18 @@
       "co": "cykl:2026-09-23",
       "pozycji": 19,
       "koszt": 124.06
+    },
+    {
+      "data": "2026-09-25",
+      "co": "wyrzucone",
+      "produkt": "mielone_wolowe",
+      "ilosc": 200.0
+    },
+    {
+      "data": "2026-09-25",
+      "co": "wyrzucone",
+      "produkt": "salata",
+      "ilosc": 50
     }
   ]
 }
