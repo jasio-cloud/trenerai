@@ -128,14 +128,6 @@
       "ilosc": 4,
       "do": "2026-10-05"
     },
-    "ogorek": {
-      "ilosc": 0.5,
-      "do": "2026-09-27"
-    },
-    "pomidor": {
-      "ilosc": 0.5,
-      "do": "2026-09-27"
-    },
     "kakao": {
       "ilosc": 17.0,
       "do": "2027-04-11"
@@ -195,6 +187,18 @@
       "co": "cykl:2026-09-26",
       "pozycji": 15,
       "koszt": 96.49
+    },
+    {
+      "data": "2026-09-28",
+      "co": "wyrzucone",
+      "produkt": "ogorek",
+      "ilosc": 0.5
+    },
+    {
+      "data": "2026-09-28",
+      "co": "wyrzucone",
+      "produkt": "pomidor",
+      "ilosc": 0.5
     }
   ]
 }
