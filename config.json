@@ -88,7 +88,7 @@
     "cykle_minimum": 4,
     "komentarz": "Sen chodzi cyklami po ok. 90 min. Budzenie w srodku cyklu (zwlaszcza w fazie gebokiej) daje uczucie rozbicia, nawet gdy przespales duzo. Dlatego budzik ustawiamy na WIELOKROTNOSC cyklu liczona od momentu ZASNIECIA, nie polozenia sie. 90 min to srednia - indywidualnie bywa 80-110, wiec traktujemy to jako przyblizenie, a nie wyrocznie."
   },
-  "panel_wersja": 22,
+  "panel_wersja": 23,
   "panel_wersja_komentarz": "Numer wersji panelu. iPhone dodany do ekranu glownego trzyma stary HTML nawet po zmianie na serwerze. dane.json jest pobierany zawsze swiezy, wiec panel porownuje ten numer ze swoim wlasnym i gdy sie roznia, przeladowuje sie z parametrem ?v=, co omija cache. PODNIES O 1 PO KAZDEJ ZMIANIE W docs/index.html.",
   "repo": "jasio-cloud/trenerai",
   "galaz": "main",
@@ -266,5 +266,25 @@
     "komentarz": "Dzienne limity: łączna waga nabiału (twaróg, skyr, jogurt, mleko, napój) i słodkich dodatków (miód + dżem). Po biegunce 19.09 — za dużo laktozy i fruktozy naraz."
   },
   "gryf_kg": 10,
-  "ciezary_komentarz": "Wszystkie ciężary w planie i w dzienniku to same talerze, bez gryfa (gryf ok. 10 kg) i bez trzonka hantli."
+  "ciezary_komentarz": "Wszystkie ciężary w planie i w dzienniku to same talerze, bez gryfa (gryf ok. 10 kg) i bez trzonka hantli.",
+  "zasady_diety": [
+    "Cztery posiłki w równych odstępach (podbija syntezę białek).",
+    "Każdy posiłek ma mieć co najmniej 30 g białka ze źródła zwierzęcego.",
+    "Warzywa do 100-200 g na posiłek, sosy zero i ketchup bez cukru trener pomija w liczeniu — my liczymy je normalnie, więc masz margines w dół.",
+    "Napoje zero dozwolone. Saszetki Bolero, jeśli ciężko wypić wodę.",
+    "Aromaty (flavors) i słodzik do nabiału — zmieniają skyr i twaróg w deser bez kalorii."
+  ],
+  "makra_posilkow": {
+    "posilek_1": {
+      "bialko": 30,
+      "tluszcz": 20,
+      "wegle": 40
+    },
+    "posilki_2_4": {
+      "bialko": 30,
+      "tluszcz": 10,
+      "wegle": 80
+    },
+    "komentarz": "Schemat trenera (ok. 2050 kcal). Twój cel to 2400 kcal i 160 g białka, więc trzymamy kształt posiłków, a różnicę planer dokłada w węglach i białku."
+  }
 }

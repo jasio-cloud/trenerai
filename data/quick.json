@@ -1293,6 +1293,209 @@
         "Wymieszaj z majonezem ({majonez_sriracha}), posól i popieprz.",
         "Do pojemnika, chleb ({chleb}) osobno."
       ]
+    },
+    {
+      "id": "q_omlet_slony",
+      "nazwa": "Omlet na słono z cheddarem",
+      "sloty": [
+        "sniadanie",
+        "kolacja"
+      ],
+      "box": false,
+      "czas_min": 12,
+      "produkty": [
+        [
+          "jaja",
+          2
+        ],
+        [
+          "maka",
+          50
+        ],
+        [
+          "skyr",
+          0.7
+        ],
+        [
+          "cheddar_topiony",
+          2
+        ],
+        [
+          "majonez_light",
+          15
+        ],
+        [
+          "przyprawy",
+          1
+        ]
+      ],
+      "kroki": [
+        "W misce wymieszaj jajka ({jaja}), mąkę ({maka}) i skyr ({skyr}) na gładkie ciasto. Dopraw solą i pieprzem.",
+        "Patelnię z powłoką postaw na małym ogniu. Wylej ciasto, przykryj i smaż 5-6 minut, aż wierzch przestanie być płynny.",
+        "Przewróć (zsuń na talerz i nakryj patelnią), połóż cheddar ({cheddar_topiony}) i smaż jeszcze 2-3 minuty, aż ser się rozpuści.",
+        "Złóż na pół, na wierzch majonez ({majonez_light})."
+      ]
+    },
+    {
+      "id": "q_tosty_skyr",
+      "nazwa": "Tosty z szynką i serem + skyr z masłem orzechowym",
+      "sloty": [
+        "sniadanie",
+        "drugi"
+      ],
+      "box": false,
+      "czas_min": 10,
+      "produkty": [
+        [
+          "chleb_tostowy",
+          4
+        ],
+        [
+          "szynka",
+          30
+        ],
+        [
+          "ser_zolty",
+          1
+        ],
+        [
+          "majonez_light",
+          10
+        ],
+        [
+          "skyr",
+          1
+        ],
+        [
+          "maslo_orzechowe",
+          1
+        ]
+      ],
+      "kroki": [
+        "Na dwie kromki ({chleb_tostowy}) rozłóż szynkę ({szynka}), ser ({ser_zolty}) i majonez ({majonez_light}), przykryj pozostałymi kromkami.",
+        "Opiekacz albo sucha patelnia: 3-4 minuty z każdej strony, aż ser się roztopi.",
+        "Obok skyr ({skyr}) z masłem orzechowym ({maslo_orzechowe})."
+      ]
+    },
+    {
+      "id": "q_serek_owoce",
+      "nazwa": "Serek wiejski z owocami i grahamką",
+      "sloty": [
+        "drugi",
+        "kolacja"
+      ],
+      "box": true,
+      "czas_min": 4,
+      "produkty": [
+        [
+          "serek_wiejski",
+          1.5
+        ],
+        [
+          "banan",
+          1
+        ],
+        [
+          "grahamka",
+          1
+        ],
+        [
+          "maslo_orzechowe",
+          1
+        ]
+      ],
+      "kroki": [
+        "Serek wiejski ({serek_wiejski}) przełóż do miski lub pojemnika.",
+        "Banana ({banan}) pokrój w plasterki i dodaj na wierzch. Zamiast banana pasują też maliny albo truskawki.",
+        "Bułkę ({grahamka}) przekrój i posmaruj masłem orzechowym ({maslo_orzechowe})."
+      ]
+    },
+    {
+      "id": "q_gofry",
+      "nazwa": "Gofry proteinowe z kremem",
+      "sloty": [
+        "sniadanie",
+        "drugi"
+      ],
+      "box": true,
+      "czas_min": 12,
+      "produkty": [
+        [
+          "jaja",
+          2
+        ],
+        [
+          "skyr",
+          0.8
+        ],
+        [
+          "maka",
+          50
+        ],
+        [
+          "proszek_do_pieczenia",
+          2
+        ],
+        [
+          "slodzik",
+          2
+        ],
+        [
+          "krem_bez_cukru",
+          20
+        ]
+      ],
+      "kroki": [
+        "Wymieszaj jajka ({jaja}), skyr ({skyr}), mąkę ({maka}), proszek do pieczenia ({proszek_do_pieczenia}) i słodzik ({slodzik}) na gęste ciasto.",
+        "Nagrzej gofrownicę i piecz porcjami po ok. 4 minuty. Bez gofrownicy usmaż placki na patelni pod przykryciem.",
+        "Na wierzch krem do smarowania ({krem_bez_cukru}). Na zimno też smakują, więc idą do pojemnika."
+      ]
+    },
+    {
+      "id": "o_wrap_mielone",
+      "nazwa": "Wrap z mielonym, serem i sosem",
+      "sloty": [
+        "obiad"
+      ],
+      "box": true,
+      "czas_min": 12,
+      "bez_gotowania": true,
+      "produkty": [
+        [
+          "tortilla",
+          2
+        ],
+        [
+          "mielone_wolowe",
+          150
+        ],
+        [
+          "ser_zolty",
+          2
+        ],
+        [
+          "majonez_light",
+          20
+        ],
+        [
+          "ketchup",
+          1
+        ],
+        [
+          "salata",
+          40
+        ],
+        [
+          "przyprawy",
+          1
+        ]
+      ],
+      "kroki": [
+        "Na patelni bez tłuszczu usmaż mięso ({mielone_wolowe}), rozbijając łopatką, ok. 8 minut, aż nie będzie różowe. Posól, popieprz, dodaj szczyptę papryki.",
+        "Tortille ({tortilla}) podgrzej 20 sekund na suchej patelni.",
+        "Posmaruj majonezem ({majonez_light}) i ketchupem ({ketchup}), wyłóż mięso, ser ({ser_zolty}) i sałatę ({salata}).",
+        "Zwiń w rulon i przekrój na pół. Do pojemnika zawiń w folię."
+      ]
     }
   ]
 }

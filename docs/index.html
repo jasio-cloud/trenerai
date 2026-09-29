@@ -218,7 +218,7 @@ const esc = s => String(s??"").replace(/[&<>"]/g, c => ({"&":"&amp;","<":"&lt;",
 /* Wersja panelu. iPhone dodany do ekranu głównego potrafi trzymać stary HTML
    w nieskończoność. dane.json leci zawsze świeży, więc porównujemy numery
    i przy różnicy przeładowujemy stronę z ?v=, co omija cache przeglądarki. */
-const WERSJA = 22;
+const WERSJA = 23;
 let D = null, widok = "dzis";
 
 /* ---- zapis z telefonu ------------------------------------------------------
@@ -904,6 +904,7 @@ function widokTrening(){
         ${c.latwiej ? `<div class="wariant">Za trudne? ${esc(c.latwiej)}</div>` : ""}
         ${c.trudniej && c.trudniej !== "—" ? `<div class="wariant">Za łatwe? ${esc(c.trudniej)}</div>` : ""}
         <div class="w">przerwa ${esc(c.przerwa)}</div>
+        ${c.seria_laczona ? `<div class="wariant">🔗 Seria łączona z: ${esc(c.seria_laczona)} — robisz je na zmianę, przerwa dopiero po obu.</div>` : ""}
         ${juz ? `<div class="w" style="color:var(--ok);font-weight:700">✓ Zapisane dziś: ${juz.kg} kg × ${(juz.powt || []).join(", ")}. Możesz poprawić i zapisać jeszcze raz.</div>`
               : `<div class="w" style="color:var(--akcent)">${historia}</div>`}
         <div class="serie-wiersz">

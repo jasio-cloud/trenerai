@@ -674,5 +674,75 @@
     "trw": "swieze",
     "g": 250,
     "baza": "g"
+  },
+  "majonez_light": {
+    "nazwa": "Majonez light",
+    "jedn": "g",
+    "opak": 400,
+    "cena": 8.5,
+    "kat": "spizarnia",
+    "trw": "chlodnia",
+    "g": 1,
+    "baza": "g"
+  },
+  "cheddar_topiony": {
+    "nazwa": "Cheddar topiony w plastrach",
+    "jedn": "plaster",
+    "opak": 8,
+    "cena": 7.5,
+    "kat": "nabial",
+    "trw": "chlodnia",
+    "g": 17.5,
+    "baza": "g"
+  },
+  "mozzarella_light": {
+    "nazwa": "Mozzarella light",
+    "jedn": "g",
+    "opak": 125,
+    "cena": 5.5,
+    "kat": "nabial",
+    "trw": "chlodnia",
+    "g": 1,
+    "baza": "g"
+  },
+  "grahamka": {
+    "nazwa": "Bułka grahamka",
+    "jedn": "szt",
+    "opak": 4,
+    "cena": 3.2,
+    "kat": "pieczywo",
+    "trw": "swieze",
+    "g": 60,
+    "baza": "g"
+  },
+  "krem_bez_cukru": {
+    "nazwa": "Krem do smarowania bez cukru",
+    "jedn": "g",
+    "opak": 300,
+    "cena": 16.0,
+    "kat": "spizarnia",
+    "trw": "trwale",
+    "g": 1,
+    "baza": "g"
+  },
+  "frytki_mrozone": {
+    "nazwa": "Frytki mrożone do piekarnika",
+    "jedn": "g",
+    "opak": 750,
+    "cena": 8.0,
+    "kat": "warzywa",
+    "trw": "trwale",
+    "g": 1,
+    "baza": "g"
+  },
+  "slodzik": {
+    "nazwa": "Słodzik w tabletkach",
+    "jedn": "tabletka",
+    "opak": 300,
+    "cena": 9.0,
+    "kat": "spizarnia",
+    "trw": "trwale",
+    "g": 0.06,
+    "baza": "g"
   }
 }

@@ -1635,7 +1635,8 @@ def trening_dnia(d=None):
     blok = blok_treningowy(d)
     if t == 1:
         sesje = PROGRAM["sesje_glowne"]
-        return {"rodzaj": "krotki", "trening": _sesja(sesje[_nr_sesji(d) % len(sesje)], blok, 4)}
+        # po zmianie ta sama sesja co zwykle — serie laczone skracaja ja o polowe
+        return {"rodzaj": "krotki", "trening": _sesja(sesje[_nr_sesji(d) % len(sesje)], blok, 99)}
     sesje = PROGRAM["sesje_glowne"]
     return {"rodzaj": "glowny", "trening": _sesja(sesje[_nr_sesji(d) % len(sesje)], blok, 99)}
 
