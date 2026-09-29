@@ -1,41 +1,5 @@
 {
   "stan": {
-    "poledwica": {
-      "ilosc": 28,
-      "do": "2026-09-29"
-    },
-    "szynka": {
-      "ilosc": 40,
-      "do": "2026-09-29"
-    },
-    "jaja": {
-      "ilosc": 6,
-      "do": "2026-09-29"
-    },
-    "jogurt_grecki": {
-      "ilosc": 200,
-      "do": "2026-09-29"
-    },
-    "maslo": {
-      "ilosc": 158,
-      "do": "2026-09-29"
-    },
-    "mleko": {
-      "ilosc": 813,
-      "do": "2026-09-29"
-    },
-    "napoj_proteinowy": {
-      "ilosc": 0.5,
-      "do": "2026-09-29"
-    },
-    "skyr_pitny": {
-      "ilosc": 0.5,
-      "do": "2026-09-29"
-    },
-    "skyr_waniliowy": {
-      "ilosc": 0.5,
-      "do": "2026-09-29"
-    },
     "marchew": {
       "ilosc": 0.35,
       "do": "2027-04-05"
@@ -43,10 +7,6 @@
     "ogorek_kiszony": {
       "ilosc": 5.5,
       "do": "2027-04-05"
-    },
-    "chleb": {
-      "ilosc": 6,
-      "do": "2026-09-29"
     },
     "makaron": {
       "ilosc": 460.0,
@@ -205,6 +165,66 @@
       "co": "cykl:2026-09-29",
       "pozycji": 17,
       "koszt": 96.87
+    },
+    {
+      "data": "2026-09-30",
+      "co": "wyrzucone",
+      "produkt": "poledwica",
+      "ilosc": 28
+    },
+    {
+      "data": "2026-09-30",
+      "co": "wyrzucone",
+      "produkt": "szynka",
+      "ilosc": 40
+    },
+    {
+      "data": "2026-09-30",
+      "co": "wyrzucone",
+      "produkt": "jaja",
+      "ilosc": 6
+    },
+    {
+      "data": "2026-09-30",
+      "co": "wyrzucone",
+      "produkt": "jogurt_grecki",
+      "ilosc": 200
+    },
+    {
+      "data": "2026-09-30",
+      "co": "wyrzucone",
+      "produkt": "maslo",
+      "ilosc": 158
+    },
+    {
+      "data": "2026-09-30",
+      "co": "wyrzucone",
+      "produkt": "mleko",
+      "ilosc": 813
+    },
+    {
+      "data": "2026-09-30",
+      "co": "wyrzucone",
+      "produkt": "napoj_proteinowy",
+      "ilosc": 0.5
+    },
+    {
+      "data": "2026-09-30",
+      "co": "wyrzucone",
+      "produkt": "skyr_pitny",
+      "ilosc": 0.5
+    },
+    {
+      "data": "2026-09-30",
+      "co": "wyrzucone",
+      "produkt": "skyr_waniliowy",
+      "ilosc": 0.5
+    },
+    {
+      "data": "2026-09-30",
+      "co": "wyrzucone",
+      "produkt": "chleb",
+      "ilosc": 6
     }
   ]
 }
