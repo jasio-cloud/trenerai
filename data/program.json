@@ -352,16 +352,6 @@
       }
     ]
   },
-  "zmiana": {
-    "nazwa": "Dzień zmiany — bez treningu",
-    "zasada": "Na 24 h służbie nie trenujesz. Co 2–3 godziny wstań i przejdź się 5 minut, zrób 10 przysiadów i rozciągnij kark — to profilaktyka pleców, a nie trening.",
-    "mikro": [
-      "10 przysiadów bez ciężaru",
-      "10 krążeń ramion w tył",
-      "30 s rozciągania bioder na każdą nogę",
-      "Kark: głowa w tył i na boki po 15 s"
-    ]
-  },
   "przedstart": {
     "nazwa": "Przed startem — gojenie",
     "zasada": "Plan treningowy zaczyna się 17 września. Do tego czasu wracasz do zdrowia po zabiegu: bez treningu, bez deficytu, dużo snu.",
@@ -414,5 +404,14 @@
     "Przerwy: ciężkie wyciskania, przysiady i SLDL 3-4 min; plecy, klatka, nogi 3 min; łapy i wznosy 1,5-2 min; brzuch i łydki 0,5-2 min.",
     "Zapisuj ciężar i powtórzenia. Na kolejnym treningu dołóż jedno powtórzenie albo 1,25 kg na stronę, a jak nie idzie — popraw technikę, dodaj pauzę albo spowolnij tempo.",
     "Seria łączona (kolory w arkuszu trenera): dwa ćwiczenia robisz na zmianę, przerwa dopiero po obu."
-  ]
+  ],
+  "wolne": {
+    "nazwa": "Dzień bez sztangi",
+    "zasada": "Dziś nie trenujesz. Rower zone 2 po południu (35–45 minut) i 8000 kroków — tyle wystarczy.",
+    "mikro": [
+      "Rower zone 2: 35–45 minut w tempie, przy którym da się rozmawiać",
+      "Spacer albo zakupy na piechotę",
+      "5 minut rozciągania bioder i klatki wieczorem"
+    ]
+  }
 }

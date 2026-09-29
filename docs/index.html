@@ -218,7 +218,7 @@ const esc = s => String(s??"").replace(/[&<>"]/g, c => ({"&":"&amp;","<":"&lt;",
 /* Wersja panelu. iPhone dodany do ekranu głównego potrafi trzymać stary HTML
    w nieskończoność. dane.json leci zawsze świeży, więc porównujemy numery
    i przy różnicy przeładowujemy stronę z ?v=, co omija cache przeglądarki. */
-const WERSJA = 23;
+const WERSJA = 24;
 let D = null, widok = "dzis";
 
 /* ---- zapis z telefonu ------------------------------------------------------
@@ -870,7 +870,7 @@ function kartaPostepu(){
 function widokTrening(){
   const tr = (wybranyDzien !== 0 && sel()) ? sel().trening : D.trening;
   const t = tr.trening;
-  if(tr.rodzaj === "zmiana" || tr.rodzaj === "lzejszy" || tr.rodzaj === "przedstart"){
+  if(tr.rodzaj === "wolne" || tr.rodzaj === "zmiana" || tr.rodzaj === "lzejszy" || tr.rodzaj === "przedstart"){
     return kartaPostepu() + `<div class="karta"><h2>${esc(t.nazwa)}</h2>
       <div class="op">${esc(t.zasada)}</div></div>
       <div class="karta"><h2>Mikro-rozruch co 2–3 h</h2>

@@ -32,7 +32,8 @@
       "banany",
       "WPC"
     ],
-    "cardio": "rower, zone 2, 35–45 min"
+    "cardio": "rower, zone 2, 35–45 min",
+    "praca": "brak (od 29.09.2026); wcześniej ochrona 24/48"
   },
   "makra": {
     "kcal": 2400,
@@ -42,18 +43,20 @@
   },
   "makra_uzasadnienie": "Mifflin-St Jeor: podstawowa przemiana 1862 kcal. Praca zmianowa (dużo stania) + 2 treningi na cykl → zapotrzebowanie ok. 2650 kcal. Deficyt 450 kcal = ok. 0,45 kg tygodniowo. Białko 165 g to 2,0 g/kg — tyle wystarczy, żeby na deficycie nie tracić mięśni, a da się to zjeść z wołowiny, jaj i nabiału bez pchania się w 3000 kcal. Tłuszcz 70 g to minimum dla hormonów. Tłuszcz podniesiony z 70 do 80 g, bo przy filarach wołowina/jaja/nabiał niżej się realnie nie zejdzie bez wycinania jedzenia, które lubisz — kalorie i tak się zgadzają.",
   "grafik": {
-    "kotwica": "2026-06-21",
-    "cykl_dni": 3,
-    "opis": "System 24/48. (data − kotwica) mod 3: 0 = zmiana, 1 = po zmianie, 2 = wolne.",
-    "zmiana_start": "07:00",
-    "zmiana_koniec": "07:00"
+    "tryb": "tydzien",
+    "dni_treningowe": [
+      0,
+      1,
+      3,
+      4
+    ],
+    "komentarz": "0=poniedziałek … 6=niedziela. Dni treningowe: Pon, Wt, Czw, Pt (Góra 1, Dół 1, Góra 2, Dół 2). Reszta wolne. Grafik 24/48 nieaktualny od 29.09.2026."
   },
   "gotowanie": {
-    "dzien_typ": 1,
+    "bez_garnka": true,
     "godzina_zakupow": "06:00",
-    "godzina_gotowania": "16:30",
     "porcje_bazy": 3,
-    "komentarz": "Zakupy rano po zmianie w Dino (ok. 7:10), w domu ok. 8:00, potem sen. Mięso świeżo mielone z lady. Cykl księguje się o 6:00 — po korekcie kalorii, przed wyjściem do sklepu."
+    "komentarz": "Codziennie krótki blok w kuchni (do 20 minut). Obiady z puli dań bez garnka."
   },
   "wykluczenia": [
     "ryż",
@@ -88,7 +91,7 @@
     "cykle_minimum": 4,
     "komentarz": "Sen chodzi cyklami po ok. 90 min. Budzenie w srodku cyklu (zwlaszcza w fazie gebokiej) daje uczucie rozbicia, nawet gdy przespales duzo. Dlatego budzik ustawiamy na WIELOKROTNOSC cyklu liczona od momentu ZASNIECIA, nie polozenia sie. 90 min to srednia - indywidualnie bywa 80-110, wiec traktujemy to jako przyblizenie, a nie wyrocznie."
   },
-  "panel_wersja": 23,
+  "panel_wersja": 24,
   "panel_wersja_komentarz": "Numer wersji panelu. iPhone dodany do ekranu glownego trzyma stary HTML nawet po zmianie na serwerze. dane.json jest pobierany zawsze swiezy, wiec panel porownuje ten numer ze swoim wlasnym i gdy sie roznia, przeladowuje sie z parametrem ?v=, co omija cache. PODNIES O 1 PO KAZDEJ ZMIANIE W docs/index.html.",
   "repo": "jasio-cloud/trenerai",
   "galaz": "main",
@@ -250,10 +253,9 @@
     "komentarz": "Do tej daty planer patrzy na portfel: każde nowe opakowanie kosztuje 15 pkt błędu za 1 zł, zużycie 30 zamiast 20, a obiad to najtańsze z dozwolonych."
   },
   "kuchnia": {
-    "max_min_posilek": 12,
-    "komentarz": "max_min_posilek: górny limit czasu na posiłek. W dniu zmiany gotujesz rano (20 minut), więc tam wchodzą tylko dania do max_min_zmiana minut, bez patelni i garnków.",
-    "max_min_zmiana": 8,
-    "blok_rano_w_dniu_zmiany": true
+    "max_min_posilek": 20,
+    "blok_rano_w_dniu_zmiany": false,
+    "komentarz": "Górny limit czasu na jeden posiłek. Blok kuchni jest codziennie i obejmuje posiłki tego dnia."
   },
   "zielona_strefa": {
     "kcal_od": 2300,
@@ -286,5 +288,10 @@
       "wegle": 80
     },
     "komentarz": "Schemat trenera (ok. 2050 kcal). Twój cel to 2400 kcal i 160 g białka, więc trzymamy kształt posiłków, a różnicę planer dokłada w węglach i białku."
+  },
+  "cykl": {
+    "start": "2026-09-30",
+    "dni": 3,
+    "komentarz": "Zakupy i planowanie menu co 3 dni, licząc od tej daty. Gotowanie codzienne, bez garnka na zapas."
   }
 }

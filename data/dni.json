@@ -1,307 +1,33 @@
 {
-  "_info": "Szablony dnia A-Z dla cyklu 24/48. typ 0 = dzień zmiany (24 h służby 07:00–07:00, w nocy 4 drzemki po 1 h 20), typ 1 = dzień po zmianie (wracasz 7:30, śpisz do 13:00, po wstaniu OD RAZU trening), typ 2 = dzień wolny (trening pierwszą rzeczą po wstaniu). ZASADA NADRZĘDNA: pierwsza aktywność dnia to trening — po toalecie, ogarnięciu się i suplementach, bez zaglądania w telefon. Jedzenie i reszta dnia dopiero po nim. pobudka = godzina, na którą ma być ustawiony budzik; wieczorny ping z akcją 'budzik' podaje ją na dzień następny. Punkty po północy mają nastepny_dzien:true, bo zmiana przechodzi przez dobę.",
+  "_info": "Dwa typy dni po odejściu z ochrony: 0 = dzień treningowy (poniedziałek, wtorek, czwartek, piątek), 1 = dzień wolny (środa, sobota, niedziela). Typ 2 zostawiony jako kopia wolnego dla zgodności.",
   "typy": {
     "0": {
-      "nazwa": "ZMIANA 24h",
-      "emoji": "🛡️",
-      "opis": "Służba 07:00–07:00. Jesz wyłącznie z boxów spakowanych wczoraj. W nocy 4 drzemki po 1 h 20.",
-      "pobudka": "04:40"
+      "nazwa": "TRENING",
+      "emoji": "🏋️",
+      "pobudka": "08:00",
+      "opis": "Trening jako pierwsza rzecz dnia, potem 20 minut w kuchni i normalny dzień."
     },
     "1": {
-      "nazwa": "PO ZMIANIE",
-      "emoji": "😴",
-      "opis": "Wracasz 7:30, śpisz do 13:00. Po wstaniu od razu trening, potem zakupy i gotowanie na 3 dni.",
-      "pobudka": "13:00"
+      "nazwa": "WOLNE",
+      "emoji": "🚴",
+      "pobudka": "08:30",
+      "opis": "Bez sztangi. Rower zone 2 po południu i spokojny dzień."
     },
     "2": {
       "nazwa": "WOLNE",
-      "emoji": "💪",
-      "opis": "Pełny dzień w domu. Trening na starcie dnia, wieczorem pakujesz boxy na jutrzejszą zmianę.",
-      "pobudka": "08:00"
+      "emoji": "🚴",
+      "pobudka": "08:30",
+      "opis": "Bez sztangi. Rower zone 2 po południu i spokojny dzień."
     }
   },
   "plan": {
     "0": [
       {
-        "czas": "04:40",
-        "tytul": "Pobudka",
-        "ikona": "⏰",
-        "ping": true,
-        "opis": "Toaleta — za 5 minut waga, więc jeszcze nic nie pij. Potem 20 minut w kuchni i o 5:30 jedziesz."
-      },
-      {
-        "czas": "04:45",
-        "tytul": "Waga",
-        "ikona": "⚖️",
-        "ping": true,
-        "akcja": "waga",
-        "opis": "Po toalecie, przed jedzeniem i piciem, w samej bieliźnie. Wpisz wynik w panelu — liczy się średnia z 7 dni, nie pojedynczy wynik."
-      },
-      {
-        "czas": "04:50",
-        "tytul": "KUCHNIA — 20 minut",
-        "ikona": "🍳",
-        "ping": true,
-        "akcja": "kuchnia",
-        "opis": "Same zimne rzeczy do pojemników na dziś: składasz, pakujesz i wychodzisz."
-      },
-      {
-        "czas": "05:25",
-        "tytul": "Wyjście z domu",
-        "ikona": "🚪",
-        "ping": true,
-        "opis": "Pojemniki z blatu do torby (śniadanie, drugi posiłek, obiad, kolacja), butelka wody 1,5 l, ładowarka. O 5:30 w samochodzie."
-      },
-      {
-        "czas": "07:00",
-        "tytul": "Początek służby",
-        "ikona": "🛡️",
-        "ping": false,
-        "opis": "Dziś bez treningu — jedyny dzień w cyklu, kiedy nie dźwigasz. Zadanie na dobę: jeść regularnie, wypić 3 l wody i przespać swoje drzemki."
-      },
-      {
-        "czas": "07:30",
-        "tytul": "Śniadanie w pracy",
-        "ikona": "🥪",
-        "ping": true,
-        "slot": "sniadanie",
-        "opis": "Z pojemnika zrobionego wczoraj w bloku kuchni."
-      },
-      {
-        "czas": "07:40",
-        "tytul": "Suplementy — po śniadaniu",
-        "ikona": "💊",
-        "ping": true,
-        "akcja": "suple",
-        "opis": "Z pierwszym posiłkiem, bo D3 i omega-3 wchłaniają się z tłuszczem."
-      },
-      {
-        "czas": "10:30",
-        "tytul": "Drugi posiłek",
-        "ikona": "🥪",
-        "ping": true,
-        "slot": "drugi",
-        "opis": "Z boxa. Nie odkładaj — po czterech godzinach głodu zawsze dojadasz byle czym z automatu."
-      },
-      {
-        "czas": "12:00",
-        "tytul": "Rozruszaj się",
-        "ikona": "🤸",
-        "ping": true,
-        "opis": "5 minut: 10 przysiadów, krążenia ramion, rozciągnięcie karku. Plecy po staniu Ci podziękują."
-      },
-      {
-        "czas": "14:00",
-        "tytul": "Obiad",
-        "ikona": "🍽️",
-        "ping": true,
-        "slot": "obiad",
-        "opis": "Główny box z lodówki — odgrzej w mikrofali."
-      },
-      {
-        "czas": "17:00",
-        "tytul": "Woda — kontrola",
-        "ikona": "💧",
-        "ping": true,
-        "opis": "Powinieneś mieć wypite ok. 2 l. Nadrabiaj teraz, nie w nocy — inaczej przedrzemiesz noc na chodzeniu do toalety."
-      },
-      {
-        "czas": "20:30",
-        "tytul": "Kolacja",
-        "ikona": "🌙",
-        "ping": true,
-        "slot": "kolacja",
-        "opis": "Ostatni posiłek na zmianie. Lekki, żeby nie leżeć z pełnym brzuchem przed pierwszą drzemką."
-      },
-      {
-        "czas": "22:10",
-        "tytul": "Suplementy — wieczór",
-        "ikona": "💊",
-        "ping": true,
-        "akcja": "suple_wieczor",
-        "opis": "Magnez przed snem."
-      },
-      {
-        "czas": "22:15",
-        "tytul": "Przygotuj się do nocy",
-        "ikona": "🤸",
-        "ping": true,
-        "opis": "5 minut rozciągania bioder i karku. Ustaw cztery budziki na końce drzemek: 23:59, 01:30, 03:00, 04:30."
-      },
-      {
-        "czas": "22:30",
-        "tytul": "Drzemka 1 z 4 — do 23:59",
-        "ikona": "😴",
-        "ping": true,
-        "opis": "Półtorej godziny to pełny cykl snu, dlatego po tej drzemce wstaniesz najmniej rozbity. Telefon ekranem w dół."
-      },
-      {
-        "czas": "00:10",
-        "tytul": "Drzemka 2 z 4 — do 01:30",
-        "ikona": "😴",
-        "ping": true,
-        "nastepny_dzien": true,
-        "opis": "Między drzemkami łyk wody. Nie sięgaj po telefon — światło ekranu kosztuje Cię zaśnięcie przy kolejnej."
-      },
-      {
-        "czas": "01:40",
-        "tytul": "Drzemka 3 z 4 — do 03:00",
-        "ikona": "😴",
-        "ping": true,
-        "nastepny_dzien": true,
-        "opis": "To najcięższa pora doby. Jak nie zaśniesz w 15 minut, po prostu leż z zamkniętymi oczami — to też się liczy."
-      },
-      {
-        "czas": "03:10",
-        "tytul": "Drzemka 4 z 4 — do 04:30",
-        "ikona": "😴",
-        "ping": true,
-        "nastepny_dzien": true,
-        "opis": "Ostatnia. Po niej już nie śpisz: woda, rozrusz się i spokojnie do końca służby."
-      },
-      {
-        "czas": "06:45",
-        "tytul": "Zdanie służby",
-        "ikona": "🏁",
-        "ping": true,
-        "nastepny_dzien": true,
-        "opis": "Za 15 minut kończysz. Lista zakupów czeka w panelu — prosto z pracy do Dino."
-      }
-    ],
-    "1": [
-      {
-        "czas": "07:10",
-        "tytul": "ZAKUPY w Dino",
-        "ikona": "🛒",
-        "ping": true,
-        "akcja": "zakupy",
-        "opis": "Prosto ze zmiany, zanim pójdziesz spać. Kupujesz tylko to, co jest na liście w panelu — resztę masz w lodówce. Po dobie na nogach łatwo wrzucić do koszyka coś słodkiego, więc trzymaj się listy. Mięso bierz świeżo mielone z lady."
-      },
-      {
-        "czas": "08:00",
-        "tytul": "Jesteś w domu",
-        "ikona": "🚿",
-        "ping": true,
-        "opis": "Zakupy do lodówki, prysznic, zasłoń okna. NIE siadaj do telefonu — po dobie na nogach jedno przewijanie kosztuje Cię godzinę snu."
-      },
-      {
-        "czas": "08:15",
-        "tytul": "Mały posiłek przed snem",
-        "ikona": "🥛",
-        "ping": true,
-        "slot": "sniadanie",
-        "opis": "Coś lekkiego i białkowego. Na pusty żołądek gorzej zaśniesz, na pełny obudzisz się rozbity."
-      },
-      {
-        "czas": "08:20",
-        "tytul": "Suplementy — po śniadaniu",
-        "ikona": "💊",
-        "ping": true,
-        "akcja": "suple",
-        "opis": "Z pierwszym posiłkiem, bo D3 i omega-3 wchłaniają się z tłuszczem."
-      },
-      {
-        "czas": "08:30",
-        "tytul": "SEN — najważniejsza rzecz dziś",
-        "ikona": "😴",
-        "ping": true,
-        "akcja": "budzik",
-        "opis": "To Twój główny sen po dobie służby. Noc na czterech drzemkach go nie zastąpiła."
-      },
-      {
-        "czas": "13:00",
-        "tytul": "Pobudka",
-        "ikona": "⏰",
-        "ping": true,
-        "opis": "Toaleta, za 5 minut waga. Potem woda i suple. Bez telefonu — dziś zaczynasz od sztangi, nie od ekranu."
-      },
-      {
-        "czas": "13:05",
-        "tytul": "Waga",
-        "ikona": "⚖️",
-        "ping": true,
-        "akcja": "waga",
-        "opis": "Po toalecie, przed jedzeniem i piciem, w samej bieliźnie. Wpisz wynik w panelu — liczy się średnia z 7 dni, nie pojedynczy wynik."
-      },
-      {
-        "czas": "13:30",
-        "tytul": "TRENING — pierwsza rzecz dnia",
-        "ikona": "🏋️",
-        "ping": true,
-        "akcja": "trening_krotki",
-        "opis": "35 minut, ciężary 80% normy. Zaczynasz dzień od zrobionej roboty, zanim cokolwiek zdąży w tym przeszkodzić."
-      },
-      {
-        "czas": "14:15",
-        "tytul": "KUCHNIA — godzina na gotowanie",
-        "ikona": "🍳",
-        "ping": true,
-        "akcja": "kuchnia",
-        "opis": "Jedna godzina, a potem do jutra tylko sięgasz do lodówki."
-      },
-      {
-        "czas": "15:15",
-        "tytul": "Posiłek po treningu",
-        "ikona": "🍽️",
-        "ping": true,
-        "slot": "drugi",
-        "opis": "Pierwszy porządny posiłek dnia — robisz go na końcu bloku kuchni i jesz od razu."
-      },
-      {
-        "czas": "15:45",
-        "tytul": "Podsumowanie cyklu",
-        "ikona": "📊",
-        "ping": true,
-        "akcja": "podsumowanie",
-        "opis": "Trzy dni za Tobą. Zanim staniesz do garów, zobacz, co z nich wyszło."
-      },
-      {
-        "czas": "18:15",
-        "tytul": "Obiad",
-        "ikona": "🍲",
-        "ping": true,
-        "slot": "obiad",
-        "opis": "Z garnka ugotowanego w bloku kuchni (albo z pojemnika) — odgrzej i jedz."
-      },
-      {
-        "czas": "20:30",
-        "tytul": "Kolacja",
-        "ikona": "🌙",
-        "ping": true,
-        "slot": "kolacja",
-        "opis": ""
-      },
-      {
-        "czas": "22:00",
-        "tytul": "Odkładasz telefon",
-        "ikona": "📵",
-        "ping": true,
-        "opis": "Ekran w dół. Za 30 minut śpisz i to Ci resetuje rytm po zmianie."
-      },
-      {
-        "czas": "22:00",
-        "tytul": "Suplementy — wieczór",
-        "ikona": "💊",
-        "ping": true,
-        "akcja": "suple_wieczor",
-        "opis": "Magnez przed snem."
-      },
-      {
-        "czas": "22:30",
-        "tytul": "Sen",
-        "ikona": "😴",
-        "ping": true,
-        "akcja": "budzik",
-        "opis": "Długa noc jednym ciągiem — po dobie na drzemkach jest Ci potrzebna."
-      }
-    ],
-    "2": [
-      {
         "czas": "08:00",
         "tytul": "Pobudka",
         "ikona": "⏰",
         "ping": true,
-        "opis": "Toaleta, za 5 minut waga. Potem woda i suple — i bez telefonu."
+        "opis": "Toaleta — za 5 minut waga, więc jeszcze nic nie pij. Potem szklanka wody i na trening. Bez telefonu."
       },
       {
         "czas": "08:05",
@@ -309,34 +35,34 @@
         "ikona": "⚖️",
         "ping": true,
         "akcja": "waga",
-        "opis": "Po toalecie, przed jedzeniem i piciem, w samej bieliźnie. Wpisz wynik w panelu — liczy się średnia z 7 dni, nie pojedynczy wynik."
+        "opis": "Na czczo, po toalecie, w samej bieliźnie. Liczy się średnia z 7 dni."
       },
       {
         "czas": "08:30",
-        "tytul": "TRENING GŁÓWNY — pierwsza rzecz dnia",
+        "tytul": "TRENING — pierwsza rzecz dnia",
         "ikona": "🏋️",
         "ping": true,
         "akcja": "trening_glowny",
-        "opis": "Najlepsza sesja w cyklu: wyspany, po dniu normalnego jedzenia. Tu bijesz rekordy. Wchodzisz i robisz, zero telefonu przed."
+        "opis": "Na czczo, więc rozgrzewka trochę dłuższa. Wchodzisz i robisz — zero telefonu przed."
       },
       {
-        "czas": "09:30",
-        "tytul": "KUCHNIA — godzina na gotowanie",
+        "czas": "09:50",
+        "tytul": "KUCHNIA — 20 minut",
         "ikona": "🍳",
         "ping": true,
         "akcja": "kuchnia",
-        "opis": "Jedna godzina: posiłki na dziś i pojemniki na jutrzejszą zmianę."
+        "opis": "Robisz posiłki na dziś. Plan krok po kroku masz w panelu."
       },
       {
-        "czas": "10:30",
+        "czas": "10:15",
         "tytul": "Śniadanie po treningu",
         "ikona": "🍳",
         "ping": true,
         "slot": "sniadanie",
-        "opis": "Pierwszy posiłek dnia — robisz go na końcu bloku kuchni i jesz od razu."
+        "opis": "Pierwszy posiłek dnia, zaraz po sztandze."
       },
       {
-        "czas": "10:45",
+        "czas": "10:30",
         "tytul": "Suplementy — po śniadaniu",
         "ikona": "💊",
         "ping": true,
@@ -345,6 +71,101 @@
       },
       {
         "czas": "13:30",
+        "tytul": "Drugi posiłek",
+        "ikona": "🥪",
+        "ping": true,
+        "slot": "drugi",
+        "opis": ""
+      },
+      {
+        "czas": "16:30",
+        "tytul": "Obiad",
+        "ikona": "🍽️",
+        "ping": true,
+        "slot": "obiad",
+        "opis": ""
+      },
+      {
+        "czas": "18:00",
+        "tytul": "Spacer",
+        "ikona": "🚶",
+        "ping": true,
+        "opis": "20–30 minut. Nie kardio — chodzi o kroki i rozruszanie bioder po treningu."
+      },
+      {
+        "czas": "20:00",
+        "tytul": "Kolacja",
+        "ikona": "🌙",
+        "ping": true,
+        "slot": "kolacja",
+        "opis": ""
+      },
+      {
+        "czas": "22:30",
+        "tytul": "Suplementy — wieczór",
+        "ikona": "💊",
+        "ping": true,
+        "akcja": "suple_wieczor",
+        "opis": "Magnez przed snem."
+      },
+      {
+        "czas": "22:45",
+        "tytul": "Telefon w dół + budzik",
+        "ikona": "📵",
+        "ping": true,
+        "akcja": "budzik",
+        "opis": "Ekran w dół. Jutro znowu zaczynasz od sztangi."
+      },
+      {
+        "czas": "23:00",
+        "tytul": "Sen",
+        "ikona": "😴",
+        "ping": true,
+        "opis": "Osiem–dziewięć godzin. Teraz, kiedy nie ma zmian, sen jest Twoją największą przewagą."
+      }
+    ],
+    "1": [
+      {
+        "czas": "08:30",
+        "tytul": "Pobudka",
+        "ikona": "⏰",
+        "ping": true,
+        "opis": "Toaleta — za 5 minut waga. Dziś bez treningu, ale rytm dnia zostaje."
+      },
+      {
+        "czas": "08:35",
+        "tytul": "Waga",
+        "ikona": "⚖️",
+        "ping": true,
+        "akcja": "waga",
+        "opis": "Na czczo, po toalecie. Codziennie, bo liczy się średnia z 7 dni."
+      },
+      {
+        "czas": "09:10",
+        "tytul": "KUCHNIA — 20 minut",
+        "ikona": "🍳",
+        "ping": true,
+        "akcja": "kuchnia",
+        "opis": "Posiłki na dziś. Dzień wolny to dobry moment, żeby zrobić coś ekstra na jutro."
+      },
+      {
+        "czas": "09:40",
+        "tytul": "Śniadanie",
+        "ikona": "🍳",
+        "ping": true,
+        "slot": "sniadanie",
+        "opis": ""
+      },
+      {
+        "czas": "09:55",
+        "tytul": "Suplementy — po śniadaniu",
+        "ikona": "💊",
+        "ping": true,
+        "akcja": "suple",
+        "opis": "Z pierwszym posiłkiem."
+      },
+      {
+        "czas": "13:00",
         "tytul": "Drugi posiłek",
         "ikona": "🥪",
         "ping": true,
@@ -357,14 +178,14 @@
         "ikona": "🍽️",
         "ping": true,
         "slot": "obiad",
-        "opis": "Box z lodówki, mikrofala, zero roboty."
+        "opis": ""
       },
       {
-        "czas": "18:00",
+        "czas": "17:30",
         "tytul": "Rower — zone 2",
         "ikona": "🚴",
         "ping": true,
-        "opis": "35–45 minut spokojnie: tempo, przy którym da się rozmawiać pełnymi zdaniami. To spala tłuszcz i nie zabiera sił na trening."
+        "opis": "35–45 minut spokojnie: tempo, przy którym da się rozmawiać pełnymi zdaniami."
       },
       {
         "czas": "19:30",
@@ -375,23 +196,7 @@
         "opis": ""
       },
       {
-        "czas": "21:00",
-        "tytul": "Pojemniki na jutro — sprawdź",
-        "ikona": "📦",
-        "ping": true,
-        "akcja": "boxy",
-        "opis": "Wszystko zrobiłeś rano. Postaw 4 pojemniki na jutro razem na jednej półce w lodówce, żeby o 5:25 wziąć je jednym ruchem."
-      },
-      {
-        "czas": "21:30",
-        "tytul": "Telefon w dół + budzik",
-        "ikona": "📵",
-        "ping": true,
-        "akcja": "budzik",
-        "opis": "Jutro zmiana — to jest ten wieczór, którego nie można przespać po łebkach."
-      },
-      {
-        "czas": "21:30",
+        "czas": "22:30",
         "tytul": "Suplementy — wieczór",
         "ikona": "💊",
         "ping": true,
@@ -399,11 +204,114 @@
         "opis": "Magnez przed snem."
       },
       {
-        "czas": "22:00",
+        "czas": "22:45",
+        "tytul": "Telefon w dół + budzik",
+        "ikona": "📵",
+        "ping": true,
+        "akcja": "budzik",
+        "opis": ""
+      },
+      {
+        "czas": "23:00",
         "tytul": "Sen",
         "ikona": "😴",
         "ping": true,
-        "opis": "Krótka noc przed zmianą, ale jak położysz się teraz, wstaniesz w miarę ludzko."
+        "opis": ""
+      }
+    ],
+    "2": [
+      {
+        "czas": "08:30",
+        "tytul": "Pobudka",
+        "ikona": "⏰",
+        "ping": true,
+        "opis": "Toaleta — za 5 minut waga. Dziś bez treningu, ale rytm dnia zostaje."
+      },
+      {
+        "czas": "08:35",
+        "tytul": "Waga",
+        "ikona": "⚖️",
+        "ping": true,
+        "akcja": "waga",
+        "opis": "Na czczo, po toalecie. Codziennie, bo liczy się średnia z 7 dni."
+      },
+      {
+        "czas": "09:10",
+        "tytul": "KUCHNIA — 20 minut",
+        "ikona": "🍳",
+        "ping": true,
+        "akcja": "kuchnia",
+        "opis": "Posiłki na dziś. Dzień wolny to dobry moment, żeby zrobić coś ekstra na jutro."
+      },
+      {
+        "czas": "09:40",
+        "tytul": "Śniadanie",
+        "ikona": "🍳",
+        "ping": true,
+        "slot": "sniadanie",
+        "opis": ""
+      },
+      {
+        "czas": "09:55",
+        "tytul": "Suplementy — po śniadaniu",
+        "ikona": "💊",
+        "ping": true,
+        "akcja": "suple",
+        "opis": "Z pierwszym posiłkiem."
+      },
+      {
+        "czas": "13:00",
+        "tytul": "Drugi posiłek",
+        "ikona": "🥪",
+        "ping": true,
+        "slot": "drugi",
+        "opis": ""
+      },
+      {
+        "czas": "16:00",
+        "tytul": "Obiad",
+        "ikona": "🍽️",
+        "ping": true,
+        "slot": "obiad",
+        "opis": ""
+      },
+      {
+        "czas": "17:30",
+        "tytul": "Rower — zone 2",
+        "ikona": "🚴",
+        "ping": true,
+        "opis": "35–45 minut spokojnie: tempo, przy którym da się rozmawiać pełnymi zdaniami."
+      },
+      {
+        "czas": "19:30",
+        "tytul": "Kolacja",
+        "ikona": "🌙",
+        "ping": true,
+        "slot": "kolacja",
+        "opis": ""
+      },
+      {
+        "czas": "22:30",
+        "tytul": "Suplementy — wieczór",
+        "ikona": "💊",
+        "ping": true,
+        "akcja": "suple_wieczor",
+        "opis": "Magnez przed snem."
+      },
+      {
+        "czas": "22:45",
+        "tytul": "Telefon w dół + budzik",
+        "ikona": "📵",
+        "ping": true,
+        "akcja": "budzik",
+        "opis": ""
+      },
+      {
+        "czas": "23:00",
+        "tytul": "Sen",
+        "ikona": "😴",
+        "ping": true,
+        "opis": ""
       }
     ]
   },

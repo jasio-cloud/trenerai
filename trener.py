@@ -199,7 +199,8 @@ def _kotwice():
     danego dnia, wiec dni sprzed zamiany dalej licza sie po staremu — inaczej
     przewijanie dni wstecz pokazywaloby nieprawdziwe typy dni."""
     wpisy = load(GRAFIK_PATH, [])
-    return [{"od": "2000-01-01", "kotwica": CFG["grafik"]["kotwica"]}] + sorted(wpisy, key=lambda w: w["od"])
+    k = CFG.get("grafik", {}).get("kotwica")
+    return ([{"od": "2000-01-01", "kotwica": k}] if k else []) + sorted(wpisy, key=lambda w: w["od"])
 
 
 def _kotwica(d):
@@ -220,7 +221,21 @@ def ustaw_typ_dnia(d, typ):
     _prognozy.clear()
 
 
+def _typ_z_tygodnia(d):
+    g = CFG.get("grafik") or {}
+    if g.get("tryb") != "tydzien":
+        return None
+    return 0 if d.weekday() in g.get("dni_treningowe", []) else 1
+
+
 def typ_dnia(d=None):
+    """Typ dnia: 0 = trening, 1 = wolne (grafik tygodniowy). Stary tryb 24/48 zostaje
+    w kodzie na wypadek powrotu do zmian — wtedy liczy sie kotwica i reszta z dzielenia."""
+    d = d or dzis()
+    t = _typ_z_tygodnia(d)
+    if t is not None:
+        w = load(SPECJALNE_PATH, {}).get(d.isoformat(), {}).get("typ")
+        return int(w) if w is not None else t
     """0 = zmiana 24h, 1 = dzień po zmianie, 2 = dzień wolny."""
     d = d or dzis()
     return (d - _kotwica(d)).days % CFG["grafik"]["cykl_dni"]
@@ -229,7 +244,20 @@ def typ_dnia(d=None):
 DZIEN_GOTOWANIA = 1  # typ dnia, w którym robisz zakupy i gotujesz
 
 
+def _start_cyklu_tydzien(d):
+    c = CFG.get("cykl") or {}
+    if not c.get("start"):
+        return None
+    baza = parse_date(c["start"])
+    n = c.get("dni", 3)
+    return baza + datetime.timedelta(days=((d - baza).days // n) * n)
+
+
 def start_cyklu(d=None):
+    d = d or dzis()
+    sc = _start_cyklu_tydzien(d)
+    if sc is not None:
+        return sc
     """Data ostatniego dnia gotowania — czyli początek okna, które to gotowanie obsługuje.
 
     Okno celowo NIE zaczyna się w dniu zmiany. Gotujesz po zmianie, więc jedzenie
@@ -245,6 +273,10 @@ def start_cyklu(d=None):
 def nr_cyklu(d=None):
     """Kolejny numer gotowania, liczony od pierwszego dnia gotowania po kotwicy."""
     d = d or dzis()
+    c = CFG.get("cykl") or {}
+    if c.get("start"):
+        # grafik tygodniowy: cykle licza sie od stalej daty, a nie od kotwicy 24/48
+        return (d - parse_date(c["start"])).days // c.get("dni", 3) + 1
     kotwica = _kotwica(d) + datetime.timedelta(days=DZIEN_GOTOWANIA)
     return (start_cyklu(d) - kotwica).days // CFG["grafik"]["cykl_dni"]
 
@@ -652,19 +684,15 @@ def ulubione_na(d):
 def slot_ulubionego(d):
     """W dniu po zmianie 'sniadanie' to maly posilek przed snem po nocce —
     pierwszym prawdziwym posilkiem jest posilek po treningu i tam idzie ulubione."""
-    return "drugi" if typ_dnia(d) == 1 else "sniadanie"
+    return "sniadanie"
 
 
 def wymaga_boxa(d, slot):
     """Czy posilek musi wytrzymac w pojemniku. Na swiezo jesz tylko to, co konczy
     blok kuchni: posilek po treningu w dniu po zmianie i sniadanie w dzien wolny.
     Reszta jest robiona wczesniej i czeka w lodowce."""
-    t = typ_dnia(d)
-    if t == 1 and slot == "drugi":
-        return False
-    if t == 2 and slot == "sniadanie":
-        return False
-    return True
+    # wszystko robisz rano w bloku kuchni; na swiezo jesz tylko sniadanie tuz po nim
+    return slot != "sniadanie"
 
 
 def _pule(d):
@@ -675,11 +703,9 @@ def _pule(d):
     for slot in ("sniadanie", "drugi", "kolacja"):
         box = wymaga_boxa(d, slot)
         limit = CFG.get("kuchnia", {}).get("max_min_posilek", 99)
-        if t == 0 and CFG.get("kuchnia", {}).get("blok_rano_w_dniu_zmiany"):
-            limit = min(limit, CFG.get("kuchnia", {}).get("max_min_zmiana", limit))
         out[slot] = [q["id"] for q in QUICK
                      if slot in q["sloty"] and (q["box"] or not box) and q["czas_min"] <= limit
-                     and not (t == 1 and slot == "sniadanie" and q["czas_min"] > 5)]
+                     ]
     return out
 
 
@@ -1404,7 +1430,7 @@ def auto_rozlicz():
     n = teraz()
     if not tryb().get("aktywny", True):
         return None
-    if typ_dnia(n.date()) != DZIEN_GOTOWANIA:
+    if n.date() != start_cyklu(n.date()):
         return None
     godzina_zakupow = CFG["gotowanie"]["godzina_zakupow"]
     if n.strftime("%H:%M") < godzina_zakupow:
@@ -1607,7 +1633,7 @@ def _nr_sesji(d):
     st = _start_planu() or d
     n, dd = 0, st
     while dd < d:
-        if typ_dnia(dd) in (1, 2):
+        if typ_dnia(dd) == 0:
             n += 1
         dd += datetime.timedelta(days=1)
     return n
@@ -1626,8 +1652,8 @@ def trening_dnia(d=None):
             "mikro": ["Spokojny spacer 15–20 min, jeśli masz siłę", "Dużo wody",
                       "Sen o zaplanowanej godzinie"]}}
     t = typ_dnia(d)
-    if t == 0:
-        return {"rodzaj": "zmiana", "trening": PROGRAM["zmiana"]}
+    if t != 0:
+        return {"rodzaj": "wolne", "trening": PROGRAM["wolne"]}
     if minimum(d):
         m = dict(PROGRAM["minimum"])
         m.update({"rozgrzewka": [], "finisz": m["opis"]})
@@ -1810,10 +1836,7 @@ def _godzina_kuchni(d):
 
 def blok_dla(d, slot):
     """Kiedy przygotowujesz posilek: (dzien bloku, godzina) albo None, gdy robisz go na miejscu."""
-    t = typ_dnia(d)
-    if t == 1 and slot == "sniadanie":
-        return None
-    bd = d - datetime.timedelta(days=1) if t == 0 else d
+    bd = d
     g = _godzina_kuchni(bd)
     return (bd, g) if g else None
 
@@ -1823,16 +1846,7 @@ def posilki_bloku(d):
     w dzien wolny posilki na dzis i wszystkie pojemniki na jutrzejsza zmiane."""
     t = typ_dnia(d)
     dni_ = []
-    rano = CFG.get("kuchnia", {}).get("blok_rano_w_dniu_zmiany")
-    if t == 1:
-        dni_ = [(d, ("drugi", "obiad", "kolacja"))]
-    elif t == 2:
-        dni_ = [(d, ("sniadanie", "drugi", "obiad", "kolacja"))]
-        if not rano:
-            dni_.append((d + datetime.timedelta(days=1), ("sniadanie", "drugi", "obiad", "kolacja")))
-    elif t == 0 and rano:
-        # zmiana: skladasz rano, tuz przed wyjazdem — wszystko na zimno, z gotowych skladnikow
-        dni_ = [(d, ("sniadanie", "drugi", "obiad", "kolacja"))]
+    dni_ = [(d, ("sniadanie", "drugi", "obiad", "kolacja"))]
     out = []
     for dd, sloty in dni_:
         _, dz = plan_dnia(dd)
@@ -1981,9 +1995,9 @@ def _dodaj_kosciol(d, zdarzenia):
         return zdarzenia
     t = typ_dnia(d)
     godz, opis = None, ""
-    if d.weekday() == 6 and t == 2:
+    if d.weekday() == 6:
         godz = k["niedziela_wolne"]
-    elif d.weekday() == 6 and t == 1:
+    elif False:
         godz = k["niedziela_po_zmianie"]
         for e in zdarzenia:
             if e.get("akcja") == "gotowanie":
