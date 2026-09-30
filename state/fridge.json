@@ -88,10 +88,6 @@
       "ilosc": 18.0,
       "do": "2027-04-11"
     },
-    "mielone_wolowe": {
-      "ilosc": 100.0,
-      "do": "2026-09-30"
-    },
     "koncentrat": {
       "ilosc": 140.0,
       "do": "2027-04-14"
@@ -259,6 +255,12 @@
       "co": "cykl:2026-09-30",
       "pozycji": 20,
       "koszt": 124.17
+    },
+    {
+      "data": "2026-10-01",
+      "co": "wyrzucone",
+      "produkt": "mielone_wolowe",
+      "ilosc": 100.0
     }
   ]
 }
