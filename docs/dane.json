@@ -1,5 +1,5 @@
 {
-  "wygenerowano": "2026-10-01T00:50:49+02:00",
+  "wygenerowano": "2026-10-01T20:00:14+02:00",
   "dzis": "2026-10-01",
   "typ_dzis": 0,
   "typy": {
@@ -6979,7 +6979,12 @@
       "nadwyzka": 0,
       "odhaczone": {},
       "waga": null,
-      "kroki": null,
+      "kroki": {
+        "data": "2026-10-01",
+        "kroki": 5685,
+        "cel": 8000,
+        "status": "malo"
+      },
       "serie": [],
       "trening": {
         "rodzaj": "glowny",
@@ -11744,10 +11749,24 @@
         "kroki": 5188,
         "cel": 8000,
         "status": "malo"
+      },
+      {
+        "data": "2026-10-01",
+        "kroki": 5685,
+        "cel": 8000,
+        "status": "malo"
       }
     ]
   },
-  "kroki": null,
+  "kroki": {
+    "kroki": 5685,
+    "cel": 8000,
+    "brakuje": 2315,
+    "status": "malo",
+    "sugestia": "Dwa obchody zamiast jednego, a między nimi wejdź na piętro schodami. Rozbij to na dwa razy, nie rób wszystkiego naraz.",
+    "komentarz": "Cel 8000 kroków dziennie. Spacer po południu robi większość z tego.",
+    "procent": 71
+  },
   "kroki_cel": {
     "cel": 8000,
     "komentarz": "Cel 8000 kroków dziennie. Spacer po południu robi większość z tego."
