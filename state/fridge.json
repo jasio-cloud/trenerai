@@ -56,18 +56,6 @@
       "ilosc": 20,
       "do": "2027-04-06"
     },
-    "feta": {
-      "ilosc": 90,
-      "do": "2026-10-02"
-    },
-    "ser": {
-      "ilosc": 40.0,
-      "do": "2026-10-02"
-    },
-    "twarog": {
-      "ilosc": 230,
-      "do": "2026-10-02"
-    },
     "czosnek": {
       "ilosc": 5.0,
       "do": "2027-04-08"
@@ -261,6 +249,24 @@
       "co": "wyrzucone",
       "produkt": "mielone_wolowe",
       "ilosc": 100.0
+    },
+    {
+      "data": "2026-10-03",
+      "co": "wyrzucone",
+      "produkt": "feta",
+      "ilosc": 90
+    },
+    {
+      "data": "2026-10-03",
+      "co": "wyrzucone",
+      "produkt": "ser",
+      "ilosc": 40.0
+    },
+    {
+      "data": "2026-10-03",
+      "co": "wyrzucone",
+      "produkt": "twarog",
+      "ilosc": 230
     }
   ]
 }
