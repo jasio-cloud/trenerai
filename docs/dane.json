@@ -1,5 +1,5 @@
 {
-  "wygenerowano": "2026-10-08T03:12:07+02:00",
+  "wygenerowano": "2026-10-08T20:00:13+02:00",
   "dzis": "2026-10-08",
   "typ_dzis": 0,
   "typy": {
@@ -7890,7 +7890,12 @@
       "nadwyzka": 0,
       "odhaczone": {},
       "waga": null,
-      "kroki": null,
+      "kroki": {
+        "data": "2026-10-08",
+        "kroki": 6970,
+        "cel": 8000,
+        "status": "blisko"
+      },
       "serie": [],
       "trening": {
         "rodzaj": "glowny",
@@ -12618,10 +12623,24 @@
         "kroki": 8673,
         "cel": 8000,
         "status": "ok"
+      },
+      {
+        "data": "2026-10-08",
+        "kroki": 6970,
+        "cel": 8000,
+        "status": "blisko"
       }
     ]
   },
-  "kroki": null,
+  "kroki": {
+    "kroki": 6970,
+    "cel": 8000,
+    "brakuje": 1030,
+    "status": "blisko",
+    "sugestia": "Cel zrobiony. Nic nie musisz dorabiać.",
+    "komentarz": "Cel 8000 kroków dziennie. Spacer po południu robi większość z tego.",
+    "procent": 87
+  },
   "kroki_cel": {
     "cel": 8000,
     "komentarz": "Cel 8000 kroków dziennie. Spacer po południu robi większość z tego."
