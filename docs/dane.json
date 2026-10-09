@@ -1,6 +1,6 @@
 {
-  "wygenerowano": "2026-10-08T20:00:13+02:00",
-  "dzis": "2026-10-08",
+  "wygenerowano": "2026-10-09T02:37:59+02:00",
+  "dzis": "2026-10-09",
   "typ_dzis": 0,
   "typy": {
     "0": {
@@ -64,73 +64,73 @@
     "praca": "brak (od 29.09.2026); wcześniej ochrona 24/48"
   },
   "plan": {
-    "cykl": 3,
-    "od": "2026-10-06",
-    "do": "2026-10-08",
+    "cykl": 4,
+    "od": "2026-10-09",
+    "do": "2026-10-11",
     "baza": "b_pieczarkowy",
     "dni": [
       {
-        "sniadanie": "q_twarog",
-        "drugi": "q_gofry",
-        "kolacja": "q_jajka_majonez",
-        "obiad": "b_pieczarkowy",
-        "data": "2026-10-06",
-        "typ": 0,
-        "makra": {
-          "kcal": 2464,
-          "bialko": 157,
-          "tluszcz": 106,
-          "wegle": 207
-        },
-        "nazwy": {
-          "sniadanie": "Twarożek na słodko z dżemem + pieczywo",
-          "drugi": "Gofry proteinowe z kremem",
-          "obiad": "Makaron z wołowiną i pieczarkami w sosie",
-          "kolacja": "Sałatka jajeczna z kukurydzą i majonezem"
-        }
-      },
-      {
         "sniadanie": "q_omlet_marchewkowy",
         "drugi": "q_kanapki_ser",
-        "kolacja": "q_kanapki_jajko",
+        "kolacja": "q_jajka_kukurydza",
         "obiad": "b_pieczarkowy",
-        "data": "2026-10-07",
-        "typ": 1,
+        "data": "2026-10-09",
+        "typ": 0,
         "makra": {
-          "kcal": 2949,
-          "bialko": 184,
-          "tluszcz": 107,
-          "wegle": 298
+          "kcal": 2932,
+          "bialko": 188,
+          "tluszcz": 104,
+          "wegle": 296
         },
         "nazwy": {
           "sniadanie": "Omlet marchewkowy z dżemem i bananem + napój proteinowy",
           "drugi": "Kanapki z serem, musztardą i kiszonym ogórkiem",
           "obiad": "Makaron z wołowiną i pieczarkami w sosie",
-          "kolacja": "Kanapki z jajkiem na twardo i serem"
+          "kolacja": "Box: sałatka jajeczna z kukurydzą"
+        }
+      },
+      {
+        "sniadanie": "q_kanapki_jajko",
+        "drugi": "q_twarog_banan",
+        "kolacja": "q_twarog",
+        "obiad": "b_pieczarkowy",
+        "data": "2026-10-10",
+        "typ": 1,
+        "makra": {
+          "kcal": 2387,
+          "bialko": 164,
+          "tluszcz": 96,
+          "wegle": 211
+        },
+        "nazwy": {
+          "sniadanie": "Kanapki z jajkiem na twardo i serem",
+          "drugi": "Twaróg z bananem i miodem",
+          "obiad": "Makaron z wołowiną i pieczarkami w sosie",
+          "kolacja": "Twarożek na słodko z dżemem + pieczywo"
         }
       },
       {
         "sniadanie": "q_tortilla_jajecznica",
-        "drugi": "q_twarog_banan",
+        "drugi": "q_jogurt_orzechy",
         "kolacja": "q_shake",
         "obiad": "b_pieczarkowy",
-        "data": "2026-10-08",
-        "typ": 0,
+        "data": "2026-10-11",
+        "typ": 1,
         "makra": {
-          "kcal": 2660,
-          "bialko": 186,
-          "tluszcz": 115,
-          "wegle": 216
+          "kcal": 2626,
+          "bialko": 180,
+          "tluszcz": 114,
+          "wegle": 212
         },
         "nazwy": {
           "sniadanie": "Tortilla z jajecznicą, polędwicą i majonezem sriracha + skyr pitny",
-          "drugi": "Twaróg z bananem i miodem",
+          "drugi": "Jogurt grecki z orzechami i miodem",
           "obiad": "Makaron z wołowiną i pieczarkami w sosie",
           "kolacja": "Shake białkowy z bananem"
         }
       }
     ],
-    "wygenerowano": "2026-10-06T02:09:02+02:00"
+    "wygenerowano": "2026-10-09T02:37:58+02:00"
   },
   "baza": {
     "id": "b_pieczarkowy",
@@ -230,32 +230,38 @@
       "ikona": "🍳",
       "ping": true,
       "akcja": "kuchnia",
-      "opis": "Przygotujesz: Tortilla z jajecznicą, polędwicą i majonezem sriracha + skyr pitny, Twaróg z bananem i miodem, Shake białkowy z bananem. Potem do jutra tylko sięgasz do lodówki.",
+      "opis": "Przygotujesz: Omlet marchewkowy z dżemem i bananem + napój proteinowy, Kanapki z serem, musztardą i kiszonym ogórkiem, Box: sałatka jajeczna z kukurydzą. Potem do jutra tylko sięgasz do lodówki.",
       "kroki": [
-        "Wyjmij wszystko na blat, zanim zaczniesz: banan 2 szt. (240 g), jaja 2 szt. (110 g), majonez sriracha 10 ml, miód 1 łyżka (20 g), mleko 2% 40 ml, odżywka białkowa wpc 80 30 g, orzechy / migdały 24 g, polędwica sopocka 12 g, przyprawy 1 porcja (2 g), skyr pitny 1 butelka (330 ml), tortilla pszenna 1 szt. (60 g), twaróg półtłusty 145 g.",
+        "Wyjmij wszystko na blat, zanim zaczniesz: banan 1 szt. (120 g), chleb pszenny 3 kromki (105 g), przyprawa do cynamonek / cynamon 2 g, dżem 70 g, jaja 3 szt. (165 g), jogurt grecki 2% 65 g, kukurydza konserwowa 80 g, mąka pszenna 25 g, marchew 40 g, masło 5 g, musztarda 2 łyżki (30 g), napój proteinowy müllermilch protein 1 butelka (400 ml), odżywka białkowa wpc 80 15 g, ogórek kiszony 100 g, pomidor 1 szt. (120 g), proszek do pieczenia 2 g, przyprawy 1 porcja (2 g), ser żółty w plastrach 2 plastry (40 g), skyr waniliowy 1 kubek (150 g).",
         "Przygotuj 2 pojemniki i opisz je karteczką: dziś 13:30 — drugi posiłek; dziś 20:00 — kolacja.",
-        "▸ Shake białkowy z bananem",
-        "Do shakera wsyp odżywkę (30 g) i wlej ok. 350 ml zimnej wody. Zakręć i potrząsaj 20 sekund.",
-        "Banana (1 szt., 120 g) i orzechy (16 g) weź osobno — zjadasz obok shake'a.",
-        "Na zmianę: odżywkę wsyp do shakera już w domu, wodę dolejesz na miejscu. Nic się nie zepsuje.",
-        "Przełóż do pojemnika „dziś 20:00 — kolacja”.",
-        "▸ Twaróg z bananem i miodem",
-        "Twaróg (145 g) włóż do miski, dolej mleko (40 ml) i rozgniataj widelcem ok. minuty na krem.",
-        "Banana (1 szt., 120 g) obierz i pokrój w plasterki na wierzch.",
-        "Polej miodem (1 łyżka, 20 g) i posyp orzechami (8 g).",
-        "Na zmianę: wszystko do zakręcanego pojemnika, banana weź w całości i pokrój przy jedzeniu.",
+        "▸ Woda — postaw ją od razu, zanim zaczniesz resztę:",
+        "Jajka na twardo dla Box: sałatka jajeczna z kukurydzą (2 szt.) — razem 2 szt.: w małym garnku zagotuj wodę, łyżką włóż jajka, gotuj 9 minut na średnim ogniu, odlej wrzątek i zalej zimną wodą. Obierzesz je przy daniach.",
+        "▸ Kanapki z serem, musztardą i kiszonym ogórkiem",
+        "Kromki chleba (2 kromki, 70 g) posmaruj cienko masłem (5 g), potem musztardą (1 łyżka, 15 g).",
+        "Ser (2 plastry, 40 g) rozłóż po równo na kromkach.",
+        "Ogórki kiszone (100 g) i pomidora (1 szt., 120 g) pokrój w plasterki i ułóż na serze.",
+        "Do boxa zawiń kanapki w folię.",
         "Przełóż do pojemnika „dziś 13:30 — drugi posiłek”.",
-        "▸ Tortilla z jajecznicą, polędwicą i majonezem sriracha + skyr pitny",
-        "Wbij jajka (2 szt., 110 g) do miski, dodaj szczyptę soli i pieprzu i roztrzep widelcem.",
-        "Patelnię z powłoką postaw na średnim ogniu, bez tłuszczu. Wlej jajka i mieszaj łopatką 3 minuty, aż jajecznica będzie ścięta. Przełóż na talerz.",
-        "Tortillę (1 szt., 60 g) połóż na suchej patelni na 20–30 sekund, żeby zmiękła.",
-        "Posmaruj tortillę majonezem (10 ml), wyłóż jajecznicę i polędwicę (12 g).",
-        "Złóż boki do środka i zwiń od dołu w rulon. Do popicia skyr pitny (1 butelka, 330 ml).",
+        "▸ Box: sałatka jajeczna z kukurydzą",
+        "Weź 2 szt. ugotowanych jajek z garnka z zimną wodą.",
+        "Jajka pokrój w kostkę ok. 1 cm. Kukurydzę (80 g) odsącz z zalewy na sitku.",
+        "W misce wymieszaj jajka, kukurydzę, jogurt (65 g) i musztardę (1 łyżka, 15 g). Dopraw szczyptą soli, pieprzu i słodkiej papryki.",
+        "Przełóż do pojemnika, chleb (1 kromka, 35 g) zapakuj osobno. W lodówce wytrzyma 2 dni.",
+        "Przełóż do pojemnika „dziś 20:00 — kolacja”.",
+        "▸ Omlet marchewkowy z dżemem i bananem + napój proteinowy",
+        "Marchew (40 g) obierz i zetrzyj na tarce na drobnych oczkach.",
+        "Do miski wbij jajko (1 szt., 55 g), dodaj skyr (1 kubek, 150 g), mąkę (25 g), odżywkę (15 g), proszek do pieczenia (2 g) i przyprawę (2 g). Mieszaj łyżką ok. minuty, aż nie będzie grudek.",
+        "Wmieszaj marchewkę. Ciasto ma być gęste, jak na placki.",
+        "Patelnię z powłoką postaw na małym ogniu (1/3 skali) na minutę. Wylej ciasto i rozprowadź łyżką na grubość ok. 1 cm.",
+        "Przykryj pokrywką i smaż 5–6 minut, aż spód będzie brązowy, a wierzch przestanie być płynny.",
+        "Przewróć: zsuń omlet na talerz, przykryj go patelnią i odwróć razem z talerzem. Smaż jeszcze 3–4 minuty pod przykryciem.",
+        "Przełóż na talerz, posmaruj dżemem (70 g) i ułóż banana (1 szt., 120 g) pokrojonego w plasterki. Do popicia napój proteinowy (1 butelka, 400 ml).",
+        "Do pojemnika: na zimno smakuje jak ciasto marchewkowe — dżem i banana dołóż w osobnym pudełku, napój weź w butelce.",
         "To zjadasz od razu, na koniec bloku.",
         "▸ Na koniec: ciepłe pojemniki wystudź 20–30 minut bez pokrywki, potem wszystkie do lodówki na jedną półkę. Naczynia do zlewu, przetrzyj blat — 5 minut teraz oszczędza 20 jutro."
       ],
       "jak": "kuchnia",
-      "czas_min": 16
+      "czas_min": 31
     },
     {
       "czas": "10:15",
@@ -264,70 +270,118 @@
       "ping": true,
       "slot": "sniadanie",
       "opis": "Pierwszy posiłek dnia, zaraz po sztandze.",
-      "posilek": "Tortilla z jajecznicą, polędwicą i majonezem sriracha + skyr pitny",
-      "posilek_id": "q_tortilla_jajecznica",
+      "posilek": "Omlet marchewkowy z dżemem i bananem + napój proteinowy",
+      "posilek_id": "q_omlet_marchewkowy",
       "porcja": 0.5,
       "makra": {
-        "kcal": 674,
-        "bialko": 43,
-        "tluszcz": 25,
-        "wegle": 67
+        "kcal": 825,
+        "bialko": 65,
+        "tluszcz": 13,
+        "wegle": 109
       },
       "skladniki": [
         {
-          "nazwa": "Tortilla pszenna",
-          "ile": "1 szt. (60 g)",
-          "g": 62,
-          "kcal": 189,
-          "bialko": 5.2,
-          "tluszcz": 4.5,
-          "wegle": 31.6
+          "nazwa": "Skyr waniliowy (kubek 150 g)",
+          "ile": "1 kubek (150 g)",
+          "g": 150,
+          "kcal": 123,
+          "bialko": 14.4,
+          "tluszcz": 0.0,
+          "wegle": 16.5
         },
         {
           "nazwa": "Jaja",
-          "ile": "2 szt. (110 g)",
-          "g": 110,
-          "kcal": 157,
-          "bialko": 13.9,
-          "tluszcz": 10.5,
-          "wegle": 0.8
+          "ile": "1 szt. (55 g)",
+          "g": 55,
+          "kcal": 79,
+          "bialko": 6.9,
+          "tluszcz": 5.2,
+          "wegle": 0.4
         },
         {
-          "nazwa": "Polędwica sopocka (wędlina)",
-          "ile": "12 g",
-          "g": 12,
-          "kcal": 12,
-          "bialko": 2.2,
-          "tluszcz": 0.2,
+          "nazwa": "Mąka pszenna",
+          "ile": "25 g",
+          "g": 25,
+          "kcal": 86,
+          "bialko": 2.5,
+          "tluszcz": 0.3,
+          "wegle": 17.8
+        },
+        {
+          "nazwa": "Odżywka białkowa WPC 80 (czekoladowa) — zapas, kupujesz osobno",
+          "ile": "15 g",
+          "g": 15,
+          "kcal": 56,
+          "bialko": 12.3,
+          "tluszcz": 0.7,
           "wegle": 0.3
         },
         {
-          "nazwa": "Majonez sriracha",
-          "ile": "10 ml",
-          "g": 10,
-          "kcal": 52,
-          "bialko": 0.1,
-          "tluszcz": 5.3,
-          "wegle": 1.0
+          "nazwa": "Marchew",
+          "ile": "40 g",
+          "g": 40,
+          "kcal": 16,
+          "bialko": 0.4,
+          "tluszcz": 0.1,
+          "wegle": 2.8
         },
         {
-          "nazwa": "Skyr pitny (butelka 330 ml)",
-          "ile": "1 butelka (330 ml)",
-          "g": 330,
-          "kcal": 264,
-          "bialko": 21.4,
-          "tluszcz": 4.9,
-          "wegle": 33.0
+          "nazwa": "Proszek do pieczenia",
+          "ile": "2 g",
+          "g": 2,
+          "kcal": 1,
+          "bialko": 0.1,
+          "tluszcz": 0.0,
+          "wegle": 0.3
+        },
+        {
+          "nazwa": "Przyprawa do cynamonek / cynamon",
+          "ile": "2 g",
+          "g": 2,
+          "kcal": 6,
+          "bialko": 0.0,
+          "tluszcz": 0.0,
+          "wegle": 0.9
+        },
+        {
+          "nazwa": "Dżem (np. malinowy, słoik 200 g)",
+          "ile": "70 g",
+          "g": 70,
+          "kcal": 101,
+          "bialko": 0.3,
+          "tluszcz": 0.3,
+          "wegle": 23.8
+        },
+        {
+          "nazwa": "Banan",
+          "ile": "1 szt. (120 g)",
+          "g": 120,
+          "kcal": 106,
+          "bialko": 1.3,
+          "tluszcz": 0.4,
+          "wegle": 24.2
+        },
+        {
+          "nazwa": "Napój proteinowy Müllermilch Protein (400 ml)",
+          "ile": "1 butelka (400 ml)",
+          "g": 400,
+          "kcal": 252,
+          "bialko": 26.4,
+          "tluszcz": 6.0,
+          "wegle": 22.0
         }
       ],
       "jak": "przepis",
-      "czas_min": 10,
+      "czas_min": 15,
       "kroki": [
-        "Wbij jajka (2 szt., 110 g) do miski, dodaj szczyptę soli i pieprzu i roztrzep widelcem.",
-        "Patelnię z powłoką postaw na średnim ogniu, bez tłuszczu. Wlej jajka i mieszaj łopatką 3 minuty, aż jajecznica będzie ścięta. Przełóż na talerz.",
-        "Tortillę (1 szt., 60 g) połóż na suchej patelni na 20–30 sekund, żeby zmiękła.",
-        "Posmaruj tortillę majonezem (10 ml), wyłóż jajecznicę i polędwicę (12 g).",
-        "Złóż boki do środka i zwiń od dołu w rulon. Do popicia skyr pitny (1 butelka, 330 ml).",
+        "Marchew (40 g) obierz i zetrzyj na tarce na drobnych oczkach.",
+        "Do miski wbij jajko (1 szt., 55 g), dodaj skyr (1 kubek, 150 g), mąkę (25 g), odżywkę (15 g), proszek do pieczenia (2 g) i przyprawę (2 g). Mieszaj łyżką ok. minuty, aż nie będzie grudek.",
+        "Wmieszaj marchewkę. Ciasto ma być gęste, jak na placki.",
+        "Patelnię z powłoką postaw na małym ogniu (1/3 skali) na minutę. Wylej ciasto i rozprowadź łyżką na grubość ok. 1 cm.",
+        "Przykryj pokrywką i smaż 5–6 minut, aż spód będzie brązowy, a wierzch przestanie być płynny.",
+        "Przewróć: zsuń omlet na talerz, przykryj go patelnią i odwróć razem z talerzem. Smaż jeszcze 3–4 minuty pod przykryciem.",
+        "Przełóż na talerz, posmaruj dżemem (70 g) i ułóż banana (1 szt., 120 g) pokrojonego w plasterki. Do popicia napój proteinowy (1 butelka, 400 ml).",
+        "Do pojemnika: na zimno smakuje jak ciasto marchewkowe — dżem i banana dołóż w osobnym pudełku, napój weź w butelce.",
         "Wszystkie ilości w krokach są już przeliczone na Twoją porcję na dziś — nic nie musisz dzielić."
       ]
     },
@@ -346,70 +400,79 @@
       "ping": true,
       "slot": "drugi",
       "opis": "",
-      "posilek": "Twaróg z bananem i miodem",
-      "posilek_id": "q_twarog_banan",
+      "posilek": "Kanapki z serem, musztardą i kiszonym ogórkiem",
+      "posilek_id": "q_kanapki_ser",
       "porcja": 0.8,
       "makra": {
-        "kcal": 430,
-        "bialko": 31,
-        "tluszcz": 13,
-        "wegle": 49
+        "kcal": 402,
+        "bialko": 18,
+        "tluszcz": 18,
+        "wegle": 40
       },
       "skladniki": [
         {
-          "nazwa": "Twaróg półtłusty",
-          "ile": "145 g",
-          "g": 145,
-          "kcal": 193,
-          "bialko": 27.1,
-          "tluszcz": 6.8,
-          "wegle": 5.4
+          "nazwa": "Chleb pszenny (zwykły biały)",
+          "ile": "2 kromki (70 g)",
+          "g": 70,
+          "kcal": 175,
+          "bialko": 5.6,
+          "tluszcz": 2.1,
+          "wegle": 32.9
         },
         {
-          "nazwa": "Banan",
+          "nazwa": "Ser żółty w plastrach",
+          "ile": "2 plastry (40 g)",
+          "g": 40,
+          "kcal": 140,
+          "bialko": 10.2,
+          "tluszcz": 10.8,
+          "wegle": 0.2
+        },
+        {
+          "nazwa": "Musztarda",
+          "ile": "1 łyżka (15 g)",
+          "g": 15,
+          "kcal": 16,
+          "bialko": 0.8,
+          "tluszcz": 0.9,
+          "wegle": 1.2
+        },
+        {
+          "nazwa": "Ogórek kiszony",
+          "ile": "100 g",
+          "g": 98,
+          "kcal": 12,
+          "bialko": 0.5,
+          "tluszcz": 0.2,
+          "wegle": 1.9
+        },
+        {
+          "nazwa": "Masło",
+          "ile": "5 g",
+          "g": 5,
+          "kcal": 37,
+          "bialko": 0.0,
+          "tluszcz": 4.1,
+          "wegle": 0.0
+        },
+        {
+          "nazwa": "Pomidor",
           "ile": "1 szt. (120 g)",
           "g": 120,
-          "kcal": 106,
-          "bialko": 1.3,
-          "tluszcz": 0.4,
-          "wegle": 24.2
-        },
-        {
-          "nazwa": "Miód",
-          "ile": "1 łyżka (20 g)",
-          "g": 20,
-          "kcal": 61,
-          "bialko": 0.1,
-          "tluszcz": 0.0,
-          "wegle": 16.4
-        },
-        {
-          "nazwa": "Orzechy / migdały",
-          "ile": "8 g",
-          "g": 8,
-          "kcal": 51,
-          "bialko": 1.5,
-          "tluszcz": 4.6,
-          "wegle": 0.8
-        },
-        {
-          "nazwa": "Mleko 2%",
-          "ile": "40 ml",
-          "g": 40,
-          "kcal": 20,
-          "bialko": 1.3,
-          "tluszcz": 0.8,
-          "wegle": 1.9
+          "kcal": 22,
+          "bialko": 1.1,
+          "tluszcz": 0.2,
+          "wegle": 3.2
         }
       ],
       "jak": "przepis",
       "czas_min": 4,
       "kroki": [
         "📦 To zrobiłeś w bloku kuchni (dziś o 09:50) — teraz tylko wyjmij pojemnik z lodówki. Przepis niżej, gdybyś robił na świeżo.",
-        "Twaróg (145 g) włóż do miski, dolej mleko (40 ml) i rozgniataj widelcem ok. minuty na krem.",
-        "Banana (1 szt., 120 g) obierz i pokrój w plasterki na wierzch.",
-        "Polej miodem (1 łyżka, 20 g) i posyp orzechami (8 g).",
-        "Na zmianę: wszystko do zakręcanego pojemnika, banana weź w całości i pokrój przy jedzeniu.",
+        "Kromki chleba (2 kromki, 70 g) posmaruj cienko masłem (5 g), potem musztardą (1 łyżka, 15 g).",
+        "Ser (2 plastry, 40 g) rozłóż po równo na kromkach.",
+        "Ogórki kiszone (100 g) i pomidora (1 szt., 120 g) pokrój w plasterki i ułóż na serze.",
+        "Do boxa zawiń kanapki w folię.",
         "Wszystkie ilości w krokach są już przeliczone na Twoją porcję na dziś — nic nie musisz dzielić."
       ]
     },
@@ -525,51 +588,70 @@
       "ping": true,
       "slot": "kolacja",
       "opis": "",
-      "posilek": "Shake białkowy z bananem",
-      "posilek_id": "q_shake",
+      "posilek": "Box: sałatka jajeczna z kukurydzą",
+      "posilek_id": "q_jajka_kukurydza",
       "porcja": 0.8,
       "makra": {
-        "kcal": 320,
-        "bialko": 29,
-        "tluszcz": 11,
-        "wegle": 26
+        "kcal": 374,
+        "bialko": 26,
+        "tluszcz": 15,
+        "wegle": 31
       },
       "skladniki": [
         {
-          "nazwa": "Odżywka białkowa WPC 80 (czekoladowa) — zapas, kupujesz osobno",
-          "ile": "30 g",
-          "g": 30,
-          "kcal": 112,
-          "bialko": 24.6,
-          "tluszcz": 1.4,
-          "wegle": 0.5
+          "nazwa": "Jaja",
+          "ile": "2 szt. (110 g)",
+          "g": 110,
+          "kcal": 157,
+          "bialko": 13.9,
+          "tluszcz": 10.5,
+          "wegle": 0.8
         },
         {
-          "nazwa": "Banan",
-          "ile": "1 szt. (120 g)",
-          "g": 120,
-          "kcal": 106,
-          "bialko": 1.3,
-          "tluszcz": 0.4,
-          "wegle": 24.2
+          "nazwa": "Kukurydza konserwowa",
+          "ile": "80 g",
+          "g": 80,
+          "kcal": 66,
+          "bialko": 2.2,
+          "tluszcz": 1.0,
+          "wegle": 10.4
         },
         {
-          "nazwa": "Orzechy / migdały",
-          "ile": "16 g",
-          "g": 16,
-          "kcal": 102,
-          "bialko": 3.0,
-          "tluszcz": 9.1,
-          "wegle": 1.6
+          "nazwa": "Jogurt grecki 2%",
+          "ile": "65 g",
+          "g": 65,
+          "kcal": 47,
+          "bialko": 6.4,
+          "tluszcz": 1.3,
+          "wegle": 2.0
+        },
+        {
+          "nazwa": "Musztarda",
+          "ile": "1 łyżka (15 g)",
+          "g": 15,
+          "kcal": 16,
+          "bialko": 0.8,
+          "tluszcz": 0.9,
+          "wegle": 1.2
+        },
+        {
+          "nazwa": "Chleb pszenny (zwykły biały)",
+          "ile": "1 kromka (35 g)",
+          "g": 35,
+          "kcal": 88,
+          "bialko": 2.8,
+          "tluszcz": 1.0,
+          "wegle": 16.4
         }
       ],
       "jak": "przepis",
-      "czas_min": 2,
+      "czas_min": 12,
       "kroki": [
         "📦 To zrobiłeś w bloku kuchni (dziś o 09:50) — teraz tylko wyjmij pojemnik z lodówki. Przepis niżej, gdybyś robił na świeżo.",
-        "Do shakera wsyp odżywkę (30 g) i wlej ok. 350 ml zimnej wody. Zakręć i potrząsaj 20 sekund.",
-        "Banana (1 szt., 120 g) i orzechy (16 g) weź osobno — zjadasz obok shake'a.",
-        "Na zmianę: odżywkę wsyp do shakera już w domu, wodę dolejesz na miejscu. Nic się nie zepsuje.",
+        "Jajka na twardo: w małym garnku zagotuj tyle wody, żeby przykryła jajka (2 szt., 110 g). Łyżką ostrożnie włóż jajka do wrzątku i gotuj 9 minut na średnim ogniu. Odlej wrzątek, zalej zimną wodą na 3 minuty i obierz ze skorupki.",
+        "Jajka pokrój w kostkę ok. 1 cm. Kukurydzę (80 g) odsącz z zalewy na sitku.",
+        "W misce wymieszaj jajka, kukurydzę, jogurt (65 g) i musztardę (1 łyżka, 15 g). Dopraw szczyptą soli, pieprzu i słodkiej papryki.",
+        "Przełóż do pojemnika, chleb (1 kromka, 35 g) zapakuj osobno. W lodówce wytrzyma 2 dni.",
         "Wszystkie ilości w krokach są już przeliczone na Twoją porcję na dziś — nic nie musisz dzielić."
       ]
     },
@@ -589,11 +671,11 @@
       "akcja": "budzik",
       "opis": "Ekran w dół. Jutro znowu zaczynasz od sztangi.",
       "budzik": {
-        "godzina": "08:00",
-        "minut": 555,
+        "godzina": "08:30",
+        "minut": 585,
         "jutro": true,
-        "ile": "9 h 15 min",
-        "typ_docelowy": "TRENING"
+        "ile": "9 h 45 min",
+        "typ_docelowy": "WOLNE"
       }
     },
     {
@@ -612,12 +694,12 @@
         "kat": "mieso",
         "trw": "swieze",
         "sklep": "Dino",
-        "opakowan": 1,
+        "opakowan": 2,
         "opak": 400,
         "jedn": "g",
-        "brakuje": 200.0,
-        "dokupisz": 400,
-        "cena": 18.0
+        "brakuje": 500.0,
+        "dokupisz": 800,
+        "cena": 36.0
       },
       {
         "klucz": "jaja",
@@ -628,9 +710,22 @@
         "opakowan": 1,
         "opak": 10,
         "jedn": "szt",
-        "brakuje": 9,
+        "brakuje": 6,
         "dokupisz": 10,
         "cena": 12.0
+      },
+      {
+        "klucz": "jogurt_grecki",
+        "nazwa": "Jogurt grecki 2%",
+        "kat": "nabial",
+        "trw": "chlodnia",
+        "sklep": "Dino",
+        "opakowan": 1,
+        "opak": 400,
+        "jedn": "g",
+        "brakuje": 305,
+        "dokupisz": 400,
+        "cena": 3.99
       },
       {
         "klucz": "napoj_proteinowy",
@@ -646,30 +741,17 @@
         "cena": 5.29
       },
       {
-        "klucz": "ser",
-        "nazwa": "Ser żółty starty",
+        "klucz": "ser_zolty",
+        "nazwa": "Ser żółty w plastrach",
         "kat": "nabial",
         "trw": "chlodnia",
         "sklep": "Dino",
         "opakowan": 1,
-        "opak": 200,
-        "jedn": "g",
-        "brakuje": 40.0,
-        "dokupisz": 200,
-        "cena": 9.0
-      },
-      {
-        "klucz": "skyr",
-        "nazwa": "Skyr naturalny (kubek 150 g)",
-        "kat": "nabial",
-        "trw": "chlodnia",
-        "sklep": "Dino",
-        "opakowan": 1,
-        "opak": 1,
-        "jedn": "kubek",
-        "brakuje": 1,
-        "dokupisz": 1,
-        "cena": 3.8
+        "opak": 7,
+        "jedn": "plaster",
+        "brakuje": 2,
+        "dokupisz": 7,
+        "cena": 6.99
       },
       {
         "klucz": "skyr_pitny",
@@ -703,12 +785,12 @@
         "kat": "nabial",
         "trw": "chlodnia",
         "sklep": "Dino",
-        "opakowan": 1,
+        "opakowan": 2,
         "opak": 250,
         "jedn": "g",
-        "brakuje": 215,
-        "dokupisz": 250,
-        "cena": 3.39
+        "brakuje": 270,
+        "dokupisz": 500,
+        "cena": 6.78
       },
       {
         "klucz": "smietana",
@@ -719,7 +801,7 @@
         "opakowan": 1,
         "opak": 200,
         "jedn": "ml",
-        "brakuje": 150.0,
+        "brakuje": 100.0,
         "dokupisz": 200,
         "cena": 3.5
       },
@@ -750,30 +832,17 @@
         "cena": 1.2
       },
       {
-        "klucz": "czosnek",
-        "nazwa": "Czosnek",
-        "kat": "warzywa",
-        "trw": "trwale",
-        "sklep": "Dino",
-        "opakowan": 1,
-        "opak": 10,
-        "jedn": "zabek",
-        "brakuje": 1.0,
-        "dokupisz": 10,
-        "cena": 3.0
-      },
-      {
-        "klucz": "marchew",
-        "nazwa": "Marchew",
+        "klucz": "jablko",
+        "nazwa": "Jabłko",
         "kat": "warzywa",
         "trw": "trwale",
         "sklep": "Dino",
         "opakowan": 1,
         "opak": 1,
         "jedn": "szt",
-        "brakuje": 0.2,
+        "brakuje": 1,
         "dokupisz": 1,
-        "cena": 0.16
+        "cena": 0.68
       },
       {
         "klucz": "pieczarki",
@@ -802,114 +871,121 @@
         "cena": 0.6
       },
       {
-        "klucz": "chleb",
-        "nazwa": "Chleb pszenny (zwykły biały)",
-        "kat": "pieczywo",
-        "trw": "chlodnia",
-        "sklep": "Dino",
-        "opakowan": 1,
-        "opak": 14,
-        "jedn": "kromka",
-        "brakuje": 5,
-        "dokupisz": 14,
-        "cena": 4.79
-      },
-      {
-        "klucz": "proszek_do_pieczenia",
-        "nazwa": "Proszek do pieczenia",
-        "kat": "spizarnia",
-        "trw": "trwale",
-        "sklep": "Dino",
-        "opakowan": 1,
-        "opak": 30,
-        "jedn": "g",
-        "brakuje": 1,
-        "dokupisz": 30,
-        "cena": 0.89
-      },
-      {
-        "klucz": "cynamon",
-        "nazwa": "Przyprawa do cynamonek / cynamon",
-        "kat": "spizarnia",
-        "trw": "trwale",
-        "sklep": "Dino",
-        "opakowan": 1,
-        "opak": 15,
-        "jedn": "g",
-        "brakuje": 1,
-        "dokupisz": 15,
-        "cena": 1.59
-      }
-    ],
-    "mam": [
-      {
         "klucz": "dzem_niskoslodzony",
         "nazwa": "Dżem (np. malinowy, słoik 200 g)",
-        "potrzeba": 100,
-        "w_domu": 150,
-        "jedn": "g"
-      },
-      {
-        "klucz": "krem_bez_cukru",
-        "nazwa": "Krem do smarowania bez cukru",
-        "potrzeba": 16,
-        "w_domu": 268,
-        "jedn": "g"
+        "kat": "spizarnia",
+        "trw": "trwale",
+        "sklep": "Dino",
+        "opakowan": 1,
+        "opak": 200,
+        "jedn": "g",
+        "brakuje": 50,
+        "dokupisz": 200,
+        "cena": 5.49
       },
       {
         "klucz": "kukurydza",
         "nazwa": "Kukurydza konserwowa",
-        "potrzeba": 120,
-        "w_domu": 175,
+        "kat": "spizarnia",
+        "trw": "trwale",
+        "sklep": "Dino",
+        "opakowan": 1,
+        "opak": 400,
+        "jedn": "g",
+        "brakuje": 25,
+        "dokupisz": 400,
+        "cena": 4.29
+      },
+      {
+        "klucz": "orzechy",
+        "nazwa": "Orzechy / migdały",
+        "kat": "spizarnia",
+        "trw": "trwale",
+        "sklep": "Dino",
+        "opakowan": 1,
+        "opak": 200,
+        "jedn": "g",
+        "brakuje": 2,
+        "dokupisz": 200,
+        "cena": 11.49
+      }
+    ],
+    "mam": [
+      {
+        "klucz": "chleb",
+        "nazwa": "Chleb pszenny (zwykły biały)",
+        "potrzeba": 7,
+        "w_domu": 9,
+        "jedn": "kromka"
+      },
+      {
+        "klucz": "cynamon",
+        "nazwa": "Przyprawa do cynamonek / cynamon",
+        "potrzeba": 2,
+        "w_domu": 14,
         "jedn": "g"
+      },
+      {
+        "klucz": "czosnek",
+        "nazwa": "Czosnek",
+        "potrzeba": 3.0,
+        "w_domu": 9.0,
+        "jedn": "zabek"
       },
       {
         "klucz": "majonez_sriracha",
         "nazwa": "Majonez sriracha",
-        "potrzeba": 26,
-        "w_domu": 90,
+        "potrzeba": 10,
+        "w_domu": 64,
         "jedn": "ml"
       },
       {
         "klucz": "maka",
         "nazwa": "Mąka pszenna",
-        "potrzeba": 65,
-        "w_domu": 700,
+        "potrzeba": 25,
+        "w_domu": 635,
         "jedn": "g"
       },
       {
         "klucz": "makaron",
         "nazwa": "Makaron (świderki/penne)",
         "potrzeba": 240.0,
-        "w_domu": 480.0,
+        "w_domu": 240.0,
         "jedn": "g"
+      },
+      {
+        "klucz": "marchew",
+        "nazwa": "Marchew",
+        "potrzeba": 0.5,
+        "w_domu": 0.85,
+        "jedn": "szt"
       },
       {
         "klucz": "maslo",
         "nazwa": "Masło",
         "potrzeba": 5,
-        "w_domu": 190,
+        "w_domu": 185,
         "jedn": "g"
       },
       {
         "klucz": "miod",
         "nazwa": "Miód",
-        "potrzeba": 1.0,
-        "w_domu": 12.0,
+        "potrzeba": 2.0,
+        "w_domu": 11.0,
         "jedn": "lyzka"
       },
       {
         "klucz": "mleko",
         "nazwa": "Mleko 2%",
         "potrzeba": 56,
-        "w_domu": 924,
+        "w_domu": 868,
         "jedn": "ml"
       },
       {
         "klucz": "musztarda",
         "nazwa": "Musztarda",
-        "potrzeba": 2.0,
-        "w_domu": 7.5,
+        "potrzeba": 3.0,
+        "w_domu": 5.5,
         "jedn": "lyzka"
       },
       {
@@ -922,65 +998,58 @@
       {
         "klucz": "ogorek_kiszony",
         "nazwa": "Ogórek kiszony",
-        "potrzeba": 3.5,
-        "w_domu": 6.5,
+        "potrzeba": 2.5,
+        "w_domu": 3.0,
         "jedn": "szt"
       },
       {
         "klucz": "olej",
         "nazwa": "Olej rzepakowy",
         "potrzeba": 15.0,
-        "w_domu": 910.0,
+        "w_domu": 895.0,
         "jedn": "ml"
-      },
-      {
-        "klucz": "orzechy",
-        "nazwa": "Orzechy / migdały",
-        "potrzeba": 24,
-        "w_domu": 58,
-        "jedn": "g"
       },
       {
         "klucz": "poledwica",
         "nazwa": "Polędwica sopocka (wędlina)",
         "potrzeba": 12,
-        "w_domu": 64,
+        "w_domu": 52,
+        "jedn": "g"
+      },
+      {
+        "klucz": "proszek_do_pieczenia",
+        "nazwa": "Proszek do pieczenia",
+        "potrzeba": 2,
+        "w_domu": 29,
         "jedn": "g"
       },
       {
         "klucz": "przyprawy",
         "nazwa": "Przyprawy (sól, pieprz, papryka, oregano, majeranek)",
         "potrzeba": 6.0,
-        "w_domu": 59.0,
+        "w_domu": 53.0,
         "jedn": "porcja"
       },
       {
-        "klucz": "ser_zolty",
-        "nazwa": "Ser żółty w plastrach",
-        "potrzeba": 4,
-        "w_domu": 6,
-        "jedn": "plaster"
-      },
-      {
-        "klucz": "slodzik",
-        "nazwa": "Słodzik w tabletkach",
-        "potrzeba": 1.5,
-        "w_domu": 297.0,
-        "jedn": "tabletka"
+        "klucz": "ser",
+        "nazwa": "Ser żółty starty",
+        "potrzeba": 40.0,
+        "w_domu": 160.0,
+        "jedn": "g"
       },
       {
         "klucz": "tortilla",
         "nazwa": "Tortilla pszenna",
         "potrzeba": 1,
-        "w_domu": 2,
+        "w_domu": 1,
         "jedn": "szt"
       }
     ],
-    "koszt": 83.65,
+    "koszt": 114.74,
     "sklepy": {
-      "Dino": 83.65
+      "Dino": 114.74
     },
-    "zrobione": true
+    "zrobione": false
   },
   "lodowka": {
     "marchew": {
@@ -1115,9 +1184,9 @@
   "trening": {
     "rodzaj": "glowny",
     "trening": {
-      "id": "gora1",
-      "nazwa": "Góra 1",
-      "czas_min": 32,
+      "id": "dol1",
+      "nazwa": "Dół 1 + łapy",
+      "czas_min": 42,
       "blok": "Blok 2 — Fundament",
       "blok_opis": "Trzy serie i pierwsza progresja. Gdy zrobisz górę zakresu we wszystkich seriach, system podniesie ciężar.",
       "zapas": "2 powtórzenia w zapasie",
@@ -1128,60 +1197,48 @@
       ],
       "cwiczenia": [
         {
-          "nazwa": "Wyciskanie sztangi leżąc",
-          "serie": 2,
-          "powt": "1×6-8 + 1×10-12",
-          "przerwa": "3-4 min",
-          "wskazowka": "Ławka w klatce, bolce na wysokości klatki. Łopatki ściągnięte, stopy mocno na podłodze. Sztanga schodzi do dolnej części klatki, łokcie ok. 45 stopni od tułowia. Pierwsza seria ciężka (6-8), druga lżejsza na 10-12."
-        },
-        {
-          "nazwa": "Wiosłowanie sztangą podchwytem",
-          "serie": 2,
+          "nazwa": "Uginanie młotkowe hantli",
+          "serie": 3,
           "powt": "10-12",
-          "przerwa": "3 min",
-          "wskazowka": "Chwyt podchwytem na szerokość barków, tułów pochylony ok. 45 stopni, plecy proste. Ciągniesz sztangę do brzucha, łokcie blisko ciała, na górze ściągasz łopatki."
+          "przerwa": "1,5-2 min",
+          "wskazowka": "Chwyt jak przy trzymaniu młotka, kciuki do góry, łokcie przy tułowiu. Opuszczasz wolniej, niż podnosisz.",
+          "seria_laczona": "Wyciskanie francuskie hantli"
         },
         {
-          "nazwa": "Rozpiętki hantlami na skosie",
-          "serie": 2,
+          "nazwa": "Wyciskanie francuskie hantli",
+          "serie": 3,
           "powt": "12-15",
           "przerwa": "1,5-2 min",
-          "wskazowka": "Ławka 30 stopni, ręce lekko ugięte, ruch jak przy obejmowaniu drzewa. Opuszczasz do poziomu barków, nie niżej — dalej to już tylko bark.",
-          "seria_laczona": "Wiosłowanie hantlem jednorącz"
+          "wskazowka": "Leżysz na ławce, hantle nad klatką, łokcie w miejscu. Zginasz ramiona, aż hantle znajdą się przy uszach, i prostujesz. Rusza się tylko przedramię.",
+          "seria_laczona": "Uginanie młotkowe hantli"
         },
         {
-          "nazwa": "Wiosłowanie hantlem jednorącz",
-          "serie": 2,
-          "powt": "10-12",
-          "przerwa": "1,5-2 min",
-          "wskazowka": "Kolano i ręka na ławce, plecy płaskie. Ciągniesz hantel do biodra, nie do barku.",
-          "seria_laczona": "Rozpiętki hantlami na skosie",
-          "propozycja": {
-            "ciezar": 16.5,
-            "poprzedni": 14.0,
-            "powt": [
-              12,
-              12
-            ],
-            "data": "2026-09-20",
-            "podwyzka": 2.5
-          }
+          "nazwa": "Przysiad klasyczny",
+          "serie": 3,
+          "powt": "2×8-10 + 1×12-15",
+          "przerwa": "3-4 min",
+          "wskazowka": "Sztanga na górze pleców, bolce w klatce ustawione tuż pod dołem ruchu. Stopy na szerokość barków, palce lekko na zewnątrz. Biodra w dół i w tył, plecy proste, schodzisz do równoległości ud z podłogą albo niżej."
         },
         {
-          "nazwa": "OHP hantlami siedząc",
-          "serie": 2,
-          "powt": "8-10",
-          "przerwa": "2 min",
-          "wskazowka": "Ławka z oparciem pionowo, hantle na wysokości uszu. Wyciskasz nad głowę bez odchylania się do tyłu, żebra w dół, brzuch napięty.",
-          "seria_laczona": "Wznosy w bok hantlami stojąc"
+          "nazwa": "Stiff leg deadlift",
+          "serie": 3,
+          "powt": "2×8-10 + 1×12-15",
+          "przerwa": "3-4 min",
+          "wskazowka": "Nogi prawie proste, sztanga sunie blisko nóg, biodra jadą do tyłu. Schodzisz tam, gdzie czujesz mocne rozciąganie z tyłu uda, plecy cały czas proste."
         },
         {
-          "nazwa": "Wznosy w bok hantlami stojąc",
+          "nazwa": "Plank",
+          "serie": 3,
+          "powt": "30-45 s",
+          "przerwa": "1 min",
+          "wskazowka": "Przedramiona pod barkami, ciało w jednej linii, pośladki i brzuch napięte. Wpisujesz liczbę sekund."
+        },
+        {
+          "nazwa": "Wspięcia łydki stojąc",
           "serie": 2,
-          "powt": "10-12",
-          "przerwa": "1,5-2 min",
-          "wskazowka": "Łokcie lekko ugięte, ruch prowadzą łokcie. Unosisz do wysokości barków, nie wyżej.",
-          "seria_laczona": "OHP hantlami siedząc"
+          "powt": "12-15",
+          "przerwa": "1 min",
+          "wskazowka": "Hantle w dłoniach, przednia część stóp na podwyższeniu. Pełny zakres, sekunda zatrzymania na górze."
         }
       ],
       "finisz": "Każda seria kończy się z zapasem: 2 powtórzenia w zapasie. Trzy serie i pierwsza progresja. Gdy zrobisz górę zakresu we wszystkich seriach, system podniesie ciężar."
@@ -3471,8 +3528,8 @@
     "final": "2027-06-26",
     "final_nazwa": "Początek wakacji",
     "tydzien": 4,
-    "dzien": 22,
-    "dni_do_finalu": 261,
+    "dzien": 23,
+    "dni_do_finalu": 260,
     "faza": {
       "id": "F1",
       "nazwa": "Rekompozycja",
@@ -3524,7 +3581,7 @@
       }
     ]
   },
-  "slowo": "Nie masz słabej woli. Masz za mało przygotowanych boxów w lodówce.",
+  "slowo": "Ciało zmienia się wolniej, niż byś chciał, i szybciej, niż myślisz. Zdjęcia za miesiąc to pokażą.",
   "analiza": {
     "pomiary": [],
     "sila": {
@@ -3749,585 +3806,8 @@
   "minimum": false,
   "dni": [
     {
-      "data": "2026-10-01",
-      "przesuniecie": -7,
-      "typ": 0,
-      "zrodlo": "zapis",
-      "nazwa_typu": "TRENING",
-      "emoji": "🏋️",
-      "opis_typu": "Trening jako pierwsza rzecz dnia, potem 20 minut w kuchni i normalny dzień.",
-      "agenda": [
-        {
-          "czas": "08:00",
-          "tytul": "Pobudka",
-          "ikona": "⏰",
-          "ping": true,
-          "opis": "Toaleta — za 5 minut waga, więc jeszcze nic nie pij. Potem szklanka wody i na trening. Bez telefonu."
-        },
-        {
-          "czas": "08:05",
-          "tytul": "Waga",
-          "ikona": "⚖️",
-          "ping": true,
-          "akcja": "waga",
-          "opis": "Na czczo, po toalecie, w samej bieliźnie. Liczy się średnia z 7 dni."
-        },
-        {
-          "czas": "08:30",
-          "tytul": "TRENING — pierwsza rzecz dnia",
-          "ikona": "🏋️",
-          "ping": true,
-          "akcja": "trening_glowny",
-          "opis": "Na czczo, więc rozgrzewka trochę dłuższa. Wchodzisz i robisz — zero telefonu przed."
-        },
-        {
-          "czas": "09:50",
-          "tytul": "KUCHNIA — 20 minut",
-          "ikona": "🍳",
-          "ping": true,
-          "akcja": "kuchnia",
-          "opis": "Przygotujesz: Omlet marchewkowy z dżemem i bananem + napój proteinowy, Shake białkowy z bananem, Kanapki z serem, musztardą i kiszonym ogórkiem. Potem do jutra tylko sięgasz do lodówki.",
-          "kroki": [
-            "Wyjmij wszystko na blat, zanim zaczniesz: banan 2 szt. (240 g), chleb pszenny 2 kromki (70 g), przyprawa do cynamonek / cynamon 2 g, dżem 70 g, jaja 1 szt. (55 g), mąka pszenna 25 g, marchew 40 g, masło 5 g, musztarda 1 łyżka (15 g), napój proteinowy müllermilch protein 1 butelka (400 ml), odżywka białkowa wpc 80 45 g, ogórek kiszony 100 g, orzechy / migdały 16 g, pomidor 1 szt. (120 g), proszek do pieczenia 2 g, ser żółty w plastrach 2 plastry (40 g), skyr waniliowy 1 kubek (150 g).",
-            "Przygotuj 2 pojemniki i opisz je karteczką: dziś 13:30 — drugi posiłek; dziś 20:00 — kolacja.",
-            "▸ Shake białkowy z bananem",
-            "Do shakera wsyp odżywkę (30 g) i wlej ok. 350 ml zimnej wody. Zakręć i potrząsaj 20 sekund.",
-            "Banana (1 szt., 120 g) i orzechy (16 g) weź osobno — zjadasz obok shake'a.",
-            "Na zmianę: odżywkę wsyp do shakera już w domu, wodę dolejesz na miejscu. Nic się nie zepsuje.",
-            "Przełóż do pojemnika „dziś 13:30 — drugi posiłek”.",
-            "▸ Kanapki z serem, musztardą i kiszonym ogórkiem",
-            "Kromki chleba (2 kromki, 70 g) posmaruj cienko masłem (5 g), potem musztardą (1 łyżka, 15 g).",
-            "Ser (2 plastry, 40 g) rozłóż po równo na kromkach.",
-            "Ogórki kiszone (100 g) i pomidora (1 szt., 120 g) pokrój w plasterki i ułóż na serze.",
-            "Do boxa zawiń kanapki w folię.",
-            "Przełóż do pojemnika „dziś 20:00 — kolacja”.",
-            "▸ Omlet marchewkowy z dżemem i bananem + napój proteinowy",
-            "Marchew (40 g) obierz i zetrzyj na tarce na drobnych oczkach.",
-            "Do miski wbij jajko (1 szt., 55 g), dodaj skyr (1 kubek, 150 g), mąkę (25 g), odżywkę (15 g), proszek do pieczenia (2 g) i przyprawę (2 g). Mieszaj łyżką ok. minuty, aż nie będzie grudek.",
-            "Wmieszaj marchewkę. Ciasto ma być gęste, jak na placki.",
-            "Patelnię z powłoką postaw na małym ogniu (1/3 skali) na minutę. Wylej ciasto i rozprowadź łyżką na grubość ok. 1 cm.",
-            "Przykryj pokrywką i smaż 5–6 minut, aż spód będzie brązowy, a wierzch przestanie być płynny.",
-            "Przewróć: zsuń omlet na talerz, przykryj go patelnią i odwróć razem z talerzem. Smaż jeszcze 3–4 minuty pod przykryciem.",
-            "Przełóż na talerz, posmaruj dżemem (70 g) i ułóż banana (1 szt., 120 g) pokrojonego w plasterki. Do popicia napój proteinowy (1 butelka, 400 ml).",
-            "Do pojemnika: na zimno smakuje jak ciasto marchewkowe — dżem i banana dołóż w osobnym pudełku, napój weź w butelce.",
-            "To zjadasz od razu, na koniec bloku.",
-            "▸ Na koniec: ciepłe pojemniki wystudź 20–30 minut bez pokrywki, potem wszystkie do lodówki na jedną półkę. Naczynia do zlewu, przetrzyj blat — 5 minut teraz oszczędza 20 jutro."
-          ],
-          "jak": "kuchnia",
-          "czas_min": 21
-        },
-        {
-          "czas": "10:15",
-          "tytul": "Śniadanie po treningu",
-          "ikona": "🍳",
-          "ping": true,
-          "slot": "sniadanie",
-          "opis": "Pierwszy posiłek dnia, zaraz po sztandze.",
-          "posilek": "Omlet marchewkowy z dżemem i bananem + napój proteinowy",
-          "posilek_id": "q_omlet_marchewkowy",
-          "porcja": 0.5,
-          "makra": {
-            "kcal": 825,
-            "bialko": 65,
-            "tluszcz": 13,
-            "wegle": 109
-          },
-          "skladniki": [
-            {
-              "nazwa": "Skyr waniliowy (kubek 150 g)",
-              "ile": "1 kubek (150 g)",
-              "g": 150,
-              "kcal": 123,
-              "bialko": 14.4,
-              "tluszcz": 0.0,
-              "wegle": 16.5
-            },
-            {
-              "nazwa": "Jaja",
-              "ile": "1 szt. (55 g)",
-              "g": 55,
-              "kcal": 79,
-              "bialko": 6.9,
-              "tluszcz": 5.2,
-              "wegle": 0.4
-            },
-            {
-              "nazwa": "Mąka pszenna",
-              "ile": "25 g",
-              "g": 25,
-              "kcal": 86,
-              "bialko": 2.5,
-              "tluszcz": 0.3,
-              "wegle": 17.8
-            },
-            {
-              "nazwa": "Odżywka białkowa WPC 80 (czekoladowa) — zapas, kupujesz osobno",
-              "ile": "15 g",
-              "g": 15,
-              "kcal": 56,
-              "bialko": 12.3,
-              "tluszcz": 0.7,
-              "wegle": 0.3
-            },
-            {
-              "nazwa": "Marchew",
-              "ile": "40 g",
-              "g": 40,
-              "kcal": 16,
-              "bialko": 0.4,
-              "tluszcz": 0.1,
-              "wegle": 2.8
-            },
-            {
-              "nazwa": "Proszek do pieczenia",
-              "ile": "2 g",
-              "g": 2,
-              "kcal": 1,
-              "bialko": 0.1,
-              "tluszcz": 0.0,
-              "wegle": 0.3
-            },
-            {
-              "nazwa": "Przyprawa do cynamonek / cynamon",
-              "ile": "2 g",
-              "g": 2,
-              "kcal": 6,
-              "bialko": 0.0,
-              "tluszcz": 0.0,
-              "wegle": 0.9
-            },
-            {
-              "nazwa": "Dżem (np. malinowy, słoik 200 g)",
-              "ile": "70 g",
-              "g": 70,
-              "kcal": 101,
-              "bialko": 0.3,
-              "tluszcz": 0.3,
-              "wegle": 23.8
-            },
-            {
-              "nazwa": "Banan",
-              "ile": "1 szt. (120 g)",
-              "g": 120,
-              "kcal": 106,
-              "bialko": 1.3,
-              "tluszcz": 0.4,
-              "wegle": 24.2
-            },
-            {
-              "nazwa": "Napój proteinowy Müllermilch Protein (400 ml)",
-              "ile": "1 butelka (400 ml)",
-              "g": 400,
-              "kcal": 252,
-              "bialko": 26.4,
-              "tluszcz": 6.0,
-              "wegle": 22.0
-            }
-          ],
-          "jak": "przepis",
-          "czas_min": 15,
-          "kroki": [
-            "Marchew (40 g) obierz i zetrzyj na tarce na drobnych oczkach.",
-            "Do miski wbij jajko (1 szt., 55 g), dodaj skyr (1 kubek, 150 g), mąkę (25 g), odżywkę (15 g), proszek do pieczenia (2 g) i przyprawę (2 g). Mieszaj łyżką ok. minuty, aż nie będzie grudek.",
-            "Wmieszaj marchewkę. Ciasto ma być gęste, jak na placki.",
-            "Patelnię z powłoką postaw na małym ogniu (1/3 skali) na minutę. Wylej ciasto i rozprowadź łyżką na grubość ok. 1 cm.",
-            "Przykryj pokrywką i smaż 5–6 minut, aż spód będzie brązowy, a wierzch przestanie być płynny.",
-            "Przewróć: zsuń omlet na talerz, przykryj go patelnią i odwróć razem z talerzem. Smaż jeszcze 3–4 minuty pod przykryciem.",
-            "Przełóż na talerz, posmaruj dżemem (70 g) i ułóż banana (1 szt., 120 g) pokrojonego w plasterki. Do popicia napój proteinowy (1 butelka, 400 ml).",
-            "Do pojemnika: na zimno smakuje jak ciasto marchewkowe — dżem i banana dołóż w osobnym pudełku, napój weź w butelce.",
-            "Wszystkie ilości w krokach są już przeliczone na Twoją porcję na dziś — nic nie musisz dzielić."
-          ]
-        },
-        {
-          "czas": "10:30",
-          "tytul": "Suplementy — po śniadaniu",
-          "ikona": "💊",
-          "ping": true,
-          "akcja": "suple",
-          "opis": "Z pierwszym posiłkiem, bo D3 i omega-3 wchłaniają się z tłuszczem."
-        },
-        {
-          "czas": "13:30",
-          "tytul": "Drugi posiłek",
-          "ikona": "🥪",
-          "ping": true,
-          "slot": "drugi",
-          "opis": "",
-          "posilek": "Shake białkowy z bananem",
-          "posilek_id": "q_shake",
-          "porcja": 0.8,
-          "makra": {
-            "kcal": 320,
-            "bialko": 29,
-            "tluszcz": 11,
-            "wegle": 26
-          },
-          "skladniki": [
-            {
-              "nazwa": "Odżywka białkowa WPC 80 (czekoladowa) — zapas, kupujesz osobno",
-              "ile": "30 g",
-              "g": 30,
-              "kcal": 112,
-              "bialko": 24.6,
-              "tluszcz": 1.4,
-              "wegle": 0.5
-            },
-            {
-              "nazwa": "Banan",
-              "ile": "1 szt. (120 g)",
-              "g": 120,
-              "kcal": 106,
-              "bialko": 1.3,
-              "tluszcz": 0.4,
-              "wegle": 24.2
-            },
-            {
-              "nazwa": "Orzechy / migdały",
-              "ile": "16 g",
-              "g": 16,
-              "kcal": 102,
-              "bialko": 3.0,
-              "tluszcz": 9.1,
-              "wegle": 1.6
-            }
-          ],
-          "jak": "przepis",
-          "czas_min": 2,
-          "kroki": [
-            "📦 To zrobiłeś w bloku kuchni (dziś o 09:50) — teraz tylko wyjmij pojemnik z lodówki. Przepis niżej, gdybyś robił na świeżo.",
-            "Do shakera wsyp odżywkę (30 g) i wlej ok. 350 ml zimnej wody. Zakręć i potrząsaj 20 sekund.",
-            "Banana (1 szt., 120 g) i orzechy (16 g) weź osobno — zjadasz obok shake'a.",
-            "Na zmianę: odżywkę wsyp do shakera już w domu, wodę dolejesz na miejscu. Nic się nie zepsuje.",
-            "Wszystkie ilości w krokach są już przeliczone na Twoją porcję na dziś — nic nie musisz dzielić."
-          ]
-        },
-        {
-          "czas": "16:30",
-          "tytul": "Obiad",
-          "ikona": "🍽️",
-          "ping": true,
-          "slot": "obiad",
-          "opis": "",
-          "posilek": "Makaron z wołowiną i pieczarkami w sosie",
-          "posilek_id": "b_pieczarkowy",
-          "porcja": 1.0,
-          "makra": {
-            "kcal": 886,
-            "bialko": 50,
-            "tluszcz": 44,
-            "wegle": 69
-          },
-          "skladniki": [
-            {
-              "nazwa": "Wołowina świeżo mielona (z lady)",
-              "ile": "165 g",
-              "g": 167,
-              "kcal": 358,
-              "bialko": 31.0,
-              "tluszcz": 25.0,
-              "wegle": 0.0
-            },
-            {
-              "nazwa": "Pieczarki",
-              "ile": "135 g",
-              "g": 133,
-              "kcal": 29,
-              "bialko": 4.1,
-              "tluszcz": 0.4,
-              "wegle": 3.1
-            },
-            {
-              "nazwa": "Śmietana 18%",
-              "ile": "50 ml",
-              "g": 50,
-              "kcal": 92,
-              "bialko": 1.3,
-              "tluszcz": 9.0,
-              "wegle": 1.7
-            },
-            {
-              "nazwa": "Makaron (świderki/penne)",
-              "ile": "80 g",
-              "g": 80,
-              "kcal": 284,
-              "bialko": 9.6,
-              "tluszcz": 1.2,
-              "wegle": 57.6
-            },
-            {
-              "nazwa": "Cebula",
-              "ile": "65 g",
-              "g": 67,
-              "kcal": 27,
-              "bialko": 0.7,
-              "tluszcz": 0.1,
-              "wegle": 5.1
-            },
-            {
-              "nazwa": "Czosnek",
-              "ile": "1 ząbek (5 g)",
-              "g": 5,
-              "kcal": 7,
-              "bialko": 0.3,
-              "tluszcz": 0.0,
-              "wegle": 1.6
-            },
-            {
-              "nazwa": "Ser żółty starty",
-              "ile": "13 g",
-              "g": 13,
-              "kcal": 47,
-              "bialko": 3.4,
-              "tluszcz": 3.6,
-              "wegle": 0.1
-            },
-            {
-              "nazwa": "Olej rzepakowy",
-              "ile": "5 ml",
-              "g": 5,
-              "kcal": 41,
-              "bialko": 0.0,
-              "tluszcz": 4.6,
-              "wegle": 0.0
-            }
-          ],
-          "jak": "odgrzewanie",
-          "czas_min": 4,
-          "kroki": [
-            "Wyjmij jeden pojemnik z lodówki — to cała porcja na dziś, odważona w dniu gotowania.",
-            "Odgrzej: mikrofala 2,5 min, dolej łyżkę wody.",
-            "Przechowywanie: lodówka, 3 dni."
-          ]
-        },
-        {
-          "czas": "18:00",
-          "tytul": "Spacer",
-          "ikona": "🚶",
-          "ping": true,
-          "opis": "20–30 minut. Nie kardio — chodzi o kroki i rozruszanie bioder po treningu."
-        },
-        {
-          "czas": "20:00",
-          "tytul": "Kolacja",
-          "ikona": "🌙",
-          "ping": true,
-          "slot": "kolacja",
-          "opis": "",
-          "posilek": "Kanapki z serem, musztardą i kiszonym ogórkiem",
-          "posilek_id": "q_kanapki_ser",
-          "porcja": 0.8,
-          "makra": {
-            "kcal": 402,
-            "bialko": 18,
-            "tluszcz": 18,
-            "wegle": 40
-          },
-          "skladniki": [
-            {
-              "nazwa": "Chleb pszenny (zwykły biały)",
-              "ile": "2 kromki (70 g)",
-              "g": 70,
-              "kcal": 175,
-              "bialko": 5.6,
-              "tluszcz": 2.1,
-              "wegle": 32.9
-            },
-            {
-              "nazwa": "Ser żółty w plastrach",
-              "ile": "2 plastry (40 g)",
-              "g": 40,
-              "kcal": 140,
-              "bialko": 10.2,
-              "tluszcz": 10.8,
-              "wegle": 0.2
-            },
-            {
-              "nazwa": "Musztarda",
-              "ile": "1 łyżka (15 g)",
-              "g": 15,
-              "kcal": 16,
-              "bialko": 0.8,
-              "tluszcz": 0.9,
-              "wegle": 1.2
-            },
-            {
-              "nazwa": "Ogórek kiszony",
-              "ile": "100 g",
-              "g": 98,
-              "kcal": 12,
-              "bialko": 0.5,
-              "tluszcz": 0.2,
-              "wegle": 1.9
-            },
-            {
-              "nazwa": "Masło",
-              "ile": "5 g",
-              "g": 5,
-              "kcal": 37,
-              "bialko": 0.0,
-              "tluszcz": 4.1,
-              "wegle": 0.0
-            },
-            {
-              "nazwa": "Pomidor",
-              "ile": "1 szt. (120 g)",
-              "g": 120,
-              "kcal": 22,
-              "bialko": 1.1,
-              "tluszcz": 0.2,
-              "wegle": 3.2
-            }
-          ],
-          "jak": "przepis",
-          "czas_min": 4,
-          "kroki": [
-            "📦 To zrobiłeś w bloku kuchni (dziś o 09:50) — teraz tylko wyjmij pojemnik z lodówki. Przepis niżej, gdybyś robił na świeżo.",
-            "Kromki chleba (2 kromki, 70 g) posmaruj cienko masłem (5 g), potem musztardą (1 łyżka, 15 g).",
-            "Ser (2 plastry, 40 g) rozłóż po równo na kromkach.",
-            "Ogórki kiszone (100 g) i pomidora (1 szt., 120 g) pokrój w plasterki i ułóż na serze.",
-            "Do boxa zawiń kanapki w folię.",
-            "Wszystkie ilości w krokach są już przeliczone na Twoją porcję na dziś — nic nie musisz dzielić."
-          ]
-        },
-        {
-          "czas": "22:30",
-          "tytul": "Suplementy — wieczór",
-          "ikona": "💊",
-          "ping": true,
-          "akcja": "suple_wieczor",
-          "opis": "Magnez przed snem."
-        },
-        {
-          "czas": "22:45",
-          "tytul": "Telefon w dół + budzik",
-          "ikona": "📵",
-          "ping": true,
-          "akcja": "budzik",
-          "opis": "Ekran w dół. Jutro znowu zaczynasz od sztangi.",
-          "budzik": {
-            "godzina": "08:00",
-            "minut": 555,
-            "jutro": true,
-            "ile": "9 h 15 min",
-            "typ_docelowy": "TRENING"
-          }
-        },
-        {
-          "czas": "23:00",
-          "tytul": "Sen",
-          "ikona": "😴",
-          "ping": true,
-          "opis": "Osiem–dziewięć godzin. Teraz, kiedy nie ma zmian, sen jest Twoją największą przewagą."
-        }
-      ],
-      "makra": {
-        "kcal": 2433,
-        "bialko": 162,
-        "tluszcz": 86,
-        "wegle": 244
-      },
-      "dobitka": 0,
-      "dodatek_w": [],
-      "poza_planem": [],
-      "lzejszy": false,
-      "cel": {
-        "kcal": 2200,
-        "bialko": 165,
-        "tluszcz": 80,
-        "wegle": 205
-      },
-      "slowo": "Doba na służbie mija. Dobry wybór zostaje w wynikach.",
-      "faza": "Rekompozycja",
-      "tydzien": 3,
-      "nadwyzka": 0,
-      "odhaczone": {},
-      "waga": null,
-      "kroki": {
-        "data": "2026-10-01",
-        "kroki": 5685,
-        "cel": 8000,
-        "status": "malo"
-      },
-      "serie": [],
-      "trening": {
-        "rodzaj": "glowny",
-        "trening": {
-          "id": "gora1",
-          "nazwa": "Góra 1",
-          "czas_min": 32,
-          "blok": "Blok 2 — Fundament",
-          "blok_opis": "Trzy serie i pierwsza progresja. Gdy zrobisz górę zakresu we wszystkich seriach, system podniesie ciężar.",
-          "zapas": "2 powtórzenia w zapasie",
-          "rozgrzewka": [
-            "Pierwsze dwa ćwiczenia treningu: serie wstępne 30% ciężaru roboczego na 8-12 powtórzeń, potem 50% na 8, potem 75% na 2-3.",
-            "Pozostałe ćwiczenia: jedna seria rozgrzewkowa 50% ciężaru na 5-6 powtórzeń i od razu seria robocza.",
-            "Zanim podejdziesz do sztangi: 5 minut krążeń ramion i bioder, 15 przysiadów bez ciężaru."
-          ],
-          "cwiczenia": [
-            {
-              "nazwa": "Wyciskanie sztangi leżąc",
-              "serie": 2,
-              "powt": "1×6-8 + 1×10-12",
-              "przerwa": "3-4 min",
-              "wskazowka": "Ławka w klatce, bolce na wysokości klatki. Łopatki ściągnięte, stopy mocno na podłodze. Sztanga schodzi do dolnej części klatki, łokcie ok. 45 stopni od tułowia. Pierwsza seria ciężka (6-8), druga lżejsza na 10-12."
-            },
-            {
-              "nazwa": "Wiosłowanie sztangą podchwytem",
-              "serie": 2,
-              "powt": "10-12",
-              "przerwa": "3 min",
-              "wskazowka": "Chwyt podchwytem na szerokość barków, tułów pochylony ok. 45 stopni, plecy proste. Ciągniesz sztangę do brzucha, łokcie blisko ciała, na górze ściągasz łopatki."
-            },
-            {
-              "nazwa": "Rozpiętki hantlami na skosie",
-              "serie": 2,
-              "powt": "12-15",
-              "przerwa": "1,5-2 min",
-              "wskazowka": "Ławka 30 stopni, ręce lekko ugięte, ruch jak przy obejmowaniu drzewa. Opuszczasz do poziomu barków, nie niżej — dalej to już tylko bark.",
-              "seria_laczona": "Wiosłowanie hantlem jednorącz"
-            },
-            {
-              "nazwa": "Wiosłowanie hantlem jednorącz",
-              "serie": 2,
-              "powt": "10-12",
-              "przerwa": "1,5-2 min",
-              "wskazowka": "Kolano i ręka na ławce, plecy płaskie. Ciągniesz hantel do biodra, nie do barku.",
-              "seria_laczona": "Rozpiętki hantlami na skosie",
-              "propozycja": {
-                "ciezar": 16.5,
-                "poprzedni": 14.0,
-                "powt": [
-                  12,
-                  12
-                ],
-                "data": "2026-09-20",
-                "podwyzka": 2.5
-              }
-            },
-            {
-              "nazwa": "OHP hantlami siedząc",
-              "serie": 2,
-              "powt": "8-10",
-              "przerwa": "2 min",
-              "wskazowka": "Ławka z oparciem pionowo, hantle na wysokości uszu. Wyciskasz nad głowę bez odchylania się do tyłu, żebra w dół, brzuch napięty.",
-              "seria_laczona": "Wznosy w bok hantlami stojąc"
-            },
-            {
-              "nazwa": "Wznosy w bok hantlami stojąc",
-              "serie": 2,
-              "powt": "10-12",
-              "przerwa": "1,5-2 min",
-              "wskazowka": "Łokcie lekko ugięte, ruch prowadzą łokcie. Unosisz do wysokości barków, nie wyżej.",
-              "seria_laczona": "OHP hantlami siedząc"
-            }
-          ],
-          "finisz": "Każda seria kończy się z zapasem: 2 powtórzenia w zapasie. Trzy serie i pierwsza progresja. Gdy zrobisz górę zakresu we wszystkich seriach, system podniesie ciężar."
-        }
-      }
-    },
-    {
       "data": "2026-10-02",
-      "przesuniecie": -6,
+      "przesuniecie": -7,
       "typ": 0,
       "zrodlo": "zapis",
       "nazwa_typu": "TRENING",
@@ -4836,7 +4316,7 @@
     },
     {
       "data": "2026-10-03",
-      "przesuniecie": -5,
+      "przesuniecie": -6,
       "typ": 1,
       "zrodlo": "zapis",
       "nazwa_typu": "WOLNE",
@@ -5336,7 +4816,7 @@
     },
     {
       "data": "2026-10-04",
-      "przesuniecie": -4,
+      "przesuniecie": -5,
       "typ": 1,
       "zrodlo": "zapis",
       "nazwa_typu": "WOLNE",
@@ -5862,7 +5342,7 @@
     },
     {
       "data": "2026-10-05",
-      "przesuniecie": -3,
+      "przesuniecie": -4,
       "typ": 0,
       "zrodlo": "zapis",
       "nazwa_typu": "TRENING",
@@ -6396,7 +5876,7 @@
     },
     {
       "data": "2026-10-06",
-      "przesuniecie": -2,
+      "przesuniecie": -3,
       "typ": 0,
       "zrodlo": "zapis",
       "nazwa_typu": "TRENING",
@@ -6914,7 +6394,7 @@
     },
     {
       "data": "2026-10-07",
-      "przesuniecie": -1,
+      "przesuniecie": -2,
       "typ": 1,
       "zrodlo": "zapis",
       "nazwa_typu": "WOLNE",
@@ -7458,9 +6938,9 @@
     },
     {
       "data": "2026-10-08",
-      "przesuniecie": 0,
+      "przesuniecie": -1,
       "typ": 0,
-      "zrodlo": "dzis",
+      "zrodlo": "zapis",
       "nazwa_typu": "TRENING",
       "emoji": "🏋️",
       "opis_typu": "Trening jako pierwsza rzecz dnia, potem 20 minut w kuchni i normalny dzień.",
@@ -7975,9 +7455,9 @@
     },
     {
       "data": "2026-10-09",
-      "przesuniecie": 1,
+      "przesuniecie": 0,
       "typ": 0,
-      "zrodlo": "prognoza",
+      "zrodlo": "dzis",
       "nazwa_typu": "TRENING",
       "emoji": "🏋️",
       "opis_typu": "Trening jako pierwsza rzecz dnia, potem 20 minut w kuchni i normalny dzień.",
@@ -8557,9 +8037,9 @@
     },
     {
       "data": "2026-10-10",
-      "przesuniecie": 2,
+      "przesuniecie": 1,
       "typ": 1,
-      "zrodlo": "prognoza",
+      "zrodlo": "plan",
       "nazwa_typu": "WOLNE",
       "emoji": "🚴",
       "opis_typu": "Bez sztangi. Rower zone 2 po południu i spokojny dzień.",
@@ -9030,9 +8510,9 @@
     },
     {
       "data": "2026-10-11",
-      "przesuniecie": 3,
+      "przesuniecie": 2,
       "typ": 1,
-      "zrodlo": "prognoza",
+      "zrodlo": "plan",
       "nazwa_typu": "WOLNE",
       "emoji": "🚴",
       "opis_typu": "Bez sztangi. Rower zone 2 po południu i spokojny dzień.",
@@ -9488,7 +8968,7 @@
     },
     {
       "data": "2026-10-12",
-      "przesuniecie": 4,
+      "przesuniecie": 3,
       "typ": 0,
       "zrodlo": "prognoza",
       "nazwa_typu": "TRENING",
@@ -10043,7 +9523,7 @@
     },
     {
       "data": "2026-10-13",
-      "przesuniecie": 5,
+      "przesuniecie": 4,
       "typ": 0,
       "zrodlo": "prognoza",
       "nazwa_typu": "TRENING",
@@ -10570,7 +10050,7 @@
     },
     {
       "data": "2026-10-14",
-      "przesuniecie": 6,
+      "przesuniecie": 5,
       "typ": 1,
       "zrodlo": "prognoza",
       "nazwa_typu": "WOLNE",
@@ -11042,6 +10522,571 @@
           ]
         }
       }
+    },
+    {
+      "data": "2026-10-15",
+      "przesuniecie": 6,
+      "typ": 0,
+      "zrodlo": "prognoza",
+      "nazwa_typu": "TRENING",
+      "emoji": "🏋️",
+      "opis_typu": "Trening jako pierwsza rzecz dnia, potem 20 minut w kuchni i normalny dzień.",
+      "agenda": [
+        {
+          "czas": "08:00",
+          "tytul": "Pobudka",
+          "ikona": "⏰",
+          "ping": true,
+          "opis": "Toaleta — za 5 minut waga, więc jeszcze nic nie pij. Potem szklanka wody i na trening. Bez telefonu."
+        },
+        {
+          "czas": "08:05",
+          "tytul": "Waga",
+          "ikona": "⚖️",
+          "ping": true,
+          "akcja": "waga",
+          "opis": "Na czczo, po toalecie, w samej bieliźnie. Liczy się średnia z 7 dni."
+        },
+        {
+          "czas": "08:30",
+          "tytul": "TRENING — pierwsza rzecz dnia",
+          "ikona": "🏋️",
+          "ping": true,
+          "akcja": "trening_glowny",
+          "opis": "Na czczo, więc rozgrzewka trochę dłuższa. Wchodzisz i robisz — zero telefonu przed."
+        },
+        {
+          "czas": "09:50",
+          "tytul": "KUCHNIA — 20 minut",
+          "ikona": "🍳",
+          "ping": true,
+          "akcja": "kuchnia",
+          "opis": "Przygotujesz: Omlet marchewkowy z dżemem i bananem + napój proteinowy, Kanapki z jajkiem na twardo i serem, Shake białkowy z bananem. Potem do jutra tylko sięgasz do lodówki.",
+          "kroki": [
+            "Wyjmij wszystko na blat, zanim zaczniesz: banan 2 szt. (240 g), chleb pszenny 2 kromki (70 g), przyprawa do cynamonek / cynamon 2 g, dżem 70 g, jaja 3 szt. (165 g), mąka pszenna 25 g, marchew 40 g, musztarda 1 łyżka (15 g), napój proteinowy müllermilch protein 1 butelka (400 ml), odżywka białkowa wpc 80 45 g, ogórek kiszony 1 szt. (65 g), orzechy / migdały 16 g, proszek do pieczenia 2 g, przyprawy 1 porcja (2 g), ser żółty w plastrach 2 plastry (40 g), skyr waniliowy 1 kubek (150 g).",
+            "Przygotuj 2 pojemniki i opisz je karteczką: dziś 13:30 — drugi posiłek; dziś 20:00 — kolacja.",
+            "▸ Woda — postaw ją od razu, zanim zaczniesz resztę:",
+            "Jajka na twardo dla Kanapki z jajkiem na twardo i serem (2 szt.) — razem 2 szt.: w małym garnku zagotuj wodę, łyżką włóż jajka, gotuj 9 minut na średnim ogniu, odlej wrzątek i zalej zimną wodą. Obierzesz je przy daniach.",
+            "▸ Shake białkowy z bananem",
+            "Do shakera wsyp odżywkę (30 g) i wlej ok. 350 ml zimnej wody. Zakręć i potrząsaj 20 sekund.",
+            "Banana (1 szt., 120 g) i orzechy (16 g) weź osobno — zjadasz obok shake'a.",
+            "Na zmianę: odżywkę wsyp do shakera już w domu, wodę dolejesz na miejscu. Nic się nie zepsuje.",
+            "Przełóż do pojemnika „dziś 20:00 — kolacja”.",
+            "▸ Kanapki z jajkiem na twardo i serem",
+            "Weź 2 szt. ugotowanych jajek z garnka z zimną wodą.",
+            "Jajka pokrój w plastry.",
+            "Chleb (2 kromki, 70 g) posmaruj cienko musztardą (1 łyżka, 15 g), połóż ser (2 plastry, 40 g), na to plastry jajka. Posól i popieprz szczyptą.",
+            "Ogórka kiszonego (1 szt., 65 g) pokrój w plasterki i ułóż na wierzchu. Do boxa zawiń każdą kanapkę w folię.",
+            "Przełóż do pojemnika „dziś 13:30 — drugi posiłek”.",
+            "▸ Omlet marchewkowy z dżemem i bananem + napój proteinowy",
+            "Marchew (40 g) obierz i zetrzyj na tarce na drobnych oczkach.",
+            "Do miski wbij jajko (1 szt., 55 g), dodaj skyr (1 kubek, 150 g), mąkę (25 g), odżywkę (15 g), proszek do pieczenia (2 g) i przyprawę (2 g). Mieszaj łyżką ok. minuty, aż nie będzie grudek.",
+            "Wmieszaj marchewkę. Ciasto ma być gęste, jak na placki.",
+            "Patelnię z powłoką postaw na małym ogniu (1/3 skali) na minutę. Wylej ciasto i rozprowadź łyżką na grubość ok. 1 cm.",
+            "Przykryj pokrywką i smaż 5–6 minut, aż spód będzie brązowy, a wierzch przestanie być płynny.",
+            "Przewróć: zsuń omlet na talerz, przykryj go patelnią i odwróć razem z talerzem. Smaż jeszcze 3–4 minuty pod przykryciem.",
+            "Przełóż na talerz, posmaruj dżemem (70 g) i ułóż banana (1 szt., 120 g) pokrojonego w plasterki. Do popicia napój proteinowy (1 butelka, 400 ml).",
+            "Do pojemnika: na zimno smakuje jak ciasto marchewkowe — dżem i banana dołóż w osobnym pudełku, napój weź w butelce.",
+            "To zjadasz od razu, na koniec bloku.",
+            "▸ Na koniec: ciepłe pojemniki wystudź 20–30 minut bez pokrywki, potem wszystkie do lodówki na jedną półkę. Naczynia do zlewu, przetrzyj blat — 5 minut teraz oszczędza 20 jutro."
+          ],
+          "jak": "kuchnia",
+          "czas_min": 29
+        },
+        {
+          "czas": "10:15",
+          "tytul": "Śniadanie po treningu",
+          "ikona": "🍳",
+          "ping": true,
+          "slot": "sniadanie",
+          "opis": "Pierwszy posiłek dnia, zaraz po sztandze.",
+          "posilek": "Omlet marchewkowy z dżemem i bananem + napój proteinowy",
+          "posilek_id": "q_omlet_marchewkowy",
+          "porcja": 0.5,
+          "makra": {
+            "kcal": 825,
+            "bialko": 65,
+            "tluszcz": 13,
+            "wegle": 109
+          },
+          "skladniki": [
+            {
+              "nazwa": "Skyr waniliowy (kubek 150 g)",
+              "ile": "1 kubek (150 g)",
+              "g": 150,
+              "kcal": 123,
+              "bialko": 14.4,
+              "tluszcz": 0.0,
+              "wegle": 16.5
+            },
+            {
+              "nazwa": "Jaja",
+              "ile": "1 szt. (55 g)",
+              "g": 55,
+              "kcal": 79,
+              "bialko": 6.9,
+              "tluszcz": 5.2,
+              "wegle": 0.4
+            },
+            {
+              "nazwa": "Mąka pszenna",
+              "ile": "25 g",
+              "g": 25,
+              "kcal": 86,
+              "bialko": 2.5,
+              "tluszcz": 0.3,
+              "wegle": 17.8
+            },
+            {
+              "nazwa": "Odżywka białkowa WPC 80 (czekoladowa) — zapas, kupujesz osobno",
+              "ile": "15 g",
+              "g": 15,
+              "kcal": 56,
+              "bialko": 12.3,
+              "tluszcz": 0.7,
+              "wegle": 0.3
+            },
+            {
+              "nazwa": "Marchew",
+              "ile": "40 g",
+              "g": 40,
+              "kcal": 16,
+              "bialko": 0.4,
+              "tluszcz": 0.1,
+              "wegle": 2.8
+            },
+            {
+              "nazwa": "Proszek do pieczenia",
+              "ile": "2 g",
+              "g": 2,
+              "kcal": 1,
+              "bialko": 0.1,
+              "tluszcz": 0.0,
+              "wegle": 0.3
+            },
+            {
+              "nazwa": "Przyprawa do cynamonek / cynamon",
+              "ile": "2 g",
+              "g": 2,
+              "kcal": 6,
+              "bialko": 0.0,
+              "tluszcz": 0.0,
+              "wegle": 0.9
+            },
+            {
+              "nazwa": "Dżem (np. malinowy, słoik 200 g)",
+              "ile": "70 g",
+              "g": 70,
+              "kcal": 101,
+              "bialko": 0.3,
+              "tluszcz": 0.3,
+              "wegle": 23.8
+            },
+            {
+              "nazwa": "Banan",
+              "ile": "1 szt. (120 g)",
+              "g": 120,
+              "kcal": 106,
+              "bialko": 1.3,
+              "tluszcz": 0.4,
+              "wegle": 24.2
+            },
+            {
+              "nazwa": "Napój proteinowy Müllermilch Protein (400 ml)",
+              "ile": "1 butelka (400 ml)",
+              "g": 400,
+              "kcal": 252,
+              "bialko": 26.4,
+              "tluszcz": 6.0,
+              "wegle": 22.0
+            }
+          ],
+          "jak": "przepis",
+          "czas_min": 15,
+          "kroki": [
+            "Marchew (40 g) obierz i zetrzyj na tarce na drobnych oczkach.",
+            "Do miski wbij jajko (1 szt., 55 g), dodaj skyr (1 kubek, 150 g), mąkę (25 g), odżywkę (15 g), proszek do pieczenia (2 g) i przyprawę (2 g). Mieszaj łyżką ok. minuty, aż nie będzie grudek.",
+            "Wmieszaj marchewkę. Ciasto ma być gęste, jak na placki.",
+            "Patelnię z powłoką postaw na małym ogniu (1/3 skali) na minutę. Wylej ciasto i rozprowadź łyżką na grubość ok. 1 cm.",
+            "Przykryj pokrywką i smaż 5–6 minut, aż spód będzie brązowy, a wierzch przestanie być płynny.",
+            "Przewróć: zsuń omlet na talerz, przykryj go patelnią i odwróć razem z talerzem. Smaż jeszcze 3–4 minuty pod przykryciem.",
+            "Przełóż na talerz, posmaruj dżemem (70 g) i ułóż banana (1 szt., 120 g) pokrojonego w plasterki. Do popicia napój proteinowy (1 butelka, 400 ml).",
+            "Do pojemnika: na zimno smakuje jak ciasto marchewkowe — dżem i banana dołóż w osobnym pudełku, napój weź w butelce.",
+            "Wszystkie ilości w krokach są już przeliczone na Twoją porcję na dziś — nic nie musisz dzielić."
+          ]
+        },
+        {
+          "czas": "10:30",
+          "tytul": "Suplementy — po śniadaniu",
+          "ikona": "💊",
+          "ping": true,
+          "akcja": "suple",
+          "opis": "Z pierwszym posiłkiem, bo D3 i omega-3 wchłaniają się z tłuszczem."
+        },
+        {
+          "czas": "13:30",
+          "tytul": "Drugi posiłek",
+          "ikona": "🥪",
+          "ping": true,
+          "slot": "drugi",
+          "opis": "",
+          "posilek": "Kanapki z jajkiem na twardo i serem",
+          "posilek_id": "q_kanapki_jajko",
+          "porcja": 1.0,
+          "makra": {
+            "kcal": 497,
+            "bialko": 31,
+            "tluszcz": 24,
+            "wegle": 36
+          },
+          "skladniki": [
+            {
+              "nazwa": "Jaja",
+              "ile": "2 szt. (110 g)",
+              "g": 110,
+              "kcal": 157,
+              "bialko": 13.9,
+              "tluszcz": 10.5,
+              "wegle": 0.8
+            },
+            {
+              "nazwa": "Chleb pszenny (zwykły biały)",
+              "ile": "2 kromki (70 g)",
+              "g": 70,
+              "kcal": 175,
+              "bialko": 5.6,
+              "tluszcz": 2.1,
+              "wegle": 32.9
+            },
+            {
+              "nazwa": "Ser żółty w plastrach",
+              "ile": "2 plastry (40 g)",
+              "g": 40,
+              "kcal": 140,
+              "bialko": 10.2,
+              "tluszcz": 10.8,
+              "wegle": 0.2
+            },
+            {
+              "nazwa": "Musztarda",
+              "ile": "1 łyżka (15 g)",
+              "g": 15,
+              "kcal": 16,
+              "bialko": 0.8,
+              "tluszcz": 0.9,
+              "wegle": 1.2
+            },
+            {
+              "nazwa": "Ogórek kiszony",
+              "ile": "1 szt. (65 g)",
+              "g": 65,
+              "kcal": 8,
+              "bialko": 0.3,
+              "tluszcz": 0.1,
+              "wegle": 1.3
+            }
+          ],
+          "jak": "przepis",
+          "czas_min": 12,
+          "kroki": [
+            "📦 To zrobiłeś w bloku kuchni (dziś o 09:50) — teraz tylko wyjmij pojemnik z lodówki. Przepis niżej, gdybyś robił na świeżo.",
+            "Jajka na twardo: w małym garnku zagotuj tyle wody, żeby przykryła jajka (2 szt., 110 g). Łyżką ostrożnie włóż jajka do wrzątku i gotuj 9 minut na średnim ogniu. Odlej wrzątek, zalej zimną wodą na 3 minuty i obierz ze skorupki.",
+            "Jajka pokrój w plastry.",
+            "Chleb (2 kromki, 70 g) posmaruj cienko musztardą (1 łyżka, 15 g), połóż ser (2 plastry, 40 g), na to plastry jajka. Posól i popieprz szczyptą.",
+            "Ogórka kiszonego (1 szt., 65 g) pokrój w plasterki i ułóż na wierzchu. Do boxa zawiń każdą kanapkę w folię.",
+            "Wszystkie ilości w krokach są już przeliczone na Twoją porcję na dziś — nic nie musisz dzielić."
+          ]
+        },
+        {
+          "czas": "16:30",
+          "tytul": "Obiad",
+          "ikona": "🍽️",
+          "ping": true,
+          "slot": "obiad",
+          "opis": "",
+          "posilek": "Makaron bolognese na wołowinie",
+          "posilek_id": "b_bolo",
+          "porcja": 1.0,
+          "makra": {
+            "kcal": 810,
+            "bialko": 45,
+            "tluszcz": 31,
+            "wegle": 81
+          },
+          "skladniki": [
+            {
+              "nazwa": "Wołowina świeżo mielona (z lady)",
+              "ile": "165 g",
+              "g": 167,
+              "kcal": 358,
+              "bialko": 31.0,
+              "tluszcz": 25.0,
+              "wegle": 0.0
+            },
+            {
+              "nazwa": "Makaron (świderki/penne)",
+              "ile": "80 g",
+              "g": 80,
+              "kcal": 284,
+              "bialko": 9.6,
+              "tluszcz": 1.2,
+              "wegle": 57.6
+            },
+            {
+              "nazwa": "Passata pomidorowa",
+              "ile": "165 g",
+              "g": 167,
+              "kcal": 52,
+              "bialko": 2.3,
+              "tluszcz": 0.3,
+              "wegle": 9.3
+            },
+            {
+              "nazwa": "Koncentrat pomidorowy",
+              "ile": "20 g",
+              "g": 20,
+              "kcal": 19,
+              "bialko": 0.9,
+              "tluszcz": 0.1,
+              "wegle": 3.4
+            },
+            {
+              "nazwa": "Cebula",
+              "ile": "65 g",
+              "g": 67,
+              "kcal": 27,
+              "bialko": 0.7,
+              "tluszcz": 0.1,
+              "wegle": 5.1
+            },
+            {
+              "nazwa": "Marchew",
+              "ile": "55 g",
+              "g": 53,
+              "kcal": 22,
+              "bialko": 0.5,
+              "tluszcz": 0.1,
+              "wegle": 3.7
+            },
+            {
+              "nazwa": "Czosnek",
+              "ile": "1 ząbek (5 g)",
+              "g": 5,
+              "kcal": 7,
+              "bialko": 0.3,
+              "tluszcz": 0.0,
+              "wegle": 1.6
+            },
+            {
+              "nazwa": "Olej rzepakowy",
+              "ile": "5 ml",
+              "g": 5,
+              "kcal": 41,
+              "bialko": 0.0,
+              "tluszcz": 4.6,
+              "wegle": 0.0
+            }
+          ],
+          "jak": "odgrzewanie",
+          "czas_min": 4,
+          "kroki": [
+            "Wyjmij jeden pojemnik z lodówki — to cała porcja na dziś, odważona w dniu gotowania.",
+            "Odgrzej: mikrofala 2,5 min, wymieszać w połowie.",
+            "Przechowywanie: lodówka, 3 dni w pojemnikach."
+          ]
+        },
+        {
+          "czas": "18:00",
+          "tytul": "Spacer",
+          "ikona": "🚶",
+          "ping": true,
+          "opis": "20–30 minut. Nie kardio — chodzi o kroki i rozruszanie bioder po treningu."
+        },
+        {
+          "czas": "20:00",
+          "tytul": "Kolacja",
+          "ikona": "🌙",
+          "ping": true,
+          "slot": "kolacja",
+          "opis": "",
+          "posilek": "Shake białkowy z bananem",
+          "posilek_id": "q_shake",
+          "porcja": 0.8,
+          "makra": {
+            "kcal": 320,
+            "bialko": 29,
+            "tluszcz": 11,
+            "wegle": 26
+          },
+          "skladniki": [
+            {
+              "nazwa": "Odżywka białkowa WPC 80 (czekoladowa) — zapas, kupujesz osobno",
+              "ile": "30 g",
+              "g": 30,
+              "kcal": 112,
+              "bialko": 24.6,
+              "tluszcz": 1.4,
+              "wegle": 0.5
+            },
+            {
+              "nazwa": "Banan",
+              "ile": "1 szt. (120 g)",
+              "g": 120,
+              "kcal": 106,
+              "bialko": 1.3,
+              "tluszcz": 0.4,
+              "wegle": 24.2
+            },
+            {
+              "nazwa": "Orzechy / migdały",
+              "ile": "16 g",
+              "g": 16,
+              "kcal": 102,
+              "bialko": 3.0,
+              "tluszcz": 9.1,
+              "wegle": 1.6
+            }
+          ],
+          "jak": "przepis",
+          "czas_min": 2,
+          "kroki": [
+            "📦 To zrobiłeś w bloku kuchni (dziś o 09:50) — teraz tylko wyjmij pojemnik z lodówki. Przepis niżej, gdybyś robił na świeżo.",
+            "Do shakera wsyp odżywkę (30 g) i wlej ok. 350 ml zimnej wody. Zakręć i potrząsaj 20 sekund.",
+            "Banana (1 szt., 120 g) i orzechy (16 g) weź osobno — zjadasz obok shake'a.",
+            "Na zmianę: odżywkę wsyp do shakera już w domu, wodę dolejesz na miejscu. Nic się nie zepsuje.",
+            "Wszystkie ilości w krokach są już przeliczone na Twoją porcję na dziś — nic nie musisz dzielić."
+          ]
+        },
+        {
+          "czas": "22:30",
+          "tytul": "Suplementy — wieczór",
+          "ikona": "💊",
+          "ping": true,
+          "akcja": "suple_wieczor",
+          "opis": "Magnez przed snem."
+        },
+        {
+          "czas": "22:45",
+          "tytul": "Telefon w dół + budzik",
+          "ikona": "📵",
+          "ping": true,
+          "akcja": "budzik",
+          "opis": "Ekran w dół. Jutro znowu zaczynasz od sztangi.",
+          "budzik": {
+            "godzina": "08:00",
+            "minut": 555,
+            "jutro": true,
+            "ile": "9 h 15 min",
+            "typ_docelowy": "TRENING"
+          }
+        },
+        {
+          "czas": "23:00",
+          "tytul": "Sen",
+          "ikona": "😴",
+          "ping": true,
+          "opis": "Osiem–dziewięć godzin. Teraz, kiedy nie ma zmian, sen jest Twoją największą przewagą."
+        }
+      ],
+      "makra": {
+        "kcal": 2452,
+        "bialko": 170,
+        "tluszcz": 79,
+        "wegle": 252
+      },
+      "dobitka": 0,
+      "dodatek_w": [],
+      "poza_planem": [],
+      "lzejszy": false,
+      "cel": {
+        "kcal": 2200,
+        "bialko": 165,
+        "tluszcz": 80,
+        "wegle": 205
+      },
+      "slowo": "Pół treningu to nieskończenie więcej niż zero treningu.",
+      "faza": "Rekompozycja",
+      "tydzien": 5,
+      "nadwyzka": 0,
+      "odhaczone": {},
+      "waga": null,
+      "kroki": null,
+      "serie": [],
+      "trening": {
+        "rodzaj": "glowny",
+        "trening": {
+          "id": "gora1",
+          "nazwa": "Góra 1",
+          "czas_min": 32,
+          "blok": "Blok 2 — Fundament",
+          "blok_opis": "Trzy serie i pierwsza progresja. Gdy zrobisz górę zakresu we wszystkich seriach, system podniesie ciężar.",
+          "zapas": "2 powtórzenia w zapasie",
+          "rozgrzewka": [
+            "Pierwsze dwa ćwiczenia treningu: serie wstępne 30% ciężaru roboczego na 8-12 powtórzeń, potem 50% na 8, potem 75% na 2-3.",
+            "Pozostałe ćwiczenia: jedna seria rozgrzewkowa 50% ciężaru na 5-6 powtórzeń i od razu seria robocza.",
+            "Zanim podejdziesz do sztangi: 5 minut krążeń ramion i bioder, 15 przysiadów bez ciężaru."
+          ],
+          "cwiczenia": [
+            {
+              "nazwa": "Wyciskanie sztangi leżąc",
+              "serie": 2,
+              "powt": "1×6-8 + 1×10-12",
+              "przerwa": "3-4 min",
+              "wskazowka": "Ławka w klatce, bolce na wysokości klatki. Łopatki ściągnięte, stopy mocno na podłodze. Sztanga schodzi do dolnej części klatki, łokcie ok. 45 stopni od tułowia. Pierwsza seria ciężka (6-8), druga lżejsza na 10-12."
+            },
+            {
+              "nazwa": "Wiosłowanie sztangą podchwytem",
+              "serie": 2,
+              "powt": "10-12",
+              "przerwa": "3 min",
+              "wskazowka": "Chwyt podchwytem na szerokość barków, tułów pochylony ok. 45 stopni, plecy proste. Ciągniesz sztangę do brzucha, łokcie blisko ciała, na górze ściągasz łopatki."
+            },
+            {
+              "nazwa": "Rozpiętki hantlami na skosie",
+              "serie": 2,
+              "powt": "12-15",
+              "przerwa": "1,5-2 min",
+              "wskazowka": "Ławka 30 stopni, ręce lekko ugięte, ruch jak przy obejmowaniu drzewa. Opuszczasz do poziomu barków, nie niżej — dalej to już tylko bark.",
+              "seria_laczona": "Wiosłowanie hantlem jednorącz"
+            },
+            {
+              "nazwa": "Wiosłowanie hantlem jednorącz",
+              "serie": 2,
+              "powt": "10-12",
+              "przerwa": "1,5-2 min",
+              "wskazowka": "Kolano i ręka na ławce, plecy płaskie. Ciągniesz hantel do biodra, nie do barku.",
+              "seria_laczona": "Rozpiętki hantlami na skosie",
+              "propozycja": {
+                "ciezar": 16.5,
+                "poprzedni": 14.0,
+                "powt": [
+                  12,
+                  12
+                ],
+                "data": "2026-09-20",
+                "podwyzka": 2.5
+              }
+            },
+            {
+              "nazwa": "OHP hantlami siedząc",
+              "serie": 2,
+              "powt": "8-10",
+              "przerwa": "2 min",
+              "wskazowka": "Ławka z oparciem pionowo, hantle na wysokości uszu. Wyciskasz nad głowę bez odchylania się do tyłu, żebra w dół, brzuch napięty.",
+              "seria_laczona": "Wznosy w bok hantlami stojąc"
+            },
+            {
+              "nazwa": "Wznosy w bok hantlami stojąc",
+              "serie": 2,
+              "powt": "10-12",
+              "przerwa": "1,5-2 min",
+              "wskazowka": "Łokcie lekko ugięte, ruch prowadzą łokcie. Unosisz do wysokości barków, nie wyżej.",
+              "seria_laczona": "OHP hantlami siedząc"
+            }
+          ],
+          "finisz": "Każda seria kończy się z zapasem: 2 powtórzenia w zapasie. Trzy serie i pierwsza progresja. Gdy zrobisz górę zakresu we wszystkich seriach, system podniesie ciężar."
+        }
+      }
     }
   ],
   "tryb": {
@@ -11220,384 +11265,7 @@
       }
     ]
   },
-  "zakupy_zamrozone": {
-    "kup": [
-      {
-        "klucz": "mielone_wolowe",
-        "nazwa": "Wołowina świeżo mielona (z lady)",
-        "kat": "mieso",
-        "trw": "swieze",
-        "sklep": "Dino",
-        "opakowan": 1,
-        "opak": 400,
-        "jedn": "g",
-        "brakuje": 200.0,
-        "dokupisz": 400,
-        "cena": 18.0
-      },
-      {
-        "klucz": "jaja",
-        "nazwa": "Jaja",
-        "kat": "nabial",
-        "trw": "chlodnia",
-        "sklep": "Dino",
-        "opakowan": 1,
-        "opak": 10,
-        "jedn": "szt",
-        "brakuje": 9,
-        "dokupisz": 10,
-        "cena": 12.0
-      },
-      {
-        "klucz": "napoj_proteinowy",
-        "nazwa": "Napój proteinowy Müllermilch Protein (400 ml)",
-        "kat": "nabial",
-        "trw": "chlodnia",
-        "sklep": "Dino",
-        "opakowan": 1,
-        "opak": 1,
-        "jedn": "butelka",
-        "brakuje": 1,
-        "dokupisz": 1,
-        "cena": 5.29
-      },
-      {
-        "klucz": "ser",
-        "nazwa": "Ser żółty starty",
-        "kat": "nabial",
-        "trw": "chlodnia",
-        "sklep": "Dino",
-        "opakowan": 1,
-        "opak": 200,
-        "jedn": "g",
-        "brakuje": 40.0,
-        "dokupisz": 200,
-        "cena": 9.0
-      },
-      {
-        "klucz": "skyr",
-        "nazwa": "Skyr naturalny (kubek 150 g)",
-        "kat": "nabial",
-        "trw": "chlodnia",
-        "sklep": "Dino",
-        "opakowan": 1,
-        "opak": 1,
-        "jedn": "kubek",
-        "brakuje": 1,
-        "dokupisz": 1,
-        "cena": 3.8
-      },
-      {
-        "klucz": "skyr_pitny",
-        "nazwa": "Skyr pitny (butelka 330 ml)",
-        "kat": "nabial",
-        "trw": "chlodnia",
-        "sklep": "Dino",
-        "opakowan": 1,
-        "opak": 1,
-        "jedn": "butelka",
-        "brakuje": 1,
-        "dokupisz": 1,
-        "cena": 5.49
-      },
-      {
-        "klucz": "skyr_waniliowy",
-        "nazwa": "Skyr waniliowy (kubek 150 g)",
-        "kat": "nabial",
-        "trw": "chlodnia",
-        "sklep": "Dino",
-        "opakowan": 1,
-        "opak": 1,
-        "jedn": "kubek",
-        "brakuje": 1,
-        "dokupisz": 1,
-        "cena": 3.69
-      },
-      {
-        "klucz": "twarog",
-        "nazwa": "Twaróg półtłusty",
-        "kat": "nabial",
-        "trw": "chlodnia",
-        "sklep": "Dino",
-        "opakowan": 1,
-        "opak": 250,
-        "jedn": "g",
-        "brakuje": 215,
-        "dokupisz": 250,
-        "cena": 3.39
-      },
-      {
-        "klucz": "smietana",
-        "nazwa": "Śmietana 18%",
-        "kat": "nabial",
-        "trw": "chlodnia",
-        "sklep": "Dino",
-        "opakowan": 1,
-        "opak": 200,
-        "jedn": "ml",
-        "brakuje": 150.0,
-        "dokupisz": 200,
-        "cena": 3.5
-      },
-      {
-        "klucz": "banan",
-        "nazwa": "Banan",
-        "kat": "warzywa",
-        "trw": "chlodnia",
-        "sklep": "Dino",
-        "opakowan": 3,
-        "opak": 1,
-        "jedn": "szt",
-        "brakuje": 3,
-        "dokupisz": 3,
-        "cena": 1.26
-      },
-      {
-        "klucz": "cebula",
-        "nazwa": "Cebula",
-        "kat": "warzywa",
-        "trw": "trwale",
-        "sklep": "Dino",
-        "opakowan": 2,
-        "opak": 1,
-        "jedn": "szt",
-        "brakuje": 2.0,
-        "dokupisz": 2,
-        "cena": 1.2
-      },
-      {
-        "klucz": "czosnek",
-        "nazwa": "Czosnek",
-        "kat": "warzywa",
-        "trw": "trwale",
-        "sklep": "Dino",
-        "opakowan": 1,
-        "opak": 10,
-        "jedn": "zabek",
-        "brakuje": 1.0,
-        "dokupisz": 10,
-        "cena": 3.0
-      },
-      {
-        "klucz": "marchew",
-        "nazwa": "Marchew",
-        "kat": "warzywa",
-        "trw": "trwale",
-        "sklep": "Dino",
-        "opakowan": 1,
-        "opak": 1,
-        "jedn": "szt",
-        "brakuje": 0.2,
-        "dokupisz": 1,
-        "cena": 0.16
-      },
-      {
-        "klucz": "pieczarki",
-        "nazwa": "Pieczarki",
-        "kat": "warzywa",
-        "trw": "swieze",
-        "sklep": "Dino",
-        "opakowan": 1,
-        "opak": 400,
-        "jedn": "g",
-        "brakuje": 400.0,
-        "dokupisz": 400,
-        "cena": 6.0
-      },
-      {
-        "klucz": "pomidor",
-        "nazwa": "Pomidor",
-        "kat": "warzywa",
-        "trw": "swieze",
-        "sklep": "Dino",
-        "opakowan": 1,
-        "opak": 1,
-        "jedn": "szt",
-        "brakuje": 1.0,
-        "dokupisz": 1,
-        "cena": 0.6
-      },
-      {
-        "klucz": "chleb",
-        "nazwa": "Chleb pszenny (zwykły biały)",
-        "kat": "pieczywo",
-        "trw": "chlodnia",
-        "sklep": "Dino",
-        "opakowan": 1,
-        "opak": 14,
-        "jedn": "kromka",
-        "brakuje": 5,
-        "dokupisz": 14,
-        "cena": 4.79
-      },
-      {
-        "klucz": "proszek_do_pieczenia",
-        "nazwa": "Proszek do pieczenia",
-        "kat": "spizarnia",
-        "trw": "trwale",
-        "sklep": "Dino",
-        "opakowan": 1,
-        "opak": 30,
-        "jedn": "g",
-        "brakuje": 1,
-        "dokupisz": 30,
-        "cena": 0.89
-      },
-      {
-        "klucz": "cynamon",
-        "nazwa": "Przyprawa do cynamonek / cynamon",
-        "kat": "spizarnia",
-        "trw": "trwale",
-        "sklep": "Dino",
-        "opakowan": 1,
-        "opak": 15,
-        "jedn": "g",
-        "brakuje": 1,
-        "dokupisz": 15,
-        "cena": 1.59
-      }
-    ],
-    "mam": [
-      {
-        "klucz": "dzem_niskoslodzony",
-        "nazwa": "Dżem (np. malinowy, słoik 200 g)",
-        "potrzeba": 100,
-        "w_domu": 150,
-        "jedn": "g"
-      },
-      {
-        "klucz": "krem_bez_cukru",
-        "nazwa": "Krem do smarowania bez cukru",
-        "potrzeba": 16,
-        "w_domu": 268,
-        "jedn": "g"
-      },
-      {
-        "klucz": "kukurydza",
-        "nazwa": "Kukurydza konserwowa",
-        "potrzeba": 120,
-        "w_domu": 175,
-        "jedn": "g"
-      },
-      {
-        "klucz": "majonez_sriracha",
-        "nazwa": "Majonez sriracha",
-        "potrzeba": 26,
-        "w_domu": 90,
-        "jedn": "ml"
-      },
-      {
-        "klucz": "maka",
-        "nazwa": "Mąka pszenna",
-        "potrzeba": 65,
-        "w_domu": 700,
-        "jedn": "g"
-      },
-      {
-        "klucz": "makaron",
-        "nazwa": "Makaron (świderki/penne)",
-        "potrzeba": 240.0,
-        "w_domu": 480.0,
-        "jedn": "g"
-      },
-      {
-        "klucz": "maslo",
-        "nazwa": "Masło",
-        "potrzeba": 5,
-        "w_domu": 190,
-        "jedn": "g"
-      },
-      {
-        "klucz": "miod",
-        "nazwa": "Miód",
-        "potrzeba": 1.0,
-        "w_domu": 12.0,
-        "jedn": "lyzka"
-      },
-      {
-        "klucz": "mleko",
-        "nazwa": "Mleko 2%",
-        "potrzeba": 56,
-        "w_domu": 924,
-        "jedn": "ml"
-      },
-      {
-        "klucz": "musztarda",
-        "nazwa": "Musztarda",
-        "potrzeba": 2.0,
-        "w_domu": 7.5,
-        "jedn": "lyzka"
-      },
-      {
-        "klucz": "odzywka_wpc",
-        "nazwa": "Odżywka białkowa WPC 80 (czekoladowa) — zapas, kupujesz osobno",
-        "potrzeba": 45,
-        "w_domu": 45,
-        "jedn": "g"
-      },
-      {
-        "klucz": "ogorek_kiszony",
-        "nazwa": "Ogórek kiszony",
-        "potrzeba": 3.5,
-        "w_domu": 6.5,
-        "jedn": "szt"
-      },
-      {
-        "klucz": "olej",
-        "nazwa": "Olej rzepakowy",
-        "potrzeba": 15.0,
-        "w_domu": 910.0,
-        "jedn": "ml"
-      },
-      {
-        "klucz": "orzechy",
-        "nazwa": "Orzechy / migdały",
-        "potrzeba": 24,
-        "w_domu": 58,
-        "jedn": "g"
-      },
-      {
-        "klucz": "poledwica",
-        "nazwa": "Polędwica sopocka (wędlina)",
-        "potrzeba": 12,
-        "w_domu": 64,
-        "jedn": "g"
-      },
-      {
-        "klucz": "przyprawy",
-        "nazwa": "Przyprawy (sól, pieprz, papryka, oregano, majeranek)",
-        "potrzeba": 6.0,
-        "w_domu": 59.0,
-        "jedn": "porcja"
-      },
-      {
-        "klucz": "ser_zolty",
-        "nazwa": "Ser żółty w plastrach",
-        "potrzeba": 4,
-        "w_domu": 6,
-        "jedn": "plaster"
-      },
-      {
-        "klucz": "slodzik",
-        "nazwa": "Słodzik w tabletkach",
-        "potrzeba": 1.5,
-        "w_domu": 297.0,
-        "jedn": "tabletka"
-      },
-      {
-        "klucz": "tortilla",
-        "nazwa": "Tortilla pszenna",
-        "potrzeba": 1,
-        "w_domu": 2,
-        "jedn": "szt"
-      }
-    ],
-    "koszt": 83.65,
-    "sklepy": {
-      "Dino": 83.65
-    },
-    "zrobione": true
-  },
+  "zakupy_zamrozone": {},
   "repo": "jasio-cloud/trenerai",
   "galaz": "main",
   "suple": {
@@ -11657,6 +11325,14 @@
   "alternatywy": {
     "sniadanie": [
       {
+        "id": "q_tortilla_jajecznica",
+        "nazwa": "Tortilla z jajecznicą, polędwicą i majonezem sriracha + skyr pitny",
+        "kcal": 896,
+        "bialko": 59,
+        "czas": 10,
+        "bez_gotowania": false
+      },
+      {
         "id": "q_tortilla_zimna",
         "nazwa": "Tortilla z jajkiem na twardo, szynką i serem",
         "kcal": 929,
@@ -11673,14 +11349,6 @@
         "bez_gotowania": false
       },
       {
-        "id": "q_omlet_marchewkowy",
-        "nazwa": "Omlet marchewkowy z dżemem i bananem + napój proteinowy",
-        "kcal": 1082,
-        "bialko": 80,
-        "czas": 15,
-        "bez_gotowania": false
-      },
-      {
         "id": "q_tosty_skyr",
         "nazwa": "Tosty z szynką i serem + skyr z masłem orzechowym",
         "kcal": 589,
@@ -11691,10 +11359,26 @@
     ],
     "drugi": [
       {
-        "id": "q_jajka_kukurydza",
-        "nazwa": "Box: sałatka jajeczna z kukurydzą",
-        "kcal": 480,
-        "bialko": 35,
+        "id": "q_kanapki_jajko",
+        "nazwa": "Kanapki z jajkiem na twardo i serem",
+        "kcal": 497,
+        "bialko": 31,
+        "czas": 12,
+        "bez_gotowania": false
+      },
+      {
+        "id": "q_jogurt_orzechy",
+        "nazwa": "Jogurt grecki z orzechami i miodem",
+        "kcal": 461,
+        "bialko": 33,
+        "czas": 3,
+        "bez_gotowania": false
+      },
+      {
+        "id": "q_jajka_majonez",
+        "nazwa": "Sałatka jajeczna z kukurydzą i majonezem",
+        "kcal": 558,
+        "bialko": 28,
         "czas": 12,
         "bez_gotowania": false
       },
@@ -11704,22 +11388,6 @@
         "kcal": 511,
         "bialko": 35,
         "czas": 12,
-        "bez_gotowania": false
-      },
-      {
-        "id": "q_kanapki_jajko",
-        "nazwa": "Kanapki z jajkiem na twardo i serem",
-        "kcal": 497,
-        "bialko": 31,
-        "czas": 12,
-        "bez_gotowania": false
-      },
-      {
-        "id": "d_twarog_kakao",
-        "nazwa": "Deser: twarożek kakaowy z masłem orzechowym",
-        "kcal": 476,
-        "bialko": 45,
-        "czas": 4,
         "bez_gotowania": false
       }
     ],
@@ -11759,18 +11427,10 @@
     ],
     "kolacja": [
       {
-        "id": "d_pudding",
-        "nazwa": "Deser: czekoladowy pudding ze skyru z bananem",
-        "kcal": 419,
-        "bialko": 39,
-        "czas": 4,
-        "bez_gotowania": false
-      },
-      {
-        "id": "q_jajka_kukurydza",
-        "nazwa": "Box: sałatka jajeczna z kukurydzą",
-        "kcal": 480,
-        "bialko": 35,
+        "id": "q_kanapki_jajko",
+        "nazwa": "Kanapki z jajkiem na twardo i serem",
+        "kcal": 497,
+        "bialko": 31,
         "czas": 12,
         "bez_gotowania": false
       },
@@ -11783,11 +11443,19 @@
         "bez_gotowania": false
       },
       {
-        "id": "q_kanapki_jajko",
-        "nazwa": "Kanapki z jajkiem na twardo i serem",
-        "kcal": 497,
-        "bialko": 31,
-        "czas": 12,
+        "id": "d_pudding",
+        "nazwa": "Deser: czekoladowy pudding ze skyru z bananem",
+        "kcal": 419,
+        "bialko": 39,
+        "czas": 4,
+        "bez_gotowania": false
+      },
+      {
+        "id": "q_twarog",
+        "nazwa": "Twarożek na słodko z dżemem + pieczywo",
+        "kcal": 509,
+        "bialko": 44,
+        "czas": 4,
         "bez_gotowania": false
       }
     ]
@@ -12520,11 +12188,11 @@
   "historia": {
     "bazy": [
       "b_pieczarkowy",
+      "b_pieczarkowy",
       "b_bolo",
       "b_pieczarkowy",
       "b_pieczarkowy",
-      "b_pieczarkowy",
-      "b_bolo"
+      "b_pieczarkowy"
     ],
     "waga": [
       {
@@ -12632,15 +12300,7 @@
       }
     ]
   },
-  "kroki": {
-    "kroki": 6970,
-    "cel": 8000,
-    "brakuje": 1030,
-    "status": "blisko",
-    "sugestia": "Cel zrobiony. Nic nie musisz dorabiać.",
-    "komentarz": "Cel 8000 kroków dziennie. Spacer po południu robi większość z tego.",
-    "procent": 87
-  },
+  "kroki": null,
   "kroki_cel": {
     "cel": 8000,
     "komentarz": "Cel 8000 kroków dziennie. Spacer po południu robi większość z tego."
