@@ -76,26 +76,6 @@
       "ilosc": 80.0,
       "do": "2027-04-14"
     },
-    "poledwica": {
-      "ilosc": 28,
-      "do": "2026-10-12"
-    },
-    "maslo": {
-      "ilosc": 170,
-      "do": "2026-10-12"
-    },
-    "mleko": {
-      "ilosc": 782,
-      "do": "2026-10-12"
-    },
-    "ser_zolty": {
-      "ilosc": 1,
-      "do": "2026-10-12"
-    },
-    "chleb": {
-      "ilosc": 11,
-      "do": "2026-10-12"
-    },
     "krem_bez_cukru": {
       "ilosc": 252,
       "do": "2027-04-18"
@@ -317,6 +297,36 @@
       "co": "cykl:2026-10-12",
       "pozycji": 17,
       "koszt": 84.51
+    },
+    {
+      "data": "2026-10-13",
+      "co": "wyrzucone",
+      "produkt": "poledwica",
+      "ilosc": 28
+    },
+    {
+      "data": "2026-10-13",
+      "co": "wyrzucone",
+      "produkt": "maslo",
+      "ilosc": 170
+    },
+    {
+      "data": "2026-10-13",
+      "co": "wyrzucone",
+      "produkt": "mleko",
+      "ilosc": 782
+    },
+    {
+      "data": "2026-10-13",
+      "co": "wyrzucone",
+      "produkt": "ser_zolty",
+      "ilosc": 1
+    },
+    {
+      "data": "2026-10-13",
+      "co": "wyrzucone",
+      "produkt": "chleb",
+      "ilosc": 11
     }
   ]
 }
