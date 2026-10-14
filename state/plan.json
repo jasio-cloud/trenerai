@@ -1,51 +1,51 @@
 {
-  "cykl": 5,
-  "od": "2026-10-12",
-  "do": "2026-10-14",
-  "baza": "b_pieczarkowy",
+  "cykl": 6,
+  "od": "2026-10-15",
+  "do": "2026-10-17",
+  "baza": "b_bolo",
   "dni": [
     {
       "sniadanie": "q_omlet_marchewkowy",
-      "drugi": "q_shake",
-      "kolacja": "q_jajka_majonez",
-      "obiad": "b_pieczarkowy",
-      "data": "2026-10-12",
+      "drugi": "q_jajka_majonez",
+      "kolacja": "q_kanapki_jajko",
+      "obiad": "b_bolo",
+      "data": "2026-10-15",
       "typ": 0,
       "makra": {
-        "kcal": 2909,
-        "bialko": 196,
-        "tluszcz": 101,
-        "wegle": 289
+        "kcal": 2947,
+        "bialko": 184,
+        "tluszcz": 98,
+        "wegle": 310
       }
     },
     {
       "sniadanie": "q_tortilla_jajecznica",
-      "drugi": "q_kanapki_ser",
-      "kolacja": "d_twarog_kakao",
-      "obiad": "b_pieczarkowy",
-      "data": "2026-10-13",
+      "drugi": "q_gofry",
+      "kolacja": "q_shake",
+      "obiad": "b_bolo",
+      "data": "2026-10-16",
       "typ": 0,
       "makra": {
-        "kcal": 2742,
+        "kcal": 2600,
         "bialko": 177,
-        "tluszcz": 130,
-        "wegle": 207
+        "tluszcz": 107,
+        "wegle": 220
       }
     },
     {
-      "sniadanie": "q_omlet",
-      "drugi": "q_jogurt_orzechy",
-      "kolacja": "q_jajka_kukurydza",
-      "obiad": "b_pieczarkowy",
-      "data": "2026-10-14",
+      "sniadanie": "q_omlet_marchewkowy",
+      "drugi": "q_jajka_kukurydza",
+      "kolacja": "q_kanapki_ser",
+      "obiad": "b_bolo",
+      "data": "2026-10-17",
       "typ": 1,
       "makra": {
-        "kcal": 2357,
-        "bialko": 153,
-        "tluszcz": 113,
-        "wegle": 171
+        "kcal": 2856,
+        "bialko": 183,
+        "tluszcz": 91,
+        "wegle": 308
       }
     }
   ],
-  "wygenerowano": "2026-10-12T00:52:58+02:00"
+  "wygenerowano": "2026-10-15T00:32:56+02:00"
 }
