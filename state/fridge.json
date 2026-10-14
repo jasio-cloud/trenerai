@@ -100,10 +100,6 @@
       "ilosc": 150.0,
       "do": "2026-10-18"
     },
-    "mielone_wolowe": {
-      "ilosc": 200.0,
-      "do": "2026-10-13"
-    },
     "jogurt_grecki": {
       "ilosc": 100,
       "do": "2026-10-21"
@@ -327,6 +323,12 @@
       "co": "wyrzucone",
       "produkt": "chleb",
       "ilosc": 11
+    },
+    {
+      "data": "2026-10-14",
+      "co": "wyrzucone",
+      "produkt": "mielone_wolowe",
+      "ilosc": 200.0
     }
   ]
 }
