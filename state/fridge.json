@@ -5,11 +5,11 @@
       "do": "2027-04-05"
     },
     "ogorek_kiszony": {
-      "ilosc": 6.0,
+      "ilosc": 2.5,
       "do": "2027-04-05"
     },
     "majonez_sriracha": {
-      "ilosc": 28,
+      "ilosc": 2,
       "do": "2027-04-05"
     },
     "miod": {
@@ -17,31 +17,31 @@
       "do": "2027-04-05"
     },
     "musztarda": {
-      "ilosc": 0.5,
+      "ilosc": 9.5,
       "do": "2027-04-05"
     },
     "maka": {
-      "ilosc": 585,
+      "ilosc": 495,
       "do": "2027-04-05"
     },
     "orzechy": {
-      "ilosc": 166,
+      "ilosc": 150,
       "do": "2027-04-05"
     },
     "proszek_do_pieczenia": {
-      "ilosc": 25,
+      "ilosc": 19,
       "do": "2027-04-05"
     },
     "cynamon": {
-      "ilosc": 10,
+      "ilosc": 6,
       "do": "2027-04-05"
     },
     "przyprawy": {
-      "ilosc": 40.0,
+      "ilosc": 33.0,
       "do": "2027-04-05"
     },
     "kukurydza": {
-      "ilosc": 175,
+      "ilosc": 375,
       "do": "2027-04-05"
     },
     "ketchup": {
@@ -49,15 +49,11 @@
       "do": "2027-04-05"
     },
     "dzem_niskoslodzony": {
-      "ilosc": 80,
+      "ilosc": 140,
       "do": "2027-04-06"
     },
-    "czosnek": {
-      "ilosc": 3.0,
-      "do": "2027-04-08"
-    },
     "olej": {
-      "ilosc": 865.0,
+      "ilosc": 850.0,
       "do": "2027-04-08"
     },
     "oliwa": {
@@ -73,15 +69,15 @@
       "do": "2027-04-11"
     },
     "koncentrat": {
-      "ilosc": 80.0,
+      "ilosc": 20.0,
       "do": "2027-04-14"
     },
     "krem_bez_cukru": {
-      "ilosc": 252,
+      "ilosc": 236,
       "do": "2027-04-18"
     },
     "slodzik": {
-      "ilosc": 295.5,
+      "ilosc": 294.0,
       "do": "2027-04-18"
     },
     "twarog": {
@@ -89,7 +85,7 @@
       "do": "2026-10-15"
     },
     "jaja": {
-      "ilosc": 5,
+      "ilosc": 3,
       "do": "2026-10-18"
     },
     "ser": {
@@ -101,16 +97,36 @@
       "do": "2026-10-18"
     },
     "jogurt_grecki": {
-      "ilosc": 100,
+      "ilosc": 35,
       "do": "2026-10-21"
     },
     "makaron": {
-      "ilosc": 260.0,
+      "ilosc": 20.0,
       "do": "2027-04-30"
     },
     "tortilla": {
-      "ilosc": 5,
+      "ilosc": 4,
       "do": "2027-04-30"
+    },
+    "poledwica": {
+      "ilosc": 88,
+      "do": "2026-10-27"
+    },
+    "mielone_wolowe": {
+      "ilosc": 300.0,
+      "do": "2026-10-19"
+    },
+    "maslo": {
+      "ilosc": 195,
+      "do": "2026-10-27"
+    },
+    "ser_zolty": {
+      "ilosc": 3,
+      "do": "2026-10-27"
+    },
+    "chleb": {
+      "ilosc": 8,
+      "do": "2026-10-27"
     }
   },
   "log": [
@@ -329,6 +345,12 @@
       "co": "wyrzucone",
       "produkt": "mielone_wolowe",
       "ilosc": 200.0
+    },
+    {
+      "data": "2026-10-15",
+      "co": "cykl:2026-10-15",
+      "pozycji": 18,
+      "koszt": 124.04
     }
   ]
 }
