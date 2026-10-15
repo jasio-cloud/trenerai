@@ -80,10 +80,6 @@
       "ilosc": 294.0,
       "do": "2027-04-18"
     },
-    "twarog": {
-      "ilosc": 70,
-      "do": "2026-10-15"
-    },
     "jaja": {
       "ilosc": 3,
       "do": "2026-10-18"
@@ -351,6 +347,12 @@
       "co": "cykl:2026-10-15",
       "pozycji": 18,
       "koszt": 124.04
+    },
+    {
+      "data": "2026-10-16",
+      "co": "wyrzucone",
+      "produkt": "twarog",
+      "ilosc": 70
     }
   ]
 }
