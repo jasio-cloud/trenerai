@@ -1,5 +1,5 @@
 {
-  "wygenerowano": "2026-10-16T00:13:36+02:00",
+  "wygenerowano": "2026-10-16T20:00:12+02:00",
   "dzis": "2026-10-16",
   "typ_dzis": 0,
   "typy": {
@@ -7831,7 +7831,12 @@
       "nadwyzka": 0,
       "odhaczone": {},
       "waga": null,
-      "kroki": null,
+      "kroki": {
+        "data": "2026-10-16",
+        "kroki": 4157,
+        "cel": 8000,
+        "status": "malo"
+      },
       "serie": [],
       "trening": {
         "rodzaj": "glowny",
@@ -12592,10 +12597,24 @@
         "kroki": 2268,
         "cel": 8000,
         "status": "malo"
+      },
+      {
+        "data": "2026-10-16",
+        "kroki": 4157,
+        "cel": 8000,
+        "status": "malo"
       }
     ]
   },
-  "kroki": null,
+  "kroki": {
+    "kroki": 4157,
+    "cel": 8000,
+    "brakuje": 3843,
+    "status": "malo",
+    "sugestia": "Dziś siedziałeś prawie całą dobę. Nie nadrobisz tego w nocy i nie ma sensu próbować — zrób 10 minut chodzenia teraz i rozciągnij plecy, żeby jutro nie bolały.",
+    "komentarz": "Cel 8000 kroków dziennie. Spacer po południu robi większość z tego.",
+    "procent": 52
+  },
   "kroki_cel": {
     "cel": 8000,
     "komentarz": "Cel 8000 kroków dziennie. Spacer po południu robi większość z tego."
