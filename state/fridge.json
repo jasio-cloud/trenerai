@@ -76,18 +76,6 @@
       "ilosc": 294.0,
       "do": "2027-04-18"
     },
-    "jaja": {
-      "ilosc": 6,
-      "do": "2026-10-18"
-    },
-    "ser": {
-      "ilosc": 80.0,
-      "do": "2026-10-18"
-    },
-    "smietana": {
-      "ilosc": 150.0,
-      "do": "2026-10-18"
-    },
     "jogurt_grecki": {
       "ilosc": 370,
       "do": "2026-10-21"
@@ -367,6 +355,24 @@
       "co": "cykl:2026-10-18",
       "pozycji": 17,
       "koszt": 92.25
+    },
+    {
+      "data": "2026-10-19",
+      "co": "wyrzucone",
+      "produkt": "jaja",
+      "ilosc": 6
+    },
+    {
+      "data": "2026-10-19",
+      "co": "wyrzucone",
+      "produkt": "ser",
+      "ilosc": 80.0
+    },
+    {
+      "data": "2026-10-19",
+      "co": "wyrzucone",
+      "produkt": "smietana",
+      "ilosc": 150.0
     }
   ]
 }
