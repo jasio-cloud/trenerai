@@ -1738,6 +1738,20 @@ def _nr_sesji(d):
     return n
 
 
+def _sesja_dnia(d, sesje):
+    """Ktora sesja dzis. W arkuszu trenera sesje sa przypisane do dni tygodnia
+    (Gora 1 poniedzialek, Dol 1 wtorek, Gora 2 czwartek, Dol 2 piatek), wiec opuszczony
+    trening nie przesuwa calej rotacji — w poniedzialek zawsze wchodzi Gora 1.
+    Bez mapy (albo w innym trybie grafiku) wracamy do licznika sesji."""
+    mapa = PROGRAM.get("split_tygodnia") or {}
+    sid = mapa.get(str(d.weekday()))
+    if sid:
+        for s in sesje:
+            if s["id"] == sid:
+                return s
+    return sesje[_nr_sesji(d) % len(sesje)]
+
+
 def trening_dnia(d=None):
     d = d or dzis()
     if _start_planu() and tydzien_planu(d) == 0:
@@ -1761,9 +1775,9 @@ def trening_dnia(d=None):
     if t == 1:
         sesje = PROGRAM["sesje_glowne"]
         # po zmianie ta sama sesja co zwykle — serie laczone skracaja ja o polowe
-        return {"rodzaj": "krotki", "trening": _sesja(sesje[_nr_sesji(d) % len(sesje)], blok, 99)}
+        return {"rodzaj": "krotki", "trening": _sesja(_sesja_dnia(d, sesje), blok, 99)}
     sesje = PROGRAM["sesje_glowne"]
-    return {"rodzaj": "glowny", "trening": _sesja(sesje[_nr_sesji(d) % len(sesje)], blok, 99)}
+    return {"rodzaj": "glowny", "trening": _sesja(_sesja_dnia(d, sesje), blok, 99)}
 
 
 # ------------------------------------------------------------------ budzik

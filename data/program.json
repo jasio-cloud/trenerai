@@ -437,5 +437,12 @@
       "Spacer albo zakupy na piechotę",
       "5 minut rozciągania bioder i klatki wieczorem"
     ]
+  },
+  "split_tygodnia": {
+    "0": "gora1",
+    "1": "dol1",
+    "3": "gora2",
+    "4": "dol2",
+    "_info": "Arkusz trenera przypisuje sesje do dni tygodnia: Gora 1 poniedzialek, Dol 1 wtorek, Gora 2 czwartek, Dol 2 piatek. Klucz to numer dnia tygodnia (0 = poniedzialek)."
   }
 }
