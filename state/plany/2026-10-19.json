@@ -1,0 +1,51 @@
+{
+  "cykl": 1,
+  "od": "2026-10-19",
+  "do": "2026-10-21",
+  "baza": "b_bolo",
+  "dni": [
+    {
+      "sniadanie": "q_tortilla_jajecznica",
+      "drugi": "q_shake",
+      "kolacja": "d_twarog_kakao",
+      "obiad": "b_bolo",
+      "data": "2026-10-19",
+      "typ": 0,
+      "makra": {
+        "kcal": 2565,
+        "bialko": 187,
+        "tluszcz": 106,
+        "wegle": 206
+      }
+    },
+    {
+      "sniadanie": "q_omlet_marchewkowy",
+      "drugi": "q_gofry",
+      "kolacja": "q_shake",
+      "obiad": "b_bolo",
+      "data": "2026-10-20",
+      "typ": 0,
+      "makra": {
+        "kcal": 2786,
+        "bialko": 198,
+        "tluszcz": 80,
+        "wegle": 304
+      }
+    },
+    {
+      "sniadanie": "q_tortilla_jajecznica",
+      "drugi": "q_gofry",
+      "kolacja": "q_shake",
+      "obiad": "b_bolo",
+      "data": "2026-10-21",
+      "typ": 1,
+      "makra": {
+        "kcal": 2600,
+        "bialko": 177,
+        "tluszcz": 107,
+        "wegle": 220
+      }
+    }
+  ],
+  "wygenerowano": "2026-10-19T11:17:27"
+}

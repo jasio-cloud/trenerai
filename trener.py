@@ -1,10 +1,11 @@
 # -*- coding: utf-8 -*-
 """
-Trener AI v2 — planowanie dnia, diety i treningu pod grafik 24/48 na ochronie.
+Trener AI v2 — planowanie dnia, diety i treningu pod tydzień bez pracy.
 
 Założenia, które ten plik realizuje:
-  * cykl trwa dokładnie 3 dni: ZMIANA (24h) -> PO ZMIANIE -> WOLNE,
-  * zakupy i gotowanie odbywają się RAZ na cykl, w dniu po zmianie, po odespaniu,
+  * tydzień: trening Pon/Wt/Czw/Pt rano, Śr/Sob/Nd wolne (rower zone 2),
+  * cykl zakupów trwa 3 dni, budżet 30 zł na dzień (90 zł na cykl),
+  * gotowanie codziennie, krótkie — do 20 minut, bez garnka na zapas,
   * jedno gotowanie = jedna "baza" na 3 obiady, reszta posiłków to składanki do 12 minut,
   * lodówka jest stanem trwałym, więc nie kupujemy drugi raz tego samego,
   * makra liczone są ze składników (data/makro.json) — to jedyne źródło prawdy,
@@ -724,25 +725,47 @@ def _produkty_dict(pid, porcja=1.0):
 
 
 def koszt_portfela(potrzeba, stan_lod):
-    """(ile kosztuje zuzycie tego, czego nie ma w lodowce; ile zl pojdzie do kosza).
+    """(koszt zuzycia tego, czego nie ma w lodowce; ile zl do kosza; realny rachunek).
+
+    Trzecia liczba to to, co faktycznie zaplacisz w kasie: cale opakowania, takze
+    trwalych produktow. Na tym pilnujemy budzetu (config.budzet.dziennie_zl).
 
     Kupujesz cale opakowania. Jesli z kostki twarogu 250 g zuzyjesz 100 g, reszta
     krotko trwalych produktow przepada — planer ma tego unikac i dobierac dania tak,
     zeby otwarte opakowania schodzily do konca. Produkty z chlodni liczymy w polowie,
     bo czesc zejdzie w nastepnym cyklu."""
-    koszt = zmarn = 0.0
+    koszt = zmarn = zakup = 0.0
     for k, q in potrzeba.items():
         p = PROD[k]
         brak = q - stan_lod.get(k, {}).get("ilosc", 0)
         if brak <= 0.001:
             continue
         koszt += brak / p["opak"] * p["cena"]
+        opak = math.ceil(brak / p["opak"] - 1e-9)
+        zakup += opak * p["cena"]
         if p["trw"] == "trwale":
             continue
-        opak = math.ceil(brak / p["opak"] - 1e-9)
         reszta = opak * p["opak"] - brak
         zmarn += reszta / p["opak"] * p["cena"] * (1.0 if p["trw"] == "swieze" else 0.5)
-    return koszt, zmarn
+    return koszt, zmarn, zakup
+
+
+def budzet_cyklu():
+    """Ile zlotych na caly cykl zakupow. Jestes bez pracy, wiec to twardy limit,
+    nie sugestia: 30 zl na dzien x dlugosc cyklu."""
+    b = CFG.get("budzet") or {}
+    dz = b.get("dziennie_zl")
+    return dz * CFG.get("cykl", {}).get("dni", 3) if dz else None
+
+
+def kara_budzetu(zakup):
+    """Zl ponad budzet boli 100 pkt za zlotowke — piec razy mocniej niz zwykly koszt.
+
+    Planer woli wtedy dzien z blednymi 20 g wegli niz liste zakupow za 110 zl.
+    Pierwszy cykl po pustej lodowce i tak przekroczy limit (zapasy od zera) —
+    kara zbija go wtedy do minimum, a nastepne cykle mieszcza sie bez bolu."""
+    lim = budzet_cyklu()
+    return 100.0 * max(0.0, zakup - lim) if lim else 0.0
 
 
 def _wybierz_baze(historia, d=None):
@@ -917,8 +940,8 @@ def generuj_plan(d=None, force=False, zapisz=True):
             for s_ in ("sniadanie", "drugi", "kolacja"):
                 for k, q in _produkty_dict(dz[s_]).items():
                     potrzeba[k] = potrzeba.get(k, 0) + q
-        koszt_, zmarn_ = koszt_portfela(potrzeba, stan_lod)
-        portfel = waga_k * (koszt_ + zmarn_)
+        koszt_, zmarn_, zakup_ = koszt_portfela(potrzeba, stan_lod)
+        portfel = waga_k * (koszt_ + zmarn_) + kara_budzetu(zakup_)
         # limity dzienne: laktoza i cukry proste w jednym dniu (po biegunce 19.09)
         lim = CFG.get("limity") or {}
         if lim:
@@ -963,8 +986,8 @@ def generuj_plan(d=None, force=False, zapisz=True):
                     potrzeba[k] = potrzeba.get(k, 0) + q
             for k, q in pelny["dodatek_w"] + ([[DOBITKA_PRODUKT, pelny["dobitka"]]] if pelny["dobitka"] else []):
                 potrzeba[k] = potrzeba.get(k, 0) + q
-        koszt_, zmarn_ = koszt_portfela(potrzeba, stan_lod)
-        wynik += waga_k * (koszt_ + zmarn_)
+        koszt_, zmarn_, zakup_ = koszt_portfela(potrzeba, stan_lod)
+        wynik += waga_k * (koszt_ + zmarn_) + kara_budzetu(zakup_)
         if wynik < najlepszy_wynik:
             najlepszy_wynik, najlepszy = wynik, kandydat
 
@@ -1373,7 +1396,8 @@ def lista_zakupow(plan=None):
     sklepy = {}
     for x in kup:
         sklepy[x["sklep"]] = round(sklepy.get(x["sklep"], 0) + x["cena"], 2)
-    return {"kup": kup, "mam": mam, "koszt": round(koszt, 2), "sklepy": sklepy, "zrobione": False}
+    return {"kup": kup, "mam": mam, "koszt": round(koszt, 2), "sklepy": sklepy,
+            "budzet": budzet_cyklu(), "zrobione": False}
 
 
 def oznacz_niekupione(klucz):

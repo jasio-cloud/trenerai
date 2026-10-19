@@ -33,7 +33,7 @@
       "WPC"
     ],
     "cardio": "rower, zone 2, 35–45 min",
-    "praca": "brak (od 29.09.2026); wcześniej ochrona 24/48"
+    "praca": "brak (bezrobotny od 29.09.2026); wczesniej ochrona 24/48"
   },
   "makra": {
     "kcal": 2400,
@@ -91,7 +91,7 @@
     "cykle_minimum": 4,
     "komentarz": "Sen chodzi cyklami po ok. 90 min. Budzenie w srodku cyklu (zwlaszcza w fazie gebokiej) daje uczucie rozbicia, nawet gdy przespales duzo. Dlatego budzik ustawiamy na WIELOKROTNOSC cyklu liczona od momentu ZASNIECIA, nie polozenia sie. 90 min to srednia - indywidualnie bywa 80-110, wiec traktujemy to jako przyblizenie, a nie wyrocznie."
   },
-  "panel_wersja": 24,
+  "panel_wersja": 25,
   "panel_wersja_komentarz": "Numer wersji panelu. iPhone dodany do ekranu glownego trzyma stary HTML nawet po zmianie na serwerze. dane.json jest pobierany zawsze swiezy, wiec panel porownuje ten numer ze swoim wlasnym i gdy sie roznia, przeladowuje sie z parametrem ?v=, co omija cache. PODNIES O 1 PO KAZDEJ ZMIANIE W docs/index.html.",
   "repo": "jasio-cloud/trenerai",
   "galaz": "main",
@@ -129,10 +129,10 @@
         "od_tyg": 3,
         "do_tyg": 14,
         "makra": {
-          "kcal": 2200,
-          "bialko": 165,
+          "kcal": 2400,
+          "bialko": 160,
           "tluszcz": 80,
-          "wegle": 205
+          "wegle": 260
         },
         "tempo_kg_tydz": [
           -0.7,
@@ -143,7 +143,8 @@
           1.3
         ],
         "kroki": 8000,
-        "cel": "Tłuszcz w dół, siła w górę. Talia −4–6 cm do świąt."
+        "cel": "Tłuszcz w dół, siła w górę. Talia −4–6 cm do świąt.",
+        "komentarz": "Kalorie wg trenera (2400 kcal / 160 g bialka) — trzymamy jego liczby, system koryguje je dopiero po 10 dniach danych z wagi."
       },
       {
         "id": "F2",
@@ -247,10 +248,10 @@
     "komentarz": "Na start tylko sprawdzone, proste obiady z mielonej wołowiny i makaronu. Łopatka (gulasz, wołowina w cebuli) odłożona na później — droga. Kolejne dania dopisujemy, gdy użytkownik sam poprosi."
   },
   "oszczedzanie": {
-    "do": "2026-09-19",
+    "do": "2027-06-26",
     "waga": 30,
     "waga_opakowan": 15,
-    "komentarz": "Do tej daty planer patrzy na portfel: każde nowe opakowanie kosztuje 15 pkt błędu za 1 zł, zużycie 30 zamiast 20, a obiad to najtańsze z dozwolonych."
+    "komentarz": "Jestes bezrobotny, wiec oszczedzanie trwa do konca planu: 1 zl zuzycia = 30 pkt bledu, nowe opakowanie 15 pkt za zlotowke, obiad to najtansza z dozwolonych baz."
   },
   "kuchnia": {
     "max_min_posilek": 20,
@@ -290,8 +291,12 @@
     "komentarz": "Schemat trenera (ok. 2050 kcal). Twój cel to 2400 kcal i 160 g białka, więc trzymamy kształt posiłków, a różnicę planer dokłada w węglach i białku."
   },
   "cykl": {
-    "start": "2026-09-30",
+    "start": "2026-10-19",
     "dni": 3,
-    "komentarz": "Zakupy i planowanie menu co 3 dni, licząc od tej daty. Gotowanie codzienne, bez garnka na zapas."
+    "komentarz": "Restart planu 19.10.2026. Zakupy i menu co 3 dni od tej daty, gotowanie codzienne do 20 min."
+  },
+  "budzet": {
+    "dziennie_zl": 30,
+    "komentarz": "Bez pracy od 29.09.2026: twardy limit zakupow 30 zl na dzien, czyli 90 zl na 3-dniowy cykl. Zlotowka ponad limit = 100 pkt bledu (kara_budzetu w trener.py), wiec planer raczej przestawi makra niz przekroczy budzet. Pierwszy cykl po restarcie moze byc drozszy, bo zapasy robimy od zera."
   }
 }
