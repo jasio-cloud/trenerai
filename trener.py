@@ -661,9 +661,13 @@ def _koszt_posilku(pid):
     if pid not in _koszty:
         # produkt, ktorego w Twoim sklepie nie ma, liczy sie jak 15 zl drozej — planer go omija,
         # chyba ze danie naprawde nie ma zamiennika
+        # config.odlozone: produkty, ktorych w tym cyklu NIE kupujemy (brak kasy na pelna
+        # szafke od razu). Licza sie jak 40 zl drozej, wiec planer uklada menu bez nich.
+        odlozone = set(CFG.get("odlozone") or [])
         _koszty[pid] = (sum(q / PROD[k]["opak"] * PROD[k]["cena"]
                             for k, q in produkty_posilku(pid) if k != "przyprawy")
-                        + 15 * sum(1 for k, _ in produkty_posilku(pid) if PROD[k].get("dostepnosc", {}).get(CFG.get("sklep", "Dino")) is False))
+                        + 15 * sum(1 for k, _ in produkty_posilku(pid) if PROD[k].get("dostepnosc", {}).get(CFG.get("sklep", "Dino")) is False)
+                        + 40 * sum(1 for k, _ in produkty_posilku(pid) if k in odlozone))
     return _koszty[pid]
 
 
@@ -729,6 +733,16 @@ def _produkty_dict(pid, porcja=1.0):
                 out[k] = out.get(k, 0) + q
         _PROD_POSILKU[klucz] = out
     return _PROD_POSILKU[klucz]
+
+
+def kara_odlozonych(potrzeba, stan_lod):
+    """Produkty z config.odlozone, ktorych nie masz — kazdy to 120 pkt bledu.
+
+    Nie zakazujemy ich twardo (czasem dzien naprawde ich potrzebuje), ale planer
+    ma ukladac pierwsze cykle z tego, co juz kupiles, zamiast wymagac calej szafki naraz."""
+    odlozone = CFG.get("odlozone") or []
+    return 600.0 * sum(1 for k in odlozone
+                       if potrzeba.get(k, 0) > stan_lod.get(k, {}).get("ilosc", 0) + 0.001)
 
 
 def koszt_portfela(potrzeba, stan_lod):
@@ -807,6 +821,21 @@ def budzet_cyklu():
     b = CFG.get("budzet") or {}
     dz = b.get("dziennie_zl")
     return dz * CFG.get("cykl", {}).get("dni", 3) if dz else None
+
+
+def kara_rachunku(zakup):
+    """Ile boli to, co dzis REALNIE zaplacisz w kasie (cale opakowania).
+
+    Limit 30 zl/dzien dotyczy jedzenia, ale przy pustej szafce pierwszy zakup to
+    jeszcze olej, maka, przyprawy, miod — jednorazowo wychodzilo 250 zl, czego nie
+    masz z czego zaplacic. Dlatego osobno pilnujemy samego rachunku:
+    kazda zlotowka kosztuje troche, a zlotowka ponad limit pierwszego zakupu — duzo."""
+    b = CFG.get("budzet") or {}
+    kara = float(b.get("waga_rachunku", 0) or 0) * zakup
+    lim = b.get("jednorazowo_zl")
+    if lim:
+        kara += 60.0 * max(0.0, zakup - lim)
+    return kara
 
 
 def kara_budzetu(koszt_jedzenia):
@@ -993,7 +1022,8 @@ def generuj_plan(d=None, force=False, zapisz=True):
                 for k, q in _produkty_dict(dz[s_]).items():
                     potrzeba[k] = potrzeba.get(k, 0) + q
         koszt_, zmarn_, zakup_ = koszt_portfela(potrzeba, stan_lod)
-        portfel = waga_k * (koszt_ + zmarn_) + kara_budzetu(koszt_ + zmarn_)
+        portfel = (waga_k * (koszt_ + zmarn_) + kara_budzetu(koszt_ + zmarn_)
+                   + kara_rachunku(zakup_) + kara_odlozonych(potrzeba, stan_lod))
         # limity dzienne: laktoza i cukry proste w jednym dniu (po biegunce 19.09)
         lim = CFG.get("limity") or {}
         if lim:
@@ -1055,7 +1085,8 @@ def generuj_plan(d=None, force=False, zapisz=True):
             for k, q in pelny["dodatek_w"] + ([[DOBITKA_PRODUKT, pelny["dobitka"]]] if pelny["dobitka"] else []):
                 potrzeba[k] = potrzeba.get(k, 0) + q
         koszt_, zmarn_, zakup_ = koszt_portfela(potrzeba, stan_lod)
-        wynik += waga_k * (koszt_ + zmarn_) + kara_budzetu(koszt_ + zmarn_)
+        wynik += (waga_k * (koszt_ + zmarn_) + kara_budzetu(koszt_ + zmarn_)
+                  + kara_rachunku(zakup_) + kara_odlozonych(potrzeba, stan_lod))
         if wynik < najlepszy_wynik:
             najlepszy_wynik, najlepszy = wynik, kandydat
 
@@ -1464,10 +1495,19 @@ def lista_zakupow(plan=None):
     sklepy = {}
     for x in kup:
         sklepy[x["sklep"]] = round(sklepy.get(x["sklep"], 0) + x["cena"], 2)
+    # Podzial listy: co jest zakupem SZAFKI (kupujesz raz, starczy na tygodnie),
+    # a co jedzeniem na te 3 dni. Przy pustej kuchni caly rachunek wyglada strasznie,
+    # a polowa to olej, maka i przyprawy, ktorych drugi raz nie kupisz.
+    for poz in kup:
+        pr = PROD[poz["klucz"]]
+        zuzyta_czesc = min(poz["brakuje"], poz["dokupisz"]) / (poz["dokupisz"] or 1)
+        poz["szafka"] = bool(pr["trw"] == "trwale" and zuzyta_czesc < 0.5)
     zjesz = sum(min(p["brakuje"], p["dokupisz"]) / PROD[p["klucz"]]["opak"] * PROD[p["klucz"]]["cena"] for p in kup)
+    szafka = round(sum(p["cena"] for p in kup if p["szafka"]), 2)
     return {"kup": kup, "mam": mam, "koszt": round(koszt, 2), "sklepy": sklepy,
             "budzet": budzet_cyklu(), "zjesz": round(zjesz, 2),
-            "zapas": round(koszt - zjesz, 2), "zrobione": False}
+            "zapas": round(koszt - zjesz, 2), "szafka": szafka,
+            "na_dni": round(koszt - szafka, 2), "zrobione": False}
 
 
 def oznacz_niekupione(klucz):
@@ -2900,6 +2940,14 @@ def pokaz_zakupy():
                             "pieczywo": "PIECZYWO I MAKARONY", "spizarnia": "SPIŻARNIA"}.get(ost, ost.upper()))
         print("   □ %-34s %d × %g %s   %5.2f zł"
               % (poz["nazwa"], poz["opakowan"], poz["opak"], poz["jedn"], poz["cena"]))
+    print("\n   RAZEM %.2f zł" % z["koszt"])
+    if z.get("szafka"):
+        print("   w tym szafka (kupujesz raz): %.2f zł" % z["szafka"])
+    print("   jedzenie zużyte w tych 3 dniach: %.2f zł (%.1f zł/dzień, limit %s zł/dzień)"
+          % (z["zjesz"], z["zjesz"] / 3.0, (CFG.get("budzet") or {}).get("dziennie_zl", "-")))
+    zostanie = z["koszt"] - z.get("szafka", 0) - z["zjesz"]
+    if zostanie > 0.5:
+        print("   zostanie w lodówce na kolejne dni: %.2f zł" % zostanie)
     if z["mam"]:
         _kreska("JUŻ MASZ — NIE KUPUJ")
         for poz in z["mam"]:

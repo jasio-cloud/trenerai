@@ -218,7 +218,7 @@ const esc = s => String(s??"").replace(/[&<>"]/g, c => ({"&":"&amp;","<":"&lt;",
 /* Wersja panelu. iPhone dodany do ekranu głównego potrafi trzymać stary HTML
    w nieskończoność. dane.json leci zawsze świeży, więc porównujemy numery
    i przy różnicy przeładowujemy stronę z ?v=, co omija cache przeglądarki. */
-const WERSJA = 28;
+const WERSJA = 30;
 let D = null, widok = "dzis";
 
 /* ---- zapis z telefonu ------------------------------------------------------
@@ -687,16 +687,20 @@ function widokZakupy(){
       <input type="checkbox" data-id="${id}" ${on?"checked":""}>
       <span class="nazwa">${esc(p.nazwa)}</span>
       <span class="ile">${p.opakowan} × ${p.opak} ${esc(p.jedn)} · ${p.cena.toFixed(2)} zł
-        ${p.dokupisz - p.brakuje > 0.5 ? `<br><span class="kcal">zużyjesz ${p.brakuje}, ${Math.round((p.dokupisz - p.brakuje) * 10) / 10} zostanie na następne dni</span>` : ""}</span></label>`;
+        ${p.szafka ? `<br><span class="kcal">szafka — kupujesz raz, starczy na tygodnie</span>`
+          : (p.dokupisz - p.brakuje > 0.5 ? `<br><span class="kcal">zużyjesz ${p.brakuje}, ${Math.round((p.dokupisz - p.brakuje) * 10) / 10} zostanie na następne dni</span>` : "")}</span></label>`;
   }
   if(ostSklep !== null && Object.keys(sumy).length > 1)
     html += `<div class="suma"><span>${esc(ostSklep)}</span><span>${sumy[ostSklep].toFixed(2)} zł</span></div>`;
   html += `<div class="suma"><span>Razem</span><span>${z.koszt.toFixed(2)} zł</span></div>`;
-  if(z.zapas > 0.5)
-    html += `<div class="suma" style="opacity:.75"><span>w tym zapas na kolejne dni</span><span>${z.zapas.toFixed(2)} zł</span></div>`;
+  if(z.szafka > 0.5)
+    html += `<div class="suma" style="opacity:.75"><span>w tym szafka — kupujesz raz</span><span>${z.szafka.toFixed(2)} zł</span></div>`;
+  const zostanie = z.koszt - (z.szafka || 0) - (z.zjesz ?? z.koszt);
+  if(zostanie > 0.5)
+    html += `<div class="suma" style="opacity:.75"><span>zostanie w lodówce na później</span><span>${zostanie.toFixed(2)} zł</span></div>`;
   if(z.budzet){
     const jedzenie = (z.zjesz ?? z.koszt), nad = jedzenie - z.budzet;
-    html += `<div class="suma" style="opacity:.85"><span>Budżet — jedzenie na te 3 dni</span>
+    html += `<div class="suma" style="opacity:.85"><span>Zjesz w tych 3 dniach</span>
       <span>${jedzenie.toFixed(2)} / ${z.budzet} zł${nad > 0.5 ? ` — ponad limit o ${nad.toFixed(2)} zł` : " ✓"}</span></div>`;
   }
 

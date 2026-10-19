@@ -91,7 +91,7 @@
     "cykle_minimum": 4,
     "komentarz": "Sen chodzi cyklami po ok. 90 min. Budzenie w srodku cyklu (zwlaszcza w fazie gebokiej) daje uczucie rozbicia, nawet gdy przespales duzo. Dlatego budzik ustawiamy na WIELOKROTNOSC cyklu liczona od momentu ZASNIECIA, nie polozenia sie. 90 min to srednia - indywidualnie bywa 80-110, wiec traktujemy to jako przyblizenie, a nie wyrocznie."
   },
-  "panel_wersja": 28,
+  "panel_wersja": 30,
   "panel_wersja_komentarz": "Numer wersji panelu. iPhone dodany do ekranu glownego trzyma stary HTML nawet po zmianie na serwerze. dane.json jest pobierany zawsze swiezy, wiec panel porownuje ten numer ze swoim wlasnym i gdy sie roznia, przeladowuje sie z parametrem ?v=, co omija cache. PODNIES O 1 PO KAZDEJ ZMIANIE W docs/index.html.",
   "repo": "jasio-cloud/trenerai",
   "galaz": "main",
@@ -299,7 +299,9 @@
   },
   "budzet": {
     "dziennie_zl": 30,
-    "komentarz": "Bez pracy od 29.09.2026: limit 30 zl na dzien (90 zl na 3-dniowy cykl) liczony od JEDZENIA zjedzonego w cyklu plus tego, co sie zmarnuje — zapas (maslo, maka, chleb) rozklada sie na kolejne dni. Zlotowka ponad limit = 100 pkt bledu (kara_budzetu). Panel pokazuje caly rachunek, zapas i te czesc, ktora liczy sie do limitu."
+    "komentarz": "Limit 30 zl/dzien liczony od JEDZENIA zjedzonego w cyklu. Osobno pilnujemy jednorazowego rachunku (budzet.jednorazowo_zl): przy pustej szafce pierwszy zakup to tez olej, maka i przyprawy, wiec kazda zlotowka ponad 120 zl kosztuje planer 60 pkt bledu, a kazda zlotowka rachunku 2 pkt.",
+    "waga_rachunku": 2,
+    "jednorazowo_zl": 120
   },
   "ulubione": {
     "co_ile_dni": 3,
@@ -316,5 +318,7 @@
       200
     ],
     "komentarz": "Liczby z planu trenera pilnowane przez planer: min. 30 g bialka zwierzecego w kazdym posilku, 100-200 g warzyw."
-  }
+  },
+  "odlozone": [],
+  "odlozone_komentarz": "Klucze produktow, ktorych w tym cyklu NIE kupujesz (brak kasy). Planer uklada menu tak, zeby ich nie potrzebowac — np. [\"maslo_orzechowe\", \"miod\", \"orzechy\", \"krem_bez_cukru\"]."
 }
