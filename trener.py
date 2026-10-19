@@ -2941,7 +2941,9 @@ def pokaz_trening(d=None):
         print("   ▸ " + r)
     print()
     for c in w["cwiczenia"]:
-        print("   %-42s %s × %s   (przerwa %s)" % (c["nazwa"], c["serie"], c["powt"], c["przerwa"]))
+        # gdy arkusz rozpisuje serie osobno ("2x8-10 + 1x12-15"), nie dopisujemy przed tym liczby serii
+        opis = c["powt"] if "×" in str(c["powt"]) else "%s × %s" % (c["serie"], c["powt"])
+        print("   %-42s %-18s (przerwa %s)" % (c["nazwa"], opis, c["przerwa"]))
         if c.get("serie_wstepne"):
             print("        rozgrzewka: %s — dopiero potem serie robocze" % c["serie_wstepne"])
         print("        " + c["wskazowka"])

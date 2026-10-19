@@ -218,7 +218,7 @@ const esc = s => String(s??"").replace(/[&<>"]/g, c => ({"&":"&amp;","<":"&lt;",
 /* Wersja panelu. iPhone dodany do ekranu głównego potrafi trzymać stary HTML
    w nieskończoność. dane.json leci zawsze świeży, więc porównujemy numery
    i przy różnicy przeładowujemy stronę z ?v=, co omija cache przeglądarki. */
-const WERSJA = 27;
+const WERSJA = 28;
 let D = null, widok = "dzis";
 
 /* ---- zapis z telefonu ------------------------------------------------------
@@ -905,7 +905,7 @@ function widokTrening(){
           ? `pierwszy raz — zacznij od <b>${sugestia} kg${jd}</b>. Za lekko? Zapisz, ile dałeś, następnym razem podpowiem więcej`
           : "pierwszy raz — zapisz, ile dałeś, a od następnego razu podpowiem ciężar";
         return `<div class="cw">
-        <div class="g"><b>${esc(c.nazwa)}${c.v ? '<span class="v-znak" title="Buduje kształt litery V">V</span>' : ""}</b><span class="serie">${c.serie} × ${esc(c.powt)}</span></div>
+        <div class="g"><b>${esc(c.nazwa)}${c.v ? '<span class="v-znak" title="Buduje kształt litery V">V</span>' : ""}</b><span class="serie">${String(c.powt).includes("×") ? esc(c.powt) : c.serie + " × " + esc(c.powt)}</span></div>
         <div class="w">${esc(c.wskazowka)}</div>
         <a class="yt" href="${ytLink(c.nazwa)}" target="_blank" rel="noopener">▶ Jak to zrobić — filmy na YouTube</a>
         ${c.latwiej ? `<div class="wariant">Za trudne? ${esc(c.latwiej)}</div>` : ""}
