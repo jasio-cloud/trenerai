@@ -91,7 +91,7 @@
     "cykle_minimum": 4,
     "komentarz": "Sen chodzi cyklami po ok. 90 min. Budzenie w srodku cyklu (zwlaszcza w fazie gebokiej) daje uczucie rozbicia, nawet gdy przespales duzo. Dlatego budzik ustawiamy na WIELOKROTNOSC cyklu liczona od momentu ZASNIECIA, nie polozenia sie. 90 min to srednia - indywidualnie bywa 80-110, wiec traktujemy to jako przyblizenie, a nie wyrocznie."
   },
-  "panel_wersja": 25,
+  "panel_wersja": 27,
   "panel_wersja_komentarz": "Numer wersji panelu. iPhone dodany do ekranu glownego trzyma stary HTML nawet po zmianie na serwerze. dane.json jest pobierany zawsze swiezy, wiec panel porownuje ten numer ze swoim wlasnym i gdy sie roznia, przeladowuje sie z parametrem ?v=, co omija cache. PODNIES O 1 PO KAZDEJ ZMIANIE W docs/index.html.",
   "repo": "jasio-cloud/trenerai",
   "galaz": "main",
@@ -271,24 +271,26 @@
   "gryf_kg": 10,
   "ciezary_komentarz": "Wszystkie ciężary w planie i w dzienniku to same talerze, bez gryfa (gryf ok. 10 kg) i bez trzonka hantli.",
   "zasady_diety": [
-    "Cztery posiłki w równych odstępach (podbija syntezę białek).",
-    "Każdy posiłek ma mieć co najmniej 30 g białka ze źródła zwierzęcego.",
-    "Warzywa do 100-200 g na posiłek, sosy zero i ketchup bez cukru trener pomija w liczeniu — my liczymy je normalnie, więc masz margines w dół.",
-    "Napoje zero dozwolone. Saszetki Bolero, jeśli ciężko wypić wodę.",
-    "Aromaty (flavors) i słodzik do nabiału — zmieniają skyr i twaróg w deser bez kalorii."
+    "Cztery posilki w mniej wiecej rownych odstepach — chodzi o rownomierna synteze bialek miesniowych.",
+    "Kazdy posilek ma min. 30 g bialka ZWIERZECEGO (bialko z makaronu, maki i pieczywa trener liczy osobno).",
+    "Warzywa 100-200 g do posilku, ketchup bez cukru i sosy zero nie wchodza do liczenia.",
+    "Napoje zero dozwolone, slodzik w tabletkach, aromaty do nabialu (skyr, twarog, serek).",
+    "Jesli mieso ma tluszcz — liczymy go (poza piersia z kurczaka/indyka i chudymi rybami).",
+    "Z orzechow nie liczymy bialka i wegli, tylko tluszcz: 10 g tluszczu = ok. 20 g orzechow.",
+    "Owoce w zelu / fruzeliny / dzem Lowicz 26 kcal na 100 g — dodatek do slodkich posilkow."
   ],
   "makra_posilkow": {
-    "posilek_1": {
+    "p1": {
       "bialko": 30,
       "tluszcz": 20,
       "wegle": 40
     },
-    "posilki_2_4": {
+    "p2_4": {
       "bialko": 30,
       "tluszcz": 10,
       "wegle": 80
     },
-    "komentarz": "Schemat trenera (ok. 2050 kcal). Twój cel to 2400 kcal i 160 g białka, więc trzymamy kształt posiłków, a różnicę planer dokłada w węglach i białku."
+    "komentarz": "Schemat trenera: pierwszy posilek 30b/20t/40w, pozostale trzy 30b/10t/80w. Liczone po trenersku (bez warzyw, sosow zero i bialka roslinnego) — w apce te same posilki wychodza ok. 2400 kcal i 160 g bialka."
   },
   "cykl": {
     "start": "2026-10-19",
@@ -297,6 +299,22 @@
   },
   "budzet": {
     "dziennie_zl": 30,
-    "komentarz": "Bez pracy od 29.09.2026: twardy limit zakupow 30 zl na dzien, czyli 90 zl na 3-dniowy cykl. Zlotowka ponad limit = 100 pkt bledu (kara_budzetu w trener.py), wiec planer raczej przestawi makra niz przekroczy budzet. Pierwszy cykl po restarcie moze byc drozszy, bo zapasy robimy od zera."
+    "komentarz": "Bez pracy od 29.09.2026: limit 30 zl na dzien (90 zl na 3-dniowy cykl) liczony od JEDZENIA zjedzonego w cyklu plus tego, co sie zmarnuje — zapas (maslo, maka, chleb) rozklada sie na kolejne dni. Zlotowka ponad limit = 100 pkt bledu (kara_budzetu). Panel pokazuje caly rachunek, zapas i te czesc, ktora liczy sie do limitu."
+  },
+  "ulubione": {
+    "co_ile_dni": 3,
+    "komentarz": "Co ile dni wraca ulubione sniadanie (omlet marchewkowy / tortilla z jajecznica). Bylo 3 dni na 4, przez co menu zrobilo sie dwupozycyjne. Trener dal 9 wariantow pierwszego posilku, wiec teraz co drugi dzien."
+  },
+  "trening": {
+    "bonus_serii": 0,
+    "komentarz": "0 = plan trenera 1:1 (gora po 2 serie robocze, dol 3-4). Ustaw 1, jesli objetosc gory ma byc wieksza — wtedy kazde cwiczenie dostaje jedna serie robocza wiecej."
+  },
+  "zasady_liczbowe": {
+    "bialko_zwierzece_posilek_g": 30,
+    "warzywa_posilek_g": [
+      100,
+      200
+    ],
+    "komentarz": "Liczby z planu trenera pilnowane przez planer: min. 30 g bialka zwierzecego w kazdym posilku, 100-200 g warzyw."
   }
 }

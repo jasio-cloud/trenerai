@@ -1496,6 +1496,357 @@
         "Posmaruj majonezem ({majonez_light}) i ketchupem ({ketchup}), wyłóż mięso, ser ({ser_zolty}) i sałatę ({salata}).",
         "Zwiń w rulon i przekrój na pół. Do pojemnika zawiń w folię."
       ]
+    },
+    {
+      "id": "q_jaja_tosty",
+      "nazwa": "Jajecznica z 4 jaj na toście",
+      "sloty": [
+        "sniadanie",
+        "kolacja"
+      ],
+      "box": false,
+      "czas_min": 10,
+      "produkty": [
+        [
+          "jaja",
+          4
+        ],
+        [
+          "chleb_tostowy",
+          4
+        ],
+        [
+          "maslo",
+          8
+        ],
+        [
+          "pomidor",
+          1
+        ],
+        [
+          "przyprawy",
+          1
+        ]
+      ],
+      "kroki": [
+        "Rozgrzej patelnię z masłem ({maslo}).",
+        "Wbij jaja ({jaja}), posól, mieszaj na wolnym ogniu do ścięcia — jajecznica ma być wilgotna.",
+        "W tym czasie opiecz tosty ({chleb_tostowy}) w tosterze albo na suchej patelni.",
+        "Pomidor ({pomidor}) w plastry obok. Posyp przyprawami ({przyprawy}) i jedz od razu."
+      ],
+      "zrodlo": "trener — Posiłek 1, wariant 1"
+    },
+    {
+      "id": "q_omlet_jablko",
+      "nazwa": "Omlet na słodko z jabłkiem i kremem",
+      "sloty": [
+        "sniadanie"
+      ],
+      "box": true,
+      "czas_min": 14,
+      "produkty": [
+        [
+          "skyr",
+          1.2
+        ],
+        [
+          "jaja",
+          1
+        ],
+        [
+          "jablko",
+          0.6
+        ],
+        [
+          "maka",
+          50
+        ],
+        [
+          "proszek_do_pieczenia",
+          2
+        ],
+        [
+          "krem_bez_cukru",
+          30
+        ],
+        [
+          "cynamon",
+          1
+        ]
+      ],
+      "kroki": [
+        "Jabłko ({jablko}) zetrzyj na tarce grubych oczek albo pokrój w drobną kostkę.",
+        "Wymieszaj skyr ({skyr}), jajko ({jaja}), mąkę ({maka}) i proszek ({proszek_do_pieczenia}) na gęste ciasto. Dorzuć jabłko i cynamon ({cynamon}).",
+        "Wylej na patelnię z odrobiną tłuszczu, smaż pod przykryciem ok. 4 minuty, przewróć i jeszcze 2-3 minuty.",
+        "Na wierzch krem do smarowania ({krem_bez_cukru})."
+      ],
+      "zrodlo": "trener — Posiłek 1, wariant 2"
+    },
+    {
+      "id": "q_nalesniki",
+      "nazwa": "Naleśniki ze skyrem i kremem",
+      "sloty": [
+        "sniadanie",
+        "drugi"
+      ],
+      "box": true,
+      "czas_min": 16,
+      "produkty": [
+        [
+          "jaja",
+          1
+        ],
+        [
+          "mleko",
+          50
+        ],
+        [
+          "maka",
+          50
+        ],
+        [
+          "slodzik",
+          1
+        ],
+        [
+          "skyr",
+          1.3
+        ],
+        [
+          "krem_bez_cukru",
+          30
+        ]
+      ],
+      "kroki": [
+        "Rozkłóć jajko ({jaja}) z mlekiem ({mleko}) i 150 ml wody, dosyp mąkę ({maka}) i słodzik ({slodzik}). Ciasto ma być rzadkie jak śmietanka.",
+        "Smaż cienkie naleśniki na mocno rozgrzanej patelni, po ok. minucie z każdej strony. Wyjdą 3-4 sztuki.",
+        "Skyr ({skyr}) rozsmaruj po naleśniku, zwiń w rulon.",
+        "Na wierzch krem do smarowania ({krem_bez_cukru})."
+      ],
+      "zrodlo": "trener — Posiłek 1, wariant 8"
+    },
+    {
+      "id": "q_skyr_orzechy_xl",
+      "nazwa": "Duży skyr z bananem i masłem orzechowym",
+      "sloty": [
+        "sniadanie",
+        "drugi"
+      ],
+      "box": true,
+      "czas_min": 3,
+      "produkty": [
+        [
+          "skyr",
+          1.7
+        ],
+        [
+          "banan",
+          1
+        ],
+        [
+          "maslo_orzechowe",
+          2.5
+        ],
+        [
+          "cynamon",
+          1
+        ]
+      ],
+      "kroki": [
+        "Przełóż skyr ({skyr}) do miski albo pojemnika.",
+        "Banan ({banan}) pokrój w plastry, wrzuć na wierzch.",
+        "Dodaj masło orzechowe ({maslo_orzechowe}) i cynamon ({cynamon}). Wymieszaj albo zostaw warstwami."
+      ],
+      "zrodlo": "trener — Posiłek 1, wariant 5"
+    },
+    {
+      "id": "q_jaja_szynka_grahamka",
+      "nazwa": "Jajka na twardo z szynką i grahamką",
+      "sloty": [
+        "sniadanie",
+        "drugi",
+        "kolacja"
+      ],
+      "box": true,
+      "czas_min": 12,
+      "produkty": [
+        [
+          "jaja",
+          3
+        ],
+        [
+          "majonez_light",
+          15
+        ],
+        [
+          "szynka",
+          50
+        ],
+        [
+          "grahamka",
+          1
+        ],
+        [
+          "ogorek_kiszony",
+          1
+        ]
+      ],
+      "kroki": [
+        "Jajka ({jaja}) gotuj 9 minut od zagotowania, potem zalej zimną wodą — wtedy skorupka schodzi.",
+        "Obierz, pokrój na ćwiartki, wymieszaj z majonezem ({majonez_light}).",
+        "Szynkę ({szynka}) i ogórek kiszony ({ogorek_kiszony}) pokrój, dołóż do pojemnika.",
+        "Grahamka ({grahamka}) osobno, przekrojona na pół."
+      ],
+      "zrodlo": "trener — Posiłek 1, wariant 9"
+    },
+    {
+      "id": "q_serek_makaron",
+      "nazwa": "Serek wiejski z makaronem i bananem",
+      "sloty": [
+        "drugi",
+        "kolacja"
+      ],
+      "box": true,
+      "czas_min": 14,
+      "produkty": [
+        [
+          "serek_wiejski",
+          1.5
+        ],
+        [
+          "makaron",
+          75
+        ],
+        [
+          "banan",
+          1
+        ],
+        [
+          "przyprawy",
+          1
+        ]
+      ],
+      "kroki": [
+        "Wstaw osoloną wodę, ugotuj makaron ({makaron}) wg czasu z opakowania, odcedź i przestudź.",
+        "Wymieszaj z serkiem wiejskim ({serek_wiejski}), dopraw ({przyprawy}).",
+        "Banan ({banan}) w plastry — osobno albo na wierzch."
+      ],
+      "zrodlo": "trener — Posiłek 2/3/4, wariant 2"
+    },
+    {
+      "id": "q_twarog_makaron",
+      "nazwa": "Twaróg z makaronem i masłem orzechowym",
+      "sloty": [
+        "drugi",
+        "kolacja"
+      ],
+      "box": true,
+      "czas_min": 14,
+      "produkty": [
+        [
+          "twarog",
+          150
+        ],
+        [
+          "makaron",
+          75
+        ],
+        [
+          "maslo_orzechowe",
+          1.25
+        ],
+        [
+          "banan",
+          1
+        ]
+      ],
+      "kroki": [
+        "Ugotuj makaron ({makaron}), odcedź, przestudź.",
+        "Twaróg ({twarog}) rozgnieć widelcem z odrobiną wody, aż będzie kremowy.",
+        "Połącz z makaronem, dodaj masło orzechowe ({maslo_orzechowe}) i banana ({banan}) w plastrach."
+      ],
+      "zrodlo": "trener — Posiłek 2/3/4, wariant 4"
+    },
+    {
+      "id": "o_pizza_tortilla",
+      "nazwa": "Pizza na tortilli z mozzarellą i szynką",
+      "sloty": [
+        "obiad",
+        "kolacja"
+      ],
+      "box": false,
+      "czas_min": 14,
+      "produkty": [
+        [
+          "tortilla",
+          2
+        ],
+        [
+          "mozzarella_light",
+          100
+        ],
+        [
+          "szynka",
+          50
+        ],
+        [
+          "passata",
+          40
+        ],
+        [
+          "przyprawy",
+          1
+        ],
+        [
+          "pieczarki",
+          50
+        ]
+      ],
+      "kroki": [
+        "Nagrzej piekarnik na 220 stopni (albo airfryer na 200).",
+        "Tortille ({tortilla}) połóż na blasze, posmaruj passatą ({passata}), dopraw ({przyprawy}).",
+        "Rozłóż szynkę ({szynka}), pieczarki ({pieczarki}) w plastrach i mozzarellę ({mozzarella_light}).",
+        "Piecz 6-8 minut, aż ser się zapiecze, a brzegi będą chrupiące."
+      ],
+      "zrodlo": "trener — Posiłek 2/3/4, wariant z pitą"
+    },
+    {
+      "id": "o_mielone_frytki",
+      "nazwa": "Mielona wołowina z frytkami z piekarnika",
+      "sloty": [
+        "obiad"
+      ],
+      "box": false,
+      "czas_min": 20,
+      "produkty": [
+        [
+          "mielone_wolowe",
+          150
+        ],
+        [
+          "frytki_mrozone",
+          250
+        ],
+        [
+          "ketchup",
+          2
+        ],
+        [
+          "przyprawy",
+          1
+        ],
+        [
+          "cebula",
+          0.5
+        ]
+      ],
+      "kroki": [
+        "Frytki ({frytki_mrozone}) wysyp na blachę jedną warstwą, piekarnik 220 stopni, 18 minut (airfryer 200 stopni, 14 minut).",
+        "Na patelni podsmaż cebulę ({cebula}), dodaj mięso ({mielone_wolowe}), rozbijaj łopatką.",
+        "Smaż ok. 8 minut do zarumienienia, dopraw ({przyprawy}).",
+        "Podaj z ketchupem ({ketchup})."
+      ],
+      "zrodlo": "trener — Posiłek 2/3/4, wariant z frytkami"
     }
   ]
 }

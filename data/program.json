@@ -1,5 +1,5 @@
 {
-  "_info": "Program treningowy v3 — dom: klatka Kelton, ławka Marbo, sztanga, hantle do 80 kg, ok. 114 kg talerzy. Bez drążka i bez wyciągu. Wracasz po przerwie, więc ciężary startowe to ok. 80% tego, co miałeś, i wracasz do swoich liczb w 3–5 tygodni. Priorytety pod sylwetkę V: klatka, barki boczne, plecy, ramiona, wąska talia.",
+  "_info": "Plan trenera (Jan Rajdaszka) przepisany 1:1 z arkusza: serie i zakresy powtorzen dokladnie jak w kolumnie z cwiczeniami. serie_wstepne to rozgrzewka z arkusza — dwa pierwsze cwiczenia treningu maja pelna piramide, reszta jedna serie 50%. Split z arkusza: gora > dol > off > gora > dol > 2 off.",
   "bloki": [
     {
       "id": "nauka",
@@ -69,49 +69,55 @@
       "cwiczenia": [
         {
           "nazwa": "Wyciskanie sztangi leżąc",
-          "serie": 3,
-          "powt": "1×6-8 + 2×10-12",
+          "serie": 2,
+          "powt": "1×6-8 + 1×10-12",
           "przerwa": "3-4 min",
-          "wskazowka": "Ławka w klatce, bolce na wysokości klatki. Łopatki ściągnięte, stopy mocno na podłodze. Sztanga schodzi do dolnej części klatki, łokcie ok. 45 stopni od tułowia. Pierwsza seria ciężka (6-8), druga lżejsza na 10-12."
+          "wskazowka": "Ławka w klatce, bolce na wysokości klatki. Łopatki ściągnięte, stopy mocno na podłodze. Sztanga schodzi do dolnej części klatki, łokcie ok. 45 stopni od tułowia. Pierwsza seria ciężka (6-8), druga lżejsza na 10-12.",
+          "serie_wstepne": "30% × 8-12, 50% × 8, 75% × 2-3"
         },
         {
           "nazwa": "Wiosłowanie sztangą podchwytem",
-          "serie": 3,
+          "serie": 2,
           "powt": "10-12",
           "przerwa": "3 min",
-          "wskazowka": "Chwyt podchwytem na szerokość barków, tułów pochylony ok. 45 stopni, plecy proste. Ciągniesz sztangę do brzucha, łokcie blisko ciała, na górze ściągasz łopatki."
+          "wskazowka": "Chwyt podchwytem na szerokość barków, tułów pochylony ok. 45 stopni, plecy proste. Ciągniesz sztangę do brzucha, łokcie blisko ciała, na górze ściągasz łopatki.",
+          "serie_wstepne": "30% × 8-12, 50% × 8, 75% × 2-3"
         },
         {
           "nazwa": "Rozpiętki hantlami na skosie",
-          "serie": 3,
+          "serie": 2,
           "powt": "12-15",
           "przerwa": "1,5-2 min",
           "wskazowka": "Ławka 30 stopni, ręce lekko ugięte, ruch jak przy obejmowaniu drzewa. Opuszczasz do poziomu barków, nie niżej — dalej to już tylko bark.",
-          "seria_laczona": "Wiosłowanie hantlem jednorącz"
+          "seria_laczona": "Wiosłowanie hantlem jednorącz",
+          "serie_wstepne": "50% × 5-6"
         },
         {
           "nazwa": "Wiosłowanie hantlem jednorącz",
-          "serie": 3,
+          "serie": 2,
           "powt": "10-12",
           "przerwa": "1,5-2 min",
           "wskazowka": "Kolano i ręka na ławce, plecy płaskie. Ciągniesz hantel do biodra, nie do barku.",
-          "seria_laczona": "Rozpiętki hantlami na skosie"
+          "seria_laczona": "Rozpiętki hantlami na skosie",
+          "serie_wstepne": "50% × 5-6"
         },
         {
           "nazwa": "OHP hantlami siedząc",
-          "serie": 3,
+          "serie": 2,
           "powt": "8-10",
           "przerwa": "2 min",
           "wskazowka": "Ławka z oparciem pionowo, hantle na wysokości uszu. Wyciskasz nad głowę bez odchylania się do tyłu, żebra w dół, brzuch napięty.",
-          "seria_laczona": "Wznosy w bok hantlami stojąc"
+          "seria_laczona": "Wznosy w bok hantlami stojąc",
+          "serie_wstepne": "50% × 5-6"
         },
         {
           "nazwa": "Wznosy w bok hantlami stojąc",
-          "serie": 3,
+          "serie": 2,
           "powt": "10-12",
           "przerwa": "1,5-2 min",
           "wskazowka": "Łokcie lekko ugięte, ruch prowadzą łokcie. Unosisz do wysokości barków, nie wyżej.",
-          "seria_laczona": "OHP hantlami siedząc"
+          "seria_laczona": "OHP hantlami siedząc",
+          "serie_wstepne": "50% × 5-6"
         }
       ]
     },
@@ -125,7 +131,8 @@
           "powt": "10-12",
           "przerwa": "1,5-2 min",
           "wskazowka": "Chwyt jak przy trzymaniu młotka, kciuki do góry, łokcie przy tułowiu. Opuszczasz wolniej, niż podnosisz.",
-          "seria_laczona": "Wyciskanie francuskie hantli"
+          "seria_laczona": "Wyciskanie francuskie hantli",
+          "serie_wstepne": "30% × 8-12, 50% × 8, 75% × 2-3"
         },
         {
           "nazwa": "Wyciskanie francuskie hantli",
@@ -133,35 +140,40 @@
           "powt": "12-15",
           "przerwa": "1,5-2 min",
           "wskazowka": "Leżysz na ławce, hantle nad klatką, łokcie w miejscu. Zginasz ramiona, aż hantle znajdą się przy uszach, i prostujesz. Rusza się tylko przedramię.",
-          "seria_laczona": "Uginanie młotkowe hantli"
+          "seria_laczona": "Uginanie młotkowe hantli",
+          "serie_wstepne": "30% × 8-12, 50% × 8, 75% × 2-3"
         },
         {
           "nazwa": "Przysiad klasyczny",
           "serie": 3,
           "powt": "2×8-10 + 1×12-15",
           "przerwa": "3-4 min",
-          "wskazowka": "Sztanga na górze pleców, bolce w klatce ustawione tuż pod dołem ruchu. Stopy na szerokość barków, palce lekko na zewnątrz. Biodra w dół i w tył, plecy proste, schodzisz do równoległości ud z podłogą albo niżej."
+          "wskazowka": "Sztanga na górze pleców, bolce w klatce ustawione tuż pod dołem ruchu. Stopy na szerokość barków, palce lekko na zewnątrz. Biodra w dół i w tył, plecy proste, schodzisz do równoległości ud z podłogą albo niżej.",
+          "serie_wstepne": "50% × 5-6"
         },
         {
           "nazwa": "Stiff leg deadlift",
           "serie": 3,
           "powt": "2×8-10 + 1×12-15",
           "przerwa": "3-4 min",
-          "wskazowka": "Nogi prawie proste, sztanga sunie blisko nóg, biodra jadą do tyłu. Schodzisz tam, gdzie czujesz mocne rozciąganie z tyłu uda, plecy cały czas proste."
+          "wskazowka": "Nogi prawie proste, sztanga sunie blisko nóg, biodra jadą do tyłu. Schodzisz tam, gdzie czujesz mocne rozciąganie z tyłu uda, plecy cały czas proste.",
+          "serie_wstepne": "50% × 5-6"
         },
         {
           "nazwa": "Plank",
           "serie": 3,
           "powt": "30-45 s",
           "przerwa": "1 min",
-          "wskazowka": "Przedramiona pod barkami, ciało w jednej linii, pośladki i brzuch napięte. Wpisujesz liczbę sekund."
+          "wskazowka": "Przedramiona pod barkami, ciało w jednej linii, pośladki i brzuch napięte. Wpisujesz liczbę sekund.",
+          "serie_wstepne": "50% × 5-6"
         },
         {
           "nazwa": "Wspięcia łydki stojąc",
-          "serie": 3,
+          "serie": 2,
           "powt": "12-15",
           "przerwa": "1 min",
-          "wskazowka": "Hantle w dłoniach, przednia część stóp na podwyższeniu. Pełny zakres, sekunda zatrzymania na górze."
+          "wskazowka": "Hantle w dłoniach, przednia część stóp na podwyższeniu. Pełny zakres, sekunda zatrzymania na górze.",
+          "serie_wstepne": "50% × 5-6"
         }
       ]
     },
@@ -171,49 +183,55 @@
       "cwiczenia": [
         {
           "nazwa": "Wyciskanie sztangi na skosie",
-          "serie": 3,
+          "serie": 2,
           "powt": "8-10",
           "przerwa": "3-4 min",
-          "wskazowka": "Ławka 30 stopni, sztanga schodzi do obojczyków, łopatki ściągnięte. To ćwiczenie robi górę klatki."
+          "wskazowka": "Ławka 30 stopni, sztanga schodzi do obojczyków, łopatki ściągnięte. To ćwiczenie robi górę klatki.",
+          "serie_wstepne": "30% × 8-12, 50% × 8, 75% × 2-3"
         },
         {
           "nazwa": "Wiosłowanie sztangą podchwytem",
-          "serie": 3,
+          "serie": 2,
           "powt": "10-12",
           "przerwa": "3 min",
-          "wskazowka": "Chwyt podchwytem na szerokość barków, tułów pochylony ok. 45 stopni, plecy proste. Ciągniesz sztangę do brzucha, łokcie blisko ciała, na górze ściągasz łopatki."
+          "wskazowka": "Chwyt podchwytem na szerokość barków, tułów pochylony ok. 45 stopni, plecy proste. Ciągniesz sztangę do brzucha, łokcie blisko ciała, na górze ściągasz łopatki.",
+          "serie_wstepne": "30% × 8-12, 50% × 8, 75% × 2-3"
         },
         {
           "nazwa": "Wyciskanie hantli poziomo",
-          "serie": 3,
+          "serie": 2,
           "powt": "10-12",
           "przerwa": "2-3 min",
           "wskazowka": "Ławka płasko, hantle schodzą do poziomu klatki, łokcie ok. 45 stopni. Większy zakres niż przy sztandze.",
-          "seria_laczona": "Focze wiosłowanie hantlami szeroko"
+          "seria_laczona": "Focze wiosłowanie hantlami szeroko",
+          "serie_wstepne": "50% × 5-6"
         },
         {
           "nazwa": "Focze wiosłowanie hantlami szeroko",
-          "serie": 3,
+          "serie": 2,
           "powt": "12-15",
           "przerwa": "2 min",
           "wskazowka": "Leżysz brzuchem na ławce ustawionej na skos, hantle zwisają. Ciągniesz szeroko, łokcie na boki, na górze ściągasz łopatki. Plecy nie pracują na stabilizacji, więc cała robota idzie w mięśnie.",
-          "seria_laczona": "Wyciskanie hantli poziomo"
+          "seria_laczona": "Wyciskanie hantli poziomo",
+          "serie_wstepne": "50% × 5-6"
         },
         {
           "nazwa": "Wznosy hantlami w przód",
-          "serie": 3,
+          "serie": 2,
           "powt": "12-15",
           "przerwa": "1,5-2 min",
           "wskazowka": "Lekkie hantle, unosisz na prostych rękach do wysokości oczu, bez bujania tułowiem.",
-          "seria_laczona": "Wznosy w bok hantlami siedząc"
+          "seria_laczona": "Wznosy w bok hantlami siedząc",
+          "serie_wstepne": "50% × 5-6"
         },
         {
           "nazwa": "Wznosy w bok hantlami siedząc",
-          "serie": 3,
+          "serie": 2,
           "powt": "12-15",
           "przerwa": "1,5-2 min",
           "wskazowka": "Siedząc na ławce, plecy proste. Siedzenie wycina bujanie, więc ciężar będzie mniejszy niż stojąc.",
-          "seria_laczona": "Wznosy hantlami w przód"
+          "seria_laczona": "Wznosy hantlami w przód",
+          "serie_wstepne": "50% × 5-6"
         }
       ]
     },
@@ -227,7 +245,8 @@
           "powt": "10-12",
           "przerwa": "1,5-2 min",
           "wskazowka": "Łokcie przy tułowiu i w miejscu, bez bujania. Opuszczasz wolniej, niż podnosisz.",
-          "seria_laczona": "Wyciskanie francuskie sztangą"
+          "seria_laczona": "Wyciskanie francuskie sztangą",
+          "serie_wstepne": "30% × 8-12, 50% × 8, 75% × 2-3"
         },
         {
           "nazwa": "Wyciskanie francuskie sztangą",
@@ -235,35 +254,40 @@
           "powt": "12-15",
           "przerwa": "1,5-2 min",
           "wskazowka": "Leżysz na ławce, sztanga EZ nad klatką, łokcie w miejscu. Zginasz ramiona, aż gryf znajdzie się nad czołem, i prostujesz.",
-          "seria_laczona": "Uginanie sztangi (biceps)"
+          "seria_laczona": "Uginanie sztangi (biceps)",
+          "serie_wstepne": "30% × 8-12, 50% × 8, 75% × 2-3"
         },
         {
           "nazwa": "Przysiad bułgarski",
           "serie": 4,
           "powt": "10-12",
           "przerwa": "2 min",
-          "wskazowka": "Tylna stopa na ławce, przednia wysunięta. Schodzisz pionowo w dół, ciężar na przedniej pięcie. Powtórzenia liczysz na jedną nogę."
+          "wskazowka": "Tylna stopa na ławce, przednia wysunięta. Schodzisz pionowo w dół, ciężar na przedniej pięcie. Powtórzenia liczysz na jedną nogę.",
+          "serie_wstepne": "50% × 5-6"
         },
         {
           "nazwa": "Hip thrust",
           "serie": 3,
           "powt": "2×8-10 + 1×12-15",
           "przerwa": "3 min",
-          "wskazowka": "Górne plecy oparte o ławkę, sztanga na biodrach (podłóż coś miękkiego). Wypychasz biodra w górę do linii tułów-uda, na górze sekunda napięcia pośladków."
+          "wskazowka": "Górne plecy oparte o ławkę, sztanga na biodrach (podłóż coś miękkiego). Wypychasz biodra w górę do linii tułów-uda, na górze sekunda napięcia pośladków.",
+          "serie_wstepne": "50% × 5-6"
         },
         {
           "nazwa": "Wznosy nóg w leżeniu",
           "serie": 3,
           "powt": "max",
           "przerwa": "1 min",
-          "wskazowka": "Leżysz na plecach, dłonie pod pośladkami, nogi unosisz do pionu i powoli opuszczasz, nie kładąc pięt. Lędźwie dociśnięte do podłogi."
+          "wskazowka": "Leżysz na plecach, dłonie pod pośladkami, nogi unosisz do pionu i powoli opuszczasz, nie kładąc pięt. Lędźwie dociśnięte do podłogi.",
+          "serie_wstepne": "50% × 5-6"
         },
         {
           "nazwa": "Wspięcia łydki siedząc",
-          "serie": 3,
+          "serie": 2,
           "powt": "10-12",
           "przerwa": "1 min",
-          "wskazowka": "Siedząc, hantle na udach, przednia część stóp na podwyższeniu. Pełny zakres, sekunda na górze."
+          "wskazowka": "Siedząc, hantle na udach, przednia część stóp na podwyższeniu. Pełny zakres, sekunda na górze.",
+          "serie_wstepne": "50% × 5-6"
         }
       ]
     }

@@ -542,7 +542,7 @@ def _makra_porcji(pid, porcja):
     return _cache_makr[klucz]
 
 
-def dopasuj_porcje(dzien, cel=None, dodatkowe=None, zamrozone=None, porcje=PORCJE):
+def dopasuj_porcje(dzien, cel=None, dodatkowe=None, zamrozone=None, porcje=PORCJE, wolne_dodatki=False):
     """Dobiera wielkosc porcji posilkow, zeby CALY dzien trafial w cel makro.
 
     Sam wybor dan zbliza dzien do celu, ale zostawia np. 15 g bialka dziury.
@@ -568,9 +568,12 @@ def dopasuj_porcje(dzien, cel=None, dodatkowe=None, zamrozone=None, porcje=PORCJ
     # Petla leci kilkaset tysiecy razy na plan, wiec bez slownikow w srodku.
     # Dodatki proponujemy tylko z tego, co realnie jest w lodowce — inaczej plan kaze
     # dolozyc kubek skyru, ktorego nie ma, i dzien z miejsca nie trafia w makro.
+    # wolne_dodatki=True przy planowaniu CYKLU: lodowka jest wtedy jeszcze przed zakupami,
+    # a dobitka i tak trafia na liste zakupow. Bez tego pierwszy dzien po restarcie
+    # mial ~20 g dziury w bialku, bo nie bylo z czego dobic.
     stan_ = wczytaj_lodowke()["stan"]
     def jest(k, ile):
-        return stan_.get(k, {}).get("ilosc", 0) >= ile - 0.001
+        return wolne_dodatki or stan_.get(k, {}).get("ilosc", 0) >= ile - 0.001
     warianty = []
     for g in DOBITKI:
         if g and not jest(DOBITKA_PRODUKT, g):
@@ -669,9 +672,13 @@ def _ulubione():
 
 
 def dzien_ulubionego(d):
-    """Ulubione sniadanie 3 dni na 4. Co czwarty dzien odmiana — dla urozmaicenia
-    i zeby sie nie przejadlo; liczone po dacie, wiec rytm nie zalezy od cykli."""
-    return d.toordinal() % 4 != 3
+    """Jak czesto wraca ulubione sniadanie (config.ulubione.co_ile_dni, domyslnie 2).
+
+    Bylo 3 dni na 4 i zrobilo sie z tego menu z dwoch pozycji. Trener dal dziewiec
+    wariantow pierwszego posilku, wiec ulubione wraca co drugi dzien, a w pozostale
+    dni wchodzi reszta puli."""
+    ile = int((CFG.get("ulubione") or {}).get("co_ile_dni", 2) or 2)
+    return ile <= 1 or d.toordinal() % ile == 0
 
 
 def ulubione_na(d):
@@ -750,6 +757,50 @@ def koszt_portfela(potrzeba, stan_lod):
     return koszt, zmarn, zakup
 
 
+# Bialko ZWIERZECE — trener liczy tylko takie: "jak masz 30 g bialka, to ma byc
+# w posilku ze zrodla zwierzecego" (bialko z makaronu, maki i pieczywa sie nie liczy).
+ZWIERZECE = {"jaja", "twarog", "skyr", "skyr_waniliowy", "skyr_pitny", "napoj_proteinowy",
+             "jogurt_grecki", "serek_wiejski", "ser", "ser_zolty", "cheddar_topiony",
+             "mozzarella", "mozzarella_light", "feta", "smietana", "mleko", "maslo",
+             "szynka", "poledwica", "wedlina_wolowa", "mielone_wolowe", "wolowina_gulasz",
+             "parowki_wolowe", "kabanosy", "odzywka_wpc"}
+_BIALKO_ZW = {}
+
+
+def bialko_zwierzece(pid, porcja=1.0):
+    """Ile gramow bialka zwierzecego ma posilek — regula trenera: min. 30 g na posilek."""
+    if pid not in _BIALKO_ZW:
+        suma = 0.0
+        for k, q in produkty_posilku(pid, 1.0):
+            m = MAKRO.get(k)
+            if m and k in ZWIERZECE:
+                suma += m[1] * gramy(k, q) / 100.0
+        _BIALKO_ZW[pid] = suma
+    return _BIALKO_ZW[pid] * porcja
+
+
+_BAZY_BIALKA = {}
+
+
+def baza_bialka(pid):
+    """Glowne zrodlo bialka w daniu — po to, zeby nie wyszedl dzien z trzema twarogami.
+
+    Liczymy, ktory produkt wnosi najwiecej bialka w porcji; dania z tym samym
+    zrodlem traktujemy jako jedna rodzine (jajka, twarog, skyr, mieso...)."""
+    if pid not in _BAZY_BIALKA:
+        najlepszy, ile = None, 0.0
+        for k, q in produkty_posilku(pid, 1.0):
+            m = MAKRO.get(k)
+            if not m:
+                continue
+            # makro.json: [kcal, bialko, tluszcz, wegle] na 100 g
+            b = m[1] * gramy(k, q) / 100.0
+            if b > ile:
+                najlepszy, ile = k, b
+        _BAZY_BIALKA[pid] = najlepszy or "?"
+    return _BAZY_BIALKA[pid]
+
+
 def budzet_cyklu():
     """Ile zlotych na caly cykl zakupow. Jestes bez pracy, wiec to twardy limit,
     nie sugestia: 30 zl na dzien x dlugosc cyklu."""
@@ -758,14 +809,15 @@ def budzet_cyklu():
     return dz * CFG.get("cykl", {}).get("dni", 3) if dz else None
 
 
-def kara_budzetu(zakup):
+def kara_budzetu(koszt_jedzenia):
     """Zl ponad budzet boli 100 pkt za zlotowke — piec razy mocniej niz zwykly koszt.
 
-    Planer woli wtedy dzien z blednymi 20 g wegli niz liste zakupow za 110 zl.
-    Pierwszy cykl po pustej lodowce i tak przekroczy limit (zapasy od zera) —
-    kara zbija go wtedy do minimum, a nastepne cykle mieszcza sie bez bolu."""
+    Liczymy to, co w cyklu naprawde ZJESZ (plus to, co sie zmarnuje), a nie caly
+    rachunek: paczka masla czy maki starcza na kilka cykli i jej cena rozklada sie
+    na kolejne dni. Dzieki temu limit 30 zl/dzien dotyczy jedzenia, a nie jednorazowego
+    zatowarowania szafki po restarcie."""
     lim = budzet_cyklu()
-    return 100.0 * max(0.0, zakup - lim) if lim else 0.0
+    return 100.0 * max(0.0, koszt_jedzenia - lim) if lim else 0.0
 
 
 def _wybierz_baze(historia, d=None):
@@ -941,7 +993,7 @@ def generuj_plan(d=None, force=False, zapisz=True):
                 for k, q in _produkty_dict(dz[s_]).items():
                     potrzeba[k] = potrzeba.get(k, 0) + q
         koszt_, zmarn_, zakup_ = koszt_portfela(potrzeba, stan_lod)
-        portfel = waga_k * (koszt_ + zmarn_) + kara_budzetu(zakup_)
+        portfel = waga_k * (koszt_ + zmarn_) + kara_budzetu(koszt_ + zmarn_)
         # limity dzienne: laktoza i cukry proste w jednym dniu (po biegunce 19.09)
         lim = CFG.get("limity") or {}
         if lim:
@@ -956,6 +1008,22 @@ def generuj_plan(d=None, force=False, zapisz=True):
                             cuk += g
                 kary += 2.0 * max(0, nab - lim.get("nabial_g", 9999))
                 kary += 6.0 * max(0, cuk - lim.get("cukry_dodane_g", 9999))
+        # regula trenera: kazdy posilek ma miec min. 30 g bialka zwierzecego.
+        # Brakujacy gram kosztuje 8 pkt — mniej niz dziura w bilansie dnia, ale tyle,
+        # zeby planer nie wstawial trzech weglowodanowych posilkow obok jednego miesnego.
+        min_zw = (CFG.get("zasady_liczbowe") or {}).get("bialko_zwierzece_posilek_g", 30)
+        for dz in kandydat:
+            kary += 8.0 * sum(max(0.0, min_zw - bialko_zwierzece(dz[s_]))
+                              for s_ in ("sniadanie", "drugi", "kolacja"))
+            kary += 8.0 * max(0.0, min_zw - bialko_zwierzece(baza["id"]))
+        # to samo zrodlo bialka najwyzej dwa razy dziennie — inaczej wychodzil dzien
+        # z twarogiem na sniadanie, twarogiem na drugi i twarozkiem na kolacje
+        for dz in kandydat:
+            rodziny = {}
+            for s_ in ("sniadanie", "drugi", "kolacja"):
+                b = baza_bialka(dz[s_])
+                rodziny[b] = rodziny.get(b, 0) + 1
+            kary += 220 * sum(max(0, n - 2) for n in rodziny.values())
         # deser bialkowy najwyzej raz dziennie — to ma byc cos slodkiego w planie, nie trzy kremy dziennie
         kary += 500 * sum(max(0, sum(1 for s_ in ("sniadanie", "drugi", "kolacja")
                                      if QUICK_BY_ID[dz[s_]].get("deser")) - 1) for dz in kandydat)
@@ -976,7 +1044,7 @@ def generuj_plan(d=None, force=False, zapisz=True):
         potrzeba = dict(baza_dict)
         for i_, dzien in enumerate(kandydat):
             pelny = dict(dzien, obiad=baza["id"])
-            porcje = dopasuj_porcje(pelny, cele[i_], porcje=_zakres_porcji(daty[i_]))
+            porcje = dopasuj_porcje(pelny, cele[i_], porcje=_zakres_porcji(daty[i_]), wolne_dodatki=True)
             pelny["dobitka"] = porcje.pop("_dobitka", 0)
             pelny["dodatek_w"] = porcje.pop("_dodatek_w", [])
             pelny["porcje"] = porcje
@@ -987,7 +1055,7 @@ def generuj_plan(d=None, force=False, zapisz=True):
             for k, q in pelny["dodatek_w"] + ([[DOBITKA_PRODUKT, pelny["dobitka"]]] if pelny["dobitka"] else []):
                 potrzeba[k] = potrzeba.get(k, 0) + q
         koszt_, zmarn_, zakup_ = koszt_portfela(potrzeba, stan_lod)
-        wynik += waga_k * (koszt_ + zmarn_) + kara_budzetu(zakup_)
+        wynik += waga_k * (koszt_ + zmarn_) + kara_budzetu(koszt_ + zmarn_)
         if wynik < najlepszy_wynik:
             najlepszy_wynik, najlepszy = wynik, kandydat
 
@@ -1396,8 +1464,10 @@ def lista_zakupow(plan=None):
     sklepy = {}
     for x in kup:
         sklepy[x["sklep"]] = round(sklepy.get(x["sklep"], 0) + x["cena"], 2)
+    zjesz = sum(min(p["brakuje"], p["dokupisz"]) / PROD[p["klucz"]]["opak"] * PROD[p["klucz"]]["cena"] for p in kup)
     return {"kup": kup, "mam": mam, "koszt": round(koszt, 2), "sklepy": sklepy,
-            "budzet": budzet_cyklu(), "zrobione": False}
+            "budzet": budzet_cyklu(), "zjesz": round(zjesz, 2),
+            "zapas": round(koszt - zjesz, 2), "zrobione": False}
 
 
 def oznacz_niekupione(klucz):
@@ -1600,9 +1670,14 @@ def _sesja(szablon, blok, ile):
     """Sesja z szablonu: pierwsze `ile` cwiczen (ulozone od najwazniejszego),
     liczba serii z bloku, a przy kazdym cwiczeniu propozycja ciezaru z dziennika."""
     cw = []
+    bonus = int((CFG.get("trening") or {}).get("bonus_serii", 0) or 0)
     for c in szablon["cwiczenia"][:ile]:
         c = dict(c)
         c.setdefault("serie", blok["serie"])
+        # serie z data/program.json sa przepisane 1:1 z arkusza trenera i wygrywaja z blokiem.
+        # bonus_serii dokłada serie robocza do kazdego cwiczenia, jesli uznasz, ze objetosc za mala
+        if bonus:
+            c["serie"] = int(c["serie"]) + bonus
         prop = dziennik.propozycja(c["nazwa"])
         if prop:
             c["propozycja"] = prop
@@ -2829,7 +2904,8 @@ def pokaz_gotowanie():
     for k, q in b["produkty"]:
         print("   • %-32s %s" % (PROD[k]["nazwa"], fmt_ilosc(k, q)))
     print("\nKROK PO KROKU")
-    for i, krok in enumerate(b["kroki"], 1):
+    # kroki bazy maja placeholdery {klucz} — w terminalu tez musza byc konkretne ilosci
+    for i, krok in enumerate(wypelnij_kroki(b['kroki'], b['produkty']), 1):
         print("   %d. %s" % (i, krok))
     print("\nPrzechowywanie: %s" % b["przechowywanie"])
     print("Odgrzewanie:    %s" % b["odgrzewanie"])
@@ -2852,6 +2928,8 @@ def pokaz_trening(d=None):
     print()
     for c in w["cwiczenia"]:
         print("   %-42s %s × %s   (przerwa %s)" % (c["nazwa"], c["serie"], c["powt"], c["przerwa"]))
+        if c.get("serie_wstepne"):
+            print("        rozgrzewka: %s — dopiero potem serie robocze" % c["serie_wstepne"])
         print("        " + c["wskazowka"])
     print("\n" + w["finisz"])
 

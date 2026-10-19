@@ -218,7 +218,7 @@ const esc = s => String(s??"").replace(/[&<>"]/g, c => ({"&":"&amp;","<":"&lt;",
 /* Wersja panelu. iPhone dodany do ekranu głównego potrafi trzymać stary HTML
    w nieskończoność. dane.json leci zawsze świeży, więc porównujemy numery
    i przy różnicy przeładowujemy stronę z ?v=, co omija cache przeglądarki. */
-const WERSJA = 25;
+const WERSJA = 27;
 let D = null, widok = "dzis";
 
 /* ---- zapis z telefonu ------------------------------------------------------
@@ -692,10 +692,12 @@ function widokZakupy(){
   if(ostSklep !== null && Object.keys(sumy).length > 1)
     html += `<div class="suma"><span>${esc(ostSklep)}</span><span>${sumy[ostSklep].toFixed(2)} zł</span></div>`;
   html += `<div class="suma"><span>Razem</span><span>${z.koszt.toFixed(2)} zł</span></div>`;
+  if(z.zapas > 0.5)
+    html += `<div class="suma" style="opacity:.75"><span>w tym zapas na kolejne dni</span><span>${z.zapas.toFixed(2)} zł</span></div>`;
   if(z.budzet){
-    const nad = z.koszt - z.budzet;
-    html += `<div class="suma" style="opacity:.85"><span>Budżet (30 zł/dzień)</span>
-      <span>${nad > 0.5 ? `${z.budzet} zł — ponad limit o ${nad.toFixed(2)} zł` : `${z.budzet} zł — mieścisz się`}</span></div>`;
+    const jedzenie = (z.zjesz ?? z.koszt), nad = jedzenie - z.budzet;
+    html += `<div class="suma" style="opacity:.85"><span>Budżet — jedzenie na te 3 dni</span>
+      <span>${jedzenie.toFixed(2)} / ${z.budzet} zł${nad > 0.5 ? ` — ponad limit o ${nad.toFixed(2)} zł` : " ✓"}</span></div>`;
   }
 
   const mam = z.mam.length ? `<div class="karta"><h2>Już masz — nie kupuj</h2>
@@ -909,6 +911,7 @@ function widokTrening(){
         ${c.latwiej ? `<div class="wariant">Za trudne? ${esc(c.latwiej)}</div>` : ""}
         ${c.trudniej && c.trudniej !== "—" ? `<div class="wariant">Za łatwe? ${esc(c.trudniej)}</div>` : ""}
         <div class="w">przerwa ${esc(c.przerwa)}</div>
+        ${c.serie_wstepne ? `<div class="w">rozgrzewka: ${esc(c.serie_wstepne)} — dopiero potem serie robocze</div>` : ""}
         ${c.seria_laczona ? `<div class="wariant">🔗 Seria łączona z: ${esc(c.seria_laczona)} — robisz je na zmianę, przerwa dopiero po obu.</div>` : ""}
         ${juz ? `<div class="w" style="color:var(--ok);font-weight:700">✓ Zapisane dziś: ${juz.kg} kg × ${(juz.powt || []).join(", ")}. Możesz poprawić i zapisać jeszcze raz.</div>`
               : `<div class="w" style="color:var(--akcent)">${historia}</div>`}
