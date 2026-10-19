@@ -1,11 +1,114 @@
 {
-  "stan": {},
+  "stan": {
+    "poledwica": {
+      "ilosc": 85,
+      "do": "2026-10-31"
+    },
+    "szynka": {
+      "ilosc": 75,
+      "do": "2026-10-31"
+    },
+    "mielone_wolowe": {
+      "ilosc": 233.33,
+      "do": "2026-10-23"
+    },
+    "jaja": {
+      "ilosc": 10,
+      "do": "2026-10-31"
+    },
+    "maslo": {
+      "ilosc": 181,
+      "do": "2026-10-31"
+    },
+    "mleko": {
+      "ilosc": 975,
+      "do": "2026-10-31"
+    },
+    "ser_zolty": {
+      "ilosc": 3,
+      "do": "2026-10-31"
+    },
+    "twarog": {
+      "ilosc": 110,
+      "do": "2026-10-31"
+    },
+    "cebula": {
+      "ilosc": 0.33,
+      "do": "2027-05-07"
+    },
+    "czosnek": {
+      "ilosc": 9.0,
+      "do": "2027-05-07"
+    },
+    "marchew": {
+      "ilosc": 0.33,
+      "do": "2027-05-07"
+    },
+    "ogorek_kiszony": {
+      "ilosc": 4.5,
+      "do": "2027-05-07"
+    },
+    "chleb": {
+      "ilosc": 12,
+      "do": "2026-10-31"
+    },
+    "makaron": {
+      "ilosc": 285.0,
+      "do": "2027-05-07"
+    },
+    "tortilla": {
+      "ilosc": 5,
+      "do": "2027-05-07"
+    },
+    "dzem_niskoslodzony": {
+      "ilosc": 150,
+      "do": "2027-05-07"
+    },
+    "ketchup": {
+      "ilosc": 16,
+      "do": "2027-05-07"
+    },
+    "koncentrat": {
+      "ilosc": 180.0,
+      "do": "2027-05-07"
+    },
+    "majonez_sriracha": {
+      "ilosc": 238,
+      "do": "2027-05-07"
+    },
+    "maslo_orzechowe": {
+      "ilosc": 19.75,
+      "do": "2027-05-07"
+    },
+    "musztarda": {
+      "ilosc": 8.0,
+      "do": "2027-05-07"
+    },
+    "olej": {
+      "ilosc": 995.0,
+      "do": "2027-05-07"
+    },
+    "passata": {
+      "ilosc": 333.33,
+      "do": "2027-05-07"
+    },
+    "przyprawy": {
+      "ilosc": 93.0,
+      "do": "2027-05-07"
+    }
+  },
   "log": [
     {
       "data": "2026-10-19",
       "co": "pusta szafka — start od zera",
       "produkt": "-",
       "ilosc": 0
+    },
+    {
+      "data": "2026-10-19",
+      "co": "cykl:2026-10-19",
+      "pozycji": 30,
+      "koszt": 215.91
     }
   ]
 }
