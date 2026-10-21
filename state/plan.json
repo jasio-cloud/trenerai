@@ -1,51 +1,51 @@
 {
-  "cykl": 1,
-  "od": "2026-10-19",
-  "do": "2026-10-21",
+  "cykl": 2,
+  "od": "2026-10-22",
+  "do": "2026-10-24",
   "baza": "b_bolo",
   "dni": [
     {
-      "sniadanie": "q_tortilla_jajecznica",
-      "drugi": "q_skyr",
-      "kolacja": "q_twarog_makaron",
+      "sniadanie": "q_omlet_marchewkowy",
+      "drugi": "q_kanapki_ser",
+      "kolacja": "q_jajka_majonez",
       "obiad": "b_bolo",
-      "data": "2026-10-19",
+      "data": "2026-10-22",
       "typ": 0,
       "makra": {
-        "kcal": 2798,
-        "bialko": 188,
-        "tluszcz": 100,
-        "wegle": 273
+        "kcal": 2934,
+        "bialko": 176,
+        "tluszcz": 99,
+        "wegle": 314
       }
     },
     {
-      "sniadanie": "q_grzanki",
-      "drugi": "q_kanapki_jajko",
-      "kolacja": "q_serek_box",
+      "sniadanie": "q_omlet",
+      "drugi": "q_tortilla_poledwica",
+      "kolacja": "q_twarog",
       "obiad": "b_bolo",
-      "data": "2026-10-20",
+      "data": "2026-10-23",
       "typ": 0,
       "makra": {
-        "kcal": 2351,
-        "bialko": 153,
-        "tluszcz": 106,
-        "wegle": 182
+        "kcal": 2753,
+        "bialko": 173,
+        "tluszcz": 123,
+        "wegle": 226
       }
     },
     {
-      "sniadanie": "q_twarog",
-      "drugi": "q_kanapki_jajko",
-      "kolacja": "q_serek_makaron",
+      "sniadanie": "q_skyr",
+      "drugi": "q_twarog_makaron",
+      "kolacja": "q_kanapki_jajko",
       "obiad": "b_bolo",
-      "data": "2026-10-21",
+      "data": "2026-10-24",
       "typ": 1,
       "makra": {
-        "kcal": 2479,
-        "bialko": 163,
+        "kcal": 2399,
+        "bialko": 160,
         "tluszcz": 83,
-        "wegle": 256
+        "wegle": 240
       }
     }
   ],
-  "wygenerowano": "2026-10-19T12:04:56"
+  "wygenerowano": "2026-10-22T00:44:50+02:00"
 }
