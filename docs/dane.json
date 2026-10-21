@@ -1,5 +1,5 @@
 {
-  "wygenerowano": "2026-10-21T00:31:33+02:00",
+  "wygenerowano": "2026-10-21T20:00:13+02:00",
   "dzis": "2026-10-21",
   "typ_dzis": 1,
   "typy": {
@@ -6351,7 +6351,12 @@
       "nadwyzka": 0,
       "odhaczone": {},
       "waga": null,
-      "kroki": null,
+      "kroki": {
+        "data": "2026-10-21",
+        "kroki": 4267,
+        "cel": 8000,
+        "status": "malo"
+      },
       "serie": [],
       "trening": {
         "rodzaj": "wolne",
@@ -11022,10 +11027,24 @@
         "kroki": 3485,
         "cel": 8000,
         "status": "malo"
+      },
+      {
+        "data": "2026-10-21",
+        "kroki": 4267,
+        "cel": 8000,
+        "status": "malo"
       }
     ]
   },
-  "kroki": null,
+  "kroki": {
+    "kroki": 4267,
+    "cel": 8000,
+    "brakuje": 3733,
+    "status": "malo",
+    "sugestia": "Dzisiaj odsypiasz i to jest priorytet — kroki są na drugim miejscu. Wystarczy 15 minut na świeżym powietrzu przed snem.",
+    "komentarz": "Cel 8000 kroków dziennie. Spacer po południu robi większość z tego.",
+    "procent": 53
+  },
   "kroki_cel": {
     "cel": 8000,
     "komentarz": "Cel 8000 kroków dziennie. Spacer po południu robi większość z tego."
