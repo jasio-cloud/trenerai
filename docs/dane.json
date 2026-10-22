@@ -1,5 +1,5 @@
 {
-  "wygenerowano": "2026-10-22T00:44:50+02:00",
+  "wygenerowano": "2026-10-22T07:58:39+02:00",
   "dzis": "2026-10-22",
   "typ_dzis": 0,
   "typy": {
@@ -1038,11 +1038,11 @@
     "zapas": 24.02,
     "szafka": 18.61,
     "na_dni": 49.1,
-    "zrobione": false
+    "zrobione": true
   },
   "lodowka": {
     "poledwica": {
-      "ilosc": 85,
+      "ilosc": 55,
       "do": "2026-10-31"
     },
     "szynka": {
@@ -1050,27 +1050,27 @@
       "do": "2026-10-31"
     },
     "mielone_wolowe": {
-      "ilosc": 233.33,
+      "ilosc": 133.33,
       "do": "2026-10-23"
     },
     "jaja": {
-      "ilosc": 10,
+      "ilosc": 1,
       "do": "2026-10-31"
     },
     "maslo": {
-      "ilosc": 181,
+      "ilosc": 171,
       "do": "2026-10-31"
     },
     "mleko": {
-      "ilosc": 975,
+      "ilosc": 959,
       "do": "2026-10-31"
     },
     "ser_zolty": {
-      "ilosc": 3,
+      "ilosc": 2,
       "do": "2026-10-31"
     },
     "twarog": {
-      "ilosc": 110,
+      "ilosc": 50,
       "do": "2026-10-31"
     },
     "cebula": {
@@ -1078,31 +1078,27 @@
       "do": "2027-05-07"
     },
     "czosnek": {
-      "ilosc": 9.0,
+      "ilosc": 6.0,
       "do": "2027-05-07"
     },
     "marchew": {
-      "ilosc": 0.33,
-      "do": "2027-05-07"
-    },
-    "ogorek_kiszony": {
-      "ilosc": 4.5,
+      "ilosc": 0.83,
       "do": "2027-05-07"
     },
     "chleb": {
-      "ilosc": 12,
+      "ilosc": 4,
       "do": "2026-10-31"
     },
     "makaron": {
-      "ilosc": 285.0,
+      "ilosc": 470.0,
       "do": "2027-05-07"
     },
     "tortilla": {
-      "ilosc": 5,
+      "ilosc": 3,
       "do": "2027-05-07"
     },
     "dzem_niskoslodzony": {
-      "ilosc": 150,
+      "ilosc": 50,
       "do": "2027-05-07"
     },
     "ketchup": {
@@ -1110,23 +1106,23 @@
       "do": "2027-05-07"
     },
     "koncentrat": {
-      "ilosc": 180.0,
+      "ilosc": 120.0,
       "do": "2027-05-07"
     },
     "majonez_sriracha": {
-      "ilosc": 238,
+      "ilosc": 206,
       "do": "2027-05-07"
     },
     "maslo_orzechowe": {
-      "ilosc": 19.75,
+      "ilosc": 17.5,
       "do": "2027-05-07"
     },
     "musztarda": {
-      "ilosc": 8.0,
+      "ilosc": 6.0,
       "do": "2027-05-07"
     },
     "olej": {
-      "ilosc": 995.0,
+      "ilosc": 980.0,
       "do": "2027-05-07"
     },
     "passata": {
@@ -1134,8 +1130,24 @@
       "do": "2027-05-07"
     },
     "przyprawy": {
-      "ilosc": 93.0,
+      "ilosc": 87.0,
       "do": "2027-05-07"
+    },
+    "kukurydza": {
+      "ilosc": 280,
+      "do": "2027-05-10"
+    },
+    "maka": {
+      "ilosc": 1075,
+      "do": "2027-05-10"
+    },
+    "proszek_do_pieczenia": {
+      "ilosc": 28,
+      "do": "2027-05-10"
+    },
+    "cynamon": {
+      "ilosc": 13,
+      "do": "2027-05-10"
     }
   },
   "trening": {
@@ -9968,7 +9980,358 @@
     ],
     "serie": []
   },
-  "zakupy_zamrozone": {},
+  "zakupy_zamrozone": {
+    "kup": [
+      {
+        "klucz": "mielone_wolowe",
+        "nazwa": "Wołowina świeżo mielona (z lady)",
+        "kat": "mieso",
+        "trw": "swieze",
+        "sklep": "Dino",
+        "opakowan": 1,
+        "opak": 400,
+        "jedn": "g",
+        "brakuje": 266.7,
+        "dokupisz": 400,
+        "cena": 18.0,
+        "szafka": false
+      },
+      {
+        "klucz": "napoj_proteinowy",
+        "nazwa": "Napój proteinowy Müllermilch Protein (400 ml)",
+        "kat": "nabial",
+        "trw": "chlodnia",
+        "sklep": "Dino",
+        "opakowan": 1,
+        "opak": 1,
+        "jedn": "butelka",
+        "brakuje": 1,
+        "dokupisz": 1,
+        "cena": 5.29,
+        "szafka": false
+      },
+      {
+        "klucz": "ser_zolty",
+        "nazwa": "Ser żółty w plastrach",
+        "kat": "nabial",
+        "trw": "chlodnia",
+        "sklep": "Dino",
+        "opakowan": 1,
+        "opak": 7,
+        "jedn": "plaster",
+        "brakuje": 5,
+        "dokupisz": 7,
+        "cena": 6.99,
+        "szafka": false
+      },
+      {
+        "klucz": "skyr",
+        "nazwa": "Skyr naturalny (kubek 150 g)",
+        "kat": "nabial",
+        "trw": "chlodnia",
+        "sklep": "Dino",
+        "opakowan": 2,
+        "opak": 1,
+        "jedn": "kubek",
+        "brakuje": 2.0,
+        "dokupisz": 2,
+        "cena": 7.6,
+        "szafka": false
+      },
+      {
+        "klucz": "skyr_waniliowy",
+        "nazwa": "Skyr waniliowy (kubek 150 g)",
+        "kat": "nabial",
+        "trw": "chlodnia",
+        "sklep": "Dino",
+        "opakowan": 1,
+        "opak": 1,
+        "jedn": "kubek",
+        "brakuje": 1,
+        "dokupisz": 1,
+        "cena": 3.69,
+        "szafka": false
+      },
+      {
+        "klucz": "twarog",
+        "nazwa": "Twaróg półtłusty",
+        "kat": "nabial",
+        "trw": "chlodnia",
+        "sklep": "Dino",
+        "opakowan": 1,
+        "opak": 250,
+        "jedn": "g",
+        "brakuje": 200,
+        "dokupisz": 250,
+        "cena": 3.39,
+        "szafka": false
+      },
+      {
+        "klucz": "banan",
+        "nazwa": "Banan",
+        "kat": "warzywa",
+        "trw": "chlodnia",
+        "sklep": "Dino",
+        "opakowan": 3,
+        "opak": 1,
+        "jedn": "szt",
+        "brakuje": 3,
+        "dokupisz": 3,
+        "cena": 1.26,
+        "szafka": false
+      },
+      {
+        "klucz": "cebula",
+        "nazwa": "Cebula",
+        "kat": "warzywa",
+        "trw": "trwale",
+        "sklep": "Dino",
+        "opakowan": 2,
+        "opak": 1,
+        "jedn": "szt",
+        "brakuje": 1.7,
+        "dokupisz": 2,
+        "cena": 1.2,
+        "szafka": false
+      },
+      {
+        "klucz": "marchew",
+        "nazwa": "Marchew",
+        "kat": "warzywa",
+        "trw": "trwale",
+        "sklep": "Dino",
+        "opakowan": 3,
+        "opak": 1,
+        "jedn": "szt",
+        "brakuje": 2.2,
+        "dokupisz": 3,
+        "cena": 0.48,
+        "szafka": false
+      },
+      {
+        "klucz": "pomidor",
+        "nazwa": "Pomidor",
+        "kat": "warzywa",
+        "trw": "swieze",
+        "sklep": "Dino",
+        "opakowan": 2,
+        "opak": 1,
+        "jedn": "szt",
+        "brakuje": 2.0,
+        "dokupisz": 2,
+        "cena": 1.2,
+        "szafka": false
+      },
+      {
+        "klucz": "makaron",
+        "nazwa": "Makaron (świderki/penne)",
+        "kat": "pieczywo",
+        "trw": "trwale",
+        "sklep": "Dino",
+        "opakowan": 1,
+        "opak": 500,
+        "jedn": "g",
+        "brakuje": 30.0,
+        "dokupisz": 500,
+        "cena": 4.99,
+        "szafka": true
+      },
+      {
+        "klucz": "kukurydza",
+        "nazwa": "Kukurydza konserwowa",
+        "kat": "spizarnia",
+        "trw": "trwale",
+        "sklep": "Dino",
+        "opakowan": 1,
+        "opak": 400,
+        "jedn": "g",
+        "brakuje": 120,
+        "dokupisz": 400,
+        "cena": 4.29,
+        "szafka": true
+      },
+      {
+        "klucz": "maka",
+        "nazwa": "Mąka pszenna",
+        "kat": "spizarnia",
+        "trw": "trwale",
+        "sklep": "Dino",
+        "opakowan": 1,
+        "opak": 1100,
+        "jedn": "g",
+        "brakuje": 25,
+        "dokupisz": 1100,
+        "cena": 1.85,
+        "szafka": true
+      },
+      {
+        "klucz": "passata",
+        "nazwa": "Passata pomidorowa",
+        "kat": "spizarnia",
+        "trw": "trwale",
+        "sklep": "Dino",
+        "opakowan": 1,
+        "opak": 500,
+        "jedn": "g",
+        "brakuje": 166.7,
+        "dokupisz": 500,
+        "cena": 5.0,
+        "szafka": true
+      },
+      {
+        "klucz": "proszek_do_pieczenia",
+        "nazwa": "Proszek do pieczenia",
+        "kat": "spizarnia",
+        "trw": "trwale",
+        "sklep": "Dino",
+        "opakowan": 1,
+        "opak": 30,
+        "jedn": "g",
+        "brakuje": 2,
+        "dokupisz": 30,
+        "cena": 0.89,
+        "szafka": true
+      },
+      {
+        "klucz": "cynamon",
+        "nazwa": "Przyprawa do cynamonek / cynamon",
+        "kat": "spizarnia",
+        "trw": "trwale",
+        "sklep": "Dino",
+        "opakowan": 1,
+        "opak": 15,
+        "jedn": "g",
+        "brakuje": 2,
+        "dokupisz": 15,
+        "cena": 1.59,
+        "szafka": true
+      }
+    ],
+    "mam": [
+      {
+        "klucz": "chleb",
+        "nazwa": "Chleb pszenny (zwykły biały)",
+        "potrzeba": 8,
+        "w_domu": 12,
+        "jedn": "kromka"
+      },
+      {
+        "klucz": "czosnek",
+        "nazwa": "Czosnek",
+        "potrzeba": 3.0,
+        "w_domu": 9.0,
+        "jedn": "zabek"
+      },
+      {
+        "klucz": "dzem_niskoslodzony",
+        "nazwa": "Dżem (np. malinowy, słoik 200 g)",
+        "potrzeba": 100,
+        "w_domu": 150,
+        "jedn": "g"
+      },
+      {
+        "klucz": "jaja",
+        "nazwa": "Jaja",
+        "potrzeba": 9,
+        "w_domu": 10,
+        "jedn": "szt"
+      },
+      {
+        "klucz": "koncentrat",
+        "nazwa": "Koncentrat pomidorowy",
+        "potrzeba": 60.0,
+        "w_domu": 180.0,
+        "jedn": "g"
+      },
+      {
+        "klucz": "majonez_sriracha",
+        "nazwa": "Majonez sriracha",
+        "potrzeba": 32,
+        "w_domu": 238,
+        "jedn": "ml"
+      },
+      {
+        "klucz": "maslo",
+        "nazwa": "Masło",
+        "potrzeba": 10,
+        "w_domu": 181,
+        "jedn": "g"
+      },
+      {
+        "klucz": "maslo_orzechowe",
+        "nazwa": "Masło orzechowe 100%",
+        "potrzeba": 2.25,
+        "w_domu": 19.75,
+        "jedn": "lyzka"
+      },
+      {
+        "klucz": "mleko",
+        "nazwa": "Mleko 2%",
+        "potrzeba": 16,
+        "w_domu": 975,
+        "jedn": "ml"
+      },
+      {
+        "klucz": "musztarda",
+        "nazwa": "Musztarda",
+        "potrzeba": 2.0,
+        "w_domu": 8.0,
+        "jedn": "lyzka"
+      },
+      {
+        "klucz": "odzywka_wpc",
+        "nazwa": "Odżywka białkowa WPC 80 (czekoladowa) — zapas, kupujesz osobno",
+        "potrzeba": 15,
+        "w_domu": 15,
+        "jedn": "g"
+      },
+      {
+        "klucz": "ogorek_kiszony",
+        "nazwa": "Ogórek kiszony",
+        "potrzeba": 4.5,
+        "w_domu": 4.5,
+        "jedn": "szt"
+      },
+      {
+        "klucz": "olej",
+        "nazwa": "Olej rzepakowy",
+        "potrzeba": 15.0,
+        "w_domu": 995.0,
+        "jedn": "ml"
+      },
+      {
+        "klucz": "poledwica",
+        "nazwa": "Polędwica sopocka (wędlina)",
+        "potrzeba": 30,
+        "w_domu": 85,
+        "jedn": "g"
+      },
+      {
+        "klucz": "przyprawy",
+        "nazwa": "Przyprawy (sól, pieprz, papryka, oregano, majeranek)",
+        "potrzeba": 6.0,
+        "w_domu": 93.0,
+        "jedn": "porcja"
+      },
+      {
+        "klucz": "tortilla",
+        "nazwa": "Tortilla pszenna",
+        "potrzeba": 2,
+        "w_domu": 5,
+        "jedn": "szt"
+      }
+    ],
+    "koszt": 67.71,
+    "sklepy": {
+      "Dino": 67.71
+    },
+    "budzet": 90,
+    "zjesz": 43.69,
+    "zapas": 24.02,
+    "szafka": 18.61,
+    "na_dni": 49.1,
+    "zrobione": true
+  },
   "repo": "jasio-cloud/trenerai",
   "galaz": "main",
   "suple": {
