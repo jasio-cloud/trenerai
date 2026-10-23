@@ -8,10 +8,6 @@
       "ilosc": 75,
       "do": "2026-10-31"
     },
-    "mielone_wolowe": {
-      "ilosc": 133.33,
-      "do": "2026-10-23"
-    },
     "jaja": {
       "ilosc": 1,
       "do": "2026-10-31"
@@ -127,6 +123,12 @@
       "co": "cykl:2026-10-22",
       "pozycji": 16,
       "koszt": 67.71
+    },
+    {
+      "data": "2026-10-24",
+      "co": "wyrzucone",
+      "produkt": "mielone_wolowe",
+      "ilosc": 133.33
     }
   ]
 }
