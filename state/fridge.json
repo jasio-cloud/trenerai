@@ -1,11 +1,102 @@
 {
-  "stan": {},
+  "stan": {
+    "mielone_wolowe": {
+      "ilosc": 300.0,
+      "do": "2026-10-31"
+    },
+    "jaja": {
+      "ilosc": 3,
+      "do": "2026-11-08"
+    },
+    "mleko": {
+      "ilosc": 955,
+      "do": "2026-11-08"
+    },
+    "ser_zolty": {
+      "ilosc": 3,
+      "do": "2026-11-08"
+    },
+    "twarog": {
+      "ilosc": 290,
+      "do": "2026-11-08"
+    },
+    "czosnek": {
+      "ilosc": 7.0,
+      "do": "2027-05-15"
+    },
+    "marchew": {
+      "ilosc": 0.5,
+      "do": "2027-05-15"
+    },
+    "ogorek_kiszony": {
+      "ilosc": 4.5,
+      "do": "2027-05-15"
+    },
+    "chleb": {
+      "ilosc": 9,
+      "do": "2026-11-08"
+    },
+    "makaron": {
+      "ilosc": 140.0,
+      "do": "2027-05-15"
+    },
+    "dzem_niskoslodzony": {
+      "ilosc": 130,
+      "do": "2027-05-15"
+    },
+    "koncentrat": {
+      "ilosc": 140.0,
+      "do": "2027-05-15"
+    },
+    "maslo_orzechowe": {
+      "ilosc": 21.0,
+      "do": "2027-05-15"
+    },
+    "miod": {
+      "ilosc": 18.0,
+      "do": "2027-05-15"
+    },
+    "musztarda": {
+      "ilosc": 10,
+      "do": "2027-05-15"
+    },
+    "maka": {
+      "ilosc": 1075,
+      "do": "2027-05-15"
+    },
+    "olej": {
+      "ilosc": 985.0,
+      "do": "2027-05-15"
+    },
+    "orzechy": {
+      "ilosc": 166,
+      "do": "2027-05-15"
+    },
+    "proszek_do_pieczenia": {
+      "ilosc": 28,
+      "do": "2027-05-15"
+    },
+    "cynamon": {
+      "ilosc": 13,
+      "do": "2027-05-15"
+    },
+    "przyprawy": {
+      "ilosc": 93.0,
+      "do": "2027-05-15"
+    }
+  },
   "log": [
     {
       "data": "2026-10-27",
       "co": "pusta kuchnia — start od zera",
       "produkt": "-",
       "ilosc": 0
+    },
+    {
+      "data": "2026-10-27",
+      "co": "cykl:2026-10-27",
+      "pozycji": 29,
+      "koszt": 189.48
     }
   ]
 }
