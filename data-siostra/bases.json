@@ -1,0 +1,566 @@
+{
+  "_info": "BAZY = dania gotowane HURTEM raz na 3 dni. produkty = na CAŁY garnek (tyle, ile wychodzi porcji). System dzieli przez porcje, żeby policzyć makro jednej porcji. czas_min = łączny czas, czas_pracy = ile faktycznie stoisz nad garnkiem. Styl: tanie jednogarnkowce. Bez kurczaka, ryżu, kasz i ryb. kroki: {klucz} zamienia się na ilość z przepisu; skladowe: części dania do porcjowania na wadze. | Wersja dla profilu siostra: ten sam garnek i te same kroki, ale ilosci przeskalowane do 0,7 — przy 1700-1850 kcal porcja 810 kcal zjadala polowe dnia.",
+  "bazy": [
+    {
+      "id": "b_bolo",
+      "nazwa": "Makaron bolognese na wołowinie",
+      "porcje": 3,
+      "czas_min": 40,
+      "czas_pracy": 15,
+      "naczynia": "1 garnek + 1 garnek na makaron",
+      "przechowywanie": "lodówka, 3 dni w pojemnikach",
+      "odgrzewanie": "mikrofala 2,5 min, wymieszać w połowie",
+      "box": true,
+      "produkty": [
+        [
+          "mielone_wolowe",
+          350.0
+        ],
+        [
+          "makaron",
+          168.0
+        ],
+        [
+          "passata",
+          350.0
+        ],
+        [
+          "koncentrat",
+          42.0
+        ],
+        [
+          "cebula",
+          1.4
+        ],
+        [
+          "marchew",
+          1.4
+        ],
+        [
+          "czosnek",
+          2.1
+        ],
+        [
+          "olej",
+          10.5
+        ],
+        [
+          "przyprawy",
+          2.1
+        ]
+      ],
+      "kroki": [
+        "Zanim zaczniesz: postaw na wadze kuchennej deskę do krojenia, na niej pusty duży garnek, i wpisz tę wagę w zakładce Gotuję → „Ile nałożyć na porcję” (pole „puste naczynie”). Na tej samej desce zważysz później naczynie z jedzeniem — deska chroni wagę przed gorącem.",
+        "Przygotuj: drugi garnek na makaron, deskę, nóż, tarkę, drewnianą łopatkę i durszlak.",
+        "Obierz cebulę ({cebula}) i pokrój ją w drobną kostkę (ok. 0,5 cm). Obierz marchew ({marchew}) i zetrzyj na tarce na grubych oczkach. Obierz czosnek ({czosnek}) i posiekaj go jak najdrobniej.",
+        "Postaw duży garnek na średnim ogniu (połowa skali kuchenki) i wlej olej ({olej}). Odczekaj 1 minutę, aż olej się rozgrzeje.",
+        "Wrzuć cebulę i marchew. Smaż 5 minut, mieszając łopatką co minutę, aż cebula zmięknie i zrobi się szklista (nie brązowa).",
+        "Dodaj mięso ({mielone_wolowe}). Rozbijaj je łopatką na drobne kawałki i smaż 8 minut, mieszając co 1–2 minuty, aż nigdzie nie będzie różowego koloru.",
+        "Dodaj czosnek, koncentrat pomidorowy ({koncentrat}), 1 płaską łyżeczkę soli, pół łyżeczki pieprzu i 1 łyżeczkę suszonego oregano. Mieszaj 1 minutę.",
+        "Wlej passatę ({passata}) i 100 ml wody (pół szklanki). Zamieszaj, zmniejsz ogień na mały (1/3 skali), przykryj pokrywką, zostawiając szparę, i gotuj 20 minut. Co 5 minut zamieszaj, żeby nic nie przywarło do dna.",
+        "W tym czasie w drugim garnku zagotuj ok. 2,5 litra wody z 1 łyżką soli. Gdy woda mocno bulgocze, wsyp makaron ({makaron}), zamieszaj i gotuj tyle minut, ile podaje opakowanie (zwykle 9–11). Mieszaj co 3 minuty.",
+        "Odcedź makaron na durszlaku i od razu przełóż go do garnka z sosem. Mieszaj, aż cały makaron będzie pokryty sosem. Wyłącz kuchenkę.",
+        "Porcjowanie: zważ garnek z gotowym jedzeniem na tej samej desce i wpisz wagę w panelu — pokaże, ile gramów nałożyć do każdego z 3 pojemników.",
+        "Do każdego z 3 pojemników nałóż wyliczone gramy: postaw pusty pojemnik na wadze, wciśnij TARA (waga pokaże 0) i nakładaj, aż dojdziesz do liczby z panelu. Zostaw pojemniki otwarte na 20–30 minut, żeby wystygły, potem zamknij i wstaw do lodówki. Każdy pojemnik to dokładnie jedna porcja z Twojego planu."
+      ],
+      "skladowe": [
+        {
+          "nazwa": "Makaron z sosem",
+          "opis": "Duży garnek, w którym na końcu mieszasz makaron z sosem."
+        }
+      ]
+    },
+    {
+      "id": "b_gulasz",
+      "nazwa": "Gulasz wołowy z papryką + ziemniaki",
+      "porcje": 3,
+      "czas_min": 95,
+      "czas_pracy": 20,
+      "naczynia": "1 garnek + 1 garnek na ziemniaki",
+      "przechowywanie": "lodówka, 3 dni (drugiego dnia jest lepszy)",
+      "odgrzewanie": "mikrofala 3 min",
+      "box": true,
+      "produkty": [
+        [
+          "wolowina_gulasz",
+          420.0
+        ],
+        [
+          "ziemniaki",
+          630.0
+        ],
+        [
+          "papryka",
+          2.1
+        ],
+        [
+          "cebula",
+          1.4
+        ],
+        [
+          "passata",
+          210.0
+        ],
+        [
+          "bulion",
+          1.4
+        ],
+        [
+          "maka",
+          14.0
+        ],
+        [
+          "olej",
+          14.0
+        ],
+        [
+          "przyprawy",
+          2.1
+        ]
+      ],
+      "kroki": [
+        "Zanim zaczniesz: postaw na wadze kuchennej deskę do krojenia, na niej pusty duży garnek, i wpisz tę wagę w zakładce Gotuję → „Ile nałożyć na porcję” (pole „puste naczynie”). Na tej samej desce zważysz później naczynie z jedzeniem — deska chroni wagę przed gorącem.",
+        "Zważ też pustą dużą miskę na ugotowane ziemniaki i wpisz jej wagę w panelu przy „Ziemniaki”.",
+        "Mięso ({wolowina_gulasz}) osusz ręcznikiem papierowym i pokrój w kostkę ok. 2 × 2 cm, odcinając twarde białe błony. Po krojeniu mięsa umyj deskę, nóż i ręce ciepłą wodą z płynem.",
+        "Obierz cebulę ({cebula}), przekrój na pół i pokrój w cienkie piórka. Paprykę ({papryka}) przekrój, wytnij gniazdo z pestkami i pokrój w paski szerokości ok. 1 cm.",
+        "Garnek postaw na dużym ogniu (3/4 skali), wlej olej ({olej}) i odczekaj 2 minuty. Wrzuć całe mięso i przez pierwsze 3 minuty nie mieszaj — ma się przyrumienić. Potem mieszaj i smaż jeszcze 3 minuty.",
+        "Zmniejsz ogień na średni. Dodaj cebulę i smaż 4 minuty, mieszając. Wsyp 1 łyżkę słodkiej papryki w proszku, pół łyżeczki soli i pół łyżeczki pieprzu, wymieszaj.",
+        "Wlej passatę ({passata}) i 400 ml wody (2 szklanki), wrzuć kostki bulionowe ({bulion}). Gdy zacznie bulgotać, zmniejsz ogień na najmniejszy, przykryj i gotuj 60 minut. Co 15 minut zamieszaj; jeśli płyn nie przykrywa mięsa, dolej 100 ml wody.",
+        "Ziemniaki: obierz ziemniaki ({ziemniaki}) obieraczką, większe przekrój na pół. Włóż do garnka, zalej zimną wodą tak, żeby je przykryła, dodaj 1 łyżeczkę soli i postaw na dużym ogniu. Gdy woda zacznie bulgotać, zmniejsz ogień na średni i gotuj 20 minut. Są gotowe, gdy nóż wchodzi w ziemniaka bez oporu. Odcedź na durszlaku.",
+        "Po 60 minutach dodaj paprykę i gotuj jeszcze 15 minut pod przykryciem. Mięso jest gotowe, gdy kawałek łatwo przetniesz łyżką.",
+        "Mąkę ({maka}) wsyp do kubka, wlej 100 ml ZIMNEJ wody i rozmieszaj widelcem bez grudek. Wlej do gulaszu, cały czas mieszając, i gotuj 3 minuty, aż sos zgęstnieje.",
+        "Porcjowanie: przełóż ugotowane ziemniaki do zważonej miski i zważ ją. Zważ też garnek z gulaszem (na tej samej desce). Wpisz obie wagi w panelu — pokaże, ile gramów gulaszu i ile ziemniaków nałożyć do każdego pojemnika.",
+        "Do każdego z 3 pojemników nałóż wyliczone gramy: postaw pusty pojemnik na wadze, wciśnij TARA (waga pokaże 0) i nakładaj, aż dojdziesz do liczby z panelu. Zostaw pojemniki otwarte na 20–30 minut, żeby wystygły, potem zamknij i wstaw do lodówki. Każdy pojemnik to dokładnie jedna porcja z Twojego planu."
+      ],
+      "skladowe": [
+        {
+          "nazwa": "Gulasz",
+          "opis": "Garnek z gulaszem."
+        },
+        {
+          "nazwa": "Ziemniaki",
+          "opis": "Ugotowane i odcedzone ziemniaki w misce."
+        }
+      ]
+    },
+    {
+      "id": "b_zapiekanka",
+      "nazwa": "Zapiekanka makaronowa z mielonym i serem",
+      "porcje": 3,
+      "czas_min": 55,
+      "czas_pracy": 20,
+      "naczynia": "1 patelnia + 1 forma do zapiekania",
+      "przechowywanie": "lodówka, 3 dni — kroisz na kwadraty i pakujesz",
+      "odgrzewanie": "mikrofala 3 min albo piekarnik 10 min",
+      "box": true,
+      "produkty": [
+        [
+          "mielone_wolowe",
+          350.0
+        ],
+        [
+          "makaron",
+          168.0
+        ],
+        [
+          "passata",
+          280.0
+        ],
+        [
+          "ser",
+          70.0
+        ],
+        [
+          "smietana",
+          84.0
+        ],
+        [
+          "cebula",
+          1.4
+        ],
+        [
+          "czosnek",
+          2.1
+        ],
+        [
+          "olej",
+          10.5
+        ],
+        [
+          "przyprawy",
+          2.1
+        ]
+      ],
+      "kroki": [
+        "Zanim zaczniesz: postaw na wadze kuchennej deskę do krojenia, na niej pusty formę do zapiekania, i wpisz tę wagę w zakładce Gotuję → „Ile nałożyć na porcję” (pole „puste naczynie”). Na tej samej desce zważysz później naczynie z jedzeniem — deska chroni wagę przed gorącem.",
+        "Włącz piekarnik na 200°C, grzanie góra-dół, żeby się nagrzał.",
+        "Obierz cebulę ({cebula}) i pokrój w drobną kostkę. Obierz czosnek ({czosnek}) i drobno posiekaj.",
+        "W garnku zagotuj ok. 2,5 litra wody z 1 łyżką soli. Wsyp makaron ({makaron}) i gotuj o 2 minuty KRÓCEJ, niż podaje opakowanie — dojdzie w piekarniku. Odcedź na durszlaku.",
+        "Patelnię postaw na średnim ogniu, wlej olej ({olej}) i po minucie wrzuć cebulę. Smaż 4 minuty, mieszając, aż zmięknie.",
+        "Dodaj mięso ({mielone_wolowe}). Rozbijaj je łopatką i smaż 8 minut, aż nie będzie różowych kawałków.",
+        "Dodaj czosnek, passatę ({passata}), 1 płaską łyżeczkę soli, pół łyżeczki pieprzu i 1 łyżeczkę oregano. Gotuj 10 minut na małym ogniu, mieszając co kilka minut.",
+        "Do formy przełóż makaron, sos z patelni i śmietanę ({smietana}). Wymieszaj łyżką prosto w formie i wyrównaj wierzch.",
+        "Posyp równo startym serem ({ser}). Wstaw formę na środkową półkę piekarnika i piecz 20 minut, aż ser będzie złocisty.",
+        "Wyjmij formę w rękawicach kuchennych i odstaw na 10 minut — zapiekanka stężeje i nie rozpadnie się.",
+        "Porcjowanie: zważ formę z gotowym jedzeniem na tej samej desce i wpisz wagę w panelu — pokaże, ile gramów nałożyć do każdego z 3 pojemników.",
+        "Potnij zapiekankę nożem na 3 części i przełóż do pojemników, sprawdzając na wadze (pojemnik na wadze, TARA), czy każda ma wyliczone gramy — w razie potrzeby przełóż trochę z jednej do drugiej. Wystudź 20–30 minut bez pokrywki, zamknij i wstaw do lodówki."
+      ],
+      "skladowe": [
+        {
+          "nazwa": "Zapiekanka",
+          "opis": "Forma do zapiekania z upieczoną zapiekanką."
+        }
+      ]
+    },
+    {
+      "id": "b_leczo",
+      "nazwa": "Leczo z mieloną wołowiną + ziemniaki",
+      "porcje": 3,
+      "czas_min": 40,
+      "czas_pracy": 15,
+      "naczynia": "1 garnek + 1 garnek na ziemniaki",
+      "przechowywanie": "lodówka, 3 dni",
+      "odgrzewanie": "mikrofala 3 min",
+      "box": true,
+      "produkty": [
+        [
+          "mielone_wolowe",
+          420.0
+        ],
+        [
+          "papryka",
+          2.1
+        ],
+        [
+          "cukinia",
+          0.7
+        ],
+        [
+          "cebula",
+          1.4
+        ],
+        [
+          "passata",
+          280.0
+        ],
+        [
+          "koncentrat",
+          28.0
+        ],
+        [
+          "ziemniaki",
+          525.0
+        ],
+        [
+          "olej",
+          14.0
+        ],
+        [
+          "przyprawy",
+          2.1
+        ]
+      ],
+      "kroki": [
+        "Zanim zaczniesz: postaw na wadze kuchennej deskę do krojenia, na niej pusty duży garnek, i wpisz tę wagę w zakładce Gotuję → „Ile nałożyć na porcję” (pole „puste naczynie”). Na tej samej desce zważysz później naczynie z jedzeniem — deska chroni wagę przed gorącem.",
+        "Zważ też pustą dużą miskę na ugotowane ziemniaki i wpisz jej wagę w panelu przy „Ziemniaki”.",
+        "Obierz cebulę ({cebula}), przekrój na pół i pokrój w piórka. Paprykę ({papryka}) oczyść z pestek i pokrój w paski 1 cm. Cukinię ({cukinia}) umyj, odetnij końcówki, przekrój wzdłuż i pokrój w półplasterki grubości ok. 0,5 cm.",
+        "Ziemniaki: obierz ziemniaki ({ziemniaki}) obieraczką, większe przekrój na pół. Włóż do garnka, zalej zimną wodą tak, żeby je przykryła, dodaj 1 łyżeczkę soli i postaw na dużym ogniu. Gdy woda zacznie bulgotać, zmniejsz ogień na średni i gotuj 20 minut. Są gotowe, gdy nóż wchodzi w ziemniaka bez oporu. Odcedź na durszlaku.",
+        "Duży garnek na średnim ogniu, wlej olej ({olej}), po minucie wrzuć cebulę i smaż 4 minuty.",
+        "Dodaj mięso ({mielone_wolowe}), rozbijaj łopatką i smaż 8 minut, aż nie będzie różowe.",
+        "Dodaj koncentrat ({koncentrat}), 1 łyżkę słodkiej papryki w proszku, 1 płaską łyżeczkę soli i pół łyżeczki pieprzu. Mieszaj 1 minutę.",
+        "Wrzuć paprykę i cukinię, wlej passatę ({passata}). Zamieszaj, przykryj, zmniejsz ogień na mały i gotuj 20 minut, mieszając w połowie. Warzywa mają być miękkie.",
+        "Porcjowanie: przełóż ugotowane ziemniaki do zważonej miski i zważ ją. Zważ też garnek z leczo (na tej samej desce). Wpisz obie wagi w panelu — pokaże, ile gramów leczo i ile ziemniaków nałożyć do każdego pojemnika.",
+        "Do każdego z 3 pojemników nałóż wyliczone gramy: postaw pusty pojemnik na wadze, wciśnij TARA (waga pokaże 0) i nakładaj, aż dojdziesz do liczby z panelu. Zostaw pojemniki otwarte na 20–30 minut, żeby wystygły, potem zamknij i wstaw do lodówki. Każdy pojemnik to dokładnie jedna porcja z Twojego planu."
+      ],
+      "skladowe": [
+        {
+          "nazwa": "Leczo",
+          "opis": "Garnek z leczo."
+        },
+        {
+          "nazwa": "Ziemniaki",
+          "opis": "Ugotowane i odcedzone ziemniaki w misce."
+        }
+      ]
+    },
+    {
+      "id": "b_shepherd",
+      "nazwa": "Zapiekanka pasterska (mielone pod puree)",
+      "porcje": 3,
+      "czas_min": 65,
+      "czas_pracy": 25,
+      "naczynia": "1 patelnia + 1 garnek + 1 forma",
+      "przechowywanie": "lodówka, 3 dni",
+      "odgrzewanie": "mikrofala 3,5 min",
+      "box": true,
+      "produkty": [
+        [
+          "mielone_wolowe",
+          350.0
+        ],
+        [
+          "ziemniaki",
+          630.0
+        ],
+        [
+          "mleko",
+          70.0
+        ],
+        [
+          "maslo",
+          14.0
+        ],
+        [
+          "ser",
+          49.0
+        ],
+        [
+          "cebula",
+          1.4
+        ],
+        [
+          "marchew",
+          1.4
+        ],
+        [
+          "koncentrat",
+          42.0
+        ],
+        [
+          "bulion",
+          0.7
+        ],
+        [
+          "olej",
+          8.4
+        ],
+        [
+          "przyprawy",
+          2.1
+        ]
+      ],
+      "kroki": [
+        "Zanim zaczniesz: postaw na wadze kuchennej deskę do krojenia, na niej pusty formę do zapiekania, i wpisz tę wagę w zakładce Gotuję → „Ile nałożyć na porcję” (pole „puste naczynie”). Na tej samej desce zważysz później naczynie z jedzeniem — deska chroni wagę przed gorącem.",
+        "Włącz piekarnik na 200°C, grzanie góra-dół.",
+        "Obierz ziemniaki ({ziemniaki}), pokrój na mniejsze kawałki, zalej zimną wodą z 1 łyżeczką soli i gotuj 20 minut od zagotowania, aż nóż wchodzi bez oporu.",
+        "Obierz cebulę ({cebula}) i pokrój w drobną kostkę. Obierz marchew ({marchew}) i zetrzyj na grubych oczkach.",
+        "Patelnia na średnim ogniu, wlej olej ({olej}), po minucie wrzuć cebulę i marchew. Smaż 6 minut, mieszając.",
+        "Dodaj mięso ({mielone_wolowe}), rozbijaj łopatką i smaż 8 minut.",
+        "Dodaj koncentrat ({koncentrat}), pokruszoną kostkę bulionową ({bulion}), pół łyżeczki pieprzu i 150 ml wody. Gotuj 10 minut na małym ogniu, aż sos zgęstnieje.",
+        "Odcedź ziemniaki i wróć je do garnka. Dodaj mleko ({mleko}) i masło ({maslo}), ugnieć tłuczkiem albo widelcem na gładkie puree i posól (ok. pół łyżeczki).",
+        "Do formy wyłóż mięso i wyrównaj. Na wierzch nałóż puree, rozsmaruj łyżką i przeciągnij widelcem, robiąc rowki. Posyp serem ({ser}).",
+        "Piecz 20 minut na środkowej półce, aż wierzch będzie złoty. Wyjmij w rękawicach i odstaw na 10 minut.",
+        "Porcjowanie: zważ formę z gotowym jedzeniem na tej samej desce i wpisz wagę w panelu — pokaże, ile gramów nałożyć do każdego z 3 pojemników.",
+        "Potnij na 3 części i przełóż do pojemników, sprawdzając na wadze (pojemnik, TARA), czy każda ma wyliczone gramy. Wystudź 20–30 minut bez pokrywki, zamknij, do lodówki."
+      ],
+      "skladowe": [
+        {
+          "nazwa": "Zapiekanka",
+          "opis": "Forma z upieczoną zapiekanką."
+        }
+      ]
+    },
+    {
+      "id": "b_pieczarkowy",
+      "nazwa": "Makaron z wołowiną i pieczarkami w sosie",
+      "porcje": 3,
+      "czas_min": 35,
+      "czas_pracy": 18,
+      "naczynia": "1 patelnia + 1 garnek",
+      "przechowywanie": "lodówka, 3 dni",
+      "odgrzewanie": "mikrofala 2,5 min, dolej łyżkę wody",
+      "box": true,
+      "produkty": [
+        [
+          "mielone_wolowe",
+          350.0
+        ],
+        [
+          "pieczarki",
+          280.0
+        ],
+        [
+          "smietana",
+          105.0
+        ],
+        [
+          "makaron",
+          168.0
+        ],
+        [
+          "cebula",
+          1.4
+        ],
+        [
+          "czosnek",
+          2.1
+        ],
+        [
+          "ser",
+          28.0
+        ],
+        [
+          "olej",
+          10.5
+        ],
+        [
+          "przyprawy",
+          2.1
+        ]
+      ],
+      "kroki": [
+        "Zanim zaczniesz: postaw na wadze kuchennej deskę do krojenia, na niej pusty duży garnek (ten do makaronu), i wpisz tę wagę w zakładce Gotuję → „Ile nałożyć na porcję” (pole „puste naczynie”). Na tej samej desce zważysz później naczynie z jedzeniem — deska chroni wagę przed gorącem.",
+        "Pieczarki ({pieczarki}) opłucz pod zimną wodą, odetnij końcówki nóżek i pokrój w plasterki. Obierz cebulę ({cebula}) i pokrój w kostkę. Obierz czosnek ({czosnek}) i posiekaj.",
+        "Dużą patelnię postaw na dużym ogniu na 2 minuty, bez tłuszczu. Wrzuć pieczarki i smaż 6 minut, mieszając co minutę: najpierw puszczą wodę, potem woda odparuje i zaczną się rumienić. Jeszcze ich nie sól.",
+        "Zmniejsz ogień na średni, wlej olej ({olej}), dodaj cebulę i smaż 4 minuty.",
+        "Dodaj mięso ({mielone_wolowe}). Rozbijaj je łopatką i smaż 8 minut, aż nie będzie różowe.",
+        "Dodaj czosnek, 1 płaską łyżeczkę soli, pół łyżeczki pieprzu, śmietanę ({smietana}) i 100 ml wody. Gotuj 5 minut na małym ogniu. Wsyp starty ser ({ser}) i mieszaj, aż się rozpuści.",
+        "W tym czasie w dużym garnku zagotuj ok. 2,5 litra wody z 1 łyżką soli, wsyp makaron ({makaron}) i gotuj tyle minut, ile podaje opakowanie. Odcedź na durszlaku i wróć makaron do tego samego garnka.",
+        "Przełóż sos z patelni do garnka z makaronem i dokładnie wymieszaj.",
+        "Porcjowanie: zważ garnek z gotowym jedzeniem na tej samej desce i wpisz wagę w panelu — pokaże, ile gramów nałożyć do każdego z 3 pojemników.",
+        "Do każdego z 3 pojemników nałóż wyliczone gramy: postaw pusty pojemnik na wadze, wciśnij TARA (waga pokaże 0) i nakładaj, aż dojdziesz do liczby z panelu. Zostaw pojemniki otwarte na 20–30 minut, żeby wystygły, potem zamknij i wstaw do lodówki. Każdy pojemnik to dokładnie jedna porcja z Twojego planu."
+      ],
+      "skladowe": [
+        {
+          "nazwa": "Makaron z sosem",
+          "opis": "Duży garnek, w którym gotujesz makaron i mieszasz go z sosem."
+        }
+      ]
+    },
+    {
+      "id": "b_wolowina_cebula",
+      "nazwa": "Wołowina duszona w cebuli + ziemniaki",
+      "porcje": 3,
+      "czas_min": 100,
+      "czas_pracy": 15,
+      "naczynia": "1 garnek + 1 garnek na ziemniaki",
+      "przechowywanie": "lodówka, 3 dni",
+      "odgrzewanie": "mikrofala 3 min",
+      "box": true,
+      "produkty": [
+        [
+          "wolowina_gulasz",
+          420.0
+        ],
+        [
+          "cebula",
+          2.8
+        ],
+        [
+          "bulion",
+          1.4
+        ],
+        [
+          "musztarda",
+          1.4
+        ],
+        [
+          "maka",
+          14.0
+        ],
+        [
+          "ziemniaki",
+          630.0
+        ],
+        [
+          "olej",
+          14.0
+        ],
+        [
+          "przyprawy",
+          2.1
+        ]
+      ],
+      "kroki": [
+        "Zanim zaczniesz: postaw na wadze kuchennej deskę do krojenia, na niej pusty duży garnek, i wpisz tę wagę w zakładce Gotuję → „Ile nałożyć na porcję” (pole „puste naczynie”). Na tej samej desce zważysz później naczynie z jedzeniem — deska chroni wagę przed gorącem.",
+        "Zważ też pustą dużą miskę na ugotowane ziemniaki i wpisz jej wagę w panelu przy „Ziemniaki”.",
+        "Mięso ({wolowina_gulasz}) osusz ręcznikiem papierowym i pokrój w plastry grubości ok. 1 cm, w poprzek włókien (włókna to widoczne na mięsie „nitki” — kroisz prostopadle do nich). Umyj deskę, nóż i ręce.",
+        "Obierz cebulę ({cebula}), przekrój każdą na pół i pokrój w cienkie piórka.",
+        "Garnek na dużym ogniu, wlej olej ({olej}) i odczekaj 2 minuty. Połóż mięso jedną warstwą (jeśli się nie mieści, smaż w dwóch turach). 3 minuty bez ruszania, potem obróć i smaż jeszcze 3 minuty.",
+        "Zmniejsz ogień na średni, dodaj całą cebulę i smaż 6 minut, mieszając, aż zmięknie. Dużo cebuli to celowo — rozpadnie się w sos.",
+        "Dodaj musztardę ({musztarda}), kostki bulionowe ({bulion}), pół łyżeczki pieprzu i 500 ml wody. Gdy zacznie bulgotać, zmniejsz ogień na najmniejszy, przykryj i gotuj 70 minut. Co 20 minut zamieszaj; jeśli płynu jest mało, dolej 100 ml wody.",
+        "Ziemniaki: obierz ziemniaki ({ziemniaki}) obieraczką, większe przekrój na pół. Włóż do garnka, zalej zimną wodą tak, żeby je przykryła, dodaj 1 łyżeczkę soli i postaw na dużym ogniu. Gdy woda zacznie bulgotać, zmniejsz ogień na średni i gotuj 20 minut. Są gotowe, gdy nóż wchodzi w ziemniaka bez oporu. Odcedź na durszlaku.",
+        "Mąkę ({maka}) rozmieszaj w kubku ze 100 ml zimnej wody bez grudek, wlej do garnka, mieszając, i gotuj 3 minuty, aż sos zgęstnieje. Spróbuj — kostki są słone, więc dosól tylko w razie potrzeby.",
+        "Porcjowanie: przełóż ugotowane ziemniaki do zważonej miski i zważ ją. Zważ też garnek z mięsem (na tej samej desce). Wpisz obie wagi w panelu — pokaże, ile gramów mięsa z sosem i ile ziemniaków nałożyć do każdego pojemnika.",
+        "Do każdego z 3 pojemników nałóż wyliczone gramy: postaw pusty pojemnik na wadze, wciśnij TARA (waga pokaże 0) i nakładaj, aż dojdziesz do liczby z panelu. Zostaw pojemniki otwarte na 20–30 minut, żeby wystygły, potem zamknij i wstaw do lodówki. Każdy pojemnik to dokładnie jedna porcja z Twojego planu."
+      ],
+      "skladowe": [
+        {
+          "nazwa": "Wołowina w sosie",
+          "opis": "Garnek z mięsem i sosem."
+        },
+        {
+          "nazwa": "Ziemniaki",
+          "opis": "Ugotowane i odcedzone ziemniaki w misce."
+        }
+      ]
+    },
+    {
+      "id": "b_kapusta",
+      "nazwa": "Wołowina z kapustą kiszoną i ziemniakami",
+      "porcje": 3,
+      "czas_min": 45,
+      "czas_pracy": 15,
+      "naczynia": "1 garnek + 1 garnek na ziemniaki",
+      "przechowywanie": "lodówka, 3 dni (im dłużej stoi, tym lepsze)",
+      "odgrzewanie": "mikrofala 3 min",
+      "box": true,
+      "produkty": [
+        [
+          "mielone_wolowe",
+          420.0
+        ],
+        [
+          "kapusta_kiszona",
+          350.0
+        ],
+        [
+          "cebula",
+          1.4
+        ],
+        [
+          "koncentrat",
+          42.0
+        ],
+        [
+          "ziemniaki",
+          525.0
+        ],
+        [
+          "bulion",
+          0.7
+        ],
+        [
+          "olej",
+          14.0
+        ],
+        [
+          "przyprawy",
+          2.1
+        ]
+      ],
+      "kroki": [
+        "Zanim zaczniesz: postaw na wadze kuchennej deskę do krojenia, na niej pusty duży garnek, i wpisz tę wagę w zakładce Gotuję → „Ile nałożyć na porcję” (pole „puste naczynie”). Na tej samej desce zważysz później naczynie z jedzeniem — deska chroni wagę przed gorącem.",
+        "Zważ też pustą dużą miskę na ugotowane ziemniaki i wpisz jej wagę w panelu przy „Ziemniaki”.",
+        "Kapustę kiszoną ({kapusta_kiszona}) wyłóż na durszlak i odciśnij rękami sok. Na desce pokrój ją kilka razy wzdłuż i w poprzek (kawałki ok. 3 cm). Obierz cebulę ({cebula}) i pokrój w kostkę.",
+        "Ziemniaki: obierz ziemniaki ({ziemniaki}) obieraczką, większe przekrój na pół. Włóż do garnka, zalej zimną wodą tak, żeby je przykryła, dodaj 1 łyżeczkę soli i postaw na dużym ogniu. Gdy woda zacznie bulgotać, zmniejsz ogień na średni i gotuj 20 minut. Są gotowe, gdy nóż wchodzi w ziemniaka bez oporu. Odcedź na durszlaku.",
+        "Garnek na średnim ogniu, wlej olej ({olej}), po minucie wrzuć cebulę i smaż 4 minuty.",
+        "Dodaj mięso ({mielone_wolowe}), rozbijaj łopatką i smaż 8 minut.",
+        "Dodaj koncentrat ({koncentrat}), pokruszoną kostkę bulionową ({bulion}), pół łyżeczki pieprzu i 1 łyżeczkę suszonego majeranku. Mieszaj 1 minutę.",
+        "Wrzuć kapustę, wlej 300 ml wody, wymieszaj, przykryj i gotuj 25 minut na małym ogniu, mieszając co ok. 8 minut. Jeśli po spróbowaniu jest za kwaśne, dodaj 1 łyżeczkę miodu.",
+        "Porcjowanie: przełóż ugotowane ziemniaki do zważonej miski i zważ ją. Zważ też garnek z kapustą (na tej samej desce). Wpisz obie wagi w panelu — pokaże, ile gramów kapusty z mięsem i ile ziemniaków nałożyć do każdego pojemnika.",
+        "Do każdego z 3 pojemników nałóż wyliczone gramy: postaw pusty pojemnik na wadze, wciśnij TARA (waga pokaże 0) i nakładaj, aż dojdziesz do liczby z panelu. Zostaw pojemniki otwarte na 20–30 minut, żeby wystygły, potem zamknij i wstaw do lodówki. Każdy pojemnik to dokładnie jedna porcja z Twojego planu."
+      ],
+      "skladowe": [
+        {
+          "nazwa": "Kapusta z mięsem",
+          "opis": "Garnek z kapustą i mięsem."
+        },
+        {
+          "nazwa": "Ziemniaki",
+          "opis": "Ugotowane i odcedzone ziemniaki w misce."
+        }
+      ]
+    }
+  ]
+}

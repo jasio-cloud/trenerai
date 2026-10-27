@@ -24,11 +24,57 @@ except Exception:
     pass
 
 BASE = os.path.dirname(os.path.abspath(__file__))
+
+
+def _profil():
+    """Ktory profil obslugujemy: domyslny (Krystian) czy ktos inny, np. siostra.
+
+    Jeden silnik, osobne dane: config-<profil>.json, state-<profil>/, docs/dane-<profil>.json
+    i opcjonalnie data-<profil>/ z nadpisanymi plikami (program treningowy, rozklad dnia).
+    Profil wskazujesz flaga --profil siostra albo zmienna TRENER_PROFIL (wygodniej w cronie)."""
+    argv = sys.argv[1:]
+    for i, a in enumerate(argv):
+        if a.startswith("--profil="):
+            return a.split("=", 1)[1].strip().lower()
+        if a == "--profil" and i + 1 < len(argv):
+            return argv[i + 1].strip().lower()
+    return (os.environ.get("TRENER_PROFIL") or "").strip().lower()
+
+
+PROFIL = _profil()
+if PROFIL:   # flaga nie moze trafic do parsera komend
+    _czysty, _pomin = [], False
+    for _a in sys.argv:
+        if _pomin:
+            _pomin = False
+            continue
+        if _a == "--profil":
+            _pomin = True
+            continue
+        if _a.startswith("--profil="):
+            continue
+        _czysty.append(_a)
+    sys.argv = _czysty
+
+_SUF = ("-" + PROFIL) if PROFIL else ""
 DATA = os.path.join(BASE, "data")
-STATE = os.path.join(BASE, "state")
+DATA_PROFIL = os.path.join(BASE, "data" + _SUF) if PROFIL else None
+STATE = os.path.join(BASE, "state" + _SUF)
 DOCS = os.path.join(BASE, "docs")
 for _d in (STATE, DOCS):
     os.makedirs(_d, exist_ok=True)
+
+
+def dane_plik(nazwa):
+    """Plik z data/, chyba ze profil ma wlasna wersje w data-<profil>/.
+
+    Dzieki temu drugi profil dzieli produkty, makro i przepisy (ten sam sklep i te
+    same ceny), ale ma swoj program treningowy i swoj rozklad dnia."""
+    if DATA_PROFIL:
+        wlasny = os.path.join(DATA_PROFIL, nazwa)
+        if os.path.exists(wlasny):
+            return wlasny
+    return os.path.join(DATA, nazwa)
 
 
 # ---------------------------------------------------------------- wczytywanie
@@ -62,22 +108,22 @@ def _load_dotenv():
 
 _load_dotenv()
 
-CFG = load(os.path.join(BASE, "config.json"))
-PROD = load(os.path.join(DATA, "produkty.json"))
-MAKRO = load(os.path.join(DATA, "makro.json"))
-BAZY = load(os.path.join(DATA, "bases.json"))["bazy"]
-QUICK = load(os.path.join(DATA, "quick.json"))["posilki"]
+CFG = load(os.path.join(BASE, "config%s.json" % _SUF))
+PROD = load(dane_plik("produkty.json"))
+MAKRO = load(dane_plik("makro.json"))
+BAZY = load(dane_plik("bases.json"))["bazy"]
+QUICK = load(dane_plik("quick.json"))["posilki"]
 # Produkty, ktorych nie jesz (config.nie_lubi) — dania z nimi w ogole nie wchodza do planu
 _NIE_LUBI = set(CFG.get("nie_lubi", []))
 BAZY = [b for b in BAZY if not _NIE_LUBI & {k for k, _ in b["produkty"]}]
 QUICK = [q for q in QUICK if not _NIE_LUBI & {k for k, _ in q["produkty"]}]
-DNI = load(os.path.join(DATA, "dni.json"))
+DNI = load(dane_plik("dni.json"))
 TRENINGI = load(os.path.join(DATA, "workouts.json"))
 KROKI = load(os.path.join(DATA, "kroki.json"))
 SUPLE = load(os.path.join(DATA, "suple.json"))
-PROGRAM = load(os.path.join(DATA, "program.json"))
+PROGRAM = load(dane_plik("program.json"))
 SLOWA = load(os.path.join(DATA, "slowa.json"))
-CIEZARY_START = load(os.path.join(DATA, "ciezary_start.json"))
+CIEZARY_START = load(dane_plik("ciezary_start.json"))
 PLAN_ROKU = CFG.get("plan_roku", {})
 import dziennik
 
@@ -672,6 +718,12 @@ def _koszt_posilku(pid):
 
 
 def _ulubione():
+    """Ulubione sniadania. Flaga w quick.json jest wspolna dla wszystkich profili,
+    wiec config moze ja nadpisac (config.ulubione.dania) — siostra nie ma dziedziczyc
+    omleta marchewkowego tylko dlatego, ze Krystian go lubi."""
+    wlasne = (CFG.get("ulubione") or {}).get("dania")
+    if wlasne is not None:
+        return [pid for pid in wlasne if pid in QUICK_BY_ID]
     return [q["id"] for q in QUICK if q.get("ulubione")]
 
 
@@ -2871,7 +2923,7 @@ def eksport():
     # Cron leci co 10 minut. Gdyby zapisywał plik zawsze, sam znacznik czasu
     # generowałby commit przy każdym uruchomieniu — 144 dziennie i repo nie do
     # czytania. Zapisujemy tylko, gdy zmieniła się TREŚĆ.
-    sciezka = os.path.join(DOCS, "dane.json")
+    sciezka = os.path.join(DOCS, "dane%s.json" % _SUF)
     stare = load(sciezka, None) if os.path.exists(sciezka) else None
     if stare is not None:
         a = dict(stare); b = dict(dane)
@@ -2943,8 +2995,9 @@ def pokaz_zakupy():
     print("\n   RAZEM %.2f zł" % z["koszt"])
     if z.get("szafka"):
         print("   w tym szafka (kupujesz raz): %.2f zł" % z["szafka"])
-    print("   jedzenie zużyte w tych 3 dniach: %.2f zł (%.1f zł/dzień, limit %s zł/dzień)"
-          % (z["zjesz"], z["zjesz"] / 3.0, (CFG.get("budzet") or {}).get("dziennie_zl", "-")))
+    _limit = (CFG.get("budzet") or {}).get("dziennie_zl")
+    print("   jedzenie zużyte w tych 3 dniach: %.2f zł (%.1f zł/dzień%s)"
+          % (z["zjesz"], z["zjesz"] / 3.0, ", limit %s zł/dzień" % _limit if _limit else ""))
     zostanie = z["koszt"] - z.get("szafka", 0) - z["zjesz"]
     if zostanie > 0.5:
         print("   zostanie w lodówce na kolejne dni: %.2f zł" % zostanie)
@@ -2975,16 +3028,17 @@ def pokaz_gotowanie():
 
 def pokaz_trening(d=None):
     t = trening_dnia(d)
-    if t["rodzaj"] in ("zmiana", "przedstart", "lzejszy"):
-        w = t["trening"]
-        _kreska(w["nazwa"])
-        print(w["zasada"])
-        print("\nMikro-rozruch co 2-3 h:")
-        for x in w["mikro"]:
-            print("   • " + x)
-        return
     w = t["trening"]
-    _kreska("%s — %d min" % (w["nazwa"], w["czas_min"]))
+    # dzien wolny, przedstart i dzien lzejszy nie maja rozpiski — maja zasade i mikro-rozruch
+    if "cwiczenia" not in w:
+        _kreska(w["nazwa"])
+        print(w.get("zasada", ""))
+        if w.get("mikro"):
+            print("\nNa dzis:")
+            for x in w["mikro"]:
+                print("   • " + x)
+        return
+    _kreska("%s — %d min" % (w["nazwa"], w["czas_min"]) if w.get("czas_min") else w["nazwa"])
     for r in w["rozgrzewka"]:
         print("   ▸ " + r)
     print()
@@ -3199,8 +3253,8 @@ def main():
             zapisz_wage(arg.replace(",", "."))
     elif cmd == "eksport":
         d = eksport()
-        print("Zapisano docs/dane.json (%d dni planu, %d pozycji zakupów)."
-              % (len(d["plan"]["dni"]), len(d["zakupy"]["kup"])))
+        print("Zapisano docs/dane%s.json (%d dni planu, %d pozycji zakupów)."
+              % (_SUF, len(d["plan"]["dni"]), len(d["zakupy"]["kup"])))
     elif cmd == "tick":
         poszlo = tick(sucho=(arg == "sucho"))
         print("Wysłano: %s" % (", ".join(poszlo) if poszlo else "nic (nie ma nic na teraz)"))

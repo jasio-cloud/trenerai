@@ -1,0 +1,293 @@
+{
+  "_info": "Profil siostry. Uruchamiasz go flaga: py trener.py --profil siostra <komenda>. Osobny stan (state-siostra/), osobny panel (docs/siostra.html + docs/dane-siostra.json), wspolne produkty i przepisy z profilem glownym.",
+  "user": {
+    "imie": "Siostra",
+    "wiek": 30,
+    "wzrost_cm": 165,
+    "waga_kg": 75,
+    "plec": "kobieta",
+    "cel": "redukcja tkanki tluszczowej + forma: mocniejsze posladki, nogi i plecy",
+    "sprzet": "silownia — pelne wyposazenie (suwnica, wyciagi, maszyny, hantle, sztangi)",
+    "nie_je": [],
+    "je": [],
+    "cardio": "marsz na biezni / orbitrek, 20-30 min po treningu albo w dni wolne",
+    "praca": "brak danych — rozklad dnia ustawiony pod prace 8-16, do zmiany w data-siostra/dni.json"
+  },
+  "makra": {
+    "kcal": 1700,
+    "bialko": 130,
+    "tluszcz": 60,
+    "wegle": 160
+  },
+  "makra_uzasadnienie": "1700 kcal to ok. 350 kcal pod utrzymaniem (2050) — spadek ok. 0,5 kg/tydzien. Bialko 130 g (1,7 g/kg) chroni miesnie na deficycie i najlepiej syci. Tluszcz 60 g to minimum dla gospodarki hormonalnej kobiety, nizej nie schodzimy. Reszta to wegle — glownie wokol treningu.",
+  "grafik": {
+    "tryb": "tydzien",
+    "dni_treningowe": [
+      0,
+      2,
+      4
+    ],
+    "komentarz": "Silownia w poniedzialek, srode i piatek. Wtorek/czwartek/weekend wolne — spacer lub rower."
+  },
+  "gotowanie": {
+    "bez_garnka": true,
+    "godzina_zakupow": "06:00",
+    "porcje_bazy": 3,
+    "komentarz": "Codziennie krótki blok w kuchni (do 20 minut). Obiady z puli dań bez garnka."
+  },
+  "wykluczenia": [
+    "ryż",
+    "kurczak",
+    "kasze",
+    "ryby",
+    "owsianka",
+    "naleśniki",
+    "kotlety mielone",
+    "indyk",
+    "rodzynki"
+  ],
+  "filary_bialka": [
+    "wołowina i mielone",
+    "jaja i nabiał"
+  ],
+  "ntfy": {
+    "server": "https://ntfy.sh",
+    "topic_env": "NTFY_TOPIC_SIOSTRA",
+    "wylaczone": true,
+    "komentarz": "Pingi wylaczone — korzysta ze strony. Zeby wlaczyc: ustaw sekret NTFY_TOPIC_SIOSTRA i wylaczone=false."
+  },
+  "panel_url": "https://jasio-cloud.github.io/trenerai/siostra.html",
+  "strefa": "Europe/Warsaw",
+  "sen": {
+    "cykl_min": 90,
+    "zasypianie_min": 15,
+    "zasypianie_zmeczony_min": 5,
+    "cykle_dobre": [
+      5,
+      6
+    ],
+    "cykle_minimum": 4,
+    "komentarz": "Sen chodzi cyklami po ok. 90 min. Budzenie w srodku cyklu (zwlaszcza w fazie gebokiej) daje uczucie rozbicia, nawet gdy przespales duzo. Dlatego budzik ustawiamy na WIELOKROTNOSC cyklu liczona od momentu ZASNIECIA, nie polozenia sie. 90 min to srednia - indywidualnie bywa 80-110, wiec traktujemy to jako przyblizenie, a nie wyrocznie."
+  },
+  "panel_wersja": 1,
+  "panel_wersja_komentarz": "Numer wersji panelu siostry (docs/siostra.html). PODNIES O 1 PO KAZDEJ ZMIANIE W TYM PLIKU.",
+  "repo": "jasio-cloud/trenerai",
+  "galaz": "main",
+  "plan_roku": {
+    "_info": "Od 27.10.2026 do poczatku wakacji 2027 (35 tygodni). Redukcja z przerwa w srodku — cztery tygodnie na zero to nie przerwa od planu, tylko czesc planu: wraca energia, sen i sila.",
+    "start": "2026-10-27",
+    "final": "2027-06-26",
+    "final_nazwa": "Poczatek wakacji",
+    "przedstart": {
+      "makra": {
+        "kcal": 1850,
+        "bialko": 125,
+        "tluszcz": 62,
+        "wegle": 185
+      },
+      "cel": "Tydzien na rozruch: jemy normalnie, uczymy sie techniki."
+    },
+    "fazy": [
+      {
+        "id": "F0",
+        "nazwa": "Wejscie",
+        "od_tyg": 1,
+        "do_tyg": 2,
+        "makra": {
+          "kcal": 1850,
+          "bialko": 125,
+          "tluszcz": 62,
+          "wegle": 185
+        },
+        "tempo_kg_tydz": [
+          -0.5,
+          0.2
+        ],
+        "porcje": [
+          0.5,
+          1.2
+        ],
+        "kroki": 8000,
+        "cel": "Nauka ruchu i rytmu jedzenia. Deficyt lekki, zeby sie nie zniechecic."
+      },
+      {
+        "id": "F1",
+        "nazwa": "Redukcja",
+        "od_tyg": 3,
+        "do_tyg": 18,
+        "makra": {
+          "kcal": 1700,
+          "bialko": 130,
+          "tluszcz": 60,
+          "wegle": 160
+        },
+        "tempo_kg_tydz": [
+          -0.7,
+          -0.3
+        ],
+        "porcje": [
+          0.5,
+          1.2
+        ],
+        "kroki": 9000,
+        "cel": "Okolo 0,5 kg tygodniowo w dol przy rosnacych ciezarach. Talia -6-8 cm."
+      },
+      {
+        "id": "F2",
+        "nazwa": "Przerwa od deficytu",
+        "od_tyg": 19,
+        "do_tyg": 22,
+        "makra": {
+          "kcal": 1950,
+          "bialko": 130,
+          "tluszcz": 65,
+          "wegle": 205
+        },
+        "tempo_kg_tydz": [
+          -0.2,
+          0.4
+        ],
+        "porcje": [
+          0.5,
+          1.2
+        ],
+        "kroki": 9000,
+        "cel": "Cztery tygodnie na utrzymaniu. Waga stoi, wraca sen, energia i sila na treningu."
+      },
+      {
+        "id": "F3",
+        "nazwa": "Druga redukcja",
+        "od_tyg": 23,
+        "do_tyg": 32,
+        "makra": {
+          "kcal": 1700,
+          "bialko": 135,
+          "tluszcz": 58,
+          "wegle": 158
+        },
+        "tempo_kg_tydz": [
+          -0.6,
+          -0.2
+        ],
+        "porcje": [
+          0.5,
+          1.2
+        ],
+        "kroki": 10000,
+        "cel": "Druga polowa redukcji — tu widac rozne miesnie, ktore zrobily sie zima."
+      },
+      {
+        "id": "F4",
+        "nazwa": "Forma na lato",
+        "od_tyg": 33,
+        "do_tyg": 35,
+        "makra": {
+          "kcal": 1750,
+          "bialko": 135,
+          "tluszcz": 58,
+          "wegle": 168
+        },
+        "tempo_kg_tydz": [
+          -0.4,
+          0.1
+        ],
+        "porcje": [
+          0.5,
+          1.2
+        ],
+        "kroki": 10000,
+        "cel": "Wyjscie na prosta: waga trzyma sie nisko, jedzenia troche wiecej."
+      }
+    ]
+  },
+  "pomiary_cele": {
+    "_info": "Tasma mowi wiecej niz waga — miesien wazy tyle samo, a zajmuje mniej miejsca.",
+    "talia_do_wzrostu": 0.45,
+    "biodra_do_talii": 1.4,
+    "tluszcz_proc": 24
+  },
+  "sklep": "Dino",
+  "nie_lubi": [],
+  "obiady": {
+    "dozwolone": [
+      "b_bolo",
+      "b_zapiekanka",
+      "b_pieczarkowy"
+    ],
+    "komentarz": "Na start tylko sprawdzone, proste obiady z mielonej wołowiny i makaronu. Łopatka (gulasz, wołowina w cebuli) odłożona na później — droga. Kolejne dania dopisujemy, gdy użytkownik sam poprosi."
+  },
+  "oszczedzanie": {
+    "do": "2026-11-30",
+    "waga": 22,
+    "waga_opakowan": 12,
+    "komentarz": "Lekka preferencja tanszych zestawow na start, zeby nie wyjsc od razu na 300 zl na cykl."
+  },
+  "kuchnia": {
+    "max_min_posilek": 20,
+    "blok_rano_w_dniu_zmiany": false,
+    "komentarz": "Górny limit czasu na jeden posiłek. Blok kuchni jest codziennie i obejmuje posiłki tego dnia."
+  },
+  "zielona_strefa": {
+    "kcal_od": 2300,
+    "kcal_do": 2500,
+    "komentarz": "Dzień liczy się jako trafiony, gdy kalorie mieszczą się w tym przedziale, a białko jest blisko celu."
+  },
+  "limity": {
+    "nabial_g": 700,
+    "cukry_dodane_g": 50,
+    "komentarz": "Limity dzienne pilnowane przez planer. Jesli po nabiale bedzie jej ciezko, zejdz do 500 g."
+  },
+  "gryf_kg": 20,
+  "ciezary_komentarz": "Na silowni ciezar podajemy CALKOWITY — tak, jak pokazuje maszyna albo jak wychodzi ze sztanga (gryf olimpijski 20 kg wliczony). Przy hantlach: waga jednego hantla.",
+  "zasady_diety": [
+    "Cztery posilki dziennie w miare rownych odstepach — latwiej kontrolowac glod niz przy dwoch duzych.",
+    "W kazdym posilku zrodlo bialka: jajka, nabial, mieso, ryba albo odzywka. Cel to ok. 30 g na posilek.",
+    "Warzywa do kazdego glownego posilku (100-200 g) — objetosc, blonnik i sytosc za grosze kalorii.",
+    "Napoje zero, kawa i herbata bez cukru dozwolone bez liczenia.",
+    "2-2,5 litra wody dziennie. Przy deficycie glod czesto jest pragnieniem.",
+    "Jeden posilek w tygodniu poza planem jest wliczony w plan — nie psuje wyniku, a ratuje glowe."
+  ],
+  "makra_posilkow": {
+    "p1": {
+      "bialko": 30,
+      "tluszcz": 15,
+      "wegle": 35
+    },
+    "p2_4": {
+      "bialko": 30,
+      "tluszcz": 15,
+      "wegle": 45
+    },
+    "komentarz": "Orientacyjny ksztalt posilku przy 1700 kcal."
+  },
+  "cykl": {
+    "start": "2026-10-27",
+    "dni": 3,
+    "komentarz": "Zakupy i menu co 3 dni od tej daty."
+  },
+  "budzet": {
+    "dziennie_zl": null,
+    "waga_rachunku": 0,
+    "jednorazowo_zl": null,
+    "komentarz": "Brak twardego limitu zakupow. Jesli ma sie zmiescic w kwocie, wpisz dziennie_zl (np. 35)."
+  },
+  "ulubione": {
+    "co_ile_dni": 3,
+    "dania": [],
+    "komentarz": "Pusta lista = brak wymuszonych ulubionych. Jak znajdzie danie, ktore chce jesc czesto, wpisz tu jego id."
+  },
+  "trening": {
+    "bonus_serii": 0,
+    "komentarz": "0 = plan jak w data-siostra/program.json. 1 = kazde cwiczenie dostaje serie wiecej."
+  },
+  "zasady_liczbowe": {
+    "bialko_zwierzece_posilek_g": 25,
+    "warzywa_posilek_g": [
+      100,
+      200
+    ],
+    "komentarz": "Przy 1700 kcal 30 g na posilek bywa za duzo objetosciowo, wiec pilnujemy 25 g."
+  },
+  "odlozone": [],
+  "odlozone_komentarz": "Klucze produktow, ktorych w tym cyklu NIE kupujesz (brak kasy). Planer uklada menu tak, zeby ich nie potrzebowac — np. [\"maslo_orzechowe\", \"miod\", \"orzechy\", \"krem_bez_cukru\"]."
+}

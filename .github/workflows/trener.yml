@@ -81,12 +81,32 @@ jobs:
         if: ${{ !inputs.test }}
         run: python trener.py eksport
 
+      # Profil siostry: ten sam silnik, osobny config i stan. Bez pingów — korzysta ze strony,
+      # więc nie ma tu kroku tick (to on wysyła powiadomienia na ntfy).
+      - name: Siostra — zastosuj to, co przyszło z jej panelu
+        if: ${{ !inputs.test }}
+        env:
+          TRENER_PROFIL: siostra
+        run: python trener.py przetworz
+
+      - name: Siostra — zaksięguj zakupy i zużycie
+        if: ${{ !inputs.test }}
+        env:
+          TRENER_PROFIL: siostra
+        run: python trener.py auto
+
+      - name: Siostra — odśwież dane dla panelu
+        if: ${{ !inputs.test }}
+        env:
+          TRENER_PROFIL: siostra
+        run: python trener.py eksport
+
       - name: Zapisz stan z powrotem do repo
         if: ${{ !inputs.test }}
         run: |
           git config user.name "trener-ai"
           git config user.email "trener-ai@users.noreply.github.com"
-          git add state docs/dane.json
+          git add state docs/dane.json state-siostra docs/dane-siostra.json
           if git diff --cached --quiet; then
             echo "Nic się nie zmieniło — bez commita."
           else

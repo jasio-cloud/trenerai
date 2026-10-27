@@ -1,0 +1,294 @@
+{
+  "_info": "Rozklad dnia siostry. Zalozenie: praca 8-16, silownia po pracy. Jesli grafik jest inny, zmien godziny w tym pliku — reszta systemu sie dostosuje.",
+  "typy": {
+    "0": {
+      "nazwa": "SILOWNIA",
+      "emoji": "🏋️",
+      "pobudka": "06:45",
+      "opis": "Trening po pracy. Przed nim lzejszy posilek, po nim najwiekszy."
+    },
+    "1": {
+      "nazwa": "WOLNE",
+      "emoji": "🚶",
+      "pobudka": "07:30",
+      "opis": "Bez silowni. Spacer 30-45 minut i spokojny dzien."
+    },
+    "2": {
+      "nazwa": "WOLNE",
+      "emoji": "🚶",
+      "pobudka": "07:30",
+      "opis": "Bez silowni. Spacer 30-45 minut i spokojny dzien."
+    }
+  },
+  "plan": {
+    "0": [
+      {
+        "czas": "06:45",
+        "tytul": "Pobudka",
+        "ikona": "⏰",
+        "ping": false,
+        "opis": "Toaleta — za 5 minut waga, wiec jeszcze nic nie pij."
+      },
+      {
+        "czas": "06:50",
+        "tytul": "Waga",
+        "ikona": "⚖️",
+        "ping": false,
+        "opis": "Na czczo, po toalecie, w bielieznie. Liczy sie srednia z 7 dni, nie jeden dzien.",
+        "akcja": "waga"
+      },
+      {
+        "czas": "07:15",
+        "tytul": "Sniadanie",
+        "ikona": "🍳",
+        "ping": false,
+        "opis": "Pierwszy posilek dnia, spokojnie.",
+        "slot": "sniadanie"
+      },
+      {
+        "czas": "11:30",
+        "tytul": "Drugi posilek",
+        "ikona": "🥪",
+        "ping": false,
+        "opis": "Zjedz zanim zglodniejesz — po poludniu latwiej o podjadanie.",
+        "slot": "drugi"
+      },
+      {
+        "czas": "15:30",
+        "tytul": "Posilek przed silownia",
+        "ikona": "🍽️",
+        "ping": false,
+        "opis": "Lzejszy, z weglami — ma dac energie, nie ciazyc.",
+        "slot": "obiad"
+      },
+      {
+        "czas": "17:00",
+        "tytul": "SILOWNIA",
+        "ikona": "🏋️",
+        "ping": false,
+        "opis": "Rozgrzewka 5 minut, potem plan z panelu. Zapisuj ciezary.",
+        "akcja": "trening_glowny"
+      },
+      {
+        "czas": "18:30",
+        "tytul": "Marsz na biezni",
+        "ikona": "🚶",
+        "ping": false,
+        "opis": "20 minut spokojnego marszu po treningu — spalone kalorie bez zmeczenia."
+      },
+      {
+        "czas": "19:15",
+        "tytul": "Kolacja",
+        "ikona": "🌙",
+        "ping": false,
+        "opis": "Najwiekszy posilek dnia, po treningu. Duzo bialka.",
+        "slot": "kolacja"
+      },
+      {
+        "czas": "20:00",
+        "tytul": "KUCHNIA — 20 minut",
+        "ikona": "🍳",
+        "ping": false,
+        "opis": "Szykujesz jedzenie na jutro. Plan krok po kroku masz w panelu.",
+        "akcja": "kuchnia"
+      },
+      {
+        "czas": "22:30",
+        "tytul": "Telefon w dol",
+        "ikona": "📵",
+        "ping": false,
+        "opis": "Ekran w dol. Sen to polowa efektu redukcji."
+      },
+      {
+        "czas": "23:00",
+        "tytul": "Sen",
+        "ikona": "😴",
+        "ping": false,
+        "opis": "Siedem-osiem godzin. Przy krotszym snie glod nastepnego dnia jest wyrazny."
+      }
+    ],
+    "1": [
+      {
+        "czas": "07:30",
+        "tytul": "Pobudka",
+        "ikona": "⏰",
+        "ping": false,
+        "opis": "Toaleta — za 5 minut waga."
+      },
+      {
+        "czas": "07:35",
+        "tytul": "Waga",
+        "ikona": "⚖️",
+        "ping": false,
+        "opis": "Na czczo, po toalecie. Codziennie, nawet jak liczba sie nie podoba.",
+        "akcja": "waga"
+      },
+      {
+        "czas": "08:00",
+        "tytul": "Sniadanie",
+        "ikona": "🍳",
+        "ping": false,
+        "opis": "Pierwszy posilek dnia.",
+        "slot": "sniadanie"
+      },
+      {
+        "czas": "11:30",
+        "tytul": "Drugi posilek",
+        "ikona": "🥪",
+        "ping": false,
+        "opis": "Zjedz zanim zglodniejesz.",
+        "slot": "drugi"
+      },
+      {
+        "czas": "15:00",
+        "tytul": "Obiad",
+        "ikona": "🍽️",
+        "ping": false,
+        "opis": "Najwiekszy posilek dnia wolnego.",
+        "slot": "obiad"
+      },
+      {
+        "czas": "17:30",
+        "tytul": "Spacer",
+        "ikona": "🚶",
+        "ping": false,
+        "opis": "30-45 minut. Cel 9000 krokow — to robi wiecej niz cardio na maszynie."
+      },
+      {
+        "czas": "19:00",
+        "tytul": "Kolacja",
+        "ikona": "🌙",
+        "ping": false,
+        "opis": "Ostatni posilek, z bialkiem.",
+        "slot": "kolacja"
+      },
+      {
+        "czas": "19:45",
+        "tytul": "KUCHNIA — 20 minut",
+        "ikona": "🍳",
+        "ping": false,
+        "opis": "Jedzenie na jutro.",
+        "akcja": "kuchnia"
+      },
+      {
+        "czas": "22:30",
+        "tytul": "Telefon w dol",
+        "ikona": "📵",
+        "ping": false,
+        "opis": "Ekran w dol."
+      },
+      {
+        "czas": "23:00",
+        "tytul": "Sen",
+        "ikona": "😴",
+        "ping": false,
+        "opis": "Siedem-osiem godzin."
+      }
+    ],
+    "2": [
+      {
+        "czas": "07:30",
+        "tytul": "Pobudka",
+        "ikona": "⏰",
+        "ping": false,
+        "opis": "Toaleta — za 5 minut waga."
+      },
+      {
+        "czas": "07:35",
+        "tytul": "Waga",
+        "ikona": "⚖️",
+        "ping": false,
+        "opis": "Na czczo, po toalecie. Codziennie, nawet jak liczba sie nie podoba.",
+        "akcja": "waga"
+      },
+      {
+        "czas": "08:00",
+        "tytul": "Sniadanie",
+        "ikona": "🍳",
+        "ping": false,
+        "opis": "Pierwszy posilek dnia.",
+        "slot": "sniadanie"
+      },
+      {
+        "czas": "11:30",
+        "tytul": "Drugi posilek",
+        "ikona": "🥪",
+        "ping": false,
+        "opis": "Zjedz zanim zglodniejesz.",
+        "slot": "drugi"
+      },
+      {
+        "czas": "15:00",
+        "tytul": "Obiad",
+        "ikona": "🍽️",
+        "ping": false,
+        "opis": "Najwiekszy posilek dnia wolnego.",
+        "slot": "obiad"
+      },
+      {
+        "czas": "17:30",
+        "tytul": "Spacer",
+        "ikona": "🚶",
+        "ping": false,
+        "opis": "30-45 minut. Cel 9000 krokow — to robi wiecej niz cardio na maszynie."
+      },
+      {
+        "czas": "19:00",
+        "tytul": "Kolacja",
+        "ikona": "🌙",
+        "ping": false,
+        "opis": "Ostatni posilek, z bialkiem.",
+        "slot": "kolacja"
+      },
+      {
+        "czas": "19:45",
+        "tytul": "KUCHNIA — 20 minut",
+        "ikona": "🍳",
+        "ping": false,
+        "opis": "Jedzenie na jutro.",
+        "akcja": "kuchnia"
+      },
+      {
+        "czas": "22:30",
+        "tytul": "Telefon w dol",
+        "ikona": "📵",
+        "ping": false,
+        "opis": "Ekran w dol."
+      },
+      {
+        "czas": "23:00",
+        "tytul": "Sen",
+        "ikona": "😴",
+        "ping": false,
+        "opis": "Siedem-osiem godzin."
+      }
+    ]
+  },
+  "nawyki": [
+    {
+      "id": "woda",
+      "nazwa": "2,5 litra wody",
+      "opis": "Butelka 0,5 l pod reka i pieciokrotne napelnienie. Przy deficycie glod czesto jest pragnieniem."
+    },
+    {
+      "id": "bialko",
+      "nazwa": "Trafic w bialko",
+      "opis": "Na redukcji bialko jest wazniejsze niz same kalorie: trzyma miesnie i najlepiej syci."
+    },
+    {
+      "id": "kroki",
+      "nazwa": "9000 krokow",
+      "opis": "Spacer robi wiecej niz godzina na orbitreku i nie zabiera sil na trening."
+    },
+    {
+      "id": "waga",
+      "nazwa": "Wazenie rano",
+      "opis": "Codziennie po toalecie, na czczo. Patrzymy na srednia z tygodnia — pojedynczy dzien klamie o 1-2 kg."
+    },
+    {
+      "id": "sen",
+      "nazwa": "7-8 godzin snu",
+      "opis": "Po krotkim snie nastepnego dnia glod jest wyrazniejszy, a trening slabszy. To nie jest dodatek do planu."
+    }
+  ]
+}

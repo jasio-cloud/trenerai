@@ -1,0 +1,1344 @@
+<!doctype html>
+<html lang="pl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Plan treningowy</title>
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="apple-mobile-web-app-title" content="Trener">
+<meta name="theme-color" content="#11151c">
+<link rel="apple-touch-icon" href="ikona.png">
+<link rel="manifest" href="manifest.json">
+<style>
+  :root{
+    --tlo:#f5f6f8; --karta:#ffffff; --tekst:#11151c; --slaby:#6b7480;
+    --linia:#e3e6ea; --akcent:#c8442b; --ok:#1f7a4d; --uwaga:#a8620a;
+    --cien:0 1px 2px rgba(16,24,40,.06), 0 4px 12px rgba(16,24,40,.05);
+  }
+  @media (prefers-color-scheme: dark){
+    :root{
+      --tlo:#0e1117; --karta:#171b23; --tekst:#e8ebef; --slaby:#98a2b0;
+      --linia:#262c37; --akcent:#ff7a5e; --ok:#4ecb8d; --uwaga:#e0a13c;
+      --cien:none;
+    }
+  }
+  *{box-sizing:border-box}
+  body{margin:0;background:var(--tlo);color:var(--tekst);
+    font:15px/1.5 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif;
+    padding:env(safe-area-inset-top) 0 calc(64px + env(safe-area-inset-bottom));
+    -webkit-font-smoothing:antialiased}
+  .owijka{max-width:640px;margin:0 auto;padding:0 14px}
+
+  header{padding:18px 0 12px}
+  .dzien{display:flex;align-items:baseline;gap:9px;flex-wrap:wrap}
+  .dzien h1{margin:0;font-size:23px;letter-spacing:-.02em}
+  .znacznik{font-size:11px;font-weight:700;letter-spacing:.07em;text-transform:uppercase;
+    padding:3px 9px;border-radius:999px;background:var(--akcent);color:#fff}
+  .podtytul{color:var(--slaby);font-size:13.5px;margin-top:6px}
+
+  .karta{background:var(--karta);border:1px solid var(--linia);border-radius:14px;
+    padding:14px;margin-bottom:12px;box-shadow:var(--cien)}
+  .karta h2{margin:0 0 10px;font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:var(--slaby)}
+
+  .makra{display:grid;grid-template-columns:repeat(4,1fr);gap:8px;text-align:center}
+  .makro .l{font-size:10.5px;letter-spacing:.06em;text-transform:uppercase;color:var(--slaby)}
+  .makro .w{font-size:19px;font-weight:650;letter-spacing:-.02em;font-variant-numeric:tabular-nums}
+  .makro .c{font-size:10.5px;color:var(--slaby);font-variant-numeric:tabular-nums}
+  .pasek{height:3px;border-radius:2px;background:var(--linia);margin-top:6px;overflow:hidden}
+  .pasek i{display:block;height:100%;background:var(--ok)}
+  .pasek i.przekr{background:var(--uwaga)}
+
+  ol.os{list-style:none;margin:0;padding:0}
+  ol.os li{display:grid;grid-template-columns:52px 1fr;gap:10px;padding:11px 0;
+    border-top:1px solid var(--linia)}
+  ol.os li:first-child{border-top:0}
+  ol.os li.minelo .godz,
+  ol.os li.minelo .tyt,
+  ol.os li.minelo .posilek,
+  ol.os li.minelo .op{opacity:.45}
+  ol.os li.teraz{background:linear-gradient(90deg,rgba(200,68,43,.09),transparent);
+    margin:0 -8px;padding-left:8px;padding-right:8px;border-radius:9px}
+  .godz{font-variant-numeric:tabular-nums;font-weight:650;color:var(--slaby);font-size:14px;padding-top:1px}
+  .tyt{font-weight:600}
+  .posilek{margin-top:3px;font-size:14px}
+  .kcal{color:var(--slaby);font-size:12.5px;font-variant-numeric:tabular-nums}
+  .op{color:var(--slaby);font-size:13px;margin-top:4px}
+
+  label.poz{display:flex;gap:11px;align-items:flex-start;padding:10px 0;
+    border-top:1px solid var(--linia);cursor:pointer;user-select:none}
+  label.poz:first-of-type{border-top:0}
+  label.poz input{margin:2px 0 0;width:19px;height:19px;accent-color:var(--ok);flex:none}
+  label.poz.zrobione .nazwa{text-decoration:line-through;opacity:.45}
+  .nazwa{flex:1}
+  .ile{color:var(--slaby);font-size:12.5px;font-variant-numeric:tabular-nums;white-space:nowrap}
+  .dzial{font-size:12.5px;letter-spacing:.06em;text-transform:uppercase;color:var(--akcent);
+    margin:18px 0 4px;padding:6px 0 4px;font-weight:800;border-bottom:1px solid var(--linia, rgba(128,128,128,.3))}
+  .dzial:first-child{margin-top:0}
+
+  .kroki{counter-reset:k;list-style:none;margin:0;padding:0}
+  .kroki li{counter-increment:k;display:grid;grid-template-columns:26px 1fr;gap:11px;
+    padding:11px 0;border-top:1px solid var(--linia)}
+  .kroki li:first-child{border-top:0}
+  .kroki li::before{content:counter(k);display:grid;place-items:center;width:24px;height:24px;
+    border-radius:50%;background:var(--linia);font-size:12px;font-weight:700;color:var(--slaby)}
+  .kroki li.zrobione{opacity:.4}
+
+  .cw{padding:11px 0;border-top:1px solid var(--linia)}
+  .cw:first-child{border-top:0}
+  .cw .g{display:flex;justify-content:space-between;gap:10px;align-items:baseline}
+  .cw .serie{font-variant-numeric:tabular-nums;font-weight:650;white-space:nowrap;color:var(--akcent)}
+  .cw .w{color:var(--slaby);font-size:13px;margin-top:3px}
+
+  nav{position:fixed;left:0;right:0;bottom:0;z-index:9;
+    background:color-mix(in srgb, var(--karta) 92%, transparent);
+    -webkit-backdrop-filter:saturate(180%) blur(18px);backdrop-filter:saturate(180%) blur(18px);
+    border-top:1px solid var(--linia);padding-bottom:env(safe-area-inset-bottom)}
+  nav .r{max-width:640px;margin:0 auto;display:grid;grid-template-columns:repeat(6,1fr)}
+  nav button{background:none;border:0;color:var(--slaby);font:inherit;font-size:9.5px;
+    padding:9px 2px 8px;display:grid;gap:3px;justify-items:center;cursor:pointer}
+  nav button b{font-size:18px;font-weight:400;line-height:1}
+  nav button[aria-selected="true"]{color:var(--akcent);font-weight:650}
+
+  .pusto{color:var(--slaby);text-align:center;padding:30px 10px}
+  .stopka{color:var(--slaby);font-size:11.5px;text-align:center;padding:6px 0 18px}
+  .suma{display:flex;justify-content:space-between;font-weight:650;padding-top:12px;
+    margin-top:6px;border-top:2px solid var(--linia)}
+  .mini{background:var(--tlo);border:1px solid var(--linia);color:var(--akcent);
+    font:600 12px/1 inherit;padding:8px 11px;border-radius:8px;cursor:pointer;white-space:nowrap}
+  .mini:disabled{opacity:.5}
+  .mini.duzy{padding:11px 16px;font-size:13px}
+  .pole{flex:1;min-width:0;background:var(--tlo);color:var(--tekst);border:1px solid var(--linia);
+    border-radius:8px;padding:8px;font:inherit;font-size:13px}
+  .ptk-etykieta{display:flex;align-items:flex-start;gap:10px;cursor:pointer;
+    user-select:none;-webkit-tap-highlight-color:transparent}
+  input.ptk{appearance:none;-webkit-appearance:none;flex:none;
+    width:23px;height:23px;margin:0;border:2px solid var(--slaby);border-radius:7px;
+    background:transparent;display:grid;place-content:center;cursor:pointer}
+  input.ptk::before{content:"";width:13px;height:13px;transform:scale(0);
+    transition:transform .12s ease-out;background:var(--ok);
+    clip-path:polygon(14% 44%,0 65%,50% 100%,100% 16%,80% 0,43% 62%)}
+  input.ptk:checked{border-color:var(--ok)}
+  input.ptk:checked::before{transform:scale(1)}
+  ol.os li.odhaczone .tyt{text-decoration:line-through;opacity:.5}
+  table.sklad{width:100%;border-collapse:collapse;margin-top:7px;font-size:12.5px}
+  table.sklad td{padding:3px 0;border-top:1px solid var(--linia);vertical-align:top}
+  table.sklad td.ile{white-space:nowrap;padding-right:8px;font-variant-numeric:tabular-nums;font-weight:600}
+  table.sklad td.liczby{text-align:right;white-space:nowrap;color:var(--slaby);font-variant-numeric:tabular-nums;padding-left:6px}
+  table.sklad tr.dobitka td{color:var(--ok)}
+  table.sklad tr.suma-sklad td{font-weight:650;color:var(--tekst)}
+  .nawigacja{display:flex;align-items:center;gap:8px;margin-top:10px}
+  .nawigacja button{background:var(--karta);border:1px solid var(--linia);color:var(--tekst);
+    font:600 15px/1 inherit;border-radius:10px;padding:9px 14px;cursor:pointer;min-width:44px}
+  .nawigacja button:disabled{opacity:.3}
+  .nawigacja #dz-dzis{font-size:12.5px;color:var(--akcent)}
+  .nawigacja .gdzie{color:var(--slaby);font-size:12.5px;margin-left:auto}
+  .zrodlo{border-left:3px solid var(--akcent);padding:8px 11px;margin-bottom:12px;
+    background:var(--karta);border-radius:0 10px 10px 0;font-size:13px;color:var(--slaby)}
+  details.przepis{margin-top:8px}
+  details.przepis summary{cursor:pointer;color:var(--akcent);font-weight:600;font-size:13px;
+    list-style:none;padding:4px 0;-webkit-tap-highlight-color:transparent}
+  details.przepis summary::-webkit-details-marker{display:none}
+  details.przepis summary::before{content:"▸ ";display:inline-block;transition:transform .15s}
+  details.przepis[open] summary::before{transform:rotate(90deg)}
+  details.przepis ol{margin:4px 0 2px;padding-left:20px;font-size:13px;color:var(--tekst)}
+  details.przepis li{margin:5px 0;line-height:1.45}
+  .typy-dnia{display:grid;grid-template-columns:repeat(3,1fr);gap:6px;margin-top:10px}
+  .typy-dnia button{background:var(--tlo);border:1px solid var(--linia);color:var(--tekst);
+    border-radius:10px;padding:10px 4px;font:600 12px/1.25 inherit;cursor:pointer}
+  .typy-dnia button b{display:block;font-size:20px;font-weight:400;margin-bottom:3px}
+  .typy-dnia button.aktywny{border-color:var(--akcent);color:var(--akcent)}
+  .formularz{display:flex;gap:6px;margin-top:8px;flex-wrap:wrap}
+  .formularz input{flex:1;min-width:70px}
+  .plan-roku{display:flex;flex-wrap:wrap;gap:4px 12px;margin-top:8px;font-size:12.5px;color:var(--slaby)}
+  .plan-roku b{color:var(--tekst);font-variant-numeric:tabular-nums}
+  .slowo{border-left:3px solid var(--akcent);padding:6px 0 6px 14px;margin:2px 0 14px}
+  .slowo p{margin:0;font-size:16.5px;line-height:1.5;font-style:italic;text-wrap:pretty}
+  .slowo span{display:block;margin-top:4px;font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:var(--slaby);font-style:normal}
+  .seria{display:flex;align-items:baseline;gap:10px}
+  .seria b{font-size:34px;line-height:1;font-variant-numeric:tabular-nums}
+  .odznaki{display:flex;flex-wrap:wrap;gap:6px;margin-top:10px}
+  .odznaka{font-size:12px;padding:5px 9px;border-radius:999px;border:1px solid var(--linia);color:var(--slaby)}
+  .odznaka.ma{border-color:var(--ok);color:var(--tekst)}
+  .metryki{display:grid;grid-template-columns:repeat(auto-fit,minmax(130px,1fr));gap:8px}
+  .metryka{border:1px solid var(--linia);border-radius:10px;padding:10px 12px}
+  .metryka b{display:block;font-size:22px;font-variant-numeric:tabular-nums}
+  .metryka span{font-size:11.5px;color:var(--slaby)}
+  .metryka.ok b{color:var(--ok)}
+  .pola-pomiarow{display:grid;grid-template-columns:repeat(3,1fr);gap:6px;margin-top:8px}
+  .pola-pomiarow label{font-size:11.5px;color:var(--slaby);display:grid;gap:3px}
+  .v-znak{font-size:10.5px;font-weight:700;letter-spacing:.06em;color:var(--akcent);border:1px solid var(--akcent);
+    border-radius:4px;padding:1px 5px;margin-left:6px;vertical-align:2px}
+  .yt{display:inline-block;margin-top:6px;font-size:13px;font-weight:600;color:var(--akcent);text-decoration:none}
+  h3.sklep{margin:14px 0 2px;font-size:15px}
+  details.przepis li.etap{list-style:none;margin:10px 0 2px -18px;font-weight:700}
+  .serie-wiersz{display:flex;flex-wrap:wrap;gap:6px;align-items:flex-end;margin-top:7px}
+  .serie-pole{display:flex;flex-direction:column;gap:2px;font-size:11px;color:var(--slaby);width:64px}
+  .serie-pole .pole{width:100%}
+  .wariant{font-size:12.5px;color:var(--slaby);margin-top:3px}
+  [hidden]{display:none !important}
+</style>
+</head>
+<body>
+
+<div class="owijka">
+  <header>
+    <div class="dzien">
+      <h1 id="data">…</h1>
+      <span class="znacznik" id="typ"></span>
+    </div>
+    <div class="podtytul" id="opis-typu"></div>
+    <div class="plan-roku" id="plan-roku"></div>
+    <div class="nawigacja">
+      <button id="dz-wstecz" aria-label="Poprzedni dzień">‹</button>
+      <button id="dz-dzis">dziś</button>
+      <button id="dz-naprzod" aria-label="Następny dzień">›</button>
+      <span class="gdzie" id="dz-gdzie"></span>
+    </div>
+  </header>
+
+  <main id="widok"><div class="pusto">Wczytuję plan…</div></main>
+  <div class="stopka" id="stopka"></div>
+</div>
+
+<nav>
+  <div class="r" id="zakladki">
+    <button data-w="dzis"      aria-selected="true"><b>📋</b>Dziś</button>
+    <button data-w="plan"      aria-selected="false"><b>🗓️</b>Cykl</button>
+    <button data-w="zakupy"    aria-selected="false"><b>🛒</b>Zakupy</button>
+    <button data-w="gotowanie" aria-selected="false"><b>🍳</b>Gotuję</button>
+    <button data-w="trening"   aria-selected="false"><b>🏋️</b>Trening</button>
+    <button data-w="sen"       aria-selected="false"><b>😴</b>Sen</button>
+  </div>
+</nav>
+
+<script>
+const $ = (s,r=document)=>r.querySelector(s);
+const esc = s => String(s??"").replace(/[&<>"]/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
+/* Wersja panelu. iPhone dodany do ekranu głównego potrafi trzymać stary HTML
+   w nieskończoność. dane.json leci zawsze świeży, więc porównujemy numery
+   i przy różnicy przeładowujemy stronę z ?v=, co omija cache przeglądarki. */
+const WERSJA = 1;
+let D = null, widok = "dzis";
+
+/* ---- zapis z telefonu ------------------------------------------------------
+   Panel tylko DOPISUJE zdarzenia do state/zdarzenia.json przez API GitHuba.
+   Nie zna reguł progresji ani makr — całą logikę stosuje trener.py przy
+   najbliższym przebiegu crona. Dzięki temu telefon nie może niczego policzyć
+   inaczej niż serwer, a zapis jest odporny na to, że dwa źródła piszą naraz.
+
+   Token siedzi w pamięci tej przeglądarki i nigdzie stąd nie wychodzi poza
+   samym GitHubem. Ma uprawnienie wyłącznie do zawartości jednego repo. */
+const TOKEN_KLUCZ = "trenerS:token";
+const token = () => { try { return localStorage.getItem(TOKEN_KLUCZ) || ""; } catch { return ""; } };
+const ustawToken = t => { try { t ? localStorage.setItem(TOKEN_KLUCZ, t.trim())
+                                  : localStorage.removeItem(TOKEN_KLUCZ); } catch {} };
+
+const b64 = tekst => {
+  const bajty = new TextEncoder().encode(tekst);
+  let s = ""; bajty.forEach(b => s += String.fromCharCode(b));
+  return btoa(s);
+};
+const zB64 = t => new TextDecoder().decode(Uint8Array.from(atob(t), c => c.charCodeAt(0)));
+
+const API = sciezka => `https://api.github.com/repos/${D.repo}/contents/${sciezka}`;
+
+async function gh(url, opcje = {}){
+  const r = await fetch(url, {...opcje, headers: {
+    "Authorization": "Bearer " + token(),
+    "Accept": "application/vnd.github+json",
+    ...(opcje.headers || {})}});
+  if(!r.ok) throw new Error(`${r.status} ${(await r.text()).slice(0,120)}`);
+  return r.status === 204 ? null : r.json();
+}
+
+/* Dopisanie zdarzenia: czytamy aktualny plik razem z jego sha, doklejamy wpis
+   i zapisujemy. Gdy w międzyczasie zapisał cron, GitHub odrzuca zapis (409) —
+   wtedy czytamy najnowszą wersję i próbujemy raz jeszcze, zamiast nadpisywać. */
+async function wyslijZdarzenie(zdarzenie){
+  if(!token()) throw new Error("Brak tokenu — ustaw go na dole zakładki Dziś.");
+  /* 409 znaczy "ktoś zapisał plik przed tobą" — zwykle cron w chmurze. Kluczowe jest
+     świeże sha: bez dopisanego znacznika czasu GitHub potrafi oddać wersję z cache
+     i każda kolejna próba leci w to samo. Próbujemy kilka razy, z rosnącą przerwą. */
+  let ostatni = null;
+  for(let proba = 0; proba < 5; proba++){
+    const url = API("state-siostra/zdarzenia.json") + "?ref=" + (D.galaz || "main") + "&_=" + Date.now();
+    let lista = [], sha = null;
+    try {
+      const plik = await gh(url);
+      sha = plik.sha;
+      lista = JSON.parse(zB64(plik.content));
+      if(!Array.isArray(lista)) lista = [];
+    } catch(e){ if(!String(e.message).startsWith("404")) throw e; }
+    lista.push({data: lokalnaData(), ...zdarzenie});
+    try {
+      await gh(API("state-siostra/zdarzenia.json"), {method:"PUT",
+        body: JSON.stringify({message: "panel: " + zdarzenie.typ,
+          content: b64(JSON.stringify(lista.slice(-500), null, 2)),
+          branch: D.galaz || "main", ...(sha ? {sha} : {})})});
+      ostatni = null;
+      break;
+    } catch(e){
+      ostatni = e;
+      if(!/^(409|422)/.test(e.message)) throw e;
+      await new Promise(r => setTimeout(r, 400 + proba * 700));
+    }
+  }
+  if(ostatni) throw new Error(ostatni.message + " — chmura właśnie zapisywała plik. Spróbuj jeszcze raz za chwilę.");
+  /* Budzimy chmure od razu. Bez tego zmiana czekalaby na kolejny przebieg crona,
+     a ten przychodzi srednio co ~3,5 h. Porazka budzenia nie psuje zapisu —
+     zdarzenie i tak lezy w logu i zostanie przetworzone przy najblizszym przebiegu. */
+  try {
+    await fetch(`https://api.github.com/repos/${D.repo}/dispatches`, {method: "POST",
+      headers: {"Authorization": "Bearer " + token(), "Accept": "application/vnd.github+json"},
+      body: JSON.stringify({event_type: "panel"})});
+  } catch {}
+  return true;
+}
+
+/* Do czasu, aż cron przetworzy zdarzenie i odświeży dane.json, pokazujemy
+   zmianę lokalnie — inaczej wyglądałoby to, jakby tapnięcie nic nie zrobiło. */
+function lokalnie(id, wartosc){
+  try { const s = zapamietane(); s[id] = wartosc;
+        localStorage.setItem(kluczCyklu(), JSON.stringify(s)); } catch {}
+}
+
+/* Serie zapisane dzis trzymamy tez na telefonie: chmura przetwarza je kilka minut,
+   a panel odswieza sie po powrocie do apki — bez tego pola wracaly puste. */
+const kluczSerii = () => "trenerS:serie:" + lokalnaData();
+function serieDzis(){ try { return JSON.parse(localStorage.getItem(kluczSerii()) || "{}"); } catch(e) { return {}; } }
+function zapamietajSerie(cw, kg, powt){
+  try {
+    const s = serieDzis(); s[cw] = {kg, powt};
+    localStorage.setItem(kluczSerii(), JSON.stringify(s));
+    for(let i = localStorage.length - 1; i >= 0; i--){
+      const k = localStorage.key(i);
+      if(k && k.startsWith("trenerS:serie:") && k !== kluczSerii()) localStorage.removeItem(k);
+    }
+  } catch(e) {}
+}
+
+async function zapisz(zdarzenie, element){
+  const stary = element ? element.textContent : null;
+  if(element){ element.disabled = true; element.textContent = "zapisuję…"; }
+  try {
+    await wyslijZdarzenie(zdarzenie);
+    if(element){ element.textContent = "zapisane ✓"; }
+    return true;
+  } catch(e){
+    alert("Nie zapisano: " + e.message +
+      "\n\nNajczęstsza przyczyna to token bez uprawnienia Contents: Read and write.");
+    if(element){ element.disabled = false; element.textContent = stary; }
+    return false;
+  }
+}
+
+/* Odhaczenia trzymamy lokalnie na telefonie i kasujemy przy nowym cyklu,
+   żeby lista zakupów nie wstawała odhaczona po następnych zakupach. */
+const kluczCyklu = () => "trenerS:" + (D?.plan?.od ?? "?");
+function zapamietane(){ try{ return JSON.parse(localStorage.getItem(kluczCyklu()) || "{}"); }catch{ return {}; } }
+function przelacz(id, on){
+  try{ const s = zapamietane(); on ? s[id]=1 : delete s[id];
+       localStorage.setItem(kluczCyklu(), JSON.stringify(s)); }catch{}
+}
+function sprzatajStare(){
+  try{ for(let i=localStorage.length-1;i>=0;i--){ const k=localStorage.key(i);
+       // Tylko odhaczenia starych cykli (klucz "trenerS:RRRR-MM-DD"). Wczesniej warunek
+       // startsWith("trenerS:") kasowal tez TOKEN i inne ustawienia przy kazdym otwarciu
+       // panelu — dlatego zapis z telefonu dzialal tylko do pierwszego przeladowania.
+       if(/^trener:\d{4}-\d{2}-\d{2}$/.test(k || "") && k!==kluczCyklu()) localStorage.removeItem(k); } }catch{}
+}
+
+const DNI_PL = ["niedziela","poniedziałek","wtorek","środa","czwartek","piątek","sobota"];
+const MIES_PL = ["stycznia","lutego","marca","kwietnia","maja","czerwca","lipca","sierpnia","września","października","listopada","grudnia"];
+function ladnaData(iso){
+  const d = new Date(iso + "T12:00:00");
+  return DNI_PL[d.getDay()] + ", " + d.getDate() + " " + MIES_PL[d.getMonth()];
+}
+const minuty = hhmm => { const [h,m] = hhmm.split(":").map(Number); return h*60+m; };
+
+function makra(m, cel){
+  const p = [["kcal","kcal",m.kcal,cel.kcal],["białko","g",m.bialko,cel.bialko],
+             ["tłuszcz","g",m.tluszcz,cel.tluszcz],["węgle","g",m.wegle,cel.wegle]];
+  return `<div class="makra">${p.map(([n,j,w,c])=>{
+    const pr = Math.min(100, Math.round(w/c*100));
+    return `<div class="makro"><div class="l">${n}</div>
+      <div class="w">${w}<span class="c" style="font-size:11px"> ${j==="g"?"g":""}</span></div>
+      <div class="c">cel ${c}</div>
+      <div class="pasek"><i class="${w>c*1.08?"przekr":""}" style="width:${pr}%"></i></div></div>`;
+  }).join("")}</div>`;
+}
+
+const OPIS_ZRODLA = {
+  zapis: "Dzień miniony: plan z tamtego cyklu (gramatury liczone obecną metodą) i to, co faktycznie się wydarzyło. Punkty możesz odhaczyć po fakcie.",
+  plan: "Plan z bieżącego cyklu. Może się jeszcze zmienić po podmianie posiłku.",
+  prognoza: "Prognoza następnego cyklu — konkretne dania ustalą się w dniu gotowania, więc mogą być inne.",
+  brak: "Dla tego dnia nie ma zapisanego planu — powstał, zanim system zaczął archiwizować cykle."
+};
+
+/* Instrukcja pod kazdym posilkiem. Zwiniete domyslnie, zeby plan dnia dalo sie
+   przejrzec jednym rzutem oka, a przepis byl na jedno tapniecie. */
+function przygotowanie(e){
+  if(e.pominiety || !e.kroki || !e.kroki.length) return "";
+  const tytul = e.jak === "kuchnia" ? "Plan kuchni krok po kroku"
+              : e.jak === "gotowanie" ? "Gotujesz garnek na 3 dni"
+              : e.jak === "odgrzewanie" ? "Z lodówki — tylko odgrzej" : "Jak przygotować";
+  return `<details class="przepis"><summary>${tytul} · ${e.czas_min} min</summary>
+    <ol>${e.kroki.map(k => k.startsWith("▸") ? `<li class="etap">${esc(k.slice(2))}</li>` : `<li>${esc(k)}</li>`).join("")}</ol></details>`;
+}
+
+function tabelaSkladnikow(e){
+  if(!e.skladniki || !e.skladniki.length) return "";
+  return `<table class="sklad">
+    ${e.skladniki.map(x=>`<tr${x.dodatek ? ' class="dobitka"' : ""}><td class="ile">${esc(x.ile)}</td><td>${esc(x.nazwa)}${x.dodatek ? ' <span class="kcal">— dodatek węglowy</span>' : ""}</td>
+      <td class="liczby">${x.kcal} kcal · B ${x.bialko}</td></tr>`).join("")}
+    ${e.dobitka ? `<tr class="dobitka"><td class="ile">+ ${esc(e.dobitka.ile)}</td>
+      <td>${esc(e.dobitka.nazwa)} <span class="kcal">— dobitka białka</span></td>
+      <td class="liczby">${e.dobitka.kcal} kcal · B ${e.dobitka.bialko}</td></tr>` : ""}
+    <tr class="suma-sklad"><td></td><td>razem</td>
+      <td class="liczby">${e.makra.kcal} kcal · B ${e.makra.bialko} · T ${e.makra.tluszcz} · W ${e.makra.wegle}</td></tr>
+  </table>`;
+}
+
+function widokInnegoDnia(x){
+  const przeszly = x.przesuniecie < 0;
+  const moznaOdhaczac = x.przesuniecie <= dzisOffset;
+  const zapisane = zapamietane();
+  const lista = x.agenda.map(e => {
+    const klucz = e.czas + "|" + e.tytul;
+    const lok = x.data + "|" + klucz;
+    const on = (lok in zapisane) ? !!zapisane[lok] : !!(x.odhaczone || {})[klucz];
+    return `<li class="${on ? "odhaczone" : ""}">
+      <span class="godz">${e.czas}</span>
+      <div><label class="ptk-etykieta">
+          <input type="checkbox" class="ptk" data-punkt="${esc(klucz)}" data-dzien="${x.data}"
+            ${on ? "checked" : ""} ${moznaOdhaczac && token() ? "" : "disabled"}>
+          <span class="tyt">${e.ikona || ""} ${esc(e.tytul)}</span></label>
+        ${e.posilek ? `<div class="posilek">${esc(e.posilek)}
+           <span class="kcal">· ${e.makra.kcal} kcal, ${e.makra.bialko} g B</span></div>` : ""}
+        ${tabelaSkladnikow(e)}
+        ${przygotowanie(e)}
+        ${e.opis ? `<div class="op">${esc(e.opis)}</div>` : ""}
+      </div></li>`;
+  }).join("");
+
+  const fakty = przeszly ? `<div class="karta"><h2>Co się wydarzyło</h2>
+      <div class="poz"><span class="nazwa">Odhaczone punkty</span>
+        <span class="ile">${Object.values(x.odhaczone || {}).filter(Boolean).length} z ${x.agenda.filter(e => e.ping).length}</span></div>
+      <div class="poz"><span class="nazwa">Waga</span><span class="ile">${x.waga ? x.waga + " kg" : "—"}</span></div>
+      <div class="poz"><span class="nazwa">Kroki</span>
+        <span class="ile">${x.kroki ? x.kroki.kroki.toLocaleString("pl-PL") + " / " + x.kroki.cel.toLocaleString("pl-PL") : "—"}</span></div>
+      <div class="poz"><span class="nazwa">Trening</span>
+        <span class="ile">${x.serie.length ? x.serie.length + " ćw. zapisanych" : "—"}</span></div>
+      ${x.serie.map(z => `<div class="poz" style="padding-left:12px"><span class="nazwa kcal">${esc(z.cwiczenie)}</span>
+        <span class="ile">${z.ciezar} kg × ${(z.powt || []).join(",")}</span></div>`).join("")}
+    </div>` : "";
+
+  const nieaktualne = x.przesuniecie === dzisOffset && dzisOffset > 0;
+  return `${kartaSlowa(x.slowo)}<div class="zrodlo">${nieaktualne
+      ? "Dane są sprzed północy, więc pokazuję dzisiejszy dzień z planu. Pełny widok z wagą i podmianami wróci po najbliższym odświeżeniu danych — zwykle w ciągu kilku minut."
+      : (OPIS_ZRODLA[x.zrodlo] || "")}</div>
+    ${x.makra ? `<div class="karta"><h2>Makra dnia${x.lzejszy ? " — dzień lżejszy" : ""}</h2>${makra(x.makra, x.cel || D.cel)}
+      ${(x.poza_planem || []).map(p => `<div class="op">+ spoza planu: ${esc(p.nazwa)} — ${p.kcal} kcal</div>`).join("")}</div>` : ""}
+    ${fakty}
+    <div class="karta"><h2>Plan dnia</h2><ol class="os">${lista}</ol></div>`;
+}
+
+function kartaSlowa(tekst){
+  return tekst ? `<div class="slowo"><p>${esc(tekst)}</p><span>Słowo na dziś</span></div>` : "";
+}
+
+function kartaSerii(){
+  const lista = D.odznaki || [];
+  const zdobyte = lista.filter(o => o.zdobyta);
+  const kolejne = lista.filter(o => !o.zdobyta).slice(0, 3);
+  if(!lista.length) return "";
+  return `<div class="karta"><h2>Seria i odznaki</h2>
+    <div class="seria"><b>${D.seria || 0}</b><span class="op">${D.seria === 1 ? "dzień" : "dni"} z rzędu w planie
+      — dzień liczy się od 60% odhaczonych punktów, nie musi być idealny.</span></div>
+    <div class="odznaki">${zdobyte.map(o => `<span class="odznaka ma" title="${esc(o.opis)}">🏅 ${esc(o.nazwa)}</span>`).join("")}
+      ${kolejne.map(o => `<span class="odznaka" title="${esc(o.opis)}">${esc(o.nazwa)}</span>`).join("")}</div>
+    <div class="op" style="margin-top:6px">${zdobyte.length} z ${lista.length} zdobytych. Szare to najbliższe do zdobycia.</div>
+  </div>`;
+}
+
+function widokDzis(){
+  const inny = wybranyDzien !== 0 ? sel() : null;
+  if(inny) return widokInnegoDnia(inny);
+  const teraz = new Date(), tm = teraz.getHours()*60 + teraz.getMinutes();
+  const dzis = D.plan.dni.find(d => d.data === D.dzis) || D.plan.dni[0];
+  // dzien po dopasowaniu porcji, podmianach i dodatkach — surowy plan tego nie zawiera
+  const dzisD = (D.dni || []).find(x => x.przesuniecie === 0) || {};
+  const nastepny = D.agenda.filter(e => minuty(e.czas) > tm)[0];
+
+  const zapisane = zapamietane();
+  // klucz lokalny z data: ten sam punkt (np. 20:30 Kolacja) wystepuje w dwoch dniach
+  // jednego cyklu i bez daty odhaczenie z jednego dnia pokazywalo sie w drugim
+  const czyZrobione = klucz => {
+    const lok = D.dzis + "|" + klucz;
+    return (lok in zapisane) ? !!zapisane[lok] : !!(D.odhaczone || {})[klucz];
+  };
+
+  const lista = D.agenda.map(e => {
+    const minelo = minuty(e.czas) <= tm;
+    const teraz_ = nastepny && e.czas === nastepny.czas;
+    const klucz = e.czas + "|" + e.tytul;
+    const on = czyZrobione(klucz);
+    return `<li class="${minelo?"minelo":""} ${teraz_?"teraz":""} ${on?"odhaczone":""}">
+      <span class="godz">${e.czas}</span>
+      <div><label class="ptk-etykieta">
+          <input type="checkbox" class="ptk" data-punkt="${esc(klucz)}" data-dzien="${D.dzis}" ${on?"checked":""}>
+          <span class="tyt">${e.ikona||""} ${esc(e.tytul)}</span></label>
+        ${e.posilek ? `<div class="posilek">${esc(e.posilek)}
+           <span class="kcal">· ${e.makra.kcal} kcal, ${e.makra.bialko} g B</span>
+           ${e.slot ? `<button class="mini" data-zamien="${e.slot}">zamień</button>` : ""}</div>` : ""}
+        ${(e.skladniki && e.skladniki.length) ? `<table class="sklad">
+            ${e.skladniki.map(x=>`<tr${x.dodatek ? ' class="dobitka"' : ""}><td class="ile">${esc(x.ile)}</td><td>${esc(x.nazwa)}${x.dodatek ? ' <span class="kcal">— dodatek węglowy</span>' : ""}</td>
+              <td class="liczby">${x.kcal} kcal · B ${x.bialko}</td></tr>`).join("")}
+            ${e.dobitka ? `<tr class="dobitka"><td class="ile">+ ${esc(e.dobitka.ile)}</td>
+              <td>${esc(e.dobitka.nazwa)} <span class="kcal">— dobitka białka</span></td>
+              <td class="liczby">${e.dobitka.kcal} kcal · B ${e.dobitka.bialko}</td></tr>` : ""}
+            <tr class="suma-sklad"><td></td><td>razem</td>
+              <td class="liczby">${e.makra.kcal} kcal · B ${e.makra.bialko} · T ${e.makra.tluszcz} · W ${e.makra.wegle}</td></tr>
+          </table>` : ""}
+        ${przygotowanie(e)}
+        ${e.opis ? `<div class="op">${esc(e.opis)}</div>` : ""}
+      </div></li>`;
+  }).join("");
+
+  const k = D.kroki;
+  const kartaKrokow = k
+    ? `<div class="karta"><h2>Kroki</h2>
+        <div style="display:flex;justify-content:space-between;align-items:baseline;gap:10px">
+          <div class="w" style="font-size:26px;font-weight:650;letter-spacing:-.02em;font-variant-numeric:tabular-nums">
+            ${k.kroki.toLocaleString("pl-PL")}<span class="kcal" style="font-size:15px"> / ${k.cel.toLocaleString("pl-PL")}</span></div>
+          <div class="kcal">${k.procent}%</div>
+        </div>
+        <div class="pasek" style="height:5px;margin-top:8px"><i class="${k.status==="malo"?"przekr":""}" style="width:${k.procent}%"></i></div>
+        <div class="op" style="margin-top:9px">${k.status==="malo"?"→ ":"✓ "}${esc(k.sugestia)}</div>
+      </div>`
+    : `<div class="karta"><h2>Kroki</h2>
+        <div class="op">Dziś jeszcze bez odczytu. Skrót na iPhonie wysyła liczbę kroków o 20:00 —
+        cel na taki dzień to ${D.kroki_cel.cel.toLocaleString("pl-PL")}.</div>
+        <div class="op" style="margin-top:6px">${esc(D.kroki_cel.komentarz)}</div>
+      </div>`;
+
+  const kartaZamiany = zamieniamSlot ? `<div class="karta" style="border-color:var(--akcent)">
+      <h2 style="color:var(--akcent)">Zamiana: ${zamieniamSlot}</h2>
+      <div class="op">Posortowane od najbliższego makrami — pierwsze z listy najmniej zmienia dzień.</div>
+      ${(D.alternatywy[zamieniamSlot]||[]).map(a=>`<div class="poz">
+        <span class="nazwa">${esc(a.nazwa)}<span class="kcal"> · ${a.kcal} kcal, B ${a.bialko}, ${a.czas} min</span></span>
+        <button class="mini" data-podmien="${a.id}" data-slot="${zamieniamSlot}">wybierz</button></div>`).join("")}
+      <button class="mini" id="anuluj-zamiane" style="margin-top:10px">anuluj</button>
+    </div>` : "";
+
+  const wstrzymany = D.tryb && D.tryb.aktywny === false;
+  const banerPauzy = wstrzymany ? `<div class="karta" style="border-color:var(--uwaga)">
+      <h2 style="color:var(--uwaga)">Plan wstrzymany od ${esc(D.tryb.od)}</h2>
+      ${D.tryb.wznow_o ? `<div class="op"><b>Plan wystartuje sam ${esc(D.tryb.wznow_o.replace("T", " o "))}</b> — nic nie musisz klikać.</div>` : ""}
+      <div class="op">Nie przychodzą pingi i nie księgują się zakupy. ${D.tryb.powod ? esc(D.tryb.powod) + "." : ""}
+        Jak będziesz gotowy, zacznij od zera — dostaniesz czystą lodówkę, nowy cykl
+        i obiady bez garnka aż do pierwszego dnia gotowania.</div>
+      <button class="mini duzy" id="start-od-zera" style="margin-top:10px">▶ zacznij od zera</button>
+    </div>` : "";
+
+  return banerPauzy + kartaZamiany + kartaSlowa(D.slowo) + kartaSerii() + `<div class="karta"><h2>Makra na dziś${dzisD.lzejszy ? " — dzień lżejszy" : ""}</h2>${makra(dzisD.makra || dzis.makra, dzisD.cel || D.cel)}
+      ${dzisD.nadwyzka ? `<div class="op" style="margin-top:8px;color:var(--uwaga)">Po tym, co zjadłeś spoza planu,
+        dzień wychodzi ${dzisD.nadwyzka} kcal ponad cel mimo zmniejszenia porcji. Nie nadrabiaj tego głodówką —
+        jutro jedziesz normalnie, jeden taki dzień nic nie psuje.</div>` : ""}</div>
+    ${kartaKrokow}
+    <div class="karta"><h2>Plan dnia</h2><ol class="os">${lista}</ol></div>
+
+    ${token() ? `<div class="karta"><h2>Mój dzień</h2>
+      <div class="op">Zamieniłeś dyżur albo grafik się przesunął? Kliknij, jaki jest dziś dzień —
+        reszta cyklu przeliczy się sama: po zmianie przychodzi powrót, potem wolne.</div>
+      <div class="typy-dnia">
+        ${[["🛡️","Jestem w pracy"],["😴","Wracam z pracy"],["💪","Mam wolne"]].map(([ik, txt], i) =>
+          `<button data-grafik="${i}" class="${D.typ_dzis === i ? "aktywny" : ""}"><b>${ik}</b>${txt}</button>`).join("")}
+      </div>
+      <div class="op" style="margin-top:12px"><b>Dzień lżejszy</b> — gorsze samopoczucie albo zmęczenie:
+        bez treningu i ok. 300 kcal więcej. Tylko na dziś.</div>
+      <button class="mini" id="lzejszy" data-wl="${dzisD.lzejszy ? 0 : 1}" style="margin-top:8px">
+        ${dzisD.lzejszy ? "↩ wróć do normalnego dnia" : "🛌 dziś dzień lżejszy"}</button>
+      ${D.typ_dzis !== 0 && (D.plan_roku || {}).tydzien ? `<div class="op" style="margin-top:12px"><b>Nie masz dziś siły?</b>
+        Zamiast treningu zrób minimum: 10 minut, trzy ćwiczenia. Nigdy zero — dzień dalej się liczy.</div>
+      <button class="mini" id="minimum" data-wl="${D.minimum ? 0 : 1}" style="margin-top:8px">
+        ${D.minimum ? "↩ wracam do pełnego treningu" : "🔥 dziś tylko minimum"}</button>` : ""}
+    </div>
+
+    <div class="karta"><h2>Zjadłem coś spoza planu</h2>
+      <div class="op">Wpisz, co i ile kalorii — reszta dnia sama się zmniejszy, żeby dalej trafić w cel.
+        Posiłki już odhaczone zostają bez zmian. Białko podaj, jeśli wiesz; bez niego resztę szacuję.</div>
+      ${(dzisD.poza_planem || []).map(x => `<div class="poz"><span class="nazwa">${esc(x.nazwa)}</span>
+        <span class="ile">${x.kcal} kcal · B ${x.bialko}${x.szacunek ? " (T/W szac.)" : ""}${x.zamiast ? " · zamiast " + ({sniadanie:"śniadania",drugi:"drugiego",obiad:"obiadu",kolacja:"kolacji"}[x.zamiast]) : ""}</span></div>`).join("")}
+      <div class="formularz">
+        <input class="pole" id="poza-nazwa" placeholder="co, np. kebab" style="flex:2">
+        <input class="pole" id="poza-kcal" type="number" inputmode="numeric" placeholder="kcal">
+        <input class="pole" id="poza-bialko" type="number" inputmode="numeric" placeholder="białko g">
+        <select class="pole" id="poza-zamiast" style="flex-basis:100%">
+          <option value="">dodatkowo do planu</option>
+          <option value="sniadanie">zamiast śniadania</option>
+          <option value="drugi">zamiast drugiego posiłku</option>
+          <option value="obiad">zamiast obiadu</option>
+          <option value="kolacja">zamiast kolacji</option>
+        </select>
+      </div>
+      <button class="mini duzy" id="poza-zapisz" style="margin-top:8px">dodaj</button>
+    </div>` : ""}
+
+    <div class="karta"><h2>Dziś nie gotuję</h2>
+      <div class="op">Podmienia obiad na coś bez garnka o tych samych makrach. Do wyboru:</div>
+      ${(D.gotowce||[]).map(g=>`<div class="poz">
+        <span class="nazwa">${esc(g.nazwa)}<span class="kcal"> · ${g.kcal} kcal, B ${g.bialko}, ${g.czas} min</span></span>
+        <button class="mini" data-podmien="${g.id}" data-slot="obiad">wybierz</button></div>`).join("")}
+    </div>
+
+    <div class="karta"><h2>Waga</h2>
+      <div style="display:flex;gap:8px;align-items:center">
+        <input type="number" step="0.1" inputmode="decimal" id="waga" placeholder="${D.user.waga_kg}"
+          style="flex:1;font:600 22px/1.2 inherit;font-variant-numeric:tabular-nums;
+                 background:var(--tlo);color:var(--tekst);border:1px solid var(--linia);
+                 border-radius:10px;padding:10px;text-align:center">
+        <button class="mini duzy" id="zapisz-wage">zapisz</button>
+      </div>
+      <div class="op" style="margin-top:8px">${D.kalorie && D.kalorie.ocena ? esc(D.kalorie.ocena) : ""}</div>
+      <div class="op">Cel: ${D.cel.kcal} kcal${D.kalorie && D.kalorie.korekta_teraz ? ` (baza ${D.cel_bazowy} ${D.kalorie.korekta_teraz > 0 ? "+" : ""}${D.kalorie.korekta_teraz})` : ""}. Ważenie codziennie 5 minut po pobudce, na czczo — liczy się średnia z 7 dni.</div>
+    </div>
+
+    <div class="karta"><h2>Nawyki</h2>
+      ${D.nawyki.map(n=>`<div class="cw"><div class="g"><b>${esc(n.nazwa)}</b></div>
+        <div class="w">${esc(n.opis)}</div></div>`).join("")}</div>
+
+    <div class="karta"><h2>Zapis z telefonu</h2>
+      ${token()
+        ? `<div class="op">Token zapisany — odhaczanie, waga i ciężary lecą do systemu.
+             Plan przelicza się w ciągu ok. minuty; pingi zaplanowane wcześniej
+             (do 8 h naprzód) mogą jeszcze przyjść w starej wersji.</div>
+           <button class="mini" id="usun-token" style="margin-top:8px">usuń token</button>`
+        : `<div class="op">Bez tokenu panel tylko pokazuje. Wklej token z GitHuba (ten sam,
+             którego użyłeś w Skrócie od kroków), żeby móc zapisywać z telefonu.</div>
+           <input type="password" id="token" placeholder="github_pat_…"
+             style="width:100%;margin-top:8px;background:var(--tlo);color:var(--tekst);
+                    border:1px solid var(--linia);border-radius:10px;padding:10px;font:inherit">
+           <button class="mini duzy" id="zapisz-token" style="margin-top:8px">zapisz token</button>`}
+    </div>
+
+    ${token() ? `<div class="karta"><h2>Przerwa i restart</h2>
+      <div class="op"><b>Wstrzymaj</b> — choroba, zabieg, wyjazd. Stają pingi i księgowanie zakupów,
+        nic się nie kasuje. Pingi zaplanowane już do 8 h naprzód jeszcze przyjdą —
+        ntfy nie pozwala ich cofnąć.</div>
+      <div class="op" style="margin-top:6px"><b>Zacznij od zera</b> — czysta lodówka, nowy cykl,
+        wyzerowane zaległości. Stary stan idzie do archiwum, a historia wagi i ciężarów zostaje.</div>
+      <div style="display:flex;gap:8px;margin-top:10px;flex-wrap:wrap">
+        ${wstrzymany ? "" : `<button class="mini duzy" id="pauza">⏸ wstrzymaj plan</button>`}
+        <button class="mini duzy" id="start-od-zera">↺ zacznij od zera</button>
+      </div></div>` : ""}`;
+}
+
+function widokPlan(){
+  const b = D.baza;
+  return `<div class="karta"><h2>Gotujesz raz na cały cykl</h2>
+      <div class="tyt">${esc(b.nazwa)}</div>
+      <div class="op">${b.porcje} porcje · ${b.czas_min} min, w tym ${b.czas_pracy} min realnej roboty · ${esc(b.naczynia)}</div></div>
+    ${D.plan.dni.map(d=>{
+      const t = D.typy[String(d.typ)];
+      return `<div class="karta"><h2>${t.emoji} ${ladnaData(d.data)} — ${esc(t.nazwa)}</h2>
+        ${["sniadanie","drugi","obiad","kolacja"].map(s=>
+          `<div class="cw"><div class="g"><span>${esc(d.nazwy[s])}</span></div>
+           <div class="w">${{sniadanie:"śniadanie",drugi:"drugi posiłek",obiad:"obiad",kolacja:"kolacja"}[s]}</div></div>`).join("")}
+        <div class="op" style="margin-top:10px">${d.makra.kcal} kcal · B ${d.makra.bialko} g · T ${d.makra.tluszcz} g · W ${d.makra.wegle} g</div>
+      </div>`;
+    }).join("")}`;
+}
+
+function kartaZaksiegowanych(){
+  const zz = D.zakupy_zamrozone;
+  if(!zz || !zz.kup || !zz.kup.length || !token()) return "";
+  return `<div class="karta"><h2>Zaksięgowane zakupy tego cyklu</h2>
+    <div class="op">System o ${esc(D.gotowanie_godzina || "15:30")} założył, że kupiłeś całą listę.
+      Jeśli czegoś nie było w sklepie albo nie wziąłeś — odznacz, żeby lodówka nie kłamała.</div>
+    ${zz.kup.map(p => `<div class="poz" style="${p.niekupione ? "opacity:.45" : ""}">
+      <span class="nazwa">${esc(p.nazwa)}<span class="kcal"> · ${p.opakowan} × ${p.opak} ${esc(p.jedn)}</span></span>
+      ${p.niekupione ? `<span class="ile">odznaczone</span>`
+                     : `<button class="mini" data-niekupione="${esc(p.klucz)}">nie kupiłem</button>`}
+    </div>`).join("")}</div>`;
+}
+
+function widokZakupy(){
+  const z = D.zakupy, s = zapamietane();
+  if(!z.kup.length) return kartaZaksiegowanych() +
+    `<div class="karta"><div class="pusto">Nic nie musisz kupować — wszystko masz w lodówce.</div></div>`;
+  if(!z.kup.length) return `<div class="karta"><div class="pusto">Nic nie musisz kupować — wszystko masz w lodówce.</div></div>`;
+  const nazwyDzialow = {mieso:"Mięso", nabial:"Nabiał i jaja", warzywa:"Warzywa i owoce",
+                        pieczywo:"Pieczywo i makarony", spizarnia:"Spiżarnia"};
+  let html = "", ost = null, ostSklep = null;
+  const sumy = {};
+  for(const p of z.kup){ const sk = p.sklep || "Dino"; sumy[sk] = (sumy[sk] || 0) + p.cena; }
+  for(const p of z.kup){
+    const sk = p.sklep || "Dino";
+    if(sk !== ostSklep){
+      if(ostSklep !== null) html += `<div class="suma"><span>${esc(ostSklep)}</span><span>${sumy[ostSklep].toFixed(2)} zł</span></div>`;
+      ostSklep = sk; ost = null;
+      html += `<h3 class="sklep">🛒 ${esc(sk)}</h3>`;
+    }
+    if(p.kat !== ost){ ost = p.kat; html += `<div class="dzial">${nazwyDzialow[ost] ?? ost}</div>`; }
+    const id = "z_" + p.klucz, on = !!s[id];
+    html += `<label class="poz ${on?"zrobione":""}">
+      <input type="checkbox" data-id="${id}" ${on?"checked":""}>
+      <span class="nazwa">${esc(p.nazwa)}</span>
+      <span class="ile">${p.opakowan} × ${p.opak} ${esc(p.jedn)} · ${p.cena.toFixed(2)} zł
+        ${p.szafka ? `<br><span class="kcal">szafka — kupujesz raz, starczy na tygodnie</span>`
+          : (p.dokupisz - p.brakuje > 0.5 ? `<br><span class="kcal">zużyjesz ${p.brakuje}, ${Math.round((p.dokupisz - p.brakuje) * 10) / 10} zostanie na następne dni</span>` : "")}</span></label>`;
+  }
+  if(ostSklep !== null && Object.keys(sumy).length > 1)
+    html += `<div class="suma"><span>${esc(ostSklep)}</span><span>${sumy[ostSklep].toFixed(2)} zł</span></div>`;
+  html += `<div class="suma"><span>Razem</span><span>${z.koszt.toFixed(2)} zł</span></div>`;
+  if(z.szafka > 0.5)
+    html += `<div class="suma" style="opacity:.75"><span>w tym szafka — kupujesz raz</span><span>${z.szafka.toFixed(2)} zł</span></div>`;
+  const zostanie = z.koszt - (z.szafka || 0) - (z.zjesz ?? z.koszt);
+  if(zostanie > 0.5)
+    html += `<div class="suma" style="opacity:.75"><span>zostanie w lodówce na później</span><span>${zostanie.toFixed(2)} zł</span></div>`;
+  if(z.budzet){
+    const jedzenie = (z.zjesz ?? z.koszt), nad = jedzenie - z.budzet;
+    html += `<div class="suma" style="opacity:.85"><span>Zjesz w tych 3 dniach</span>
+      <span>${jedzenie.toFixed(2)} / ${z.budzet} zł${nad > 0.5 ? ` — ponad limit o ${nad.toFixed(2)} zł` : " ✓"}</span></div>`;
+  }
+
+  const mam = z.mam.length ? `<div class="karta"><h2>Już masz — nie kupuj</h2>
+    ${z.mam.map(p=>`<div class="poz" style="opacity:.6"><span class="nazwa">✓ ${esc(p.nazwa)}</span>
+      <span class="ile">${p.w_domu} ${esc(p.jedn)}</span></div>`).join("")}</div>` : "";
+
+  const kolejnoscDzialow = ["mieso", "nabial", "warzywa", "pieczywo", "spizarnia"];
+  const ranga = k => { const i = kolejnoscDzialow.indexOf(D.produkty[k]?.kat); return i < 0 ? 9 : i; };
+  let lodHtml = "", lodOst = null;
+  for(const [k, v] of Object.entries(D.lodowka).sort((a, b) => ranga(a[0]) - ranga(b[0])
+        || String(D.produkty[a[0]]?.nazwa ?? a[0]).localeCompare(String(D.produkty[b[0]]?.nazwa ?? b[0]), "pl"))){
+    const kat = D.produkty[k]?.kat;
+    if(kat !== lodOst){ lodOst = kat; lodHtml += `<div class="dzial">${nazwyDzialow[kat] ?? kat ?? "Inne"}</div>`; }
+    lodHtml += `<div class="poz">
+      <span class="nazwa">${esc(D.produkty[k]?.nazwa ?? k)}</span>
+      <span class="ile">${Math.round(v.ilosc * 10) / 10} ${esc(D.produkty[k]?.jedn ?? "")} · do ${v.do}</span></div>`;
+  }
+  const lod = lodHtml ? `<div class="karta"><h2>Lodówka i spiżarnia</h2>${lodHtml}</div>` : "";
+
+  const banner = z.zrobione ? `<div class="op" style="margin:-4px 0 10px">
+      ✓ Ta lista jest już zaksięgowana — lodówka policzona. Odhaczaj przy półce,
+      żeby wiedzieć, co masz w koszyku.</div>` : "";
+
+  return kartaZaksiegowanych() + `<div class="karta"><h2>Zakupy na 3 dni</h2>${banner}${html}</div>${mam}${lod}`;
+}
+
+function kluczPorcji(){ return "trenerS:porcje:" + ((D.plan && D.plan.od) || "") + ":" + D.baza.id; }
+function czytajPorcje(){ try { return JSON.parse(localStorage.getItem(kluczPorcji()) || "{}"); } catch(e) { return {}; } }
+
+function kartaPorcji(b){
+  const skl = (b.skladowe && b.skladowe.length) ? b.skladowe : [{nazwa: "Całe danie", opis: ""}];
+  const zap = czytajPorcje();
+  return `<div class="karta"><h2>Ile nałożyć na porcję</h2>
+    <div class="op">Każdy z ${b.porcje} pojemników to jedna porcja — makro zgadza się tylko wtedy, gdy są równe.
+      Wpisz wagę pustego naczynia (przed gotowaniem) i naczynia z jedzeniem (po ugotowaniu), zawsze razem z tą samą deską.
+      Jeśli garnek z jedzeniem jest za ciężki dla wagi, przełóż wszystko do dużej miski i zważ miskę (pustą też).</div>
+    ${skl.map((x, i) => {
+      const z = zap[i] || {};
+      const netto = (z.pelny || 0) - (z.pusty || 0);
+      const na = netto > 0 ? Math.round(netto / b.porcje) : null;
+      return `<div class="cw"><div class="g"><b>${esc(x.nazwa)}</b></div>
+        ${x.opis ? `<div class="w">${esc(x.opis)}</div>` : ""}
+        <div style="display:flex;gap:6px;margin-top:6px">
+          <input class="pole porcja-in" data-i="${i}" data-pole="pusty" type="number" inputmode="numeric" placeholder="puste naczynie (g)" value="${z.pusty ?? ""}">
+          <input class="pole porcja-in" data-i="${i}" data-pole="pelny" type="number" inputmode="numeric" placeholder="z jedzeniem (g)" value="${z.pelny ?? ""}">
+        </div>
+        <div class="w" style="color:var(--akcent);margin-top:5px">${na
+          ? `Do każdego pojemnika nałóż <b>${na} g</b> (razem ${netto} g ÷ ${b.porcje}).`
+          : "Wpisz obie wagi, a policzę gramy na porcję."}</div></div>`;
+    }).join("")}</div>`;
+}
+
+function widokGotowanie(){
+  const b = D.baza, s = zapamietane();
+  if(D.bez_garnka) return `<div class="karta"><h2>W tym cyklu nie gotujesz garnka</h2>
+    <div class="op">Obiady są proste, bez gotowania na 3 dni. Przepis krok po kroku masz przy obiedzie w zakładce Dziś.</div>
+    ${D.bez_garnka.map(x => `<div class="poz"><span class="nazwa">${esc(x.obiad)}</span><span class="ile">${esc(x.data)}</span></div>`).join("")}</div>`;
+  const naPorcje = k => Math.round(k*10)/10;
+  return `<div class="karta"><h2>Gotowanie na 3 dni</h2>
+      <div class="tyt" style="font-size:17px">${esc(b.nazwa)}</div>
+      <div class="op">${b.porcje} porcje · ${b.czas_min} min (${b.czas_pracy} min realnej roboty) · ${esc(b.naczynia)}</div></div>
+    <div class="karta"><h2>Składniki na cały garnek</h2>
+      ${b.produkty.map(([k,q])=>`<div class="poz">
+        <span class="nazwa">${esc(D.produkty[k]?.nazwa ?? k)}</span>
+        <span class="ile">${naPorcje(q)} ${esc(D.produkty[k]?.jedn ?? "")}</span></div>`).join("")}</div>
+    <div class="karta"><h2>Krok po kroku</h2><ol class="kroki">
+      ${b.kroki.map((krok,i)=>{ const id = "k_"+b.id+"_"+i, on = !!s[id];
+        return `<li class="${on?"zrobione":""}" data-krok="${id}">${esc(krok)}</li>`; }).join("")}
+    </ol></div>
+    <div class="karta"><h2>Po ugotowaniu</h2>
+      <div class="cw"><div class="g"><b>Przechowywanie</b></div><div class="w">${esc(b.przechowywanie)}</div></div>
+      <div class="cw"><div class="g"><b>Odgrzewanie</b></div><div class="w">${esc(b.odgrzewanie)}</div></div></div>` + kartaPorcji(b);
+}
+
+function ytLink(nazwa){
+  // wyszukiwanie zamiast jednego filmu: zawsze dziala i pokazuje kilka ujec techniki
+  const q = nazwa.split(" — ")[0] + " technika wykonania";
+  return "https://www.youtube.com/results?search_query=" + encodeURIComponent(q);
+}
+
+function tempoFazy(){
+  const f = D.plan_roku && D.plan_roku.faza;
+  if(!f || !f.tempo_kg_tydz) return "";
+  const t = x => (x > 0 ? "+" : "") + String(x).replace(".", ",").replace("-", "−");
+  return ` (cel fazy: ${t(f.tempo_kg_tydz[0])} do ${t(f.tempo_kg_tydz[1])})`;
+}
+
+function wykresWagi(){
+  const w = (D.postep && D.postep.waga) || [];
+  if(w.length < 2) return `<div class="op">${w.length ? "Jest jeden pomiar (" + w[0].kg + " kg). " : ""}
+    Wykres pojawi się od drugiego ważenia. Waż się rano w dzień wolny, na czczo.</div>`;
+  const W = 320, H = 110, pad = 26;
+  const kg = w.map(p => p.kg), min = Math.min(...kg) - 0.5, max = Math.max(...kg) + 0.5;
+  const t0 = new Date(w[0].data).getTime(), t1 = new Date(w[w.length-1].data).getTime() || t0 + 1;
+  const x = d => pad + (new Date(d).getTime() - t0) / Math.max(1, t1 - t0) * (W - pad - 8);
+  const y = v => 8 + (max - v) / (max - min) * (H - 26);
+  const linia = w.map((p, i) => (i ? "L" : "M") + x(p.data).toFixed(1) + " " + y(p.kg).toFixed(1)).join(" ");
+  const zmiana = (kg[kg.length-1] - kg[0]);
+  return `<svg viewBox="0 0 ${W} ${H}" style="width:100%;height:auto;display:block" role="img"
+      aria-label="Waga od ${w[0].kg} do ${kg[kg.length-1]} kg">
+    <text x="0" y="${y(max-0.5)+4}" font-size="10" fill="var(--slaby)">${(max-0.5).toFixed(1)}</text>
+    <text x="0" y="${y(min+0.5)+4}" font-size="10" fill="var(--slaby)">${(min+0.5).toFixed(1)}</text>
+    <path d="${linia}" fill="none" stroke="var(--akcent)" stroke-width="2" stroke-linejoin="round"/>
+    ${w.map(p => `<circle cx="${x(p.data).toFixed(1)}" cy="${y(p.kg).toFixed(1)}" r="2.5" fill="var(--akcent)"/>`).join("")}
+  </svg>
+  <div class="op">${w[0].data} → ${w[w.length-1].data}: <b>${zmiana > 0 ? "+" : ""}${zmiana.toFixed(1)} kg</b>
+    ${D.kalorie && D.kalorie.trend ? ` · tempo ${D.kalorie.trend.kg_tydzien > 0 ? "+" : ""}${D.kalorie.trend.kg_tydzien} kg/tydz.${tempoFazy()}` : ""}</div>`;
+}
+
+function historiaCiezarow(){
+  const serie = (D.postep && D.postep.serie) || [];
+  if(!serie.length) return `<div class="op">Brak zapisanych serii. Po treningu wpisz ciężar i powtórzenia
+    przy ćwiczeniu — od następnej sesji dostaniesz podpowiedź ciężaru.</div>`;
+  const po = {};
+  for(const z of serie){ (po[z.cwiczenie] = po[z.cwiczenie] || []).push(z); }
+  return Object.entries(po).map(([cw, lista]) => {
+    const pierwsza = lista[0], ost = lista[lista.length-1];
+    const d = ost.ciezar - pierwsza.ciezar;
+    return `<div class="poz"><span class="nazwa">${esc(cw)}
+        <span class="kcal"> · ${lista.length} ${lista.length === 1 ? "sesja" : "sesji"}</span></span>
+      <span class="ile">${ost.ciezar} kg × ${(ost.powt||[]).join(",")}
+        ${lista.length > 1 ? ` <b style="color:${d >= 0 ? "var(--ok)" : "var(--uwaga)"}">${d >= 0 ? "+" : ""}${d} kg</b>` : ""}</span></div>`;
+  }).join("");
+}
+
+function wykresLinii(punkty, jednostka){
+  if(punkty.length < 2) return `<div class="op">Wykres pojawi się od drugiego pomiaru.</div>`;
+  const W = 320, H = 96, pad = 30;
+  const v = punkty.map(p => p.v), min = Math.min(...v), max = Math.max(...v), zakres = (max - min) || 1;
+  const t0 = new Date(punkty[0].data).getTime(), t1 = new Date(punkty[punkty.length-1].data).getTime();
+  const x = d => pad + (new Date(d).getTime() - t0) / Math.max(1, t1 - t0) * (W - pad - 10);
+  const y = val => 10 + (max - val) / zakres * (H - 28);
+  const linia = punkty.map((p, i) => (i ? "L" : "M") + x(p.data).toFixed(1) + " " + y(p.v).toFixed(1)).join(" ");
+  return `<svg viewBox="0 0 ${W} ${H}" style="width:100%;height:auto;display:block" role="img"
+      aria-label="Od ${punkty[0].v} do ${v[v.length-1]} ${jednostka}">
+    <text x="0" y="${y(max)+4}" font-size="10" fill="var(--slaby)">${max}</text>
+    <text x="0" y="${y(min)+4}" font-size="10" fill="var(--slaby)">${min}</text>
+    <path d="${linia}" fill="none" stroke="var(--akcent)" stroke-width="2" stroke-linejoin="round"/>
+    ${punkty.map(p => `<circle cx="${x(p.data).toFixed(1)}" cy="${y(p.v).toFixed(1)}" r="2.5" fill="var(--akcent)"/>`).join("")}
+  </svg>`;
+}
+
+function kartaPomiarow(){
+  const a = D.analiza || {}, pom = a.pomiary || [], cele = a.cele || {};
+  const ost = pom[pom.length - 1], pierw = pom[0];
+  const zmiana = (k) => ost && pierw && ost[k] != null && pierw[k] != null && pom.length > 1
+    ? ` <span class="kcal">(${(ost[k] - pierw[k] > 0 ? "+" : "")}${(ost[k] - pierw[k]).toFixed(1)})</span>` : "";
+  const metryki = ost ? `<div class="metryki">
+      <div class="metryka"><span>Talia</span><b>${ost.talia ?? "—"} cm${zmiana("talia")}</b></div>
+      <div class="metryka ${ost.tluszcz != null && ost.tluszcz <= (cele.tluszcz_proc || 10) ? "ok" : ""}">
+        <span>Tłuszcz z obwodów · cel ${cele.tluszcz_proc || 10}%</span><b>${ost.tluszcz ?? "—"}%${zmiana("tluszcz")}</b></div>
+      <div class="metryka ${ost.talia_do_wzrostu != null && ost.talia_do_wzrostu <= (cele.talia_do_wzrostu || .45) ? "ok" : ""}">
+        <span>Talia ÷ wzrost · cel ≤ ${cele.talia_do_wzrostu || 0.45}</span><b>${ost.talia_do_wzrostu ?? "—"}</b></div>
+      <div class="metryka ${ost.barki_do_talii != null && ost.barki_do_talii >= (cele.barki_do_talii || 1.5) ? "ok" : ""}">
+        <span>Barki ÷ talia · cel ≥ ${cele.barki_do_talii || 1.5}</span><b>${ost.barki_do_talii ?? "—"}</b></div>
+    </div>
+    <div class="op" style="margin-top:8px">Barki ÷ talia to liczba, która mówi, ile masz kształtu litery V.
+      Rośnie na dwa sposoby: szersze barki i węższa talia — dlatego w każdej sesji są unoszenia bokiem.</div>` :
+    `<div class="op">Pierwsze pomiary robisz na starcie, potem co 2 tygodnie rano, przed jedzeniem.
+      Z talii i szyi system liczy tłuszcz, a z barków i talii kształt sylwetki.</div>`;
+  const wykresy = pom.length > 1 ? `
+    <div class="op" style="margin-top:12px"><b>Talia (cm)</b></div>${wykresLinii(pom.filter(p => p.talia).map(p => ({data: p.data, v: p.talia})), "cm")}
+    <div class="op" style="margin-top:8px"><b>Tłuszcz z obwodów (%)</b></div>${wykresLinii(pom.filter(p => p.tluszcz != null).map(p => ({data: p.data, v: p.tluszcz})), "%")}` : "";
+  const pola = [["talia","na wys. pępka"],["szyja","pod krtanią"],["barki","najszerzej"],["klatka","pod pachami"],["ramie","napięte"],["udo","w połowie"]];
+  const formularz = token() ? `<div class="pola-pomiarow">
+      ${pola.map(([k, opis]) => `<label>${k === "ramie" ? "ramię" : k} · ${opis}<input class="pole" id="pom-${k}" type="number" step="0.5" inputmode="decimal" placeholder="cm"></label>`).join("")}
+    </div><button class="mini duzy" id="pomiary-zapisz" style="margin-top:8px">zapisz pomiary</button>` : "";
+  return `<div class="karta" ${a.pomiary_nalezne ? 'style="border-color:var(--akcent)"' : ""}>
+    <h2>Pomiary sylwetki${a.pomiary_nalezne ? " — czas na nowe" : ""}</h2>${metryki}${wykresy}${formularz}</div>`;
+}
+
+function kartaPostepu(){
+  return kartaPomiarow() + `<div class="karta"><h2>Postęp — waga</h2>${wykresWagi()}</div>
+    <div class="karta"><h2>Postęp — ciężary</h2>${historiaCiezarow()}</div>`;
+}
+
+function widokTrening(){
+  const tr = (wybranyDzien !== 0 && sel()) ? sel().trening : D.trening;
+  const t = tr.trening;
+  if(tr.rodzaj === "wolne" || tr.rodzaj === "zmiana" || tr.rodzaj === "lzejszy" || tr.rodzaj === "przedstart"){
+    return kartaPostepu() + `<div class="karta"><h2>${esc(t.nazwa)}</h2>
+      <div class="op">${esc(t.zasada)}</div></div>
+      <div class="karta"><h2>Mikro-rozruch co 2–3 h</h2>
+      ${t.mikro.map(x=>`<div class="poz"><span class="nazwa">${esc(x)}</span></div>`).join("")}</div>`;
+  }
+  return `<div class="karta"><h2>${esc(t.nazwa)} · ${t.czas_min} min</h2>
+      ${t.blok ? `<div class="op"><b>${esc(t.blok)}</b> — ${esc(t.blok_opis)}</div>` : ""}
+      ${t.rozgrzewka.map(r=>`<div class="op">▸ ${esc(r)}</div>`).join("")}</div>
+    <div class="karta"><h2>Ćwiczenia</h2>
+      ${t.cwiczenia.map(c=>{
+        const h = (D.ciezary||{})[c.nazwa];
+        const juz = serieDzis()[c.nazwa] || (h && h.data === lokalnaData() ? {kg: h.ciezar, powt: h.powt || []} : null);
+        const st = (D.ciezary_start||{})[c.nazwa] || null;
+        const mc = !!(st && st.jedn === "masa ciała");
+        const jd = st && !mc ? " " + esc(st.jedn) : "";
+        const sugestia = h ? (h.nastepny ?? h.ciezar) : (st && !mc ? st.kg : null);
+        const historia = mc
+          ? (h ? `ostatnio ${(h.powt||[]).join(", ")} powt. — dziś spróbuj o jedno więcej`
+               : "masa ciała — zapisz same powtórzenia (kg zostaw 0)")
+          : h
+          ? `ostatnio ${h.ciezar} kg × ${(h.powt||[]).join(", ")}` +
+            (sugestia > h.ciezar ? ` → dziś <b>${sugestia} kg${jd}</b>`
+             : sugestia < h.ciezar ? ` → zejdź do <b>${sugestia} kg${jd}</b>` : ` → zostań przy <b>${sugestia} kg${jd}</b>`)
+          : st
+          ? `pierwszy raz — zacznij od <b>${sugestia} kg${jd}</b>. Za lekko? Zapisz, ile dałeś, następnym razem podpowiem więcej`
+          : "pierwszy raz — zapisz, ile dałeś, a od następnego razu podpowiem ciężar";
+        return `<div class="cw">
+        <div class="g"><b>${esc(c.nazwa)}${c.v ? '<span class="v-znak" title="Buduje kształt litery V">V</span>' : ""}</b><span class="serie">${String(c.powt).includes("×") ? esc(c.powt) : c.serie + " × " + esc(c.powt)}</span></div>
+        <div class="w">${esc(c.wskazowka)}</div>
+        <a class="yt" href="${ytLink(c.nazwa)}" target="_blank" rel="noopener">▶ Jak to zrobić — filmy na YouTube</a>
+        ${c.latwiej ? `<div class="wariant">Za trudne? ${esc(c.latwiej)}</div>` : ""}
+        ${c.trudniej && c.trudniej !== "—" ? `<div class="wariant">Za łatwe? ${esc(c.trudniej)}</div>` : ""}
+        <div class="w">przerwa ${esc(c.przerwa)}</div>
+        ${c.serie_wstepne ? `<div class="w">rozgrzewka: ${esc(c.serie_wstepne)} — dopiero potem serie robocze</div>` : ""}
+        ${c.seria_laczona ? `<div class="wariant">🔗 Seria łączona z: ${esc(c.seria_laczona)} — robisz je na zmianę, przerwa dopiero po obu.</div>` : ""}
+        ${juz ? `<div class="w" style="color:var(--ok);font-weight:700">✓ Zapisane dziś: ${juz.kg} kg × ${(juz.powt || []).join(", ")}. Możesz poprawić i zapisać jeszcze raz.</div>`
+              : `<div class="w" style="color:var(--akcent)">${historia}</div>`}
+        <div class="serie-wiersz">
+          <label class="serie-pole"><span>kg</span>
+            <input class="pole cw-kg" type="number" step="0.5" inputmode="decimal"
+                   placeholder="kg" value="${juz ? juz.kg : (mc ? 0 : (sugestia ?? ""))}" data-cw="${esc(c.nazwa)}"></label>
+          ${Array.from({length: Number(c.serie) || 1}, (_, i) => `<label class="serie-pole"><span>seria ${i + 1}</span>
+            <input class="pole cw-powt" type="number" inputmode="numeric" min="0"
+                   placeholder="powt." value="${juz && juz.powt[i] != null ? juz.powt[i] : ""}" data-cw="${esc(c.nazwa)}"></label>`).join("")}
+          <button class="mini" data-serie="${esc(c.nazwa)}">zapisz</button>
+        </div></div>`;}).join("")}</div>
+    <div class="karta"><h2>Na koniec</h2><div class="op">${esc(t.finisz)}</div></div>` + kartaPostepu();
+}
+
+/* ---- kalkulator snu -------------------------------------------------------
+   Ta sama logika co w trener.py: cykle po 90 min liczone od ZASNIĘCIA, nie od
+   położenia się, plus świadomość grafiku — w dzień zmiany pobudka jest sztywna
+   i nie ma czego wybierać, a zbyt późne wstanie rozjeżdża plan całego dnia. */
+const doMin = hhmm => { const [h,m] = hhmm.split(":").map(Number); return h*60+m; };
+const doHHMM = m => { m = ((m % 1440) + 1440) % 1440;
+  return String(Math.floor(m/60)).padStart(2,"0") + ":" + String(m%60).padStart(2,"0"); };
+const ileSnu = m => `${Math.floor(m/60)} h ${String(m%60).padStart(2,"0")} min`;
+
+function liczSen(polozenie){
+  const cfg = D.sen, doba = 1440, typDzis = D.typ_dzis;
+  const naSluzbie = typDzis === 0 && (polozenie >= doMin("21:00") || polozenie < doMin("06:00"));
+  const zasypianie = typDzis === 1 ? cfg.zasypianie_zmeczony_min : cfg.zasypianie_min;
+  const zasniecie = polozenie + zasypianie;
+  const typDnia = przesuniecie => String((typDzis + przesuniecie) % 3);
+
+  if(naSluzbie) return {naSluzbie:true, ocena:
+    "Jesteś na służbie. Tu nie planujemy snu cyklami, tylko trzymamy się czterech drzemek z planu: "+
+    "23:00, 00:40, 02:20 i 04:00, każda po 1 h 20. Kalkulator przyda się dopiero w domu."};
+
+  const opcje = [];
+  for(let c = 3; c <= 6; c++){
+    const m = zasniecie + c * cfg.cykl_min;
+    opcje.push({cykli:c, godzina:doHHMM(m), snu:ileSnu(m - polozenie)});
+  }
+
+  const typDoc = typDnia((zasniecie + 4*cfg.cykl_min) >= doba ? 1 : 0);
+  const info = D.pobudki[typDoc];
+  const sztywna = typDoc === "0";
+  const wynik = {naSluzbie:false, sztywna, opcje, zasypianie, typDocelowy:info.nazwa,
+                 pobudkaPlanowa:info.pobudka, uwagi:[]};
+
+  let pm = doMin(info.pobudka);
+  if(pm < polozenie) pm += doba;
+  const snuDoPobudki = pm - polozenie;
+  /* Sztywna pobudka ma sens tylko, gdy naprawdę kładziesz się teraz. Gdy zostało
+     do niej więcej niż 11 h, wpisana godzina nie jest porą snu (np. popołudnie). */
+  if(sztywna && snuDoPobudki > 11*60){ wynik.sztywna = false; wynik.zaDaleko = ileSnu(snuDoPobudki); }
+
+  if(wynik.sztywna){
+    const snu = snuDoPobudki;
+    const pelnych = Math.max(0, Math.floor((snu - zasypianie) / cfg.cykl_min));
+    Object.assign(wynik, {zalecenie:info.pobudka, snuZalecane:ileSnu(snu), cykli:pelnych});
+    wynik.ocena = pelnych >= 5 ? "Spokojnie zdążysz się wyspać."
+      : pelnych === 4 ? "Cztery pełne cykle — akceptowalnie jak na dzień przed zmianą."
+      : pelnych === 3 ? "Trzy cykle. Da się przeżyć, ale na służbie będzie ciężko — kładź się teraz, bez zwłoki."
+      : "Mniej niż trzy cykle. Dziś już nie nadrobisz — prześpij, ile się da, i licz na drzemki na służbie.";
+  } else {
+    const w = opcje[opcje.length-1];
+    Object.assign(wynik, {zalecenie:w.godzina, snuZalecane:w.snu, cykli:w.cykli});
+    wynik.ocena = "Bez sztywnej pobudki — bierz sześć cykli, jeśli możesz, pięć jeśli nie.";
+    if(wynik.zaDaleko) wynik.uwagi.push(
+      `Do najbliższej sztywnej pobudki (${info.pobudka}) zostało ${wynik.zaDaleko}, czyli więcej niż noc. ` +
+      "Zakładam, że nie kładziesz się właśnie teraz — poniżej masz zwykłe cykle.");
+    /* Porównanie z planową pobudką ma sens tylko dla realnej porannej pobudki.
+       Przy różnicy ponad 8 h porównujemy pory z różnych części doby i wychodzą bzdury. */
+    const spoznienie = doMin(w.godzina) - doMin(info.pobudka);
+    if(!wynik.zaDaleko && spoznienie > 60 && spoznienie <= 8*60){
+      wynik.uwagi.push(`Plan tego dnia zakłada pobudkę ${info.pobudka}` +
+        (info.trening ? ` i trening o ${info.trening}` : "") +
+        `, więc budząc się o ${w.godzina} przesuwasz wszystko o ${ileSnu(spoznienie)}.`);
+      if((Number(typDoc) + 1) % 3 === 0){   // dzień po pobudce jest dniem zmiany
+        wynik.uwagi.push(`Nazajutrz ZMIANA z pobudką ${D.pobudki["0"].pobudka}. Po tak późnym wstaniu ` +
+          "nie zaśniesz o 22:00 — licz się z krótką nocą przed służbą.");
+      }
+    }
+  }
+  return wynik;
+}
+
+let wybranyDzien = 0;   // przesuniecie wzgledem dnia z danych: -7 ... +6
+
+/* Dane liczy cron, a ten potrafi milczec do ~6 h. Po polnocy "dzis" w danych
+   to jeszcze wczoraj — wtedy panel sam przeskakuje na prawdziwy dzien telefonu,
+   a odhaczenia dostaja prawdziwa date, a nie date z nieaktualnych danych. */
+const lokalnaData = () => new Date().toLocaleDateString("sv-SE");   // RRRR-MM-DD w strefie telefonu
+const roznicaDni = (a, b) => Math.round((new Date(a + "T12:00:00") - new Date(b + "T12:00:00")) / 864e5);
+let dzisOffset = 0;     // o ile dni prawdziwe "dzis" wyprzedza dzien z danych
+const sel = () => (D.dni || []).find(x => x.przesuniecie === wybranyDzien) || null;
+const zakresDni = () => {
+  const p = (D.dni || []).map(x => x.przesuniecie);
+  return p.length ? [Math.min(...p), Math.max(...p)] : [0, 0];
+};
+
+function rysujNaglowek(){
+  const x = sel();
+  const data = x ? x.data : D.dzis;
+  const t = x ? {emoji: x.emoji, nazwa: x.nazwa_typu, opis: x.opis_typu} : D.typy[String(D.typ_dzis)];
+  $("#data").textContent = ladnaData(data);
+  $("#typ").textContent = t.emoji + " " + t.nazwa;
+  $("#opis-typu").textContent = t.opis;
+  const pr = D.plan_roku || {};
+  const tydz = x && x.tydzien !== undefined ? x.tydzien : pr.tydzien;
+  const faza = x && x.faza ? x.faza : (pr.faza || {}).nazwa;
+  $("#plan-roku").innerHTML = !pr.start ? "" : (tydz
+    ? `<span>Tydzień <b>${tydz}</b> z 52</span><span>Faza: <b>${esc(faza || "")}</b></span>` +
+      (pr.dni_do_finalu !== null ? `<span>${esc(pr.final_nazwa || "Finał")} za <b>${pr.dni_do_finalu}</b> dni</span>` : "")
+    : `<span>Start planu: <b>${ladnaData(pr.start)}</b></span><span>${esc(faza || "")}</span>`);
+  const [min, max] = zakresDni();
+  $("#dz-wstecz").disabled = wybranyDzien <= min;
+  $("#dz-naprzod").disabled = wybranyDzien >= max;
+  $("#dz-dzis").hidden = wybranyDzien === dzisOffset;
+  $("#dz-gdzie").textContent = wybranyDzien === 0 ? "" :
+    wybranyDzien < 0 ? (wybranyDzien === -1 ? "wczoraj" : (-wybranyDzien) + " dni temu")
+                     : (wybranyDzien === 1 ? "jutro" : "za " + wybranyDzien + " dni");
+}
+
+function zmienDzien(krok){
+  const [min, max] = zakresDni();
+  const nowy = krok === 0 ? dzisOffset : Math.max(min, Math.min(max, wybranyDzien + krok));
+  if(nowy === wybranyDzien) return;
+  wybranyDzien = nowy;
+  zamieniamSlot = null;
+  if(widok !== "dzis" && widok !== "trening"){
+    widok = "dzis";
+    for(const b of $("#zakladki").children) b.setAttribute("aria-selected", String(b.dataset.w === "dzis"));
+  }
+  rysuj(); scrollTo({top: 0});
+}
+
+let senOKtorej = null;   // null = bierz aktualną godzinę
+let zamieniamSlot = null;
+
+function widokSen(){
+  const teraz = new Date();
+  const wartosc = senOKtorej ?? `${String(teraz.getHours()).padStart(2,"0")}:${String(teraz.getMinutes()).padStart(2,"0")}`;
+  const w = liczSen(doMin(wartosc));
+
+  const pole = `<div class="karta"><h2>O której się kładziesz</h2>
+      <input type="time" id="pora" value="${wartosc}"
+        style="width:100%;font:600 28px/1.2 inherit;font-variant-numeric:tabular-nums;
+               background:var(--tlo);color:var(--tekst);border:1px solid var(--linia);
+               border-radius:10px;padding:12px;text-align:center">
+      <div class="op" style="margin-top:8px">Domyślnie teraz. Zmień, jeśli planujesz z wyprzedzeniem.</div>
+    </div>`;
+
+  if(w.naSluzbie) return pole + `<div class="karta"><h2>Dziś służba</h2><div class="op">${esc(w.ocena)}</div></div>`;
+
+  const glowna = `<div class="karta"><h2>Ustaw budzik na</h2>
+      <div style="font-size:44px;font-weight:650;letter-spacing:-.03em;font-variant-numeric:tabular-nums">${w.zalecenie}</div>
+      <div class="kcal" style="font-size:14px">${w.snuZalecane} snu · ${w.cykli} ${w.cykli===1?"pełny cykl":"pełnych cykli"}</div>
+      <div class="op" style="margin-top:10px">${esc(w.ocena)}</div>
+      ${w.uwagi.map(u=>`<div class="op" style="margin-top:10px;color:var(--uwaga)">⚠ ${esc(u)}</div>`).join("")}
+    </div>`;
+
+  const lista = w.sztywna
+    ? `<div class="karta"><h2>Dlaczego bez wyboru</h2><div class="op">
+         Budzisz się w dzień zmiany, więc pobudka ${w.pobudkaPlanowa} jest ustalona i nie ma czego optymalizować.
+         Jedyne, co możesz zrobić, to położyć się wcześniej.</div></div>`
+    : `<div class="karta"><h2>Pozostałe opcje</h2>
+        ${w.opcje.map(o=>`<div class="poz" style="${o.godzina===w.zalecenie?"":"opacity:.62"}">
+           <span class="nazwa"><b style="font-variant-numeric:tabular-nums">${o.godzina}</b>
+             <span class="kcal"> · ${o.cykli} cykle</span></span>
+           <span class="ile">${o.snu}</span></div>`).join("")}
+      </div>`;
+
+  const stopka = `<div class="karta"><h2>Jak to liczę</h2><div class="op">
+      Sen chodzi cyklami po około 90 minut i budzenie w środku cyklu daje uczucie rozbicia nawet po długim
+      spaniu — dlatego budzik pada na wielokrotność cyklu liczoną od ZAŚNIĘCIA, a nie od położenia się.
+      Doliczam ${w.zasypianie} min na zaśnięcie${w.zasypianie<=5?" (po dobie służby zasypiasz od razu)":""}.
+      Pobudka wypada w dzień: ${esc(w.typDocelowy)}.
+      <br><br>90 minut to średnia — indywidualnie bywa 80–110, więc traktuj wynik jako przybliżenie, nie wyrocznię.
+    </div></div>`;
+
+  return pole + glowna + lista + stopka;
+}
+
+function rysuj(){
+  const widoki = {dzis:widokDzis, plan:widokPlan, zakupy:widokZakupy,
+                  gotowanie:widokGotowanie, trening:widokTrening, sen:widokSen};
+  $("#widok").innerHTML = widoki[widok]();
+  if(D) rysujNaglowek();
+  // link z pingu "Waga": od razu pole wagi, bez szukania
+  if(D && location.hash === "#waga" && widok === "dzis"){
+    const pole = document.getElementById("waga");
+    if(pole){
+      history.replaceState(null, "", location.pathname + location.search);
+      setTimeout(() => { pole.scrollIntoView({block: "center"}); pole.focus(); }, 60);
+    }
+  }
+}
+
+function start(dane){
+  if(dane.panel_wersja && dane.panel_wersja !== WERSJA){
+    const u = new URL(location.href);
+    if(u.searchParams.get("v") !== String(dane.panel_wersja)){
+      u.searchParams.set("v", dane.panel_wersja);
+      location.replace(u.toString());   // bez pętli: po przeładowaniu ?v już się zgadza
+      return;
+    }
+  }
+  D = dane;
+  sprzatajStare();
+  const przed = dzisOffset;
+  dzisOffset = Math.max(0, roznicaDni(lokalnaData(), D.dzis));
+  if(dzisOffset !== przed) wybranyDzien = dzisOffset;
+  if(dzisOffset > 0 && token()){
+    // dane z wczoraj: budzimy workflow, zeby nie czekac na cron
+    fetch(`https://api.github.com/repos/${D.repo}/dispatches`, {method: "POST",
+      headers: {"Authorization": "Bearer " + token(), "Accept": "application/vnd.github+json"},
+      body: JSON.stringify({event_type: "panel"})}).catch(() => {});
+  }
+  $("#stopka").textContent = "Dane odświeżone " + D.wygenerowano.replace("T"," ").slice(0,16);
+  rysuj();
+}
+
+$("#dz-wstecz").addEventListener("click", () => zmienDzien(-1));
+$("#dz-naprzod").addEventListener("click", () => zmienDzien(1));
+$("#dz-dzis").addEventListener("click", () => zmienDzien(0));
+
+/* Przesuniecie palcem w bok zmienia dzien. Wymagamy wyraznie poziomego ruchu,
+   zeby zwykle przewijanie w dol nie przelaczalo dni przez przypadek. */
+let dotyk = null;
+$("#widok").addEventListener("touchstart", e => {
+  if(widok !== "dzis" && widok !== "trening") return;
+  const t = e.touches[0]; dotyk = {x: t.clientX, y: t.clientY};
+}, {passive: true});
+$("#widok").addEventListener("touchend", e => {
+  if(!dotyk) return;
+  const t = e.changedTouches[0], dx = t.clientX - dotyk.x, dy = t.clientY - dotyk.y;
+  dotyk = null;
+  if(Math.abs(dx) > 70 && Math.abs(dx) > Math.abs(dy) * 1.8) zmienDzien(dx < 0 ? 1 : -1);
+}, {passive: true});
+
+$("#zakladki").addEventListener("click", e => {
+  const b = e.target.closest("button"); if(!b) return;
+  widok = b.dataset.w;
+  if(widok === "sen") senOKtorej = null;
+  for(const x of $("#zakladki").children) x.setAttribute("aria-selected", String(x === b));
+  scrollTo({top:0}); rysuj();
+});
+
+$("#widok").addEventListener("input", e => {
+  if(e.target.id !== "pora") return;
+  senOKtorej = e.target.value;
+  const pos = e.target.selectionStart;
+  rysuj();
+  const pole = $("#pora");
+  if(pole){ pole.focus(); try{ pole.setSelectionRange(pos, pos); }catch{} }
+});
+
+$("#widok").addEventListener("change", e => {
+  const el = e.target;
+  if(!el.classList || !el.classList.contains("porcja-in")) return;
+  const zap = czytajPorcje();
+  const i = el.dataset.i;
+  zap[i] = zap[i] || {};
+  zap[i][el.dataset.pole] = Number(el.value) || null;
+  try { localStorage.setItem(kluczPorcji(), JSON.stringify(zap)); } catch(err) {}
+  rysuj();
+});
+
+$("#widok").addEventListener("change", async e => {
+  const ptk = e.target.closest("input.ptk");
+  if(ptk){
+    const on = ptk.checked, dzien = ptk.dataset.dzien;
+    lokalnie(dzien ? dzien + "|" + ptk.dataset.punkt : ptk.dataset.punkt, on);
+    ptk.closest("li").classList.toggle("odhaczone", on);
+    const zd = {typ:"punkt", punkt:ptk.dataset.punkt, zrobione:on};
+    if(dzien) zd.data = dzien;   // odhaczenie po fakcie trafia do wlasciwego dnia
+    if(token()) { try { await wyslijZdarzenie(zd); }
+                  catch(err){ console.warn("odhaczenie nie poszlo:", err.message); } }
+    return;
+  }
+  const cb = e.target.closest('input[type="checkbox"]'); if(!cb) return;
+  przelacz(cb.dataset.id, cb.checked);
+  cb.closest("label").classList.toggle("zrobione", cb.checked);
+});
+
+$("#widok").addEventListener("click", async e => {
+  const b = e.target.closest("button");
+  if(b){
+    if(b.dataset.zamien){ zamieniamSlot = b.dataset.zamien; rysuj(); scrollTo({top:0}); return; }
+    if(b.id === "anuluj-zamiane"){ zamieniamSlot = null; rysuj(); return; }
+    if(b.dataset.podmien){
+      if(await zapisz({typ:"podmiana", slot:b.dataset.slot, na:b.dataset.podmien}, b)){
+        zamieniamSlot = null;
+        alert("Zapisane. Plan zaktualizuje się przy najbliższym przebiegu, do 10 minut.");
+      }
+      return;
+    }
+    if(b.dataset.serie){
+      const cw = b.dataset.serie;
+      const kg = document.querySelector(`.cw-kg[data-cw="${CSS.escape(cw)}"]`)?.value;
+      const powt = [...document.querySelectorAll(`.cw-powt[data-cw="${CSS.escape(cw)}"]`)]
+        .map(el => el.value.trim()).filter(v => v !== "").map(Number).filter(n => n > 0);
+      if(kg === "" || kg === undefined || !powt.length){ alert("Wpisz ciężar (przy ćwiczeniach z masą ciała 0) i powtórzenia w polach „seria 1”, „seria 2”…"); return; }
+      if(await zapisz({typ:"seria", cwiczenie:cw, ciezar:Number(kg), powt}, b)){
+        zapamietajSerie(cw, Number(kg), powt);
+        rysuj();
+      }
+      return;
+    }
+    if(b.id === "zapisz-wage"){
+      const kg = $("#waga")?.value;
+      if(!kg){ alert("Wpisz wagę."); return; }
+      await zapisz({typ:"waga", kg:Number(kg)}, b);
+      return;
+    }
+    if(b.id === "zapisz-token"){ ustawToken($("#token")?.value); rysuj(); return; }
+    if(b.id === "usun-token"){ ustawToken(""); rysuj(); return; }
+    if(b.dataset.grafik !== undefined){
+      const t = Number(b.dataset.grafik);
+      const nazwy = ["w pracy (zmiana 24 h)", "powrót z pracy", "wolne"];
+      if(t === D.typ_dzis){ alert("Dziś już jest ustawiony dzień: " + nazwy[t] + "."); return; }
+      if(!confirm("Ustawić, że dziś to: " + nazwy[t] + "?\n\nCały cykl przeliczy się od dziś. Dni wstecz zostają bez zmian. Pingi zaplanowane już do 8 h naprzód mogą jeszcze przyjść po staremu.")) return;
+      if(await zapisz({typ:"grafik", typ_dnia:t, data: lokalnaData()}, b))
+        alert("Zapisane. Za ok. minutę plan przeliczy się pod nowy grafik — odśwież panel.");
+      return;
+    }
+    if(b.id === "minimum"){
+      const wl = b.dataset.wl === "1";
+      if(await zapisz({typ:"minimum", wlaczony: wl, data: lokalnaData()}, b))
+        alert(wl ? "Minimum zapisane: 10 minut, trzy ćwiczenia. Dzień dalej się liczy — za minutę zobaczysz je w zakładce Trening."
+                 : "Wracasz do pełnego treningu.");
+      return;
+    }
+    if(b.id === "pomiary-zapisz"){
+      const pola = ["talia","szyja","barki","klatka","ramie","udo"], wpis = {typ:"pomiary", data: lokalnaData()};
+      for(const k of pola){ const v = Number($("#pom-" + k)?.value); if(v > 0) wpis[k] = v; }
+      if(!wpis.talia){ alert("Podaj przynajmniej talię — to najważniejszy pomiar."); return; }
+      if(!wpis.szyja && !confirm("Bez szyi nie policzę tłuszczu z obwodów. Zapisać mimo to?")) return;
+      if(await zapisz(wpis, b)) alert("Pomiary zapisane. Za minutę zobaczysz je na wykresach.");
+      return;
+    }
+    if(b.id === "lzejszy"){
+      const wl = b.dataset.wl === "1";
+      if(await zapisz({typ:"lzejszy", wlaczony: wl, data: lokalnaData()}, b))
+        alert(wl ? "Dzień lżejszy zapisany — bez treningu, trochę więcej jedzenia. Plan przeliczy się w minutę."
+                 : "Wracasz do normalnego dnia.");
+      return;
+    }
+    if(b.id === "poza-zapisz"){
+      const nazwa = ($("#poza-nazwa")?.value || "").trim();
+      const kcal = Number($("#poza-kcal")?.value);
+      const bialko = Number($("#poza-bialko")?.value || 0);
+      if(!kcal || kcal <= 0){ alert("Podaj przynajmniej kalorie — bez nich nie ma czego odjąć od reszty dnia."); return; }
+      if(kcal > 3000 && !confirm(kcal + " kcal to bardzo dużo jak na jeden posiłek. Na pewno?")) return;
+      const zamiast = $("#poza-zamiast")?.value || null;
+      if(await zapisz({typ:"poza_planem", nazwa: nazwa || "spoza planu", kcal, bialko, zamiast, data: lokalnaData()}, b)){
+        $("#poza-nazwa").value = ""; $("#poza-kcal").value = ""; $("#poza-bialko").value = ""; $("#poza-zamiast").value = "";
+        alert("Dodane. Za ok. minutę pozostałe posiłki dnia przeliczą się pod nowe kalorie.");
+      }
+      return;
+    }
+    if(b.dataset.niekupione){
+      if(await zapisz({typ:"niekupione", klucz:b.dataset.niekupione}, b))
+        b.closest(".poz").style.opacity = ".45";
+      return;
+    }
+    const KLUCZ_TRYBU = "trenerS:tryb-wyslany";
+    const ostatniTryb = () => { try { return JSON.parse(localStorage.getItem(KLUCZ_TRYBU) || "null"); } catch { return null; } };
+    const swiezy = t => t && Date.now() - t.kiedy < 3 * 60 * 1000;
+    if((b.id === "pauza" || b.id === "start-od-zera") && swiezy(ostatniTryb())){
+      const t = ostatniTryb();
+      alert(`${t.akcja === "start" ? "Restart został wysłany" : "Pauza została wysłana"} o ${new Date(t.kiedy).toLocaleTimeString("pl-PL", {hour:"2-digit", minute:"2-digit"})}. ` +
+            "Chmura przetwarza ją ok. minutę — potem panel sam się odświeży.");
+      return;
+    }
+    const zapamietajTryb = akcja => { try { localStorage.setItem(KLUCZ_TRYBU, JSON.stringify({akcja, kiedy: Date.now()})); } catch {} };
+    if(b.id === "pauza"){
+      const powod = prompt("Wstrzymać plan? Stają pingi i księgowanie zakupów.\n\nPowód (opcjonalnie):", "");
+      if(powod === null) return;
+      if(await zapisz({typ:"tryb", akcja:"pauza", powod}, b)){
+        zapamietajTryb("pauza");
+        alert("Wstrzymane. Pingi zaplanowane już do 8 h naprzód mogą jeszcze przyjść — ntfy nie pozwala ich cofnąć.");
+      }
+      return;
+    }
+    if(b.id === "start-od-zera"){
+      if(!confirm("Zacząć od zera?\n\nCzysta lodówka, nowy cykl, wyzerowane zaległości. Stary stan idzie do archiwum, historia wagi i ciężarów zostaje.")) return;
+      if(await zapisz({typ:"tryb", akcja:"start"}, b)){
+        zapamietajTryb("start");
+        alert("Start zapisany. Za ok. minutę panel sam pokaże nowy plan — nie klikaj drugi raz.");
+      }
+      return;
+    }
+  }
+  const li = e.target.closest("li[data-krok]"); if(!li) return;
+  const on = !li.classList.contains("zrobione");
+  li.classList.toggle("zrobione", on);
+  przelacz(li.dataset.krok, on);
+});
+
+fetch("dane-siostra.json?t=" + Date.now())
+  .then(r => { if(!r.ok) throw new Error(r.status); return r.json(); })
+  .then(start)
+  .catch(err => {
+    $("#widok").innerHTML = `<div class="karta"><div class="pusto">
+      Nie udało się wczytać planu (${esc(err.message)}).<br><br>
+      Na komputerze odpal <code>py trener.py eksport</code> i wypchnij zmiany na GitHuba,
+      albo poczekaj — cron robi to sam co 10 minut.</div></div>`;
+  });
+
+/* Apka z ekranu glownego iPhone'a przy powrocie NIE przeladowuje sie — iOS wybudza ja
+   z pamieci w stanie sprzed wyjscia. Bez tego nowa wersja panelu i swieze dane
+   pojawialy sie dopiero po recznym zamknieciu apki w przelaczniku aplikacji.
+   Przy kazdym powrocie (nie czesciej niz co 30 s) pobieramy dane od nowa; start()
+   sam przeladuje strone, jesli na serwerze jest nowsza wersja panelu. */
+let ostatnieOdswiezenie = Date.now();
+document.addEventListener("visibilitychange", () => {
+  if(document.visibilityState !== "visible" || Date.now() - ostatnieOdswiezenie < 30000) return;
+  ostatnieOdswiezenie = Date.now();
+  fetch("dane-siostra.json?t=" + Date.now())
+    .then(r => r.ok ? r.json() : null)
+    .then(dane => { if(dane) start(dane); })
+    .catch(() => {});
+});
+</script>
+</body>
+</html>

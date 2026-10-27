@@ -1,0 +1,370 @@
+{
+  "_info": "Trzy treningi calego ciala na silowni: poniedzialek, sroda, piatek. Priorytet to posladki, nogi i plecy — one robia sylwetke i zjadaja najwiecej kalorii. Kazda partia wraca 2-3 razy w tygodniu. Pary oznaczone seria_laczona robi sie na zmiane, przerwa dopiero po obu.",
+  "bloki": [
+    {
+      "id": "nauka",
+      "nazwa": "Blok 1 — Nauka ruchu",
+      "od_tygodnia": 1,
+      "do_tygodnia": 3,
+      "cwiczen_glowny": 6,
+      "cwiczen_krotki": 4,
+      "serie": 2,
+      "zapas": "3 powtorzenia w zapasie",
+      "opis": "Uczysz sie ruchu, nie dzwigasz. Ciezar taki, ze moglabys zrobic jeszcze 3 powtorzenia."
+    },
+    {
+      "id": "fundament",
+      "nazwa": "Blok 2 — Fundament",
+      "od_tygodnia": 4,
+      "do_tygodnia": 12,
+      "cwiczen_glowny": 6,
+      "cwiczen_krotki": 4,
+      "serie": 3,
+      "zapas": "2 powtorzenia w zapasie",
+      "opis": "Trzy serie i pierwsza progresja. Gdy zrobisz gore zakresu we wszystkich seriach, system podniesie ciezar."
+    },
+    {
+      "id": "sila",
+      "nazwa": "Blok 3 — Sila i ksztalt",
+      "od_tygodnia": 13,
+      "do_tygodnia": 26,
+      "cwiczen_glowny": 6,
+      "cwiczen_krotki": 4,
+      "serie": 3,
+      "zapas": "1-2 powtorzenia w zapasie",
+      "opis": "Ciezary ida w gore, technika zostaje. Tu widac rozne posladki i plecy."
+    },
+    {
+      "id": "forma",
+      "nazwa": "Blok 4 — Forma",
+      "od_tygodnia": 27,
+      "do_tygodnia": 52,
+      "cwiczen_glowny": 7,
+      "cwiczen_krotki": 4,
+      "serie": 3,
+      "zapas": "1 powtorzenie w zapasie",
+      "opis": "Utrzymujemy sile na deficycie i dokladamy objetosci tam, gdzie chcesz ksztaltu."
+    }
+  ],
+  "rozgrzewka": [
+    "5 minut marszu na biezni albo orbitreku — ma ci sie zrobic cieplo, nie masz sie zmeczyc.",
+    "Krazenia bioder, ramion i 10 przysiadow bez ciezaru.",
+    "Dwa pierwsze cwiczenia treningu: seria 30% ciezaru na 8-12 powtorzen, potem 50% na 8, potem 75% na 2-3.",
+    "Pozostale cwiczenia: jedna seria 50% ciezaru na 5-6 powtorzen i od razu seria robocza."
+  ],
+  "split_tygodnia": {
+    "0": "fbw_a",
+    "2": "fbw_b",
+    "4": "fbw_c",
+    "_info": "0 = poniedzialek. Trening w poniedzialek, srode i piatek."
+  },
+  "brzuch_zawsze": false,
+  "zasady": [
+    "Przerwy: ciezkie nogi i posladki 2-3 min, reszta 1,5-2 min, brzuch 1 min.",
+    "Zapisuj ciezar i powtorzenia. Gdy zrobisz gore zakresu we wszystkich seriach, nastepnym razem dolóż najmniejszy mozliwy ciezar.",
+    "Ostatnie 2 powtorzenia maja byc trudne, ale technika sie nie psuje. Jak sie psuje — ciezar za duzy.",
+    "Seria laczona: dwa cwiczenia na zmiane, przerwa dopiero po obu. Skraca trening o jakies 10 minut.",
+    "Cardio nie zastapi deficytu — 20-30 min marszu po treningu wystarczy, reszte robi jedzenie."
+  ],
+  "sesje_glowne": [
+    {
+      "id": "fbw_a",
+      "nazwa": "Poniedzialek — cale cialo A (posladki i gora)",
+      "cwiczenia": [
+        {
+          "nazwa": "Hip thrust ze sztanga",
+          "serie": 3,
+          "powt": "8-12",
+          "przerwa": "2-3 min",
+          "wskazowka": "Plecy oparte o lawke tuz pod lopatkami, stopy na szerokosc bioder. Wypychasz biodra do gory, na gorze mocno sciskasz posladki i zatrzymujesz na sekunde. Zebra w dol, nie wyginaj pleców.",
+          "serie_wstepne": "30% × 8-12, 50% × 8, 75% × 2-3"
+        },
+        {
+          "nazwa": "Wypychanie nogami na suwnicy",
+          "serie": 3,
+          "powt": "10-12",
+          "przerwa": "2-3 min",
+          "wskazowka": "Stopy na srodku platformy na szerokosc bioder. Schodzisz, az kolana sa pod katem prostym, plecy caly czas przylegaja do oparcia. Nie prostujesz kolan do konca na gorze.",
+          "serie_wstepne": "30% × 8-12, 50% × 8, 75% × 2-3"
+        },
+        {
+          "nazwa": "Sciaganie drazka wyciagu gornego",
+          "serie": 3,
+          "powt": "10-12",
+          "przerwa": "2 min",
+          "wskazowka": "Chwyt troche szerszy niz barki. Ciagniesz drazek do gornej czesci klatki, lokcie w dol, lopatki schodza do tylu i w dol. Nie odchylaj sie mocno do tylu.",
+          "serie_wstepne": "50% × 5-6"
+        },
+        {
+          "nazwa": "Wyciskanie hantli na lawce skosnej",
+          "serie": 3,
+          "powt": "10-12",
+          "przerwa": "2 min",
+          "wskazowka": "Lawka pod katem 30 stopni, hantle schodza do poziomu klatki, lokcie ok. 45 stopni od tulowia.",
+          "serie_wstepne": "50% × 5-6"
+        },
+        {
+          "nazwa": "Wznosy bokiem hantlami",
+          "serie": 3,
+          "powt": "12-15",
+          "przerwa": "1,5 min",
+          "wskazowka": "Lekkie hantle, unosisz na boki do wysokosci barkow, lokcie lekko ugiete. Bez bujania tulowiem.",
+          "serie_wstepne": "50% × 5-6",
+          "seria_laczona": "Prostowanie ramion na wyciagu"
+        },
+        {
+          "nazwa": "Prostowanie ramion na wyciagu",
+          "serie": 3,
+          "powt": "12-15",
+          "przerwa": "1,5 min",
+          "wskazowka": "Lokcie przy tulowiu, ruszaja tylko przedramiona. Na dole przez sekunde napinasz triceps.",
+          "serie_wstepne": "50% × 5-6",
+          "seria_laczona": "Wznosy bokiem hantlami"
+        },
+        {
+          "nazwa": "Plank",
+          "serie": 3,
+          "powt": "30-45 s",
+          "przerwa": "1 min",
+          "wskazowka": "Lokcie pod barkami, posladki napiete, biodra w linii z plecami. Jak biodra opadaja — koniec serii.",
+          "serie_wstepne": "50% × 5-6"
+        }
+      ]
+    },
+    {
+      "id": "fbw_b",
+      "nazwa": "Sroda — cale cialo B (tyl ciala)",
+      "cwiczenia": [
+        {
+          "nazwa": "Rumunski martwy ciag ze sztanga",
+          "serie": 3,
+          "powt": "8-10",
+          "przerwa": "2-3 min",
+          "wskazowka": "Sztanga blisko ud, kolana lekko ugiete i nieruchome. Odprowadzasz biodra do tylu, az poczujesz rozciaganie z tylu ud, plecy proste. Wracasz, sciskajac posladki.",
+          "serie_wstepne": "30% × 8-12, 50% × 8, 75% × 2-3"
+        },
+        {
+          "nazwa": "Uginanie nog lezac (maszyna)",
+          "serie": 3,
+          "powt": "12-15",
+          "przerwa": "1,5-2 min",
+          "wskazowka": "Rolka tuz nad pietami, biodra przyklejone do lawki. Ruch pelny, powrot wolniejszy niz ruch w gore.",
+          "serie_wstepne": "30% × 8-12, 50% × 8, 75% × 2-3"
+        },
+        {
+          "nazwa": "Wioslowanie na maszynie siedzac",
+          "serie": 3,
+          "powt": "10-12",
+          "przerwa": "2 min",
+          "wskazowka": "Klatka oparta o podparcie, ciagniesz lokciami wzdluz tulowia, na koncu sciskasz lopatki.",
+          "serie_wstepne": "50% × 5-6"
+        },
+        {
+          "nazwa": "Wyciskanie hantli nad glowe siedzac",
+          "serie": 3,
+          "powt": "10-12",
+          "przerwa": "2 min",
+          "wskazowka": "Oparcie pionowo, hantle na wysokosci uszu. Wyciskasz nad glowe bez odchylania sie do tylu.",
+          "serie_wstepne": "50% × 5-6"
+        },
+        {
+          "nazwa": "Odwodzenie nog na maszynie",
+          "serie": 3,
+          "powt": "15-20",
+          "przerwa": "1,5 min",
+          "wskazowka": "Lekki sklon tulowia do przodu — wtedy pracuje gorna czesc posladka. Powrot powolny, bez puszczania ciezaru.",
+          "serie_wstepne": "50% × 5-6",
+          "seria_laczona": "Uginanie ramion z hantlami"
+        },
+        {
+          "nazwa": "Uginanie ramion z hantlami",
+          "serie": 3,
+          "powt": "12-15",
+          "przerwa": "1,5 min",
+          "wskazowka": "Lokcie przy tulowiu, bez bujania. Opuszczasz wolniej, niz unosisz.",
+          "serie_wstepne": "50% × 5-6",
+          "seria_laczona": "Odwodzenie nog na maszynie"
+        },
+        {
+          "nazwa": "Wznosy nog w lezeniu",
+          "serie": 3,
+          "powt": "max",
+          "przerwa": "1 min",
+          "wskazowka": "Dlonie pod posladkami, dol plecow przyklejony do podlogi. Nogi opuszczasz tak nisko, jak plecy nie odrywaja sie od maty.",
+          "serie_wstepne": "50% × 5-6"
+        }
+      ]
+    },
+    {
+      "id": "fbw_c",
+      "nazwa": "Piatek — cale cialo C (nogi jednostronnie i objetosc)",
+      "cwiczenia": [
+        {
+          "nazwa": "Przysiad goblet z hantlem",
+          "serie": 3,
+          "powt": "10-12",
+          "przerwa": "2-3 min",
+          "wskazowka": "Hantel trzymasz pionowo przy klatce. Schodzisz miedzy pietami, kolana idą na zewnatrz, plecy proste. Tak gleboko, jak nie zaokragla sie dol plecow.",
+          "serie_wstepne": "30% × 8-12, 50% × 8, 75% × 2-3"
+        },
+        {
+          "nazwa": "Wykroki chodzone z hantlami",
+          "serie": 3,
+          "powt": "10-12 na noge",
+          "przerwa": "2-3 min",
+          "wskazowka": "Dlugi krok, kolano tylnej nogi schodzi nisko, tulow pionowo. Pchasz sie pieta przedniej nogi.",
+          "serie_wstepne": "30% × 8-12, 50% × 8, 75% × 2-3"
+        },
+        {
+          "nazwa": "Hip thrust ze sztanga",
+          "serie": 4,
+          "powt": "10-12",
+          "przerwa": "2 min",
+          "wskazowka": "Dzis lzejszy niz w poniedzialek, za to z sekunda zatrzymania na gorze w kazdym powtorzeniu.",
+          "serie_wstepne": "50% × 5-6"
+        },
+        {
+          "nazwa": "Sciaganie wyciagu waskim chwytem",
+          "serie": 3,
+          "powt": "12-15",
+          "przerwa": "1,5-2 min",
+          "wskazowka": "Chwyt waski, ciagniesz do klatki, lokcie blisko tulowia — tu bardziej pracuje srodek plecow.",
+          "serie_wstepne": "50% × 5-6"
+        },
+        {
+          "nazwa": "Rozpietki na maszynie (butterfly)",
+          "serie": 3,
+          "powt": "12-15",
+          "przerwa": "1,5 min",
+          "wskazowka": "Lokcie na wysokosci barkow, lekko ugiete. Scisk na srodku na sekunde, powrot powolny.",
+          "serie_wstepne": "50% × 5-6",
+          "seria_laczona": "Prostowanie nog na maszynie"
+        },
+        {
+          "nazwa": "Prostowanie nog na maszynie",
+          "serie": 3,
+          "powt": "12-15",
+          "przerwa": "1,5 min",
+          "wskazowka": "Oparcie tak, zeby kolana byly w osi maszyny. Na gorze sekunda napiecia, bez szarpania.",
+          "serie_wstepne": "50% × 5-6",
+          "seria_laczona": "Rozpietki na maszynie (butterfly)"
+        },
+        {
+          "nazwa": "Plank boczny",
+          "serie": 3,
+          "powt": "20-30 s na strone",
+          "przerwa": "1 min",
+          "wskazowka": "Lokiec pod barkiem, cialo w jednej linii, biodra wysoko. Jak biodra opadaja — koniec serii.",
+          "serie_wstepne": "50% × 5-6"
+        }
+      ]
+    }
+  ],
+  "sesja_krotka": {
+    "id": "krotka",
+    "nazwa": "Wersja krotka (30 min)",
+    "cwiczenia": [
+      {
+        "nazwa": "Hip thrust ze sztanga",
+        "serie": 3,
+        "powt": "10-12",
+        "przerwa": "2 min",
+        "wskazowka": "Jak w planie glownym.",
+        "serie_wstepne": "50% × 5-6"
+      },
+      {
+        "nazwa": "Sciaganie drazka wyciagu gornego",
+        "serie": 3,
+        "powt": "10-12",
+        "przerwa": "1,5-2 min",
+        "wskazowka": "Jak w planie glownym.",
+        "serie_wstepne": "50% × 5-6"
+      },
+      {
+        "nazwa": "Wypychanie nogami na suwnicy",
+        "serie": 3,
+        "powt": "10-12",
+        "przerwa": "2 min",
+        "wskazowka": "Jak w planie glownym.",
+        "serie_wstepne": "50% × 5-6"
+      },
+      {
+        "nazwa": "Plank",
+        "serie": 3,
+        "powt": "30-45 s",
+        "przerwa": "1 min",
+        "wskazowka": "Jak w planie glownym.",
+        "serie_wstepne": "50% × 5-6"
+      }
+    ]
+  },
+  "minimum": {
+    "id": "minimum",
+    "nazwa": "Minimum na gorszy dzien (15 min)",
+    "cwiczenia": [
+      {
+        "nazwa": "Przysiad bez ciezaru",
+        "serie": 2,
+        "powt": "15",
+        "przerwa": "1 min",
+        "wskazowka": "Spokojnie, pelen zakres.",
+        "serie_wstepne": "50% × 5-6"
+      },
+      {
+        "nazwa": "Pompki na kolanach",
+        "serie": 2,
+        "powt": "10-12",
+        "przerwa": "1 min",
+        "wskazowka": "Cialo w linii, lokcie blisko tulowia.",
+        "serie_wstepne": "50% × 5-6"
+      },
+      {
+        "nazwa": "Plank",
+        "serie": 2,
+        "powt": "30 s",
+        "przerwa": "1 min",
+        "wskazowka": "Posladki napiete.",
+        "serie_wstepne": "50% × 5-6"
+      }
+    ],
+    "opis": "Gorszy dzien to nie powod, zeby nie zrobic nic. Pietnascie minut podtrzymuje nawyk."
+  },
+  "przedstart": {
+    "nazwa": "Przed startem",
+    "zasada": "Spacer i rozciaganie — bez obciazenia.",
+    "mikro": [
+      "Spacer 30 minut",
+      "Woda",
+      "Sen o stalej godzinie"
+    ]
+  },
+  "wolne": {
+    "nazwa": "Dzien bez silowni",
+    "zasada": "Ruch, ktory nie meczy: marsz, rower, basen.",
+    "mikro": [
+      "Spacer 30-45 minut (cel 9000 krokow)",
+      "5 minut rozciagania bioder i plecow",
+      "Dwa litry wody"
+    ]
+  },
+  "brzuch": {
+    "cwiczenia": [
+      {
+        "nazwa": "Plank",
+        "serie": 2,
+        "powt": "30-45 s",
+        "przerwa": "1 min",
+        "wskazowka": "Posladki napiete, biodra w linii.",
+        "serie_wstepne": "50% × 5-6"
+      },
+      {
+        "nazwa": "Wznosy nog w lezeniu",
+        "serie": 2,
+        "powt": "12-15",
+        "przerwa": "1 min",
+        "wskazowka": "Dol plecow przyklejony do maty.",
+        "serie_wstepne": "50% × 5-6"
+      }
+    ]
+  }
+}
