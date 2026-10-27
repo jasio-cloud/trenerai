@@ -1,5 +1,5 @@
 {
-  "_info": "Plan trenera (Jan Rajdaszka) przepisany 1:1 z arkusza: serie i zakresy powtorzen dokladnie jak w kolumnie z cwiczeniami. serie_wstepne to rozgrzewka z arkusza — dwa pierwsze cwiczenia treningu maja pelna piramide, reszta jedna serie 50%. Split z arkusza: gora > dol > off > gora > dol > 2 off.",
+  "_info": "Cwiczenia, serie i zakresy powtorzen pochodza z arkusza trenera (Jan Rajdaszka), ale sa rozlozone na TRZY treningi calego ciala zamiast czterech sesji gora/dol — przy trzech jednostkach w tygodniu kazda partia musi wrocic 2-3 razy, inaczej klatka czy plecy pracowalyby raz na siedem dni. serie_wstepne to rozgrzewka z arkusza: dwa pierwsze cwiczenia pelna piramida 30/50/75%, reszta jedna seria 50%. Stary podzial na 4 dni lezy w sesje_4dni. Pary oznaczone seria_laczona robisz na zmiane, przerwa dopiero po obu.",
   "bloki": [
     {
       "id": "nauka",
@@ -63,6 +63,372 @@
     "Zanim podejdziesz do sztangi: 5 minut krążeń ramion i bioder, 15 przysiadów bez ciężaru."
   ],
   "sesje_glowne": [
+    {
+      "id": "fbw_a",
+      "nazwa": "Poniedziałek — całe ciało A (ciężkie wzorce)",
+      "cwiczenia": [
+        {
+          "nazwa": "Wyciskanie sztangi leżąc",
+          "serie": 3,
+          "powt": "1×6-8 + 2×10-12",
+          "przerwa": "3-4 min",
+          "wskazowka": "Ławka w klatce, bolce na wysokości klatki. Łopatki ściągnięte, stopy mocno na podłodze. Sztanga schodzi do dolnej części klatki, łokcie ok. 45 stopni od tułowia. Pierwsza seria ciężka (6-8), druga lżejsza na 10-12.",
+          "serie_wstepne": "30% × 8-12, 50% × 8, 75% × 2-3"
+        },
+        {
+          "nazwa": "Wiosłowanie sztangą podchwytem",
+          "serie": 3,
+          "powt": "10-12",
+          "przerwa": "3 min",
+          "wskazowka": "Chwyt podchwytem na szerokość barków, tułów pochylony ok. 45 stopni, plecy proste. Ciągniesz sztangę do brzucha, łokcie blisko ciała, na górze ściągasz łopatki.",
+          "serie_wstepne": "30% × 8-12, 50% × 8, 75% × 2-3"
+        },
+        {
+          "nazwa": "Przysiad klasyczny",
+          "serie": 3,
+          "powt": "2×8-10 + 1×12-15",
+          "przerwa": "3-4 min",
+          "wskazowka": "Sztanga na górze pleców, bolce w klatce ustawione tuż pod dołem ruchu. Stopy na szerokość barków, palce lekko na zewnątrz. Biodra w dół i w tył, plecy proste, schodzisz do równoległości ud z podłogą albo niżej.",
+          "serie_wstepne": "50% × 5-6"
+        },
+        {
+          "nazwa": "OHP hantlami siedząc",
+          "serie": 3,
+          "powt": "8-10",
+          "przerwa": "3 min",
+          "wskazowka": "Ławka z oparciem pionowo, hantle na wysokości uszu. Wyciskasz nad głowę bez odchylania się do tyłu, żebra w dół, brzuch napięty.",
+          "serie_wstepne": "50% × 5-6"
+        },
+        {
+          "nazwa": "Uginanie młotkowe hantli",
+          "serie": 3,
+          "powt": "10-12",
+          "przerwa": "1,5-2 min",
+          "wskazowka": "Chwyt jak przy trzymaniu młotka, kciuki do góry, łokcie przy tułowiu. Opuszczasz wolniej, niż podnosisz.",
+          "serie_wstepne": "50% × 5-6",
+          "seria_laczona": "Wyciskanie francuskie hantli"
+        },
+        {
+          "nazwa": "Wyciskanie francuskie hantli",
+          "serie": 3,
+          "powt": "12-15",
+          "przerwa": "1,5-2 min",
+          "wskazowka": "Leżysz na ławce, hantle nad klatką, łokcie w miejscu. Zginasz ramiona, aż hantle znajdą się przy uszach, i prostujesz. Rusza się tylko przedramię.",
+          "serie_wstepne": "50% × 5-6",
+          "seria_laczona": "Uginanie młotkowe hantli"
+        },
+        {
+          "nazwa": "Plank",
+          "serie": 3,
+          "powt": "30-45 s",
+          "przerwa": "1 min",
+          "wskazowka": "Przedramiona pod barkami, ciało w jednej linii, pośladki i brzuch napięte. Wpisujesz liczbę sekund.",
+          "serie_wstepne": "50% × 5-6"
+        }
+      ]
+    },
+    {
+      "id": "fbw_b",
+      "nazwa": "Środa — całe ciało B (tył ciała i barki)",
+      "cwiczenia": [
+        {
+          "nazwa": "Stiff leg deadlift",
+          "serie": 3,
+          "powt": "2×8-10 + 1×12-15",
+          "przerwa": "3-4 min",
+          "wskazowka": "Nogi prawie proste, sztanga sunie blisko nóg, biodra jadą do tyłu. Schodzisz tam, gdzie czujesz mocne rozciąganie z tyłu uda, plecy cały czas proste.",
+          "serie_wstepne": "30% × 8-12, 50% × 8, 75% × 2-3"
+        },
+        {
+          "nazwa": "Wyciskanie sztangi na skosie",
+          "serie": 3,
+          "powt": "8-10",
+          "przerwa": "3 min",
+          "wskazowka": "Ławka 30 stopni, sztanga schodzi do obojczyków, łopatki ściągnięte. To ćwiczenie robi górę klatki.",
+          "serie_wstepne": "30% × 8-12, 50% × 8, 75% × 2-3"
+        },
+        {
+          "nazwa": "Wiosłowanie hantlem jednorącz",
+          "serie": 3,
+          "powt": "10-12",
+          "przerwa": "3 min",
+          "wskazowka": "Kolano i ręka na ławce, plecy płaskie. Ciągniesz hantel do biodra, nie do barku.",
+          "serie_wstepne": "50% × 5-6"
+        },
+        {
+          "nazwa": "Hip thrust",
+          "serie": 3,
+          "powt": "2×8-10 + 1×12-15",
+          "przerwa": "3 min",
+          "wskazowka": "Górne plecy oparte o ławkę, sztanga na biodrach (podłóż coś miękkiego). Wypychasz biodra w górę do linii tułów-uda, na górze sekunda napięcia pośladków.",
+          "serie_wstepne": "50% × 5-6"
+        },
+        {
+          "nazwa": "Wznosy w bok hantlami stojąc",
+          "serie": 3,
+          "powt": "12-15",
+          "przerwa": "1,5-2 min",
+          "wskazowka": "Łokcie lekko ugięte, ruch prowadzą łokcie. Unosisz do wysokości barków, nie wyżej.",
+          "serie_wstepne": "50% × 5-6",
+          "seria_laczona": "Uginanie sztangi (biceps)"
+        },
+        {
+          "nazwa": "Uginanie sztangi (biceps)",
+          "serie": 3,
+          "powt": "10-12",
+          "przerwa": "1,5-2 min",
+          "wskazowka": "Łokcie przy tułowiu i w miejscu, bez bujania. Opuszczasz wolniej, niż podnosisz.",
+          "serie_wstepne": "50% × 5-6",
+          "seria_laczona": "Wznosy w bok hantlami stojąc"
+        },
+        {
+          "nazwa": "Wspięcia łydki stojąc",
+          "serie": 3,
+          "powt": "12-15",
+          "przerwa": "1 min",
+          "wskazowka": "Hantle w dłoniach, przednia część stóp na podwyższeniu. Pełny zakres, sekunda zatrzymania na górze.",
+          "serie_wstepne": "50% × 5-6",
+          "seria_laczona": "Wznosy nóg w leżeniu"
+        },
+        {
+          "nazwa": "Wznosy nóg w leżeniu",
+          "serie": 3,
+          "powt": "max",
+          "przerwa": "1 min",
+          "wskazowka": "Leżysz na plecach, dłonie pod pośladkami, nogi unosisz do pionu i powoli opuszczasz, nie kładąc pięt. Lędźwie dociśnięte do podłogi.",
+          "serie_wstepne": "50% × 5-6",
+          "seria_laczona": "Wspięcia łydki stojąc"
+        }
+      ]
+    },
+    {
+      "id": "fbw_c",
+      "nazwa": "Piątek — całe ciało C (objętość i jedna noga)",
+      "cwiczenia": [
+        {
+          "nazwa": "Przysiad bułgarski",
+          "serie": 4,
+          "powt": "10-12",
+          "przerwa": "3 min",
+          "wskazowka": "Tylna stopa na ławce, przednia wysunięta. Schodzisz pionowo w dół, ciężar na przedniej pięcie. Powtórzenia liczysz na jedną nogę.",
+          "serie_wstepne": "30% × 8-12, 50% × 8, 75% × 2-3"
+        },
+        {
+          "nazwa": "Wyciskanie hantli poziomo",
+          "serie": 3,
+          "powt": "10-12",
+          "przerwa": "3 min",
+          "wskazowka": "Ławka płasko, hantle schodzą do poziomu klatki, łokcie ok. 45 stopni. Większy zakres niż przy sztandze.",
+          "serie_wstepne": "30% × 8-12, 50% × 8, 75% × 2-3"
+        },
+        {
+          "nazwa": "Focze wiosłowanie hantlami szeroko",
+          "serie": 3,
+          "powt": "12-15",
+          "przerwa": "3 min",
+          "wskazowka": "Leżysz brzuchem na ławce ustawionej na skos, hantle zwisają. Ciągniesz szeroko, łokcie na boki, na górze ściągasz łopatki. Plecy nie pracują na stabilizacji, więc cała robota idzie w mięśnie.",
+          "serie_wstepne": "50% × 5-6"
+        },
+        {
+          "nazwa": "Rozpiętki hantlami na skosie",
+          "serie": 3,
+          "powt": "12-15",
+          "przerwa": "1,5-2 min",
+          "wskazowka": "Ławka 30 stopni, ręce lekko ugięte, ruch jak przy obejmowaniu drzewa. Opuszczasz do poziomu barków, nie niżej — dalej to już tylko bark.",
+          "serie_wstepne": "50% × 5-6",
+          "seria_laczona": "Pullover z hantlem"
+        },
+        {
+          "nazwa": "Pullover z hantlem",
+          "serie": 3,
+          "powt": "12-15",
+          "przerwa": "1,5-2 min",
+          "wskazowka": "Lezysz w poprzek lawki, biodra nizej od klatki, hantel trzymany oburacz nad klatka. Opuszczasz go za glowe na lekko ugietych lokciach, az poczujesz rozciaganie pod pachami, i wracasz. Przy braku drazka to jedyne cwiczenie, ktore ciagnie plecy z gory.",
+          "serie_wstepne": "50% × 5-6",
+          "seria_laczona": "Rozpiętki hantlami na skosie"
+        },
+        {
+          "nazwa": "Wznosy w bok hantlami siedząc",
+          "serie": 3,
+          "powt": "12-15",
+          "przerwa": "1,5-2 min",
+          "wskazowka": "Siedząc na ławce, plecy proste. Siedzenie wycina bujanie, więc ciężar będzie mniejszy niż stojąc.",
+          "serie_wstepne": "50% × 5-6",
+          "seria_laczona": "Wyciskanie francuskie sztangą"
+        },
+        {
+          "nazwa": "Wyciskanie francuskie sztangą",
+          "serie": 3,
+          "powt": "12-15",
+          "przerwa": "1,5-2 min",
+          "wskazowka": "Leżysz na ławce, sztanga EZ nad klatką, łokcie w miejscu. Zginasz ramiona, aż gryf znajdzie się nad czołem, i prostujesz.",
+          "serie_wstepne": "50% × 5-6",
+          "seria_laczona": "Wznosy w bok hantlami siedząc"
+        },
+        {
+          "nazwa": "Wspięcia łydki siedząc",
+          "serie": 3,
+          "powt": "10-12",
+          "przerwa": "1 min",
+          "wskazowka": "Siedząc, hantle na udach, przednia część stóp na podwyższeniu. Pełny zakres, sekunda na górze.",
+          "serie_wstepne": "50% × 5-6"
+        }
+      ]
+    }
+  ],
+  "sesja_krotka": {
+    "id": "k_ekspres",
+    "nazwa": "Ekspres po zmianie",
+    "cwiczenia": [
+      {
+        "nazwa": "Wyciskanie leżąc",
+        "powt": "8-10",
+        "przerwa": "2 min",
+        "wskazowka": "Po dobie na służbie bierzesz ok. 80% swojego ciężaru i robisz czysto. Bolce w klatce ustawione, ławka pod klatką.",
+        "latwiej": "Hantle.",
+        "trudniej": "—"
+      },
+      {
+        "nazwa": "Wiosłowanie hantlem jednorącz",
+        "powt": "10-12",
+        "przerwa": "90 s",
+        "v": true,
+        "wskazowka": "Kolano i ręka na ławce, ciągniesz do biodra, spokojnie.",
+        "latwiej": "Lżejszy hantel.",
+        "trudniej": "Sekunda pauzy na górze."
+      },
+      {
+        "nazwa": "Unoszenie hantli bokiem",
+        "powt": "12-15",
+        "przerwa": "45 s",
+        "v": true,
+        "wskazowka": "Barki boczne nawet w dzień po zmianie — mały ciężar, czysto.",
+        "latwiej": "Jedną ręką.",
+        "trudniej": "Seria zrywana."
+      },
+      {
+        "nazwa": "Przysiad bułgarski",
+        "powt": "10",
+        "przerwa": "90 s",
+        "wskazowka": "Tylna stopa na ławce, hantle w dłoniach. Rozrusza biodra po staniu na zmianie.",
+        "latwiej": "Bez hantli.",
+        "trudniej": "Wolny opust."
+      },
+      {
+        "nazwa": "Wyciskanie wąskim chwytem",
+        "serie": 3,
+        "powt": "8-10",
+        "przerwa": "2 min",
+        "wskazowka": "Jak zwykłe wyciskanie leżąc, ale dłonie na szerokość barków (nie węziej — za wąsko bolą nadgarstki). Łokcie blisko tułowia, sztanga schodzi do dolnej części klatki. To najlepsze ćwiczenie na triceps, jakie zrobisz ze sztangą.",
+        "latwiej": "Mniejszy ciężar, pauza przy klatce.",
+        "trudniej": "3 sekundy w dół."
+      }
+    ]
+  },
+  "minimum": {
+    "id": "m_minimum",
+    "nazwa": "Minimum dnia — 10 minut",
+    "czas_min": 10,
+    "opis": "Nie masz dziś siły? Zrób tylko to. Nigdy zero — to jest cała zasada. Zwykle po tych 10 minutach chce się zrobić więcej, ale nie musisz.",
+    "cwiczenia": [
+      {
+        "nazwa": "Pompki",
+        "serie": 2,
+        "powt": "ile dasz radę",
+        "przerwa": "60 s",
+        "wskazowka": "Mogą być na kolanach.",
+        "latwiej": "Dłonie na ławce.",
+        "trudniej": "—"
+      },
+      {
+        "nazwa": "Unoszenie hantli bokiem",
+        "serie": 2,
+        "powt": "15",
+        "przerwa": "45 s",
+        "wskazowka": "Lekki ciężar.",
+        "latwiej": "Butelki z wodą.",
+        "trudniej": "—"
+      },
+      {
+        "nazwa": "Przysiad bez ciężaru",
+        "serie": 2,
+        "powt": "20",
+        "przerwa": "45 s",
+        "wskazowka": "Spokojnie.",
+        "latwiej": "Do ławki.",
+        "trudniej": "Goblet."
+      }
+    ]
+  },
+  "przedstart": {
+    "nazwa": "Przed startem — gojenie",
+    "zasada": "Plan treningowy zaczyna się 17 września. Do tego czasu wracasz do zdrowia po zabiegu: bez treningu, bez deficytu, dużo snu.",
+    "mikro": [
+      "Spokojny spacer, jeśli czujesz się dobrze",
+      "Dużo płynów",
+      "Zakup taśmy krawieckiej do pomiarów"
+    ]
+  },
+  "brzuch": {
+    "opis": "Brzuch na koniec każdego treningu, ok. 5 minut. Nie spala tłuszczu z brzucha — to robi dieta — ale wzmacnia mięśnie, które trzymają brzuch płasko i poprawiają postawę. Apka dobiera dwa ćwiczenia, których nie było w danej sesji.",
+    "cwiczenia": [
+      {
+        "nazwa": "Spięcia brzucha (brzuszki)",
+        "powt": "15-20",
+        "przerwa": "45 s",
+        "wskazowka": "Leżysz na plecach, kolana zgięte, stopy na podłodze, ręce skrzyżowane na klatce. Zwijasz tułów i odrywasz łopatki od podłogi na jakieś 10 cm — to cały ruch, plecy niżej zostają na ziemi. Broda odsunięta od klatki na szerokość pięści, nie ciągniesz głowy. Na górze zatrzymaj na sekundę i mocno napnij brzuch, potem powoli w dół. Tu poczujesz brzuch od pierwszej serii.",
+        "latwiej": "Mniejszy zakres, ręce wyciągnięte wzdłuż ciała.",
+        "trudniej": "Ręce przy skroniach albo hantel trzymany na klatce."
+      },
+      {
+        "nazwa": "Deska",
+        "powt": "30-60 s",
+        "przerwa": "45 s",
+        "wskazowka": "Przedramiona pod barkami, ciało w jednej linii od głowy do pięt. Pośladki i brzuch napięte, jakbyś miał dostać cios w brzuch. Wpisujesz liczbę sekund.",
+        "latwiej": "Na kolanach.",
+        "trudniej": "Z uniesioną jedną nogą."
+      },
+      {
+        "nazwa": "Unoszenie nóg leżąc",
+        "powt": "10-15",
+        "przerwa": "60 s",
+        "wskazowka": "Leżysz na plecach, dłonie pod pośladkami, nogi unosisz do pionu i powoli opuszczasz, nie kładąc pięt na podłodze.",
+        "latwiej": "Kolana ugięte.",
+        "trudniej": "Nogi proste, 3 sekundy w dół."
+      },
+      {
+        "nazwa": "Dead bug (martwy robak)",
+        "powt": "8-10",
+        "przerwa": "45 s",
+        "wskazowka": "Leżysz na plecach, ręce prosto w górę, nogi zgięte pod kątem prostym. Powoli opuszczasz jednocześnie przeciwną rękę i nogę nad podłogę i wracasz. Dolna część pleców cały czas dociśnięta do podłogi — wciśnij ją w matę tak, żeby nie dało się wsunąć pod nią dłoni, i wypuszczaj powietrze, gdy opuszczasz rękę z nogą. Czuć ma brzuch, szczególnie dolna część. Jeśli czujesz uda albo dół pleców, opuszczaj nogę mniej i wolniej, a kolano trzymaj zgięte pod kątem prostym. Powtórzenia liczysz na jedną stronę.",
+        "latwiej": "Opuszczasz tylko nogi, ręce zostają w górze.",
+        "trudniej": "Z lekkim hantlem trzymanym oburącz nad klatką."
+      }
+    ]
+  },
+  "split": "Plan trenera: Góra 1 → Dół 1 + łapy → Góra 2 → Dół 2 + łapy, po kolei w każdy dzień treningowy (schemat trenera: góra > dół > off > góra > dół > 2 off — u Ciebie wychodzi to z grafiku 24/48). Ćwiczenia oznaczone jako seria łączona możesz robić naprzemiennie bez przerwy między nimi — wtedy trening trwa o połowę krócej.",
+  "brzuch_zawsze": false,
+  "zasady": [
+    "Przerwy: ciężkie wyciskania, przysiady i SLDL 3-4 min; plecy, klatka, nogi 3 min; łapy i wznosy 1,5-2 min; brzuch i łydki 0,5-2 min.",
+    "Zapisuj ciężar i powtórzenia. Na kolejnym treningu dołóż jedno powtórzenie albo 1,25 kg na stronę, a jak nie idzie — popraw technikę, dodaj pauzę albo spowolnij tempo.",
+    "Seria łączona (kolory w arkuszu trenera): dwa ćwiczenia robisz na zmianę, przerwa dopiero po obu."
+  ],
+  "wolne": {
+    "nazwa": "Dzień bez sztangi",
+    "zasada": "Dziś nie trenujesz. Rower zone 2 po południu (35–45 minut) i 8000 kroków — tyle wystarczy.",
+    "mikro": [
+      "Rower zone 2: 35–45 minut w tempie, przy którym da się rozmawiać",
+      "Spacer albo zakupy na piechotę",
+      "5 minut rozciągania bioder i klatki wieczorem"
+    ]
+  },
+  "split_tygodnia": {
+    "0": "fbw_a",
+    "2": "fbw_b",
+    "4": "fbw_c",
+    "_info": "Trzy treningi w tygodniu: poniedzialek, sroda, piatek. Klucz to numer dnia tygodnia (0 = poniedzialek)."
+  },
+  "sesje_4dni": [
     {
       "id": "gora1",
       "nazwa": "Góra 1",
@@ -291,158 +657,5 @@
         }
       ]
     }
-  ],
-  "sesja_krotka": {
-    "id": "k_ekspres",
-    "nazwa": "Ekspres po zmianie",
-    "cwiczenia": [
-      {
-        "nazwa": "Wyciskanie leżąc",
-        "powt": "8-10",
-        "przerwa": "2 min",
-        "wskazowka": "Po dobie na służbie bierzesz ok. 80% swojego ciężaru i robisz czysto. Bolce w klatce ustawione, ławka pod klatką.",
-        "latwiej": "Hantle.",
-        "trudniej": "—"
-      },
-      {
-        "nazwa": "Wiosłowanie hantlem jednorącz",
-        "powt": "10-12",
-        "przerwa": "90 s",
-        "v": true,
-        "wskazowka": "Kolano i ręka na ławce, ciągniesz do biodra, spokojnie.",
-        "latwiej": "Lżejszy hantel.",
-        "trudniej": "Sekunda pauzy na górze."
-      },
-      {
-        "nazwa": "Unoszenie hantli bokiem",
-        "powt": "12-15",
-        "przerwa": "45 s",
-        "v": true,
-        "wskazowka": "Barki boczne nawet w dzień po zmianie — mały ciężar, czysto.",
-        "latwiej": "Jedną ręką.",
-        "trudniej": "Seria zrywana."
-      },
-      {
-        "nazwa": "Przysiad bułgarski",
-        "powt": "10",
-        "przerwa": "90 s",
-        "wskazowka": "Tylna stopa na ławce, hantle w dłoniach. Rozrusza biodra po staniu na zmianie.",
-        "latwiej": "Bez hantli.",
-        "trudniej": "Wolny opust."
-      },
-      {
-        "nazwa": "Wyciskanie wąskim chwytem",
-        "serie": 3,
-        "powt": "8-10",
-        "przerwa": "2 min",
-        "wskazowka": "Jak zwykłe wyciskanie leżąc, ale dłonie na szerokość barków (nie węziej — za wąsko bolą nadgarstki). Łokcie blisko tułowia, sztanga schodzi do dolnej części klatki. To najlepsze ćwiczenie na triceps, jakie zrobisz ze sztangą.",
-        "latwiej": "Mniejszy ciężar, pauza przy klatce.",
-        "trudniej": "3 sekundy w dół."
-      }
-    ]
-  },
-  "minimum": {
-    "id": "m_minimum",
-    "nazwa": "Minimum dnia — 10 minut",
-    "czas_min": 10,
-    "opis": "Nie masz dziś siły? Zrób tylko to. Nigdy zero — to jest cała zasada. Zwykle po tych 10 minutach chce się zrobić więcej, ale nie musisz.",
-    "cwiczenia": [
-      {
-        "nazwa": "Pompki",
-        "serie": 2,
-        "powt": "ile dasz radę",
-        "przerwa": "60 s",
-        "wskazowka": "Mogą być na kolanach.",
-        "latwiej": "Dłonie na ławce.",
-        "trudniej": "—"
-      },
-      {
-        "nazwa": "Unoszenie hantli bokiem",
-        "serie": 2,
-        "powt": "15",
-        "przerwa": "45 s",
-        "wskazowka": "Lekki ciężar.",
-        "latwiej": "Butelki z wodą.",
-        "trudniej": "—"
-      },
-      {
-        "nazwa": "Przysiad bez ciężaru",
-        "serie": 2,
-        "powt": "20",
-        "przerwa": "45 s",
-        "wskazowka": "Spokojnie.",
-        "latwiej": "Do ławki.",
-        "trudniej": "Goblet."
-      }
-    ]
-  },
-  "przedstart": {
-    "nazwa": "Przed startem — gojenie",
-    "zasada": "Plan treningowy zaczyna się 17 września. Do tego czasu wracasz do zdrowia po zabiegu: bez treningu, bez deficytu, dużo snu.",
-    "mikro": [
-      "Spokojny spacer, jeśli czujesz się dobrze",
-      "Dużo płynów",
-      "Zakup taśmy krawieckiej do pomiarów"
-    ]
-  },
-  "brzuch": {
-    "opis": "Brzuch na koniec każdego treningu, ok. 5 minut. Nie spala tłuszczu z brzucha — to robi dieta — ale wzmacnia mięśnie, które trzymają brzuch płasko i poprawiają postawę. Apka dobiera dwa ćwiczenia, których nie było w danej sesji.",
-    "cwiczenia": [
-      {
-        "nazwa": "Spięcia brzucha (brzuszki)",
-        "powt": "15-20",
-        "przerwa": "45 s",
-        "wskazowka": "Leżysz na plecach, kolana zgięte, stopy na podłodze, ręce skrzyżowane na klatce. Zwijasz tułów i odrywasz łopatki od podłogi na jakieś 10 cm — to cały ruch, plecy niżej zostają na ziemi. Broda odsunięta od klatki na szerokość pięści, nie ciągniesz głowy. Na górze zatrzymaj na sekundę i mocno napnij brzuch, potem powoli w dół. Tu poczujesz brzuch od pierwszej serii.",
-        "latwiej": "Mniejszy zakres, ręce wyciągnięte wzdłuż ciała.",
-        "trudniej": "Ręce przy skroniach albo hantel trzymany na klatce."
-      },
-      {
-        "nazwa": "Deska",
-        "powt": "30-60 s",
-        "przerwa": "45 s",
-        "wskazowka": "Przedramiona pod barkami, ciało w jednej linii od głowy do pięt. Pośladki i brzuch napięte, jakbyś miał dostać cios w brzuch. Wpisujesz liczbę sekund.",
-        "latwiej": "Na kolanach.",
-        "trudniej": "Z uniesioną jedną nogą."
-      },
-      {
-        "nazwa": "Unoszenie nóg leżąc",
-        "powt": "10-15",
-        "przerwa": "60 s",
-        "wskazowka": "Leżysz na plecach, dłonie pod pośladkami, nogi unosisz do pionu i powoli opuszczasz, nie kładąc pięt na podłodze.",
-        "latwiej": "Kolana ugięte.",
-        "trudniej": "Nogi proste, 3 sekundy w dół."
-      },
-      {
-        "nazwa": "Dead bug (martwy robak)",
-        "powt": "8-10",
-        "przerwa": "45 s",
-        "wskazowka": "Leżysz na plecach, ręce prosto w górę, nogi zgięte pod kątem prostym. Powoli opuszczasz jednocześnie przeciwną rękę i nogę nad podłogę i wracasz. Dolna część pleców cały czas dociśnięta do podłogi — wciśnij ją w matę tak, żeby nie dało się wsunąć pod nią dłoni, i wypuszczaj powietrze, gdy opuszczasz rękę z nogą. Czuć ma brzuch, szczególnie dolna część. Jeśli czujesz uda albo dół pleców, opuszczaj nogę mniej i wolniej, a kolano trzymaj zgięte pod kątem prostym. Powtórzenia liczysz na jedną stronę.",
-        "latwiej": "Opuszczasz tylko nogi, ręce zostają w górze.",
-        "trudniej": "Z lekkim hantlem trzymanym oburącz nad klatką."
-      }
-    ]
-  },
-  "split": "Plan trenera: Góra 1 → Dół 1 + łapy → Góra 2 → Dół 2 + łapy, po kolei w każdy dzień treningowy (schemat trenera: góra > dół > off > góra > dół > 2 off — u Ciebie wychodzi to z grafiku 24/48). Ćwiczenia oznaczone jako seria łączona możesz robić naprzemiennie bez przerwy między nimi — wtedy trening trwa o połowę krócej.",
-  "brzuch_zawsze": false,
-  "zasady": [
-    "Przerwy: ciężkie wyciskania, przysiady i SLDL 3-4 min; plecy, klatka, nogi 3 min; łapy i wznosy 1,5-2 min; brzuch i łydki 0,5-2 min.",
-    "Zapisuj ciężar i powtórzenia. Na kolejnym treningu dołóż jedno powtórzenie albo 1,25 kg na stronę, a jak nie idzie — popraw technikę, dodaj pauzę albo spowolnij tempo.",
-    "Seria łączona (kolory w arkuszu trenera): dwa ćwiczenia robisz na zmianę, przerwa dopiero po obu."
-  ],
-  "wolne": {
-    "nazwa": "Dzień bez sztangi",
-    "zasada": "Dziś nie trenujesz. Rower zone 2 po południu (35–45 minut) i 8000 kroków — tyle wystarczy.",
-    "mikro": [
-      "Rower zone 2: 35–45 minut w tempie, przy którym da się rozmawiać",
-      "Spacer albo zakupy na piechotę",
-      "5 minut rozciągania bioder i klatki wieczorem"
-    ]
-  },
-  "split_tygodnia": {
-    "0": "gora1",
-    "1": "dol1",
-    "3": "gora2",
-    "4": "dol2",
-    "_info": "Arkusz trenera przypisuje sesje do dni tygodnia: Gora 1 poniedzialek, Dol 1 wtorek, Gora 2 czwartek, Dol 2 piatek. Klucz to numer dnia tygodnia (0 = poniedzialek)."
-  }
+  ]
 }

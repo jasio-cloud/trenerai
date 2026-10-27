@@ -834,7 +834,7 @@ def kara_rachunku(zakup):
     kara = float(b.get("waga_rachunku", 0) or 0) * zakup
     lim = b.get("jednorazowo_zl")
     if lim:
-        kara += 60.0 * max(0.0, zakup - lim)
+        kara += float(b.get("kara_za_zl_ponad", 12)) * max(0.0, zakup - lim)
     return kara
 
 

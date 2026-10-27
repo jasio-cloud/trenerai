@@ -1,0 +1,156 @@
+{
+  "stan": {
+    "poledwica": {
+      "ilosc": 55,
+      "do": "2026-10-31"
+    },
+    "szynka": {
+      "ilosc": 25,
+      "do": "2026-10-31"
+    },
+    "jaja": {
+      "ilosc": 6,
+      "do": "2026-10-31"
+    },
+    "maslo": {
+      "ilosc": 171,
+      "do": "2026-10-31"
+    },
+    "mleko": {
+      "ilosc": 899,
+      "do": "2026-10-31"
+    },
+    "twarog": {
+      "ilosc": 85,
+      "do": "2026-10-31"
+    },
+    "cebula": {
+      "ilosc": 0.33,
+      "do": "2027-05-07"
+    },
+    "czosnek": {
+      "ilosc": 3.0,
+      "do": "2027-05-07"
+    },
+    "marchew": {
+      "ilosc": 0.33,
+      "do": "2027-05-07"
+    },
+    "chleb": {
+      "ilosc": 1,
+      "do": "2026-10-31"
+    },
+    "makaron": {
+      "ilosc": 110.0,
+      "do": "2027-05-07"
+    },
+    "tortilla": {
+      "ilosc": 1,
+      "do": "2027-05-07"
+    },
+    "dzem_niskoslodzony": {
+      "ilosc": 140,
+      "do": "2027-05-07"
+    },
+    "ketchup": {
+      "ilosc": 16,
+      "do": "2027-05-07"
+    },
+    "koncentrat": {
+      "ilosc": 60.0,
+      "do": "2027-05-07"
+    },
+    "majonez_sriracha": {
+      "ilosc": 174,
+      "do": "2027-05-07"
+    },
+    "maslo_orzechowe": {
+      "ilosc": 16.5,
+      "do": "2027-05-07"
+    },
+    "musztarda": {
+      "ilosc": 6.0,
+      "do": "2027-05-07"
+    },
+    "olej": {
+      "ilosc": 965.0,
+      "do": "2027-05-07"
+    },
+    "passata": {
+      "ilosc": 333.33,
+      "do": "2027-05-07"
+    },
+    "przyprawy": {
+      "ilosc": 82.0,
+      "do": "2027-05-07"
+    },
+    "kukurydza": {
+      "ilosc": 160,
+      "do": "2027-05-10"
+    },
+    "maka": {
+      "ilosc": 1050,
+      "do": "2027-05-10"
+    },
+    "proszek_do_pieczenia": {
+      "ilosc": 26,
+      "do": "2027-05-10"
+    },
+    "cynamon": {
+      "ilosc": 11,
+      "do": "2027-05-10"
+    },
+    "mielone_wolowe": {
+      "ilosc": 300.0,
+      "do": "2026-10-29"
+    },
+    "jogurt_grecki": {
+      "ilosc": 160,
+      "do": "2026-11-06"
+    },
+    "ogorek_kiszony": {
+      "ilosc": 6.0,
+      "do": "2027-05-13"
+    },
+    "miod": {
+      "ilosc": 18.0,
+      "do": "2027-05-13"
+    },
+    "orzechy": {
+      "ilosc": 164,
+      "do": "2027-05-13"
+    }
+  },
+  "log": [
+    {
+      "data": "2026-10-19",
+      "co": "pusta szafka — start od zera",
+      "produkt": "-",
+      "ilosc": 0
+    },
+    {
+      "data": "2026-10-19",
+      "co": "cykl:2026-10-19",
+      "pozycji": 30,
+      "koszt": 215.91
+    },
+    {
+      "data": "2026-10-22",
+      "co": "cykl:2026-10-22",
+      "pozycji": 16,
+      "koszt": 67.71
+    },
+    {
+      "data": "2026-10-24",
+      "co": "wyrzucone",
+      "produkt": "mielone_wolowe",
+      "ilosc": 133.33
+    },
+    {
+      "data": "2026-10-25",
+      "co": "cykl:2026-10-25",
+      "pozycji": 16,
+      "koszt": 115.52
+    }
+  ]
+}

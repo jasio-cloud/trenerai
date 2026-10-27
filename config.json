@@ -46,11 +46,10 @@
     "tryb": "tydzien",
     "dni_treningowe": [
       0,
-      1,
-      3,
+      2,
       4
     ],
-    "komentarz": "0=poniedziałek … 6=niedziela. Dni treningowe: Pon, Wt, Czw, Pt (Góra 1, Dół 1, Góra 2, Dół 2). Reszta wolne. Grafik 24/48 nieaktualny od 29.09.2026."
+    "komentarz": "0=poniedzialek … 6=niedziela. Trzy treningi: Pon (cale cialo A), Sr (B), Pt (C). Wt/Czw/Sob/Nd wolne — rower zone 2 i spacer. Poprzedni uklad 4 dni (Gora/Dol) lezy w data/program.json w sesje_4dni."
   },
   "gotowanie": {
     "bez_garnka": true,
@@ -293,15 +292,16 @@
     "komentarz": "Schemat trenera: pierwszy posilek 30b/20t/40w, pozostale trzy 30b/10t/80w. Liczone po trenersku (bez warzyw, sosow zero i bialka roslinnego) — w apce te same posilki wychodza ok. 2400 kcal i 160 g bialka."
   },
   "cykl": {
-    "start": "2026-10-19",
+    "start": "2026-10-27",
     "dni": 3,
-    "komentarz": "Restart planu 19.10.2026. Zakupy i menu co 3 dni od tej daty, gotowanie codzienne do 20 min."
+    "komentarz": "Restart 27.10.2026. Zakupy i menu co 3 dni od tej daty, gotowanie codzienne do 20 min."
   },
   "budzet": {
     "dziennie_zl": 30,
-    "komentarz": "Limit 30 zl/dzien liczony od JEDZENIA zjedzonego w cyklu. Osobno pilnujemy jednorazowego rachunku (budzet.jednorazowo_zl): przy pustej szafce pierwszy zakup to tez olej, maka i przyprawy, wiec kazda zlotowka ponad 120 zl kosztuje planer 60 pkt bledu, a kazda zlotowka rachunku 2 pkt.",
-    "waga_rachunku": 2,
-    "jednorazowo_zl": 120
+    "komentarz": "Limit 30 zl/dzien liczy sie od JEDZENIA zjedzonego w cyklu (kara_budzetu, 100 pkt za zlotowke ponad). Osobno patrzymy na jednorazowy rachunek: kazda zlotowka to 1 pkt, a zlotowka ponad jednorazowo_zl (150 zl) to 25 pkt. Twarda sciana (60 pkt) psula menu — planer powtarzal te same tanie dania i rozjezdzal kalorie o 400.",
+    "waga_rachunku": 1,
+    "jednorazowo_zl": 150,
+    "kara_za_zl_ponad": 25
   },
   "ulubione": {
     "co_ile_dni": 3,
