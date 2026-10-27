@@ -218,7 +218,7 @@ const esc = s => String(s??"").replace(/[&<>"]/g, c => ({"&":"&amp;","<":"&lt;",
 /* Wersja panelu. iPhone dodany do ekranu głównego potrafi trzymać stary HTML
    w nieskończoność. dane.json leci zawsze świeży, więc porównujemy numery
    i przy różnicy przeładowujemy stronę z ?v=, co omija cache przeglądarki. */
-const WERSJA = 1;
+const WERSJA = 2;
 let D = null, widok = "dzis";
 
 /* ---- zapis z telefonu ------------------------------------------------------
@@ -518,8 +518,8 @@ function widokDzis(){
         <div class="op" style="margin-top:9px">${k.status==="malo"?"→ ":"✓ "}${esc(k.sugestia)}</div>
       </div>`
     : `<div class="karta"><h2>Kroki</h2>
-        <div class="op">Dziś jeszcze bez odczytu. Skrót na iPhonie wysyła liczbę kroków o 20:00 —
-        cel na taki dzień to ${D.kroki_cel.cel.toLocaleString("pl-PL")}.</div>
+        <div class="op">Dziś jeszcze bez odczytu — kroki sprawdź w aplikacji Zdrowie albo w zegarku.
+        Cel na taki dzień to ${D.kroki_cel.cel.toLocaleString("pl-PL")}.</div>
         <div class="op" style="margin-top:6px">${esc(D.kroki_cel.komentarz)}</div>
       </div>`;
 
