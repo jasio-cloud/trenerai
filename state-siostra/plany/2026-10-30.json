@@ -1,0 +1,51 @@
+{
+  "cykl": 2,
+  "od": "2026-10-30",
+  "do": "2026-11-01",
+  "baza": "b_bolo",
+  "dni": [
+    {
+      "sniadanie": "q_twarog_banan",
+      "drugi": "q_serek_box",
+      "kolacja": "q_twarog_makaron",
+      "obiad": "b_bolo",
+      "data": "2026-10-30",
+      "typ": 0,
+      "makra": {
+        "kcal": 2290,
+        "bialko": 161,
+        "tluszcz": 84,
+        "wegle": 217
+      }
+    },
+    {
+      "sniadanie": "q_twarog",
+      "drugi": "q_jogurt_orzechy",
+      "kolacja": "q_kanapki_jajko",
+      "obiad": "b_bolo",
+      "data": "2026-10-31",
+      "typ": 1,
+      "makra": {
+        "kcal": 2034,
+        "bialko": 140,
+        "tluszcz": 73,
+        "wegle": 194
+      }
+    },
+    {
+      "sniadanie": "q_jajecznica",
+      "drugi": "q_kanapki_ser",
+      "kolacja": "d_sernik",
+      "obiad": "b_bolo",
+      "data": "2026-11-01",
+      "typ": 1,
+      "makra": {
+        "kcal": 2100,
+        "bialko": 140,
+        "tluszcz": 86,
+        "wegle": 183
+      }
+    }
+  ],
+  "wygenerowano": "2026-10-30T01:55:21+01:00"
+}
