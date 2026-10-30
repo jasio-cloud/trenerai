@@ -1,31 +1,23 @@
 {
   "stan": {
     "mielone_wolowe": {
-      "ilosc": 300.0,
+      "ilosc": 200.0,
       "do": "2026-10-31"
     },
-    "jaja": {
-      "ilosc": 3,
-      "do": "2026-11-08"
-    },
     "mleko": {
-      "ilosc": 955,
+      "ilosc": 852,
       "do": "2026-11-08"
     },
     "ser_zolty": {
-      "ilosc": 3,
+      "ilosc": 1,
       "do": "2026-11-08"
     },
     "twarog": {
-      "ilosc": 290,
+      "ilosc": 130,
       "do": "2026-11-08"
     },
     "czosnek": {
-      "ilosc": 7.0,
-      "do": "2027-05-15"
-    },
-    "marchew": {
-      "ilosc": 0.5,
+      "ilosc": 4.0,
       "do": "2027-05-15"
     },
     "ogorek_kiszony": {
@@ -33,27 +25,27 @@
       "do": "2027-05-15"
     },
     "chleb": {
-      "ilosc": 9,
+      "ilosc": 6,
       "do": "2026-11-08"
     },
     "makaron": {
-      "ilosc": 140.0,
+      "ilosc": 265.0,
       "do": "2027-05-15"
     },
     "dzem_niskoslodzony": {
-      "ilosc": 130,
+      "ilosc": 25,
       "do": "2027-05-15"
     },
     "koncentrat": {
-      "ilosc": 140.0,
+      "ilosc": 80.0,
       "do": "2027-05-15"
     },
     "maslo_orzechowe": {
-      "ilosc": 21.0,
+      "ilosc": 18.0,
       "do": "2027-05-15"
     },
     "miod": {
-      "ilosc": 18.0,
+      "ilosc": 16.0,
       "do": "2027-05-15"
     },
     "musztarda": {
@@ -61,28 +53,44 @@
       "do": "2027-05-15"
     },
     "maka": {
-      "ilosc": 1075,
+      "ilosc": 1050,
       "do": "2027-05-15"
     },
     "olej": {
-      "ilosc": 985.0,
+      "ilosc": 970.0,
       "do": "2027-05-15"
     },
     "orzechy": {
-      "ilosc": 166,
+      "ilosc": 141,
       "do": "2027-05-15"
     },
     "proszek_do_pieczenia": {
-      "ilosc": 28,
+      "ilosc": 26,
       "do": "2027-05-15"
     },
     "cynamon": {
-      "ilosc": 13,
+      "ilosc": 11,
       "do": "2027-05-15"
     },
     "przyprawy": {
-      "ilosc": 93.0,
+      "ilosc": 88.0,
       "do": "2027-05-15"
+    },
+    "maslo": {
+      "ilosc": 195,
+      "do": "2026-11-11"
+    },
+    "serek_wiejski": {
+      "ilosc": 0.5,
+      "do": "2026-11-11"
+    },
+    "grahamka": {
+      "ilosc": 3.0,
+      "do": "2026-11-03"
+    },
+    "kakao": {
+      "ilosc": 18,
+      "do": "2027-05-18"
     }
   },
   "log": [
@@ -97,6 +105,12 @@
       "co": "cykl:2026-10-27",
       "pozycji": 29,
       "koszt": 189.48
+    },
+    {
+      "data": "2026-10-30",
+      "co": "cykl:2026-10-30",
+      "pozycji": 14,
+      "koszt": 79.59
     }
   ]
 }

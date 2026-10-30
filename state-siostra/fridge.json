@@ -1,43 +1,43 @@
 {
   "stan": {
     "mielone_wolowe": {
-      "ilosc": 50.0,
+      "ilosc": 100.0,
       "do": "2026-10-31"
     },
     "jaja": {
-      "ilosc": 6,
+      "ilosc": 1,
       "do": "2026-11-08"
     },
     "jogurt_grecki": {
-      "ilosc": 350,
+      "ilosc": 50,
       "do": "2026-11-08"
     },
     "mleko": {
-      "ilosc": 895,
+      "ilosc": 830,
       "do": "2026-11-08"
     },
     "ser_zolty": {
-      "ilosc": 5,
+      "ilosc": 2,
       "do": "2026-11-08"
     },
     "twarog": {
-      "ilosc": 125,
+      "ilosc": 315,
       "do": "2026-11-08"
     },
     "cebula": {
-      "ilosc": 0.6,
+      "ilosc": 0.2,
       "do": "2027-05-15"
     },
     "czosnek": {
-      "ilosc": 7.9,
+      "ilosc": 5.8,
       "do": "2027-05-15"
     },
     "marchew": {
-      "ilosc": 0.6,
+      "ilosc": 0.2,
       "do": "2027-05-15"
     },
     "ogorek_kiszony": {
-      "ilosc": 7.5,
+      "ilosc": 4.0,
       "do": "2027-05-15"
     },
     "pomidor": {
@@ -45,15 +45,15 @@
       "do": "2026-10-31"
     },
     "chleb": {
-      "ilosc": 9,
+      "ilosc": 1,
       "do": "2026-11-08"
     },
     "makaron": {
-      "ilosc": 262.0,
+      "ilosc": 54.0,
       "do": "2027-05-15"
     },
     "dzem_niskoslodzony": {
-      "ilosc": 150,
+      "ilosc": 100,
       "do": "2027-05-15"
     },
     "kakao": {
@@ -65,7 +65,7 @@
       "do": "2027-05-15"
     },
     "koncentrat": {
-      "ilosc": 158.0,
+      "ilosc": 116.0,
       "do": "2027-05-15"
     },
     "kukurydza": {
@@ -73,27 +73,27 @@
       "do": "2027-05-15"
     },
     "maslo_orzechowe": {
-      "ilosc": 19.0,
+      "ilosc": 18.5,
       "do": "2027-05-15"
     },
     "miod": {
-      "ilosc": 17.5,
+      "ilosc": 14.0,
       "do": "2027-05-15"
     },
     "musztarda": {
-      "ilosc": 11.0,
+      "ilosc": 10.0,
       "do": "2027-05-15"
     },
     "olej": {
-      "ilosc": 989.5,
+      "ilosc": 979.0,
       "do": "2027-05-15"
     },
     "orzechy": {
-      "ilosc": 181,
+      "ilosc": 153,
       "do": "2027-05-15"
     },
     "passata": {
-      "ilosc": 150.0,
+      "ilosc": 300.0,
       "do": "2027-05-15"
     },
     "cynamon": {
@@ -101,8 +101,12 @@
       "do": "2027-05-15"
     },
     "przyprawy": {
-      "ilosc": 94.9,
+      "ilosc": 89.8,
       "do": "2027-05-15"
+    },
+    "maslo": {
+      "ilosc": 192,
+      "do": "2026-11-11"
     }
   },
   "log": [
@@ -111,6 +115,12 @@
       "co": "cykl:2026-10-27",
       "pozycji": 29,
       "koszt": 182.82
+    },
+    {
+      "data": "2026-10-30",
+      "co": "cykl:2026-10-30",
+      "pozycji": 11,
+      "koszt": 52.53
     }
   ]
 }

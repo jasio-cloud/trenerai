@@ -1,5 +1,5 @@
 {
-  "wygenerowano": "2026-10-30T01:55:09+01:00",
+  "wygenerowano": "2026-10-30T07:52:55+01:00",
   "dzis": "2026-10-30",
   "typ_dzis": 0,
   "typy": {
@@ -928,35 +928,27 @@
     "zapas": 34.37,
     "szafka": 13.99,
     "na_dni": 65.6,
-    "zrobione": false
+    "zrobione": true
   },
   "lodowka": {
     "mielone_wolowe": {
-      "ilosc": 300.0,
+      "ilosc": 200.0,
       "do": "2026-10-31"
     },
-    "jaja": {
-      "ilosc": 3,
-      "do": "2026-11-08"
-    },
     "mleko": {
-      "ilosc": 955,
+      "ilosc": 852,
       "do": "2026-11-08"
     },
     "ser_zolty": {
-      "ilosc": 3,
+      "ilosc": 1,
       "do": "2026-11-08"
     },
     "twarog": {
-      "ilosc": 290,
+      "ilosc": 130,
       "do": "2026-11-08"
     },
     "czosnek": {
-      "ilosc": 7.0,
-      "do": "2027-05-15"
-    },
-    "marchew": {
-      "ilosc": 0.5,
+      "ilosc": 4.0,
       "do": "2027-05-15"
     },
     "ogorek_kiszony": {
@@ -964,27 +956,27 @@
       "do": "2027-05-15"
     },
     "chleb": {
-      "ilosc": 9,
+      "ilosc": 6,
       "do": "2026-11-08"
     },
     "makaron": {
-      "ilosc": 140.0,
+      "ilosc": 265.0,
       "do": "2027-05-15"
     },
     "dzem_niskoslodzony": {
-      "ilosc": 130,
+      "ilosc": 25,
       "do": "2027-05-15"
     },
     "koncentrat": {
-      "ilosc": 140.0,
+      "ilosc": 80.0,
       "do": "2027-05-15"
     },
     "maslo_orzechowe": {
-      "ilosc": 21.0,
+      "ilosc": 18.0,
       "do": "2027-05-15"
     },
     "miod": {
-      "ilosc": 18.0,
+      "ilosc": 16.0,
       "do": "2027-05-15"
     },
     "musztarda": {
@@ -992,28 +984,44 @@
       "do": "2027-05-15"
     },
     "maka": {
-      "ilosc": 1075,
+      "ilosc": 1050,
       "do": "2027-05-15"
     },
     "olej": {
-      "ilosc": 985.0,
+      "ilosc": 970.0,
       "do": "2027-05-15"
     },
     "orzechy": {
-      "ilosc": 166,
+      "ilosc": 141,
       "do": "2027-05-15"
     },
     "proszek_do_pieczenia": {
-      "ilosc": 28,
+      "ilosc": 26,
       "do": "2027-05-15"
     },
     "cynamon": {
-      "ilosc": 13,
+      "ilosc": 11,
       "do": "2027-05-15"
     },
     "przyprawy": {
-      "ilosc": 93.0,
+      "ilosc": 88.0,
       "do": "2027-05-15"
+    },
+    "maslo": {
+      "ilosc": 195,
+      "do": "2026-11-11"
+    },
+    "serek_wiejski": {
+      "ilosc": 0.5,
+      "do": "2026-11-11"
+    },
+    "grahamka": {
+      "ilosc": 3.0,
+      "do": "2026-11-03"
+    },
+    "kakao": {
+      "ilosc": 18,
+      "do": "2027-05-18"
     }
   },
   "trening": {
@@ -9305,9 +9313,9 @@
           "ikona": "🍳",
           "ping": true,
           "akcja": "kuchnia",
-          "opis": "Przygotujesz: garnek: Makaron bolognese na wołowinie, Kanapki z jajkiem na twardo i serem, Jogurt grecki z orzechami i miodem, Twaróg z makaronem i masłem orzechowym. Potem do jutra tylko sięgasz do lodówki.",
+          "opis": "Przygotujesz: garnek: Makaron bolognese na wołowinie, Omlet z serem i pomidorem, Jogurt grecki z orzechami i miodem, Twaróg z makaronem i masłem orzechowym. Potem do jutra tylko sięgasz do lodówki.",
           "kroki": [
-            "Wyjmij wszystko na blat, zanim zaczniesz: banan 1 szt. (120 g), cebula 2 szt. (200 g), chleb pszenny 2 kromki (70 g), czosnek 3 ząbki (15 g), jabłko 1 szt. (170 g), jaja 2 szt. (110 g), jogurt grecki 2% 300 g, koncentrat pomidorowy 60 g, makaron 310 g, marchew 2 szt. (160 g), masło orzechowe 100% 1 łyżka (16 g), wołowina świeżo mielona 500 g, miód 1 łyżka (20 g), musztarda 1 łyżka (15 g), ogórek kiszony 1 szt. (65 g), olej rzepakowy 15 ml, orzechy / migdały 15 g, passata pomidorowa 500 g, przyprawy 1 porcja (2 g), ser żółty w plastrach 2 plastry (40 g), twaróg półtłusty 135 g.",
+            "Wyjmij wszystko na blat, zanim zaczniesz: banan 1 szt. (120 g), cebula 2 szt. (200 g), chleb pszenny 1 kromka (35 g), czosnek 3 ząbki (15 g), jabłko 1 szt. (170 g), jaja 2 szt. (110 g), jogurt grecki 2% 360 g, koncentrat pomidorowy 60 g, makaron 310 g, marchew 2 szt. (160 g), masło 5 g, masło orzechowe 100% 1 łyżka (16 g), wołowina świeżo mielona 500 g, miód 1 łyżka (20 g), olej rzepakowy 15 ml, orzechy / migdały 18 g, passata pomidorowa 500 g, pomidor 1 szt. (120 g), przyprawy 1 porcja (2 g), ser żółty w plastrach 2 plastry (40 g), twaróg półtłusty 135 g.",
             "Przygotuj 2 pojemniki i opisz je karteczką: dziś 13:00 — drugi posiłek; dziś 19:30 — kolacja.",
             "▸ Garnek: Makaron bolognese na wołowinie — zaczynasz od niego, bo najdłużej się gotuje.",
             "Zanim zaczniesz: postaw na wadze kuchennej deskę do krojenia, na niej pusty duży garnek, i wpisz tę wagę w zakładce Gotuję → „Ile nałożyć na porcję” (pole „puste naczynie”). Na tej samej desce zważysz później naczynie z jedzeniem — deska chroni wagę przed gorącem.",
@@ -9318,24 +9326,24 @@
             "Dodaj mięso (500 g). Rozbijaj je łopatką na drobne kawałki i smaż 8 minut, mieszając co 1–2 minuty, aż nigdzie nie będzie różowego koloru.",
             "Dodaj czosnek, koncentrat pomidorowy (60 g), 1 płaską łyżeczkę soli, pół łyżeczki pieprzu i 1 łyżeczkę suszonego oregano. Mieszaj 1 minutę.",
             "Wlej passatę (500 g — całe opakowanie) i 100 ml wody (pół szklanki). Zamieszaj, zmniejsz ogień na mały (1/3 skali), przykryj pokrywką, zostawiając szparę, i gotuj 20 minut. Co 5 minut zamieszaj, żeby nic nie przywarło do dna.",
-            "▸ Woda — postaw ją od razu, zanim zaczniesz resztę:",
-            "Jajka na twardo dla Kanapki z jajkiem na twardo i serem (2 szt.) — razem 2 szt.: w małym garnku zagotuj wodę, łyżką włóż jajka, gotuj 9 minut na średnim ogniu, odlej wrzątek i zalej zimną wodą. Obierzesz je przy daniach.",
             "▸ Kiedy garnek się gotuje, robisz resztę — od najczystszych produktów do tych, po których myjesz nóż i deskę:",
             "▸ Jogurt grecki z orzechami i miodem",
-            "Jogurt (300 g) przełóż do miski lub pojemnika.",
+            "Jogurt (360 g) przełóż do miski lub pojemnika.",
             "Jabłko (1 szt., 170 g) umyj, wytnij gniazdo z pestkami i pokrój w kostkę na wierzch.",
-            "Posyp orzechami (15 g) i polej miodem (1 łyżka, 20 g).",
+            "Posyp orzechami (18 g) i polej miodem (1 łyżka, 20 g).",
             "Przełóż do pojemnika „dziś 13:00 — drugi posiłek”.",
             "▸ Twaróg z makaronem i masłem orzechowym",
             "Ugotuj makaron (70 g), odcedź, przestudź.",
             "Twaróg (135 g) rozgnieć widelcem z odrobiną wody, aż będzie kremowy.",
             "Połącz z makaronem, dodaj masło orzechowe (1 łyżka, 16 g) i banana (1 szt., 120 g) w plastrach.",
             "Przełóż do pojemnika „dziś 19:30 — kolacja”.",
-            "▸ Kanapki z jajkiem na twardo i serem",
-            "Weź 2 szt. ugotowanych jajek z garnka z zimną wodą.",
-            "Jajka pokrój w plastry.",
-            "Chleb (2 kromki, 70 g) posmaruj cienko musztardą (1 łyżka, 15 g), połóż ser (2 plastry, 40 g), na to plastry jajka. Posól i popieprz szczyptą.",
-            "Ogórka kiszonego (1 szt., 65 g) pokrój w plasterki i ułóż na wierzchu. Do boxa zawiń każdą kanapkę w folię.",
+            "▸ Omlet z serem i pomidorem",
+            "Wbij jajka (2 szt., 110 g) do miski, dodaj szczyptę soli i pieprzu i roztrzep widelcem przez 30 sekund.",
+            "Pomidora (1 szt., 120 g) pokrój w plastry. Przygotuj ser (2 plastry, 40 g).",
+            "Patelnię postaw na małym ogniu (1/3 skali), rozpuść masło (5 g) i rozprowadź je po całym dnie.",
+            "Wlej jajka i nie mieszaj. Przykryj pokrywką i smaż 3 minuty, aż wierzch będzie prawie ścięty.",
+            "Na jedną połowę połóż ser i pomidor. Łopatką złóż drugą połowę na wierzch i smaż jeszcze 1 minutę.",
+            "Zsuń omlet na talerz. Zjedz z chlebem (1 kromka, 35 g).",
             "To zjadasz od razu, na koniec bloku.",
             "▸ Wróć do garnka: Makaron bolognese na wołowinie",
             "W tym czasie w drugim garnku zagotuj ok. 2,5 litra wody z 1 łyżką soli. Gdy woda mocno bulgocze, wsyp makaron (240 g), zamieszaj i gotuj tyle minut, ile podaje opakowanie (zwykle 9–11). Mieszaj co 3 minuty.",
@@ -9345,7 +9353,7 @@
             "▸ Na koniec: ciepłe pojemniki wystudź 20–30 minut bez pokrywki, potem wszystkie do lodówki na jedną półkę. Naczynia do zlewu, przetrzyj blat — 5 minut teraz oszczędza 20 jutro."
           ],
           "jak": "kuchnia",
-          "czas_min": 44
+          "czas_min": 42
         },
         {
           "czas": "09:40",
@@ -9354,14 +9362,14 @@
           "ping": true,
           "slot": "sniadanie",
           "opis": "",
-          "posilek": "Kanapki z jajkiem na twardo i serem",
-          "posilek_id": "q_kanapki_jajko",
-          "porcja": 1.0,
+          "posilek": "Omlet z serem i pomidorem",
+          "posilek_id": "q_omlet",
+          "porcja": 0.8,
           "makra": {
-            "kcal": 497,
-            "bialko": 31,
-            "tluszcz": 24,
-            "wegle": 36
+            "kcal": 444,
+            "bialko": 28,
+            "tluszcz": 27,
+            "wegle": 21
           },
           "skladniki": [
             {
@@ -9374,15 +9382,6 @@
               "wegle": 0.8
             },
             {
-              "nazwa": "Chleb pszenny (zwykły biały)",
-              "ile": "2 kromki (70 g)",
-              "g": 70,
-              "kcal": 175,
-              "bialko": 5.6,
-              "tluszcz": 2.1,
-              "wegle": 32.9
-            },
-            {
               "nazwa": "Ser żółty w plastrach",
               "ile": "2 plastry (40 g)",
               "g": 40,
@@ -9392,31 +9391,42 @@
               "wegle": 0.2
             },
             {
-              "nazwa": "Musztarda",
-              "ile": "1 łyżka (15 g)",
-              "g": 15,
-              "kcal": 16,
-              "bialko": 0.8,
-              "tluszcz": 0.9,
-              "wegle": 1.2
+              "nazwa": "Pomidor",
+              "ile": "1 szt. (120 g)",
+              "g": 120,
+              "kcal": 22,
+              "bialko": 1.1,
+              "tluszcz": 0.2,
+              "wegle": 3.2
             },
             {
-              "nazwa": "Ogórek kiszony",
-              "ile": "1 szt. (65 g)",
-              "g": 65,
-              "kcal": 8,
-              "bialko": 0.3,
-              "tluszcz": 0.1,
-              "wegle": 1.3
+              "nazwa": "Masło",
+              "ile": "5 g",
+              "g": 5,
+              "kcal": 37,
+              "bialko": 0.0,
+              "tluszcz": 4.1,
+              "wegle": 0.0
+            },
+            {
+              "nazwa": "Chleb pszenny (zwykły biały)",
+              "ile": "1 kromka (35 g)",
+              "g": 35,
+              "kcal": 88,
+              "bialko": 2.8,
+              "tluszcz": 1.0,
+              "wegle": 16.4
             }
           ],
           "jak": "przepis",
-          "czas_min": 12,
+          "czas_min": 10,
           "kroki": [
-            "Jajka na twardo: w małym garnku zagotuj tyle wody, żeby przykryła jajka (2 szt., 110 g). Łyżką ostrożnie włóż jajka do wrzątku i gotuj 9 minut na średnim ogniu. Odlej wrzątek, zalej zimną wodą na 3 minuty i obierz ze skorupki.",
-            "Jajka pokrój w plastry.",
-            "Chleb (2 kromki, 70 g) posmaruj cienko musztardą (1 łyżka, 15 g), połóż ser (2 plastry, 40 g), na to plastry jajka. Posól i popieprz szczyptą.",
-            "Ogórka kiszonego (1 szt., 65 g) pokrój w plasterki i ułóż na wierzchu. Do boxa zawiń każdą kanapkę w folię.",
+            "Wbij jajka (2 szt., 110 g) do miski, dodaj szczyptę soli i pieprzu i roztrzep widelcem przez 30 sekund.",
+            "Pomidora (1 szt., 120 g) pokrój w plastry. Przygotuj ser (2 plastry, 40 g).",
+            "Patelnię postaw na małym ogniu (1/3 skali), rozpuść masło (5 g) i rozprowadź je po całym dnie.",
+            "Wlej jajka i nie mieszaj. Przykryj pokrywką i smaż 3 minuty, aż wierzch będzie prawie ścięty.",
+            "Na jedną połowę połóż ser i pomidor. Łopatką złóż drugą połowę na wierzch i smaż jeszcze 1 minutę.",
+            "Zsuń omlet na talerz. Zjedz z chlebem (1 kromka, 35 g).",
             "Wszystkie ilości w krokach są już przeliczone na Twoją porcję na dziś — nic nie musisz dzielić."
           ]
         },
@@ -9437,31 +9447,31 @@
           "opis": "",
           "posilek": "Jogurt grecki z orzechami i miodem",
           "posilek_id": "q_jogurt_orzechy",
-          "porcja": 1.0,
+          "porcja": 1.2,
           "makra": {
-            "kcal": 461,
-            "bialko": 33,
-            "tluszcz": 15,
-            "wegle": 47
+            "kcal": 524,
+            "bialko": 40,
+            "tluszcz": 18,
+            "wegle": 49
           },
           "skladniki": [
             {
               "nazwa": "Jogurt grecki 2%",
-              "ile": "300 g",
-              "g": 300,
-              "kcal": 219,
-              "bialko": 29.7,
-              "tluszcz": 6.0,
-              "wegle": 9.3
+              "ile": "360 g",
+              "g": 360,
+              "kcal": 263,
+              "bialko": 35.6,
+              "tluszcz": 7.2,
+              "wegle": 11.2
             },
             {
               "nazwa": "Orzechy / migdały",
-              "ile": "15 g",
-              "g": 15,
-              "kcal": 96,
-              "bialko": 2.9,
-              "tluszcz": 8.5,
-              "wegle": 1.5
+              "ile": "18 g",
+              "g": 18,
+              "kcal": 115,
+              "bialko": 3.4,
+              "tluszcz": 10.3,
+              "wegle": 1.8
             },
             {
               "nazwa": "Miód",
@@ -9486,9 +9496,9 @@
           "czas_min": 3,
           "kroki": [
             "📦 To zrobiłeś w bloku kuchni (dziś o 09:10) — teraz tylko wyjmij pojemnik z lodówki. Przepis niżej, gdybyś robił na świeżo.",
-            "Jogurt (300 g) przełóż do miski lub pojemnika.",
+            "Jogurt (360 g) przełóż do miski lub pojemnika.",
             "Jabłko (1 szt., 170 g) umyj, wytnij gniazdo z pestkami i pokrój w kostkę na wierzch.",
-            "Posyp orzechami (15 g) i polej miodem (1 łyżka, 20 g).",
+            "Posyp orzechami (18 g) i polej miodem (1 łyżka, 20 g).",
             "Wszystkie ilości w krokach są już przeliczone na Twoją porcję na dziś — nic nie musisz dzielić."
           ]
         },
@@ -9703,10 +9713,10 @@
         }
       ],
       "makra": {
-        "kcal": 2401,
-        "bialko": 148,
-        "tluszcz": 86,
-        "wegle": 245
+        "kcal": 2411,
+        "bialko": 152,
+        "tluszcz": 92,
+        "wegle": 232
       },
       "dobitka": 0,
       "dodatek_w": [],
@@ -9766,7 +9776,330 @@
     ],
     "serie": []
   },
-  "zakupy_zamrozone": {},
+  "zakupy_zamrozone": {
+    "kup": [
+      {
+        "klucz": "mielone_wolowe",
+        "nazwa": "Wołowina świeżo mielona (z lady)",
+        "kat": "mieso",
+        "trw": "swieze",
+        "sklep": "Dino",
+        "opakowan": 1,
+        "opak": 400,
+        "jedn": "g",
+        "brakuje": 200.0,
+        "dokupisz": 400,
+        "cena": 18.0,
+        "szafka": false
+      },
+      {
+        "klucz": "maslo",
+        "nazwa": "Masło",
+        "kat": "nabial",
+        "trw": "chlodnia",
+        "sklep": "Dino",
+        "opakowan": 1,
+        "opak": 200,
+        "jedn": "g",
+        "brakuje": 5,
+        "dokupisz": 200,
+        "cena": 8.5,
+        "szafka": false
+      },
+      {
+        "klucz": "napoj_proteinowy",
+        "nazwa": "Napój proteinowy Müllermilch Protein (400 ml)",
+        "kat": "nabial",
+        "trw": "chlodnia",
+        "sklep": "Dino",
+        "opakowan": 1,
+        "opak": 1,
+        "jedn": "butelka",
+        "brakuje": 1,
+        "dokupisz": 1,
+        "cena": 5.29,
+        "szafka": false
+      },
+      {
+        "klucz": "serek_wiejski",
+        "nazwa": "Serek wiejski",
+        "kat": "nabial",
+        "trw": "chlodnia",
+        "sklep": "Dino",
+        "opakowan": 3,
+        "opak": 1,
+        "jedn": "opak",
+        "brakuje": 2.5,
+        "dokupisz": 3,
+        "cena": 10.5,
+        "szafka": false
+      },
+      {
+        "klucz": "skyr_waniliowy",
+        "nazwa": "Skyr waniliowy (kubek 150 g)",
+        "kat": "nabial",
+        "trw": "chlodnia",
+        "sklep": "Dino",
+        "opakowan": 1,
+        "opak": 1,
+        "jedn": "kubek",
+        "brakuje": 1,
+        "dokupisz": 1,
+        "cena": 3.69,
+        "szafka": false
+      },
+      {
+        "klucz": "twarog",
+        "nazwa": "Twaróg półtłusty",
+        "kat": "nabial",
+        "trw": "chlodnia",
+        "sklep": "Dino",
+        "opakowan": 2,
+        "opak": 250,
+        "jedn": "g",
+        "brakuje": 370,
+        "dokupisz": 500,
+        "cena": 6.78,
+        "szafka": false
+      },
+      {
+        "klucz": "banan",
+        "nazwa": "Banan",
+        "kat": "warzywa",
+        "trw": "chlodnia",
+        "sklep": "Dino",
+        "opakowan": 6,
+        "opak": 1,
+        "jedn": "szt",
+        "brakuje": 6,
+        "dokupisz": 6,
+        "cena": 2.52,
+        "szafka": false
+      },
+      {
+        "klucz": "cebula",
+        "nazwa": "Cebula",
+        "kat": "warzywa",
+        "trw": "trwale",
+        "sklep": "Dino",
+        "opakowan": 2,
+        "opak": 1,
+        "jedn": "szt",
+        "brakuje": 2.0,
+        "dokupisz": 2,
+        "cena": 1.2,
+        "szafka": false
+      },
+      {
+        "klucz": "marchew",
+        "nazwa": "Marchew",
+        "kat": "warzywa",
+        "trw": "trwale",
+        "sklep": "Dino",
+        "opakowan": 2,
+        "opak": 1,
+        "jedn": "szt",
+        "brakuje": 2.0,
+        "dokupisz": 2,
+        "cena": 0.32,
+        "szafka": false
+      },
+      {
+        "klucz": "pomidor",
+        "nazwa": "Pomidor",
+        "kat": "warzywa",
+        "trw": "swieze",
+        "sklep": "Dino",
+        "opakowan": 1,
+        "opak": 1,
+        "jedn": "szt",
+        "brakuje": 1.0,
+        "dokupisz": 1,
+        "cena": 0.6,
+        "szafka": false
+      },
+      {
+        "klucz": "grahamka",
+        "nazwa": "Bułka grahamka",
+        "kat": "pieczywo",
+        "trw": "swieze",
+        "sklep": "Dino",
+        "opakowan": 1,
+        "opak": 4,
+        "jedn": "szt",
+        "brakuje": 1.0,
+        "dokupisz": 4,
+        "cena": 3.2,
+        "szafka": false
+      },
+      {
+        "klucz": "makaron",
+        "nazwa": "Makaron (świderki/penne)",
+        "kat": "pieczywo",
+        "trw": "trwale",
+        "sklep": "Dino",
+        "opakowan": 1,
+        "opak": 500,
+        "jedn": "g",
+        "brakuje": 235.0,
+        "dokupisz": 500,
+        "cena": 4.99,
+        "szafka": true
+      },
+      {
+        "klucz": "kakao",
+        "nazwa": "Kakao naturalne (bez cukru)",
+        "kat": "spizarnia",
+        "trw": "trwale",
+        "sklep": "Dino",
+        "opakowan": 1,
+        "opak": 19,
+        "jedn": "lyzka",
+        "brakuje": 1,
+        "dokupisz": 19,
+        "cena": 9.0,
+        "szafka": true
+      },
+      {
+        "klucz": "passata",
+        "nazwa": "Passata pomidorowa",
+        "kat": "spizarnia",
+        "trw": "trwale",
+        "sklep": "Dino",
+        "opakowan": 1,
+        "opak": 500,
+        "jedn": "g",
+        "brakuje": 500.0,
+        "dokupisz": 500,
+        "cena": 5.0,
+        "szafka": false
+      }
+    ],
+    "mam": [
+      {
+        "klucz": "chleb",
+        "nazwa": "Chleb pszenny (zwykły biały)",
+        "potrzeba": 3,
+        "w_domu": 9,
+        "jedn": "kromka"
+      },
+      {
+        "klucz": "cynamon",
+        "nazwa": "Przyprawa do cynamonek / cynamon",
+        "potrzeba": 2,
+        "w_domu": 13,
+        "jedn": "g"
+      },
+      {
+        "klucz": "czosnek",
+        "nazwa": "Czosnek",
+        "potrzeba": 3.0,
+        "w_domu": 7.0,
+        "jedn": "zabek"
+      },
+      {
+        "klucz": "dzem_niskoslodzony",
+        "nazwa": "Dżem (np. malinowy, słoik 200 g)",
+        "potrzeba": 105,
+        "w_domu": 130,
+        "jedn": "g"
+      },
+      {
+        "klucz": "jaja",
+        "nazwa": "Jaja",
+        "potrzeba": 3,
+        "w_domu": 3,
+        "jedn": "szt"
+      },
+      {
+        "klucz": "koncentrat",
+        "nazwa": "Koncentrat pomidorowy",
+        "potrzeba": 60.0,
+        "w_domu": 140.0,
+        "jedn": "g"
+      },
+      {
+        "klucz": "maka",
+        "nazwa": "Mąka pszenna",
+        "potrzeba": 25,
+        "w_domu": 1075,
+        "jedn": "g"
+      },
+      {
+        "klucz": "maslo_orzechowe",
+        "nazwa": "Masło orzechowe 100%",
+        "potrzeba": 3.0,
+        "w_domu": 21.0,
+        "jedn": "lyzka"
+      },
+      {
+        "klucz": "miod",
+        "nazwa": "Miód",
+        "potrzeba": 2.0,
+        "w_domu": 18.0,
+        "jedn": "lyzka"
+      },
+      {
+        "klucz": "mleko",
+        "nazwa": "Mleko 2%",
+        "potrzeba": 103,
+        "w_domu": 955,
+        "jedn": "ml"
+      },
+      {
+        "klucz": "odzywka_wpc",
+        "nazwa": "Odżywka białkowa WPC 80 (czekoladowa) — zapas, kupujesz osobno",
+        "potrzeba": 45,
+        "w_domu": 45,
+        "jedn": "g"
+      },
+      {
+        "klucz": "olej",
+        "nazwa": "Olej rzepakowy",
+        "potrzeba": 15.0,
+        "w_domu": 985.0,
+        "jedn": "ml"
+      },
+      {
+        "klucz": "orzechy",
+        "nazwa": "Orzechy / migdały",
+        "potrzeba": 25,
+        "w_domu": 166,
+        "jedn": "g"
+      },
+      {
+        "klucz": "proszek_do_pieczenia",
+        "nazwa": "Proszek do pieczenia",
+        "potrzeba": 2,
+        "w_domu": 28,
+        "jedn": "g"
+      },
+      {
+        "klucz": "przyprawy",
+        "nazwa": "Przyprawy (sól, pieprz, papryka, oregano, majeranek)",
+        "potrzeba": 5.0,
+        "w_domu": 93.0,
+        "jedn": "porcja"
+      },
+      {
+        "klucz": "ser_zolty",
+        "nazwa": "Ser żółty w plastrach",
+        "potrzeba": 2,
+        "w_domu": 3,
+        "jedn": "plaster"
+      }
+    ],
+    "koszt": 79.59,
+    "sklepy": {
+      "Dino": 79.59
+    },
+    "budzet": 90,
+    "zjesz": 45.22,
+    "zapas": 34.37,
+    "szafka": 13.99,
+    "na_dni": 65.6,
+    "zrobione": true
+  },
   "repo": "jasio-cloud/trenerai",
   "galaz": "main",
   "suple": {
