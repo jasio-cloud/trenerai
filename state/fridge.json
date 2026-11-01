@@ -1,9 +1,5 @@
 {
   "stan": {
-    "mielone_wolowe": {
-      "ilosc": 200.0,
-      "do": "2026-10-31"
-    },
     "mleko": {
       "ilosc": 852,
       "do": "2026-11-08"
@@ -111,6 +107,12 @@
       "co": "cykl:2026-10-30",
       "pozycji": 14,
       "koszt": 79.59
+    },
+    {
+      "data": "2026-11-01",
+      "co": "wyrzucone",
+      "produkt": "mielone_wolowe",
+      "ilosc": 200.0
     }
   ]
 }

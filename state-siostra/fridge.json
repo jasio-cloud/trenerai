@@ -1,9 +1,5 @@
 {
   "stan": {
-    "mielone_wolowe": {
-      "ilosc": 100.0,
-      "do": "2026-10-31"
-    },
     "jaja": {
       "ilosc": 1,
       "do": "2026-11-08"
@@ -39,10 +35,6 @@
     "ogorek_kiszony": {
       "ilosc": 4.0,
       "do": "2027-05-15"
-    },
-    "pomidor": {
-      "ilosc": 0.5,
-      "do": "2026-10-31"
     },
     "chleb": {
       "ilosc": 1,
@@ -121,6 +113,18 @@
       "co": "cykl:2026-10-30",
       "pozycji": 11,
       "koszt": 52.53
+    },
+    {
+      "data": "2026-11-01",
+      "co": "wyrzucone",
+      "produkt": "mielone_wolowe",
+      "ilosc": 100.0
+    },
+    {
+      "data": "2026-11-01",
+      "co": "wyrzucone",
+      "produkt": "pomidor",
+      "ilosc": 0.5
     }
   ]
 }
