@@ -3056,6 +3056,9 @@ def pokaz_trening(d=None):
         # gdy arkusz rozpisuje serie osobno ("2x8-10 + 1x12-15"), nie dopisujemy przed tym liczby serii
         opis = c["powt"] if "×" in str(c["powt"]) else "%s × %s" % (c["serie"], c["powt"])
         print("   %-42s %-18s (przerwa %s)" % (c["nazwa"], opis, c["przerwa"]))
+        print("        dziś: %s" % podpowiedz_ciezaru(c["nazwa"]))
+        if c.get("seria_laczona"):
+            print("        seria łączona z: %s — przerwa dopiero po obu" % c["seria_laczona"])
         if c.get("serie_wstepne"):
             print("        rozgrzewka: %s — dopiero potem serie robocze" % c["serie_wstepne"])
         print("        " + c["wskazowka"])

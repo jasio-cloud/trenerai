@@ -1,5 +1,5 @@
 {
-  "_info": "Cztery treningi w tygodniu, każdy dzień to konkretne partie — żadnego mieszania całego ciała. Dzień zaczyna się od najcięższego ruchu na sztangę (rozgrzewka piramidą 30/50/75%), potem schodzimy do hantli i izolacji, a kończymy seriami łączonymi, żeby zmieścić się w godzinie. Progresja podwójna: najpierw powtórzenia w zakresie, potem ciężar. Sprzęt: klatka, ławka, sztanga, hantle — bez drążka i wyciągu, więc plecy ciągniemy poziomo plus pullover, a tył barku ma osobne ćwiczenie dwa razy w tygodniu. Poprzednie układy leżą w sesje_3dni (całe ciało) i sesje_4dni (góra/dół od trenera).",
+  "_info": "Cztery treningi w tygodniu, każdy dzień to konkretne partie — żadnego mieszania całego ciała. Dzień zaczyna się od najcięższego ruchu na sztangę (rozgrzewka piramidą 30/50/75%), potem schodzimy do hantli i izolacji, a kończymy seriami łączonymi, żeby zmieścić się w godzinie. Progresja podwójna: najpierw powtórzenia w zakresie, potem ciężar. Sprzęt: klatka, ławka, sztanga, hantle — bez drążka i wyciągu. Po pierwszym treningu (2.11.2026) z poniedziałku wypadł pullover i rozpiętki na skosie, bo oba bolały w barku, a francuskie sztangą zamienione na hantle, żeby dało się zejść niżej z ciężarem.",
   "bloki": [
     {
       "id": "nauka",
@@ -92,19 +92,11 @@
           "serie_wstepne": "50% × 5-6"
         },
         {
-          "nazwa": "Rozpiętki hantlami na skosie",
+          "nazwa": "Wyciskanie hantli z dociskiem",
           "serie": 3,
           "powt": "12-15",
           "przerwa": "1,5-2 min",
-          "wskazowka": "Ławka 30 stopni, ręce lekko ugięte, ruch jak przy obejmowaniu drzewa. Opuszczasz do poziomu barków, nie niżej — dalej to już tylko bark.",
-          "serie_wstepne": "50% × 5-6"
-        },
-        {
-          "nazwa": "Pullover z hantlem",
-          "serie": 3,
-          "powt": "12-15",
-          "przerwa": "1,5-2 min",
-          "wskazowka": "Leżysz w poprzek ławki, biodra niżej od klatki, hantel oburącz nad klatką. Opuszczasz za głowę na lekko ugiętych łokciach, aż poczujesz rozciąganie pod pachami, i wracasz. Bez drążka to jedyny ruch, który ciągnie plecy z góry.",
+          "wskazowka": "Ławka płasko, dwa hantle ściśnięte razem nad klatką, dłonie zwrócone do siebie. Wyciskasz w górę i wracasz do klatki, cały czas dociskając hantle jeden do drugiego — ten docisk robi całą robotę na klatce. Bark nie wchodzi w rozciąganie, które bolało przy rozpiętkach.",
           "serie_wstepne": "50% × 5-6"
         },
         {
@@ -116,11 +108,11 @@
           "serie_wstepne": "50% × 5-6"
         },
         {
-          "nazwa": "Wyciskanie francuskie sztangą",
+          "nazwa": "Wyciskanie francuskie hantli",
           "serie": 3,
           "powt": "10-12",
           "przerwa": "1,5-2 min",
-          "wskazowka": "Leżysz na ławce, sztanga EZ nad klatką, łokcie w miejscu. Zginasz ramiona, aż gryf znajdzie się nad czołem, i prostujesz.",
+          "wskazowka": "Leżąc, dwa hantle nad klatką, łokcie w miejscu i skierowane do sufitu. Zginasz ramiona, aż hantle znajdą się przy uszach, i prostujesz. Hantle zamiast sztangi dlatego, że możesz zejść do 2 × 4 kg — przy sztandze mniej niż gryf z najmniejszymi talerzami nie założysz.",
           "serie_wstepne": "50% × 5-6",
           "seria_laczona": "Prostowanie ramion z hantlem nad głową"
         },
@@ -131,7 +123,7 @@
           "przerwa": "1,5-2 min",
           "wskazowka": "Siedząc, hantel oburącz nad głową, opuszczasz za kark. Łokcie blisko głowy, ruszają tylko przedramiona.",
           "serie_wstepne": "50% × 5-6",
-          "seria_laczona": "Wyciskanie francuskie sztangą"
+          "seria_laczona": "Wyciskanie francuskie hantli"
         }
       ]
     },
@@ -322,14 +314,14 @@
           "przerwa": "1,5 min",
           "wskazowka": "Łokcie przy tułowiu, bez bujania tułowiem. Opuszczasz wolniej, niż unosisz.",
           "serie_wstepne": "50% × 5-6",
-          "seria_laczona": "Wyciskanie francuskie hantli"
+          "seria_laczona": "Prostowanie ramion w opadzie hantlem"
         },
         {
-          "nazwa": "Wyciskanie francuskie hantli",
+          "nazwa": "Prostowanie ramion w opadzie hantlem",
           "serie": 3,
           "powt": "12-15",
           "przerwa": "1,5 min",
-          "wskazowka": "Leżysz na ławce, hantle nad klatką, łokcie w miejscu. Zginasz ramiona, aż hantle znajdą się przy uszach, i prostujesz. Rusza się tylko przedramię.",
+          "wskazowka": "Tułów w opadzie, ramię przyklejone do boku, łokieć nieruchomy — prostujesz samo przedramię do tyłu i na górze trzymasz pół sekundy. Lekki hantel, tu nie ma czego dowozić.",
           "serie_wstepne": "50% × 5-6",
           "seria_laczona": "Uginanie ramion z hantlami"
         },
@@ -479,10 +471,12 @@
   "zasady": [
     "Przerwy: ciężkie sztangowe 3-4 min, pozostałe wielostawowe 2-3 min, izolacja 1,5-2 min, brzuch i łydki 1 min.",
     "Rozgrzewka: dwa pierwsze ćwiczenia dnia piramidą 30% × 8-12, 50% × 8, 75% × 2-3. Reszta jedna seria 50% × 5-6.",
+    "Ciężar dobierasz pod zakres, nie pod maksa: pierwsza seria ma wyjść w zakresie z zapasem 1-2 powtórzeń, a ostatnia nie może spaść pod dolną granicę. Jak spada (4 powtórzenia przy 6-8) — zdejmij talerze. Pierwszy raz w nowym ćwiczeniu to dobór ciężaru, nie test siły.",
     "Ostatnie 1-2 powtórzenia mają być ciężkie, ale technika się nie psuje. Jak się psuje — ciężar za duży.",
     "Progresja podwójna: najpierw dobijasz do góry zakresu we wszystkich seriach, dopiero potem dokładasz talerze.",
     "Seria łączona (dwa ćwiczenia na zmianę, przerwa po obu) dotyczy tylko końca treningu — nigdy ciężkich bojów.",
-    "Dni wolne: wtorek, czwartek, sobota — rower zone 2 i spacer. To nie jest trening, to regeneracja."
+    "Dni wolne: wtorek, czwartek, sobota — rower zone 2 i spacer. To nie jest trening, to regeneracja.",
+    "Ćwiczenie, które boli w stawie (bark, łokieć), a nie męczy mięśnia, wypada z planu tego samego dnia. Bólu nie przeczekujemy — zamieniamy ruch na taki, który pracuje bez rozciągania stawu."
   ],
   "wolne": {
     "nazwa": "Dzień bez sztangi",

@@ -85,7 +85,7 @@
     "krok": 2.5
   },
   "Prostowanie ramion z hantlem nad głową": {
-    "kg": 10,
+    "kg": 7.5,
     "cel": 12.5,
     "jedn": "talerze na hantel (oburącz)",
     "krok": 2.5
@@ -138,8 +138,8 @@
     "krok": 5
   },
   "Wyciskanie wąskim chwytem": {
-    "kg": 25,
-    "cel": 32.5,
+    "kg": 35,
+    "cel": 45,
     "jedn": "same talerze (bez gryfa)",
     "krok": 2.5
   },
@@ -162,14 +162,14 @@
     "krok": 2.5
   },
   "Wyciskanie sztangi leżąc": {
-    "kg": 35,
-    "cel": 45,
+    "kg": 60,
+    "cel": 70,
     "jedn": "same talerze (bez gryfa)",
     "krok": 2.5
   },
   "Wyciskanie sztangi na skosie": {
-    "kg": 17.5,
-    "cel": 22.5,
+    "kg": 35,
+    "cel": 45,
     "jedn": "same talerze (bez gryfa)",
     "krok": 2.5
   },
@@ -228,10 +228,10 @@
     "krok": 2.5
   },
   "Wyciskanie francuskie hantli": {
-    "kg": 7.5,
-    "cel": 10,
+    "kg": 5,
+    "cel": 7.5,
     "jedn": "talerze na hantel",
-    "krok": 2.5
+    "krok": 1.25
   },
   "Wyciskanie francuskie sztangą": {
     "kg": 10,
@@ -278,5 +278,17 @@
     "kg": 0,
     "jedn": "masa ciała",
     "krok": 0
+  },
+  "Wyciskanie hantli z dociskiem": {
+    "kg": 8,
+    "cel": 12,
+    "jedn": "talerze na hantel",
+    "krok": 2.5
+  },
+  "Prostowanie ramion w opadzie hantlem": {
+    "kg": 4,
+    "cel": 6,
+    "jedn": "talerze na hantel",
+    "krok": 1.25
   }
 }
