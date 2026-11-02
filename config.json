@@ -47,9 +47,10 @@
     "dni_treningowe": [
       0,
       2,
-      4
+      4,
+      6
     ],
-    "komentarz": "0=poniedzialek … 6=niedziela. Trzy treningi: Pon (cale cialo A), Sr (B), Pt (C). Wt/Czw/Sob/Nd wolne — rower zone 2 i spacer. Poprzedni uklad 4 dni (Gora/Dol) lezy w data/program.json w sesje_4dni."
+    "komentarz": "0=poniedzialek … 6=niedziela. Cztery treningi: Pon klatka+triceps, Sr plecy+biceps, Pt nogi+brzuch, Nd barki+ramiona. Wt/Czw/Sob wolne — rower zone 2 i spacer."
   },
   "gotowanie": {
     "bez_garnka": true,
@@ -116,7 +117,7 @@
           0.3
         ],
         "porcje": [
-          0.8,
+          0.7,
           1.3
         ],
         "kroki": 8000,
@@ -138,7 +139,7 @@
           -0.3
         ],
         "porcje": [
-          0.8,
+          0.7,
           1.3
         ],
         "kroki": 8000,
@@ -161,8 +162,8 @@
           0.3
         ],
         "porcje": [
-          1.0,
-          1.6
+          0.7,
+          1.3
         ],
         "kroki": 8000,
         "cel": "Lekka nadwyżka pod barki, plecy i klatkę górną — także na święta. Waga rośnie powoli."
@@ -205,7 +206,7 @@
           0.3
         ],
         "porcje": [
-          0.8,
+          0.7,
           1.3
         ],
         "kroki": 8000,
@@ -292,9 +293,9 @@
     "komentarz": "Schemat trenera: pierwszy posilek 30b/20t/40w, pozostale trzy 30b/10t/80w. Liczone po trenersku (bez warzyw, sosow zero i bialka roslinnego) — w apce te same posilki wychodza ok. 2400 kcal i 160 g bialka."
   },
   "cykl": {
-    "start": "2026-10-27",
+    "start": "2026-11-02",
     "dni": 3,
-    "komentarz": "Restart 27.10.2026. Zakupy i menu co 3 dni od tej daty, gotowanie codzienne do 20 min."
+    "komentarz": "Restart 02.11.2026. Zakupy i menu co 3 dni od tej daty, gotowanie codzienne do 20 min."
   },
   "budzet": {
     "dziennie_zl": 30,

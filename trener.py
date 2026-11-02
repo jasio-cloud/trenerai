@@ -543,6 +543,10 @@ def produkty_posilku(pid, porcja=1.0):
         if abs(porcja - 1.0) < 1e-9:
             return sklad
         return [(k, q if k == "przyprawy" else _zaokraglij(k, q * porcja)) for k, q in sklad]
+    if pid not in BAZA_BY_ID:
+        # danie wypadlo z bazy (np. przestalo Ci smakowac), a siedzi jeszcze w archiwalnym
+        # planie albo w podmianach — panel ma to przezyc, a nie sypac wyjatkiem
+        return []
     b = BAZA_BY_ID[pid]
     # obiad z garnka zawsze 1/3 garnka — gotujesz jeden garnek, nie trzy rozne porcje
     return [(k, q / b["porcje"]) for k, q in b["produkty"]]
@@ -663,7 +667,9 @@ def dopasuj_porcje(dzien, cel=None, dodatkowe=None, zamrozone=None, porcje=PORCJ
 def nazwa_posilku(pid):
     if pid in QUICK_BY_ID:
         return QUICK_BY_ID[pid]["nazwa"]
-    return BAZA_BY_ID[pid]["nazwa"]
+    if pid in BAZA_BY_ID:
+        return BAZA_BY_ID[pid]["nazwa"]
+    return "(danie usunięte z bazy)"
 
 
 def makra_dnia(dzien):
@@ -2294,6 +2300,10 @@ def agenda(d=None):
                     kiedy = "dziś" if bl[0] == d else "wczoraj"
                     e["kroki"].insert(0, "📦 To zrobiłeś w bloku kuchni (%s o %s) — teraz tylko wyjmij pojemnik z lodówki. "
                                          "Przepis niżej, gdybyś robił na świeżo." % (kiedy, bl[1]))
+            elif pid not in BAZA_BY_ID:
+                # danie wyrzucone z bazy, a wisi jeszcze w archiwalnym planie
+                e["jak"], e["czas_min"], e["kroki"] = "brak", 0, [
+                    "To danie zostało usunięte z bazy — plan na ten dzień jest już nieaktualny."]
             else:
                 b = BAZA_BY_ID[pid]
                 if typ_dnia(d) == DZIEN_GOTOWANIA:

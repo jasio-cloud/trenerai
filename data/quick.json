@@ -496,49 +496,6 @@
       ]
     },
     {
-      "id": "q_kanapki_ser",
-      "nazwa": "Kanapki z serem, musztardą i kiszonym ogórkiem",
-      "sloty": [
-        "sniadanie",
-        "drugi",
-        "kolacja"
-      ],
-      "box": true,
-      "czas_min": 4,
-      "produkty": [
-        [
-          "chleb",
-          2
-        ],
-        [
-          "ser_zolty",
-          3
-        ],
-        [
-          "musztarda",
-          1
-        ],
-        [
-          "ogorek_kiszony",
-          2
-        ],
-        [
-          "maslo",
-          6
-        ],
-        [
-          "pomidor",
-          1
-        ]
-      ],
-      "kroki": [
-        "Kromki chleba ({chleb}) posmaruj cienko masłem ({maslo}), potem musztardą ({musztarda}).",
-        "Ser ({ser_zolty}) rozłóż po równo na kromkach.",
-        "Ogórki kiszone ({ogorek_kiszony}) i pomidora ({pomidor}) pokrój w plasterki i ułóż na serze.",
-        "Do boxa zawiń kanapki w folię."
-      ]
-    },
-    {
       "id": "q_jajka_kukurydza",
       "nazwa": "Box: sałatka jajeczna z kukurydzą",
       "sloty": [
@@ -1847,6 +1804,87 @@
         "Podaj z ketchupem ({ketchup})."
       ],
       "zrodlo": "trener — Posiłek 2/3/4, wariant z frytkami"
+    },
+    {
+      "id": "q_tosty_sriracha",
+      "nazwa": "Tosty zapiekane z szynką, serem i sriracha",
+      "sloty": [
+        "sniadanie",
+        "drugi",
+        "kolacja"
+      ],
+      "box": false,
+      "czas_min": 8,
+      "produkty": [
+        [
+          "chleb_tostowy",
+          4
+        ],
+        [
+          "szynka",
+          80
+        ],
+        [
+          "ser_zolty",
+          2
+        ],
+        [
+          "majonez_sriracha",
+          15
+        ],
+        [
+          "pomidor",
+          1
+        ]
+      ],
+      "kroki": [
+        "Rozgrzej patelnię na średnim ogniu (bez tłuszczu) albo opiekacz.",
+        "Na dwóch kromkach ({chleb_tostowy}) rozłóż szynkę ({szynka}) i ser ({ser_zolty}), przykryj pozostałymi kromkami.",
+        "Opiekaj po 3 minuty z każdej strony — ser ma się rozpuścić, chleb zrobić chrupiący.",
+        "Przekrój na pół, polej sosem sriracha ({majonez_sriracha}). Pomidor ({pomidor}) w plastrach obok."
+      ]
+    },
+    {
+      "id": "q_kanapki_poledwica",
+      "nazwa": "Kanapki z polędwicą, serem i ogórkiem",
+      "sloty": [
+        "sniadanie",
+        "drugi",
+        "kolacja"
+      ],
+      "box": true,
+      "czas_min": 5,
+      "produkty": [
+        [
+          "chleb",
+          3
+        ],
+        [
+          "poledwica",
+          60
+        ],
+        [
+          "ser_zolty",
+          2
+        ],
+        [
+          "maslo",
+          10
+        ],
+        [
+          "ogorek",
+          0.3
+        ],
+        [
+          "pomidor",
+          1
+        ]
+      ],
+      "kroki": [
+        "Kromki ({chleb}) posmaruj cienko masłem ({maslo}).",
+        "Na każdą kładziesz polędwicę ({poledwica}) i ser ({ser_zolty}).",
+        "Ogórek ({ogorek}) i pomidor ({pomidor}) w plastry — na wierzch albo obok do pojemnika."
+      ]
     }
   ]
 }

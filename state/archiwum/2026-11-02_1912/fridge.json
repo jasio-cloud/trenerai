@@ -1,0 +1,156 @@
+{
+  "stan": {
+    "mleko": {
+      "ilosc": 697,
+      "do": "2026-11-08"
+    },
+    "ser_zolty": {
+      "ilosc": 1,
+      "do": "2026-11-08"
+    },
+    "twarog": {
+      "ilosc": 130,
+      "do": "2026-11-08"
+    },
+    "czosnek": {
+      "ilosc": 1.0,
+      "do": "2027-05-15"
+    },
+    "ogorek_kiszony": {
+      "ilosc": 3.0,
+      "do": "2027-05-15"
+    },
+    "chleb": {
+      "ilosc": 14,
+      "do": "2026-11-08"
+    },
+    "makaron": {
+      "ilosc": 450.0,
+      "do": "2027-05-15"
+    },
+    "dzem_niskoslodzony": {
+      "ilosc": 185,
+      "do": "2027-05-15"
+    },
+    "koncentrat": {
+      "ilosc": 20.0,
+      "do": "2027-05-15"
+    },
+    "maslo_orzechowe": {
+      "ilosc": 15.75,
+      "do": "2027-05-15"
+    },
+    "miod": {
+      "ilosc": 14.0,
+      "do": "2027-05-15"
+    },
+    "musztarda": {
+      "ilosc": 9,
+      "do": "2027-05-15"
+    },
+    "maka": {
+      "ilosc": 1010,
+      "do": "2027-05-15"
+    },
+    "olej": {
+      "ilosc": 955.0,
+      "do": "2027-05-15"
+    },
+    "orzechy": {
+      "ilosc": 131,
+      "do": "2027-05-15"
+    },
+    "proszek_do_pieczenia": {
+      "ilosc": 26,
+      "do": "2027-05-15"
+    },
+    "cynamon": {
+      "ilosc": 11,
+      "do": "2027-05-15"
+    },
+    "przyprawy": {
+      "ilosc": 81.0,
+      "do": "2027-05-15"
+    },
+    "maslo": {
+      "ilosc": 190,
+      "do": "2026-11-11"
+    },
+    "serek_wiejski": {
+      "ilosc": 0.5,
+      "do": "2026-11-11"
+    },
+    "grahamka": {
+      "ilosc": 3.0,
+      "do": "2026-11-03"
+    },
+    "kakao": {
+      "ilosc": 17.0,
+      "do": "2027-05-18"
+    },
+    "poledwica": {
+      "ilosc": 85,
+      "do": "2026-11-14"
+    },
+    "mielone_wolowe": {
+      "ilosc": 300.0,
+      "do": "2026-11-06"
+    },
+    "jogurt_grecki": {
+      "ilosc": 320,
+      "do": "2026-11-14"
+    },
+    "tortilla": {
+      "ilosc": 5,
+      "do": "2027-05-21"
+    },
+    "krem_bez_cukru": {
+      "ilosc": 275,
+      "do": "2027-05-21"
+    },
+    "kukurydza": {
+      "ilosc": 300,
+      "do": "2027-05-21"
+    },
+    "majonez_sriracha": {
+      "ilosc": 238,
+      "do": "2027-05-21"
+    },
+    "slodzik": {
+      "ilosc": 299.0,
+      "do": "2027-05-21"
+    }
+  },
+  "log": [
+    {
+      "data": "2026-10-27",
+      "co": "pusta kuchnia — start od zera",
+      "produkt": "-",
+      "ilosc": 0
+    },
+    {
+      "data": "2026-10-27",
+      "co": "cykl:2026-10-27",
+      "pozycji": 29,
+      "koszt": 189.48
+    },
+    {
+      "data": "2026-10-30",
+      "co": "cykl:2026-10-30",
+      "pozycji": 14,
+      "koszt": 79.59
+    },
+    {
+      "data": "2026-11-01",
+      "co": "wyrzucone",
+      "produkt": "mielone_wolowe",
+      "ilosc": 200.0
+    },
+    {
+      "data": "2026-11-02",
+      "co": "cykl:2026-11-02",
+      "pozycji": 21,
+      "koszt": 147.66
+    }
+  ]
+}

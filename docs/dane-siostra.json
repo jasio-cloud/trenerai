@@ -1,5 +1,5 @@
 {
-  "wygenerowano": "2026-11-02T10:38:29+01:00",
+  "wygenerowano": "2026-11-02T19:15:33+01:00",
   "dzis": "2026-11-02",
   "typ_dzis": 0,
   "typy": {
@@ -1591,49 +1591,6 @@
         "Na zmianę: wszystko do zakręcanego pojemnika, banana weź w całości i pokrój przy jedzeniu."
       ]
     },
-    "q_kanapki_ser": {
-      "id": "q_kanapki_ser",
-      "nazwa": "Kanapki z serem, musztardą i kiszonym ogórkiem",
-      "sloty": [
-        "sniadanie",
-        "drugi",
-        "kolacja"
-      ],
-      "box": true,
-      "czas_min": 4,
-      "produkty": [
-        [
-          "chleb",
-          2
-        ],
-        [
-          "ser_zolty",
-          3
-        ],
-        [
-          "musztarda",
-          1
-        ],
-        [
-          "ogorek_kiszony",
-          2
-        ],
-        [
-          "maslo",
-          6
-        ],
-        [
-          "pomidor",
-          1
-        ]
-      ],
-      "kroki": [
-        "Kromki chleba ({chleb}) posmaruj cienko masłem ({maslo}), potem musztardą ({musztarda}).",
-        "Ser ({ser_zolty}) rozłóż po równo na kromkach.",
-        "Ogórki kiszone ({ogorek_kiszony}) i pomidora ({pomidor}) pokrój w plasterki i ułóż na serze.",
-        "Do boxa zawiń kanapki w folię."
-      ]
-    },
     "q_jajka_kukurydza": {
       "id": "q_jajka_kukurydza",
       "nazwa": "Box: sałatka jajeczna z kukurydzą",
@@ -2943,6 +2900,87 @@
         "Podaj z ketchupem ({ketchup})."
       ],
       "zrodlo": "trener — Posiłek 2/3/4, wariant z frytkami"
+    },
+    "q_tosty_sriracha": {
+      "id": "q_tosty_sriracha",
+      "nazwa": "Tosty zapiekane z szynką, serem i sriracha",
+      "sloty": [
+        "sniadanie",
+        "drugi",
+        "kolacja"
+      ],
+      "box": false,
+      "czas_min": 8,
+      "produkty": [
+        [
+          "chleb_tostowy",
+          4
+        ],
+        [
+          "szynka",
+          80
+        ],
+        [
+          "ser_zolty",
+          2
+        ],
+        [
+          "majonez_sriracha",
+          15
+        ],
+        [
+          "pomidor",
+          1
+        ]
+      ],
+      "kroki": [
+        "Rozgrzej patelnię na średnim ogniu (bez tłuszczu) albo opiekacz.",
+        "Na dwóch kromkach ({chleb_tostowy}) rozłóż szynkę ({szynka}) i ser ({ser_zolty}), przykryj pozostałymi kromkami.",
+        "Opiekaj po 3 minuty z każdej strony — ser ma się rozpuścić, chleb zrobić chrupiący.",
+        "Przekrój na pół, polej sosem sriracha ({majonez_sriracha}). Pomidor ({pomidor}) w plastrach obok."
+      ]
+    },
+    "q_kanapki_poledwica": {
+      "id": "q_kanapki_poledwica",
+      "nazwa": "Kanapki z polędwicą, serem i ogórkiem",
+      "sloty": [
+        "sniadanie",
+        "drugi",
+        "kolacja"
+      ],
+      "box": true,
+      "czas_min": 5,
+      "produkty": [
+        [
+          "chleb",
+          3
+        ],
+        [
+          "poledwica",
+          60
+        ],
+        [
+          "ser_zolty",
+          2
+        ],
+        [
+          "maslo",
+          10
+        ],
+        [
+          "ogorek",
+          0.3
+        ],
+        [
+          "pomidor",
+          1
+        ]
+      ],
+      "kroki": [
+        "Kromki ({chleb}) posmaruj cienko masłem ({maslo}).",
+        "Na każdą kładziesz polędwicę ({poledwica}) i ser ({ser_zolty}).",
+        "Ogórek ({ogorek}) i pomidor ({pomidor}) w plastry — na wierzch albo obok do pojemnika."
+      ]
     }
   },
   "produkty": {
@@ -6410,12 +6448,12 @@
           "slot": "sniadanie",
           "posilek": "Jajecznica z pieczywem i pomidorem",
           "posilek_id": "q_jajecznica",
-          "porcja": 0.5,
+          "porcja": 0.8,
           "makra": {
-            "kcal": 278,
-            "bialko": 17,
-            "tluszcz": 14,
-            "wegle": 19
+            "kcal": 391,
+            "bialko": 21,
+            "tluszcz": 17,
+            "wegle": 37
           },
           "skladniki": [
             {
@@ -6429,29 +6467,29 @@
             },
             {
               "nazwa": "Chleb pszenny (zwykły biały)",
-              "ile": "1 kromka (35 g)",
-              "g": 35,
-              "kcal": 88,
-              "bialko": 2.8,
-              "tluszcz": 1.0,
-              "wegle": 16.4
+              "ile": "2 kromki (70 g)",
+              "g": 70,
+              "kcal": 175,
+              "bialko": 5.6,
+              "tluszcz": 2.1,
+              "wegle": 32.9
             },
             {
               "nazwa": "Pomidor",
-              "ile": "60 g",
-              "g": 60,
-              "kcal": 11,
-              "bialko": 0.5,
-              "tluszcz": 0.1,
-              "wegle": 1.6
+              "ile": "1 szt. (120 g)",
+              "g": 120,
+              "kcal": 22,
+              "bialko": 1.1,
+              "tluszcz": 0.2,
+              "wegle": 3.2
             },
             {
               "nazwa": "Masło",
-              "ile": "3 g",
-              "g": 3,
-              "kcal": 22,
+              "ile": "5 g",
+              "g": 5,
+              "kcal": 37,
               "bialko": 0.0,
-              "tluszcz": 2.5,
+              "tluszcz": 4.1,
               "wegle": 0.0
             }
           ],
@@ -6459,10 +6497,10 @@
           "czas_min": 8,
           "kroki": [
             "Wbij jajka (2 szt., 110 g) do kubka lub miski: stuknij jajkiem o brzeg i rozchyl skorupkę kciukami. Dodaj szczyptę soli i pieprzu i roztrzep widelcem przez ok. 30 sekund.",
-            "Patelnię postaw na średnim ogniu, włóż masło (3 g) i poczekaj ok. minuty, aż się rozpuści i lekko spieni.",
+            "Patelnię postaw na średnim ogniu, włóż masło (5 g) i poczekaj ok. minuty, aż się rozpuści i lekko spieni.",
             "Wlej jajka. Odczekaj 20 sekund, potem łopatką zgarniaj ścięte jajka od brzegów do środka co kilka sekund.",
             "Po 2–3 minutach, gdy jajka są ścięte, ale jeszcze lekko błyszczące, zdejmij patelnię z ognia i przełóż jajecznicę na talerz.",
-            "Pomidora (60 g) umyj i pokrój w plastry. Zjedz z chlebem (1 kromka, 35 g).",
+            "Pomidora (1 szt., 120 g) umyj i pokrój w plastry. Zjedz z chlebem (2 kromki, 70 g).",
             "Wszystkie ilości w krokach są już przeliczone na Twoją porcję na dziś — nic nie musisz dzielić."
           ]
         },
@@ -6473,13 +6511,13 @@
           "ping": false,
           "opis": "Zjedz zanim zglodniejesz.",
           "slot": "drugi",
-          "posilek": "Kanapki z serem, musztardą i kiszonym ogórkiem",
-          "posilek_id": "q_kanapki_ser",
-          "porcja": 0.8,
+          "posilek": "Kanapki z polędwicą, serem i ogórkiem",
+          "posilek_id": "q_kanapki_poledwica",
+          "porcja": 0.6,
           "makra": {
-            "kcal": 402,
-            "bialko": 18,
-            "tluszcz": 18,
+            "kcal": 355,
+            "bialko": 19,
+            "tluszcz": 13,
             "wegle": 40
           },
           "skladniki": [
@@ -6493,59 +6531,58 @@
               "wegle": 32.9
             },
             {
+              "nazwa": "Polędwica sopocka (wędlina)",
+              "ile": "35 g",
+              "g": 35,
+              "kcal": 34,
+              "bialko": 6.3,
+              "tluszcz": 0.6,
+              "wegle": 0.8
+            },
+            {
               "nazwa": "Ser żółty w plastrach",
-              "ile": "2 plastry (40 g)",
-              "g": 40,
-              "kcal": 140,
-              "bialko": 10.2,
-              "tluszcz": 10.8,
-              "wegle": 0.2
-            },
-            {
-              "nazwa": "Musztarda",
-              "ile": "1 łyżka (15 g)",
-              "g": 15,
-              "kcal": 16,
-              "bialko": 0.8,
-              "tluszcz": 0.9,
-              "wegle": 1.2
-            },
-            {
-              "nazwa": "Ogórek kiszony",
-              "ile": "100 g",
-              "g": 98,
-              "kcal": 12,
-              "bialko": 0.5,
-              "tluszcz": 0.2,
-              "wegle": 1.9
+              "ile": "1 plaster (20 g)",
+              "g": 20,
+              "kcal": 70,
+              "bialko": 5.1,
+              "tluszcz": 5.4,
+              "wegle": 0.1
             },
             {
               "nazwa": "Masło",
-              "ile": "5 g",
-              "g": 5,
-              "kcal": 37,
+              "ile": "6 g",
+              "g": 6,
+              "kcal": 45,
               "bialko": 0.0,
-              "tluszcz": 4.1,
+              "tluszcz": 5.0,
               "wegle": 0.0
             },
             {
-              "nazwa": "Pomidor",
-              "ile": "1 szt. (120 g)",
-              "g": 120,
-              "kcal": 22,
-              "bialko": 1.1,
+              "nazwa": "Ogórek długi",
+              "ile": "150 g",
+              "g": 150,
+              "kcal": 21,
+              "bialko": 1.0,
               "tluszcz": 0.2,
-              "wegle": 3.2
+              "wegle": 4.3
+            },
+            {
+              "nazwa": "Pomidor",
+              "ile": "60 g",
+              "g": 60,
+              "kcal": 11,
+              "bialko": 0.5,
+              "tluszcz": 0.1,
+              "wegle": 1.6
             }
           ],
           "jak": "przepis",
-          "czas_min": 4,
+          "czas_min": 5,
           "kroki": [
             "📦 To zrobiłeś w bloku kuchni (dziś o 19:45) — teraz tylko wyjmij pojemnik z lodówki. Przepis niżej, gdybyś robił na świeżo.",
-            "Kromki chleba (2 kromki, 70 g) posmaruj cienko masłem (5 g), potem musztardą (1 łyżka, 15 g).",
-            "Ser (2 plastry, 40 g) rozłóż po równo na kromkach.",
-            "Ogórki kiszone (100 g) i pomidora (1 szt., 120 g) pokrój w plasterki i ułóż na serze.",
-            "Do boxa zawiń kanapki w folię.",
+            "Kromki (2 kromki, 70 g) posmaruj cienko masłem (6 g).",
+            "Na każdą kładziesz polędwicę (35 g) i ser (1 plaster, 20 g).",
+            "Ogórek (150 g) i pomidor (60 g) w plastry — na wierzch albo obok do pojemnika.",
             "Wszystkie ilości w krokach są już przeliczone na Twoją porcję na dziś — nic nie musisz dzielić."
           ]
         },
@@ -6673,22 +6710,22 @@
           "slot": "kolacja",
           "posilek": "Deser: sernik na zimno w kubku (bez pieczenia)",
           "posilek_id": "d_sernik",
-          "porcja": 1.1,
+          "porcja": 0.9,
           "makra": {
-            "kcal": 605,
-            "bialko": 61,
-            "tluszcz": 17,
-            "wegle": 51
+            "kcal": 539,
+            "bialko": 53,
+            "tluszcz": 14,
+            "wegle": 49
           },
           "skladniki": [
             {
               "nazwa": "Twaróg półtłusty",
-              "ile": "220 g",
-              "g": 220,
-              "kcal": 293,
-              "bialko": 41.1,
-              "tluszcz": 10.3,
-              "wegle": 8.1
+              "ile": "180 g",
+              "g": 180,
+              "kcal": 239,
+              "bialko": 33.7,
+              "tluszcz": 8.5,
+              "wegle": 6.7
             },
             {
               "nazwa": "Skyr naturalny (kubek 150 g)",
@@ -6719,22 +6756,22 @@
             },
             {
               "nazwa": "Orzechy / migdały",
-              "ile": "11 g",
-              "g": 11,
-              "kcal": 70,
-              "bialko": 2.1,
-              "tluszcz": 6.3,
-              "wegle": 1.1
+              "ile": "9 g",
+              "g": 9,
+              "kcal": 58,
+              "bialko": 1.7,
+              "tluszcz": 5.1,
+              "wegle": 0.9
             }
           ],
           "jak": "przepis",
           "czas_min": 6,
           "kroki": [
             "📦 To zrobiłeś w bloku kuchni (dziś o 19:45) — teraz tylko wyjmij pojemnik z lodówki. Przepis niżej, gdybyś robił na świeżo.",
-            "Twaróg (220 g) i skyr (1 kubek, 150 g) przełóż do miski i rozgniataj widelcem ok. 2 minuty, aż masa będzie gładka.",
+            "Twaróg (180 g) i skyr (1 kubek, 150 g) przełóż do miski i rozgniataj widelcem ok. 2 minuty, aż masa będzie gładka.",
             "Dodaj miód (1 łyżka, 20 g) i wymieszaj.",
             "Jabłko (1 szt., 170 g) umyj i zetrzyj na tarce na grubych oczkach (bez gniazda z pestkami) na dno kubka lub pojemnika.",
-            "Na jabłko nałóż masę serową i posyp pokruszonymi orzechami (11 g).",
+            "Na jabłko nałóż masę serową i posyp pokruszonymi orzechami (9 g).",
             "Wstaw na co najmniej godzinę do lodówki.",
             "Wszystkie ilości w krokach są już przeliczone na Twoją porcję na dziś — nic nie musisz dzielić."
           ]
@@ -6744,10 +6781,10 @@
           "tytul": "KUCHNIA — 20 minut",
           "ikona": "🍳",
           "ping": false,
-          "opis": "Przygotujesz: garnek: Makaron bolognese na wołowinie, Jajecznica z pieczywem i pomidorem, Kanapki z serem, musztardą i kiszonym ogórkiem, Deser: sernik na zimno w kubku (bez pieczenia). Potem do jutra tylko sięgasz do lodówki.",
+          "opis": "Przygotujesz: garnek: Makaron bolognese na wołowinie, Jajecznica z pieczywem i pomidorem, Kanapki z polędwicą, serem i ogórkiem, Deser: sernik na zimno w kubku (bez pieczenia). Potem do jutra tylko sięgasz do lodówki.",
           "akcja": "kuchnia",
           "kroki": [
-            "Wyjmij wszystko na blat, zanim zaczniesz: cebula 140 g, chleb pszenny 3 kromki (105 g), czosnek 10 g, jabłko 1 szt. (170 g), jaja 2 szt. (110 g), koncentrat pomidorowy 42 g, makaron 170 g, marchew 110 g, masło 8 g, wołowina świeżo mielona 350 g, miód 1 łyżka (20 g), musztarda 1 łyżka (15 g), ogórek kiszony 100 g, olej rzepakowy 10 ml, orzechy / migdały 11 g, passata pomidorowa 350 g, pomidor 180 g, przyprawy 1 porcja (2 g), ser żółty w plastrach 2 plastry (40 g), skyr naturalny 1 kubek (150 g), twaróg półtłusty 220 g.",
+            "Wyjmij wszystko na blat, zanim zaczniesz: cebula 140 g, chleb pszenny 4 kromki (140 g), czosnek 10 g, jabłko 1 szt. (170 g), jaja 2 szt. (110 g), koncentrat pomidorowy 42 g, makaron 170 g, marchew 110 g, masło 11 g, wołowina świeżo mielona 350 g, miód 1 łyżka (20 g), ogórek długi 150 g, olej rzepakowy 10 ml, orzechy / migdały 9 g, passata pomidorowa 350 g, polędwica sopocka 35 g, pomidor 180 g, przyprawy 1 porcja (2 g), ser żółty w plastrach 1 plaster (20 g), skyr naturalny 1 kubek (150 g), twaróg półtłusty 180 g.",
             "Przygotuj 2 pojemniki i opisz je karteczką: dziś 11:30 — drugi posilek; dziś 19:00 — kolacja.",
             "▸ Garnek: Makaron bolognese na wołowinie — zaczynasz od niego, bo najdłużej się gotuje.",
             "Zanim zaczniesz: postaw na wadze kuchennej deskę do krojenia, na niej pusty duży garnek, i wpisz tę wagę w zakładce Gotuję → „Ile nałożyć na porcję” (pole „puste naczynie”). Na tej samej desce zważysz później naczynie z jedzeniem — deska chroni wagę przed gorącem.",
@@ -6759,25 +6796,24 @@
             "Dodaj czosnek, koncentrat pomidorowy (42 g), 1 płaską łyżeczkę soli, pół łyżeczki pieprzu i 1 łyżeczkę suszonego oregano. Mieszaj 1 minutę.",
             "Wlej passatę (350 g) i 100 ml wody (pół szklanki). Zamieszaj, zmniejsz ogień na mały (1/3 skali), przykryj pokrywką, zostawiając szparę, i gotuj 20 minut. Co 5 minut zamieszaj, żeby nic nie przywarło do dna.",
             "▸ Kiedy garnek się gotuje, robisz resztę — od najczystszych produktów do tych, po których myjesz nóż i deskę:",
-            "▸ Kanapki z serem, musztardą i kiszonym ogórkiem",
-            "Kromki chleba (2 kromki, 70 g) posmaruj cienko masłem (5 g), potem musztardą (1 łyżka, 15 g).",
-            "Ser (2 plastry, 40 g) rozłóż po równo na kromkach.",
-            "Ogórki kiszone (100 g) i pomidora (1 szt., 120 g) pokrój w plasterki i ułóż na serze.",
-            "Do boxa zawiń kanapki w folię.",
-            "Przełóż do pojemnika „dziś 11:30 — drugi posilek”.",
             "▸ Deser: sernik na zimno w kubku (bez pieczenia)",
-            "Twaróg (220 g) i skyr (1 kubek, 150 g) przełóż do miski i rozgniataj widelcem ok. 2 minuty, aż masa będzie gładka.",
+            "Twaróg (180 g) i skyr (1 kubek, 150 g) przełóż do miski i rozgniataj widelcem ok. 2 minuty, aż masa będzie gładka.",
             "Dodaj miód (1 łyżka, 20 g) i wymieszaj.",
             "Jabłko (1 szt., 170 g) umyj i zetrzyj na tarce na grubych oczkach (bez gniazda z pestkami) na dno kubka lub pojemnika.",
-            "Na jabłko nałóż masę serową i posyp pokruszonymi orzechami (11 g).",
+            "Na jabłko nałóż masę serową i posyp pokruszonymi orzechami (9 g).",
             "Wstaw na co najmniej godzinę do lodówki.",
             "Przełóż do pojemnika „dziś 19:00 — kolacja”.",
+            "▸ Kanapki z polędwicą, serem i ogórkiem",
+            "Kromki (2 kromki, 70 g) posmaruj cienko masłem (6 g).",
+            "Na każdą kładziesz polędwicę (35 g) i ser (1 plaster, 20 g).",
+            "Ogórek (150 g) i pomidor (60 g) w plastry — na wierzch albo obok do pojemnika.",
+            "Przełóż do pojemnika „dziś 11:30 — drugi posilek”.",
             "▸ Jajecznica z pieczywem i pomidorem",
             "Wbij jajka (2 szt., 110 g) do kubka lub miski: stuknij jajkiem o brzeg i rozchyl skorupkę kciukami. Dodaj szczyptę soli i pieprzu i roztrzep widelcem przez ok. 30 sekund.",
-            "Patelnię postaw na średnim ogniu, włóż masło (3 g) i poczekaj ok. minuty, aż się rozpuści i lekko spieni.",
+            "Patelnię postaw na średnim ogniu, włóż masło (5 g) i poczekaj ok. minuty, aż się rozpuści i lekko spieni.",
             "Wlej jajka. Odczekaj 20 sekund, potem łopatką zgarniaj ścięte jajka od brzegów do środka co kilka sekund.",
             "Po 2–3 minutach, gdy jajka są ścięte, ale jeszcze lekko błyszczące, zdejmij patelnię z ognia i przełóż jajecznicę na talerz.",
-            "Pomidora (60 g) umyj i pokrój w plastry. Zjedz z chlebem (1 kromka, 35 g).",
+            "Pomidora (1 szt., 120 g) umyj i pokrój w plastry. Zjedz z chlebem (2 kromki, 70 g).",
             "To zjadasz od razu, na koniec bloku.",
             "▸ Wróć do garnka: Makaron bolognese na wołowinie",
             "W tym czasie w drugim garnku zagotuj ok. 2,5 litra wody z 1 łyżką soli. Gdy woda mocno bulgocze, wsyp makaron (170 g), zamieszaj i gotuj tyle minut, ile podaje opakowanie (zwykle 9–11). Mieszaj co 3 minuty.",
@@ -6787,7 +6823,7 @@
             "▸ Na koniec: ciepłe pojemniki wystudź 20–30 minut bez pokrywki, potem wszystkie do lodówki na jedną półkę. Naczynia do zlewu, przetrzyj blat — 5 minut teraz oszczędza 20 jutro."
           ],
           "jak": "kuchnia",
-          "czas_min": 33
+          "czas_min": 34
         },
         {
           "czas": "22:30",
@@ -6806,9 +6842,9 @@
       ],
       "makra": {
         "kcal": 1852,
-        "bialko": 128,
-        "tluszcz": 71,
-        "wegle": 166
+        "bialko": 125,
+        "tluszcz": 66,
+        "wegle": 182
       },
       "dobitka": 0,
       "dodatek_w": [],
@@ -8331,61 +8367,74 @@
           "ping": false,
           "opis": "Pierwszy posilek dnia.",
           "slot": "sniadanie",
-          "posilek": "Twarożek na słodko z dżemem + pieczywo",
-          "posilek_id": "q_twarog",
-          "porcja": 1.0,
+          "posilek": "Jajecznica z pieczywem i pomidorem",
+          "posilek_id": "q_jajecznica",
+          "porcja": 0.7,
           "makra": {
-            "kcal": 509,
-            "bialko": 44,
-            "tluszcz": 12,
-            "wegle": 55
+            "kcal": 522,
+            "bialko": 23,
+            "tluszcz": 17,
+            "wegle": 68
           },
           "skladniki": [
             {
-              "nazwa": "Twaróg półtłusty",
-              "ile": "200 g",
-              "g": 200,
-              "kcal": 266,
-              "bialko": 37.4,
-              "tluszcz": 9.4,
-              "wegle": 7.4
-            },
-            {
-              "nazwa": "Mleko 2%",
-              "ile": "20 ml",
-              "g": 20,
-              "kcal": 10,
-              "bialko": 0.7,
-              "tluszcz": 0.4,
-              "wegle": 1.0
-            },
-            {
-              "nazwa": "Dżem (np. malinowy, słoik 200 g)",
-              "ile": "40 g",
-              "g": 40,
-              "kcal": 58,
-              "bialko": 0.2,
-              "tluszcz": 0.2,
-              "wegle": 13.6
+              "nazwa": "Jaja",
+              "ile": "2 szt. (110 g)",
+              "g": 110,
+              "kcal": 157,
+              "bialko": 13.9,
+              "tluszcz": 10.5,
+              "wegle": 0.8
             },
             {
               "nazwa": "Chleb pszenny (zwykły biały)",
-              "ile": "2 kromki (70 g)",
-              "g": 70,
-              "kcal": 175,
-              "bialko": 5.6,
-              "tluszcz": 2.1,
-              "wegle": 32.9
+              "ile": "3 kromki (105 g), w tym +2 kromki",
+              "g": 105,
+              "kcal": 263,
+              "bialko": 8.4,
+              "tluszcz": 3.1,
+              "wegle": 49.3,
+              "dodatek": true
+            },
+            {
+              "nazwa": "Pomidor",
+              "ile": "60 g",
+              "g": 60,
+              "kcal": 11,
+              "bialko": 0.5,
+              "tluszcz": 0.1,
+              "wegle": 1.6
+            },
+            {
+              "nazwa": "Masło",
+              "ile": "4 g",
+              "g": 4,
+              "kcal": 30,
+              "bialko": 0.0,
+              "tluszcz": 3.3,
+              "wegle": 0.0
+            },
+            {
+              "nazwa": "Miód",
+              "ile": "+ 1 łyżka (20 g)",
+              "g": 20,
+              "kcal": 61,
+              "bialko": 0.1,
+              "tluszcz": 0.0,
+              "wegle": 16.4,
+              "dodatek": true
             }
           ],
           "jak": "przepis",
-          "czas_min": 4,
+          "czas_min": 8,
           "kroki": [
-            "Twaróg (200 g) włóż do miski i dolej mleko (20 ml).",
-            "Rozgniataj widelcem ok. minuty, aż twaróg będzie gładki i kremowy.",
-            "Dżem (40 g): połowę wmieszaj w twaróg, resztę połóż na wierzch.",
-            "Zjedz z chlebem (2 kromki, 70 g) albo posmaruj nim kromki. Do boxa: twarożek w zakręcanym pojemniku, chleb w osobnej torebce.",
-            "Wszystkie ilości w krokach są już przeliczone na Twoją porcję na dziś — nic nie musisz dzielić."
+            "Wbij jajka (2 szt., 110 g) do kubka lub miski: stuknij jajkiem o brzeg i rozchyl skorupkę kciukami. Dodaj szczyptę soli i pieprzu i roztrzep widelcem przez ok. 30 sekund.",
+            "Patelnię postaw na średnim ogniu, włóż masło (4 g) i poczekaj ok. minuty, aż się rozpuści i lekko spieni.",
+            "Wlej jajka. Odczekaj 20 sekund, potem łopatką zgarniaj ścięte jajka od brzegów do środka co kilka sekund.",
+            "Po 2–3 minutach, gdy jajka są ścięte, ale jeszcze lekko błyszczące, zdejmij patelnię z ognia i przełóż jajecznicę na talerz.",
+            "Pomidora (60 g) umyj i pokrój w plastry. Zjedz z chlebem (1 kromka, 35 g).",
+            "Wszystkie ilości w krokach są już przeliczone na Twoją porcję na dziś — nic nie musisz dzielić.",
+            "Do tego dodatek węglowy: chleb pszenny 2 kromki, miód 1 łyżka. Zjedz obok — to paliwo na trening i regenerację, bez niego dzień nie dobija węglowodanów."
           ]
         },
         {
@@ -8395,70 +8444,69 @@
           "ping": false,
           "opis": "Zjedz zanim zglodniejesz.",
           "slot": "drugi",
-          "posilek": "Box: sałatka jajeczna z kukurydzą",
-          "posilek_id": "q_jajka_kukurydza",
-          "porcja": 1.1,
+          "posilek": "Deser: twarożek kakaowy z masłem orzechowym",
+          "posilek_id": "d_twarog_kakao",
+          "porcja": 0.7,
           "makra": {
-            "kcal": 496,
-            "bialko": 36,
-            "tluszcz": 21,
-            "wegle": 36
+            "kcal": 296,
+            "bialko": 30,
+            "tluszcz": 12,
+            "wegle": 16
           },
           "skladniki": [
             {
-              "nazwa": "Jaja",
-              "ile": "3 szt. (165 g)",
-              "g": 165,
-              "kcal": 236,
-              "bialko": 20.8,
-              "tluszcz": 15.7,
-              "wegle": 1.2
+              "nazwa": "Twaróg półtłusty",
+              "ile": "140 g",
+              "g": 140,
+              "kcal": 186,
+              "bialko": 26.2,
+              "tluszcz": 6.6,
+              "wegle": 5.2
             },
             {
-              "nazwa": "Kukurydza konserwowa",
-              "ile": "110 g",
-              "g": 110,
-              "kcal": 90,
-              "bialko": 3.0,
-              "tluszcz": 1.4,
-              "wegle": 14.3
+              "nazwa": "Kakao naturalne (bez cukru)",
+              "ile": "4 g",
+              "g": 4,
+              "kcal": 15,
+              "bialko": 0.9,
+              "tluszcz": 0.8,
+              "wegle": 0.5
             },
             {
-              "nazwa": "Jogurt grecki 2%",
-              "ile": "90 g",
-              "g": 90,
-              "kcal": 66,
-              "bialko": 8.9,
-              "tluszcz": 1.8,
-              "wegle": 2.8
+              "nazwa": "Miód",
+              "ile": "10 g",
+              "g": 10,
+              "kcal": 30,
+              "bialko": 0.0,
+              "tluszcz": 0.0,
+              "wegle": 8.2
             },
             {
-              "nazwa": "Musztarda",
-              "ile": "1 łyżka (15 g)",
-              "g": 15,
-              "kcal": 16,
-              "bialko": 0.8,
-              "tluszcz": 0.9,
-              "wegle": 1.2
+              "nazwa": "Masło orzechowe 100%",
+              "ile": "8 g",
+              "g": 8,
+              "kcal": 50,
+              "bialko": 2.1,
+              "tluszcz": 4.1,
+              "wegle": 0.9
             },
             {
-              "nazwa": "Chleb pszenny (zwykły biały)",
-              "ile": "1 kromka (35 g)",
-              "g": 35,
-              "kcal": 88,
-              "bialko": 2.8,
-              "tluszcz": 1.0,
-              "wegle": 16.4
+              "nazwa": "Mleko 2%",
+              "ile": "30 ml",
+              "g": 30,
+              "kcal": 15,
+              "bialko": 1.0,
+              "tluszcz": 0.6,
+              "wegle": 1.4
             }
           ],
           "jak": "przepis",
-          "czas_min": 12,
+          "czas_min": 4,
           "kroki": [
             "📦 To zrobiłeś w bloku kuchni (dziś o 19:45) — teraz tylko wyjmij pojemnik z lodówki. Przepis niżej, gdybyś robił na świeżo.",
-            "Jajka na twardo: w małym garnku zagotuj tyle wody, żeby przykryła jajka (3 szt., 165 g). Łyżką ostrożnie włóż jajka do wrzątku i gotuj 9 minut na średnim ogniu. Odlej wrzątek, zalej zimną wodą na 3 minuty i obierz ze skorupki.",
-            "Jajka pokrój w kostkę ok. 1 cm. Kukurydzę (110 g) odsącz z zalewy na sitku.",
-            "W misce wymieszaj jajka, kukurydzę, jogurt (90 g) i musztardę (1 łyżka, 15 g). Dopraw szczyptą soli, pieprzu i słodkiej papryki.",
-            "Przełóż do pojemnika, chleb (1 kromka, 35 g) zapakuj osobno. W lodówce wytrzyma 2 dni.",
+            "Twaróg (140 g) włóż do miski, dolej mleko (30 ml) i rozgniataj widelcem ok. minuty na krem.",
+            "Dodaj kakao (4 g) i miód (10 g) i mieszaj, aż kolor będzie jednolity.",
+            "Na wierzch nałóż masło orzechowe (8 g).",
             "Wszystkie ilości w krokach są już przeliczone na Twoją porcję na dziś — nic nie musisz dzielić."
           ]
         },
@@ -8584,60 +8632,61 @@
           "ping": false,
           "opis": "Ostatni posilek, z bialkiem.",
           "slot": "kolacja",
-          "posilek": "Deser: czekoladowy pudding ze skyru z bananem",
-          "posilek_id": "d_pudding",
-          "porcja": 0.7,
+          "posilek": "Box: serek wiejski + jajka na twardo + ogórki",
+          "posilek_id": "q_serek_box",
+          "porcja": 0.8,
           "makra": {
-            "kcal": 278,
-            "bialko": 21,
-            "tluszcz": 3,
-            "wegle": 40
+            "kcal": 450,
+            "bialko": 39,
+            "tluszcz": 22,
+            "wegle": 23
           },
           "skladniki": [
             {
-              "nazwa": "Skyr naturalny (kubek 150 g)",
-              "ile": "1 kubek (150 g)",
-              "g": 150,
-              "kcal": 96,
-              "bialko": 17.2,
-              "tluszcz": 0.3,
-              "wegle": 5.7
+              "nazwa": "Serek wiejski",
+              "ile": "1 opak. (200 g)",
+              "g": 200,
+              "kcal": 194,
+              "bialko": 22.0,
+              "tluszcz": 10.0,
+              "wegle": 4.0
             },
             {
-              "nazwa": "Kakao naturalne (bez cukru)",
-              "ile": "12 g",
-              "g": 12,
-              "kcal": 46,
-              "bialko": 2.6,
-              "tluszcz": 2.4,
-              "wegle": 1.6
+              "nazwa": "Jaja",
+              "ile": "2 szt. (110 g)",
+              "g": 110,
+              "kcal": 157,
+              "bialko": 13.9,
+              "tluszcz": 10.5,
+              "wegle": 0.8
             },
             {
-              "nazwa": "Miód",
-              "ile": "10 g",
-              "g": 10,
-              "kcal": 30,
-              "bialko": 0.0,
-              "tluszcz": 0.0,
-              "wegle": 8.2
+              "nazwa": "Ogórek kiszony",
+              "ile": "100 g",
+              "g": 98,
+              "kcal": 12,
+              "bialko": 0.5,
+              "tluszcz": 0.2,
+              "wegle": 1.9
             },
             {
-              "nazwa": "Banan",
-              "ile": "1 szt. (120 g)",
-              "g": 120,
-              "kcal": 106,
-              "bialko": 1.3,
-              "tluszcz": 0.4,
-              "wegle": 24.2
+              "nazwa": "Chleb pszenny (zwykły biały)",
+              "ile": "1 kromka (35 g)",
+              "g": 35,
+              "kcal": 88,
+              "bialko": 2.8,
+              "tluszcz": 1.0,
+              "wegle": 16.4
             }
           ],
           "jak": "przepis",
-          "czas_min": 4,
+          "czas_min": 12,
           "kroki": [
             "📦 To zrobiłeś w bloku kuchni (dziś o 19:45) — teraz tylko wyjmij pojemnik z lodówki. Przepis niżej, gdybyś robił na świeżo.",
-            "Skyr (1 kubek, 150 g) przełóż do miski. Dodaj kakao (12 g) i miód (10 g).",
-            "Mieszaj łyżką przez pełną minutę, aż nie będzie grudek kakao i krem będzie jednolicie brązowy.",
-            "Banana (1 szt., 120 g) obierz i pokrój w plasterki na wierzch.",
+            "Jajka na twardo: w małym garnku zagotuj tyle wody, żeby przykryła jajka (2 szt., 110 g). Łyżką ostrożnie włóż jajka do wrzątku i gotuj 9 minut na średnim ogniu. Odlej wrzątek, zalej zimną wodą na 3 minuty i obierz ze skorupki.",
+            "Do pojemnika przełóż serek wiejski (1 opak., 200 g). Obok ułóż jajka przekrojone na pół i posyp je szczyptą soli i pieprzu.",
+            "Dołóż ogórki kiszone (100 g) — w całości albo pokrojone.",
+            "Chleb (1 kromka, 35 g) zapakuj do osobnej torebki. Nic nie trzeba odgrzewać.",
             "Wszystkie ilości w krokach są już przeliczone na Twoją porcję na dziś — nic nie musisz dzielić."
           ]
         },
@@ -8646,10 +8695,10 @@
           "tytul": "KUCHNIA — 20 minut",
           "ikona": "🍳",
           "ping": false,
-          "opis": "Przygotujesz: garnek: Makaron bolognese na wołowinie, Twarożek na słodko z dżemem + pieczywo, Box: sałatka jajeczna z kukurydzą, Deser: czekoladowy pudding ze skyru z bananem. Potem do jutra tylko sięgasz do lodówki.",
+          "opis": "Przygotujesz: garnek: Makaron bolognese na wołowinie, Jajecznica z pieczywem i pomidorem, Deser: twarożek kakaowy z masłem orzechowym, Box: serek wiejski + jajka na twardo + ogórki. Potem do jutra tylko sięgasz do lodówki.",
           "akcja": "kuchnia",
           "kroki": [
-            "Wyjmij wszystko na blat, zanim zaczniesz: banan 1 szt. (120 g), cebula 140 g, chleb pszenny 3 kromki (105 g), czosnek 10 g, dżem 40 g, jaja 3 szt. (165 g), jogurt grecki 2% 90 g, kakao naturalne 12 g, koncentrat pomidorowy 42 g, kukurydza konserwowa 110 g, makaron 170 g, marchew 110 g, wołowina świeżo mielona 350 g, miód 10 g, mleko 2% 20 ml, musztarda 1 łyżka (15 g), olej rzepakowy 10 ml, passata pomidorowa 350 g, przyprawy 1 porcja (2 g), skyr naturalny 1 kubek (150 g), twaróg półtłusty 200 g.",
+            "Wyjmij wszystko na blat, zanim zaczniesz: cebula 140 g, chleb pszenny 4 kromki (140 g), czosnek 10 g, jaja 4 szt. (220 g), kakao naturalne 4 g, koncentrat pomidorowy 42 g, makaron 170 g, marchew 110 g, masło 4 g, masło orzechowe 100% 8 g, wołowina świeżo mielona 350 g, miód 30 g, mleko 2% 30 ml, ogórek kiszony 100 g, olej rzepakowy 10 ml, passata pomidorowa 350 g, pomidor 60 g, przyprawy 2 porcje (4 g), serek wiejski 1 opak. (200 g), twaróg półtłusty 140 g.",
             "Przygotuj 2 pojemniki i opisz je karteczką: dziś 11:30 — drugi posilek; dziś 19:00 — kolacja.",
             "▸ Garnek: Makaron bolognese na wołowinie — zaczynasz od niego, bo najdłużej się gotuje.",
             "Zanim zaczniesz: postaw na wadze kuchennej deskę do krojenia, na niej pusty duży garnek, i wpisz tę wagę w zakładce Gotuję → „Ile nałożyć na porcję” (pole „puste naczynie”). Na tej samej desce zważysz później naczynie z jedzeniem — deska chroni wagę przed gorącem.",
@@ -8661,34 +8710,36 @@
             "Dodaj czosnek, koncentrat pomidorowy (42 g), 1 płaską łyżeczkę soli, pół łyżeczki pieprzu i 1 łyżeczkę suszonego oregano. Mieszaj 1 minutę.",
             "Wlej passatę (350 g) i 100 ml wody (pół szklanki). Zamieszaj, zmniejsz ogień na mały (1/3 skali), przykryj pokrywką, zostawiając szparę, i gotuj 20 minut. Co 5 minut zamieszaj, żeby nic nie przywarło do dna.",
             "▸ Woda — postaw ją od razu, zanim zaczniesz resztę:",
-            "Jajka na twardo dla Box: sałatka jajeczna z kukurydzą (3 szt.) — razem 3 szt.: w małym garnku zagotuj wodę, łyżką włóż jajka, gotuj 9 minut na średnim ogniu, odlej wrzątek i zalej zimną wodą. Obierzesz je przy daniach.",
+            "Jajka na twardo dla Box: serek wiejski + jajka na twardo + ogórki (2 szt.) — razem 2 szt.: w małym garnku zagotuj wodę, łyżką włóż jajka, gotuj 9 minut na średnim ogniu, odlej wrzątek i zalej zimną wodą. Obierzesz je przy daniach.",
             "▸ Kiedy garnek się gotuje, robisz resztę — od najczystszych produktów do tych, po których myjesz nóż i deskę:",
-            "▸ Deser: czekoladowy pudding ze skyru z bananem",
-            "Skyr (1 kubek, 150 g) przełóż do miski. Dodaj kakao (12 g) i miód (10 g).",
-            "Mieszaj łyżką przez pełną minutę, aż nie będzie grudek kakao i krem będzie jednolicie brązowy.",
-            "Banana (1 szt., 120 g) obierz i pokrój w plasterki na wierzch.",
-            "Przełóż do pojemnika „dziś 19:00 — kolacja”.",
-            "▸ Box: sałatka jajeczna z kukurydzą",
-            "Weź 3 szt. ugotowanych jajek z garnka z zimną wodą.",
-            "Jajka pokrój w kostkę ok. 1 cm. Kukurydzę (110 g) odsącz z zalewy na sitku.",
-            "W misce wymieszaj jajka, kukurydzę, jogurt (90 g) i musztardę (1 łyżka, 15 g). Dopraw szczyptą soli, pieprzu i słodkiej papryki.",
-            "Przełóż do pojemnika, chleb (1 kromka, 35 g) zapakuj osobno. W lodówce wytrzyma 2 dni.",
+            "▸ Deser: twarożek kakaowy z masłem orzechowym",
+            "Twaróg (140 g) włóż do miski, dolej mleko (30 ml) i rozgniataj widelcem ok. minuty na krem.",
+            "Dodaj kakao (4 g) i miód (10 g) i mieszaj, aż kolor będzie jednolity.",
+            "Na wierzch nałóż masło orzechowe (8 g).",
             "Przełóż do pojemnika „dziś 11:30 — drugi posilek”.",
-            "▸ Twarożek na słodko z dżemem + pieczywo",
-            "Twaróg (200 g) włóż do miski i dolej mleko (20 ml).",
-            "Rozgniataj widelcem ok. minuty, aż twaróg będzie gładki i kremowy.",
-            "Dżem (40 g): połowę wmieszaj w twaróg, resztę połóż na wierzch.",
-            "Zjedz z chlebem (2 kromki, 70 g) albo posmaruj nim kromki. Do boxa: twarożek w zakręcanym pojemniku, chleb w osobnej torebce.",
+            "▸ Box: serek wiejski + jajka na twardo + ogórki",
+            "Weź 2 szt. ugotowanych jajek z garnka z zimną wodą.",
+            "Do pojemnika przełóż serek wiejski (1 opak., 200 g). Obok ułóż jajka przekrojone na pół i posyp je szczyptą soli i pieprzu.",
+            "Dołóż ogórki kiszone (100 g) — w całości albo pokrojone.",
+            "Chleb (1 kromka, 35 g) zapakuj do osobnej torebki. Nic nie trzeba odgrzewać.",
+            "Przełóż do pojemnika „dziś 19:00 — kolacja”.",
+            "▸ Jajecznica z pieczywem i pomidorem",
+            "Wbij jajka (2 szt., 110 g) do kubka lub miski: stuknij jajkiem o brzeg i rozchyl skorupkę kciukami. Dodaj szczyptę soli i pieprzu i roztrzep widelcem przez ok. 30 sekund.",
+            "Patelnię postaw na średnim ogniu, włóż masło (4 g) i poczekaj ok. minuty, aż się rozpuści i lekko spieni.",
+            "Wlej jajka. Odczekaj 20 sekund, potem łopatką zgarniaj ścięte jajka od brzegów do środka co kilka sekund.",
+            "Po 2–3 minutach, gdy jajka są ścięte, ale jeszcze lekko błyszczące, zdejmij patelnię z ognia i przełóż jajecznicę na talerz.",
+            "Pomidora (60 g) umyj i pokrój w plastry. Zjedz z chlebem (1 kromka, 35 g).",
             "To zjadasz od razu, na koniec bloku.",
             "▸ Wróć do garnka: Makaron bolognese na wołowinie",
             "W tym czasie w drugim garnku zagotuj ok. 2,5 litra wody z 1 łyżką soli. Gdy woda mocno bulgocze, wsyp makaron (170 g), zamieszaj i gotuj tyle minut, ile podaje opakowanie (zwykle 9–11). Mieszaj co 3 minuty.",
             "Odcedź makaron na durszlaku i od razu przełóż go do garnka z sosem. Mieszaj, aż cały makaron będzie pokryty sosem. Wyłącz kuchenkę.",
             "Porcjowanie: zważ garnek z gotowym jedzeniem na tej samej desce i wpisz wagę w panelu — pokaże, ile gramów nałożyć do każdego z 3 pojemników.",
             "Do każdego z 3 pojemników nałóż wyliczone gramy: postaw pusty pojemnik na wadze, wciśnij TARA (waga pokaże 0) i nakładaj, aż dojdziesz do liczby z panelu. Zostaw pojemniki otwarte na 20–30 minut, żeby wystygły, potem zamknij i wstaw do lodówki. Każdy pojemnik to dokładnie jedna porcja z Twojego planu.",
+            "Do „dziś 08:00 — sniadanie” dołóż: chleb pszenny 2 kromki (70 g), miód 1 łyżka (20 g).",
             "▸ Na koniec: ciepłe pojemniki wystudź 20–30 minut bez pokrywki, potem wszystkie do lodówki na jedną półkę. Naczynia do zlewu, przetrzyj blat — 5 minut teraz oszczędza 20 jutro."
           ],
           "jak": "kuchnia",
-          "czas_min": 35
+          "czas_min": 39
         },
         {
           "czas": "22:30",
@@ -8706,13 +8757,22 @@
         }
       ],
       "makra": {
-        "kcal": 1850,
-        "bialko": 133,
-        "tluszcz": 58,
-        "wegle": 187
+        "kcal": 1835,
+        "bialko": 124,
+        "tluszcz": 73,
+        "wegle": 163
       },
       "dobitka": 0,
-      "dodatek_w": [],
+      "dodatek_w": [
+        [
+          "chleb",
+          2
+        ],
+        [
+          "miod",
+          1
+        ]
+      ],
       "poza_planem": [],
       "lzejszy": false,
       "cel": {
@@ -8773,24 +8833,24 @@
           "ping": false,
           "opis": "Pierwszy posilek dnia, spokojnie.",
           "slot": "sniadanie",
-          "posilek": "Duży skyr z bananem i masłem orzechowym",
-          "posilek_id": "q_skyr_orzechy_xl",
-          "porcja": 1.0,
+          "posilek": "Twaróg z bananem i miodem",
+          "posilek_id": "q_twarog_banan",
+          "porcja": 0.9,
           "makra": {
-            "kcal": 520,
-            "bialko": 41,
-            "tluszcz": 21,
-            "wegle": 39
+            "kcal": 459,
+            "bialko": 34,
+            "tluszcz": 14,
+            "wegle": 50
           },
           "skladniki": [
             {
-              "nazwa": "Skyr naturalny (kubek 150 g)",
-              "ile": "255 g",
-              "g": 255,
-              "kcal": 163,
-              "bialko": 29.3,
-              "tluszcz": 0.5,
-              "wegle": 9.7
+              "nazwa": "Twaróg półtłusty",
+              "ile": "160 g",
+              "g": 160,
+              "kcal": 213,
+              "bialko": 29.9,
+              "tluszcz": 7.5,
+              "wegle": 5.9
             },
             {
               "nazwa": "Banan",
@@ -8802,30 +8862,40 @@
               "wegle": 24.2
             },
             {
-              "nazwa": "Masło orzechowe 100%",
-              "ile": "40 g",
-              "g": 40,
-              "kcal": 248,
-              "bialko": 10.4,
-              "tluszcz": 20.4,
-              "wegle": 4.4
+              "nazwa": "Miód",
+              "ile": "1 łyżka (20 g)",
+              "g": 20,
+              "kcal": 61,
+              "bialko": 0.1,
+              "tluszcz": 0.0,
+              "wegle": 16.4
             },
             {
-              "nazwa": "Przyprawa do cynamonek / cynamon",
-              "ile": "1 g",
-              "g": 1,
-              "kcal": 3,
-              "bialko": 0.0,
-              "tluszcz": 0.0,
-              "wegle": 0.5
+              "nazwa": "Orzechy / migdały",
+              "ile": "9 g",
+              "g": 9,
+              "kcal": 58,
+              "bialko": 1.7,
+              "tluszcz": 5.1,
+              "wegle": 0.9
+            },
+            {
+              "nazwa": "Mleko 2%",
+              "ile": "45 ml",
+              "g": 45,
+              "kcal": 22,
+              "bialko": 1.5,
+              "tluszcz": 0.9,
+              "wegle": 2.2
             }
           ],
           "jak": "przepis",
-          "czas_min": 3,
+          "czas_min": 4,
           "kroki": [
-            "Przełóż skyr (255 g) do miski albo pojemnika.",
-            "Banan (1 szt., 120 g) pokrój w plastry, wrzuć na wierzch.",
-            "Dodaj masło orzechowe (40 g) i cynamon (1 g). Wymieszaj albo zostaw warstwami.",
+            "Twaróg (160 g) włóż do miski, dolej mleko (45 ml) i rozgniataj widelcem ok. minuty na krem.",
+            "Banana (1 szt., 120 g) obierz i pokrój w plasterki na wierzch.",
+            "Polej miodem (1 łyżka, 20 g) i posyp orzechami (9 g).",
+            "Na zmianę: wszystko do zakręcanego pojemnika, banana weź w całości i pokrój przy jedzeniu.",
             "Wszystkie ilości w krokach są już przeliczone na Twoją porcję na dziś — nic nie musisz dzielić."
           ]
         },
@@ -8836,78 +8906,51 @@
           "ping": false,
           "opis": "Zjedz zanim zglodniejesz — po poludniu latwiej o podjadanie.",
           "slot": "drugi",
-          "posilek": "Gofry proteinowe z kremem",
-          "posilek_id": "q_gofry",
-          "porcja": 0.7,
+          "posilek": "Shake białkowy z bananem",
+          "posilek_id": "q_shake",
+          "porcja": 1.0,
           "makra": {
-            "kcal": 368,
-            "bialko": 29,
-            "tluszcz": 13,
-            "wegle": 32
+            "kcal": 383,
+            "bialko": 38,
+            "tluszcz": 14,
+            "wegle": 27
           },
           "skladniki": [
             {
-              "nazwa": "Jaja",
-              "ile": "1 szt. (55 g)",
-              "g": 55,
-              "kcal": 79,
-              "bialko": 6.9,
-              "tluszcz": 5.2,
-              "wegle": 0.4
+              "nazwa": "Odżywka białkowa WPC 80 (czekoladowa) — zapas, kupujesz osobno",
+              "ile": "40 g",
+              "g": 40,
+              "kcal": 149,
+              "bialko": 32.8,
+              "tluszcz": 1.9,
+              "wegle": 0.7
             },
             {
-              "nazwa": "Skyr naturalny (kubek 150 g)",
-              "ile": "1 kubek (150 g)",
-              "g": 150,
-              "kcal": 96,
-              "bialko": 17.2,
-              "tluszcz": 0.3,
-              "wegle": 5.7
-            },
-            {
-              "nazwa": "Mąka pszenna",
-              "ile": "35 g",
-              "g": 35,
-              "kcal": 120,
-              "bialko": 3.5,
+              "nazwa": "Banan",
+              "ile": "1 szt. (120 g)",
+              "g": 120,
+              "kcal": 106,
+              "bialko": 1.3,
               "tluszcz": 0.4,
-              "wegle": 24.8
+              "wegle": 24.2
             },
             {
-              "nazwa": "Proszek do pieczenia",
-              "ile": "1 g",
-              "g": 1,
-              "kcal": 1,
-              "bialko": 0.0,
-              "tluszcz": 0.0,
-              "wegle": 0.1
-            },
-            {
-              "nazwa": "Słodzik w tabletkach",
-              "ile": "0 g",
-              "g": 0,
-              "kcal": 0,
-              "bialko": 0.0,
-              "tluszcz": 0.0,
-              "wegle": 0.0
-            },
-            {
-              "nazwa": "Krem do smarowania bez cukru",
-              "ile": "14 g",
-              "g": 14,
-              "kcal": 73,
-              "bialko": 1.7,
-              "tluszcz": 7.0,
-              "wegle": 1.1
+              "nazwa": "Orzechy / migdały",
+              "ile": "20 g",
+              "g": 20,
+              "kcal": 128,
+              "bialko": 3.8,
+              "tluszcz": 11.4,
+              "wegle": 2.0
             }
           ],
           "jak": "przepis",
-          "czas_min": 12,
+          "czas_min": 2,
           "kroki": [
             "📦 To zrobiłeś w bloku kuchni (dziś o 20:00) — teraz tylko wyjmij pojemnik z lodówki. Przepis niżej, gdybyś robił na świeżo.",
-            "Wymieszaj jajka (1 szt., 55 g), skyr (1 kubek, 150 g), mąkę (35 g), proszek do pieczenia (1 g) i słodzik (0 g) na gęste ciasto.",
-            "Nagrzej gofrownicę i piecz porcjami po ok. 4 minuty. Bez gofrownicy usmaż placki na patelni pod przykryciem.",
-            "Na wierzch krem do smarowania (14 g). Na zimno też smakują, więc idą do pojemnika.",
+            "Do shakera wsyp odżywkę (40 g) i wlej ok. 350 ml zimnej wody. Zakręć i potrząsaj 20 sekund.",
+            "Banana (1 szt., 120 g) i orzechy (20 g) weź osobno — zjadasz obok shake'a.",
+            "Na zmianę: odżywkę wsyp do shakera już w domu, wodę dolejesz na miejscu. Nic się nie zepsuje.",
             "Wszystkie ilości w krokach są już przeliczone na Twoją porcję na dziś — nic nie musisz dzielić."
           ]
         },
@@ -9031,24 +9074,24 @@
           "ping": false,
           "opis": "Najwiekszy posilek dnia, po treningu. Duzo bialka.",
           "slot": "kolacja",
-          "posilek": "Twaróg z makaronem i masłem orzechowym",
-          "posilek_id": "q_twarog_makaron",
+          "posilek": "Serek wiejski z makaronem i bananem",
+          "posilek_id": "q_serek_makaron",
           "porcja": 0.5,
           "makra": {
-            "kcal": 397,
-            "bialko": 22,
-            "tluszcz": 9,
+            "kcal": 442,
+            "bialko": 28,
+            "tluszcz": 11,
             "wegle": 57
           },
           "skladniki": [
             {
-              "nazwa": "Twaróg półtłusty",
-              "ile": "75 g",
-              "g": 75,
-              "kcal": 100,
-              "bialko": 14.0,
-              "tluszcz": 3.5,
-              "wegle": 2.8
+              "nazwa": "Serek wiejski",
+              "ile": "1 opak. (200 g)",
+              "g": 200,
+              "kcal": 194,
+              "bialko": 22.0,
+              "tluszcz": 10.0,
+              "wegle": 4.0
             },
             {
               "nazwa": "Makaron (świderki/penne)",
@@ -9058,15 +9101,6 @@
               "bialko": 4.8,
               "tluszcz": 0.6,
               "wegle": 28.8
-            },
-            {
-              "nazwa": "Masło orzechowe 100%",
-              "ile": "8 g",
-              "g": 8,
-              "kcal": 50,
-              "bialko": 2.1,
-              "tluszcz": 4.1,
-              "wegle": 0.9
             },
             {
               "nazwa": "Banan",
@@ -9082,9 +9116,9 @@
           "czas_min": 14,
           "kroki": [
             "📦 To zrobiłeś w bloku kuchni (dziś o 20:00) — teraz tylko wyjmij pojemnik z lodówki. Przepis niżej, gdybyś robił na świeżo.",
-            "Ugotuj makaron (40 g), odcedź, przestudź.",
-            "Twaróg (75 g) rozgnieć widelcem z odrobiną wody, aż będzie kremowy.",
-            "Połącz z makaronem, dodaj masło orzechowe (8 g) i banana (1 szt., 120 g) w plastrach.",
+            "Wstaw osoloną wodę, ugotuj makaron (40 g) wg czasu z opakowania, odcedź i przestudź.",
+            "Wymieszaj z serkiem wiejskim (1 opak., 200 g), dopraw (1 porcja, 2 g).",
+            "Banan (1 szt., 120 g) w plastry — osobno albo na wierzch.",
             "Wszystkie ilości w krokach są już przeliczone na Twoją porcję na dziś — nic nie musisz dzielić."
           ]
         },
@@ -9093,30 +9127,31 @@
           "tytul": "KUCHNIA — 20 minut",
           "ikona": "🍳",
           "ping": false,
-          "opis": "Przygotujesz: Duży skyr z bananem i masłem orzechowym, Gofry proteinowe z kremem, Twaróg z makaronem i masłem orzechowym. Potem do jutra tylko sięgasz do lodówki.",
+          "opis": "Przygotujesz: Twaróg z bananem i miodem, Shake białkowy z bananem, Serek wiejski z makaronem i bananem. Potem do jutra tylko sięgasz do lodówki.",
           "akcja": "kuchnia",
           "kroki": [
-            "Wyjmij wszystko na blat, zanim zaczniesz: banan 2 szt. (240 g), przyprawa do cynamonek / cynamon 1 g, jaja 1 szt. (55 g), krem do smarowania bez cukru 14 g, mąka pszenna 35 g, makaron 40 g, masło orzechowe 100% 3 łyżki (48 g), proszek do pieczenia 1 g, skyr naturalny 405 g, słodzik w tabletkach 0 g, twaróg półtłusty 75 g.",
+            "Wyjmij wszystko na blat, zanim zaczniesz: banan 3 szt. (360 g), makaron 40 g, miód 1 łyżka (20 g), mleko 2% 45 ml, odżywka białkowa wpc 80 40 g, orzechy / migdały 29 g, przyprawy 1 porcja (2 g), serek wiejski 1 opak. (200 g), twaróg półtłusty 160 g.",
             "Przygotuj 2 pojemniki i opisz je karteczką: dziś 11:30 — drugi posilek; dziś 19:15 — kolacja.",
-            "▸ Gofry proteinowe z kremem",
-            "Wymieszaj jajka (1 szt., 55 g), skyr (1 kubek, 150 g), mąkę (35 g), proszek do pieczenia (1 g) i słodzik (0 g) na gęste ciasto.",
-            "Nagrzej gofrownicę i piecz porcjami po ok. 4 minuty. Bez gofrownicy usmaż placki na patelni pod przykryciem.",
-            "Na wierzch krem do smarowania (14 g). Na zimno też smakują, więc idą do pojemnika.",
+            "▸ Shake białkowy z bananem",
+            "Do shakera wsyp odżywkę (40 g) i wlej ok. 350 ml zimnej wody. Zakręć i potrząsaj 20 sekund.",
+            "Banana (1 szt., 120 g) i orzechy (20 g) weź osobno — zjadasz obok shake'a.",
+            "Na zmianę: odżywkę wsyp do shakera już w domu, wodę dolejesz na miejscu. Nic się nie zepsuje.",
             "Przełóż do pojemnika „dziś 11:30 — drugi posilek”.",
-            "▸ Twaróg z makaronem i masłem orzechowym",
-            "Ugotuj makaron (40 g), odcedź, przestudź.",
-            "Twaróg (75 g) rozgnieć widelcem z odrobiną wody, aż będzie kremowy.",
-            "Połącz z makaronem, dodaj masło orzechowe (8 g) i banana (1 szt., 120 g) w plastrach.",
+            "▸ Serek wiejski z makaronem i bananem",
+            "Wstaw osoloną wodę, ugotuj makaron (40 g) wg czasu z opakowania, odcedź i przestudź.",
+            "Wymieszaj z serkiem wiejskim (1 opak., 200 g), dopraw (1 porcja, 2 g).",
+            "Banan (1 szt., 120 g) w plastry — osobno albo na wierzch.",
             "Przełóż do pojemnika „dziś 19:15 — kolacja”.",
-            "▸ Duży skyr z bananem i masłem orzechowym",
-            "Przełóż skyr (255 g) do miski albo pojemnika.",
-            "Banan (1 szt., 120 g) pokrój w plastry, wrzuć na wierzch.",
-            "Dodaj masło orzechowe (40 g) i cynamon (1 g). Wymieszaj albo zostaw warstwami.",
+            "▸ Twaróg z bananem i miodem",
+            "Twaróg (160 g) włóż do miski, dolej mleko (45 ml) i rozgniataj widelcem ok. minuty na krem.",
+            "Banana (1 szt., 120 g) obierz i pokrój w plasterki na wierzch.",
+            "Polej miodem (1 łyżka, 20 g) i posyp orzechami (9 g).",
+            "Na zmianę: wszystko do zakręcanego pojemnika, banana weź w całości i pokrój przy jedzeniu.",
             "To zjadasz od razu, na koniec bloku.",
             "▸ Na koniec: ciepłe pojemniki wystudź 20–30 minut bez pokrywki, potem wszystkie do lodówki na jedną półkę. Naczynia do zlewu, przetrzyj blat — 5 minut teraz oszczędza 20 jutro."
           ],
           "jak": "kuchnia",
-          "czas_min": 29
+          "czas_min": 20
         },
         {
           "czas": "22:30",
@@ -9134,10 +9169,10 @@
         }
       ],
       "makra": {
-        "kcal": 1852,
-        "bialko": 124,
-        "tluszcz": 65,
-        "wegle": 184
+        "kcal": 1851,
+        "bialko": 132,
+        "tluszcz": 61,
+        "wegle": 190
       },
       "dobitka": 0,
       "dodatek_w": [],
@@ -9277,87 +9312,14 @@
           "ping": false,
           "opis": "Pierwszy posilek dnia.",
           "slot": "sniadanie",
-          "posilek": "Twaróg z bananem i miodem",
-          "posilek_id": "q_twarog_banan",
-          "porcja": 0.6,
+          "posilek": "Gofry proteinowe z kremem",
+          "posilek_id": "q_gofry",
+          "porcja": 0.5,
           "makra": {
-            "kcal": 336,
-            "bialko": 24,
-            "tluszcz": 10,
-            "wegle": 39
-          },
-          "skladniki": [
-            {
-              "nazwa": "Twaróg półtłusty",
-              "ile": "110 g",
-              "g": 110,
-              "kcal": 146,
-              "bialko": 20.6,
-              "tluszcz": 5.2,
-              "wegle": 4.1
-            },
-            {
-              "nazwa": "Banan",
-              "ile": "1 szt. (120 g)",
-              "g": 120,
-              "kcal": 106,
-              "bialko": 1.3,
-              "tluszcz": 0.4,
-              "wegle": 24.2
-            },
-            {
-              "nazwa": "Miód",
-              "ile": "10 g",
-              "g": 10,
-              "kcal": 30,
-              "bialko": 0.0,
-              "tluszcz": 0.0,
-              "wegle": 8.2
-            },
-            {
-              "nazwa": "Orzechy / migdały",
-              "ile": "6 g",
-              "g": 6,
-              "kcal": 38,
-              "bialko": 1.1,
-              "tluszcz": 3.4,
-              "wegle": 0.6
-            },
-            {
-              "nazwa": "Mleko 2%",
-              "ile": "30 ml",
-              "g": 30,
-              "kcal": 15,
-              "bialko": 1.0,
-              "tluszcz": 0.6,
-              "wegle": 1.4
-            }
-          ],
-          "jak": "przepis",
-          "czas_min": 4,
-          "kroki": [
-            "Twaróg (110 g) włóż do miski, dolej mleko (30 ml) i rozgniataj widelcem ok. minuty na krem.",
-            "Banana (1 szt., 120 g) obierz i pokrój w plasterki na wierzch.",
-            "Polej miodem (10 g) i posyp orzechami (6 g).",
-            "Na zmianę: wszystko do zakręcanego pojemnika, banana weź w całości i pokrój przy jedzeniu.",
-            "Wszystkie ilości w krokach są już przeliczone na Twoją porcję na dziś — nic nie musisz dzielić."
-          ]
-        },
-        {
-          "czas": "11:30",
-          "tytul": "Drugi posilek",
-          "ikona": "🥪",
-          "ping": false,
-          "opis": "Zjedz zanim zglodniejesz.",
-          "slot": "drugi",
-          "posilek": "Naleśniki ze skyrem i kremem",
-          "posilek_id": "q_nalesniki",
-          "porcja": 1.2,
-          "makra": {
-            "kcal": 688,
-            "bialko": 54,
-            "tluszcz": 25,
-            "wegle": 60
+            "kcal": 313,
+            "bialko": 28,
+            "tluszcz": 11,
+            "wegle": 25
           },
           "skladniki": [
             {
@@ -9370,22 +9332,31 @@
               "wegle": 0.4
             },
             {
-              "nazwa": "Mleko 2%",
-              "ile": "60 ml",
-              "g": 60,
-              "kcal": 30,
-              "bialko": 2.0,
-              "tluszcz": 1.2,
-              "wegle": 2.9
+              "nazwa": "Skyr naturalny (kubek 150 g)",
+              "ile": "1 kubek (150 g)",
+              "g": 150,
+              "kcal": 96,
+              "bialko": 17.2,
+              "tluszcz": 0.3,
+              "wegle": 5.7
             },
             {
               "nazwa": "Mąka pszenna",
-              "ile": "60 g",
-              "g": 60,
-              "kcal": 206,
-              "bialko": 6.0,
-              "tluszcz": 0.7,
-              "wegle": 42.6
+              "ile": "25 g",
+              "g": 25,
+              "kcal": 86,
+              "bialko": 2.5,
+              "tluszcz": 0.3,
+              "wegle": 17.8
+            },
+            {
+              "nazwa": "Proszek do pieczenia",
+              "ile": "1 g",
+              "g": 1,
+              "kcal": 1,
+              "bialko": 0.0,
+              "tluszcz": 0.0,
+              "wegle": 0.1
             },
             {
               "nazwa": "Słodzik w tabletkach",
@@ -9397,32 +9368,85 @@
               "wegle": 0.0
             },
             {
-              "nazwa": "Skyr naturalny (kubek 150 g)",
-              "ile": "2 kubki (300 g)",
-              "g": 300,
-              "kcal": 192,
-              "bialko": 34.5,
-              "tluszcz": 0.6,
-              "wegle": 11.4
-            },
-            {
               "nazwa": "Krem do smarowania bez cukru",
-              "ile": "35 g",
-              "g": 35,
-              "kcal": 182,
-              "bialko": 4.2,
-              "tluszcz": 17.5,
-              "wegle": 2.8
+              "ile": "10 g",
+              "g": 10,
+              "kcal": 52,
+              "bialko": 1.2,
+              "tluszcz": 5.0,
+              "wegle": 0.8
             }
           ],
           "jak": "przepis",
-          "czas_min": 16,
+          "czas_min": 12,
+          "kroki": [
+            "Wymieszaj jajka (1 szt., 55 g), skyr (1 kubek, 150 g), mąkę (25 g), proszek do pieczenia (1 g) i słodzik (1 tabletka, 0 g) na gęste ciasto.",
+            "Nagrzej gofrownicę i piecz porcjami po ok. 4 minuty. Bez gofrownicy usmaż placki na patelni pod przykryciem.",
+            "Na wierzch krem do smarowania (10 g). Na zimno też smakują, więc idą do pojemnika.",
+            "Wszystkie ilości w krokach są już przeliczone na Twoją porcję na dziś — nic nie musisz dzielić."
+          ]
+        },
+        {
+          "czas": "11:30",
+          "tytul": "Drugi posilek",
+          "ikona": "🥪",
+          "ping": false,
+          "opis": "Zjedz zanim zglodniejesz.",
+          "slot": "drugi",
+          "posilek": "Jogurt grecki z orzechami i miodem",
+          "posilek_id": "q_jogurt_orzechy",
+          "porcja": 1.1,
+          "makra": {
+            "kcal": 489,
+            "bialko": 36,
+            "tluszcz": 16,
+            "wegle": 48
+          },
+          "skladniki": [
+            {
+              "nazwa": "Jogurt grecki 2%",
+              "ile": "330 g",
+              "g": 330,
+              "kcal": 241,
+              "bialko": 32.7,
+              "tluszcz": 6.6,
+              "wegle": 10.2
+            },
+            {
+              "nazwa": "Orzechy / migdały",
+              "ile": "16 g",
+              "g": 16,
+              "kcal": 102,
+              "bialko": 3.0,
+              "tluszcz": 9.1,
+              "wegle": 1.6
+            },
+            {
+              "nazwa": "Miód",
+              "ile": "1 łyżka (20 g)",
+              "g": 20,
+              "kcal": 61,
+              "bialko": 0.1,
+              "tluszcz": 0.0,
+              "wegle": 16.4
+            },
+            {
+              "nazwa": "Jabłko",
+              "ile": "1 szt. (170 g)",
+              "g": 170,
+              "kcal": 85,
+              "bialko": 0.5,
+              "tluszcz": 0.3,
+              "wegle": 19.4
+            }
+          ],
+          "jak": "przepis",
+          "czas_min": 3,
           "kroki": [
             "📦 To zrobiłeś w bloku kuchni (dziś o 19:45) — teraz tylko wyjmij pojemnik z lodówki. Przepis niżej, gdybyś robił na świeżo.",
-            "Rozkłóć jajko (1 szt., 55 g) z mlekiem (60 ml) i 150 ml wody, dosyp mąkę (60 g) i słodzik (1 tabletka, 0 g). Ciasto ma być rzadkie jak śmietanka.",
-            "Smaż cienkie naleśniki na mocno rozgrzanej patelni, po ok. minucie z każdej strony. Wyjdą 3-4 sztuki.",
-            "Skyr (2 kubki, 300 g) rozsmaruj po naleśniku, zwiń w rulon.",
-            "Na wierzch krem do smarowania (35 g).",
+            "Jogurt (330 g) przełóż do miski lub pojemnika.",
+            "Jabłko (1 szt., 170 g) umyj, wytnij gniazdo z pestkami i pokrój w kostkę na wierzch.",
+            "Posyp orzechami (16 g) i polej miodem (1 łyżka, 20 g).",
             "Wszystkie ilości w krokach są już przeliczone na Twoją porcję na dziś — nic nie musisz dzielić."
           ]
         },
@@ -9548,70 +9572,60 @@
           "ping": false,
           "opis": "Ostatni posilek, z bialkiem.",
           "slot": "kolacja",
-          "posilek": "Kanapki z jajkiem na twardo i serem",
-          "posilek_id": "q_kanapki_jajko",
-          "porcja": 0.7,
+          "posilek": "Twaróg z makaronem i masłem orzechowym",
+          "posilek_id": "q_twarog_makaron",
+          "porcja": 0.6,
           "makra": {
-            "kcal": 248,
-            "bialko": 15,
-            "tluszcz": 12,
-            "wegle": 18
+            "kcal": 484,
+            "bialko": 28,
+            "tluszcz": 13,
+            "wegle": 62
           },
           "skladniki": [
             {
-              "nazwa": "Jaja",
-              "ile": "1 szt. (55 g)",
-              "g": 55,
-              "kcal": 79,
-              "bialko": 6.9,
-              "tluszcz": 5.2,
-              "wegle": 0.4
+              "nazwa": "Twaróg półtłusty",
+              "ile": "90 g",
+              "g": 90,
+              "kcal": 120,
+              "bialko": 16.8,
+              "tluszcz": 4.2,
+              "wegle": 3.3
             },
             {
-              "nazwa": "Chleb pszenny (zwykły biały)",
-              "ile": "1 kromka (35 g)",
-              "g": 35,
-              "kcal": 88,
-              "bialko": 2.8,
-              "tluszcz": 1.0,
-              "wegle": 16.4
+              "nazwa": "Makaron (świderki/penne)",
+              "ile": "45 g",
+              "g": 45,
+              "kcal": 160,
+              "bialko": 5.4,
+              "tluszcz": 0.7,
+              "wegle": 32.4
             },
             {
-              "nazwa": "Ser żółty w plastrach",
-              "ile": "1 plaster (20 g)",
-              "g": 20,
-              "kcal": 70,
-              "bialko": 5.1,
-              "tluszcz": 5.4,
-              "wegle": 0.1
+              "nazwa": "Masło orzechowe 100%",
+              "ile": "1 łyżka (16 g)",
+              "g": 16,
+              "kcal": 99,
+              "bialko": 4.2,
+              "tluszcz": 8.2,
+              "wegle": 1.8
             },
             {
-              "nazwa": "Musztarda",
-              "ile": "8 g",
-              "g": 8,
-              "kcal": 8,
-              "bialko": 0.4,
+              "nazwa": "Banan",
+              "ile": "1 szt. (120 g)",
+              "g": 120,
+              "kcal": 106,
+              "bialko": 1.3,
               "tluszcz": 0.4,
-              "wegle": 0.6
-            },
-            {
-              "nazwa": "Ogórek kiszony",
-              "ile": "32 g",
-              "g": 32,
-              "kcal": 4,
-              "bialko": 0.2,
-              "tluszcz": 0.1,
-              "wegle": 0.7
+              "wegle": 24.2
             }
           ],
           "jak": "przepis",
-          "czas_min": 12,
+          "czas_min": 14,
           "kroki": [
             "📦 To zrobiłeś w bloku kuchni (dziś o 19:45) — teraz tylko wyjmij pojemnik z lodówki. Przepis niżej, gdybyś robił na świeżo.",
-            "Jajka na twardo: w małym garnku zagotuj tyle wody, żeby przykryła jajka (1 szt., 55 g). Łyżką ostrożnie włóż jajka do wrzątku i gotuj 9 minut na średnim ogniu. Odlej wrzątek, zalej zimną wodą na 3 minuty i obierz ze skorupki.",
-            "Jajka pokrój w plastry.",
-            "Chleb (1 kromka, 35 g) posmaruj cienko musztardą (8 g), połóż ser (1 plaster, 20 g), na to plastry jajka. Posól i popieprz szczyptą.",
-            "Ogórka kiszonego (32 g) pokrój w plasterki i ułóż na wierzchu. Do boxa zawiń każdą kanapkę w folię.",
+            "Ugotuj makaron (45 g), odcedź, przestudź.",
+            "Twaróg (90 g) rozgnieć widelcem z odrobiną wody, aż będzie kremowy.",
+            "Połącz z makaronem, dodaj masło orzechowe (1 łyżka, 16 g) i banana (1 szt., 120 g) w plastrach.",
             "Wszystkie ilości w krokach są już przeliczone na Twoją porcję na dziś — nic nie musisz dzielić."
           ]
         },
@@ -9620,10 +9634,10 @@
           "tytul": "KUCHNIA — 20 minut",
           "ikona": "🍳",
           "ping": false,
-          "opis": "Przygotujesz: garnek: Makaron bolognese na wołowinie, Twaróg z bananem i miodem, Naleśniki ze skyrem i kremem, Kanapki z jajkiem na twardo i serem. Potem do jutra tylko sięgasz do lodówki.",
+          "opis": "Przygotujesz: garnek: Makaron bolognese na wołowinie, Gofry proteinowe z kremem, Jogurt grecki z orzechami i miodem, Twaróg z makaronem i masłem orzechowym. Potem do jutra tylko sięgasz do lodówki.",
           "akcja": "kuchnia",
           "kroki": [
-            "Wyjmij wszystko na blat, zanim zaczniesz: banan 1 szt. (120 g), cebula 140 g, chleb pszenny 1 kromka (35 g), czosnek 10 g, jaja 2 szt. (110 g), koncentrat pomidorowy 42 g, krem do smarowania bez cukru 35 g, mąka pszenna 60 g, makaron 170 g, marchew 110 g, wołowina świeżo mielona 350 g, miód 10 g, mleko 2% 90 ml, musztarda 8 g, ogórek kiszony 32 g, olej rzepakowy 10 ml, orzechy / migdały 6 g, passata pomidorowa 350 g, przyprawy 1 porcja (2 g), ser żółty w plastrach 1 plaster (20 g), skyr naturalny 2 kubki (300 g), słodzik w tabletkach 1 tabletka (0 g), twaróg półtłusty 110 g.",
+            "Wyjmij wszystko na blat, zanim zaczniesz: banan 1 szt. (120 g), cebula 140 g, czosnek 10 g, jabłko 1 szt. (170 g), jaja 1 szt. (55 g), jogurt grecki 2% 330 g, koncentrat pomidorowy 42 g, krem do smarowania bez cukru 10 g, mąka pszenna 25 g, makaron 215 g, marchew 110 g, masło orzechowe 100% 1 łyżka (16 g), wołowina świeżo mielona 350 g, miód 1 łyżka (20 g), olej rzepakowy 10 ml, orzechy / migdały 16 g, passata pomidorowa 350 g, proszek do pieczenia 1 g, skyr naturalny 1 kubek (150 g), słodzik w tabletkach 1 tabletka (0 g), twaróg półtłusty 90 g.",
             "Przygotuj 2 pojemniki i opisz je karteczką: dziś 11:30 — drugi posilek; dziś 19:00 — kolacja.",
             "▸ Garnek: Makaron bolognese na wołowinie — zaczynasz od niego, bo najdłużej się gotuje.",
             "Zanim zaczniesz: postaw na wadze kuchennej deskę do krojenia, na niej pusty duży garnek, i wpisz tę wagę w zakładce Gotuję → „Ile nałożyć na porcję” (pole „puste naczynie”). Na tej samej desce zważysz później naczynie z jedzeniem — deska chroni wagę przed gorącem.",
@@ -9634,26 +9648,21 @@
             "Dodaj mięso (350 g). Rozbijaj je łopatką na drobne kawałki i smaż 8 minut, mieszając co 1–2 minuty, aż nigdzie nie będzie różowego koloru.",
             "Dodaj czosnek, koncentrat pomidorowy (42 g), 1 płaską łyżeczkę soli, pół łyżeczki pieprzu i 1 łyżeczkę suszonego oregano. Mieszaj 1 minutę.",
             "Wlej passatę (350 g) i 100 ml wody (pół szklanki). Zamieszaj, zmniejsz ogień na mały (1/3 skali), przykryj pokrywką, zostawiając szparę, i gotuj 20 minut. Co 5 minut zamieszaj, żeby nic nie przywarło do dna.",
-            "▸ Woda — postaw ją od razu, zanim zaczniesz resztę:",
-            "Jajka na twardo dla Kanapki z jajkiem na twardo i serem (1 szt.) — razem 1 szt.: w małym garnku zagotuj wodę, łyżką włóż jajka, gotuj 9 minut na średnim ogniu, odlej wrzątek i zalej zimną wodą. Obierzesz je przy daniach.",
             "▸ Kiedy garnek się gotuje, robisz resztę — od najczystszych produktów do tych, po których myjesz nóż i deskę:",
-            "▸ Kanapki z jajkiem na twardo i serem",
-            "Weź 1 szt. ugotowanych jajek z garnka z zimną wodą.",
-            "Jajka pokrój w plastry.",
-            "Chleb (1 kromka, 35 g) posmaruj cienko musztardą (8 g), połóż ser (1 plaster, 20 g), na to plastry jajka. Posól i popieprz szczyptą.",
-            "Ogórka kiszonego (32 g) pokrój w plasterki i ułóż na wierzchu. Do boxa zawiń każdą kanapkę w folię.",
-            "Przełóż do pojemnika „dziś 19:00 — kolacja”.",
-            "▸ Naleśniki ze skyrem i kremem",
-            "Rozkłóć jajko (1 szt., 55 g) z mlekiem (60 ml) i 150 ml wody, dosyp mąkę (60 g) i słodzik (1 tabletka, 0 g). Ciasto ma być rzadkie jak śmietanka.",
-            "Smaż cienkie naleśniki na mocno rozgrzanej patelni, po ok. minucie z każdej strony. Wyjdą 3-4 sztuki.",
-            "Skyr (2 kubki, 300 g) rozsmaruj po naleśniku, zwiń w rulon.",
-            "Na wierzch krem do smarowania (35 g).",
+            "▸ Jogurt grecki z orzechami i miodem",
+            "Jogurt (330 g) przełóż do miski lub pojemnika.",
+            "Jabłko (1 szt., 170 g) umyj, wytnij gniazdo z pestkami i pokrój w kostkę na wierzch.",
+            "Posyp orzechami (16 g) i polej miodem (1 łyżka, 20 g).",
             "Przełóż do pojemnika „dziś 11:30 — drugi posilek”.",
-            "▸ Twaróg z bananem i miodem",
-            "Twaróg (110 g) włóż do miski, dolej mleko (30 ml) i rozgniataj widelcem ok. minuty na krem.",
-            "Banana (1 szt., 120 g) obierz i pokrój w plasterki na wierzch.",
-            "Polej miodem (10 g) i posyp orzechami (6 g).",
-            "Na zmianę: wszystko do zakręcanego pojemnika, banana weź w całości i pokrój przy jedzeniu.",
+            "▸ Twaróg z makaronem i masłem orzechowym",
+            "Ugotuj makaron (45 g), odcedź, przestudź.",
+            "Twaróg (90 g) rozgnieć widelcem z odrobiną wody, aż będzie kremowy.",
+            "Połącz z makaronem, dodaj masło orzechowe (1 łyżka, 16 g) i banana (1 szt., 120 g) w plastrach.",
+            "Przełóż do pojemnika „dziś 19:00 — kolacja”.",
+            "▸ Gofry proteinowe z kremem",
+            "Wymieszaj jajka (1 szt., 55 g), skyr (1 kubek, 150 g), mąkę (25 g), proszek do pieczenia (1 g) i słodzik (1 tabletka, 0 g) na gęste ciasto.",
+            "Nagrzej gofrownicę i piecz porcjami po ok. 4 minuty. Bez gofrownicy usmaż placki na patelni pod przykryciem.",
+            "Na wierzch krem do smarowania (10 g). Na zimno też smakują, więc idą do pojemnika.",
             "To zjadasz od razu, na koniec bloku.",
             "▸ Wróć do garnka: Makaron bolognese na wołowinie",
             "W tym czasie w drugim garnku zagotuj ok. 2,5 litra wody z 1 łyżką soli. Gdy woda mocno bulgocze, wsyp makaron (170 g), zamieszaj i gotuj tyle minut, ile podaje opakowanie (zwykle 9–11). Mieszaj co 3 minuty.",
@@ -9663,7 +9672,7 @@
             "▸ Na koniec: ciepłe pojemniki wystudź 20–30 minut bez pokrywki, potem wszystkie do lodówki na jedną półkę. Naczynia do zlewu, przetrzyj blat — 5 minut teraz oszczędza 20 jutro."
           ],
           "jak": "kuchnia",
-          "czas_min": 47
+          "czas_min": 44
         },
         {
           "czas": "22:30",
@@ -9681,10 +9690,10 @@
         }
       ],
       "makra": {
-        "kcal": 1839,
-        "bialko": 125,
-        "tluszcz": 69,
-        "wegle": 173
+        "kcal": 1853,
+        "bialko": 124,
+        "tluszcz": 62,
+        "wegle": 191
       },
       "dobitka": 0,
       "dodatek_w": [],
@@ -9748,14 +9757,14 @@
           "ping": false,
           "opis": "Pierwszy posilek dnia.",
           "slot": "sniadanie",
-          "posilek": "Naleśniki ze skyrem i kremem",
-          "posilek_id": "q_nalesniki",
-          "porcja": 0.5,
+          "posilek": "Kanapki z jajkiem na twardo i serem",
+          "posilek_id": "q_kanapki_jajko",
+          "porcja": 0.7,
           "makra": {
-            "kcal": 587,
-            "bialko": 35,
-            "tluszcz": 16,
-            "wegle": 75
+            "kcal": 248,
+            "bialko": 15,
+            "tluszcz": 12,
+            "wegle": 18
           },
           "skladniki": [
             {
@@ -9768,80 +9777,50 @@
               "wegle": 0.4
             },
             {
-              "nazwa": "Mleko 2%",
-              "ile": "25 ml",
-              "g": 25,
-              "kcal": 12,
-              "bialko": 0.8,
-              "tluszcz": 0.5,
-              "wegle": 1.2
-            },
-            {
-              "nazwa": "Mąka pszenna",
-              "ile": "25 g",
-              "g": 25,
-              "kcal": 86,
-              "bialko": 2.5,
-              "tluszcz": 0.3,
-              "wegle": 17.8
-            },
-            {
-              "nazwa": "Słodzik w tabletkach",
-              "ile": "0 g",
-              "g": 0,
-              "kcal": 0,
-              "bialko": 0.0,
-              "tluszcz": 0.0,
-              "wegle": 0.0
-            },
-            {
-              "nazwa": "Skyr naturalny (kubek 150 g)",
-              "ile": "1 kubek (150 g)",
-              "g": 150,
-              "kcal": 96,
-              "bialko": 17.2,
-              "tluszcz": 0.3,
-              "wegle": 5.7
-            },
-            {
-              "nazwa": "Krem do smarowania bez cukru",
-              "ile": "15 g",
-              "g": 15,
-              "kcal": 78,
-              "bialko": 1.8,
-              "tluszcz": 7.5,
-              "wegle": 1.2
-            },
-            {
               "nazwa": "Chleb pszenny (zwykły biały)",
-              "ile": "+ 2 kromki (70 g)",
-              "g": 70,
-              "kcal": 175,
-              "bialko": 5.6,
-              "tluszcz": 2.1,
-              "wegle": 32.9,
-              "dodatek": true
+              "ile": "1 kromka (35 g)",
+              "g": 35,
+              "kcal": 88,
+              "bialko": 2.8,
+              "tluszcz": 1.0,
+              "wegle": 16.4
             },
             {
-              "nazwa": "Miód",
-              "ile": "+ 1 łyżka (20 g)",
+              "nazwa": "Ser żółty w plastrach",
+              "ile": "1 plaster (20 g)",
               "g": 20,
-              "kcal": 61,
-              "bialko": 0.1,
-              "tluszcz": 0.0,
-              "wegle": 16.4,
-              "dodatek": true
+              "kcal": 70,
+              "bialko": 5.1,
+              "tluszcz": 5.4,
+              "wegle": 0.1
+            },
+            {
+              "nazwa": "Musztarda",
+              "ile": "8 g",
+              "g": 8,
+              "kcal": 8,
+              "bialko": 0.4,
+              "tluszcz": 0.4,
+              "wegle": 0.6
+            },
+            {
+              "nazwa": "Ogórek kiszony",
+              "ile": "32 g",
+              "g": 32,
+              "kcal": 4,
+              "bialko": 0.2,
+              "tluszcz": 0.1,
+              "wegle": 0.7
             }
           ],
           "jak": "przepis",
-          "czas_min": 16,
+          "czas_min": 12,
           "kroki": [
-            "Rozkłóć jajko (1 szt., 55 g) z mlekiem (25 ml) i 150 ml wody, dosyp mąkę (25 g) i słodzik (0 g). Ciasto ma być rzadkie jak śmietanka.",
-            "Smaż cienkie naleśniki na mocno rozgrzanej patelni, po ok. minucie z każdej strony. Wyjdą 3-4 sztuki.",
-            "Skyr (1 kubek, 150 g) rozsmaruj po naleśniku, zwiń w rulon.",
-            "Na wierzch krem do smarowania (15 g).",
-            "Wszystkie ilości w krokach są już przeliczone na Twoją porcję na dziś — nic nie musisz dzielić.",
-            "Do tego dodatek węglowy: chleb pszenny 2 kromki, miód 1 łyżka. Zjedz obok — to paliwo na trening i regenerację, bez niego dzień nie dobija węglowodanów."
+            "Jajka na twardo: w małym garnku zagotuj tyle wody, żeby przykryła jajka (1 szt., 55 g). Łyżką ostrożnie włóż jajka do wrzątku i gotuj 9 minut na średnim ogniu. Odlej wrzątek, zalej zimną wodą na 3 minuty i obierz ze skorupki.",
+            "Jajka pokrój w plastry.",
+            "Chleb (1 kromka, 35 g) posmaruj cienko musztardą (8 g), połóż ser (1 plaster, 20 g), na to plastry jajka. Posól i popieprz szczyptą.",
+            "Ogórka kiszonego (32 g) pokrój w plasterki i ułóż na wierzchu. Do boxa zawiń każdą kanapkę w folię.",
+            "Wszystkie ilości w krokach są już przeliczone na Twoją porcję na dziś — nic nie musisz dzielić."
           ]
         },
         {
@@ -9851,61 +9830,70 @@
           "ping": false,
           "opis": "Zjedz zanim zglodniejesz.",
           "slot": "drugi",
-          "posilek": "Box: serek wiejski + jajka na twardo + ogórki",
-          "posilek_id": "q_serek_box",
-          "porcja": 0.6,
+          "posilek": "Twaróg z bananem i miodem",
+          "posilek_id": "q_twarog_banan",
+          "porcja": 1.2,
           "makra": {
-            "kcal": 447,
-            "bialko": 39,
-            "tluszcz": 22,
-            "wegle": 23
+            "kcal": 559,
+            "bialko": 46,
+            "tluszcz": 19,
+            "wegle": 53
           },
           "skladniki": [
             {
-              "nazwa": "Serek wiejski",
-              "ile": "1 opak. (200 g)",
-              "g": 200,
-              "kcal": 194,
-              "bialko": 22.0,
-              "tluszcz": 10.0,
-              "wegle": 4.0
+              "nazwa": "Twaróg półtłusty",
+              "ile": "215 g",
+              "g": 215,
+              "kcal": 286,
+              "bialko": 40.2,
+              "tluszcz": 10.1,
+              "wegle": 8.0
             },
             {
-              "nazwa": "Jaja",
-              "ile": "2 szt. (110 g)",
-              "g": 110,
-              "kcal": 157,
-              "bialko": 13.9,
-              "tluszcz": 10.5,
-              "wegle": 0.8
+              "nazwa": "Banan",
+              "ile": "1 szt. (120 g)",
+              "g": 120,
+              "kcal": 106,
+              "bialko": 1.3,
+              "tluszcz": 0.4,
+              "wegle": 24.2
             },
             {
-              "nazwa": "Ogórek kiszony",
-              "ile": "1 szt. (65 g)",
-              "g": 65,
-              "kcal": 8,
-              "bialko": 0.3,
-              "tluszcz": 0.1,
-              "wegle": 1.3
-            },
-            {
-              "nazwa": "Chleb pszenny (zwykły biały)",
-              "ile": "1 kromka (35 g)",
-              "g": 35,
-              "kcal": 88,
-              "bialko": 2.8,
-              "tluszcz": 1.0,
+              "nazwa": "Miód",
+              "ile": "1 łyżka (20 g)",
+              "g": 20,
+              "kcal": 61,
+              "bialko": 0.1,
+              "tluszcz": 0.0,
               "wegle": 16.4
+            },
+            {
+              "nazwa": "Orzechy / migdały",
+              "ile": "12 g",
+              "g": 12,
+              "kcal": 77,
+              "bialko": 2.3,
+              "tluszcz": 6.8,
+              "wegle": 1.2
+            },
+            {
+              "nazwa": "Mleko 2%",
+              "ile": "60 ml",
+              "g": 60,
+              "kcal": 30,
+              "bialko": 2.0,
+              "tluszcz": 1.2,
+              "wegle": 2.9
             }
           ],
           "jak": "przepis",
-          "czas_min": 12,
+          "czas_min": 4,
           "kroki": [
             "📦 To zrobiłeś w bloku kuchni (dziś o 19:45) — teraz tylko wyjmij pojemnik z lodówki. Przepis niżej, gdybyś robił na świeżo.",
-            "Jajka na twardo: w małym garnku zagotuj tyle wody, żeby przykryła jajka (2 szt., 110 g). Łyżką ostrożnie włóż jajka do wrzątku i gotuj 9 minut na średnim ogniu. Odlej wrzątek, zalej zimną wodą na 3 minuty i obierz ze skorupki.",
-            "Do pojemnika przełóż serek wiejski (1 opak., 200 g). Obok ułóż jajka przekrojone na pół i posyp je szczyptą soli i pieprzu.",
-            "Dołóż ogórki kiszone (1 szt., 65 g) — w całości albo pokrojone.",
-            "Chleb (1 kromka, 35 g) zapakuj do osobnej torebki. Nic nie trzeba odgrzewać.",
+            "Twaróg (215 g) włóż do miski, dolej mleko (60 ml) i rozgniataj widelcem ok. minuty na krem.",
+            "Banana (1 szt., 120 g) obierz i pokrój w plasterki na wierzch.",
+            "Polej miodem (1 łyżka, 20 g) i posyp orzechami (12 g).",
+            "Na zmianę: wszystko do zakręcanego pojemnika, banana weź w całości i pokrój przy jedzeniu.",
             "Wszystkie ilości w krokach są już przeliczone na Twoją porcję na dziś — nic nie musisz dzielić."
           ]
         },
@@ -10031,61 +10019,51 @@
           "ping": false,
           "opis": "Ostatni posilek, z bialkiem.",
           "slot": "kolacja",
-          "posilek": "Twarożek na słodko z dżemem + pieczywo",
-          "posilek_id": "q_twarog",
-          "porcja": 0.5,
+          "posilek": "Serek wiejski z makaronem i bananem",
+          "posilek_id": "q_serek_makaron",
+          "porcja": 0.7,
           "makra": {
-            "kcal": 254,
-            "bialko": 22,
-            "tluszcz": 6,
-            "wegle": 27
+            "kcal": 477,
+            "bialko": 29,
+            "tluszcz": 11,
+            "wegle": 64
           },
           "skladniki": [
             {
-              "nazwa": "Twaróg półtłusty",
-              "ile": "100 g",
-              "g": 100,
-              "kcal": 133,
-              "bialko": 18.7,
-              "tluszcz": 4.7,
-              "wegle": 3.7
+              "nazwa": "Serek wiejski",
+              "ile": "1 opak. (200 g)",
+              "g": 200,
+              "kcal": 194,
+              "bialko": 22.0,
+              "tluszcz": 10.0,
+              "wegle": 4.0
             },
             {
-              "nazwa": "Mleko 2%",
-              "ile": "10 ml",
-              "g": 10,
-              "kcal": 5,
-              "bialko": 0.3,
-              "tluszcz": 0.2,
-              "wegle": 0.5
+              "nazwa": "Makaron (świderki/penne)",
+              "ile": "50 g",
+              "g": 50,
+              "kcal": 178,
+              "bialko": 6.0,
+              "tluszcz": 0.8,
+              "wegle": 36.0
             },
             {
-              "nazwa": "Dżem (np. malinowy, słoik 200 g)",
-              "ile": "20 g",
-              "g": 20,
-              "kcal": 29,
-              "bialko": 0.1,
-              "tluszcz": 0.1,
-              "wegle": 6.8
-            },
-            {
-              "nazwa": "Chleb pszenny (zwykły biały)",
-              "ile": "1 kromka (35 g)",
-              "g": 35,
-              "kcal": 88,
-              "bialko": 2.8,
-              "tluszcz": 1.0,
-              "wegle": 16.4
+              "nazwa": "Banan",
+              "ile": "1 szt. (120 g)",
+              "g": 120,
+              "kcal": 106,
+              "bialko": 1.3,
+              "tluszcz": 0.4,
+              "wegle": 24.2
             }
           ],
           "jak": "przepis",
-          "czas_min": 4,
+          "czas_min": 14,
           "kroki": [
             "📦 To zrobiłeś w bloku kuchni (dziś o 19:45) — teraz tylko wyjmij pojemnik z lodówki. Przepis niżej, gdybyś robił na świeżo.",
-            "Twaróg (100 g) włóż do miski i dolej mleko (10 ml).",
-            "Rozgniataj widelcem ok. minuty, aż twaróg będzie gładki i kremowy.",
-            "Dżem (20 g): połowę wmieszaj w twaróg, resztę połóż na wierzch.",
-            "Zjedz z chlebem (1 kromka, 35 g) albo posmaruj nim kromki. Do boxa: twarożek w zakręcanym pojemniku, chleb w osobnej torebce.",
+            "Wstaw osoloną wodę, ugotuj makaron (50 g) wg czasu z opakowania, odcedź i przestudź.",
+            "Wymieszaj z serkiem wiejskim (1 opak., 200 g), dopraw (1 porcja, 2 g).",
+            "Banan (1 szt., 120 g) w plastry — osobno albo na wierzch.",
             "Wszystkie ilości w krokach są już przeliczone na Twoją porcję na dziś — nic nie musisz dzielić."
           ]
         },
@@ -10094,10 +10072,10 @@
           "tytul": "KUCHNIA — 20 minut",
           "ikona": "🍳",
           "ping": false,
-          "opis": "Przygotujesz: garnek: Makaron bolognese na wołowinie, Naleśniki ze skyrem i kremem, Box: serek wiejski + jajka na twardo + ogórki, Twarożek na słodko z dżemem + pieczywo. Potem do jutra tylko sięgasz do lodówki.",
+          "opis": "Przygotujesz: garnek: Makaron bolognese na wołowinie, Kanapki z jajkiem na twardo i serem, Twaróg z bananem i miodem, Serek wiejski z makaronem i bananem. Potem do jutra tylko sięgasz do lodówki.",
           "akcja": "kuchnia",
           "kroki": [
-            "Wyjmij wszystko na blat, zanim zaczniesz: cebula 140 g, chleb pszenny 4 kromki (140 g), czosnek 10 g, dżem 20 g, jaja 3 szt. (165 g), koncentrat pomidorowy 42 g, krem do smarowania bez cukru 15 g, mąka pszenna 25 g, makaron 170 g, marchew 110 g, wołowina świeżo mielona 350 g, miód 1 łyżka (20 g), mleko 2% 35 ml, ogórek kiszony 1 szt. (65 g), olej rzepakowy 10 ml, passata pomidorowa 350 g, przyprawy 1 porcja (2 g), serek wiejski 1 opak. (200 g), skyr naturalny 1 kubek (150 g), słodzik w tabletkach 0 g, twaróg półtłusty 100 g.",
+            "Wyjmij wszystko na blat, zanim zaczniesz: banan 2 szt. (240 g), cebula 140 g, chleb pszenny 1 kromka (35 g), czosnek 10 g, jaja 1 szt. (55 g), koncentrat pomidorowy 42 g, makaron 220 g, marchew 110 g, wołowina świeżo mielona 350 g, miód 1 łyżka (20 g), mleko 2% 60 ml, musztarda 8 g, ogórek kiszony 32 g, olej rzepakowy 10 ml, orzechy / migdały 12 g, passata pomidorowa 350 g, przyprawy 2 porcje (4 g), ser żółty w plastrach 1 plaster (20 g), serek wiejski 1 opak. (200 g), twaróg półtłusty 215 g.",
             "Przygotuj 2 pojemniki i opisz je karteczką: dziś 11:30 — drugi posilek; dziś 19:00 — kolacja.",
             "▸ Garnek: Makaron bolognese na wołowinie — zaczynasz od niego, bo najdłużej się gotuje.",
             "Zanim zaczniesz: postaw na wadze kuchennej deskę do krojenia, na niej pusty duży garnek, i wpisz tę wagę w zakładce Gotuję → „Ile nałożyć na porcję” (pole „puste naczynie”). Na tej samej desce zważysz później naczynie z jedzeniem — deska chroni wagę przed gorącem.",
@@ -10109,36 +10087,34 @@
             "Dodaj czosnek, koncentrat pomidorowy (42 g), 1 płaską łyżeczkę soli, pół łyżeczki pieprzu i 1 łyżeczkę suszonego oregano. Mieszaj 1 minutę.",
             "Wlej passatę (350 g) i 100 ml wody (pół szklanki). Zamieszaj, zmniejsz ogień na mały (1/3 skali), przykryj pokrywką, zostawiając szparę, i gotuj 20 minut. Co 5 minut zamieszaj, żeby nic nie przywarło do dna.",
             "▸ Woda — postaw ją od razu, zanim zaczniesz resztę:",
-            "Jajka na twardo dla Box: serek wiejski + jajka na twardo + ogórki (2 szt.) — razem 2 szt.: w małym garnku zagotuj wodę, łyżką włóż jajka, gotuj 9 minut na średnim ogniu, odlej wrzątek i zalej zimną wodą. Obierzesz je przy daniach.",
+            "Jajka na twardo dla Kanapki z jajkiem na twardo i serem (1 szt.) — razem 1 szt.: w małym garnku zagotuj wodę, łyżką włóż jajka, gotuj 9 minut na średnim ogniu, odlej wrzątek i zalej zimną wodą. Obierzesz je przy daniach.",
             "▸ Kiedy garnek się gotuje, robisz resztę — od najczystszych produktów do tych, po których myjesz nóż i deskę:",
-            "▸ Twarożek na słodko z dżemem + pieczywo",
-            "Twaróg (100 g) włóż do miski i dolej mleko (10 ml).",
-            "Rozgniataj widelcem ok. minuty, aż twaróg będzie gładki i kremowy.",
-            "Dżem (20 g): połowę wmieszaj w twaróg, resztę połóż na wierzch.",
-            "Zjedz z chlebem (1 kromka, 35 g) albo posmaruj nim kromki. Do boxa: twarożek w zakręcanym pojemniku, chleb w osobnej torebce.",
-            "Przełóż do pojemnika „dziś 19:00 — kolacja”.",
-            "▸ Box: serek wiejski + jajka na twardo + ogórki",
-            "Weź 2 szt. ugotowanych jajek z garnka z zimną wodą.",
-            "Do pojemnika przełóż serek wiejski (1 opak., 200 g). Obok ułóż jajka przekrojone na pół i posyp je szczyptą soli i pieprzu.",
-            "Dołóż ogórki kiszone (1 szt., 65 g) — w całości albo pokrojone.",
-            "Chleb (1 kromka, 35 g) zapakuj do osobnej torebki. Nic nie trzeba odgrzewać.",
+            "▸ Twaróg z bananem i miodem",
+            "Twaróg (215 g) włóż do miski, dolej mleko (60 ml) i rozgniataj widelcem ok. minuty na krem.",
+            "Banana (1 szt., 120 g) obierz i pokrój w plasterki na wierzch.",
+            "Polej miodem (1 łyżka, 20 g) i posyp orzechami (12 g).",
+            "Na zmianę: wszystko do zakręcanego pojemnika, banana weź w całości i pokrój przy jedzeniu.",
             "Przełóż do pojemnika „dziś 11:30 — drugi posilek”.",
-            "▸ Naleśniki ze skyrem i kremem",
-            "Rozkłóć jajko (1 szt., 55 g) z mlekiem (25 ml) i 150 ml wody, dosyp mąkę (25 g) i słodzik (0 g). Ciasto ma być rzadkie jak śmietanka.",
-            "Smaż cienkie naleśniki na mocno rozgrzanej patelni, po ok. minucie z każdej strony. Wyjdą 3-4 sztuki.",
-            "Skyr (1 kubek, 150 g) rozsmaruj po naleśniku, zwiń w rulon.",
-            "Na wierzch krem do smarowania (15 g).",
+            "▸ Serek wiejski z makaronem i bananem",
+            "Wstaw osoloną wodę, ugotuj makaron (50 g) wg czasu z opakowania, odcedź i przestudź.",
+            "Wymieszaj z serkiem wiejskim (1 opak., 200 g), dopraw (1 porcja, 2 g).",
+            "Banan (1 szt., 120 g) w plastry — osobno albo na wierzch.",
+            "Przełóż do pojemnika „dziś 19:00 — kolacja”.",
+            "▸ Kanapki z jajkiem na twardo i serem",
+            "Weź 1 szt. ugotowanych jajek z garnka z zimną wodą.",
+            "Jajka pokrój w plastry.",
+            "Chleb (1 kromka, 35 g) posmaruj cienko musztardą (8 g), połóż ser (1 plaster, 20 g), na to plastry jajka. Posól i popieprz szczyptą.",
+            "Ogórka kiszonego (32 g) pokrój w plasterki i ułóż na wierzchu. Do boxa zawiń każdą kanapkę w folię.",
             "To zjadasz od razu, na koniec bloku.",
             "▸ Wróć do garnka: Makaron bolognese na wołowinie",
             "W tym czasie w drugim garnku zagotuj ok. 2,5 litra wody z 1 łyżką soli. Gdy woda mocno bulgocze, wsyp makaron (170 g), zamieszaj i gotuj tyle minut, ile podaje opakowanie (zwykle 9–11). Mieszaj co 3 minuty.",
             "Odcedź makaron na durszlaku i od razu przełóż go do garnka z sosem. Mieszaj, aż cały makaron będzie pokryty sosem. Wyłącz kuchenkę.",
             "Porcjowanie: zważ garnek z gotowym jedzeniem na tej samej desce i wpisz wagę w panelu — pokaże, ile gramów nałożyć do każdego z 3 pojemników.",
             "Do każdego z 3 pojemników nałóż wyliczone gramy: postaw pusty pojemnik na wadze, wciśnij TARA (waga pokaże 0) i nakładaj, aż dojdziesz do liczby z panelu. Zostaw pojemniki otwarte na 20–30 minut, żeby wystygły, potem zamknij i wstaw do lodówki. Każdy pojemnik to dokładnie jedna porcja z Twojego planu.",
-            "Do „dziś 08:00 — sniadanie” dołóż: chleb pszenny 2 kromki (70 g), miód 1 łyżka (20 g).",
             "▸ Na koniec: ciepłe pojemniki wystudź 20–30 minut bez pokrywki, potem wszystkie do lodówki na jedną półkę. Naczynia do zlewu, przetrzyj blat — 5 minut teraz oszczędza 20 jutro."
           ],
           "jak": "kuchnia",
-          "czas_min": 47
+          "czas_min": 45
         },
         {
           "czas": "22:30",
@@ -10156,22 +10132,13 @@
         }
       ],
       "makra": {
-        "kcal": 1855,
-        "bialko": 128,
-        "tluszcz": 66,
-        "wegle": 181
+        "kcal": 1851,
+        "bialko": 122,
+        "tluszcz": 64,
+        "wegle": 191
       },
       "dobitka": 0,
-      "dodatek_w": [
-        [
-          "chleb",
-          2
-        ],
-        [
-          "miod",
-          1
-        ]
-      ],
+      "dodatek_w": [],
       "poza_planem": [],
       "lzejszy": false,
       "cel": {
@@ -10696,11 +10663,11 @@
         "bez_gotowania": false
       },
       {
-        "id": "q_kanapki_ser",
-        "nazwa": "Kanapki z serem, musztardą i kiszonym ogórkiem",
-        "kcal": 484,
-        "bialko": 23,
-        "czas": 4,
+        "id": "q_kanapki_poledwica",
+        "nazwa": "Kanapki z polędwicą, serem i ogórkiem",
+        "kcal": 569,
+        "bialko": 31,
+        "czas": 5,
         "bez_gotowania": false
       },
       {
