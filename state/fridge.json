@@ -1,7 +1,7 @@
 {
   "stan": {
     "mleko": {
-      "ilosc": 852,
+      "ilosc": 697,
       "do": "2026-11-08"
     },
     "ser_zolty": {
@@ -13,51 +13,51 @@
       "do": "2026-11-08"
     },
     "czosnek": {
-      "ilosc": 4.0,
+      "ilosc": 1.0,
       "do": "2027-05-15"
     },
     "ogorek_kiszony": {
-      "ilosc": 4.5,
+      "ilosc": 3.0,
       "do": "2027-05-15"
     },
     "chleb": {
-      "ilosc": 6,
+      "ilosc": 14,
       "do": "2026-11-08"
     },
     "makaron": {
-      "ilosc": 265.0,
+      "ilosc": 450.0,
       "do": "2027-05-15"
     },
     "dzem_niskoslodzony": {
-      "ilosc": 25,
+      "ilosc": 185,
       "do": "2027-05-15"
     },
     "koncentrat": {
-      "ilosc": 80.0,
+      "ilosc": 20.0,
       "do": "2027-05-15"
     },
     "maslo_orzechowe": {
-      "ilosc": 18.0,
+      "ilosc": 15.75,
       "do": "2027-05-15"
     },
     "miod": {
-      "ilosc": 16.0,
+      "ilosc": 14.0,
       "do": "2027-05-15"
     },
     "musztarda": {
-      "ilosc": 10,
+      "ilosc": 9,
       "do": "2027-05-15"
     },
     "maka": {
-      "ilosc": 1050,
+      "ilosc": 1010,
       "do": "2027-05-15"
     },
     "olej": {
-      "ilosc": 970.0,
+      "ilosc": 955.0,
       "do": "2027-05-15"
     },
     "orzechy": {
-      "ilosc": 141,
+      "ilosc": 131,
       "do": "2027-05-15"
     },
     "proszek_do_pieczenia": {
@@ -69,11 +69,11 @@
       "do": "2027-05-15"
     },
     "przyprawy": {
-      "ilosc": 88.0,
+      "ilosc": 81.0,
       "do": "2027-05-15"
     },
     "maslo": {
-      "ilosc": 195,
+      "ilosc": 190,
       "do": "2026-11-11"
     },
     "serek_wiejski": {
@@ -85,8 +85,40 @@
       "do": "2026-11-03"
     },
     "kakao": {
-      "ilosc": 18,
+      "ilosc": 17.0,
       "do": "2027-05-18"
+    },
+    "poledwica": {
+      "ilosc": 85,
+      "do": "2026-11-14"
+    },
+    "mielone_wolowe": {
+      "ilosc": 300.0,
+      "do": "2026-11-06"
+    },
+    "jogurt_grecki": {
+      "ilosc": 320,
+      "do": "2026-11-14"
+    },
+    "tortilla": {
+      "ilosc": 5,
+      "do": "2027-05-21"
+    },
+    "krem_bez_cukru": {
+      "ilosc": 275,
+      "do": "2027-05-21"
+    },
+    "kukurydza": {
+      "ilosc": 300,
+      "do": "2027-05-21"
+    },
+    "majonez_sriracha": {
+      "ilosc": 238,
+      "do": "2027-05-21"
+    },
+    "slodzik": {
+      "ilosc": 299.0,
+      "do": "2027-05-21"
     }
   },
   "log": [
@@ -113,6 +145,12 @@
       "co": "wyrzucone",
       "produkt": "mielone_wolowe",
       "ilosc": 200.0
+    },
+    {
+      "data": "2026-11-02",
+      "co": "cykl:2026-11-02",
+      "pozycji": 21,
+      "koszt": 147.66
     }
   ]
 }
