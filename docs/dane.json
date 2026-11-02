@@ -1,5 +1,5 @@
 {
-  "wygenerowano": "2026-11-02T20:00:12+01:00",
+  "wygenerowano": "2026-11-02T23:45:21+01:00",
   "dzis": "2026-11-02",
   "typ_dzis": 0,
   "typy": {
@@ -1179,7 +1179,7 @@
     "trening": {
       "id": "klatka_triceps",
       "nazwa": "Poniedziałek — klatka + triceps",
-      "czas_min": 58,
+      "czas_min": 52,
       "blok": "Blok 2 — Fundament",
       "blok_opis": "Trzy serie i pierwsza progresja. Gdy zrobisz górę zakresu we wszystkich seriach, system podniesie ciężar.",
       "zapas": "2 powtórzenia w zapasie",
@@ -1195,7 +1195,19 @@
           "powt": "6-8",
           "przerwa": "3-4 min",
           "wskazowka": "Ławka w klatce, bolce na wysokości klatki. Łopatki ściągnięte, stopy mocno na podłodze. Sztanga schodzi do dolnej części klatki, łokcie ok. 45 stopni od tułowia. Pierwsza seria ciężka (6-8), druga lżejsza na 10-12.",
-          "serie_wstepne": "30% × 8-12, 50% × 8, 75% × 2-3"
+          "serie_wstepne": "30% × 8-12, 50% × 8, 75% × 2-3",
+          "propozycja": {
+            "ciezar": 60.0,
+            "poprzedni": 60.0,
+            "powt": [
+              6,
+              6,
+              5,
+              4
+            ],
+            "data": "2026-11-02",
+            "podwyzka": 0.0
+          }
         },
         {
           "nazwa": "Wyciskanie sztangi na skosie",
@@ -1203,7 +1215,18 @@
           "powt": "8-10",
           "przerwa": "3 min",
           "wskazowka": "Ławka 30 stopni, sztanga schodzi do obojczyków, łopatki ściągnięte. To ćwiczenie robi górę klatki.",
-          "serie_wstepne": "30% × 8-12, 50% × 8, 75% × 2-3"
+          "serie_wstepne": "30% × 8-12, 50% × 8, 75% × 2-3",
+          "propozycja": {
+            "ciezar": 35.0,
+            "poprzedni": 40.0,
+            "powt": [
+              6,
+              6,
+              6
+            ],
+            "data": "2026-11-02",
+            "podwyzka": -5.0
+          }
         },
         {
           "nazwa": "Wyciskanie hantli poziomo",
@@ -1211,22 +1234,25 @@
           "powt": "10-12",
           "przerwa": "2-3 min",
           "wskazowka": "Ławka płasko, hantle schodzą do poziomu klatki, łokcie ok. 45 stopni. Większy zakres niż przy sztandze.",
-          "serie_wstepne": "50% × 5-6"
+          "serie_wstepne": "50% × 5-6",
+          "propozycja": {
+            "ciezar": 14.0,
+            "poprzedni": 20.0,
+            "powt": [
+              6,
+              5,
+              4
+            ],
+            "data": "2026-11-02",
+            "podwyzka": -6.0
+          }
         },
         {
-          "nazwa": "Rozpiętki hantlami na skosie",
+          "nazwa": "Wyciskanie hantli z dociskiem",
           "serie": 3,
           "powt": "12-15",
           "przerwa": "1,5-2 min",
-          "wskazowka": "Ławka 30 stopni, ręce lekko ugięte, ruch jak przy obejmowaniu drzewa. Opuszczasz do poziomu barków, nie niżej — dalej to już tylko bark.",
-          "serie_wstepne": "50% × 5-6"
-        },
-        {
-          "nazwa": "Pullover z hantlem",
-          "serie": 3,
-          "powt": "12-15",
-          "przerwa": "1,5-2 min",
-          "wskazowka": "Leżysz w poprzek ławki, biodra niżej od klatki, hantel oburącz nad klatką. Opuszczasz za głowę na lekko ugiętych łokciach, aż poczujesz rozciąganie pod pachami, i wracasz. Bez drążka to jedyny ruch, który ciągnie plecy z góry.",
+          "wskazowka": "Ławka płasko, dwa hantle ściśnięte razem nad klatką, dłonie zwrócone do siebie. Wyciskasz w górę i wracasz do klatki, cały czas dociskając hantle jeden do drugiego — ten docisk robi całą robotę na klatce. Bark nie wchodzi w rozciąganie, które bolało przy rozpiętkach.",
           "serie_wstepne": "50% × 5-6"
         },
         {
@@ -1235,14 +1261,24 @@
           "powt": "8-10",
           "przerwa": "2-3 min",
           "wskazowka": "Chwyt na szerokość barków, łokcie blisko tułowia, sztanga schodzi do dołu klatki. To ćwiczenie na triceps, nie na klatkę — nie rozkładaj łokci na boki.",
-          "serie_wstepne": "50% × 5-6"
+          "serie_wstepne": "50% × 5-6",
+          "propozycja": {
+            "ciezar": 35.0,
+            "poprzedni": 40.0,
+            "powt": [
+              4,
+              4
+            ],
+            "data": "2026-11-02",
+            "podwyzka": -5.0
+          }
         },
         {
-          "nazwa": "Wyciskanie francuskie sztangą",
+          "nazwa": "Wyciskanie francuskie hantli",
           "serie": 3,
           "powt": "10-12",
           "przerwa": "1,5-2 min",
-          "wskazowka": "Leżysz na ławce, sztanga EZ nad klatką, łokcie w miejscu. Zginasz ramiona, aż gryf znajdzie się nad czołem, i prostujesz.",
+          "wskazowka": "Leżąc, dwa hantle nad klatką, łokcie w miejscu i skierowane do sufitu. Zginasz ramiona, aż hantle znajdą się przy uszach, i prostujesz. Hantle zamiast sztangi dlatego, że możesz zejść do 2 × 4 kg — przy sztandze mniej niż gryf z najmniejszymi talerzami nie założysz.",
           "serie_wstepne": "50% × 5-6",
           "seria_laczona": "Prostowanie ramion z hantlem nad głową"
         },
@@ -1253,7 +1289,18 @@
           "przerwa": "1,5-2 min",
           "wskazowka": "Siedząc, hantel oburącz nad głową, opuszczasz za kark. Łokcie blisko głowy, ruszają tylko przedramiona.",
           "serie_wstepne": "50% × 5-6",
-          "seria_laczona": "Wyciskanie francuskie sztangą"
+          "seria_laczona": "Wyciskanie francuskie hantli",
+          "propozycja": {
+            "ciezar": 7.5,
+            "poprzedni": 12.5,
+            "powt": [
+              6,
+              5,
+              6
+            ],
+            "data": "2026-11-02",
+            "podwyzka": -5.0
+          }
         }
       ],
       "finisz": "Każda seria kończy się z zapasem: 2 powtórzenia w zapasie. Trzy serie i pierwsza progresja. Gdy zrobisz górę zakresu we wszystkich seriach, system podniesie ciężar."
@@ -3988,7 +4035,64 @@
   "slowo": "Nawyk to decyzja, której już nie musisz podejmować.",
   "analiza": {
     "pomiary": [],
-    "sila": {},
+    "sila": {
+      "Wyciskanie sztangi leżąc": {
+        "pierwszy": 72.0,
+        "najlepszy": 72.0,
+        "ostatni": 72.0,
+        "sesji": 1,
+        "miara": "kg (szac. max)",
+        "od": "2026-11-02"
+      },
+      "Wyciskanie sztangi na skosie": {
+        "pierwszy": 48.0,
+        "najlepszy": 48.0,
+        "ostatni": 48.0,
+        "sesji": 1,
+        "miara": "kg (szac. max)",
+        "od": "2026-11-02"
+      },
+      "Wyciskanie hantli poziomo": {
+        "pierwszy": 24.0,
+        "najlepszy": 24.0,
+        "ostatni": 24.0,
+        "sesji": 1,
+        "miara": "kg (szac. max)",
+        "od": "2026-11-02"
+      },
+      "Rozpiętki hantlami na skosie": {
+        "pierwszy": 15.4,
+        "najlepszy": 15.4,
+        "ostatni": 15.4,
+        "sesji": 1,
+        "miara": "kg (szac. max)",
+        "od": "2026-11-02"
+      },
+      "Pullover z hantlem": {
+        "pierwszy": 16.7,
+        "najlepszy": 16.7,
+        "ostatni": 16.7,
+        "sesji": 1,
+        "miara": "kg (szac. max)",
+        "od": "2026-11-02"
+      },
+      "Wyciskanie wąskim chwytem": {
+        "pierwszy": 45.3,
+        "najlepszy": 45.3,
+        "ostatni": 45.3,
+        "sesji": 1,
+        "miara": "kg (szac. max)",
+        "od": "2026-11-02"
+      },
+      "Prostowanie ramion z hantlem nad głową": {
+        "pierwszy": 15.0,
+        "najlepszy": 15.0,
+        "ostatni": 15.0,
+        "sesji": 1,
+        "miara": "kg (szac. max)",
+        "od": "2026-11-02"
+      }
+    },
     "cele": {
       "_info": "Wskaźniki sylwetki mierzone taśmą — tanie, a mówią więcej niż waga.",
       "talia_do_wzrostu": 0.45,
@@ -4278,7 +4382,7 @@
         "trening": {
           "id": "klatka_triceps",
           "nazwa": "Poniedziałek — klatka + triceps",
-          "czas_min": 58,
+          "czas_min": 52,
           "blok": "Blok 2 — Fundament",
           "blok_opis": "Trzy serie i pierwsza progresja. Gdy zrobisz górę zakresu we wszystkich seriach, system podniesie ciężar.",
           "zapas": "2 powtórzenia w zapasie",
@@ -4294,7 +4398,19 @@
               "powt": "6-8",
               "przerwa": "3-4 min",
               "wskazowka": "Ławka w klatce, bolce na wysokości klatki. Łopatki ściągnięte, stopy mocno na podłodze. Sztanga schodzi do dolnej części klatki, łokcie ok. 45 stopni od tułowia. Pierwsza seria ciężka (6-8), druga lżejsza na 10-12.",
-              "serie_wstepne": "30% × 8-12, 50% × 8, 75% × 2-3"
+              "serie_wstepne": "30% × 8-12, 50% × 8, 75% × 2-3",
+              "propozycja": {
+                "ciezar": 60.0,
+                "poprzedni": 60.0,
+                "powt": [
+                  6,
+                  6,
+                  5,
+                  4
+                ],
+                "data": "2026-11-02",
+                "podwyzka": 0.0
+              }
             },
             {
               "nazwa": "Wyciskanie sztangi na skosie",
@@ -4302,7 +4418,18 @@
               "powt": "8-10",
               "przerwa": "3 min",
               "wskazowka": "Ławka 30 stopni, sztanga schodzi do obojczyków, łopatki ściągnięte. To ćwiczenie robi górę klatki.",
-              "serie_wstepne": "30% × 8-12, 50% × 8, 75% × 2-3"
+              "serie_wstepne": "30% × 8-12, 50% × 8, 75% × 2-3",
+              "propozycja": {
+                "ciezar": 35.0,
+                "poprzedni": 40.0,
+                "powt": [
+                  6,
+                  6,
+                  6
+                ],
+                "data": "2026-11-02",
+                "podwyzka": -5.0
+              }
             },
             {
               "nazwa": "Wyciskanie hantli poziomo",
@@ -4310,22 +4437,25 @@
               "powt": "10-12",
               "przerwa": "2-3 min",
               "wskazowka": "Ławka płasko, hantle schodzą do poziomu klatki, łokcie ok. 45 stopni. Większy zakres niż przy sztandze.",
-              "serie_wstepne": "50% × 5-6"
+              "serie_wstepne": "50% × 5-6",
+              "propozycja": {
+                "ciezar": 14.0,
+                "poprzedni": 20.0,
+                "powt": [
+                  6,
+                  5,
+                  4
+                ],
+                "data": "2026-11-02",
+                "podwyzka": -6.0
+              }
             },
             {
-              "nazwa": "Rozpiętki hantlami na skosie",
+              "nazwa": "Wyciskanie hantli z dociskiem",
               "serie": 3,
               "powt": "12-15",
               "przerwa": "1,5-2 min",
-              "wskazowka": "Ławka 30 stopni, ręce lekko ugięte, ruch jak przy obejmowaniu drzewa. Opuszczasz do poziomu barków, nie niżej — dalej to już tylko bark.",
-              "serie_wstepne": "50% × 5-6"
-            },
-            {
-              "nazwa": "Pullover z hantlem",
-              "serie": 3,
-              "powt": "12-15",
-              "przerwa": "1,5-2 min",
-              "wskazowka": "Leżysz w poprzek ławki, biodra niżej od klatki, hantel oburącz nad klatką. Opuszczasz za głowę na lekko ugiętych łokciach, aż poczujesz rozciąganie pod pachami, i wracasz. Bez drążka to jedyny ruch, który ciągnie plecy z góry.",
+              "wskazowka": "Ławka płasko, dwa hantle ściśnięte razem nad klatką, dłonie zwrócone do siebie. Wyciskasz w górę i wracasz do klatki, cały czas dociskając hantle jeden do drugiego — ten docisk robi całą robotę na klatce. Bark nie wchodzi w rozciąganie, które bolało przy rozpiętkach.",
               "serie_wstepne": "50% × 5-6"
             },
             {
@@ -4334,14 +4464,24 @@
               "powt": "8-10",
               "przerwa": "2-3 min",
               "wskazowka": "Chwyt na szerokość barków, łokcie blisko tułowia, sztanga schodzi do dołu klatki. To ćwiczenie na triceps, nie na klatkę — nie rozkładaj łokci na boki.",
-              "serie_wstepne": "50% × 5-6"
+              "serie_wstepne": "50% × 5-6",
+              "propozycja": {
+                "ciezar": 35.0,
+                "poprzedni": 40.0,
+                "powt": [
+                  4,
+                  4
+                ],
+                "data": "2026-11-02",
+                "podwyzka": -5.0
+              }
             },
             {
-              "nazwa": "Wyciskanie francuskie sztangą",
+              "nazwa": "Wyciskanie francuskie hantli",
               "serie": 3,
               "powt": "10-12",
               "przerwa": "1,5-2 min",
-              "wskazowka": "Leżysz na ławce, sztanga EZ nad klatką, łokcie w miejscu. Zginasz ramiona, aż gryf znajdzie się nad czołem, i prostujesz.",
+              "wskazowka": "Leżąc, dwa hantle nad klatką, łokcie w miejscu i skierowane do sufitu. Zginasz ramiona, aż hantle znajdą się przy uszach, i prostujesz. Hantle zamiast sztangi dlatego, że możesz zejść do 2 × 4 kg — przy sztandze mniej niż gryf z najmniejszymi talerzami nie założysz.",
               "serie_wstepne": "50% × 5-6",
               "seria_laczona": "Prostowanie ramion z hantlem nad głową"
             },
@@ -4352,7 +4492,18 @@
               "przerwa": "1,5-2 min",
               "wskazowka": "Siedząc, hantel oburącz nad głową, opuszczasz za kark. Łokcie blisko głowy, ruszają tylko przedramiona.",
               "serie_wstepne": "50% × 5-6",
-              "seria_laczona": "Wyciskanie francuskie sztangą"
+              "seria_laczona": "Wyciskanie francuskie hantli",
+              "propozycja": {
+                "ciezar": 7.5,
+                "poprzedni": 12.5,
+                "powt": [
+                  6,
+                  5,
+                  6
+                ],
+                "data": "2026-11-02",
+                "podwyzka": -5.0
+              }
             }
           ],
           "finisz": "Każda seria kończy się z zapasem: 2 powtórzenia w zapasie. Trzy serie i pierwsza progresja. Gdy zrobisz górę zakresu we wszystkich seriach, system podniesie ciężar."
@@ -7443,7 +7594,17 @@
               "powt": "12-15",
               "przerwa": "1,5 min",
               "wskazowka": "Łokcie lekko ugięte, ruch prowadzą łokcie. Unosisz do wysokości barków, nie wyżej.",
-              "serie_wstepne": "50% × 5-6"
+              "serie_wstepne": "50% × 5-6",
+              "propozycja": {
+                "ciezar": 7.0,
+                "poprzedni": 7.0,
+                "powt": [
+                  12,
+                  12
+                ],
+                "data": "2026-09-20",
+                "podwyzka": 0.0
+              }
             },
             {
               "nazwa": "Wznosy w bok hantlami siedząc",
@@ -7468,14 +7629,14 @@
               "przerwa": "1,5 min",
               "wskazowka": "Łokcie przy tułowiu, bez bujania tułowiem. Opuszczasz wolniej, niż unosisz.",
               "serie_wstepne": "50% × 5-6",
-              "seria_laczona": "Wyciskanie francuskie hantli"
+              "seria_laczona": "Prostowanie ramion w opadzie hantlem"
             },
             {
-              "nazwa": "Wyciskanie francuskie hantli",
+              "nazwa": "Prostowanie ramion w opadzie hantlem",
               "serie": 3,
               "powt": "12-15",
               "przerwa": "1,5 min",
-              "wskazowka": "Leżysz na ławce, hantle nad klatką, łokcie w miejscu. Zginasz ramiona, aż hantle znajdą się przy uszach, i prostujesz. Rusza się tylko przedramię.",
+              "wskazowka": "Tułów w opadzie, ramię przyklejone do boku, łokieć nieruchomy — prostujesz samo przedramię do tyłu i na górze trzymasz pół sekundy. Lekki hantel, tu nie ma czego dowozić.",
               "serie_wstepne": "50% × 5-6",
               "seria_laczona": "Uginanie ramion z hantlami"
             },
@@ -7984,13 +8145,89 @@
         "cel": 8000,
         "status": "malo"
       },
-      "serie": [],
+      "serie": [
+        {
+          "data": "2026-11-02",
+          "typ": "seria",
+          "cwiczenie": "Wyciskanie sztangi leżąc",
+          "ciezar": 60.0,
+          "powt": [
+            6,
+            6,
+            5,
+            4
+          ]
+        },
+        {
+          "data": "2026-11-02",
+          "typ": "seria",
+          "cwiczenie": "Wyciskanie sztangi na skosie",
+          "ciezar": 40.0,
+          "powt": [
+            6,
+            6,
+            6
+          ]
+        },
+        {
+          "data": "2026-11-02",
+          "typ": "seria",
+          "cwiczenie": "Wyciskanie hantli poziomo",
+          "ciezar": 20.0,
+          "powt": [
+            6,
+            5,
+            4
+          ]
+        },
+        {
+          "data": "2026-11-02",
+          "typ": "seria",
+          "cwiczenie": "Rozpiętki hantlami na skosie",
+          "ciezar": 12.5,
+          "powt": [
+            7,
+            6,
+            6
+          ]
+        },
+        {
+          "data": "2026-11-02",
+          "typ": "seria",
+          "cwiczenie": "Pullover z hantlem",
+          "ciezar": 12.5,
+          "powt": [
+            10
+          ]
+        },
+        {
+          "data": "2026-11-02",
+          "typ": "seria",
+          "cwiczenie": "Wyciskanie wąskim chwytem",
+          "ciezar": 40.0,
+          "powt": [
+            4,
+            4
+          ]
+        },
+        {
+          "data": "2026-11-02",
+          "typ": "seria",
+          "cwiczenie": "Prostowanie ramion z hantlem nad głową",
+          "ciezar": 12.5,
+          "powt": [
+            6,
+            5,
+            6
+          ]
+        }
+      ],
       "trening": {
         "rodzaj": "glowny",
         "trening": {
           "id": "klatka_triceps",
           "nazwa": "Poniedziałek — klatka + triceps",
-          "czas_min": 58,
+          "czas_min": 52,
           "blok": "Blok 2 — Fundament",
           "blok_opis": "Trzy serie i pierwsza progresja. Gdy zrobisz górę zakresu we wszystkich seriach, system podniesie ciężar.",
           "zapas": "2 powtórzenia w zapasie",
@@ -8006,7 +8243,19 @@
               "powt": "6-8",
               "przerwa": "3-4 min",
               "wskazowka": "Ławka w klatce, bolce na wysokości klatki. Łopatki ściągnięte, stopy mocno na podłodze. Sztanga schodzi do dolnej części klatki, łokcie ok. 45 stopni od tułowia. Pierwsza seria ciężka (6-8), druga lżejsza na 10-12.",
-              "serie_wstepne": "30% × 8-12, 50% × 8, 75% × 2-3"
+              "serie_wstepne": "30% × 8-12, 50% × 8, 75% × 2-3",
+              "propozycja": {
+                "ciezar": 60.0,
+                "poprzedni": 60.0,
+                "powt": [
+                  6,
+                  6,
+                  5,
+                  4
+                ],
+                "data": "2026-11-02",
+                "podwyzka": 0.0
+              }
             },
             {
               "nazwa": "Wyciskanie sztangi na skosie",
@@ -8014,7 +8263,18 @@
               "powt": "8-10",
               "przerwa": "3 min",
               "wskazowka": "Ławka 30 stopni, sztanga schodzi do obojczyków, łopatki ściągnięte. To ćwiczenie robi górę klatki.",
-              "serie_wstepne": "30% × 8-12, 50% × 8, 75% × 2-3"
+              "serie_wstepne": "30% × 8-12, 50% × 8, 75% × 2-3",
+              "propozycja": {
+                "ciezar": 35.0,
+                "poprzedni": 40.0,
+                "powt": [
+                  6,
+                  6,
+                  6
+                ],
+                "data": "2026-11-02",
+                "podwyzka": -5.0
+              }
             },
             {
               "nazwa": "Wyciskanie hantli poziomo",
@@ -8022,22 +8282,25 @@
               "powt": "10-12",
               "przerwa": "2-3 min",
               "wskazowka": "Ławka płasko, hantle schodzą do poziomu klatki, łokcie ok. 45 stopni. Większy zakres niż przy sztandze.",
-              "serie_wstepne": "50% × 5-6"
+              "serie_wstepne": "50% × 5-6",
+              "propozycja": {
+                "ciezar": 14.0,
+                "poprzedni": 20.0,
+                "powt": [
+                  6,
+                  5,
+                  4
+                ],
+                "data": "2026-11-02",
+                "podwyzka": -6.0
+              }
             },
             {
-              "nazwa": "Rozpiętki hantlami na skosie",
+              "nazwa": "Wyciskanie hantli z dociskiem",
               "serie": 3,
               "powt": "12-15",
               "przerwa": "1,5-2 min",
-              "wskazowka": "Ławka 30 stopni, ręce lekko ugięte, ruch jak przy obejmowaniu drzewa. Opuszczasz do poziomu barków, nie niżej — dalej to już tylko bark.",
-              "serie_wstepne": "50% × 5-6"
-            },
-            {
-              "nazwa": "Pullover z hantlem",
-              "serie": 3,
-              "powt": "12-15",
-              "przerwa": "1,5-2 min",
-              "wskazowka": "Leżysz w poprzek ławki, biodra niżej od klatki, hantel oburącz nad klatką. Opuszczasz za głowę na lekko ugiętych łokciach, aż poczujesz rozciąganie pod pachami, i wracasz. Bez drążka to jedyny ruch, który ciągnie plecy z góry.",
+              "wskazowka": "Ławka płasko, dwa hantle ściśnięte razem nad klatką, dłonie zwrócone do siebie. Wyciskasz w górę i wracasz do klatki, cały czas dociskając hantle jeden do drugiego — ten docisk robi całą robotę na klatce. Bark nie wchodzi w rozciąganie, które bolało przy rozpiętkach.",
               "serie_wstepne": "50% × 5-6"
             },
             {
@@ -8046,14 +8309,24 @@
               "powt": "8-10",
               "przerwa": "2-3 min",
               "wskazowka": "Chwyt na szerokość barków, łokcie blisko tułowia, sztanga schodzi do dołu klatki. To ćwiczenie na triceps, nie na klatkę — nie rozkładaj łokci na boki.",
-              "serie_wstepne": "50% × 5-6"
+              "serie_wstepne": "50% × 5-6",
+              "propozycja": {
+                "ciezar": 35.0,
+                "poprzedni": 40.0,
+                "powt": [
+                  4,
+                  4
+                ],
+                "data": "2026-11-02",
+                "podwyzka": -5.0
+              }
             },
             {
-              "nazwa": "Wyciskanie francuskie sztangą",
+              "nazwa": "Wyciskanie francuskie hantli",
               "serie": 3,
               "powt": "10-12",
               "przerwa": "1,5-2 min",
-              "wskazowka": "Leżysz na ławce, sztanga EZ nad klatką, łokcie w miejscu. Zginasz ramiona, aż gryf znajdzie się nad czołem, i prostujesz.",
+              "wskazowka": "Leżąc, dwa hantle nad klatką, łokcie w miejscu i skierowane do sufitu. Zginasz ramiona, aż hantle znajdą się przy uszach, i prostujesz. Hantle zamiast sztangi dlatego, że możesz zejść do 2 × 4 kg — przy sztandze mniej niż gryf z najmniejszymi talerzami nie założysz.",
               "serie_wstepne": "50% × 5-6",
               "seria_laczona": "Prostowanie ramion z hantlem nad głową"
             },
@@ -8064,7 +8337,18 @@
               "przerwa": "1,5-2 min",
               "wskazowka": "Siedząc, hantel oburącz nad głową, opuszczasz za kark. Łokcie blisko głowy, ruszają tylko przedramiona.",
               "serie_wstepne": "50% × 5-6",
-              "seria_laczona": "Wyciskanie francuskie sztangą"
+              "seria_laczona": "Wyciskanie francuskie hantli",
+              "propozycja": {
+                "ciezar": 7.5,
+                "poprzedni": 12.5,
+                "powt": [
+                  6,
+                  5,
+                  6
+                ],
+                "data": "2026-11-02",
+                "podwyzka": -5.0
+              }
             }
           ],
           "finisz": "Każda seria kończy się z zapasem: 2 powtórzenia w zapasie. Trzy serie i pierwsza progresja. Gdy zrobisz górę zakresu we wszystkich seriach, system podniesie ciężar."
@@ -11160,7 +11444,17 @@
               "powt": "12-15",
               "przerwa": "1,5 min",
               "wskazowka": "Łokcie lekko ugięte, ruch prowadzą łokcie. Unosisz do wysokości barków, nie wyżej.",
-              "serie_wstepne": "50% × 5-6"
+              "serie_wstepne": "50% × 5-6",
+              "propozycja": {
+                "ciezar": 7.0,
+                "poprzedni": 7.0,
+                "powt": [
+                  12,
+                  12
+                ],
+                "data": "2026-09-20",
+                "podwyzka": 0.0
+              }
             },
             {
               "nazwa": "Wznosy w bok hantlami siedząc",
@@ -11185,14 +11479,14 @@
               "przerwa": "1,5 min",
               "wskazowka": "Łokcie przy tułowiu, bez bujania tułowiem. Opuszczasz wolniej, niż unosisz.",
               "serie_wstepne": "50% × 5-6",
-              "seria_laczona": "Wyciskanie francuskie hantli"
+              "seria_laczona": "Prostowanie ramion w opadzie hantlem"
             },
             {
-              "nazwa": "Wyciskanie francuskie hantli",
+              "nazwa": "Prostowanie ramion w opadzie hantlem",
               "serie": 3,
               "powt": "12-15",
               "przerwa": "1,5 min",
-              "wskazowka": "Leżysz na ławce, hantle nad klatką, łokcie w miejscu. Zginasz ramiona, aż hantle znajdą się przy uszach, i prostujesz. Rusza się tylko przedramię.",
+              "wskazowka": "Tułów w opadzie, ramię przyklejone do boku, łokieć nieruchomy — prostujesz samo przedramię do tyłu i na górze trzymasz pół sekundy. Lekki hantel, tu nie ma czego dowozić.",
               "serie_wstepne": "50% × 5-6",
               "seria_laczona": "Uginanie ramion z hantlami"
             },
@@ -11244,7 +11538,83 @@
         "kg": 83.5
       }
     ],
-    "serie": []
+    "serie": [
+      {
+        "data": "2026-11-02",
+        "typ": "seria",
+        "cwiczenie": "Wyciskanie sztangi leżąc",
+        "ciezar": 60.0,
+        "powt": [
+          6,
+          6,
+          5,
+          4
+        ]
+      },
+      {
+        "data": "2026-11-02",
+        "typ": "seria",
+        "cwiczenie": "Wyciskanie sztangi na skosie",
+        "ciezar": 40.0,
+        "powt": [
+          6,
+          6,
+          6
+        ]
+      },
+      {
+        "data": "2026-11-02",
+        "typ": "seria",
+        "cwiczenie": "Wyciskanie hantli poziomo",
+        "ciezar": 20.0,
+        "powt": [
+          6,
+          5,
+          4
+        ]
+      },
+      {
+        "data": "2026-11-02",
+        "typ": "seria",
+        "cwiczenie": "Rozpiętki hantlami na skosie",
+        "ciezar": 12.5,
+        "powt": [
+          7,
+          6,
+          6
+        ]
+      },
+      {
+        "data": "2026-11-02",
+        "typ": "seria",
+        "cwiczenie": "Pullover z hantlem",
+        "ciezar": 12.5,
+        "powt": [
+          10
+        ]
+      },
+      {
+        "data": "2026-11-02",
+        "typ": "seria",
+        "cwiczenie": "Wyciskanie wąskim chwytem",
+        "ciezar": 40.0,
+        "powt": [
+          4,
+          4
+        ]
+      },
+      {
+        "data": "2026-11-02",
+        "typ": "seria",
+        "cwiczenie": "Prostowanie ramion z hantlem nad głową",
+        "ciezar": 12.5,
+        "powt": [
+          6,
+          5,
+          6
+        ]
+      }
+    ]
   },
   "zakupy_zamrozone": {
     "kup": [
@@ -12151,16 +12521,6 @@
       "nieudane": 0,
       "data": "2026-09-20"
     },
-    "Unoszenie hantli bokiem": {
-      "ciezar": 7.0,
-      "powt": [
-        12,
-        12
-      ],
-      "nastepny": 7.0,
-      "nieudane": 0,
-      "data": "2026-09-20"
-    },
     "Przysiad goblet z hantlem": {
       "ciezar": 14.0,
       "powt": [
@@ -12211,15 +12571,90 @@
       "nieudane": 0,
       "data": "2026-09-18"
     },
-    "Wyciskanie leżąc": {
-      "ciezar": 40.0,
+    "Wyciskanie sztangi leżąc": {
+      "ciezar": 60.0,
       "powt": [
-        14,
-        10
+        6,
+        6,
+        5,
+        4
       ],
-      "nastepny": 42.5,
+      "nastepny": 60.0,
+      "nieudane": 0,
+      "data": "2026-11-02"
+    },
+    "Wznosy w bok hantlami stojąc": {
+      "ciezar": 7.0,
+      "powt": [
+        12,
+        12
+      ],
+      "nastepny": 7.0,
       "nieudane": 0,
       "data": "2026-09-20"
+    },
+    "Wyciskanie sztangi na skosie": {
+      "ciezar": 40.0,
+      "powt": [
+        6,
+        6,
+        6
+      ],
+      "nastepny": 35.0,
+      "nieudane": 0,
+      "data": "2026-11-02"
+    },
+    "Wyciskanie hantli poziomo": {
+      "ciezar": 20.0,
+      "powt": [
+        6,
+        5,
+        4
+      ],
+      "nastepny": 14.0,
+      "nieudane": 0,
+      "data": "2026-11-02"
+    },
+    "Rozpiętki hantlami na skosie": {
+      "ciezar": 12.5,
+      "powt": [
+        7,
+        6,
+        6
+      ],
+      "nastepny": 7.5,
+      "nieudane": 0,
+      "data": "2026-11-02"
+    },
+    "Pullover z hantlem": {
+      "ciezar": 12.5,
+      "powt": [
+        10
+      ],
+      "nastepny": 12.5,
+      "nieudane": 0,
+      "data": "2026-11-02"
+    },
+    "Wyciskanie wąskim chwytem": {
+      "ciezar": 40.0,
+      "powt": [
+        4,
+        4
+      ],
+      "nastepny": 35.0,
+      "nieudane": 0,
+      "data": "2026-11-02"
+    },
+    "Prostowanie ramion z hantlem nad głową": {
+      "ciezar": 12.5,
+      "powt": [
+        6,
+        5,
+        6
+      ],
+      "nastepny": 7.5,
+      "nieudane": 0,
+      "data": "2026-11-02"
     }
   },
   "ciezary_start": {
@@ -12308,7 +12743,7 @@
       "krok": 2.5
     },
     "Prostowanie ramion z hantlem nad głową": {
-      "kg": 10,
+      "kg": 7.5,
       "cel": 12.5,
       "jedn": "talerze na hantel (oburącz)",
       "krok": 2.5
@@ -12361,8 +12796,8 @@
       "krok": 5
     },
     "Wyciskanie wąskim chwytem": {
-      "kg": 25,
-      "cel": 32.5,
+      "kg": 35,
+      "cel": 45,
       "jedn": "same talerze (bez gryfa)",
       "krok": 2.5
     },
@@ -12385,14 +12820,14 @@
       "krok": 2.5
     },
     "Wyciskanie sztangi leżąc": {
-      "kg": 35,
-      "cel": 45,
+      "kg": 60,
+      "cel": 70,
       "jedn": "same talerze (bez gryfa)",
       "krok": 2.5
     },
     "Wyciskanie sztangi na skosie": {
-      "kg": 17.5,
-      "cel": 22.5,
+      "kg": 35,
+      "cel": 45,
       "jedn": "same talerze (bez gryfa)",
       "krok": 2.5
     },
@@ -12451,10 +12886,10 @@
       "krok": 2.5
     },
     "Wyciskanie francuskie hantli": {
-      "kg": 7.5,
-      "cel": 10,
+      "kg": 5,
+      "cel": 7.5,
       "jedn": "talerze na hantel",
-      "krok": 2.5
+      "krok": 1.25
     },
     "Wyciskanie francuskie sztangą": {
       "kg": 10,
@@ -12501,6 +12936,18 @@
       "kg": 0,
       "jedn": "masa ciała",
       "krok": 0
+    },
+    "Wyciskanie hantli z dociskiem": {
+      "kg": 8,
+      "cel": 12,
+      "jedn": "talerze na hantel",
+      "krok": 2.5
+    },
+    "Prostowanie ramion w opadzie hantlem": {
+      "kg": 4,
+      "cel": 6,
+      "jedn": "talerze na hantel",
+      "krok": 1.25
     }
   },
   "kalorie": {
@@ -12719,7 +13166,7 @@
     "cel": 8000,
     "brakuje": 6314,
     "status": "malo",
-    "sugestia": "Dziś siedziałeś prawie całą dobę. Nie nadrobisz tego w nocy i nie ma sensu próbować — zrób 10 minut chodzenia teraz i rozciągnij plecy, żeby jutro nie bolały.",
+    "sugestia": "O tej porze lepiej zejść z tempa niż je podbijać. Odpuść kroki, połóż się o czasie — sen na redukcji robi więcej niż dwa tysiące kroków.",
     "komentarz": "Cel 8000 kroków dziennie. Spacer po południu robi większość z tego.",
     "procent": 21
   },
