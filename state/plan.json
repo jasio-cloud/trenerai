@@ -1,51 +1,51 @@
 {
-  "cykl": 2,
-  "od": "2026-10-30",
-  "do": "2026-11-01",
+  "cykl": 3,
+  "od": "2026-11-02",
+  "do": "2026-11-04",
   "baza": "b_bolo",
   "dni": [
     {
-      "sniadanie": "q_omlet",
-      "drugi": "q_serek_makaron",
-      "kolacja": "d_twarog_kakao",
+      "sniadanie": "q_jajecznica",
+      "drugi": "d_twarog_kakao",
+      "kolacja": "q_twarog_makaron",
       "obiad": "b_bolo",
-      "data": "2026-10-30",
+      "data": "2026-11-02",
       "typ": 0,
       "makra": {
-        "kcal": 2479,
-        "bialko": 168,
-        "tluszcz": 100,
-        "wegle": 215
+        "kcal": 2458,
+        "bialko": 162,
+        "tluszcz": 93,
+        "wegle": 233
       }
     },
     {
-      "sniadanie": "q_omlet_marchewkowy",
-      "drugi": "q_twarog_banan",
-      "kolacja": "q_shake",
+      "sniadanie": "q_tortilla_jajecznica",
+      "drugi": "q_nalesniki",
+      "kolacja": "q_serek_box",
       "obiad": "b_bolo",
-      "data": "2026-10-31",
+      "data": "2026-11-03",
       "typ": 1,
       "makra": {
-        "kcal": 2770,
-        "bialko": 202,
-        "tluszcz": 75,
-        "wegle": 312
+        "kcal": 2795,
+        "bialko": 190,
+        "tluszcz": 121,
+        "wegle": 222
       }
     },
     {
       "sniadanie": "q_twarog",
-      "drugi": "q_serek_owoce",
-      "kolacja": "q_twarog_makaron",
+      "drugi": "q_twarog_banan",
+      "kolacja": "q_jajka_kukurydza",
       "obiad": "b_bolo",
-      "data": "2026-11-01",
-      "typ": 1,
+      "data": "2026-11-04",
+      "typ": 0,
       "makra": {
-        "kcal": 2669,
-        "bialko": 177,
-        "tluszcz": 87,
-        "wegle": 284
+        "kcal": 2294,
+        "bialko": 163,
+        "tluszcz": 80,
+        "wegle": 221
       }
     }
   ],
-  "wygenerowano": "2026-10-30T01:55:08+01:00"
+  "wygenerowano": "2026-11-02T03:10:13+01:00"
 }
