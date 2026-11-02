@@ -1,31 +1,31 @@
 {
   "stan": {
     "mleko": {
-      "ilosc": 697,
+      "ilosc": 552,
       "do": "2026-11-08"
     },
     "ser_zolty": {
-      "ilosc": 1,
+      "ilosc": 3,
       "do": "2026-11-08"
     },
     "twarog": {
-      "ilosc": 130,
+      "ilosc": 80,
       "do": "2026-11-08"
     },
     "czosnek": {
-      "ilosc": 1.0,
+      "ilosc": 9.0,
       "do": "2027-05-15"
     },
     "ogorek_kiszony": {
-      "ilosc": 3.0,
+      "ilosc": 2.0,
       "do": "2027-05-15"
     },
     "chleb": {
-      "ilosc": 14,
+      "ilosc": 6,
       "do": "2026-11-08"
     },
     "makaron": {
-      "ilosc": 450.0,
+      "ilosc": 215.0,
       "do": "2027-05-15"
     },
     "dzem_niskoslodzony": {
@@ -33,31 +33,31 @@
       "do": "2027-05-15"
     },
     "koncentrat": {
-      "ilosc": 20.0,
+      "ilosc": 180.0,
       "do": "2027-05-15"
     },
     "maslo_orzechowe": {
-      "ilosc": 15.75,
+      "ilosc": 13.5,
       "do": "2027-05-15"
     },
     "miod": {
-      "ilosc": 14.0,
+      "ilosc": 10.0,
       "do": "2027-05-15"
     },
     "musztarda": {
-      "ilosc": 9,
+      "ilosc": 7.5,
       "do": "2027-05-15"
     },
     "maka": {
-      "ilosc": 1010,
+      "ilosc": 960,
       "do": "2027-05-15"
     },
     "olej": {
-      "ilosc": 955.0,
+      "ilosc": 945.0,
       "do": "2027-05-15"
     },
     "orzechy": {
-      "ilosc": 131,
+      "ilosc": 107,
       "do": "2027-05-15"
     },
     "proszek_do_pieczenia": {
@@ -69,11 +69,11 @@
       "do": "2027-05-15"
     },
     "przyprawy": {
-      "ilosc": 81.0,
+      "ilosc": 77.0,
       "do": "2027-05-15"
     },
     "maslo": {
-      "ilosc": 190,
+      "ilosc": 175,
       "do": "2026-11-11"
     },
     "serek_wiejski": {
@@ -85,27 +85,23 @@
       "do": "2026-11-03"
     },
     "kakao": {
-      "ilosc": 17.0,
+      "ilosc": 16.0,
       "do": "2027-05-18"
     },
-    "poledwica": {
-      "ilosc": 85,
-      "do": "2026-11-14"
-    },
     "mielone_wolowe": {
-      "ilosc": 300.0,
+      "ilosc": 366.67,
       "do": "2026-11-06"
     },
     "jogurt_grecki": {
-      "ilosc": 320,
+      "ilosc": 420,
       "do": "2026-11-14"
     },
     "tortilla": {
-      "ilosc": 5,
+      "ilosc": 3,
       "do": "2027-05-21"
     },
     "krem_bez_cukru": {
-      "ilosc": 275,
+      "ilosc": 245,
       "do": "2027-05-21"
     },
     "kukurydza": {
@@ -113,11 +109,35 @@
       "do": "2027-05-21"
     },
     "majonez_sriracha": {
-      "ilosc": 238,
+      "ilosc": 212,
       "do": "2027-05-21"
     },
     "slodzik": {
-      "ilosc": 299.0,
+      "ilosc": 298.0,
+      "do": "2027-05-21"
+    },
+    "szynka": {
+      "ilosc": 55,
+      "do": "2026-11-14"
+    },
+    "jaja": {
+      "ilosc": 4,
+      "do": "2026-11-14"
+    },
+    "cebula": {
+      "ilosc": 0.67,
+      "do": "2027-05-21"
+    },
+    "marchew": {
+      "ilosc": 0.67,
+      "do": "2027-05-21"
+    },
+    "pomidor": {
+      "ilosc": 0.5,
+      "do": "2026-11-06"
+    },
+    "passata": {
+      "ilosc": 166.67,
       "do": "2027-05-21"
     }
   },
@@ -127,6 +147,12 @@
       "co": "restart planu — lodowka zostaje",
       "produkt": "-",
       "ilosc": 30
+    },
+    {
+      "data": "2026-11-02",
+      "co": "cykl:2026-11-02",
+      "pozycji": 17,
+      "koszt": 86.09
     }
   ]
 }
