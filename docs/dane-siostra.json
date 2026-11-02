@@ -1,5 +1,5 @@
 {
-  "wygenerowano": "2026-11-02T19:15:33+01:00",
+  "wygenerowano": "2026-11-02T23:46:00+01:00",
   "dzis": "2026-11-02",
   "typ_dzis": 0,
   "typy": {
@@ -3793,7 +3793,64 @@
   "slowo": "Nawyk to decyzja, której już nie musisz podejmować.",
   "analiza": {
     "pomiary": [],
-    "sila": {},
+    "sila": {
+      "Wyciskanie sztangi leżąc": {
+        "pierwszy": 72.0,
+        "najlepszy": 72.0,
+        "ostatni": 72.0,
+        "sesji": 1,
+        "miara": "kg (szac. max)",
+        "od": "2026-11-02"
+      },
+      "Wyciskanie sztangi na skosie": {
+        "pierwszy": 48.0,
+        "najlepszy": 48.0,
+        "ostatni": 48.0,
+        "sesji": 1,
+        "miara": "kg (szac. max)",
+        "od": "2026-11-02"
+      },
+      "Wyciskanie hantli poziomo": {
+        "pierwszy": 24.0,
+        "najlepszy": 24.0,
+        "ostatni": 24.0,
+        "sesji": 1,
+        "miara": "kg (szac. max)",
+        "od": "2026-11-02"
+      },
+      "Rozpiętki hantlami na skosie": {
+        "pierwszy": 15.4,
+        "najlepszy": 15.4,
+        "ostatni": 15.4,
+        "sesji": 1,
+        "miara": "kg (szac. max)",
+        "od": "2026-11-02"
+      },
+      "Pullover z hantlem": {
+        "pierwszy": 16.7,
+        "najlepszy": 16.7,
+        "ostatni": 16.7,
+        "sesji": 1,
+        "miara": "kg (szac. max)",
+        "od": "2026-11-02"
+      },
+      "Wyciskanie wąskim chwytem": {
+        "pierwszy": 45.3,
+        "najlepszy": 45.3,
+        "ostatni": 45.3,
+        "sesji": 1,
+        "miara": "kg (szac. max)",
+        "od": "2026-11-02"
+      },
+      "Prostowanie ramion z hantlem nad głową": {
+        "pierwszy": 15.0,
+        "najlepszy": 15.0,
+        "ostatni": 15.0,
+        "sesji": 1,
+        "miara": "kg (szac. max)",
+        "od": "2026-11-02"
+      }
+    },
     "cele": {
       "_info": "Tasma mowi wiecej niz waga — miesien wazy tyle samo, a zajmuje mniej miejsca.",
       "talia_do_wzrostu": 0.45,
@@ -3810,7 +3867,7 @@
       "id": "pierwszy_trening",
       "nazwa": "Pierwszy trening",
       "opis": "Zapisany pierwszy trening. Najtrudniejszy za tobą.",
-      "zdobyta": null
+      "zdobyta": "2026-11-02"
     },
     {
       "id": "treningi_10",
@@ -7299,7 +7356,83 @@
       "odhaczone": {},
       "waga": null,
       "kroki": null,
-      "serie": [],
+      "serie": [
+        {
+          "data": "2026-11-02",
+          "typ": "seria",
+          "cwiczenie": "Wyciskanie sztangi leżąc",
+          "ciezar": 60.0,
+          "powt": [
+            6,
+            6,
+            5,
+            4
+          ]
+        },
+        {
+          "data": "2026-11-02",
+          "typ": "seria",
+          "cwiczenie": "Wyciskanie sztangi na skosie",
+          "ciezar": 40.0,
+          "powt": [
+            6,
+            6,
+            6
+          ]
+        },
+        {
+          "data": "2026-11-02",
+          "typ": "seria",
+          "cwiczenie": "Wyciskanie hantli poziomo",
+          "ciezar": 20.0,
+          "powt": [
+            6,
+            5,
+            4
+          ]
+        },
+        {
+          "data": "2026-11-02",
+          "typ": "seria",
+          "cwiczenie": "Rozpiętki hantlami na skosie",
+          "ciezar": 12.5,
+          "powt": [
+            7,
+            6,
+            6
+          ]
+        },
+        {
+          "data": "2026-11-02",
+          "typ": "seria",
+          "cwiczenie": "Pullover z hantlem",
+          "ciezar": 12.5,
+          "powt": [
+            10
+          ]
+        },
+        {
+          "data": "2026-11-02",
+          "typ": "seria",
+          "cwiczenie": "Wyciskanie wąskim chwytem",
+          "ciezar": 40.0,
+          "powt": [
+            4,
+            4
+          ]
+        },
+        {
+          "data": "2026-11-02",
+          "typ": "seria",
+          "cwiczenie": "Prostowanie ramion z hantlem nad głową",
+          "ciezar": 12.5,
+          "powt": [
+            6,
+            5,
+            6
+          ]
+        }
+      ],
       "trening": {
         "rodzaj": "glowny",
         "trening": {
@@ -10174,7 +10307,83 @@
   },
   "postep": {
     "waga": [],
-    "serie": []
+    "serie": [
+      {
+        "data": "2026-11-02",
+        "typ": "seria",
+        "cwiczenie": "Wyciskanie sztangi leżąc",
+        "ciezar": 60.0,
+        "powt": [
+          6,
+          6,
+          5,
+          4
+        ]
+      },
+      {
+        "data": "2026-11-02",
+        "typ": "seria",
+        "cwiczenie": "Wyciskanie sztangi na skosie",
+        "ciezar": 40.0,
+        "powt": [
+          6,
+          6,
+          6
+        ]
+      },
+      {
+        "data": "2026-11-02",
+        "typ": "seria",
+        "cwiczenie": "Wyciskanie hantli poziomo",
+        "ciezar": 20.0,
+        "powt": [
+          6,
+          5,
+          4
+        ]
+      },
+      {
+        "data": "2026-11-02",
+        "typ": "seria",
+        "cwiczenie": "Rozpiętki hantlami na skosie",
+        "ciezar": 12.5,
+        "powt": [
+          7,
+          6,
+          6
+        ]
+      },
+      {
+        "data": "2026-11-02",
+        "typ": "seria",
+        "cwiczenie": "Pullover z hantlem",
+        "ciezar": 12.5,
+        "powt": [
+          10
+        ]
+      },
+      {
+        "data": "2026-11-02",
+        "typ": "seria",
+        "cwiczenie": "Wyciskanie wąskim chwytem",
+        "ciezar": 40.0,
+        "powt": [
+          4,
+          4
+        ]
+      },
+      {
+        "data": "2026-11-02",
+        "typ": "seria",
+        "cwiczenie": "Prostowanie ramion z hantlem nad głową",
+        "ciezar": 12.5,
+        "powt": [
+          6,
+          5,
+          6
+        ]
+      }
+    ]
   },
   "zakupy_zamrozone": {
     "kup": [
@@ -11017,16 +11226,6 @@
       "nieudane": 0,
       "data": "2026-09-20"
     },
-    "Unoszenie hantli bokiem": {
-      "ciezar": 7.0,
-      "powt": [
-        12,
-        12
-      ],
-      "nastepny": 7.0,
-      "nieudane": 0,
-      "data": "2026-09-20"
-    },
     "Przysiad goblet z hantlem": {
       "ciezar": 14.0,
       "powt": [
@@ -11077,15 +11276,90 @@
       "nieudane": 0,
       "data": "2026-09-18"
     },
-    "Wyciskanie leżąc": {
-      "ciezar": 40.0,
+    "Wyciskanie sztangi leżąc": {
+      "ciezar": 60.0,
       "powt": [
-        14,
-        10
+        6,
+        6,
+        5,
+        4
       ],
-      "nastepny": 42.5,
+      "nastepny": 60.0,
+      "nieudane": 1,
+      "data": "2026-11-02"
+    },
+    "Wznosy w bok hantlami stojąc": {
+      "ciezar": 7.0,
+      "powt": [
+        12,
+        12
+      ],
+      "nastepny": 7.0,
       "nieudane": 0,
       "data": "2026-09-20"
+    },
+    "Wyciskanie sztangi na skosie": {
+      "ciezar": 40.0,
+      "powt": [
+        6,
+        6,
+        6
+      ],
+      "nastepny": 40.0,
+      "nieudane": 1,
+      "data": "2026-11-02"
+    },
+    "Wyciskanie hantli poziomo": {
+      "ciezar": 20.0,
+      "powt": [
+        6,
+        5,
+        4
+      ],
+      "nastepny": 20.0,
+      "nieudane": 1,
+      "data": "2026-11-02"
+    },
+    "Rozpiętki hantlami na skosie": {
+      "ciezar": 12.5,
+      "powt": [
+        7,
+        6,
+        6
+      ],
+      "nastepny": 12.5,
+      "nieudane": 0,
+      "data": "2026-11-02"
+    },
+    "Pullover z hantlem": {
+      "ciezar": 12.5,
+      "powt": [
+        10
+      ],
+      "nastepny": 12.5,
+      "nieudane": 0,
+      "data": "2026-11-02"
+    },
+    "Wyciskanie wąskim chwytem": {
+      "ciezar": 40.0,
+      "powt": [
+        4,
+        4
+      ],
+      "nastepny": 40.0,
+      "nieudane": 1,
+      "data": "2026-11-02"
+    },
+    "Prostowanie ramion z hantlem nad głową": {
+      "ciezar": 12.5,
+      "powt": [
+        6,
+        5,
+        6
+      ],
+      "nastepny": 12.5,
+      "nieudane": 1,
+      "data": "2026-11-02"
     }
   },
   "ciezary_start": {
