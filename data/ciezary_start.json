@@ -1,105 +1,105 @@
 {
-  "_info": "Ciężary liczymy jako SAME TALERZE, bez gryfa (gryf ~10 kg) i bez trzonka hantli — tak, jak je zakładasz, żeby nie liczyć w głowie. Start po przerwie to ok. 80% pola cel (Twój stan sprzed przerwy, też bez gryfa). krok = ile talerzy dokładasz po trafieniu w górny koniec zakresu we wszystkich seriach.",
+  "_info": "Ciężary podajemy CAŁKOWITE — tak, jak je czytasz ze sprzętu: sztanga to gryf (10 kg) razem z talerzami, hantel to waga całego hantla. Przy ćwiczeniach oburącz jeden hantel trzymany w dwóch rękach. cel = dokąd wracamy po przerwie, krok = ile dokładamy po trafieniu w górny koniec zakresu we wszystkich seriach. Liczby przy ćwiczeniach, których jeszcze nie robiłeś, to szacunki — jak pierwsza seria wychodzi na górnym końcu zakresu z zapasem, dokładaj talerze od razu, nie czekaj tygodnia.",
   "Wyciskanie leżąc": {
-    "kg": 35,
-    "cel": 45,
-    "jedn": "same talerze (bez gryfa)",
+    "kg": 45.0,
+    "cel": 55.0,
+    "jedn": "razem z gryfem (gryf 10 kg)",
     "krok": 2.5
   },
   "Wyciskanie skos (góra klatki)": {
-    "kg": 17.5,
-    "cel": 22.5,
-    "jedn": "same talerze (bez gryfa)",
+    "kg": 27.5,
+    "cel": 32.5,
+    "jedn": "razem z gryfem (gryf 10 kg)",
     "krok": 2.5
   },
   "Wyciskanie żołnierskie (OHP)": {
-    "kg": 10,
-    "cel": 15,
-    "jedn": "same talerze (bez gryfa)",
+    "kg": 27.5,
+    "cel": 40,
+    "jedn": "razem z gryfem (gryf 10 kg)",
     "krok": 2.5
   },
   "Przysiad ze sztangą": {
-    "kg": 30,
-    "cel": 40,
-    "jedn": "same talerze (bez gryfa)",
+    "kg": 45,
+    "cel": 60,
+    "jedn": "razem z gryfem (gryf 10 kg)",
     "krok": 5
   },
   "Martwy ciąg": {
-    "kg": 45,
-    "cel": 55,
-    "jedn": "same talerze (bez gryfa)",
+    "kg": 65,
+    "cel": 80,
+    "jedn": "razem z gryfem (gryf 10 kg)",
     "krok": 5
   },
   "Rumuński martwy ciąg ze sztangą": {
-    "kg": 30,
-    "cel": 40,
-    "jedn": "same talerze (bez gryfa)",
+    "kg": 40.0,
+    "cel": 50.0,
+    "jedn": "razem z gryfem (gryf 10 kg)",
     "krok": 5
   },
   "Wiosłowanie sztangą podchwytem": {
-    "kg": 25,
-    "cel": 32.5,
-    "jedn": "same talerze (bez gryfa)",
+    "kg": 40,
+    "cel": 55,
+    "jedn": "razem z gryfem (gryf 10 kg)",
     "krok": 2.5
   },
   "Wiosłowanie hantlem jednorącz": {
     "kg": 12.5,
     "cel": 15,
-    "jedn": "talerze na hantel",
+    "jedn": "cały hantel",
     "krok": 2.5
   },
   "Przysiad bułgarski": {
     "kg": 8,
     "cel": 10,
-    "jedn": "talerze na hantel",
+    "jedn": "cały hantel",
     "krok": 2.5
   },
   "Wspięcia na palce": {
     "kg": 12,
     "cel": 15,
-    "jedn": "talerze na hantel",
+    "jedn": "cały hantel",
     "krok": 2.5
   },
   "Uginanie ramion ze sztangą": {
-    "kg": 7.5,
-    "cel": 12.5,
-    "jedn": "same talerze (bez gryfa)",
+    "kg": 20,
+    "cel": 27.5,
+    "jedn": "razem z gryfem (gryf 10 kg)",
     "krok": 2.5
   },
   "Uginanie młotkowe": {
     "kg": 8,
     "cel": 10,
-    "jedn": "talerze na hantel",
+    "jedn": "cały hantel",
     "krok": 2.5
   },
   "Unoszenie hantli bokiem": {
     "kg": 5,
     "cel": 8,
-    "jedn": "talerze na hantel",
+    "jedn": "cały hantel",
     "krok": 2.5
   },
   "Pullover z hantlem": {
     "kg": 12.5,
     "cel": 15,
-    "jedn": "talerze na hantel (oburącz)",
+    "jedn": "cały hantel (oburącz)",
     "krok": 2.5
   },
   "Prostowanie ramion z hantlem nad głową": {
     "kg": 7.5,
     "cel": 12.5,
-    "jedn": "talerze na hantel (oburącz)",
+    "jedn": "cały hantel (oburącz)",
     "krok": 2.5
   },
   "Rozpiętki z hantlami na ławce skośnej": {
     "kg": 7.5,
     "cel": 10,
-    "jedn": "talerze na hantel",
+    "jedn": "cały hantel",
     "krok": 2.5
   },
   "Odwrotne rozpiętki w opadzie": {
     "kg": 5,
     "cel": 7.5,
-    "jedn": "talerze na hantel",
+    "jedn": "cały hantel",
     "krok": 2.5
   },
   "Unoszenie nóg leżąc": {
@@ -134,139 +134,139 @@
   },
   "Przysiad goblet z hantlem": {
     "kg": 20,
-    "jedn": "talerze na hantel",
+    "jedn": "cały hantel",
     "krok": 5
   },
   "Wyciskanie wąskim chwytem": {
     "kg": 35,
     "cel": 45,
-    "jedn": "same talerze (bez gryfa)",
+    "jedn": "razem z gryfem (gryf 10 kg)",
     "krok": 2.5
   },
   "Wyciskanie hantli na ławce skośnej": {
     "kg": 12.5,
     "cel": 15,
-    "jedn": "talerze na hantel",
+    "jedn": "cały hantel",
     "krok": 2.5
   },
   "Uginanie ramion z hantlami": {
     "kg": 8,
     "cel": 10,
-    "jedn": "talerze na hantel",
+    "jedn": "cały hantel",
     "krok": 2.5
   },
   "Odwrotne rozpiętki leżąc na skosie": {
     "kg": 5,
     "cel": 7.5,
-    "jedn": "talerze na hantel",
+    "jedn": "cały hantel",
     "krok": 2.5
   },
   "Wyciskanie sztangi leżąc": {
     "kg": 60,
     "cel": 70,
-    "jedn": "same talerze (bez gryfa)",
+    "jedn": "razem z gryfem (gryf 10 kg)",
     "krok": 2.5
   },
   "Wyciskanie sztangi na skosie": {
     "kg": 35,
     "cel": 45,
-    "jedn": "same talerze (bez gryfa)",
+    "jedn": "razem z gryfem (gryf 10 kg)",
     "krok": 2.5
   },
   "Wyciskanie hantli poziomo": {
     "kg": 14,
     "cel": 16,
-    "jedn": "talerze na hantel",
+    "jedn": "cały hantel",
     "krok": 2.5
   },
   "Rozpiętki hantlami na skosie": {
     "kg": 7.5,
     "cel": 10,
-    "jedn": "talerze na hantel",
+    "jedn": "cały hantel",
     "krok": 2.5
   },
   "OHP hantlami siedząc": {
     "kg": 10,
     "cel": 12.5,
-    "jedn": "talerze na hantel",
+    "jedn": "cały hantel",
     "krok": 2.5
   },
   "Wznosy w bok hantlami stojąc": {
     "kg": 5,
     "cel": 8,
-    "jedn": "talerze na hantel",
+    "jedn": "cały hantel",
     "krok": 2.5
   },
   "Wznosy w bok hantlami siedząc": {
     "kg": 4,
     "cel": 6,
-    "jedn": "talerze na hantel",
+    "jedn": "cały hantel",
     "krok": 2.5
   },
   "Wznosy hantlami w przód": {
     "kg": 5,
     "cel": 7.5,
-    "jedn": "talerze na hantel",
+    "jedn": "cały hantel",
     "krok": 2.5
   },
   "Focze wiosłowanie hantlami szeroko": {
     "kg": 10,
     "cel": 12.5,
-    "jedn": "talerze na hantel",
+    "jedn": "cały hantel",
     "krok": 2.5
   },
   "Uginanie młotkowe hantli": {
     "kg": 8,
     "cel": 10,
-    "jedn": "talerze na hantel",
+    "jedn": "cały hantel",
     "krok": 2.5
   },
   "Uginanie sztangi (biceps)": {
-    "kg": 7.5,
-    "cel": 12.5,
-    "jedn": "same talerze (bez gryfa)",
+    "kg": 20,
+    "cel": 27.5,
+    "jedn": "razem z gryfem (gryf 10 kg)",
     "krok": 2.5
   },
   "Wyciskanie francuskie hantli": {
     "kg": 5,
     "cel": 7.5,
-    "jedn": "talerze na hantel",
+    "jedn": "cały hantel",
     "krok": 1.25
   },
   "Wyciskanie francuskie sztangą": {
-    "kg": 10,
-    "cel": 15,
-    "jedn": "same talerze (bez gryfa)",
+    "kg": 20.0,
+    "cel": 25.0,
+    "jedn": "razem z gryfem (gryf 10 kg)",
     "krok": 2.5
   },
   "Przysiad klasyczny": {
-    "kg": 30,
-    "cel": 40,
-    "jedn": "same talerze (bez gryfa)",
+    "kg": 45,
+    "cel": 60,
+    "jedn": "razem z gryfem (gryf 10 kg)",
     "krok": 5
   },
   "Stiff leg deadlift": {
-    "kg": 30,
-    "cel": 40,
-    "jedn": "same talerze (bez gryfa)",
+    "kg": 40.0,
+    "cel": 50.0,
+    "jedn": "razem z gryfem (gryf 10 kg)",
     "krok": 5
   },
   "Hip thrust": {
-    "kg": 30,
-    "cel": 50,
-    "jedn": "same talerze (bez gryfa)",
+    "kg": 50,
+    "cel": 80,
+    "jedn": "razem z gryfem (gryf 10 kg)",
     "krok": 5
   },
   "Wspięcia łydki stojąc": {
     "kg": 12,
     "cel": 15,
-    "jedn": "talerze na hantel",
+    "jedn": "cały hantel",
     "krok": 2.5
   },
   "Wspięcia łydki siedząc": {
     "kg": 10,
     "cel": 15,
-    "jedn": "talerze na hantel",
+    "jedn": "cały hantel",
     "krok": 2.5
   },
   "Plank": {
@@ -282,13 +282,13 @@
   "Wyciskanie hantli z dociskiem": {
     "kg": 8,
     "cel": 12,
-    "jedn": "talerze na hantel",
+    "jedn": "cały hantel",
     "krok": 2.5
   },
   "Prostowanie ramion w opadzie hantlem": {
     "kg": 4,
     "cel": 6,
-    "jedn": "talerze na hantel",
+    "jedn": "cały hantel",
     "krok": 1.25
   }
 }
