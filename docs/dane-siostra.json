@@ -1,5 +1,5 @@
 {
-  "wygenerowano": "2026-11-04T03:27:44+01:00",
+  "wygenerowano": "2026-11-04T23:58:52+01:00",
   "dzis": "2026-11-04",
   "typ_dzis": 0,
   "typy": {
@@ -3849,6 +3849,46 @@
         "sesji": 1,
         "miara": "kg (szac. max)",
         "od": "2026-11-02"
+      },
+      "Martwy ciąg": {
+        "pierwszy": 76.0,
+        "najlepszy": 76.0,
+        "ostatni": 76.0,
+        "sesji": 1,
+        "miara": "kg (szac. max)",
+        "od": "2026-11-04"
+      },
+      "Wiosłowanie sztangą podchwytem": {
+        "pierwszy": 80.0,
+        "najlepszy": 80.0,
+        "ostatni": 80.0,
+        "sesji": 1,
+        "miara": "kg (szac. max)",
+        "od": "2026-11-04"
+      },
+      "Wiosłowanie hantlem jednorącz": {
+        "pierwszy": 29.3,
+        "najlepszy": 29.3,
+        "ostatni": 29.3,
+        "sesji": 1,
+        "miara": "kg (szac. max)",
+        "od": "2026-11-04"
+      },
+      "Uginanie sztangi (biceps)": {
+        "pierwszy": 40.0,
+        "najlepszy": 40.0,
+        "ostatni": 40.0,
+        "sesji": 1,
+        "miara": "kg (szac. max)",
+        "od": "2026-11-04"
+      },
+      "Uginanie młotkowe hantli": {
+        "pierwszy": 15.4,
+        "najlepszy": 15.4,
+        "ostatni": 15.4,
+        "sesji": 1,
+        "miara": "kg (szac. max)",
+        "od": "2026-11-04"
       }
     },
     "cele": {
@@ -3945,13 +3985,13 @@
       "id": "wioslo_40",
       "nazwa": "Wiosłowanie 40 kg",
       "opis": "Plecy zaczynają robić szerokość.",
-      "zdobyta": null
+      "zdobyta": "2026-11-04"
     },
     {
       "id": "wioslo_50",
       "nazwa": "Wiosłowanie 50 kg",
       "opis": "Poziom, którego nie ma większość ludzi na siłowni.",
-      "zdobyta": null
+      "zdobyta": "2026-11-04"
     },
     {
       "id": "pompki_20",
@@ -7807,7 +7847,61 @@
       "odhaczone": {},
       "waga": null,
       "kroki": null,
-      "serie": [],
+      "serie": [
+        {
+          "data": "2026-11-04",
+          "typ": "seria",
+          "cwiczenie": "Martwy ciąg",
+          "ciezar": 60.0,
+          "powt": [
+            8,
+            8
+          ]
+        },
+        {
+          "data": "2026-11-04",
+          "typ": "seria",
+          "cwiczenie": "Wiosłowanie sztangą podchwytem",
+          "ciezar": 60.0,
+          "powt": [
+            8,
+            10,
+            10,
+            10
+          ]
+        },
+        {
+          "data": "2026-11-04",
+          "typ": "seria",
+          "cwiczenie": "Wiosłowanie hantlem jednorącz",
+          "ciezar": 22.0,
+          "powt": [
+            10,
+            10
+          ]
+        },
+        {
+          "data": "2026-11-04",
+          "typ": "seria",
+          "cwiczenie": "Uginanie sztangi (biceps)",
+          "ciezar": 30.0,
+          "powt": [
+            10,
+            8
+          ]
+        },
+        {
+          "data": "2026-11-04",
+          "typ": "seria",
+          "cwiczenie": "Uginanie młotkowe hantli",
+          "ciezar": 11.0,
+          "powt": [
+            10,
+            10,
+            12
+          ]
+        }
+      ],
       "trening": {
         "rodzaj": "glowny",
         "trening": {
@@ -10765,6 +10859,59 @@
           5,
           6
         ]
+      },
+      {
+        "data": "2026-11-04",
+        "typ": "seria",
+        "cwiczenie": "Martwy ciąg",
+        "ciezar": 60.0,
+        "powt": [
+          8,
+          8
+        ]
+      },
+      {
+        "data": "2026-11-04",
+        "typ": "seria",
+        "cwiczenie": "Wiosłowanie sztangą podchwytem",
+        "ciezar": 60.0,
+        "powt": [
+          8,
+          10,
+          10,
+          10
+        ]
+      },
+      {
+        "data": "2026-11-04",
+        "typ": "seria",
+        "cwiczenie": "Wiosłowanie hantlem jednorącz",
+        "ciezar": 22.0,
+        "powt": [
+          10,
+          10
+        ]
+      },
+      {
+        "data": "2026-11-04",
+        "typ": "seria",
+        "cwiczenie": "Uginanie sztangi (biceps)",
+        "ciezar": 30.0,
+        "powt": [
+          10,
+          8
+        ]
+      },
+      {
+        "data": "2026-11-04",
+        "typ": "seria",
+        "cwiczenie": "Uginanie młotkowe hantli",
+        "ciezar": 11.0,
+        "powt": [
+          10,
+          10,
+          12
+        ]
       }
     ]
   },
@@ -11600,14 +11747,14 @@
       "data": "2026-09-17"
     },
     "Wiosłowanie hantlem jednorącz": {
-      "ciezar": 14.0,
+      "ciezar": 22.0,
       "powt": [
-        12,
-        12
+        10,
+        10
       ],
-      "nastepny": 16.5,
+      "nastepny": 22.0,
       "nieudane": 0,
-      "data": "2026-09-20"
+      "data": "2026-11-04"
     },
     "Przysiad goblet z hantlem": {
       "ciezar": 14.0,
@@ -11743,6 +11890,49 @@
       "nastepny": 12.5,
       "nieudane": 1,
       "data": "2026-11-02"
+    },
+    "Martwy ciąg": {
+      "ciezar": 60.0,
+      "powt": [
+        8,
+        8
+      ],
+      "nastepny": 60.0,
+      "nieudane": 0,
+      "data": "2026-11-04"
+    },
+    "Wiosłowanie sztangą podchwytem": {
+      "ciezar": 60.0,
+      "powt": [
+        8,
+        10,
+        10,
+        10
+      ],
+      "nastepny": 60.0,
+      "nieudane": 0,
+      "data": "2026-11-04"
+    },
+    "Uginanie sztangi (biceps)": {
+      "ciezar": 30.0,
+      "powt": [
+        10,
+        8
+      ],
+      "nastepny": 30.0,
+      "nieudane": 0,
+      "data": "2026-11-04"
+    },
+    "Uginanie młotkowe hantli": {
+      "ciezar": 11.0,
+      "powt": [
+        10,
+        10,
+        12
+      ],
+      "nastepny": 11.0,
+      "nieudane": 0,
+      "data": "2026-11-04"
     }
   },
   "ciezary_start": {
