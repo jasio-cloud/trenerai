@@ -80,10 +80,6 @@
       "ilosc": 0.5,
       "do": "2026-11-11"
     },
-    "grahamka": {
-      "ilosc": 3.0,
-      "do": "2026-11-03"
-    },
     "kakao": {
       "ilosc": 16.0,
       "do": "2027-05-18"
@@ -153,6 +149,12 @@
       "co": "cykl:2026-11-02",
       "pozycji": 17,
       "koszt": 86.09
+    },
+    {
+      "data": "2026-11-04",
+      "co": "wyrzucone",
+      "produkt": "grahamka",
+      "ilosc": 3.0
     }
   ]
 }
