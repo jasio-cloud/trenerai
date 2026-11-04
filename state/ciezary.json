@@ -10,14 +10,14 @@
     "data": "2026-09-17"
   },
   "Wiosłowanie hantlem jednorącz": {
-    "ciezar": 14.0,
+    "ciezar": 22.0,
     "powt": [
-      12,
-      12
+      10,
+      10
     ],
-    "nastepny": 16.5,
+    "nastepny": 22.0,
     "nieudane": 0,
-    "data": "2026-09-20"
+    "data": "2026-11-04"
   },
   "Przysiad goblet z hantlem": {
     "ciezar": 14.0,
@@ -153,5 +153,48 @@
     "nastepny": 12.5,
     "nieudane": 1,
     "data": "2026-11-02"
+  },
+  "Martwy ciąg": {
+    "ciezar": 60.0,
+    "powt": [
+      8,
+      8
+    ],
+    "nastepny": 65.0,
+    "nieudane": 0,
+    "data": "2026-11-04"
+  },
+  "Wiosłowanie sztangą podchwytem": {
+    "ciezar": 60.0,
+    "powt": [
+      8,
+      10,
+      10,
+      10
+    ],
+    "nastepny": 60.0,
+    "nieudane": 0,
+    "data": "2026-11-04"
+  },
+  "Uginanie sztangi (biceps)": {
+    "ciezar": 30.0,
+    "powt": [
+      10,
+      8
+    ],
+    "nastepny": 30.0,
+    "nieudane": 0,
+    "data": "2026-11-04"
+  },
+  "Uginanie młotkowe hantli": {
+    "ciezar": 11.0,
+    "powt": [
+      10,
+      10,
+      12
+    ],
+    "nastepny": 11.0,
+    "nieudane": 0,
+    "data": "2026-11-04"
   }
 }
