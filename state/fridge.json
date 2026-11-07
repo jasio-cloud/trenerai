@@ -84,10 +84,6 @@
       "ilosc": 14.0,
       "do": "2027-05-18"
     },
-    "mielone_wolowe": {
-      "ilosc": 266.67,
-      "do": "2026-11-06"
-    },
     "jogurt_grecki": {
       "ilosc": 355,
       "do": "2026-11-14"
@@ -128,10 +124,6 @@
       "ilosc": 0.67,
       "do": "2027-05-21"
     },
-    "pomidor": {
-      "ilosc": 0.5,
-      "do": "2026-11-06"
-    },
     "passata": {
       "ilosc": 166.67,
       "do": "2027-05-21"
@@ -169,6 +161,18 @@
       "co": "cykl:2026-11-05",
       "pozycji": 14,
       "koszt": 87.84
+    },
+    {
+      "data": "2026-11-07",
+      "co": "wyrzucone",
+      "produkt": "mielone_wolowe",
+      "ilosc": 266.67
+    },
+    {
+      "data": "2026-11-07",
+      "co": "wyrzucone",
+      "produkt": "pomidor",
+      "ilosc": 0.5
     }
   ]
 }

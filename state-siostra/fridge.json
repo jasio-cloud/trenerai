@@ -100,10 +100,6 @@
       "ilosc": 183,
       "do": "2026-11-11"
     },
-    "mielone_wolowe": {
-      "ilosc": 100.0,
-      "do": "2026-11-06"
-    },
     "majonez_sriracha": {
       "ilosc": 240,
       "do": "2027-05-21"
@@ -165,6 +161,12 @@
       "co": "cykl:2026-11-05",
       "pozycji": 14,
       "koszt": 75.65
+    },
+    {
+      "data": "2026-11-07",
+      "co": "wyrzucone",
+      "produkt": "mielone_wolowe",
+      "ilosc": 100.0
     }
   ]
 }
