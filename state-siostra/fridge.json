@@ -1,21 +1,5 @@
 {
   "stan": {
-    "jaja": {
-      "ilosc": 1,
-      "do": "2026-11-08"
-    },
-    "jogurt_grecki": {
-      "ilosc": 10,
-      "do": "2026-11-08"
-    },
-    "mleko": {
-      "ilosc": 566,
-      "do": "2026-11-08"
-    },
-    "twarog": {
-      "ilosc": 235,
-      "do": "2026-11-08"
-    },
     "czosnek": {
       "ilosc": 9.5,
       "do": "2027-05-15"
@@ -23,10 +7,6 @@
     "ogorek_kiszony": {
       "ilosc": 8.0,
       "do": "2027-05-15"
-    },
-    "chleb": {
-      "ilosc": 12,
-      "do": "2026-11-08"
     },
     "makaron": {
       "ilosc": 465.0,
@@ -169,6 +149,36 @@
       "co": "cykl:2026-11-08",
       "pozycji": 16,
       "koszt": 82.62
+    },
+    {
+      "data": "2026-11-09",
+      "co": "wyrzucone",
+      "produkt": "jaja",
+      "ilosc": 1
+    },
+    {
+      "data": "2026-11-09",
+      "co": "wyrzucone",
+      "produkt": "jogurt_grecki",
+      "ilosc": 10
+    },
+    {
+      "data": "2026-11-09",
+      "co": "wyrzucone",
+      "produkt": "mleko",
+      "ilosc": 566
+    },
+    {
+      "data": "2026-11-09",
+      "co": "wyrzucone",
+      "produkt": "twarog",
+      "ilosc": 235
+    },
+    {
+      "data": "2026-11-09",
+      "co": "wyrzucone",
+      "produkt": "chleb",
+      "ilosc": 12
     }
   ]
 }

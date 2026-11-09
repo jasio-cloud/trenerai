@@ -1,17 +1,5 @@
 {
   "stan": {
-    "mleko": {
-      "ilosc": 303,
-      "do": "2026-11-08"
-    },
-    "ser_zolty": {
-      "ilosc": 5,
-      "do": "2026-11-08"
-    },
-    "twarog": {
-      "ilosc": 250,
-      "do": "2026-11-08"
-    },
     "czosnek": {
       "ilosc": 3.0,
       "do": "2027-05-15"
@@ -19,10 +7,6 @@
     "ogorek_kiszony": {
       "ilosc": 1.0,
       "do": "2027-05-15"
-    },
-    "chleb": {
-      "ilosc": 9,
-      "do": "2026-11-08"
     },
     "makaron": {
       "ilosc": 175.0,
@@ -183,6 +167,30 @@
       "co": "cykl:2026-11-08",
       "pozycji": 13,
       "koszt": 97.08
+    },
+    {
+      "data": "2026-11-09",
+      "co": "wyrzucone",
+      "produkt": "mleko",
+      "ilosc": 303
+    },
+    {
+      "data": "2026-11-09",
+      "co": "wyrzucone",
+      "produkt": "ser_zolty",
+      "ilosc": 5
+    },
+    {
+      "data": "2026-11-09",
+      "co": "wyrzucone",
+      "produkt": "twarog",
+      "ilosc": 250
+    },
+    {
+      "data": "2026-11-09",
+      "co": "wyrzucone",
+      "produkt": "chleb",
+      "ilosc": 9
     }
   ]
 }
