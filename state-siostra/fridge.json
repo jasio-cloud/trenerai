@@ -1,7 +1,7 @@
 {
   "stan": {
     "czosnek": {
-      "ilosc": 9.5,
+      "ilosc": 7.4,
       "do": "2027-05-15"
     },
     "ogorek_kiszony": {
@@ -9,7 +9,7 @@
       "do": "2027-05-15"
     },
     "makaron": {
-      "ilosc": 465.0,
+      "ilosc": 257.0,
       "do": "2027-05-15"
     },
     "dzem_niskoslodzony": {
@@ -17,7 +17,7 @@
       "do": "2027-05-15"
     },
     "kakao": {
-      "ilosc": 16.5,
+      "ilosc": 16.0,
       "do": "2027-05-15"
     },
     "ketchup": {
@@ -25,35 +25,35 @@
       "do": "2027-05-15"
     },
     "koncentrat": {
-      "ilosc": 190.0,
+      "ilosc": 148.0,
       "do": "2027-05-15"
     },
     "kukurydza": {
-      "ilosc": 450,
+      "ilosc": 400,
       "do": "2027-05-15"
     },
     "maslo_orzechowe": {
-      "ilosc": 15.5,
+      "ilosc": 14.0,
       "do": "2027-05-15"
     },
     "miod": {
-      "ilosc": 5.5,
+      "ilosc": 3.0,
       "do": "2027-05-15"
     },
     "musztarda": {
-      "ilosc": 8.5,
+      "ilosc": 8.0,
       "do": "2027-05-15"
     },
     "olej": {
-      "ilosc": 947.5,
+      "ilosc": 937.0,
       "do": "2027-05-15"
     },
     "orzechy": {
-      "ilosc": 59,
+      "ilosc": 23,
       "do": "2027-05-15"
     },
     "passata": {
-      "ilosc": 250.0,
+      "ilosc": 400.0,
       "do": "2027-05-15"
     },
     "cynamon": {
@@ -61,11 +61,11 @@
       "do": "2027-05-15"
     },
     "przyprawy": {
-      "ilosc": 73.5,
+      "ilosc": 68.4,
       "do": "2027-05-15"
     },
     "maslo": {
-      "ilosc": 183,
+      "ilosc": 176,
       "do": "2026-11-11"
     },
     "majonez_sriracha": {
@@ -93,12 +93,40 @@
       "do": "2026-11-20"
     },
     "mielone_wolowe": {
-      "ilosc": 50.0,
+      "ilosc": 100.0,
       "do": "2026-11-12"
     },
     "chleb_tostowy": {
-      "ilosc": 18.0,
+      "ilosc": 16.0,
       "do": "2026-11-20"
+    },
+    "jaja": {
+      "ilosc": 4,
+      "do": "2026-11-23"
+    },
+    "jogurt_grecki": {
+      "ilosc": 360,
+      "do": "2026-11-23"
+    },
+    "mleko": {
+      "ilosc": 915,
+      "do": "2026-11-23"
+    },
+    "twarog": {
+      "ilosc": 115,
+      "do": "2026-11-23"
+    },
+    "cebula": {
+      "ilosc": 0.6,
+      "do": "2027-05-30"
+    },
+    "marchew": {
+      "ilosc": 0.6,
+      "do": "2027-05-30"
+    },
+    "chleb": {
+      "ilosc": 12,
+      "do": "2026-11-23"
     }
   },
   "log": [
@@ -179,6 +207,12 @@
       "co": "wyrzucone",
       "produkt": "chleb",
       "ilosc": 12
+    },
+    {
+      "data": "2026-11-11",
+      "co": "cykl:2026-11-11",
+      "pozycji": 13,
+      "koszt": 70.28
     }
   ]
 }
