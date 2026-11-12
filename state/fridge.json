@@ -48,14 +48,6 @@
       "ilosc": 59.0,
       "do": "2027-05-15"
     },
-    "maslo": {
-      "ilosc": 175,
-      "do": "2026-11-11"
-    },
-    "serek_wiejski": {
-      "ilosc": 0.5,
-      "do": "2026-11-11"
-    },
     "kakao": {
       "ilosc": 13.0,
       "do": "2027-05-18"
@@ -209,6 +201,18 @@
       "co": "cykl:2026-11-11",
       "pozycji": 18,
       "koszt": 91.69
+    },
+    {
+      "data": "2026-11-12",
+      "co": "wyrzucone",
+      "produkt": "maslo",
+      "ilosc": 175
+    },
+    {
+      "data": "2026-11-12",
+      "co": "wyrzucone",
+      "produkt": "serek_wiejski",
+      "ilosc": 0.5
     }
   ]
 }

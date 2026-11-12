@@ -64,10 +64,6 @@
       "ilosc": 68.4,
       "do": "2027-05-15"
     },
-    "maslo": {
-      "ilosc": 176,
-      "do": "2026-11-11"
-    },
     "majonez_sriracha": {
       "ilosc": 222,
       "do": "2027-05-21"
@@ -213,6 +209,12 @@
       "co": "cykl:2026-11-11",
       "pozycji": 13,
       "koszt": 70.28
+    },
+    {
+      "data": "2026-11-12",
+      "co": "wyrzucone",
+      "produkt": "maslo",
+      "ilosc": 176
     }
   ]
 }
