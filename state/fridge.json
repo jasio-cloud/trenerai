@@ -100,14 +100,6 @@
       "ilosc": 8.0,
       "do": "2026-11-17"
     },
-    "mielone_wolowe": {
-      "ilosc": 200.0,
-      "do": "2026-11-12"
-    },
-    "pomidor": {
-      "ilosc": 0.5,
-      "do": "2026-11-12"
-    },
     "mleko": {
       "ilosc": 920,
       "do": "2026-11-23"
@@ -212,6 +204,18 @@
       "data": "2026-11-12",
       "co": "wyrzucone",
       "produkt": "serek_wiejski",
+      "ilosc": 0.5
+    },
+    {
+      "data": "2026-11-13",
+      "co": "wyrzucone",
+      "produkt": "mielone_wolowe",
+      "ilosc": 200.0
+    },
+    {
+      "data": "2026-11-13",
+      "co": "wyrzucone",
+      "produkt": "pomidor",
       "ilosc": 0.5
     }
   ]
