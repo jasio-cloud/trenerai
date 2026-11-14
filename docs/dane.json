@@ -1,5 +1,5 @@
 {
-  "wygenerowano": "2026-11-14T03:57:00+01:00",
+  "wygenerowano": "2026-11-14T11:03:02+01:00",
   "dzis": "2026-11-14",
   "typ_dzis": 1,
   "typy": {
@@ -980,23 +980,23 @@
     "zapas": 39.74,
     "szafka": 16.78,
     "na_dni": 75.34,
-    "zrobione": false
+    "zrobione": true
   },
   "lodowka": {
     "ogorek_kiszony": {
-      "ilosc": 6.5,
+      "ilosc": 5.0,
       "do": "2027-05-15"
     },
     "makaron": {
-      "ilosc": 435.0,
+      "ilosc": 115.0,
       "do": "2027-05-15"
     },
     "dzem_niskoslodzony": {
-      "ilosc": 60,
+      "ilosc": 140,
       "do": "2027-05-15"
     },
     "maslo_orzechowe": {
-      "ilosc": 11.5,
+      "ilosc": 10.0,
       "do": "2027-05-15"
     },
     "miod": {
@@ -1004,31 +1004,31 @@
       "do": "2027-05-15"
     },
     "musztarda": {
-      "ilosc": 4.0,
+      "ilosc": 2.0,
       "do": "2027-05-15"
     },
     "maka": {
-      "ilosc": 855,
+      "ilosc": 795,
       "do": "2027-05-15"
     },
     "olej": {
-      "ilosc": 900.0,
+      "ilosc": 885.0,
       "do": "2027-05-15"
     },
     "orzechy": {
-      "ilosc": 57,
+      "ilosc": 43,
       "do": "2027-05-15"
     },
     "proszek_do_pieczenia": {
-      "ilosc": 25,
+      "ilosc": 22,
       "do": "2027-05-15"
     },
     "cynamon": {
-      "ilosc": 11,
+      "ilosc": 9,
       "do": "2027-05-15"
     },
     "przyprawy": {
-      "ilosc": 59.0,
+      "ilosc": 53.0,
       "do": "2027-05-15"
     },
     "kakao": {
@@ -1036,23 +1036,23 @@
       "do": "2027-05-18"
     },
     "jogurt_grecki": {
-      "ilosc": 260,
+      "ilosc": 155,
       "do": "2026-11-14"
     },
     "krem_bez_cukru": {
-      "ilosc": 191,
+      "ilosc": 177,
       "do": "2027-05-21"
     },
     "kukurydza": {
-      "ilosc": 50,
+      "ilosc": 215,
       "do": "2027-05-21"
     },
     "majonez_sriracha": {
-      "ilosc": 109,
+      "ilosc": 81,
       "do": "2027-05-21"
     },
     "slodzik": {
-      "ilosc": 295.5,
+      "ilosc": 294.0,
       "do": "2027-05-21"
     },
     "szynka": {
@@ -1060,7 +1060,7 @@
       "do": "2026-11-14"
     },
     "jaja": {
-      "ilosc": 10,
+      "ilosc": 9,
       "do": "2026-11-14"
     },
     "cebula": {
@@ -1068,7 +1068,7 @@
       "do": "2027-05-21"
     },
     "marchew": {
-      "ilosc": 0.67,
+      "ilosc": 0.17,
       "do": "2027-05-21"
     },
     "passata": {
@@ -1076,7 +1076,7 @@
       "do": "2027-05-21"
     },
     "poledwica": {
-      "ilosc": 61,
+      "ilosc": 31,
       "do": "2026-11-17"
     },
     "chleb_tostowy": {
@@ -1084,24 +1084,36 @@
       "do": "2026-11-17"
     },
     "mleko": {
-      "ilosc": 920,
+      "ilosc": 895,
       "do": "2026-11-23"
     },
     "ser_zolty": {
-      "ilosc": 3,
+      "ilosc": 1,
       "do": "2026-11-23"
     },
     "twarog": {
-      "ilosc": 65,
+      "ilosc": 160,
       "do": "2026-11-23"
     },
     "chleb": {
-      "ilosc": 7,
+      "ilosc": 2,
       "do": "2026-11-23"
     },
     "tortilla": {
-      "ilosc": 4,
+      "ilosc": 3,
       "do": "2027-05-30"
+    },
+    "mielone_wolowe": {
+      "ilosc": 300.0,
+      "do": "2026-11-18"
+    },
+    "czosnek": {
+      "ilosc": 7.0,
+      "do": "2027-06-02"
+    },
+    "koncentrat": {
+      "ilosc": 140.0,
+      "do": "2027-06-02"
     }
   },
   "trening": {
@@ -11261,33 +11273,34 @@
           "ikona": "🍳",
           "ping": true,
           "akcja": "kuchnia",
-          "opis": "Przygotujesz: Naleśniki ze skyrem i kremem, Box: sałatka jajeczna z kukurydzą, Twaróg z makaronem i masłem orzechowym. Potem do jutra tylko sięgasz do lodówki.",
+          "opis": "Przygotujesz: Gofry proteinowe z kremem, Twaróg z bananem i miodem, Box: serek wiejski + jajka na twardo + ogórki. Potem do jutra tylko sięgasz do lodówki.",
           "kroki": [
-            "Wyjmij wszystko na blat, zanim zaczniesz: banan 1 szt. (120 g), chleb pszenny 1 kromka (35 g), jaja 3 szt. (165 g), jogurt grecki 2% 65 g, krem do smarowania bez cukru 35 g, kukurydza konserwowa 80 g, mąka pszenna 60 g, makaron 50 g, masło orzechowe 100% 1 łyżka (16 g), mleko 2% 60 ml, musztarda 1 łyżka (15 g), przyprawy 1 porcja (2 g), skyr naturalny 2 kubki (300 g), słodzik w tabletkach 1 tabletka (0 g), twaróg półtłusty 105 g.",
+            "Wyjmij wszystko na blat, zanim zaczniesz: banan 1 szt. (120 g), chleb pszenny 3 kromki (105 g), jaja 3 szt. (165 g), krem do smarowania bez cukru 14 g, mąka pszenna 35 g, miód 2 łyżki (40 g), mleko 2% 55 ml, ogórek kiszony 100 g, orzechy / migdały 11 g, proszek do pieczenia 1 g, przyprawy 1 porcja (2 g), serek wiejski 1 opak. (200 g), skyr naturalny 1 kubek (150 g), słodzik w tabletkach 0 g, twaróg półtłusty 200 g.",
             "Przygotuj 2 pojemniki i opisz je karteczką: dziś 13:30 — drugi posiłek; dziś 20:00 — kolacja.",
             "▸ Woda — postaw ją od razu, zanim zaczniesz resztę:",
-            "Jajka na twardo dla Box: sałatka jajeczna z kukurydzą (2 szt.) — razem 2 szt.: w małym garnku zagotuj wodę, łyżką włóż jajka, gotuj 9 minut na średnim ogniu, odlej wrzątek i zalej zimną wodą. Obierzesz je przy daniach.",
-            "▸ Box: sałatka jajeczna z kukurydzą",
-            "Weź 2 szt. ugotowanych jajek z garnka z zimną wodą.",
-            "Jajka pokrój w kostkę ok. 1 cm. Kukurydzę (80 g) odsącz z zalewy na sitku.",
-            "W misce wymieszaj jajka, kukurydzę, jogurt (65 g) i musztardę (1 łyżka, 15 g). Dopraw szczyptą soli, pieprzu i słodkiej papryki.",
-            "Przełóż do pojemnika, chleb (1 kromka, 35 g) zapakuj osobno. W lodówce wytrzyma 2 dni.",
+            "Jajka na twardo dla Box: serek wiejski + jajka na twardo + ogórki (2 szt.) — razem 2 szt.: w małym garnku zagotuj wodę, łyżką włóż jajka, gotuj 9 minut na średnim ogniu, odlej wrzątek i zalej zimną wodą. Obierzesz je przy daniach.",
+            "▸ Twaróg z bananem i miodem",
+            "Twaróg (200 g) włóż do miski, dolej mleko (55 ml) i rozgniataj widelcem ok. minuty na krem.",
+            "Banana (1 szt., 120 g) obierz i pokrój w plasterki na wierzch.",
+            "Polej miodem (1 łyżka, 20 g) i posyp orzechami (11 g).",
+            "Na zmianę: wszystko do zakręcanego pojemnika, banana weź w całości i pokrój przy jedzeniu.",
             "Przełóż do pojemnika „dziś 13:30 — drugi posiłek”.",
-            "▸ Twaróg z makaronem i masłem orzechowym",
-            "Ugotuj makaron (50 g), odcedź, przestudź.",
-            "Twaróg (105 g) rozgnieć widelcem z odrobiną wody, aż będzie kremowy.",
-            "Połącz z makaronem, dodaj masło orzechowe (1 łyżka, 16 g) i banana (1 szt., 120 g) w plastrach.",
+            "▸ Box: serek wiejski + jajka na twardo + ogórki",
+            "Weź 2 szt. ugotowanych jajek z garnka z zimną wodą.",
+            "Do pojemnika przełóż serek wiejski (1 opak., 200 g). Obok ułóż jajka przekrojone na pół i posyp je szczyptą soli i pieprzu.",
+            "Dołóż ogórki kiszone (100 g) — w całości albo pokrojone.",
+            "Chleb (1 kromka, 35 g) zapakuj do osobnej torebki. Nic nie trzeba odgrzewać.",
             "Przełóż do pojemnika „dziś 20:00 — kolacja”.",
-            "▸ Naleśniki ze skyrem i kremem",
-            "Rozkłóć jajko (1 szt., 55 g) z mlekiem (60 ml) i 150 ml wody, dosyp mąkę (60 g) i słodzik (1 tabletka, 0 g). Ciasto ma być rzadkie jak śmietanka.",
-            "Smaż cienkie naleśniki na mocno rozgrzanej patelni, po ok. minucie z każdej strony. Wyjdą 3-4 sztuki.",
-            "Skyr (2 kubki, 300 g) rozsmaruj po naleśniku, zwiń w rulon.",
-            "Na wierzch krem do smarowania (35 g).",
+            "▸ Gofry proteinowe z kremem",
+            "Wymieszaj jajka (1 szt., 55 g), skyr (1 kubek, 150 g), mąkę (35 g), proszek do pieczenia (1 g) i słodzik (0 g) na gęste ciasto.",
+            "Nagrzej gofrownicę i piecz porcjami po ok. 4 minuty. Bez gofrownicy usmaż placki na patelni pod przykryciem.",
+            "Na wierzch krem do smarowania (14 g). Na zimno też smakują, więc idą do pojemnika.",
             "To zjadasz od razu, na koniec bloku.",
+            "Do „dziś 10:15 — śniadanie po treningu” dołóż: chleb pszenny 2 kromki (70 g), miód 1 łyżka (20 g).",
             "▸ Na koniec: ciepłe pojemniki wystudź 20–30 minut bez pokrywki, potem wszystkie do lodówki na jedną półkę. Naczynia do zlewu, przetrzyj blat — 5 minut teraz oszczędza 20 jutro."
           ],
           "jak": "kuchnia",
-          "czas_min": 42
+          "czas_min": 28
         },
         {
           "czas": "10:15",
@@ -11296,14 +11309,14 @@
           "ping": true,
           "slot": "sniadanie",
           "opis": "Pierwszy posiłek dnia, zaraz po sztandze.",
-          "posilek": "Naleśniki ze skyrem i kremem",
-          "posilek_id": "q_nalesniki",
-          "porcja": 1.2,
+          "posilek": "Gofry proteinowe z kremem",
+          "posilek_id": "q_gofry",
+          "porcja": 0.7,
           "makra": {
-            "kcal": 688,
-            "bialko": 54,
-            "tluszcz": 25,
-            "wegle": 60
+            "kcal": 604,
+            "bialko": 35,
+            "tluszcz": 15,
+            "wegle": 81
           },
           "skladniki": [
             {
@@ -11316,26 +11329,35 @@
               "wegle": 0.4
             },
             {
-              "nazwa": "Mleko 2%",
-              "ile": "60 ml",
-              "g": 60,
-              "kcal": 30,
-              "bialko": 2.0,
-              "tluszcz": 1.2,
-              "wegle": 2.9
+              "nazwa": "Skyr naturalny (kubek 150 g)",
+              "ile": "1 kubek (150 g)",
+              "g": 150,
+              "kcal": 96,
+              "bialko": 17.2,
+              "tluszcz": 0.3,
+              "wegle": 5.7
             },
             {
               "nazwa": "Mąka pszenna",
-              "ile": "60 g",
-              "g": 60,
-              "kcal": 206,
-              "bialko": 6.0,
-              "tluszcz": 0.7,
-              "wegle": 42.6
+              "ile": "35 g",
+              "g": 35,
+              "kcal": 120,
+              "bialko": 3.5,
+              "tluszcz": 0.4,
+              "wegle": 24.8
+            },
+            {
+              "nazwa": "Proszek do pieczenia",
+              "ile": "1 g",
+              "g": 1,
+              "kcal": 1,
+              "bialko": 0.0,
+              "tluszcz": 0.0,
+              "wegle": 0.1
             },
             {
               "nazwa": "Słodzik w tabletkach",
-              "ile": "1 tabletka (0 g)",
+              "ile": "0 g",
               "g": 0,
               "kcal": 0,
               "bialko": 0.0,
@@ -11343,32 +11365,43 @@
               "wegle": 0.0
             },
             {
-              "nazwa": "Skyr naturalny (kubek 150 g)",
-              "ile": "2 kubki (300 g)",
-              "g": 300,
-              "kcal": 192,
-              "bialko": 34.5,
-              "tluszcz": 0.6,
-              "wegle": 11.4
+              "nazwa": "Krem do smarowania bez cukru",
+              "ile": "14 g",
+              "g": 14,
+              "kcal": 73,
+              "bialko": 1.7,
+              "tluszcz": 7.0,
+              "wegle": 1.1
             },
             {
-              "nazwa": "Krem do smarowania bez cukru",
-              "ile": "35 g",
-              "g": 35,
-              "kcal": 182,
-              "bialko": 4.2,
-              "tluszcz": 17.5,
-              "wegle": 2.8
+              "nazwa": "Chleb pszenny (zwykły biały)",
+              "ile": "+ 2 kromki (70 g)",
+              "g": 70,
+              "kcal": 175,
+              "bialko": 5.6,
+              "tluszcz": 2.1,
+              "wegle": 32.9,
+              "dodatek": true
+            },
+            {
+              "nazwa": "Miód",
+              "ile": "+ 1 łyżka (20 g)",
+              "g": 20,
+              "kcal": 61,
+              "bialko": 0.1,
+              "tluszcz": 0.0,
+              "wegle": 16.4,
+              "dodatek": true
             }
           ],
           "jak": "przepis",
-          "czas_min": 16,
+          "czas_min": 12,
           "kroki": [
-            "Rozkłóć jajko (1 szt., 55 g) z mlekiem (60 ml) i 150 ml wody, dosyp mąkę (60 g) i słodzik (1 tabletka, 0 g). Ciasto ma być rzadkie jak śmietanka.",
-            "Smaż cienkie naleśniki na mocno rozgrzanej patelni, po ok. minucie z każdej strony. Wyjdą 3-4 sztuki.",
-            "Skyr (2 kubki, 300 g) rozsmaruj po naleśniku, zwiń w rulon.",
-            "Na wierzch krem do smarowania (35 g).",
-            "Wszystkie ilości w krokach są już przeliczone na Twoją porcję na dziś — nic nie musisz dzielić."
+            "Wymieszaj jajka (1 szt., 55 g), skyr (1 kubek, 150 g), mąkę (35 g), proszek do pieczenia (1 g) i słodzik (0 g) na gęste ciasto.",
+            "Nagrzej gofrownicę i piecz porcjami po ok. 4 minuty. Bez gofrownicy usmaż placki na patelni pod przykryciem.",
+            "Na wierzch krem do smarowania (14 g). Na zimno też smakują, więc idą do pojemnika.",
+            "Wszystkie ilości w krokach są już przeliczone na Twoją porcję na dziś — nic nie musisz dzielić.",
+            "Do tego dodatek węglowy: chleb pszenny 2 kromki, miód 1 łyżka. Zjedz obok — to paliwo na trening i regenerację, bez niego dzień nie dobija węglowodanów."
           ]
         },
         {
@@ -11386,70 +11419,70 @@
           "ping": true,
           "slot": "drugi",
           "opis": "",
-          "posilek": "Box: sałatka jajeczna z kukurydzą",
-          "posilek_id": "q_jajka_kukurydza",
-          "porcja": 0.8,
+          "posilek": "Twaróg z bananem i miodem",
+          "posilek_id": "q_twarog_banan",
+          "porcja": 1.1,
           "makra": {
-            "kcal": 374,
-            "bialko": 26,
-            "tluszcz": 15,
-            "wegle": 31
+            "kcal": 530,
+            "bialko": 43,
+            "tluszcz": 17,
+            "wegle": 52
           },
           "skladniki": [
             {
-              "nazwa": "Jaja",
-              "ile": "2 szt. (110 g)",
-              "g": 110,
-              "kcal": 157,
-              "bialko": 13.9,
-              "tluszcz": 10.5,
-              "wegle": 0.8
+              "nazwa": "Twaróg półtłusty",
+              "ile": "200 g",
+              "g": 200,
+              "kcal": 266,
+              "bialko": 37.4,
+              "tluszcz": 9.4,
+              "wegle": 7.4
             },
             {
-              "nazwa": "Kukurydza konserwowa",
-              "ile": "80 g",
-              "g": 80,
-              "kcal": 66,
-              "bialko": 2.2,
-              "tluszcz": 1.0,
-              "wegle": 10.4
+              "nazwa": "Banan",
+              "ile": "1 szt. (120 g)",
+              "g": 120,
+              "kcal": 106,
+              "bialko": 1.3,
+              "tluszcz": 0.4,
+              "wegle": 24.2
             },
             {
-              "nazwa": "Jogurt grecki 2%",
-              "ile": "65 g",
-              "g": 65,
-              "kcal": 47,
-              "bialko": 6.4,
-              "tluszcz": 1.3,
-              "wegle": 2.0
-            },
-            {
-              "nazwa": "Musztarda",
-              "ile": "1 łyżka (15 g)",
-              "g": 15,
-              "kcal": 16,
-              "bialko": 0.8,
-              "tluszcz": 0.9,
-              "wegle": 1.2
-            },
-            {
-              "nazwa": "Chleb pszenny (zwykły biały)",
-              "ile": "1 kromka (35 g)",
-              "g": 35,
-              "kcal": 88,
-              "bialko": 2.8,
-              "tluszcz": 1.0,
+              "nazwa": "Miód",
+              "ile": "1 łyżka (20 g)",
+              "g": 20,
+              "kcal": 61,
+              "bialko": 0.1,
+              "tluszcz": 0.0,
               "wegle": 16.4
+            },
+            {
+              "nazwa": "Orzechy / migdały",
+              "ile": "11 g",
+              "g": 11,
+              "kcal": 70,
+              "bialko": 2.1,
+              "tluszcz": 6.3,
+              "wegle": 1.1
+            },
+            {
+              "nazwa": "Mleko 2%",
+              "ile": "55 ml",
+              "g": 55,
+              "kcal": 28,
+              "bialko": 1.8,
+              "tluszcz": 1.1,
+              "wegle": 2.6
             }
           ],
           "jak": "przepis",
-          "czas_min": 12,
+          "czas_min": 4,
           "kroki": [
             "📦 To zrobiłeś w bloku kuchni (dziś o 09:50) — teraz tylko wyjmij pojemnik z lodówki. Przepis niżej, gdybyś robił na świeżo.",
-            "Jajka na twardo: w małym garnku zagotuj tyle wody, żeby przykryła jajka (2 szt., 110 g). Łyżką ostrożnie włóż jajka do wrzątku i gotuj 9 minut na średnim ogniu. Odlej wrzątek, zalej zimną wodą na 3 minuty i obierz ze skorupki.",
-            "Jajka pokrój w kostkę ok. 1 cm. Kukurydzę (80 g) odsącz z zalewy na sitku.",
-            "W misce wymieszaj jajka, kukurydzę, jogurt (65 g) i musztardę (1 łyżka, 15 g). Dopraw szczyptą soli, pieprzu i słodkiej papryki.",
-            "Przełóż do pojemnika, chleb (1 kromka, 35 g) zapakuj osobno. W lodówce wytrzyma 2 dni.",
+            "Twaróg (200 g) włóż do miski, dolej mleko (55 ml) i rozgniataj widelcem ok. minuty na krem.",
+            "Banana (1 szt., 120 g) obierz i pokrój w plasterki na wierzch.",
+            "Polej miodem (1 łyżka, 20 g) i posyp orzechami (11 g).",
+            "Na zmianę: wszystko do zakręcanego pojemnika, banana weź w całości i pokrój przy jedzeniu.",
             "Wszystkie ilości w krokach są już przeliczone na Twoją porcję na dziś — nic nie musisz dzielić."
           ]
         },
@@ -11565,60 +11598,61 @@
           "ping": true,
           "slot": "kolacja",
           "opis": "",
-          "posilek": "Twaróg z makaronem i masłem orzechowym",
-          "posilek_id": "q_twarog_makaron",
-          "porcja": 0.7,
+          "posilek": "Box: serek wiejski + jajka na twardo + ogórki",
+          "posilek_id": "q_serek_box",
+          "porcja": 0.8,
           "makra": {
-            "kcal": 522,
-            "bialko": 31,
-            "tluszcz": 14,
-            "wegle": 66
+            "kcal": 450,
+            "bialko": 39,
+            "tluszcz": 22,
+            "wegle": 23
           },
           "skladniki": [
             {
-              "nazwa": "Twaróg półtłusty",
-              "ile": "105 g",
-              "g": 105,
-              "kcal": 140,
-              "bialko": 19.6,
-              "tluszcz": 4.9,
-              "wegle": 3.9
+              "nazwa": "Serek wiejski",
+              "ile": "1 opak. (200 g)",
+              "g": 200,
+              "kcal": 194,
+              "bialko": 22.0,
+              "tluszcz": 10.0,
+              "wegle": 4.0
             },
             {
-              "nazwa": "Makaron (świderki/penne)",
-              "ile": "50 g",
-              "g": 50,
-              "kcal": 178,
-              "bialko": 6.0,
-              "tluszcz": 0.8,
-              "wegle": 36.0
+              "nazwa": "Jaja",
+              "ile": "2 szt. (110 g)",
+              "g": 110,
+              "kcal": 157,
+              "bialko": 13.9,
+              "tluszcz": 10.5,
+              "wegle": 0.8
             },
             {
-              "nazwa": "Masło orzechowe 100%",
-              "ile": "1 łyżka (16 g)",
-              "g": 16,
-              "kcal": 99,
-              "bialko": 4.2,
-              "tluszcz": 8.2,
-              "wegle": 1.8
+              "nazwa": "Ogórek kiszony",
+              "ile": "100 g",
+              "g": 98,
+              "kcal": 12,
+              "bialko": 0.5,
+              "tluszcz": 0.2,
+              "wegle": 1.9
             },
             {
-              "nazwa": "Banan",
-              "ile": "1 szt. (120 g)",
-              "g": 120,
-              "kcal": 106,
-              "bialko": 1.3,
-              "tluszcz": 0.4,
-              "wegle": 24.2
+              "nazwa": "Chleb pszenny (zwykły biały)",
+              "ile": "1 kromka (35 g)",
+              "g": 35,
+              "kcal": 88,
+              "bialko": 2.8,
+              "tluszcz": 1.0,
+              "wegle": 16.4
             }
           ],
           "jak": "przepis",
-          "czas_min": 14,
+          "czas_min": 12,
           "kroki": [
             "📦 To zrobiłeś w bloku kuchni (dziś o 09:50) — teraz tylko wyjmij pojemnik z lodówki. Przepis niżej, gdybyś robił na świeżo.",
-            "Ugotuj makaron (50 g), odcedź, przestudź.",
-            "Twaróg (105 g) rozgnieć widelcem z odrobiną wody, aż będzie kremowy.",
-            "Połącz z makaronem, dodaj masło orzechowe (1 łyżka, 16 g) i banana (1 szt., 120 g) w plastrach.",
+            "Jajka na twardo: w małym garnku zagotuj tyle wody, żeby przykryła jajka (2 szt., 110 g). Łyżką ostrożnie włóż jajka do wrzątku i gotuj 9 minut na średnim ogniu. Odlej wrzątek, zalej zimną wodą na 3 minuty i obierz ze skorupki.",
+            "Do pojemnika przełóż serek wiejski (1 opak., 200 g). Obok ułóż jajka przekrojone na pół i posyp je szczyptą soli i pieprzu.",
+            "Dołóż ogórki kiszone (100 g) — w całości albo pokrojone.",
+            "Chleb (1 kromka, 35 g) zapakuj do osobnej torebki. Nic nie trzeba odgrzewać.",
             "Wszystkie ilości w krokach są już przeliczone na Twoją porcję na dziś — nic nie musisz dzielić."
           ]
         },
@@ -11655,12 +11689,21 @@
       ],
       "makra": {
         "kcal": 2394,
-        "bialko": 156,
+        "bialko": 162,
         "tluszcz": 85,
-        "wegle": 238
+        "wegle": 237
       },
       "dobitka": 0,
-      "dodatek_w": [],
+      "dodatek_w": [
+        [
+          "chleb",
+          2
+        ],
+        [
+          "miod",
+          1
+        ]
+      ],
       "poza_planem": [],
       "lzejszy": false,
       "cel": {
@@ -11959,7 +12002,365 @@
       }
     ]
   },
-  "zakupy_zamrozone": {},
+  "zakupy_zamrozone": {
+    "kup": [
+      {
+        "klucz": "mielone_wolowe",
+        "nazwa": "Wołowina świeżo mielona (z lady)",
+        "kat": "mieso",
+        "trw": "swieze",
+        "sklep": "Dino",
+        "opakowan": 2,
+        "opak": 400,
+        "jedn": "g",
+        "brakuje": 500.0,
+        "dokupisz": 800,
+        "cena": 36.0,
+        "szafka": false
+      },
+      {
+        "klucz": "jaja",
+        "nazwa": "Jaja",
+        "kat": "nabial",
+        "trw": "chlodnia",
+        "sklep": "Dino",
+        "opakowan": 1,
+        "opak": 10,
+        "jedn": "szt",
+        "brakuje": 1,
+        "dokupisz": 10,
+        "cena": 12.0,
+        "szafka": false
+      },
+      {
+        "klucz": "napoj_proteinowy",
+        "nazwa": "Napój proteinowy Müllermilch Protein (400 ml)",
+        "kat": "nabial",
+        "trw": "chlodnia",
+        "sklep": "Dino",
+        "opakowan": 1,
+        "opak": 1,
+        "jedn": "butelka",
+        "brakuje": 1,
+        "dokupisz": 1,
+        "cena": 5.29,
+        "szafka": false
+      },
+      {
+        "klucz": "skyr",
+        "nazwa": "Skyr naturalny (kubek 150 g)",
+        "kat": "nabial",
+        "trw": "chlodnia",
+        "sklep": "Dino",
+        "opakowan": 1,
+        "opak": 1,
+        "jedn": "kubek",
+        "brakuje": 1,
+        "dokupisz": 1,
+        "cena": 3.8,
+        "szafka": false
+      },
+      {
+        "klucz": "skyr_waniliowy",
+        "nazwa": "Skyr waniliowy (kubek 150 g)",
+        "kat": "nabial",
+        "trw": "chlodnia",
+        "sklep": "Dino",
+        "opakowan": 1,
+        "opak": 1,
+        "jedn": "kubek",
+        "brakuje": 1,
+        "dokupisz": 1,
+        "cena": 3.69,
+        "szafka": false
+      },
+      {
+        "klucz": "twarog",
+        "nazwa": "Twaróg półtłusty",
+        "kat": "nabial",
+        "trw": "chlodnia",
+        "sklep": "Dino",
+        "opakowan": 2,
+        "opak": 250,
+        "jedn": "g",
+        "brakuje": 340,
+        "dokupisz": 500,
+        "cena": 6.78,
+        "szafka": false
+      },
+      {
+        "klucz": "banan",
+        "nazwa": "Banan",
+        "kat": "warzywa",
+        "trw": "chlodnia",
+        "sklep": "Dino",
+        "opakowan": 3,
+        "opak": 1,
+        "jedn": "szt",
+        "brakuje": 3,
+        "dokupisz": 3,
+        "cena": 1.26,
+        "szafka": false
+      },
+      {
+        "klucz": "cebula",
+        "nazwa": "Cebula",
+        "kat": "warzywa",
+        "trw": "trwale",
+        "sklep": "Dino",
+        "opakowan": 2,
+        "opak": 1,
+        "jedn": "szt",
+        "brakuje": 1.3,
+        "dokupisz": 2,
+        "cena": 1.2,
+        "szafka": false
+      },
+      {
+        "klucz": "czosnek",
+        "nazwa": "Czosnek",
+        "kat": "warzywa",
+        "trw": "trwale",
+        "sklep": "Dino",
+        "opakowan": 1,
+        "opak": 10,
+        "jedn": "zabek",
+        "brakuje": 3.0,
+        "dokupisz": 10,
+        "cena": 3.0,
+        "szafka": true
+      },
+      {
+        "klucz": "marchew",
+        "nazwa": "Marchew",
+        "kat": "warzywa",
+        "trw": "trwale",
+        "sklep": "Dino",
+        "opakowan": 2,
+        "opak": 1,
+        "jedn": "szt",
+        "brakuje": 1.8,
+        "dokupisz": 2,
+        "cena": 0.32,
+        "szafka": false
+      },
+      {
+        "klucz": "dzem_niskoslodzony",
+        "nazwa": "Dżem (np. malinowy, słoik 200 g)",
+        "kat": "spizarnia",
+        "trw": "trwale",
+        "sklep": "Dino",
+        "opakowan": 1,
+        "opak": 200,
+        "jedn": "g",
+        "brakuje": 60,
+        "dokupisz": 200,
+        "cena": 5.49,
+        "szafka": true
+      },
+      {
+        "klucz": "koncentrat",
+        "nazwa": "Koncentrat pomidorowy",
+        "kat": "spizarnia",
+        "trw": "trwale",
+        "sklep": "Dino",
+        "opakowan": 1,
+        "opak": 200,
+        "jedn": "g",
+        "brakuje": 60.0,
+        "dokupisz": 200,
+        "cena": 4.0,
+        "szafka": true
+      },
+      {
+        "klucz": "kukurydza",
+        "nazwa": "Kukurydza konserwowa",
+        "kat": "spizarnia",
+        "trw": "trwale",
+        "sklep": "Dino",
+        "opakowan": 1,
+        "opak": 400,
+        "jedn": "g",
+        "brakuje": 175,
+        "dokupisz": 400,
+        "cena": 4.29,
+        "szafka": true
+      },
+      {
+        "klucz": "passata",
+        "nazwa": "Passata pomidorowa",
+        "kat": "spizarnia",
+        "trw": "trwale",
+        "sklep": "Dino",
+        "opakowan": 1,
+        "opak": 500,
+        "jedn": "g",
+        "brakuje": 333.3,
+        "dokupisz": 500,
+        "cena": 5.0,
+        "szafka": false
+      }
+    ],
+    "mam": [
+      {
+        "klucz": "chleb",
+        "nazwa": "Chleb pszenny (zwykły biały)",
+        "potrzeba": 7,
+        "w_domu": 7,
+        "jedn": "kromka"
+      },
+      {
+        "klucz": "cynamon",
+        "nazwa": "Przyprawa do cynamonek / cynamon",
+        "potrzeba": 2,
+        "w_domu": 11,
+        "jedn": "g"
+      },
+      {
+        "klucz": "jogurt_grecki",
+        "nazwa": "Jogurt grecki 2%",
+        "potrzeba": 95,
+        "w_domu": 260,
+        "jedn": "g"
+      },
+      {
+        "klucz": "krem_bez_cukru",
+        "nazwa": "Krem do smarowania bez cukru",
+        "potrzeba": 14,
+        "w_domu": 191,
+        "jedn": "g"
+      },
+      {
+        "klucz": "majonez_sriracha",
+        "nazwa": "Majonez sriracha",
+        "potrzeba": 28,
+        "w_domu": 109,
+        "jedn": "ml"
+      },
+      {
+        "klucz": "maka",
+        "nazwa": "Mąka pszenna",
+        "potrzeba": 60,
+        "w_domu": 855,
+        "jedn": "g"
+      },
+      {
+        "klucz": "makaron",
+        "nazwa": "Makaron (świderki/penne)",
+        "potrzeba": 320.0,
+        "w_domu": 435.0,
+        "jedn": "g"
+      },
+      {
+        "klucz": "maslo_orzechowe",
+        "nazwa": "Masło orzechowe 100%",
+        "potrzeba": 1.5,
+        "w_domu": 11.5,
+        "jedn": "lyzka"
+      },
+      {
+        "klucz": "miod",
+        "nazwa": "Miód",
+        "potrzeba": 1,
+        "w_domu": 1.0,
+        "jedn": "lyzka"
+      },
+      {
+        "klucz": "mleko",
+        "nazwa": "Mleko 2%",
+        "potrzeba": 25,
+        "w_domu": 920,
+        "jedn": "ml"
+      },
+      {
+        "klucz": "musztarda",
+        "nazwa": "Musztarda",
+        "potrzeba": 1.5,
+        "w_domu": 4.0,
+        "jedn": "lyzka"
+      },
+      {
+        "klucz": "odzywka_wpc",
+        "nazwa": "Odżywka białkowa WPC 80 (czekoladowa) — zapas, kupujesz osobno",
+        "potrzeba": 45,
+        "w_domu": 45,
+        "jedn": "g"
+      },
+      {
+        "klucz": "ogorek_kiszony",
+        "nazwa": "Ogórek kiszony",
+        "potrzeba": 1.5,
+        "w_domu": 6.5,
+        "jedn": "szt"
+      },
+      {
+        "klucz": "olej",
+        "nazwa": "Olej rzepakowy",
+        "potrzeba": 15.0,
+        "w_domu": 900.0,
+        "jedn": "ml"
+      },
+      {
+        "klucz": "orzechy",
+        "nazwa": "Orzechy / migdały",
+        "potrzeba": 14,
+        "w_domu": 57,
+        "jedn": "g"
+      },
+      {
+        "klucz": "poledwica",
+        "nazwa": "Polędwica sopocka (wędlina)",
+        "potrzeba": 30,
+        "w_domu": 61,
+        "jedn": "g"
+      },
+      {
+        "klucz": "proszek_do_pieczenia",
+        "nazwa": "Proszek do pieczenia",
+        "potrzeba": 3,
+        "w_domu": 25,
+        "jedn": "g"
+      },
+      {
+        "klucz": "przyprawy",
+        "nazwa": "Przyprawy (sól, pieprz, papryka, oregano, majeranek)",
+        "potrzeba": 6.0,
+        "w_domu": 59.0,
+        "jedn": "porcja"
+      },
+      {
+        "klucz": "ser_zolty",
+        "nazwa": "Ser żółty w plastrach",
+        "potrzeba": 2,
+        "w_domu": 3,
+        "jedn": "plaster"
+      },
+      {
+        "klucz": "slodzik",
+        "nazwa": "Słodzik w tabletkach",
+        "potrzeba": 1.5,
+        "w_domu": 295.5,
+        "jedn": "tabletka"
+      },
+      {
+        "klucz": "tortilla",
+        "nazwa": "Tortilla pszenna",
+        "potrzeba": 1,
+        "w_domu": 4,
+        "jedn": "szt"
+      }
+    ],
+    "koszt": 92.12,
+    "sklepy": {
+      "Dino": 92.12
+    },
+    "budzet": 90,
+    "zjesz": 52.38,
+    "zapas": 39.74,
+    "szafka": 16.78,
+    "na_dni": 75.34,
+    "zrobione": true
+  },
   "repo": "jasio-cloud/trenerai",
   "galaz": "main",
   "suple": {
