@@ -1,0 +1,51 @@
+{
+  "cykl": 7,
+  "od": "2026-11-14",
+  "do": "2026-11-16",
+  "baza": "b_bolo",
+  "dni": [
+    {
+      "sniadanie": "q_tosty_sriracha",
+      "drugi": "q_shake",
+      "kolacja": "q_kanapki_jajko",
+      "obiad": "b_bolo",
+      "data": "2026-11-14",
+      "typ": 1,
+      "makra": {
+        "kcal": 2033,
+        "bialko": 136,
+        "tluszcz": 85,
+        "wegle": 173
+      }
+    },
+    {
+      "sniadanie": "q_twarog",
+      "drugi": "d_twarog_kakao",
+      "kolacja": "q_serek_box",
+      "obiad": "b_bolo",
+      "data": "2026-11-15",
+      "typ": 1,
+      "makra": {
+        "kcal": 2085,
+        "bialko": 167,
+        "tluszcz": 81,
+        "wegle": 164
+      }
+    },
+    {
+      "sniadanie": "q_nalesniki",
+      "drugi": "q_jajka_kukurydza",
+      "kolacja": "d_pudding",
+      "obiad": "b_bolo",
+      "data": "2026-11-16",
+      "typ": 0,
+      "makra": {
+        "kcal": 2022,
+        "bialko": 146,
+        "tluszcz": 69,
+        "wegle": 192
+      }
+    }
+  ],
+  "wygenerowano": "2026-11-14T03:57:13+01:00"
+}
