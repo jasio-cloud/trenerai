@@ -52,10 +52,6 @@
       "ilosc": 13.0,
       "do": "2027-05-18"
     },
-    "jogurt_grecki": {
-      "ilosc": 155,
-      "do": "2026-11-14"
-    },
     "krem_bez_cukru": {
       "ilosc": 177,
       "do": "2027-05-21"
@@ -71,14 +67,6 @@
     "slodzik": {
       "ilosc": 294.0,
       "do": "2027-05-21"
-    },
-    "szynka": {
-      "ilosc": 45,
-      "do": "2026-11-14"
-    },
-    "jaja": {
-      "ilosc": 9,
-      "do": "2026-11-14"
     },
     "cebula": {
       "ilosc": 0.67,
@@ -235,6 +223,24 @@
       "co": "cykl:2026-11-14",
       "pozycji": 14,
       "koszt": 92.12
+    },
+    {
+      "data": "2026-11-15",
+      "co": "wyrzucone",
+      "produkt": "jogurt_grecki",
+      "ilosc": 155
+    },
+    {
+      "data": "2026-11-15",
+      "co": "wyrzucone",
+      "produkt": "szynka",
+      "ilosc": 45
+    },
+    {
+      "data": "2026-11-15",
+      "co": "wyrzucone",
+      "produkt": "jaja",
+      "ilosc": 9
     }
   ]
 }
