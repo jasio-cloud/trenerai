@@ -76,14 +76,6 @@
       "ilosc": 166.67,
       "do": "2027-05-21"
     },
-    "poledwica": {
-      "ilosc": 1,
-      "do": "2026-11-17"
-    },
-    "chleb_tostowy": {
-      "ilosc": 8.0,
-      "do": "2026-11-17"
-    },
     "mleko": {
       "ilosc": 815,
       "do": "2026-11-23"
@@ -251,6 +243,18 @@
       "co": "cykl:2026-11-17",
       "pozycji": 15,
       "koszt": 82.74
+    },
+    {
+      "data": "2026-11-18",
+      "co": "wyrzucone",
+      "produkt": "poledwica",
+      "ilosc": 1
+    },
+    {
+      "data": "2026-11-18",
+      "co": "wyrzucone",
+      "produkt": "chleb_tostowy",
+      "ilosc": 8.0
     }
   ]
 }
