@@ -120,17 +120,9 @@
       "ilosc": 3,
       "do": "2026-11-23"
     },
-    "mielone_wolowe": {
-      "ilosc": 100.0,
-      "do": "2026-11-18"
-    },
     "ser_zolty": {
       "ilosc": 2,
       "do": "2026-11-26"
-    },
-    "pomidor": {
-      "ilosc": 0.5,
-      "do": "2026-11-18"
     }
   },
   "log": [
@@ -241,6 +233,18 @@
       "co": "cykl:2026-11-17",
       "pozycji": 11,
       "koszt": 65.37
+    },
+    {
+      "data": "2026-11-19",
+      "co": "wyrzucone",
+      "produkt": "mielone_wolowe",
+      "ilosc": 100.0
+    },
+    {
+      "data": "2026-11-19",
+      "co": "wyrzucone",
+      "produkt": "pomidor",
+      "ilosc": 0.5
     }
   ]
 }

@@ -96,10 +96,6 @@
       "ilosc": 2,
       "do": "2027-05-30"
     },
-    "mielone_wolowe": {
-      "ilosc": 200.0,
-      "do": "2026-11-18"
-    },
     "czosnek": {
       "ilosc": 4.0,
       "do": "2027-06-02"
@@ -255,6 +251,12 @@
       "co": "wyrzucone",
       "produkt": "chleb_tostowy",
       "ilosc": 8.0
+    },
+    {
+      "data": "2026-11-19",
+      "co": "wyrzucone",
+      "produkt": "mielone_wolowe",
+      "ilosc": 200.0
     }
   ]
 }
