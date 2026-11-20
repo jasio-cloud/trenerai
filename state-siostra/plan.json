@@ -1,51 +1,51 @@
 {
-  "cykl": 8,
-  "od": "2026-11-17",
-  "do": "2026-11-19",
+  "cykl": 9,
+  "od": "2026-11-20",
+  "do": "2026-11-22",
   "baza": "b_bolo",
   "dni": [
     {
-      "sniadanie": "q_grzanki",
-      "drugi": "d_pudding",
-      "kolacja": "q_serek_box",
-      "obiad": "b_bolo",
-      "data": "2026-11-17",
-      "typ": 1,
-      "makra": {
-        "kcal": 2030,
-        "bialko": 148,
-        "tluszcz": 77,
-        "wegle": 175
-      }
-    },
-    {
-      "sniadanie": "q_tosty_sriracha",
-      "drugi": "q_twarog_banan",
+      "sniadanie": "q_skyr_orzechy_xl",
+      "drugi": "d_sernik",
       "kolacja": "q_kanapki_jajko",
       "obiad": "b_bolo",
-      "data": "2026-11-18",
+      "data": "2026-11-20",
       "typ": 0,
       "makra": {
-        "kcal": 2145,
-        "bialko": 137,
-        "tluszcz": 87,
-        "wegle": 197
+        "kcal": 2156,
+        "bialko": 161,
+        "tluszcz": 83,
+        "wegle": 181
       }
     },
     {
-      "sniadanie": "q_shake",
-      "drugi": "q_skyr",
+      "sniadanie": "q_gofry",
+      "drugi": "q_jogurt_orzechy",
       "kolacja": "q_jajka_kukurydza",
       "obiad": "b_bolo",
-      "data": "2026-11-19",
+      "data": "2026-11-21",
       "typ": 1,
       "makra": {
-        "kcal": 1827,
-        "bialko": 145,
-        "tluszcz": 66,
-        "wegle": 154
+        "kcal": 2019,
+        "bialko": 135,
+        "tluszcz": 79,
+        "wegle": 180
+      }
+    },
+    {
+      "sniadanie": "q_twarog",
+      "drugi": "q_nalesniki",
+      "kolacja": "q_serek_box",
+      "obiad": "b_bolo",
+      "data": "2026-11-22",
+      "typ": 1,
+      "makra": {
+        "kcal": 2165,
+        "bialko": 162,
+        "tluszcz": 83,
+        "wegle": 183
       }
     }
   ],
-  "wygenerowano": "2026-11-17T01:14:12+01:00"
+  "wygenerowano": "2026-11-20T03:31:49+01:00"
 }
