@@ -1,15 +1,15 @@
 {
   "stan": {
     "ogorek_kiszony": {
-      "ilosc": 4.0,
+      "ilosc": 1.5,
       "do": "2027-05-15"
     },
     "makaron": {
-      "ilosc": 300.0,
+      "ilosc": 60.0,
       "do": "2027-05-15"
     },
     "dzem_niskoslodzony": {
-      "ilosc": 20,
+      "ilosc": 70,
       "do": "2027-05-15"
     },
     "maslo_orzechowe": {
@@ -17,31 +17,31 @@
       "do": "2027-05-15"
     },
     "musztarda": {
-      "ilosc": 1.0,
+      "ilosc": 11.5,
       "do": "2027-05-15"
     },
     "maka": {
-      "ilosc": 690,
+      "ilosc": 615,
       "do": "2027-05-15"
     },
     "olej": {
-      "ilosc": 870.0,
+      "ilosc": 855.0,
       "do": "2027-05-15"
     },
     "orzechy": {
-      "ilosc": 32,
+      "ilosc": 14,
       "do": "2027-05-15"
     },
     "proszek_do_pieczenia": {
-      "ilosc": 17,
+      "ilosc": 14,
       "do": "2027-05-15"
     },
     "cynamon": {
-      "ilosc": 6,
+      "ilosc": 2,
       "do": "2027-05-15"
     },
     "przyprawy": {
-      "ilosc": 48.0,
+      "ilosc": 41.0,
       "do": "2027-05-15"
     },
     "kakao": {
@@ -49,19 +49,19 @@
       "do": "2027-05-18"
     },
     "krem_bez_cukru": {
-      "ilosc": 138,
+      "ilosc": 124,
       "do": "2027-05-21"
     },
     "kukurydza": {
-      "ilosc": 145,
+      "ilosc": 360,
       "do": "2027-05-21"
     },
     "majonez_sriracha": {
-      "ilosc": 67,
+      "ilosc": 53,
       "do": "2027-05-21"
     },
     "slodzik": {
-      "ilosc": 292.5,
+      "ilosc": 291.0,
       "do": "2027-05-21"
     },
     "cebula": {
@@ -69,7 +69,7 @@
       "do": "2027-05-21"
     },
     "marchew": {
-      "ilosc": 0.67,
+      "ilosc": 0.17,
       "do": "2027-05-21"
     },
     "passata": {
@@ -77,19 +77,19 @@
       "do": "2027-05-21"
     },
     "mleko": {
-      "ilosc": 815,
+      "ilosc": 740,
       "do": "2026-11-23"
     },
     "ser_zolty": {
-      "ilosc": 6,
+      "ilosc": 5,
       "do": "2026-11-23"
     },
     "twarog": {
-      "ilosc": 50,
+      "ilosc": 260,
       "do": "2026-11-23"
     },
     "chleb": {
-      "ilosc": 11,
+      "ilosc": 1,
       "do": "2026-11-23"
     },
     "tortilla": {
@@ -97,20 +97,28 @@
       "do": "2027-05-30"
     },
     "czosnek": {
-      "ilosc": 4.0,
+      "ilosc": 1.0,
       "do": "2027-06-02"
     },
     "koncentrat": {
-      "ilosc": 80.0,
+      "ilosc": 20.0,
       "do": "2027-06-02"
     },
     "jaja": {
-      "ilosc": 2,
+      "ilosc": 3,
       "do": "2026-11-29"
     },
     "jogurt_grecki": {
-      "ilosc": 345,
+      "ilosc": 280,
       "do": "2026-11-29"
+    },
+    "mielone_wolowe": {
+      "ilosc": 300.0,
+      "do": "2026-11-24"
+    },
+    "miod": {
+      "ilosc": 16.5,
+      "do": "2027-06-08"
     }
   },
   "log": [
@@ -257,6 +265,12 @@
       "co": "wyrzucone",
       "produkt": "mielone_wolowe",
       "ilosc": 200.0
+    },
+    {
+      "data": "2026-11-20",
+      "co": "cykl:2026-11-20",
+      "pozycji": 16,
+      "koszt": 109.75
     }
   ]
 }
