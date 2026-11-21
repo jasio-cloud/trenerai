@@ -84,14 +84,6 @@
       "ilosc": 295.0,
       "do": "2027-05-24"
     },
-    "szynka": {
-      "ilosc": 5,
-      "do": "2026-11-20"
-    },
-    "chleb_tostowy": {
-      "ilosc": 10.5,
-      "do": "2026-11-20"
-    },
     "jaja": {
       "ilosc": 4,
       "do": "2026-11-23"
@@ -255,6 +247,18 @@
       "co": "cykl:2026-11-20",
       "pozycji": 13,
       "koszt": 78.4
+    },
+    {
+      "data": "2026-11-21",
+      "co": "wyrzucone",
+      "produkt": "szynka",
+      "ilosc": 5
+    },
+    {
+      "data": "2026-11-21",
+      "co": "wyrzucone",
+      "produkt": "chleb_tostowy",
+      "ilosc": 10.5
     }
   ]
 }
