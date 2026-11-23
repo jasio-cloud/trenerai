@@ -1,5 +1,5 @@
 {
-  "wygenerowano": "2026-11-23T12:04:07+01:00",
+  "wygenerowano": "2026-11-23T23:33:23+01:00",
   "dzis": "2026-11-23",
   "typ_dzis": 0,
   "typy": {
@@ -3823,17 +3823,17 @@
     "sila": {
       "Wyciskanie sztangi leżąc": {
         "pierwszy": 72.0,
-        "najlepszy": 72.0,
-        "ostatni": 72.0,
-        "sesji": 1,
+        "najlepszy": 84.0,
+        "ostatni": 84.0,
+        "sesji": 2,
         "miara": "kg (szac. max)",
         "od": "2026-11-02"
       },
       "Wyciskanie sztangi na skosie": {
         "pierwszy": 48.0,
-        "najlepszy": 48.0,
-        "ostatni": 48.0,
-        "sesji": 1,
+        "najlepszy": 54.0,
+        "ostatni": 54.0,
+        "sesji": 2,
         "miara": "kg (szac. max)",
         "od": "2026-11-02"
       },
@@ -3863,9 +3863,9 @@
       },
       "Wyciskanie wąskim chwytem": {
         "pierwszy": 45.3,
-        "najlepszy": 45.3,
-        "ostatni": 45.3,
-        "sesji": 1,
+        "najlepszy": 60.0,
+        "ostatni": 60.0,
+        "sesji": 2,
         "miara": "kg (szac. max)",
         "od": "2026-11-02"
       },
@@ -3916,6 +3916,14 @@
         "sesji": 1,
         "miara": "kg (szac. max)",
         "od": "2026-11-04"
+      },
+      "Wyciskanie hantli na ławce skośnej": {
+        "pierwszy": 27.0,
+        "najlepszy": 27.0,
+        "ostatni": 27.0,
+        "sesji": 1,
+        "miara": "kg (szac. max)",
+        "od": "2026-11-23"
       }
     },
     "cele": {
@@ -6408,6 +6416,7 @@
                   14
                 ],
                 "data": "2026-09-18",
+                "korekta": null,
                 "podwyzka": 5.0
               }
             },
@@ -7779,7 +7788,49 @@
       "odhaczone": {},
       "waga": null,
       "kroki": null,
-      "serie": [],
+      "serie": [
+        {
+          "data": "2026-11-23",
+          "typ": "seria",
+          "cwiczenie": "Wyciskanie sztangi leżąc",
+          "ciezar": 70.0,
+          "powt": [
+            6,
+            2
+          ]
+        },
+        {
+          "data": "2026-11-23",
+          "typ": "seria",
+          "cwiczenie": "Wyciskanie sztangi na skosie",
+          "ciezar": 45.0,
+          "powt": [
+            6
+          ]
+        },
+        {
+          "data": "2026-11-23",
+          "typ": "seria",
+          "cwiczenie": "Wyciskanie hantli na ławce skośnej",
+          "ciezar": 22.5,
+          "powt": [
+            6,
+            5,
+            5
+          ]
+        },
+        {
+          "data": "2026-11-23",
+          "typ": "seria",
+          "cwiczenie": "Wyciskanie wąskim chwytem",
+          "ciezar": 50.0,
+          "powt": [
+            3,
+            6,
+            5
+          ]
+        }
+      ],
       "trening": {
         "rodzaj": "glowny",
         "trening": {
@@ -9683,6 +9734,7 @@
                   14
                 ],
                 "data": "2026-09-18",
+                "korekta": null,
                 "podwyzka": 5.0
               }
             },
@@ -10761,6 +10813,47 @@
           10,
           12
         ]
+      },
+      {
+        "data": "2026-11-23",
+        "typ": "seria",
+        "cwiczenie": "Wyciskanie sztangi leżąc",
+        "ciezar": 70.0,
+        "powt": [
+          6,
+          2
+        ]
+      },
+      {
+        "data": "2026-11-23",
+        "typ": "seria",
+        "cwiczenie": "Wyciskanie sztangi na skosie",
+        "ciezar": 45.0,
+        "powt": [
+          6
+        ]
+      },
+      {
+        "data": "2026-11-23",
+        "typ": "seria",
+        "cwiczenie": "Wyciskanie hantli na ławce skośnej",
+        "ciezar": 22.5,
+        "powt": [
+          6,
+          5,
+          5
+        ]
+      },
+      {
+        "data": "2026-11-23",
+        "typ": "seria",
+        "cwiczenie": "Wyciskanie wąskim chwytem",
+        "ciezar": 50.0,
+        "powt": [
+          3,
+          6,
+          5
+        ]
       }
     ]
   },
@@ -11691,16 +11784,14 @@
       "data": "2026-09-18"
     },
     "Wyciskanie sztangi leżąc": {
-      "ciezar": 60.0,
+      "ciezar": 70.0,
       "powt": [
         6,
-        6,
-        5,
-        4
+        2
       ],
-      "nastepny": 60.0,
-      "nieudane": 1,
-      "data": "2026-11-02"
+      "nastepny": 62.5,
+      "nieudane": 0,
+      "data": "2026-11-23"
     },
     "Wznosy w bok hantlami stojąc": {
       "ciezar": 7.0,
@@ -11713,15 +11804,13 @@
       "data": "2026-09-20"
     },
     "Wyciskanie sztangi na skosie": {
-      "ciezar": 40.0,
+      "ciezar": 45.0,
       "powt": [
-        6,
-        6,
         6
       ],
       "nastepny": 40.0,
-      "nieudane": 1,
-      "data": "2026-11-02"
+      "nieudane": 0,
+      "data": "2026-11-23"
     },
     "Wyciskanie hantli poziomo": {
       "ciezar": 20.0,
@@ -11755,14 +11844,15 @@
       "data": "2026-11-02"
     },
     "Wyciskanie wąskim chwytem": {
-      "ciezar": 40.0,
+      "ciezar": 50.0,
       "powt": [
-        4,
-        4
+        3,
+        6,
+        5
       ],
-      "nastepny": 40.0,
-      "nieudane": 1,
-      "data": "2026-11-02"
+      "nastepny": 45.0,
+      "nieudane": 0,
+      "data": "2026-11-23"
     },
     "Prostowanie ramion z hantlem nad głową": {
       "ciezar": 12.5,
@@ -11817,6 +11907,17 @@
       "nastepny": 11.0,
       "nieudane": 0,
       "data": "2026-11-04"
+    },
+    "Wyciskanie hantli na ławce skośnej": {
+      "ciezar": 22.5,
+      "powt": [
+        6,
+        5,
+        5
+      ],
+      "nastepny": 22.5,
+      "nieudane": 0,
+      "data": "2026-11-23"
     }
   },
   "ciezary_start": {
