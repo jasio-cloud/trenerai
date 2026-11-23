@@ -1,5 +1,5 @@
 {
-  "wygenerowano": "2026-11-23T20:00:12+01:00",
+  "wygenerowano": "2026-11-23T21:46:57+01:00",
   "dzis": "2026-11-23",
   "typ_dzis": 0,
   "typy": {
@@ -1154,14 +1154,15 @@
     "trening": {
       "id": "klatka_triceps",
       "nazwa": "Poniedziałek — klatka + triceps",
-      "czas_min": 52,
+      "czas_min": 46,
       "blok": "Blok 3 — Budowa nawyku",
       "blok_opis": "Pełna sesja. Trening przestaje być wydarzeniem i staje się czymś, co po prostu robisz.",
       "zapas": "1–2 powtórzenia w zapasie",
       "rozgrzewka": [
         "Pierwsze dwa ćwiczenia treningu: serie wstępne 30% ciężaru roboczego na 8-12 powtórzeń, potem 50% na 8, potem 75% na 2-3.",
         "Pozostałe ćwiczenia: jedna seria rozgrzewkowa 50% ciężaru na 5-6 powtórzeń i od razu seria robocza.",
-        "Zanim podejdziesz do sztangi: 5 minut krążeń ramion i bioder, 15 przysiadów bez ciężaru."
+        "Zanim podejdziesz do sztangi: 5 minut krążeń ramion i bioder, 15 przysiadów bez ciężaru.",
+        "ŁOKIEĆ — przed pierwszym wyciskaniem: 2 serie × 20 wolnych prostowań ramion z najlżejszym hantlem (2-4 kg) i 20 zgięć nadgarstka w obie strony. Chodzi o ukrwienie przyczepu, nie o zmęczenie."
       ],
       "cwiczenia": [
         {
@@ -1173,15 +1174,14 @@
           "serie_wstepne": "30% × 8-12, 50% × 8, 75% × 2-3",
           "propozycja": {
             "ciezar": 60.0,
-            "poprzedni": 60.0,
+            "poprzedni": 70.0,
             "powt": [
               6,
-              6,
-              5,
-              4
+              2
             ],
-            "data": "2026-11-02",
-            "podwyzka": 0.0
+            "data": "2026-11-23",
+            "korekta": "łokieć — wracamy na 60 i dociągamy 4×8, zamiast gonić 70",
+            "podwyzka": -10.0
           }
         },
         {
@@ -1193,14 +1193,13 @@
           "serie_wstepne": "30% × 8-12, 50% × 8, 75% × 2-3",
           "propozycja": {
             "ciezar": 40.0,
-            "poprzedni": 40.0,
+            "poprzedni": 45.0,
             "powt": [
-              6,
-              6,
               6
             ],
-            "data": "2026-11-02",
-            "podwyzka": 0.0
+            "data": "2026-11-23",
+            "korekta": "na 40 trafiłeś 10 powtórzeń, 45 daje 6",
+            "podwyzka": -5.0
           }
         },
         {
@@ -1211,7 +1210,7 @@
           "wskazowka": "Ławka płasko, hantle schodzą do poziomu klatki, łokcie ok. 45 stopni. Większy zakres niż przy sztandze.",
           "serie_wstepne": "50% × 5-6",
           "propozycja": {
-            "ciezar": 20.0,
+            "ciezar": 14.0,
             "poprzedni": 20.0,
             "powt": [
               6,
@@ -1219,7 +1218,8 @@
               4
             ],
             "data": "2026-11-02",
-            "podwyzka": 0.0
+            "korekta": "20 kg daje 4-6 powtórzeń przy planie 10-12",
+            "podwyzka": -6.0
           }
         },
         {
@@ -1231,51 +1231,20 @@
           "serie_wstepne": "50% × 5-6"
         },
         {
-          "nazwa": "Wyciskanie wąskim chwytem",
-          "serie": 3,
-          "powt": "8-10",
-          "przerwa": "2-3 min",
-          "wskazowka": "Chwyt na szerokość barków, łokcie blisko tułowia, sztanga schodzi do dołu klatki. To ćwiczenie na triceps, nie na klatkę — nie rozkładaj łokci na boki.",
-          "serie_wstepne": "50% × 5-6",
-          "propozycja": {
-            "ciezar": 40.0,
-            "poprzedni": 40.0,
-            "powt": [
-              4,
-              4
-            ],
-            "data": "2026-11-02",
-            "podwyzka": 0.0
-          }
-        },
-        {
-          "nazwa": "Wyciskanie francuskie hantli",
+          "nazwa": "Wyciskanie hantli chwytem neutralnym",
           "serie": 3,
           "powt": "10-12",
-          "przerwa": "1,5-2 min",
-          "wskazowka": "Leżąc, dwa hantle nad klatką, łokcie w miejscu i skierowane do sufitu. Zginasz ramiona, aż hantle znajdą się przy uszach, i prostujesz. Hantle zamiast sztangi dlatego, że możesz zejść do 2 × 4 kg — przy sztandze mniej niż gryf z najmniejszymi talerzami nie założysz.",
-          "serie_wstepne": "50% × 5-6",
-          "seria_laczona": "Prostowanie ramion z hantlem nad głową"
+          "przerwa": "2 min",
+          "wskazowka": "Ławka płasko, hantle nad klatką, dłonie zwrócone do siebie (jak przy młotkowych). Łokcie jadą blisko tułowia, hantle schodzą do dolnych żeber. Triceps pracuje jak przy wąskim chwycie, ale nadgarstek i łokieć mają wolny tor — nie są wykręcone w jedną pozycję przez sztangę.",
+          "serie_wstepne": "50% × 5-6"
         },
         {
-          "nazwa": "Prostowanie ramion z hantlem nad głową",
+          "nazwa": "Prostowanie ramion w opadzie hantlem",
           "serie": 3,
           "powt": "12-15",
-          "przerwa": "1,5-2 min",
-          "wskazowka": "Siedząc, hantel oburącz nad głową, opuszczasz za kark. Łokcie blisko głowy, ruszają tylko przedramiona.",
-          "serie_wstepne": "50% × 5-6",
-          "seria_laczona": "Wyciskanie francuskie hantli",
-          "propozycja": {
-            "ciezar": 12.5,
-            "poprzedni": 12.5,
-            "powt": [
-              6,
-              5,
-              6
-            ],
-            "data": "2026-11-02",
-            "podwyzka": 0.0
-          }
+          "przerwa": "1,5 min",
+          "wskazowka": "Tułów w opadzie, ramię przyklejone do boku, łokieć nieruchomy — prostujesz samo przedramię do tyłu i trzymasz pół sekundy. Łokieć nie wchodzi w pełne zgięcie pod ciężarem, więc przyczep tricepsa dostaje pracę bez szarpania.",
+          "serie_wstepne": "50% × 5-6"
         }
       ],
       "finisz": "Każda seria kończy się z zapasem: 1–2 powtórzenia w zapasie. Pełna sesja. Trening przestaje być wydarzeniem i staje się czymś, co po prostu robisz."
@@ -4013,17 +3982,17 @@
     "sila": {
       "Wyciskanie sztangi leżąc": {
         "pierwszy": 72.0,
-        "najlepszy": 72.0,
-        "ostatni": 72.0,
-        "sesji": 1,
+        "najlepszy": 84.0,
+        "ostatni": 84.0,
+        "sesji": 2,
         "miara": "kg (szac. max)",
         "od": "2026-11-02"
       },
       "Wyciskanie sztangi na skosie": {
         "pierwszy": 48.0,
-        "najlepszy": 48.0,
-        "ostatni": 48.0,
-        "sesji": 1,
+        "najlepszy": 54.0,
+        "ostatni": 54.0,
+        "sesji": 2,
         "miara": "kg (szac. max)",
         "od": "2026-11-02"
       },
@@ -4053,9 +4022,9 @@
       },
       "Wyciskanie wąskim chwytem": {
         "pierwszy": 45.3,
-        "najlepszy": 45.3,
-        "ostatni": 45.3,
-        "sesji": 1,
+        "najlepszy": 60.0,
+        "ostatni": 60.0,
+        "sesji": 2,
         "miara": "kg (szac. max)",
         "od": "2026-11-02"
       },
@@ -4106,6 +4075,14 @@
         "sesji": 1,
         "miara": "kg (szac. max)",
         "od": "2026-11-04"
+      },
+      "Wyciskanie hantli na ławce skośnej": {
+        "pierwszy": 27.0,
+        "najlepszy": 27.0,
+        "ostatni": 27.0,
+        "sesji": 1,
+        "miara": "kg (szac. max)",
+        "od": "2026-11-23"
       }
     },
     "cele": {
@@ -4759,14 +4736,15 @@
         "trening": {
           "id": "klatka_triceps",
           "nazwa": "Poniedziałek — klatka + triceps",
-          "czas_min": 52,
+          "czas_min": 46,
           "blok": "Blok 3 — Budowa nawyku",
           "blok_opis": "Pełna sesja. Trening przestaje być wydarzeniem i staje się czymś, co po prostu robisz.",
           "zapas": "1–2 powtórzenia w zapasie",
           "rozgrzewka": [
             "Pierwsze dwa ćwiczenia treningu: serie wstępne 30% ciężaru roboczego na 8-12 powtórzeń, potem 50% na 8, potem 75% na 2-3.",
             "Pozostałe ćwiczenia: jedna seria rozgrzewkowa 50% ciężaru na 5-6 powtórzeń i od razu seria robocza.",
-            "Zanim podejdziesz do sztangi: 5 minut krążeń ramion i bioder, 15 przysiadów bez ciężaru."
+            "Zanim podejdziesz do sztangi: 5 minut krążeń ramion i bioder, 15 przysiadów bez ciężaru.",
+            "ŁOKIEĆ — przed pierwszym wyciskaniem: 2 serie × 20 wolnych prostowań ramion z najlżejszym hantlem (2-4 kg) i 20 zgięć nadgarstka w obie strony. Chodzi o ukrwienie przyczepu, nie o zmęczenie."
           ],
           "cwiczenia": [
             {
@@ -4778,15 +4756,14 @@
               "serie_wstepne": "30% × 8-12, 50% × 8, 75% × 2-3",
               "propozycja": {
                 "ciezar": 60.0,
-                "poprzedni": 60.0,
+                "poprzedni": 70.0,
                 "powt": [
                   6,
-                  6,
-                  5,
-                  4
+                  2
                 ],
-                "data": "2026-11-02",
-                "podwyzka": 0.0
+                "data": "2026-11-23",
+                "korekta": "łokieć — wracamy na 60 i dociągamy 4×8, zamiast gonić 70",
+                "podwyzka": -10.0
               }
             },
             {
@@ -4798,14 +4775,13 @@
               "serie_wstepne": "30% × 8-12, 50% × 8, 75% × 2-3",
               "propozycja": {
                 "ciezar": 40.0,
-                "poprzedni": 40.0,
+                "poprzedni": 45.0,
                 "powt": [
-                  6,
-                  6,
                   6
                 ],
-                "data": "2026-11-02",
-                "podwyzka": 0.0
+                "data": "2026-11-23",
+                "korekta": "na 40 trafiłeś 10 powtórzeń, 45 daje 6",
+                "podwyzka": -5.0
               }
             },
             {
@@ -4816,7 +4792,7 @@
               "wskazowka": "Ławka płasko, hantle schodzą do poziomu klatki, łokcie ok. 45 stopni. Większy zakres niż przy sztandze.",
               "serie_wstepne": "50% × 5-6",
               "propozycja": {
-                "ciezar": 20.0,
+                "ciezar": 14.0,
                 "poprzedni": 20.0,
                 "powt": [
                   6,
@@ -4824,7 +4800,8 @@
                   4
                 ],
                 "data": "2026-11-02",
-                "podwyzka": 0.0
+                "korekta": "20 kg daje 4-6 powtórzeń przy planie 10-12",
+                "podwyzka": -6.0
               }
             },
             {
@@ -4836,51 +4813,20 @@
               "serie_wstepne": "50% × 5-6"
             },
             {
-              "nazwa": "Wyciskanie wąskim chwytem",
-              "serie": 3,
-              "powt": "8-10",
-              "przerwa": "2-3 min",
-              "wskazowka": "Chwyt na szerokość barków, łokcie blisko tułowia, sztanga schodzi do dołu klatki. To ćwiczenie na triceps, nie na klatkę — nie rozkładaj łokci na boki.",
-              "serie_wstepne": "50% × 5-6",
-              "propozycja": {
-                "ciezar": 40.0,
-                "poprzedni": 40.0,
-                "powt": [
-                  4,
-                  4
-                ],
-                "data": "2026-11-02",
-                "podwyzka": 0.0
-              }
-            },
-            {
-              "nazwa": "Wyciskanie francuskie hantli",
+              "nazwa": "Wyciskanie hantli chwytem neutralnym",
               "serie": 3,
               "powt": "10-12",
-              "przerwa": "1,5-2 min",
-              "wskazowka": "Leżąc, dwa hantle nad klatką, łokcie w miejscu i skierowane do sufitu. Zginasz ramiona, aż hantle znajdą się przy uszach, i prostujesz. Hantle zamiast sztangi dlatego, że możesz zejść do 2 × 4 kg — przy sztandze mniej niż gryf z najmniejszymi talerzami nie założysz.",
-              "serie_wstepne": "50% × 5-6",
-              "seria_laczona": "Prostowanie ramion z hantlem nad głową"
+              "przerwa": "2 min",
+              "wskazowka": "Ławka płasko, hantle nad klatką, dłonie zwrócone do siebie (jak przy młotkowych). Łokcie jadą blisko tułowia, hantle schodzą do dolnych żeber. Triceps pracuje jak przy wąskim chwycie, ale nadgarstek i łokieć mają wolny tor — nie są wykręcone w jedną pozycję przez sztangę.",
+              "serie_wstepne": "50% × 5-6"
             },
             {
-              "nazwa": "Prostowanie ramion z hantlem nad głową",
+              "nazwa": "Prostowanie ramion w opadzie hantlem",
               "serie": 3,
               "powt": "12-15",
-              "przerwa": "1,5-2 min",
-              "wskazowka": "Siedząc, hantel oburącz nad głową, opuszczasz za kark. Łokcie blisko głowy, ruszają tylko przedramiona.",
-              "serie_wstepne": "50% × 5-6",
-              "seria_laczona": "Wyciskanie francuskie hantli",
-              "propozycja": {
-                "ciezar": 12.5,
-                "poprzedni": 12.5,
-                "powt": [
-                  6,
-                  5,
-                  6
-                ],
-                "data": "2026-11-02",
-                "podwyzka": 0.0
-              }
+              "przerwa": "1,5 min",
+              "wskazowka": "Tułów w opadzie, ramię przyklejone do boku, łokieć nieruchomy — prostujesz samo przedramię do tyłu i trzymasz pół sekundy. Łokieć nie wchodzi w pełne zgięcie pod ciężarem, więc przyczep tricepsa dostaje pracę bez szarpania.",
+              "serie_wstepne": "50% × 5-6"
             }
           ],
           "finisz": "Każda seria kończy się z zapasem: 1–2 powtórzenia w zapasie. Pełna sesja. Trening przestaje być wydarzeniem i staje się czymś, co po prostu robisz."
@@ -5914,7 +5860,8 @@
           "rozgrzewka": [
             "Pierwsze dwa ćwiczenia treningu: serie wstępne 30% ciężaru roboczego na 8-12 powtórzeń, potem 50% na 8, potem 75% na 2-3.",
             "Pozostałe ćwiczenia: jedna seria rozgrzewkowa 50% ciężaru na 5-6 powtórzeń i od razu seria robocza.",
-            "Zanim podejdziesz do sztangi: 5 minut krążeń ramion i bioder, 15 przysiadów bez ciężaru."
+            "Zanim podejdziesz do sztangi: 5 minut krążeń ramion i bioder, 15 przysiadów bez ciężaru.",
+            "ŁOKIEĆ — przed pierwszym wyciskaniem: 2 serie × 20 wolnych prostowań ramion z najlżejszym hantlem (2-4 kg) i 20 zgięć nadgarstka w obie strony. Chodzi o ukrwienie przyczepu, nie o zmęczenie."
           ],
           "cwiczenia": [
             {
@@ -5942,6 +5889,7 @@
                   10
                 ],
                 "data": "2026-11-04",
+                "korekta": null,
                 "podwyzka": 0.0
               }
             },
@@ -5960,6 +5908,7 @@
                   10
                 ],
                 "data": "2026-11-04",
+                "korekta": null,
                 "podwyzka": 0.0
               }
             },
@@ -5979,6 +5928,7 @@
                   8
                 ],
                 "data": "2026-11-04",
+                "korekta": null,
                 "podwyzka": 0.0
               }
             },
@@ -5999,6 +5949,7 @@
                   12
                 ],
                 "data": "2026-11-04",
+                "korekta": null,
                 "podwyzka": 0.0
               }
             }
@@ -6989,7 +6940,8 @@
           "rozgrzewka": [
             "Pierwsze dwa ćwiczenia treningu: serie wstępne 30% ciężaru roboczego na 8-12 powtórzeń, potem 50% na 8, potem 75% na 2-3.",
             "Pozostałe ćwiczenia: jedna seria rozgrzewkowa 50% ciężaru na 5-6 powtórzeń i od razu seria robocza.",
-            "Zanim podejdziesz do sztangi: 5 minut krążeń ramion i bioder, 15 przysiadów bez ciężaru."
+            "Zanim podejdziesz do sztangi: 5 minut krążeń ramion i bioder, 15 przysiadów bez ciężaru.",
+            "ŁOKIEĆ — przed pierwszym wyciskaniem: 2 serie × 20 wolnych prostowań ramion z najlżejszym hantlem (2-4 kg) i 20 zgięć nadgarstka w obie strony. Chodzi o ukrwienie przyczepu, nie o zmęczenie."
           ],
           "cwiczenia": [
             {
@@ -7015,6 +6967,7 @@
                   12
                 ],
                 "data": "2026-09-18",
+                "korekta": null,
                 "podwyzka": 5.0
               }
             },
@@ -7041,6 +6994,7 @@
                   14
                 ],
                 "data": "2026-09-18",
+                "korekta": null,
                 "podwyzka": 5.0
               }
             },
@@ -7076,6 +7030,7 @@
                   15
                 ],
                 "data": "2026-09-18",
+                "korekta": null,
                 "podwyzka": 0.0
               }
             },
@@ -7095,6 +7050,7 @@
                   60
                 ],
                 "data": "2026-09-18",
+                "korekta": null,
                 "podwyzka": 0.0
               }
             }
@@ -8137,7 +8093,8 @@
           "rozgrzewka": [
             "Pierwsze dwa ćwiczenia treningu: serie wstępne 30% ciężaru roboczego na 8-12 powtórzeń, potem 50% na 8, potem 75% na 2-3.",
             "Pozostałe ćwiczenia: jedna seria rozgrzewkowa 50% ciężaru na 5-6 powtórzeń i od razu seria robocza.",
-            "Zanim podejdziesz do sztangi: 5 minut krążeń ramion i bioder, 15 przysiadów bez ciężaru."
+            "Zanim podejdziesz do sztangi: 5 minut krążeń ramion i bioder, 15 przysiadów bez ciężaru.",
+            "ŁOKIEĆ — przed pierwszym wyciskaniem: 2 serie × 20 wolnych prostowań ramion z najlżejszym hantlem (2-4 kg) i 20 zgięć nadgarstka w obie strony. Chodzi o ukrwienie przyczepu, nie o zmęczenie."
           ],
           "cwiczenia": [
             {
@@ -8171,6 +8128,7 @@
                   12
                 ],
                 "data": "2026-09-20",
+                "korekta": null,
                 "podwyzka": 0.0
               }
             },
@@ -8223,6 +8181,7 @@
                   15
                 ],
                 "data": "2026-09-20",
+                "korekta": null,
                 "podwyzka": 0.0
               }
             }
@@ -8670,20 +8629,63 @@
         "cel": 8000,
         "status": "malo"
       },
-      "serie": [],
+      "serie": [
+        {
+          "data": "2026-11-23",
+          "typ": "seria",
+          "cwiczenie": "Wyciskanie sztangi leżąc",
+          "ciezar": 70.0,
+          "powt": [
+            6,
+            2
+          ]
+        },
+        {
+          "data": "2026-11-23",
+          "typ": "seria",
+          "cwiczenie": "Wyciskanie sztangi na skosie",
+          "ciezar": 45.0,
+          "powt": [
+            6
+          ]
+        },
+        {
+          "data": "2026-11-23",
+          "typ": "seria",
+          "cwiczenie": "Wyciskanie hantli na ławce skośnej",
+          "ciezar": 22.5,
+          "powt": [
+            6,
+            5,
+            5
+          ]
+        },
+        {
+          "data": "2026-11-23",
+          "typ": "seria",
+          "cwiczenie": "Wyciskanie wąskim chwytem",
+          "ciezar": 50.0,
+          "powt": [
+            3,
+            6,
+            5
+          ]
+        }
+      ],
       "trening": {
         "rodzaj": "glowny",
         "trening": {
           "id": "klatka_triceps",
           "nazwa": "Poniedziałek — klatka + triceps",
-          "czas_min": 52,
+          "czas_min": 46,
           "blok": "Blok 3 — Budowa nawyku",
           "blok_opis": "Pełna sesja. Trening przestaje być wydarzeniem i staje się czymś, co po prostu robisz.",
           "zapas": "1–2 powtórzenia w zapasie",
           "rozgrzewka": [
             "Pierwsze dwa ćwiczenia treningu: serie wstępne 30% ciężaru roboczego na 8-12 powtórzeń, potem 50% na 8, potem 75% na 2-3.",
             "Pozostałe ćwiczenia: jedna seria rozgrzewkowa 50% ciężaru na 5-6 powtórzeń i od razu seria robocza.",
-            "Zanim podejdziesz do sztangi: 5 minut krążeń ramion i bioder, 15 przysiadów bez ciężaru."
+            "Zanim podejdziesz do sztangi: 5 minut krążeń ramion i bioder, 15 przysiadów bez ciężaru.",
+            "ŁOKIEĆ — przed pierwszym wyciskaniem: 2 serie × 20 wolnych prostowań ramion z najlżejszym hantlem (2-4 kg) i 20 zgięć nadgarstka w obie strony. Chodzi o ukrwienie przyczepu, nie o zmęczenie."
           ],
           "cwiczenia": [
             {
@@ -8695,15 +8697,14 @@
               "serie_wstepne": "30% × 8-12, 50% × 8, 75% × 2-3",
               "propozycja": {
                 "ciezar": 60.0,
-                "poprzedni": 60.0,
+                "poprzedni": 70.0,
                 "powt": [
                   6,
-                  6,
-                  5,
-                  4
+                  2
                 ],
-                "data": "2026-11-02",
-                "podwyzka": 0.0
+                "data": "2026-11-23",
+                "korekta": "łokieć — wracamy na 60 i dociągamy 4×8, zamiast gonić 70",
+                "podwyzka": -10.0
               }
             },
             {
@@ -8715,14 +8716,13 @@
               "serie_wstepne": "30% × 8-12, 50% × 8, 75% × 2-3",
               "propozycja": {
                 "ciezar": 40.0,
-                "poprzedni": 40.0,
+                "poprzedni": 45.0,
                 "powt": [
-                  6,
-                  6,
                   6
                 ],
-                "data": "2026-11-02",
-                "podwyzka": 0.0
+                "data": "2026-11-23",
+                "korekta": "na 40 trafiłeś 10 powtórzeń, 45 daje 6",
+                "podwyzka": -5.0
               }
             },
             {
@@ -8733,7 +8733,7 @@
               "wskazowka": "Ławka płasko, hantle schodzą do poziomu klatki, łokcie ok. 45 stopni. Większy zakres niż przy sztandze.",
               "serie_wstepne": "50% × 5-6",
               "propozycja": {
-                "ciezar": 20.0,
+                "ciezar": 14.0,
                 "poprzedni": 20.0,
                 "powt": [
                   6,
@@ -8741,7 +8741,8 @@
                   4
                 ],
                 "data": "2026-11-02",
-                "podwyzka": 0.0
+                "korekta": "20 kg daje 4-6 powtórzeń przy planie 10-12",
+                "podwyzka": -6.0
               }
             },
             {
@@ -8753,51 +8754,20 @@
               "serie_wstepne": "50% × 5-6"
             },
             {
-              "nazwa": "Wyciskanie wąskim chwytem",
-              "serie": 3,
-              "powt": "8-10",
-              "przerwa": "2-3 min",
-              "wskazowka": "Chwyt na szerokość barków, łokcie blisko tułowia, sztanga schodzi do dołu klatki. To ćwiczenie na triceps, nie na klatkę — nie rozkładaj łokci na boki.",
-              "serie_wstepne": "50% × 5-6",
-              "propozycja": {
-                "ciezar": 40.0,
-                "poprzedni": 40.0,
-                "powt": [
-                  4,
-                  4
-                ],
-                "data": "2026-11-02",
-                "podwyzka": 0.0
-              }
-            },
-            {
-              "nazwa": "Wyciskanie francuskie hantli",
+              "nazwa": "Wyciskanie hantli chwytem neutralnym",
               "serie": 3,
               "powt": "10-12",
-              "przerwa": "1,5-2 min",
-              "wskazowka": "Leżąc, dwa hantle nad klatką, łokcie w miejscu i skierowane do sufitu. Zginasz ramiona, aż hantle znajdą się przy uszach, i prostujesz. Hantle zamiast sztangi dlatego, że możesz zejść do 2 × 4 kg — przy sztandze mniej niż gryf z najmniejszymi talerzami nie założysz.",
-              "serie_wstepne": "50% × 5-6",
-              "seria_laczona": "Prostowanie ramion z hantlem nad głową"
+              "przerwa": "2 min",
+              "wskazowka": "Ławka płasko, hantle nad klatką, dłonie zwrócone do siebie (jak przy młotkowych). Łokcie jadą blisko tułowia, hantle schodzą do dolnych żeber. Triceps pracuje jak przy wąskim chwycie, ale nadgarstek i łokieć mają wolny tor — nie są wykręcone w jedną pozycję przez sztangę.",
+              "serie_wstepne": "50% × 5-6"
             },
             {
-              "nazwa": "Prostowanie ramion z hantlem nad głową",
+              "nazwa": "Prostowanie ramion w opadzie hantlem",
               "serie": 3,
               "powt": "12-15",
-              "przerwa": "1,5-2 min",
-              "wskazowka": "Siedząc, hantel oburącz nad głową, opuszczasz za kark. Łokcie blisko głowy, ruszają tylko przedramiona.",
-              "serie_wstepne": "50% × 5-6",
-              "seria_laczona": "Wyciskanie francuskie hantli",
-              "propozycja": {
-                "ciezar": 12.5,
-                "poprzedni": 12.5,
-                "powt": [
-                  6,
-                  5,
-                  6
-                ],
-                "data": "2026-11-02",
-                "podwyzka": 0.0
-              }
+              "przerwa": "1,5 min",
+              "wskazowka": "Tułów w opadzie, ramię przyklejone do boku, łokieć nieruchomy — prostujesz samo przedramię do tyłu i trzymasz pół sekundy. Łokieć nie wchodzi w pełne zgięcie pod ciężarem, więc przyczep tricepsa dostaje pracę bez szarpania.",
+              "serie_wstepne": "50% × 5-6"
             }
           ],
           "finisz": "Każda seria kończy się z zapasem: 1–2 powtórzenia w zapasie. Pełna sesja. Trening przestaje być wydarzeniem i staje się czymś, co po prostu robisz."
@@ -9834,7 +9804,8 @@
           "rozgrzewka": [
             "Pierwsze dwa ćwiczenia treningu: serie wstępne 30% ciężaru roboczego na 8-12 powtórzeń, potem 50% na 8, potem 75% na 2-3.",
             "Pozostałe ćwiczenia: jedna seria rozgrzewkowa 50% ciężaru na 5-6 powtórzeń i od razu seria robocza.",
-            "Zanim podejdziesz do sztangi: 5 minut krążeń ramion i bioder, 15 przysiadów bez ciężaru."
+            "Zanim podejdziesz do sztangi: 5 minut krążeń ramion i bioder, 15 przysiadów bez ciężaru.",
+            "ŁOKIEĆ — przed pierwszym wyciskaniem: 2 serie × 20 wolnych prostowań ramion z najlżejszym hantlem (2-4 kg) i 20 zgięć nadgarstka w obie strony. Chodzi o ukrwienie przyczepu, nie o zmęczenie."
           ],
           "cwiczenia": [
             {
@@ -9862,6 +9833,7 @@
                   10
                 ],
                 "data": "2026-11-04",
+                "korekta": null,
                 "podwyzka": 0.0
               }
             },
@@ -9880,6 +9852,7 @@
                   10
                 ],
                 "data": "2026-11-04",
+                "korekta": null,
                 "podwyzka": 0.0
               }
             },
@@ -9899,6 +9872,7 @@
                   8
                 ],
                 "data": "2026-11-04",
+                "korekta": null,
                 "podwyzka": 0.0
               }
             },
@@ -9919,6 +9893,7 @@
                   12
                 ],
                 "data": "2026-11-04",
+                "korekta": null,
                 "podwyzka": 0.0
               }
             }
@@ -10866,7 +10841,8 @@
           "rozgrzewka": [
             "Pierwsze dwa ćwiczenia treningu: serie wstępne 30% ciężaru roboczego na 8-12 powtórzeń, potem 50% na 8, potem 75% na 2-3.",
             "Pozostałe ćwiczenia: jedna seria rozgrzewkowa 50% ciężaru na 5-6 powtórzeń i od razu seria robocza.",
-            "Zanim podejdziesz do sztangi: 5 minut krążeń ramion i bioder, 15 przysiadów bez ciężaru."
+            "Zanim podejdziesz do sztangi: 5 minut krążeń ramion i bioder, 15 przysiadów bez ciężaru.",
+            "ŁOKIEĆ — przed pierwszym wyciskaniem: 2 serie × 20 wolnych prostowań ramion z najlżejszym hantlem (2-4 kg) i 20 zgięć nadgarstka w obie strony. Chodzi o ukrwienie przyczepu, nie o zmęczenie."
           ],
           "cwiczenia": [
             {
@@ -10892,6 +10868,7 @@
                   12
                 ],
                 "data": "2026-09-18",
+                "korekta": null,
                 "podwyzka": 5.0
               }
             },
@@ -10918,6 +10895,7 @@
                   14
                 ],
                 "data": "2026-09-18",
+                "korekta": null,
                 "podwyzka": 5.0
               }
             },
@@ -10953,6 +10931,7 @@
                   15
                 ],
                 "data": "2026-09-18",
+                "korekta": null,
                 "podwyzka": 0.0
               }
             },
@@ -10972,6 +10951,7 @@
                   60
                 ],
                 "data": "2026-09-18",
+                "korekta": null,
                 "podwyzka": 0.0
               }
             }
@@ -11945,7 +11925,8 @@
           "rozgrzewka": [
             "Pierwsze dwa ćwiczenia treningu: serie wstępne 30% ciężaru roboczego na 8-12 powtórzeń, potem 50% na 8, potem 75% na 2-3.",
             "Pozostałe ćwiczenia: jedna seria rozgrzewkowa 50% ciężaru na 5-6 powtórzeń i od razu seria robocza.",
-            "Zanim podejdziesz do sztangi: 5 minut krążeń ramion i bioder, 15 przysiadów bez ciężaru."
+            "Zanim podejdziesz do sztangi: 5 minut krążeń ramion i bioder, 15 przysiadów bez ciężaru.",
+            "ŁOKIEĆ — przed pierwszym wyciskaniem: 2 serie × 20 wolnych prostowań ramion z najlżejszym hantlem (2-4 kg) i 20 zgięć nadgarstka w obie strony. Chodzi o ukrwienie przyczepu, nie o zmęczenie."
           ],
           "cwiczenia": [
             {
@@ -11979,6 +11960,7 @@
                   12
                 ],
                 "data": "2026-09-20",
+                "korekta": null,
                 "podwyzka": 0.0
               }
             },
@@ -12031,6 +12013,7 @@
                   15
                 ],
                 "data": "2026-09-20",
+                "korekta": null,
                 "podwyzka": 0.0
               }
             }
@@ -12191,6 +12174,47 @@
           10,
           10,
           12
+        ]
+      },
+      {
+        "data": "2026-11-23",
+        "typ": "seria",
+        "cwiczenie": "Wyciskanie sztangi leżąc",
+        "ciezar": 70.0,
+        "powt": [
+          6,
+          2
+        ]
+      },
+      {
+        "data": "2026-11-23",
+        "typ": "seria",
+        "cwiczenie": "Wyciskanie sztangi na skosie",
+        "ciezar": 45.0,
+        "powt": [
+          6
+        ]
+      },
+      {
+        "data": "2026-11-23",
+        "typ": "seria",
+        "cwiczenie": "Wyciskanie hantli na ławce skośnej",
+        "ciezar": 22.5,
+        "powt": [
+          6,
+          5,
+          5
+        ]
+      },
+      {
+        "data": "2026-11-23",
+        "typ": "seria",
+        "cwiczenie": "Wyciskanie wąskim chwytem",
+        "ciezar": 50.0,
+        "powt": [
+          3,
+          6,
+          5
         ]
       }
     ]
@@ -13199,16 +13223,14 @@
       "data": "2026-09-18"
     },
     "Wyciskanie sztangi leżąc": {
-      "ciezar": 60.0,
+      "ciezar": 70.0,
       "powt": [
         6,
-        6,
-        5,
-        4
+        2
       ],
-      "nastepny": 60.0,
-      "nieudane": 1,
-      "data": "2026-11-02"
+      "nastepny": 62.5,
+      "nieudane": 0,
+      "data": "2026-11-23"
     },
     "Wznosy w bok hantlami stojąc": {
       "ciezar": 7.0,
@@ -13221,15 +13243,13 @@
       "data": "2026-09-20"
     },
     "Wyciskanie sztangi na skosie": {
-      "ciezar": 40.0,
+      "ciezar": 45.0,
       "powt": [
-        6,
-        6,
         6
       ],
       "nastepny": 40.0,
-      "nieudane": 1,
-      "data": "2026-11-02"
+      "nieudane": 0,
+      "data": "2026-11-23"
     },
     "Wyciskanie hantli poziomo": {
       "ciezar": 20.0,
@@ -13263,14 +13283,15 @@
       "data": "2026-11-02"
     },
     "Wyciskanie wąskim chwytem": {
-      "ciezar": 40.0,
+      "ciezar": 50.0,
       "powt": [
-        4,
-        4
+        3,
+        6,
+        5
       ],
-      "nastepny": 40.0,
-      "nieudane": 1,
-      "data": "2026-11-02"
+      "nastepny": 45.0,
+      "nieudane": 0,
+      "data": "2026-11-23"
     },
     "Prostowanie ramion z hantlem nad głową": {
       "ciezar": 12.5,
@@ -13325,6 +13346,17 @@
       "nastepny": 11.0,
       "nieudane": 0,
       "data": "2026-11-04"
+    },
+    "Wyciskanie hantli na ławce skośnej": {
+      "ciezar": 22.5,
+      "powt": [
+        6,
+        5,
+        5
+      ],
+      "nastepny": 22.5,
+      "nieudane": 0,
+      "data": "2026-11-23"
     }
   },
   "ciezary_start": {
@@ -13472,8 +13504,8 @@
       "krok": 2.5
     },
     "Wyciskanie hantli na ławce skośnej": {
-      "kg": 12.5,
-      "cel": 15,
+      "kg": 16,
+      "cel": 22,
       "jedn": "cały hantel",
       "krok": 2.5
     },
@@ -13614,8 +13646,8 @@
       "krok": 2.5
     },
     "Prostowanie ramion w opadzie hantlem": {
-      "kg": 4,
-      "cel": 6,
+      "kg": 5,
+      "cel": 8,
       "jedn": "cały hantel",
       "krok": 1.25
     },
@@ -13624,6 +13656,12 @@
       "cel": 95,
       "jedn": "razem z gryfem (gryf 10 kg)",
       "krok": 5
+    },
+    "Wyciskanie hantli chwytem neutralnym": {
+      "kg": 16,
+      "cel": 22,
+      "jedn": "cały hantel",
+      "krok": 2.5
     }
   },
   "kalorie": {
@@ -13908,7 +13946,7 @@
     "cel": 8000,
     "brakuje": 3832,
     "status": "malo",
-    "sugestia": "Dziś siedziałeś prawie całą dobę. Nie nadrobisz tego w nocy i nie ma sensu próbować — zrób 10 minut chodzenia teraz i rozciągnij plecy, żeby jutro nie bolały.",
+    "sugestia": "Jest już późno — nie wychodź nadrabiać. 10 minut chodzenia po mieszkaniu i rozciąganie zrobi więcej dla snu niż forsowny spacer.",
     "komentarz": "Cel 8000 kroków dziennie. Spacer po południu robi większość z tego.",
     "procent": 52
   },

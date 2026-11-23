@@ -19,6 +19,7 @@ os.makedirs(STATE, exist_ok=True)
 ZDARZENIA_PATH = os.path.join(STATE, "zdarzenia.json")
 CIEZARY_PATH = os.path.join(STATE, "ciezary.json")
 HIST_PATH = os.path.join(STATE, "historia.json")
+KOREKTY_PATH = os.path.join(STATE, "korekty.json")
 
 
 def _dzis():
@@ -95,14 +96,34 @@ def ciezary():
     return _load(CIEZARY_PATH, {})
 
 
+def korekty():
+    return _load(KOREKTY_PATH, {})
+
+
+def ustaw_korekte(cwiczenie, kg, powod, data=None):
+    """Ciezar narzucony z zewnatrz (bol stawu, zly dobor ciezaru, powrot po przerwie).
+    Obowiazuje do pierwszej serii zapisanej PO dniu korekty — potem decyduje juz wynik."""
+    k = korekty()
+    k[cwiczenie] = {"kg": float(kg), "od": (data or _dzis()).isoformat(), "powod": powod}
+    _save(KOREKTY_PATH, k)
+    return k[cwiczenie]
+
+
 def propozycja(cwiczenie):
-    """Ile brać dziś: ostatni ciężar plus ewentualna podwyżka wyliczona po poprzedniej sesji."""
+    """Ile brać dziś: ostatni ciężar plus ewentualna podwyżka wyliczona po poprzedniej sesji.
+    Korekta z korekty.json wygrywa z wyliczeniem, dopoki nie zapiszesz serii po jej dacie."""
     c = ciezary().get(cwiczenie)
     if not c:
         return None
-    return {"ciezar": c.get("nastepny", c["ciezar"]), "poprzedni": c["ciezar"],
+    ciezar = c.get("nastepny", c["ciezar"])
+    kor = korekty().get(cwiczenie)
+    powod = None
+    if kor and kor["od"] >= c.get("data", ""):
+        ciezar, powod = kor["kg"], kor.get("powod")
+    return {"ciezar": ciezar, "poprzedni": c["ciezar"],
             "powt": c.get("powt", []), "data": c.get("data"),
-            "podwyzka": c.get("nastepny", c["ciezar"]) - c["ciezar"]}
+            "korekta": powod,
+            "podwyzka": ciezar - c["ciezar"]}
 
 
 def zapisz_serie(cwiczenie, ciezar, powtorzenia, powt_cel=None, data=None, loguj=True, krok=None):
@@ -157,6 +178,11 @@ def zapisz_serie(cwiczenie, ciezar, powtorzenia, powt_cel=None, data=None, loguj
     # kazda seria zapisana z telefonu dublowalaby sie w historii
     if loguj:
         dodaj_zdarzenie("seria", data, cwiczenie=cwiczenie, ciezar=ciezar, powt=powtorzenia)
+    # korekta obowiazywala do nastepnego treningu — wlasnie sie odbyl, wiec ja zdejmujemy
+    kor = korekty()
+    if cwiczenie in kor and (data or _dzis()).isoformat() > kor[cwiczenie]["od"]:
+        del kor[cwiczenie]
+        _save(KOREKTY_PATH, kor)
     return {"nastepny": nastepny, "komentarz": komentarz, "krok": krok}
 
 

@@ -1817,8 +1817,11 @@ def podpowiedz_ciezaru(nazwa):
         return "masa ciała"
     jedn = (" " + st["jedn"]) if st else ""
     if p:
-        return "%s kg%s (ostatnio %s kg × %s)" % (_kg(p["ciezar"]), jedn, _kg(p["poprzedni"]),
+        opis = "%s kg%s (ostatnio %s kg × %s)" % (_kg(p["ciezar"]), jedn, _kg(p["poprzedni"]),
                                                  ", ".join(str(x) for x in p["powt"]))
+        if p.get("korekta"):
+            opis += " — korekta: %s" % p["korekta"]
+        return opis
     if st:
         return "%s kg%s — na start" % (_kg(st["kg"]), jedn)
     return "ciężar dobierz sam i zapisz w panelu"

@@ -1,5 +1,5 @@
 {
-  "_info": "Cztery treningi w tygodniu, każdy dzień to konkretne partie — żadnego mieszania całego ciała. Dzień zaczyna się od najcięższego ruchu na sztangę (rozgrzewka piramidą 30/50/75%), potem schodzimy do hantli i izolacji, a kończymy seriami łączonymi, żeby zmieścić się w godzinie. Progresja podwójna: najpierw powtórzenia w zakresie, potem ciężar. Ciężary CAŁKOWITE: sztanga razem z gryfem (10 kg), hantel jako cały hantel. Sprzęt: klatka, ławka, sztanga, hantle — bez drążka i wyciągu. Po pierwszym tygodniu wypadły: pullover i rozpiętki na skosie (ból barku), francuskie sztangą (nie da się odchudzić), focze wiosłowanie i odwrotne rozpiętki w opadzie (odrzucone), a martwy ciąg z podłogi zamieniony na ciąg z bolców do kolan.",
+  "_info": "Cztery treningi w tygodniu, każdy dzień to konkretne partie. Dzień zaczyna się od najcięższego ruchu na sztangę (rozgrzewka piramidą 30/50/75%), potem hantle i izolacja, na końcu serie łączone. Progresja podwójna: najpierw powtórzenia w zakresie, potem ciężar. Ciężary CAŁKOWITE: sztanga razem z gryfem (10 kg), hantel jako cały hantel. Sprzęt: klatka, ławka, sztanga, hantle — bez drążka i wyciągu. Wypadły: pullover i rozpiętki na skosie (ból barku), francuskie sztangą, focze wiosłowanie i odwrotne rozpiętki w opadzie (odrzucone), martwy ciąg z podłogi (zamieniony na ciąg z bolców). Od 23.11.2026 poniedziałek jest w trybie oszczędzania łokcia: wąski chwyt zamieniony na hantle chwytem neutralnym, francuskie usunięte, prostowanie nad głowę zamienione na wersję w opadzie.",
   "bloki": [
     {
       "id": "nauka",
@@ -60,7 +60,8 @@
   "rozgrzewka": [
     "Pierwsze dwa ćwiczenia treningu: serie wstępne 30% ciężaru roboczego na 8-12 powtórzeń, potem 50% na 8, potem 75% na 2-3.",
     "Pozostałe ćwiczenia: jedna seria rozgrzewkowa 50% ciężaru na 5-6 powtórzeń i od razu seria robocza.",
-    "Zanim podejdziesz do sztangi: 5 minut krążeń ramion i bioder, 15 przysiadów bez ciężaru."
+    "Zanim podejdziesz do sztangi: 5 minut krążeń ramion i bioder, 15 przysiadów bez ciężaru.",
+    "ŁOKIEĆ — przed pierwszym wyciskaniem: 2 serie × 20 wolnych prostowań ramion z najlżejszym hantlem (2-4 kg) i 20 zgięć nadgarstka w obie strony. Chodzi o ukrwienie przyczepu, nie o zmęczenie."
   ],
   "sesje_glowne": [
     {
@@ -100,30 +101,20 @@
           "serie_wstepne": "50% × 5-6"
         },
         {
-          "nazwa": "Wyciskanie wąskim chwytem",
+          "nazwa": "Wyciskanie hantli chwytem neutralnym",
           "serie": 3,
-          "powt": "8-10",
-          "przerwa": "2-3 min",
-          "wskazowka": "Chwyt na szerokość barków, łokcie blisko tułowia, sztanga schodzi do dołu klatki. To ćwiczenie na triceps, nie na klatkę — nie rozkładaj łokci na boki.",
+          "powt": "10-12",
+          "przerwa": "2 min",
+          "wskazowka": "Ławka płasko, hantle nad klatką, dłonie zwrócone do siebie (jak przy młotkowych). Łokcie jadą blisko tułowia, hantle schodzą do dolnych żeber. Triceps pracuje jak przy wąskim chwycie, ale nadgarstek i łokieć mają wolny tor — nie są wykręcone w jedną pozycję przez sztangę.",
           "serie_wstepne": "50% × 5-6"
         },
         {
-          "nazwa": "Wyciskanie francuskie hantli",
-          "serie": 3,
-          "powt": "10-12",
-          "przerwa": "1,5-2 min",
-          "wskazowka": "Leżąc, dwa hantle nad klatką, łokcie w miejscu i skierowane do sufitu. Zginasz ramiona, aż hantle znajdą się przy uszach, i prostujesz. Hantle zamiast sztangi dlatego, że możesz zejść do 2 × 4 kg — przy sztandze mniej niż gryf z najmniejszymi talerzami nie założysz.",
-          "serie_wstepne": "50% × 5-6",
-          "seria_laczona": "Prostowanie ramion z hantlem nad głową"
-        },
-        {
-          "nazwa": "Prostowanie ramion z hantlem nad głową",
+          "nazwa": "Prostowanie ramion w opadzie hantlem",
           "serie": 3,
           "powt": "12-15",
-          "przerwa": "1,5-2 min",
-          "wskazowka": "Siedząc, hantel oburącz nad głową, opuszczasz za kark. Łokcie blisko głowy, ruszają tylko przedramiona.",
-          "serie_wstepne": "50% × 5-6",
-          "seria_laczona": "Wyciskanie francuskie hantli"
+          "przerwa": "1,5 min",
+          "wskazowka": "Tułów w opadzie, ramię przyklejone do boku, łokieć nieruchomy — prostujesz samo przedramię do tyłu i trzymasz pół sekundy. Łokieć nie wchodzi w pełne zgięcie pod ciężarem, więc przyczep tricepsa dostaje pracę bez szarpania.",
+          "serie_wstepne": "50% × 5-6"
         }
       ]
     },
@@ -460,7 +451,9 @@
     "Progresja podwójna: najpierw dobijasz do góry zakresu we wszystkich seriach, dopiero potem dokładasz talerze.",
     "Seria łączona (dwa ćwiczenia na zmianę, przerwa po obu) dotyczy tylko końca treningu — nigdy ciężkich bojów.",
     "Dni wolne: wtorek, czwartek, sobota — rower zone 2 i spacer. To nie jest trening, to regeneracja.",
-    "Ćwiczenie, które boli w stawie (bark, łokieć), a nie męczy mięśnia, wypada z planu tego samego dnia. Bólu nie przeczekujemy — zamieniamy ruch na taki, który pracuje bez rozciągania stawu."
+    "Ból w stawie (łokieć, bark) powyżej 3 w skali do 10 kończy ćwiczenie na ten dzień — nie dowozisz serii przez ból. Mięsień boli następnego dnia, staw boli w trakcie; to dwie różne rzeczy.",
+    "Po dłuższej przerwie pierwszy tydzień wraca na ciężary z ostatniego zapisu, nie na rekordy. Przyczepy ścięgien tracą tolerancję szybciej niż mięśnie siłę — dlatego po przerwie boli łokieć, nie mięsień.",
+    "W dni wolne na obolały łokieć: 3 × 15 wolnych prostowań z 2-4 kg (3 sekundy w dół) plus zgięcia nadgarstka z hantlem w tym samym tempie. Lekkie, codziennie, bez bólu — tak się goi przyczep."
   ],
   "wolne": {
     "nazwa": "Dzień bez sztangi",

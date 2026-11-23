@@ -5,27 +5,45 @@
   "baza": "b_bolo",
   "dni": [
     {
+<<<<<<< HEAD
       "sniadanie": "q_grzanki",
       "drugi": "d_pudding",
       "kolacja": "q_twarog_makaron",
+=======
+      "sniadanie": "q_twarog",
+      "drugi": "q_kanapki_jajko",
+      "kolacja": "d_twarog_kakao",
+>>>>>>> 33b2968 (Tryb oszczedzania lokcia + korekty, ktorych nie zmiata przeliczenie)
       "obiad": "b_bolo",
       "data": "2026-11-23",
       "typ": 0,
       "makra": {
+<<<<<<< HEAD
         "kcal": 2435,
         "bialko": 159,
         "tluszcz": 78,
         "wegle": 262
+=======
+        "kcal": 2292,
+        "bialko": 165,
+        "tluszcz": 87,
+        "wegle": 201
+>>>>>>> 33b2968 (Tryb oszczedzania lokcia + korekty, ktorych nie zmiata przeliczenie)
       }
     },
     {
       "sniadanie": "q_omlet_marchewkowy",
+<<<<<<< HEAD
       "drugi": "q_kanapki_jajko",
+=======
+      "drugi": "q_nalesniki",
+>>>>>>> 33b2968 (Tryb oszczedzania lokcia + korekty, ktorych nie zmiata przeliczenie)
       "kolacja": "q_jajka_majonez",
       "obiad": "b_bolo",
       "data": "2026-11-24",
       "typ": 1,
       "makra": {
+<<<<<<< HEAD
         "kcal": 2947,
         "bialko": 184,
         "tluszcz": 98,
@@ -36,10 +54,23 @@
       "sniadanie": "q_gofry",
       "drugi": "q_jogurt_orzechy",
       "kolacja": "d_twarog_kakao",
+=======
+        "kcal": 3006,
+        "bialko": 193,
+        "tluszcz": 96,
+        "wegle": 322
+      }
+    },
+    {
+      "sniadanie": "q_shake",
+      "drugi": "q_twarog_makaron",
+      "kolacja": "q_serek_box",
+>>>>>>> 33b2968 (Tryb oszczedzania lokcia + korekty, ktorych nie zmiata przeliczenie)
       "obiad": "b_bolo",
       "data": "2026-11-25",
       "typ": 0,
       "makra": {
+<<<<<<< HEAD
         "kcal": 2258,
         "bialko": 158,
         "tluszcz": 87,
@@ -48,4 +79,14 @@
     }
   ],
   "wygenerowano": "2026-11-23T03:24:29+01:00"
+=======
+        "kcal": 2421,
+        "bialko": 173,
+        "tluszcz": 91,
+        "wegle": 218
+      }
+    }
+  ],
+  "wygenerowano": "2026-11-23T21:29:14+01:00"
+>>>>>>> 33b2968 (Tryb oszczedzania lokcia + korekty, ktorych nie zmiata przeliczenie)
 }
