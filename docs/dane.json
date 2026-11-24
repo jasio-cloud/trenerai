@@ -1,5 +1,5 @@
 {
-  "wygenerowano": "2026-11-24T07:23:09+01:00",
+  "wygenerowano": "2026-11-24T20:00:15+01:00",
   "dzis": "2026-11-24",
   "typ_dzis": 1,
   "typy": {
@@ -8630,7 +8630,12 @@
       "nadwyzka": 0,
       "odhaczone": {},
       "waga": null,
-      "kroki": null,
+      "kroki": {
+        "data": "2026-11-24",
+        "kroki": 5026,
+        "cel": 8000,
+        "status": "malo"
+      },
       "serie": [],
       "trening": {
         "rodzaj": "wolne",
@@ -13713,10 +13718,24 @@
         "kroki": 4168,
         "cel": 8000,
         "status": "malo"
+      },
+      {
+        "data": "2026-11-24",
+        "kroki": 5026,
+        "cel": 8000,
+        "status": "malo"
       }
     ]
   },
-  "kroki": null,
+  "kroki": {
+    "kroki": 5026,
+    "cel": 8000,
+    "brakuje": 2974,
+    "status": "malo",
+    "sugestia": "20 minut spaceru wieczorem. Po dobie na służbie to bardziej rozprostowanie niż wysiłek.",
+    "komentarz": "Cel 8000 kroków dziennie. Spacer po południu robi większość z tego.",
+    "procent": 63
+  },
   "kroki_cel": {
     "cel": 8000,
     "komentarz": "Cel 8000 kroków dziennie. Spacer po południu robi większość z tego."
