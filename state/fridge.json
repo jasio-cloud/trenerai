@@ -72,22 +72,6 @@
       "ilosc": 166.67,
       "do": "2027-05-21"
     },
-    "mleko": {
-      "ilosc": 700,
-      "do": "2026-11-23"
-    },
-    "ser_zolty": {
-      "ilosc": 2,
-      "do": "2026-11-23"
-    },
-    "twarog": {
-      "ilosc": 205,
-      "do": "2026-11-23"
-    },
-    "chleb": {
-      "ilosc": 9,
-      "do": "2026-11-23"
-    },
     "tortilla": {
       "ilosc": 2,
       "do": "2027-05-30"
@@ -277,6 +261,30 @@
       "co": "cykl:2026-11-23",
       "pozycji": 21,
       "koszt": 112.12
+    },
+    {
+      "data": "2026-11-24",
+      "co": "wyrzucone",
+      "produkt": "mleko",
+      "ilosc": 700
+    },
+    {
+      "data": "2026-11-24",
+      "co": "wyrzucone",
+      "produkt": "ser_zolty",
+      "ilosc": 2
+    },
+    {
+      "data": "2026-11-24",
+      "co": "wyrzucone",
+      "produkt": "twarog",
+      "ilosc": 205
+    },
+    {
+      "data": "2026-11-24",
+      "co": "wyrzucone",
+      "produkt": "chleb",
+      "ilosc": 9
     }
   ]
 }

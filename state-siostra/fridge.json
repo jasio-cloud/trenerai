@@ -80,26 +80,6 @@
       "ilosc": 294.5,
       "do": "2027-05-24"
     },
-    "jaja": {
-      "ilosc": 7,
-      "do": "2026-11-23"
-    },
-    "jogurt_grecki": {
-      "ilosc": 15,
-      "do": "2026-11-23"
-    },
-    "mleko": {
-      "ilosc": 668,
-      "do": "2026-11-23"
-    },
-    "twarog": {
-      "ilosc": 250,
-      "do": "2026-11-23"
-    },
-    "chleb": {
-      "ilosc": 10,
-      "do": "2026-11-23"
-    },
     "ser_zolty": {
       "ilosc": 1,
       "do": "2026-11-26"
@@ -265,6 +245,36 @@
       "co": "cykl:2026-11-23",
       "pozycji": 14,
       "koszt": 66.46
+    },
+    {
+      "data": "2026-11-24",
+      "co": "wyrzucone",
+      "produkt": "jaja",
+      "ilosc": 7
+    },
+    {
+      "data": "2026-11-24",
+      "co": "wyrzucone",
+      "produkt": "jogurt_grecki",
+      "ilosc": 15
+    },
+    {
+      "data": "2026-11-24",
+      "co": "wyrzucone",
+      "produkt": "mleko",
+      "ilosc": 668
+    },
+    {
+      "data": "2026-11-24",
+      "co": "wyrzucone",
+      "produkt": "twarog",
+      "ilosc": 250
+    },
+    {
+      "data": "2026-11-24",
+      "co": "wyrzucone",
+      "produkt": "chleb",
+      "ilosc": 10
     }
   ]
 }
