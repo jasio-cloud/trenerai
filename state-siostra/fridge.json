@@ -84,10 +84,6 @@
       "ilosc": 1,
       "do": "2026-11-26"
     },
-    "mielone_wolowe": {
-      "ilosc": 100.0,
-      "do": "2026-11-24"
-    },
     "maslo": {
       "ilosc": 196,
       "do": "2026-12-05"
@@ -275,6 +271,12 @@
       "co": "wyrzucone",
       "produkt": "chleb",
       "ilosc": 10
+    },
+    {
+      "data": "2026-11-25",
+      "co": "wyrzucone",
+      "produkt": "mielone_wolowe",
+      "ilosc": 100.0
     }
   ]
 }
