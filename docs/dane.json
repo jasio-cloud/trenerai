@@ -1,5 +1,5 @@
 {
-  "wygenerowano": "2026-11-25T20:00:13+01:00",
+  "wygenerowano": "2026-11-25T21:29:12+01:00",
   "dzis": "2026-11-25",
   "typ_dzis": 0,
   "typy": {
@@ -1170,12 +1170,12 @@
             "ciezar": 60.0,
             "poprzedni": 60.0,
             "powt": [
-              8,
               10,
-              10,
-              10
+              12,
+              12,
+              8
             ],
-            "data": "2026-11-04",
+            "data": "2026-11-25",
             "korekta": null,
             "podwyzka": 0.0
           }
@@ -4048,9 +4048,9 @@
       },
       "Wiosłowanie sztangą podchwytem": {
         "pierwszy": 80.0,
-        "najlepszy": 80.0,
-        "ostatni": 80.0,
-        "sesji": 1,
+        "najlepszy": 84.0,
+        "ostatni": 84.0,
+        "sesji": 2,
         "miara": "kg (szac. max)",
         "od": "2026-11-04"
       },
@@ -4085,6 +4085,22 @@
         "sesji": 1,
         "miara": "kg (szac. max)",
         "od": "2026-11-23"
+      },
+      "Uginanie sztangi": {
+        "pierwszy": 40.0,
+        "najlepszy": 40.0,
+        "ostatni": 40.0,
+        "sesji": 1,
+        "miara": "kg (szac. max)",
+        "od": "2026-11-25"
+      },
+      "Uginanie młotkowe": {
+        "pierwszy": 21.7,
+        "najlepszy": 21.7,
+        "ostatni": 21.7,
+        "sesji": 1,
+        "miara": "kg (szac. max)",
+        "od": "2026-11-25"
       }
     },
     "cele": {
@@ -4782,12 +4798,12 @@
                 "ciezar": 60.0,
                 "poprzedni": 60.0,
                 "powt": [
-                  8,
                   10,
-                  10,
-                  10
+                  12,
+                  12,
+                  8
                 ],
-                "data": "2026-11-04",
+                "data": "2026-11-25",
                 "korekta": null,
                 "podwyzka": 0.0
               }
@@ -8600,7 +8616,42 @@
         "cel": 8000,
         "status": "malo"
       },
-      "serie": [],
+      "serie": [
+        {
+          "data": "2026-11-25",
+          "typ": "seria",
+          "cwiczenie": "Wiosłowanie sztangą podchwytem",
+          "ciezar": 60.0,
+          "powt": [
+            10,
+            12,
+            12,
+            8
+          ]
+        },
+        {
+          "data": "2026-11-25",
+          "typ": "seria",
+          "cwiczenie": "Uginanie sztangi",
+          "ciezar": 30.0,
+          "powt": [
+            10,
+            10,
+            8
+          ]
+        },
+        {
+          "data": "2026-11-25",
+          "typ": "seria",
+          "cwiczenie": "Uginanie młotkowe",
+          "ciezar": 13.0,
+          "powt": [
+            20,
+            16,
+            16
+          ]
+        }
+      ],
       "trening": {
         "rodzaj": "glowny",
         "trening": {
@@ -8629,12 +8680,12 @@
                 "ciezar": 60.0,
                 "poprzedni": 60.0,
                 "powt": [
-                  8,
                   10,
-                  10,
-                  10
+                  12,
+                  12,
+                  8
                 ],
-                "data": "2026-11-04",
+                "data": "2026-11-25",
                 "korekta": null,
                 "podwyzka": 0.0
               }
@@ -11974,6 +12025,40 @@
           6,
           5
         ]
+      },
+      {
+        "data": "2026-11-25",
+        "typ": "seria",
+        "cwiczenie": "Wiosłowanie sztangą podchwytem",
+        "ciezar": 60.0,
+        "powt": [
+          10,
+          12,
+          12,
+          8
+        ]
+      },
+      {
+        "data": "2026-11-25",
+        "typ": "seria",
+        "cwiczenie": "Uginanie sztangi",
+        "ciezar": 30.0,
+        "powt": [
+          10,
+          10,
+          8
+        ]
+      },
+      {
+        "data": "2026-11-25",
+        "typ": "seria",
+        "cwiczenie": "Uginanie młotkowe",
+        "ciezar": 13.0,
+        "powt": [
+          20,
+          16,
+          16
+        ]
       }
     ]
   },
@@ -13075,14 +13160,14 @@
     "Wiosłowanie sztangą podchwytem": {
       "ciezar": 60.0,
       "powt": [
-        8,
         10,
-        10,
-        10
+        12,
+        12,
+        8
       ],
       "nastepny": 60.0,
       "nieudane": 0,
-      "data": "2026-11-04"
+      "data": "2026-11-25"
     },
     "Uginanie sztangi (biceps)": {
       "ciezar": 30.0,
@@ -13115,6 +13200,28 @@
       "nastepny": 22.5,
       "nieudane": 0,
       "data": "2026-11-23"
+    },
+    "Uginanie sztangi": {
+      "ciezar": 30.0,
+      "powt": [
+        10,
+        10,
+        8
+      ],
+      "nastepny": 30.0,
+      "nieudane": 0,
+      "data": "2026-11-25"
+    },
+    "Uginanie młotkowe": {
+      "ciezar": 13.0,
+      "powt": [
+        20,
+        16,
+        16
+      ],
+      "nastepny": 13.0,
+      "nieudane": 0,
+      "data": "2026-11-25"
     }
   },
   "ciezary_start": {
