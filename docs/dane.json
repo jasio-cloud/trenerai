@@ -1,5 +1,5 @@
 {
-  "wygenerowano": "2026-11-25T18:56:02+01:00",
+  "wygenerowano": "2026-11-25T18:58:23+01:00",
   "dzis": "2026-11-25",
   "typ_dzis": 0,
   "typy": {
@@ -8136,7 +8136,12 @@
       "nadwyzka": 0,
       "odhaczone": {},
       "waga": null,
-      "kroki": null,
+      "kroki": {
+        "data": "2026-11-24",
+        "kroki": 5026,
+        "cel": 8000,
+        "status": "malo"
+      },
       "serie": [],
       "trening": {
         "rodzaj": "wolne",
@@ -13712,6 +13717,12 @@
       {
         "data": "2026-11-23",
         "kroki": 4168,
+        "cel": 8000,
+        "status": "malo"
+      },
+      {
+        "data": "2026-11-24",
+        "kroki": 5026,
         "cel": 8000,
         "status": "malo"
       }
