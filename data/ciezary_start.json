@@ -252,10 +252,10 @@
   "krok": 5
  },
  "Hip thrust": {
-  "kg": 60,
-  "cel": 90,
+  "kg": 10.0,
+  "cel": 60.0,
   "jedn": "razem z gryfem (gryf 10 kg)",
-  "krok": 5
+  "krok": 5.0
  },
  "Wspięcia łydki stojąc": {
   "kg": 12,
@@ -303,16 +303,16 @@
   "jedn": "cały hantel",
   "krok": 2.5
  },
- "Dobry ranek ze sztangą": {
-  "kg": 30.0,
-  "cel": 45.0,
-  "jedn": "razem z gryfem (gryf 10 kg)",
-  "krok": 2.5
- },
  "Hip thrust jednonóż": {
   "kg": 0.0,
   "cel": 0.0,
   "jedn": "masa ciała",
   "krok": 0.0
+ },
+ "Szrugsy z hantlami": {
+  "kg": 22.0,
+  "cel": 30.0,
+  "jedn": "cały hantel",
+  "krok": 2.0
  }
 }
